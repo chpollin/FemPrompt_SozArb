@@ -24215,7 +24215,7 @@
         ]
       },
       {
-        "knowledge_doc": "docs/vault/Papers/Factoring the Matrix of Domination- A Critical Review and Reimagination of Intersectionality in AI Fairness.md",
+        "knowledge_doc": "docs/vault/Papers/Factoring the Matrix of Domination- A Critical Review and-915922.md",
         "record_ids": [
           "T83KNEQZ",
           "XXCDL3A3",
@@ -24227,7 +24227,7 @@
         ]
       },
       {
-        "knowledge_doc": "docs/vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
+        "knowledge_doc": "docs/vault/Papers/Prompting techniques for reducing social bias in LLMs through-c8c6ac.md",
         "record_ids": [
           "7W3RGSSG",
           "R3VJVFCE",
@@ -27001,7 +27001,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:6c4b8b6a3b7eea230e15ea457de0c61113602e4fb20e12c69ee7222f75a4bc38",
+  "source_fingerprint": "sha256:a9ee812b3f108cc777ce15155ab3c626b6c59227be3765673c11c88635f4fc5e",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -27185,7 +27185,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "0867995d898c0b7c2fb28fe05687f6e12fa3bce00843986948611b828b94882f"
+      "sha256": "6cfd6ab33dc6e320cff9850da25522e8da3fb11c68dd82e1bfd66b28cc45d24f"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -27225,18 +27225,18 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "48532c969d491f26f4e974ab3c0f142574d06e5c608233aae384db7e5858844d"
+      "sha256": "54cd3455775c905c78a6314a0c067a0b4737dfc2d437070f0f4bb7ceac5e78e0"
     },
     {
       "path": "docs/data/screening/ar2.json",
       "sha256": "e6e38a90de2ae953f61c3b0523c1bfda869c3ac14a6976786b0af054c59ac7a4"
     },
     {
-      "path": "docs/vault/Papers/-It happened to be the perfect thing-- Experiences of generative AI chatbots for mental health.md",
+      "path": "docs/vault/Papers/-It happened to be the perfect thing-- Experiences of generative-7bc5e1.md",
       "sha256": "205044a6b693acea2e55161b1bbcf2d59fc5e54eed3e733dd4ac7853e81d6643"
     },
     {
-      "path": "docs/vault/Papers/A Competency Framework for AI Literacy- Variations by Different Learner Groups and an Implied Learning Pathway.md",
+      "path": "docs/vault/Papers/A Competency Framework for AI Literacy- Variations by Different-d788c6.md",
       "sha256": "c02be4a407e73910fe9ee2e8360dda2021532deda183b626f62431701a0e5c26"
     },
     {
@@ -27244,11 +27244,11 @@
       "sha256": "5b1649bfb8b152ade1b42450d22943ac9086a5eccf41ab82ad6931b09b16cd20"
     },
     {
-      "path": "docs/vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and perceived trustworthiness in an operational schematization.md",
+      "path": "docs/vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and-c21c09.md",
       "sha256": "40f3b50549f7a92a69cc4a09f9c1b8c8e9f735346ed3e45aec58bc8d9ffe1281"
     },
     {
-      "path": "docs/vault/Papers/A framework for the learning and teaching of Critical AI Literacy skills (Version 0.1).md",
+      "path": "docs/vault/Papers/A framework for the learning and teaching of Critical AI Literacy-126b8e.md",
       "sha256": "2c3321ec72ac9cd86c2fb9437c4fdbb41d7bbe296cd8c889eb02a40228b72cd2"
     },
     {
@@ -27256,7 +27256,7 @@
       "sha256": "6cc657042c6ca4ff43cb17ad6c8b3acc6430255f90b3e3408189bb9fe23f395d"
     },
     {
-      "path": "docs/vault/Papers/AI Creates the Message- Integrating AI Language Learning Models into Social Work Education and Practice.md",
+      "path": "docs/vault/Papers/AI Creates the Message- Integrating AI Language Learning Models-a370c9.md",
       "sha256": "34bc7640fa5a788b58fb5994e74423eb149fb63c526bbc1e530ee6754daa7546"
     },
     {
@@ -27264,7 +27264,7 @@
       "sha256": "8eb60b349b14c29a9df46d292847d1b0866dd1bca711c46fa16685c48a8b986d"
     },
     {
-      "path": "docs/vault/Papers/AI algorithm transparency, pipelines for trust not prisms- mitigating general negative attitudes and enhancing trust toward AI.md",
+      "path": "docs/vault/Papers/AI algorithm transparency, pipelines for trust not prisms-dc7821.md",
       "sha256": "681a2c7a532fa1dca642eb0064d4a48e61d8f3936702145bee02815c3d3a0d6e"
     },
     {
@@ -27272,7 +27272,7 @@
       "sha256": "cd9a2edd051ab2e0604d7d9f3d934ed535d3580f8e5faf50c0fc4754ea405a55"
     },
     {
-      "path": "docs/vault/Papers/AI for impact- The PRISM framework for responsible AI in social innovation.md",
+      "path": "docs/vault/Papers/AI for impact- The PRISM framework for responsible AI in social-2e9e98.md",
       "sha256": "885d2f848f307b2e37dc9f2a78d82336065ea46e5249809837a66bc934aa85d9"
     },
     {
@@ -27280,11 +27280,11 @@
       "sha256": "c41a2d6960a33570ed24c5fb8def0f44fa8306da207b8fe260dce491de0b5732"
     },
     {
-      "path": "docs/vault/Papers/AI literacy and competency- definitions, frameworks, development and future research directions.md",
+      "path": "docs/vault/Papers/AI literacy and competency- definitions, frameworks, development-63b1d4.md",
       "sha256": "43c0086382eedc69e3f5b6d893097b13c5e57a87ef76edd34a3e92e5eb1c826b"
     },
     {
-      "path": "docs/vault/Papers/AI literacy for users – A comprehensive review and future research directions of learning methods, components, and effects.md",
+      "path": "docs/vault/Papers/AI literacy for users – A comprehensive review and future-4a0ab1.md",
       "sha256": "32f103a055d19b0121e451f277758ec807c85ad11d73849686412e34a527d6a6"
     },
     {
@@ -27292,7 +27292,7 @@
       "sha256": "416da51eb9fb09a81ccc7c5e4c876e68f666974ab1159404d173d8beb1a7aa30"
     },
     {
-      "path": "docs/vault/Papers/AI literacy in teacher education- Empowering educators through critical co-discovery.md",
+      "path": "docs/vault/Papers/AI literacy in teacher education- Empowering educators through-42b896.md",
       "sha256": "d0298c4051dea6e25f4d67fb2f055f920c9270836b94158de989d5edbf6679b5"
     },
     {
@@ -27300,15 +27300,15 @@
       "sha256": "2ab0eb36e50c6bf9aaa151ee605e084224db941f2cbc44dc576094521ef0a750"
     },
     {
-      "path": "docs/vault/Papers/Algorithmic discrimination- examining its types and regulatory measures with emphasis on US legal practices.md",
+      "path": "docs/vault/Papers/Algorithmic discrimination- examining its types and regulatory-bc13ad.md",
       "sha256": "181f5b4f6c77a6512d2910c9116e3442685bd0d6ea9e01ca082eb8a58530e5d4"
     },
     {
-      "path": "docs/vault/Papers/Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice- A Systematic Review.md",
+      "path": "docs/vault/Papers/Algorithmic-Assisted Decision-Making Tools in Child Welfare-472695.md",
       "sha256": "e27ea31260565b78ebd950678c9cab3e8a78894692b47294fd84b82476b0dbd4"
     },
     {
-      "path": "docs/vault/Papers/Assessing trustworthy AI- Technical and legal perspectives of fairness in AI.md",
+      "path": "docs/vault/Papers/Assessing trustworthy AI- Technical and legal perspectives of-81c4a9.md",
       "sha256": "83c4003a1559ca0417155824340127eeeb0d092eb74f6b2498fc8f57427fe596"
     },
     {
@@ -27320,7 +27320,7 @@
       "sha256": "6412827aa5cb8f58dcf910b5d4b399e98f0331485a326118f85919999b2c3d41"
     },
     {
-      "path": "docs/vault/Papers/Beyond transparency and explainability- On the need for adequate and contextualized user guidelines for LLM use.md",
+      "path": "docs/vault/Papers/Beyond transparency and explainability- On the need for adequate-818efd.md",
       "sha256": "95dc5935d40934c4192fff7e753adf7617e3e2643c486d806dc58c3691d4410e"
     },
     {
@@ -27328,7 +27328,7 @@
       "sha256": "8ddd3047f1f823a324c7fa38cf227ebad41ee14c07c0d7829b779eff82b36745"
     },
     {
-      "path": "docs/vault/Papers/Bias, accuracy, and trust- Gender-diverse perspectives on large language models.md",
+      "path": "docs/vault/Papers/Bias, accuracy, and trust- Gender-diverse perspectives on large-4f9fa6.md",
       "sha256": "892e61a313202320d689a5719f35d4a420bc52791e165c6456ddc0bc29d3a108"
     },
     {
@@ -27336,15 +27336,15 @@
       "sha256": "80e7a76a83fe3bd55595ef6f925af091690d7c5e5f69011b4236c0d7cf17a14e"
     },
     {
-      "path": "docs/vault/Papers/Can prompt modifiers control bias- A comparative analysis of text-to-image generative models.md",
+      "path": "docs/vault/Papers/Can prompt modifiers control bias- A comparative analysis of-9cf0bd.md",
       "sha256": "145e2f16ab805628ae1796200d7f62f8b73530e9d12ab7a332db34bcb86e2938"
     },
     {
-      "path": "docs/vault/Papers/Clinical Social Workers’ Perceptions of Large Language Models in Practice- Resistance to Automation and Prospects for Integration.md",
+      "path": "docs/vault/Papers/Clinical Social Workers’ Perceptions of Large Language Models in-1c09b1.md",
       "sha256": "6cce4757ff88fbd8156c04bb89ef555eb49bd79486ec42774b36deaf9d0ae7a7"
     },
     {
-      "path": "docs/vault/Papers/Coded injustice- Surveillance and discrimination in Denmark's automated welfare state.md",
+      "path": "docs/vault/Papers/Coded injustice- Surveillance and discrimination in Denmark's-0e3b1e.md",
       "sha256": "281c200abdae51acc7c2122f15fcc14b3bb16cbfe4f2ea1b42e2c257a3a98259"
     },
     {
@@ -27352,7 +27352,7 @@
       "sha256": "eb32d318905b41b6d0d9701328b3fc7d4ff48a6de0626dddc675e98a8b87af0d"
     },
     {
-      "path": "docs/vault/Papers/Considering a unified model of artificial intelligence enhanced social work- A systematic review.md",
+      "path": "docs/vault/Papers/Considering a unified model of artificial intelligence enhanced-578307.md",
       "sha256": "2c533bee2cf576c3a666187fb3dfd7052af637254de1c0f6a84e83e7beb53361"
     },
     {
@@ -27360,7 +27360,7 @@
       "sha256": "f0018c0724a5be17530298cb83469f9d05c3124f86eeff8bd9baaefe98f34d89"
     },
     {
-      "path": "docs/vault/Papers/DR.GAP- Mitigating bias in large language models using gender-aware prompting with demonstration and reasoning.md",
+      "path": "docs/vault/Papers/DR.GAP- Mitigating bias in large language models using-26e3dd.md",
       "sha256": "94f8a28196774ec9b97ca24c826f457adb1536ac0f4f6ddae984b75499407174"
     },
     {
@@ -27368,23 +27368,23 @@
       "sha256": "b3933ac7b110ff6bba44f52c4b09cc781c52f9d40118b9ee5dbe2bd72c1c154b"
     },
     {
-      "path": "docs/vault/Papers/Datafied ageing futures- Regimes of anticipation and participatory futuring.md",
+      "path": "docs/vault/Papers/Datafied ageing futures- Regimes of anticipation and-ece59e.md",
       "sha256": "b0a689bf78d408934652cebc3e74d016e819a1ce1934a08b8604697343ea0cdf"
     },
     {
-      "path": "docs/vault/Papers/Decision support and algorithmic support- The construction of algorithms and professional discretion in social work.md",
+      "path": "docs/vault/Papers/Decision support and algorithmic support- The construction of-705ec0.md",
       "sha256": "09c77606d72f87b2c9e4973f902c3253511bb243fd4c37d0cc950b7f9edf2c0b"
     },
     {
-      "path": "docs/vault/Papers/Der Einfluss der Algorithmen- Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz.md",
+      "path": "docs/vault/Papers/Der Einfluss der Algorithmen- Neue Qualitäten durch Big Data-bacc2b.md",
       "sha256": "f6ab93ebba42e3a07c86b1ae28ba4c85067a9956e85ec2fbd9d067eb342d6303"
     },
     {
-      "path": "docs/vault/Papers/Developing an artificial intelligence literacy framework- Evaluation of a literacy course for senior secondary students using a project-based learning approach.md",
+      "path": "docs/vault/Papers/Developing an artificial intelligence literacy framework-7fecb8.md",
       "sha256": "9ad1d8ff14324dcff86ccbd7bba38f890e5f8c5cd419bd8f1c1b37dd92f70abd"
     },
     {
-      "path": "docs/vault/Papers/Development of the “Scale for the assessment of non-experts’ AI literacy” – An exploratory factor analysis.md",
+      "path": "docs/vault/Papers/Development of the “Scale for the assessment of non-experts’ AI-50785d.md",
       "sha256": "b7ca1945255afbc54ec0011e6b6fd043e8a14c574e73a4bffc8e0ea182039792"
     },
     {
@@ -27400,15 +27400,15 @@
       "sha256": "764b7693bc33cdba2791b45f511f30cd3a53fbd295c0a605306ee237d01e40bd"
     },
     {
-      "path": "docs/vault/Papers/Ethical issues related to the use of technology in social work practice- A systematic review.md",
+      "path": "docs/vault/Papers/Ethical issues related to the use of technology in social work-73568f.md",
       "sha256": "d12940d8e4a81665f0ff8d28651949e2774fab2566c7e0c6dac50717f2c1ef82"
     },
     {
-      "path": "docs/vault/Papers/Evaluating gender bias in large language models via chain-of-thought prompting.md",
+      "path": "docs/vault/Papers/Evaluating gender bias in large language models via-01fc8e.md",
       "sha256": "a054943a13e6df69b96922cb791e27063400a1ba10f947a35eb8fbd359df2622"
     },
     {
-      "path": "docs/vault/Papers/Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds.md",
+      "path": "docs/vault/Papers/Evaluation of an artificial intelligence literacy course for-b0e290.md",
       "sha256": "6e1d4e65c70df08ad7af137889d711f6b2af15cbd57ce7e537f44d57983a2db1"
     },
     {
@@ -27416,27 +27416,27 @@
       "sha256": "df7c2c693ef67b46570bc382313766abdf17771b7b174bb71d823c6c6569981d"
     },
     {
-      "path": "docs/vault/Papers/Exploring complex mental health symptoms via classifying social media data with explainable LLMs.md",
+      "path": "docs/vault/Papers/Exploring complex mental health symptoms via classifying social-de1c03.md",
       "sha256": "a83f7e0fe925072899f13cb65889b6f7f9a7a495f2193c031f74707870e05c25"
     },
     {
-      "path": "docs/vault/Papers/Exploring opportunities and risks in decision support technologies for social workers- An empirical study in the field of disabled people's services.md",
+      "path": "docs/vault/Papers/Exploring opportunities and risks in decision support-672f1e.md",
       "sha256": "b5e6dec78a0944153f27d297cdc110bc950484f3f6ef92c14a61094ee67f6e5a"
     },
     {
-      "path": "docs/vault/Papers/Factoring the Matrix of Domination- A Critical Review and Reimagination of Intersectionality in AI Fairness.md",
+      "path": "docs/vault/Papers/Factoring the Matrix of Domination- A Critical Review and-915922.md",
       "sha256": "fabe4399c132820fc41f92ba53ef40066c4b2e450c59352a4456e2ba3d925369"
     },
     {
-      "path": "docs/vault/Papers/Failing our youngest- On the biases, pitfalls, and risks in a decision support algorithm used for child protection.md",
+      "path": "docs/vault/Papers/Failing our youngest- On the biases, pitfalls, and risks in a-86570b.md",
       "sha256": "2402bf2c82d0e0148c32139c1454c21377c57a45ab0ab3681c1142d2cd81779e"
     },
     {
-      "path": "docs/vault/Papers/Fairness Beyond the Algorithmic Frame- Actionable Recommendations for an Intersectional Approach.md",
+      "path": "docs/vault/Papers/Fairness Beyond the Algorithmic Frame- Actionable Recommendations-afef5f.md",
       "sha256": "cde756f382cea4d8664d01d28c98df02451807ffe067cf0a310ac60b0a55d989"
     },
     {
-      "path": "docs/vault/Papers/Female perspectives on algorithmic bias- Implications for AI researchers and practitioners.md",
+      "path": "docs/vault/Papers/Female perspectives on algorithmic bias- Implications for AI-ecabd2.md",
       "sha256": "b9d107baf78ca5d8fd9bc1981f5bbd8c8a020acdfa699461ee7e1cac5725d248"
     },
     {
@@ -27448,7 +27448,7 @@
       "sha256": "d820cb9cad7c96280008bf61c5961b178f5548dd842ab5dcd4ba6b1f579e1aa9"
     },
     {
-      "path": "docs/vault/Papers/Feminist perspectives on AI- Ethical considerations in algorithmic decision-making.md",
+      "path": "docs/vault/Papers/Feminist perspectives on AI- Ethical considerations in-2b0e9f.md",
       "sha256": "7493a5ba4c95b15de5415cc6c9caa604b6c08fc01f8270765ebe8e18aa92390d"
     },
     {
@@ -27460,11 +27460,11 @@
       "sha256": "109bc71030bfd5af98d3353d79017337403ad6e0e383bc70b921868f27372a58"
     },
     {
-      "path": "docs/vault/Papers/Gender in a stereo-(gender)typical EU AI law- A feminist reading of the AI Act.md",
+      "path": "docs/vault/Papers/Gender in a stereo-(gender)typical EU AI law- A feminist reading-ccf71c.md",
       "sha256": "c01296a1c25f740fe43c86350170d96a0ac13854a7c35369fa9a83cb04913866"
     },
     {
-      "path": "docs/vault/Papers/Gender, race, and intersectional bias in AI resume screening via language model retrieval.md",
+      "path": "docs/vault/Papers/Gender, race, and intersectional bias in AI resume screening via-04363e.md",
       "sha256": "8b30cf3157f3eb76f0b605421f185b055c80805fcc55710586ecb6db361a1511"
     },
     {
@@ -27472,11 +27472,11 @@
       "sha256": "46a81fff21df3f28639892b27e41ed0fd225bc3ff5575ac4e7c234c496f666b3"
     },
     {
-      "path": "docs/vault/Papers/Governance of generative AI- A comprehensive framework for navigating challenges and opportunities.md",
+      "path": "docs/vault/Papers/Governance of generative AI- A comprehensive framework for-04ace4.md",
       "sha256": "c1d1279c5f9781039a6a2dbc20021f783e22a3989adf3279489f9dcc955a0e3c"
     },
     {
-      "path": "docs/vault/Papers/Guardrails, not guidance- Understanding responses to LGBTQ+ language in large language models.md",
+      "path": "docs/vault/Papers/Guardrails, not guidance- Understanding responses to LGBTQ+-b49e6a.md",
       "sha256": "33a17748a15436d6df16a8d8a395712b41aeebcfc768018658f838329914c4e5"
     },
     {
@@ -27500,19 +27500,19 @@
       "sha256": "48fbff496004b8cceb22af81357a1a21f7781659e411ce27f661623aee1370c0"
     },
     {
-      "path": "docs/vault/Papers/Improving diversity of demographic representation in people entities in Large Language Models.md",
+      "path": "docs/vault/Papers/Improving diversity of demographic representation in people-b2c4dd.md",
       "sha256": "c1fd5185b61a152e6b584d8b8be549b930bc64f05dafd2beb65f6cde3b4b6755"
     },
     {
-      "path": "docs/vault/Papers/Improving human-AI partnerships in child welfare- Understanding worker practices, challenges, and desires for algorithmic decision support.md",
+      "path": "docs/vault/Papers/Improving human-AI partnerships in child welfare- Understanding-b6ae67.md",
       "sha256": "c824968daa7b3e4172079c7573cd25aad664a4d0a0c5512c8d2ee4c46b6ae82d"
     },
     {
-      "path": "docs/vault/Papers/In search of artificial intelligence (AI) literacy in teacher education- A scoping review.md",
+      "path": "docs/vault/Papers/In search of artificial intelligence (AI) literacy in teacher-f047d6.md",
       "sha256": "4385fc50e34332a9743ddd4e6d3e93f950b8bb1f943c169a7cc1dc38ef455085"
     },
     {
-      "path": "docs/vault/Papers/Inclusive prompt engineering- A methodology for hacking biased AI image generation.md",
+      "path": "docs/vault/Papers/Inclusive prompt engineering- A methodology for hacking biased AI-daa679.md",
       "sha256": "118fcd87f67cea8aef22cd1b0982ffca46d86b6cefde31281163216e578184d5"
     },
     {
@@ -27520,31 +27520,31 @@
       "sha256": "08bbc439b48bccd395ea9efc5c34dc846269fe6708df3de0891b81269325df0f"
     },
     {
-      "path": "docs/vault/Papers/Intersectional Stereotypes in Large Language Models- Dataset and Analysis.md",
+      "path": "docs/vault/Papers/Intersectional Stereotypes in Large Language Models- Dataset and-12e417.md",
       "sha256": "3ea7848a28738f933b9805341745c9f8a8b7f6f278eb087c9c411618cfd1acca"
     },
     {
-      "path": "docs/vault/Papers/Intersectional analysis of visual generative AI- the case of stable diffusion.md",
+      "path": "docs/vault/Papers/Intersectional analysis of visual generative AI- the case of-9df0b9.md",
       "sha256": "d13cace762f785eb3e2f98c9e02572f0f7e721109f431c45a9e382664747c73b"
     },
     {
-      "path": "docs/vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns and Recommendations for Action.md",
+      "path": "docs/vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns-ba9ec5.md",
       "sha256": "a23a9bac5c679545b5bb619fd55e2170063f05be8be63e986d53ff64900a3834"
     },
     {
-      "path": "docs/vault/Papers/Introducing Generative Artificial Intelligence into the MSW Curriculum- A Proposal for the 2029 Educational Policy and Accreditation Standards.md",
+      "path": "docs/vault/Papers/Introducing Generative Artificial Intelligence into the MSW-4e4f4a.md",
       "sha256": "c71151b9fe118752b283c614e8b0e9a18bbecc803728933f0749474a6f430fa4"
     },
     {
-      "path": "docs/vault/Papers/Introduction to the digital welfare state- Contestations, considerations and entanglements.md",
+      "path": "docs/vault/Papers/Introduction to the digital welfare state- Contestations-5af8b3.md",
       "sha256": "4b2c4cc3dd0dcf43c28b0ee18c7f55152e96d595c4f041147516ece8e4b73af5"
     },
     {
-      "path": "docs/vault/Papers/Investigating AI systems- examining data and algorithmic bias through hermeneutic reverse engineering.md",
+      "path": "docs/vault/Papers/Investigating AI systems- examining data and algorithmic bias-be6c43.md",
       "sha256": "093dd703566d46534fb3e20d34b094d0f3ed3a25a964d0632f4642826f13023a"
     },
     {
-      "path": "docs/vault/Papers/Künstliche Intelligenz in der Sozialen Arbeit- Grundlagen, Entwicklungen, Herausforderungen.md",
+      "path": "docs/vault/Papers/Künstliche Intelligenz in der Sozialen Arbeit- Grundlagen-98f94e.md",
       "sha256": "5ebb618ec3cd9dc4d9d8526fa51ebf2840e75db139b79592bd813ae571a803e9"
     },
     {
@@ -27552,7 +27552,7 @@
       "sha256": "21d4884d5eb0222a91385de66f0f914f53a2e87242366d618833c35bc6189474"
     },
     {
-      "path": "docs/vault/Papers/Large Language Models and User Trust- Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals.md",
+      "path": "docs/vault/Papers/Large Language Models and User Trust- Consequence of-08909c.md",
       "sha256": "6d16c5af704af887a802b9c1aa19a423486ec04a0d3d7e10637315563e18a680"
     },
     {
@@ -27564,15 +27564,15 @@
       "sha256": "b6b2d70607c6982f24f313641ea6a259c89de996396cbbd8ae2f01e9b74dfeca"
     },
     {
-      "path": "docs/vault/Papers/Leitfaden Digitale Verwaltung und Ethik- Praxisleitfaden für KI in der Verwaltung, Version 1.0.md",
+      "path": "docs/vault/Papers/Leitfaden Digitale Verwaltung und Ethik- Praxisleitfaden für KI-7ccb8b.md",
       "sha256": "4b469b11764627a413ffa8e95620a413b445d49122087abdc3f243f133f61139"
     },
     {
-      "path": "docs/vault/Papers/Less knowledge, more trust- Exploring potentially uncritical attitudes towards AI in higher education.md",
+      "path": "docs/vault/Papers/Less knowledge, more trust- Exploring potentially uncritical-0e78a1.md",
       "sha256": "3e4be4213babee1872a6bfacb5758382e5659ad45f5725f8f8befbd42c755c9c"
     },
     {
-      "path": "docs/vault/Papers/Measuring and identifying factors of individuals' trust in large language models.md",
+      "path": "docs/vault/Papers/Measuring and identifying factors of individuals' trust in large-753854.md",
       "sha256": "683af1a96a1f93960a5e5622e32431b058d41754eadc0e511ebca36582bd1250"
     },
     {
@@ -27580,7 +27580,7 @@
       "sha256": "97886a712fa594818f3d6b175c8f71873189f1fea831558044af2fd183e10940"
     },
     {
-      "path": "docs/vault/Papers/Measuring user competence in using artificial intelligence- validity and reliability of artificial intelligence literacy scale.md",
+      "path": "docs/vault/Papers/Measuring user competence in using artificial intelligence-9f654f.md",
       "sha256": "2ad1c3e68f74cda318948a09d76cdbfa3259b216f98707609ccddfff0492462f"
     },
     {
@@ -27588,7 +27588,7 @@
       "sha256": "f65275b0f4af34f98c670ebfce01ba1df82a36d7edc6affc995d1485437b4bad"
     },
     {
-      "path": "docs/vault/Papers/MirrorStories- Reflecting Diversity through Personalized Narrative Generation with Large Language Models.md",
+      "path": "docs/vault/Papers/MirrorStories- Reflecting Diversity through Personalized-df407d.md",
       "sha256": "289f59e1b2e906130afac07f1cdceccbdf8a2dba1b59a67da5ab8246115e4193"
     },
     {
@@ -27604,23 +27604,23 @@
       "sha256": "01f532f2499dcba259178ec9ce8e62e85ca8063ff0952df9ab0657cef6317463"
     },
     {
-      "path": "docs/vault/Papers/PreciseDebias- An automatic prompt engineering approach for generative AI to mitigate image demographic biases.md",
+      "path": "docs/vault/Papers/PreciseDebias- An automatic prompt engineering approach for-dea2cb.md",
       "sha256": "6522b1fc02a8c035bab1a9d93c0ad7aa9ce9ffce5399e0bf5837a0273ea7dd78"
     },
     {
-      "path": "docs/vault/Papers/Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups.md",
+      "path": "docs/vault/Papers/Prejudiced interactions with large language models (LLMs) reduce-93ea04.md",
       "sha256": "96d62bdeb426dbe75542e4302dca33b01fbfcc0a21cca2a3612281bb08f4effb"
     },
     {
-      "path": "docs/vault/Papers/Promises and challenges of generative artificial intelligence for human learning.md",
+      "path": "docs/vault/Papers/Promises and challenges of generative artificial intelligence for-93edd3.md",
       "sha256": "6eecfe97fca65b3aed9a3ea0257a13924a5ec5885092b1a03253a626df156ab2"
     },
     {
-      "path": "docs/vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models- A Systematic Review.md",
+      "path": "docs/vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias-181915.md",
       "sha256": "64fd385b6a065d0ecc5d82c1fcd76ea38b0d651cf8590f22ed97e0f442fde6d4"
     },
     {
-      "path": "docs/vault/Papers/Prompten nach Plan- Das PCRR-Framework als pädagogisches Werkzeug für den Einsatz von Künstlicher Intelligenz.md",
+      "path": "docs/vault/Papers/Prompten nach Plan- Das PCRR-Framework als pädagogisches Werkzeug-f9d8d0.md",
       "sha256": "deb96b87899d6e78fc661d03311c93df9ab3b4a226ca444f7322ebed19286d43"
     },
     {
@@ -27628,7 +27628,7 @@
       "sha256": "0580cafe915de92b7b537c96af56d4e37a8ecc115e93d29f953a0bb3d7181d52"
     },
     {
-      "path": "docs/vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
+      "path": "docs/vault/Papers/Prompting techniques for reducing social bias in LLMs through-c8c6ac.md",
       "sha256": "88ad4109cb03ce3a36b6fe849e674458a19ea674e66f5525cdd94c1bbc055df1"
     },
     {
@@ -27644,7 +27644,7 @@
       "sha256": "67dbe3e369217142c87f38c64a0a94b1e96a4ff44ebe5dae609e9505c065ae41"
     },
     {
-      "path": "docs/vault/Papers/Reflexive prompt engineering- A framework for responsible prompt engineering and AI interaction design.md",
+      "path": "docs/vault/Papers/Reflexive prompt engineering- A framework for responsible prompt-56fc38.md",
       "sha256": "016af6197cdd2fcc39121d0635fd94b36ca32a67fd23409f60c381fa5fe794c8"
     },
     {
@@ -27656,19 +27656,19 @@
       "sha256": "46b787ed90f370bd4f7794788e46a9fc592bfe9dd241a69729bc242e1654448e"
     },
     {
-      "path": "docs/vault/Papers/Social work in the age of artificial intelligence- A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis.md",
+      "path": "docs/vault/Papers/Social work in the age of artificial intelligence- A rights-based-a7f978.md",
       "sha256": "88349f23f50f111151ba8fb677b35b93748388f2c74e92792366175eabd88526"
     },
     {
-      "path": "docs/vault/Papers/Tech workers' perspectives on ethical issues in AI development- Foregrounding feminist approaches.md",
+      "path": "docs/vault/Papers/Tech workers' perspectives on ethical issues in AI development-9b6f60.md",
       "sha256": "da4fcb8b64f55d8d55c89fb81378e5f491d35dcbce2c9444789e543792eed227"
     },
     {
-      "path": "docs/vault/Papers/Tensions in digital welfare states- Three perspectives on care and control.md",
+      "path": "docs/vault/Papers/Tensions in digital welfare states- Three perspectives on care-5963ce.md",
       "sha256": "015cdaad159ea3f7d6c2a5ef9cc7b668ffbb236f02e4ee486b9a4d4dcc1b67ae"
     },
     {
-      "path": "docs/vault/Papers/The AI literacy development canvas- Assessing and building AI literacy in organizations.md",
+      "path": "docs/vault/Papers/The AI literacy development canvas- Assessing and building AI-d0ef54.md",
       "sha256": "0836ff2b3a6aee4a4343ee522f7477d7780a796eba625b9ee2ff15bceb5a0c27"
     },
     {
@@ -27680,35 +27680,35 @@
       "sha256": "806c94252fcd53feac99c6f23b94b86bdb5db3b0184247b06275a1647579cd6e"
     },
     {
-      "path": "docs/vault/Papers/The influence of mental state attributions on trust in large language models.md",
+      "path": "docs/vault/Papers/The influence of mental state attributions on trust in large-515a74.md",
       "sha256": "fa2174a91459a0c3b78215434f940f88e27edb1163ea79d2e9e1c7e1f290de03"
     },
     {
-      "path": "docs/vault/Papers/The power of prompts- Evaluating and mitigating gender bias in MT with LLMs.md",
+      "path": "docs/vault/Papers/The power of prompts- Evaluating and mitigating gender bias in MT-446b3e.md",
       "sha256": "6a39dd19ab2e98324f89d6d7a44145b31c3f24c88242e907e2d73215d5c98022"
     },
     {
-      "path": "docs/vault/Papers/The role of artificial intelligence (AI) and machine learning in social work practice.md",
+      "path": "docs/vault/Papers/The role of artificial intelligence (AI) and machine learning in-a6ace5.md",
       "sha256": "590e56a7a7c50b054df4da14b2af0b7a7c39ef4fbd1adb2c1fa7561725088d20"
     },
     {
-      "path": "docs/vault/Papers/Thinking like a scientist- Can interactive simulations foster critical AI literacy-.md",
+      "path": "docs/vault/Papers/Thinking like a scientist- Can interactive simulations foster-503aa9.md",
       "sha256": "8d4d2488a890393c64c421cd2a5b45284c2b85efdbda6c3ff50ec2a5e3c01111"
     },
     {
-      "path": "docs/vault/Papers/Towards Substantive Equality in Artificial Intelligence- Transformative AI Policy for Gender Equality and Diversity.md",
+      "path": "docs/vault/Papers/Towards Substantive Equality in Artificial Intelligence-a00b30.md",
       "sha256": "bc647709fceb9bd0de5a7e1f9aedf922c3027bc5800afb55436658ff0e2d2809"
     },
     {
-      "path": "docs/vault/Papers/Training in Co-Creation as a Methodological Approach to Improve AI Fairness.md",
+      "path": "docs/vault/Papers/Training in Co-Creation as a Methodological Approach to Improve-dfbc6f.md",
       "sha256": "d1344a39e60cffa200c9b8dd307804bda1940b5ae7611953b2c6d8e2a34cd441"
     },
     {
-      "path": "docs/vault/Papers/Transparency enhances positive perceptions of social artificial intelligence.md",
+      "path": "docs/vault/Papers/Transparency enhances positive perceptions of social artificial-9875e4.md",
       "sha256": "d872c9569b4cd705e98356fce5ec89b046b4853a0094748d9518378a2ab14cdb"
     },
     {
-      "path": "docs/vault/Papers/Trust in artificial intelligence–based clinical decision support systems among health care workers- Systematic review.md",
+      "path": "docs/vault/Papers/Trust in artificial intelligence–based clinical decision support-25e0d1.md",
       "sha256": "6298e06970cb290e380e8be56d2bb526494195992f7782d15e4400f769d65093"
     },
     {
@@ -27720,7 +27720,7 @@
       "sha256": "1e3ace29f154b5a9a6603387515ea6b83e96792f79d52311d9ca3d091f6d15e3"
     },
     {
-      "path": "docs/vault/Papers/What are artificial intelligence literacy and competency- A comprehensive framework to support them.md",
+      "path": "docs/vault/Papers/What are artificial intelligence literacy and competency- A-33af20.md",
       "sha256": "968d9ae287ec9e00b0d3b1f7b76c708a7bf447292e5bca192e0cd25d379d14c2"
     },
     {
@@ -27736,11 +27736,11 @@
       "sha256": "07bfcb8aa891e30754e04791c32dfb7129bdc0d024e0a5f5b8c3e398793c18f0"
     },
     {
-      "path": "docs/vault/Papers/What’s in a name- Auditing large language models for race and gender bias.md",
+      "path": "docs/vault/Papers/What’s in a name- Auditing large language models for race and-b553d0.md",
       "sha256": "4c6e9cf490761c8885ff7a3a57b3834658bdb06e4746b42873014413318956ac"
     },
     {
-      "path": "docs/vault/Papers/Who cares about data- Data care arrangements in everyday organisational practice.md",
+      "path": "docs/vault/Papers/Who cares about data- Data care arrangements in everyday-31c653.md",
       "sha256": "51e2370d438b7e9455a56c599836451ddd1c28115d5208a050c49e079143cd08"
     },
     {
@@ -28029,7 +28029,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "6a2f9ea9e6d334b6bc7e17a8e9d68f3b6b03f1ae4facc995a0c0f9c7beafead9"
+      "sha256": "ad97b38dbcd982fb5f7ae3b6925f7e97bf0a7e7453143ecc6e4b85b66f1aaced"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -28132,8 +28132,8 @@
       "sha256": "4481a13348373213dadde36862680e504c5f37c3b5681b1097a9746188e9bfde"
     },
     {
-      "path": "generated/distilled/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md",
-      "sha256": "72c175af45132fa37ded3cc4b90f9dcceac6db1747152e5dc6d987012eaa9756"
+      "path": "generated/distilled/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md",
+      "sha256": "bf3a835228ed2d74d06c8b4ac19845d22a5e8db4e786788e8d309898c31c16bf"
     },
     {
       "path": "generated/distilled/Browne_2024_Engineers_on_responsibility_feminist_approaches.md",
@@ -28260,8 +28260,8 @@
       "sha256": "2f3ce1ad327f1d0752cc211eaf80f5b619ace87dcb71cfc72c8c36bdef2593ad"
     },
     {
-      "path": "generated/distilled/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
-      "sha256": "6d7280df0626cb20c66c99bf51c406904e460c07715d9c6bd154f70e11ace16a"
+      "path": "generated/distilled/European Commission. Joint Research Centre._2017_DigComp_2.1_the-8a861f.md",
+      "sha256": "7ad9b17b37124c73a4440ed00c21737b7e3376481c72f29ab77c983e051645c3"
     },
     {
       "path": "generated/distilled/European Data Protection Supervisor_2023_Explainable_Artificial_Intelligence.md",
@@ -29293,7 +29293,7 @@
     },
     {
       "path": "generated/source-acquisition/codex-websearch-2026/source-readiness.json",
-      "sha256": "efad3e9948ef3b20bf2aca6f163e5fa14739576a56f61721b198f2d49ce7acb3"
+      "sha256": "79faf508076894d04b86ebc049de711e1b0e559f19a5529b30f3da74ae1922f1"
     },
     {
       "path": "generated/source-acquisition/residual-queue-9-20260826/resolution-ledger.json",
@@ -29360,8 +29360,8 @@
       "sha256": "d784bcc51640108ecdb71a2b838f5b00239e19c964eed3eb4290585daccbc2a6"
     },
     {
-      "path": "research-vault/10_distillates/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md",
-      "sha256": "795a58b87876c9aff26afe3293419d2a77eb93983ae8dfad9030bd0df3ef7e5a"
+      "path": "research-vault/10_distillates/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md",
+      "sha256": "6d7bbcb7906dee909d3bc686677ce04e4b88df56bd800ebd8bebbc0a0bc501c6"
     },
     {
       "path": "research-vault/10_distillates/Casal-Otero_2023_AI_literacy_in_K-12_a_systematic_literature_review.md",
@@ -29473,7 +29473,7 @@
     },
     {
       "path": "research-vault/10_distillates/INDEX.md",
-      "sha256": "cd808cf08bc5eff320f3b804ae51f98da3727800c838f16804ebb344677fa872"
+      "sha256": "4322ee123496d292cb0854434494c80cae96490b6efa9a4a97cf5a1fa1384d7d"
     },
     {
       "path": "research-vault/10_distillates/Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.md",

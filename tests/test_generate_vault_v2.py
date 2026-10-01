@@ -24,7 +24,7 @@ def test_unique_filename_prevents_case_insensitive_overwrite(tmp_path: Path) -> 
     third = generator._unique_filename("A" * 140, "Second_source", used)
 
     assert len({first.casefold(), second.casefold(), third.casefold()}) == 3
-    assert all(len(name) <= 100 for name in (first, second, third))
+    assert all(len(name) <= 72 for name in (first, second, third))
 
 
 def test_assessments_read_case_and_human_diversity_column(tmp_path: Path) -> None:

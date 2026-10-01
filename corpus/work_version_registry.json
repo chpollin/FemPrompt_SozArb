@@ -1,6 +1,6 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:5d52637b8f4ddae24ae46ae69aacf2534282b12b290307cb6ccdac8468cc79ac",
+  "source_fingerprint": "sha256:a6e78be828eb9c695fad4000aab3921b9d99e136fca3afaa94eca3a14207b2e3",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
@@ -372,7 +372,7 @@
     },
     {
       "path": "generated/source-acquisition/codex-websearch-2026/source-readiness.json",
-      "sha256": "efad3e9948ef3b20bf2aca6f163e5fa14739576a56f61721b198f2d49ce7acb3"
+      "sha256": "79faf508076894d04b86ebc049de711e1b0e559f19a5529b30f3da74ae1922f1"
     },
     {
       "path": "generated/verification/historical-resolution-2026-09-05.json",

@@ -24,6 +24,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: Bounded file names for Windows clones
+
+A clone on Windows failed with "Filename too long", because paper notes named after full titles and a few long acquisition stems pushed repository-relative paths far beyond what a deep clone root leaves under the 260-character limit. Title-derived stems now pass through one shared rule that caps them at 72 characters with a short hash of the full stem ([[data#File naming and path length]]). The legacy knowledge-document lookup uses the same rule, so links resolve from the current title as before. The existing files were moved with history preserved and recorded in a path migration. Paper notes stayed byte-identical, which keeps the hash-bound recovery contract valid with updated path fields only. A test now rejects any tracked path above 120 characters. Acquisition stems that the full-text manifest binds kept their names, since knowledge documents embed them as source identity.
+
+Open. The change takes effect for others only after the operator merges it into main, and a checkout that already failed needs a fresh clone afterwards.
+
 ### 2026-10-01: PRISM checks and corrects the existing annotation
 
 The operator asked for two modes instead of three, no rounds in the interface, prefilled categories as colour toggles, a list that shows what is already captured and a panel without scrolling. PRISM now shows every document with its current annotation, the own record, the productive agent record or the consolidated expert decision as prefill, and one save writes either an own record or a verification entry into the reviewer's file ([[specification#ADR-042 One assessment over the current annotation, two modes, editing only in a local copy]]). The expert decision is taken over as it stands, with an override where the derivation rule disagrees and a new controlled exclusion reason for confirming an expert Exclude. Unchanged expert levels need no Paper Beleg, every change does. Editing exists only in a local project copy.

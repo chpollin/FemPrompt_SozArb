@@ -20,6 +20,7 @@ from datetime import datetime
 # Import shared utilities
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))  # src/ on path for utils
 from utils import setup_windows_encoding, load_env_file, get_env_var
+from file_naming import bounded_stem
 
 # Fix encoding for Windows console
 setup_windows_encoding()
@@ -130,7 +131,8 @@ def main():
 
         # Create filename
         title_short = sanitize_filename(title, max_length=50)
-        filename = f"{author_year}_{title_short}.pdf"
+        # The stem propagates to markdown and distillate files, so it is bounded here.
+        filename = f"{bounded_stem(f'{author_year}_{title_short}')}.pdf"
         filepath = output_dir / filename
 
         item_result = {

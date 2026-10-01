@@ -96,11 +96,11 @@
     "visual_evidence_manifests": [
       {
         "path": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/manifest.json",
-        "sha256": "5bbf777d60e6e121bcc23fe915e84b3217cc98c4141d3f2519b50d31402ffaac"
+        "sha256": "4c84ffb67b8b22f155cfc1a5b39923066b3d05d78ddd5fdabce39302b95c99a5"
       },
       {
         "path": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/manifest.json",
-        "sha256": "38c6eadc567b11da4655a465e4a95cbe65d418b6e9caeead9503cc5f5e18beac"
+        "sha256": "246be150b6d277e3ddf1fdbe7ce515ee7a9d821ddb5a458bf75a37071ba76308"
       }
     ],
     "source_recovery": {
@@ -1389,7 +1389,7 @@
       "visual_evidence_assessment": "not_representable_in_current_prism_evidence_structure",
       "visual_evidence_manifest": {
         "path": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/manifest.json",
-        "sha256": "5bbf777d60e6e121bcc23fe915e84b3217cc98c4141d3f2519b50d31402ffaac",
+        "sha256": "4c84ffb67b8b22f155cfc1a5b39923066b3d05d78ddd5fdabce39302b95c99a5",
         "image_count": 5,
         "pdf_pages": [
           13
@@ -3075,7 +3075,7 @@
       "visual_evidence_assessment": "not_representable_in_current_prism_evidence_structure",
       "visual_evidence_manifest": {
         "path": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/manifest.json",
-        "sha256": "38c6eadc567b11da4655a465e4a95cbe65d418b6e9caeead9503cc5f5e18beac",
+        "sha256": "246be150b6d277e3ddf1fdbe7ce515ee7a9d821ddb5a458bf75a37071ba76308",
         "image_count": 16,
         "pdf_pages": [
           16,

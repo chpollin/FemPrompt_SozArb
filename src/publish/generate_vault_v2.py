@@ -20,6 +20,7 @@ from typing import Dict, List, Optional, Set, Tuple
 from collections import defaultdict, Counter
 from difflib import SequenceMatcher
 
+from src.file_naming import bounded_title_stem
 from src.publish.generate_docs_data import human_category_cell, ja_nein_to_bool
 
 # Fix encoding for Windows console
@@ -907,19 +908,17 @@ Antworte NUR mit diesem JSON:
     # -------------------------------------------------------------------
 
     def _safe_filename(self, title: str) -> str:
-        """Make a filesystem-safe filename from a title."""
-        safe = re.sub(r'[<>:"/\\|?*\n\r]', '-', title).strip('. ')
-        return safe[:100]
+        """Make a filesystem-safe, bounded filename from a title."""
+        return bounded_title_stem(title)
 
     def _unique_filename(self, title: str, stem: str, used: Set[str]) -> str:
         """Return a case-insensitively unique, Windows-safe output filename."""
-        base_title = self._safe_filename(title)
-        candidate = base_title
+        candidate = self._safe_filename(title)
         suffix_index = 1
         while candidate.casefold() in used:
             suffix_index += 1
-            suffix = stem[:32] if suffix_index == 2 else f"{stem[:24]}-{suffix_index}"
-            candidate = f"{base_title[:64].rstrip('. ')} ({suffix})"
+            suffix = stem if suffix_index == 2 else f"{stem}-{suffix_index}"
+            candidate = bounded_title_stem(f"{title} ({suffix})")
         used.add(candidate.casefold())
         return candidate
 

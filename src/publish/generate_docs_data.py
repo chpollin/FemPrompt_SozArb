@@ -34,6 +34,7 @@ from src.analysis.metadata_corrections import (
 )
 from src.analysis.work_versions import load_registry, lookup_by_record
 from src.file_hashing import canonical_file_bytes
+from src.file_naming import bounded_title_stem
 from src.publish.project_active_distillates import project_active_distillates
 from src.publish.project_recovered_knowledge import project_recovered_knowledge
 
@@ -64,8 +65,8 @@ CATEGORIES = [item["key"] for item in CATEGORY_SCHEMA["categories"]]
 
 
 def safe_title(title: str) -> str:
-    """Convert title to safe filename, matching generate_vault_v2.py logic."""
-    return re.sub(r'[<>:"/\\|?*\n\r]', "-", title).strip(". ")
+    """Bounded knowledge-document stem for a title, shared with generate_vault_v2."""
+    return bounded_title_stem(title)
 
 
 def resolve_case_preserving_filename(

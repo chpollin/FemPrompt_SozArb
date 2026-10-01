@@ -103,17 +103,14 @@ def test_explicit_knowledge_bindings_match_verified_sources() -> None:
 def test_parse_llm_row_rejects_unbound_duplicate_title(
     tmp_path: Path, monkeypatch
 ) -> None:
-    filename = "Intersectionality in Artificial Intelligence- Framing Concerns and Recommendations for Action.md"
+    title = "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action"
+    filename = docs_data.safe_title(title) + ".md"
     (tmp_path / filename).write_text(
         "---\nsource_file: Ulnicane_2024_Intersectionality_in_Artificial_Intelligence.md\n---\n",
         encoding="utf-8",
     )
     monkeypatch.setattr(docs_data, "VAULT_PAPERS_DIR", str(tmp_path))
-    metadata = {
-        "BLOCKED": {
-            "Title": "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action"
-        }
-    }
+    metadata = {"BLOCKED": {"Title": title}}
 
     paper = docs_data.parse_llm_row(
         {"Zotero_Key": "BLOCKED"},

@@ -32,6 +32,14 @@ Local sources recovered from retired worktrees retain their established relative
 
 The private preservation inventory is under `refactor-preservation/` in the directory returned by `git rev-parse --git-common-dir`. It records original paths, destinations, byte sizes and SHA-256 comparisons. Credentials remain at their original local location and are excluded from the file inventory. The consolidation recorded in [[journal]] preserved source bytes before retiring the worktrees.
 
+## File naming and path length
+
+Every tracked repository-relative path stays at 120 characters or less, so a clone root of up to 139 characters remains below the Windows limit of 260 characters without `core.longpaths`. `tests/test_path_length.py` fails when a tracked path exceeds the limit and runs with `npm run check`.
+
+File names derived from a title or an author-year-title label go through `src/file_naming.py`. Characters Windows forbids become hyphens. A stem of more than 72 characters keeps its prefix up to a word boundary and ends with a hyphen and the first six hexadecimal digits of the SHA-256 of the case-folded full stem. The rule is deterministic, so `generate_docs_data.py` still finds a legacy knowledge document under `docs/vault/Papers/` from the current title, and titles that share a long prefix stay distinct. `generate_vault_v2.py` and `download_zotero_pdfs.py` apply the same rule to paper notes and acquisition stems.
+
+The renames that brought the existing tree under the limit are recorded in `corpus/path_migration_2026-10-01.json`. Renamed paper notes are byte-identical, so the path and SHA-256 bindings in `corpus/knowledge_document_recovery.json` and `docs/data/knowledge_doc_bindings.json` changed only in their path fields. Three historical acquisition stems that no full-text manifest binds were renamed across their Markdown, distillate, verification and Research Vault files. `source_file` values that name local PDFs under `pipeline/pdfs/` keep the original acquisition filename. Acquisition stems bound by the full-text manifest keep their names, because knowledge documents embed them as source identity. Visual-evidence images use the short form `pNNN-t<table>-<label>.png`.
+
 ## Preparation evidence
 
 The completion package resolves intake candidates through exact identifiers of the selected bibliographic Version. Historical Zotero matches can originate in title comparison, so they only confirm an identifier binding or expose a conflicting Version. Observed library membership remains separate from accepted bibliographic binding and checked reading-source readiness. The projection retains ambiguous matches as diagnostic candidates and records accepted binding evidence separately.
