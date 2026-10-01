@@ -24,6 +24,14 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: Integration on main, full texts stay, knowledge aligned
+
+In the afternoon `companion-redesign` and the parallel work branches of the day were merged into `main` and pushed on the operator's instruction, so `main` is again the single integration branch. The operator decided that the full texts stay in the now private repository, which supersedes the plan of 29 September to remove protected texts, and that the laptop branch `prepare-expert-verification`, which carried that removal, is not merged. A clone therefore reads papers after `npm run build`, and the earlier statement that a clone shows abstracts only no longer holds. All prepared reading texts are to be bound in principle, while the change of the binding rule awaits explicit permission.
+
+The README, the action layer and the knowledge documents were checked against the repository and aligned with this state. The README now carries the five sub-questions and the Windows setup path, the action layer states the division of labour of ADR-042 to ADR-044, and [[plan#Open decisions]] lists the open decisions with their status and moves the taken ones into a separate table. The specification gained current-relation lines for ADR-019, ADR-025, ADR-034 and ADR-041, and [[standards]] records the recommended PRISMA wording.
+
+Open. PRISM still asks a human reviewer for analysis coding on an Include, while the analysis fields are to be coded by AI agents only (decision 20). The shared page header links to the repository, which the public can no longer reach.
+
 ### 2026-10-01: PRISMA flow per identification source
 
 The paper promises PRISMA reporting, but only round one had a reproducible flow. `src/replay/prisma_flow.py` now derives the flow for every source and lane from the committed lane records and writes `generated/prisma-flow/` in the project build. Round one is taken from the replay itself, so the two cannot diverge. The later sources are deduplicated in execution order by DOI, arXiv identifier and normalised title, and each transferred find is followed to its current Work-level decision. Multiple-finds matrices across the deep-research systems replace the meeting's "duplicates across databases". A separately written verification script, run by an independent agent without access to the generator, produced the same counts in every compared box after one correction in the generator, which had read semicolon-separated and listed DOIs of exclusion entries as a single invalid DOI.

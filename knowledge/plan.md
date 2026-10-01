@@ -13,27 +13,29 @@ generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
-related: [project, analysis-methods, governance, verification, testing, specification, data, journal, handoff, update-protocol, research-vault]
+related: [project, analysis-methods, governance, verification, testing, specification, data, journal, handoff, update-protocol, codebook-v1.4-proposal, research-vault, standards]
 ---
 
 # Plan
 
-The remaining work answers the main question and its five sub-questions from a governed and verifiable corpus, then reports and publishes the answer. Completed implementation history is preserved in [[journal]] and the ADR register in [[specification]]. Generated manifests carry current quantities and per-item processing states. [[handoff]] states the current result and the continuation point.
+The remaining work answers the main question and its five sub-questions from a governed and verifiable corpus, then reports and publishes the answer. Completed implementation history is preserved in [[journal]] and the ADR register in [[specification]]. Generated manifests carry current quantities and per-item processing states. [[handoff]] states the current result and the continuation point, and [[#Open decisions]] lists every decision that still waits for the operator.
 
 ## Current operative state
 
-The operator made the substantive question primary on 1 October 2026. The operator merged the questions the same day. [[project#Research questions]] holds the main question, SQ1 Use, SQ2 Bias forms, SQ3 Handling of bias, SQ4 Conceptual grounding and SQ5 Competences, and the methodological question as second question of the paper. [[project#Publication context]] records the target special issue in Adult Literacy Education, its dates and the framing of SQ2, SQ3 and SQ5 for adult education. [[analysis-methods#Answering the research questions]] states for each sub-question its data, method and current limits.
+[[project#Research questions]] holds the main question, SQ1 Use, SQ2 Bias forms, SQ3 Handling of bias, SQ4 Conceptual grounding and SQ5 Competences, and the methodological question as second question of the paper. [[project#Publication context]] records the target special issue in Adult Literacy Education, its dates and the framing of SQ2, SQ3 and SQ5 for adult education. [[analysis-methods#Answering the research questions]] states for each sub-question its data, method and current limits.
 
-An answer draft for SQ1 exists as [sq1-use.md](../research-vault/40_output/literature-report/sq1-use.md) over grounded Assertions. It finds that no Assertion reports an evaluated benefit of LLM use in a social-work setting, a statement about the active distillates and not about the literature. Several included Works with direct SQ1 content have no active distillate yet. The operator cancelled the answer drafts for the other sub-questions on 1 October 2026. They wait for the coding run and the decisions under [[#Open decisions]].
+The division of labour is fixed. Human reviewers screen the open papers in PRISM with the ten categories and without AI pre-assessment (ADR-044), split between the two reviewers by `docs/data/screening/assignment.json` (ADR-043). Decisions of the consolidated expert assessment are prefilled and count as done. The analysis fields are coded by AI agents in operationally isolated runs with a separate AI Agent Review ([[update-protocol#Agent-assisted completion]]). PRISM still asks a human reviewer for analysis coding on an Include, which is decision 20.
 
-The descriptive mapping tools and the agent-track process diagnostics exist ([[methods#Descriptive mapping and process diagnostics]]). The public Evidence Companion presents the released subset along the sub-questions ([[specification#Public Evidence Companion]]) and is not deployed. The [completion package](../generated/completion/README.md) and `generated/literature-readiness.json` identify unresolved work per item. Existing bibliographic membership does not establish a checked reading source, completed annotation or scholarly verification.
+An answer draft for SQ1 exists as [sq1-use.md](../research-vault/40_output/literature-report/sq1-use.md) over grounded Assertions. It finds that no Assertion reports an evaluated benefit of LLM use in a social-work setting, a statement about the active distillates and not about the literature. The drafts for the other sub-questions wait for the coding run.
+
+The descriptive mapping tools, the agent-track process diagnostics and the PRISMA flow per identification source exist ([[methods#Descriptive mapping and process diagnostics]], [[standards#Identification and selection reporting]]). The public Evidence Companion presents the released subset along the sub-questions ([[specification#Public Evidence Companion]]) and is not deployed. The [completion package](../generated/completion/README.md) and `generated/literature-readiness.json` identify unresolved work per item. Existing bibliographic membership does not establish a checked reading source, completed annotation or scholarly verification.
 
 ## Completion criteria
 
 The project reaches completion when the following conditions hold.
 
 1. Every intended corpus work has a stable identity and a documented source state.
-2. Every screenable work has governed agent annotations and source-grounded AI Agent Review.
+2. Every screenable work has a human screening decision, and every included work has governed agent coding of its analysis fields with source-grounded AI Agent Review.
 3. Domain experts have verified the statements and fields used as scholarly findings, with their exact evidence basis and declared review scope. Verification of a part grants no authority to unchecked content.
 4. Quantitative analysis derives from committed structured data through executable scripts.
 5. Qualitative analysis derives from source-linked Assertions in the Grounded Vault. Each sub-question has an answer chapter that states its coding coverage and keeps not determinable statements apart from absence in the literature.
@@ -43,15 +45,15 @@ The project reaches completion when the following conditions hold.
 
 ## Answering the research questions
 
-The sub-questions are answered in the following order. Steps that depend on an operator decision name it from [[#Open decisions]] and do not start before it is taken.
+The sub-questions are answered in the following order. Steps that depend on an open decision name it from [[#Open decisions]].
 
-1. Codebook decision. Decide whether the [[update-protocol#Proposed codebook amendment v1.4]] precedes the coding run (decision 1). If it is adopted, record it in [[update-protocol#Amendment record]], change `assessment/categories.yaml`, regenerate its projections and recode the Works already coded under v1.3. Without the amendment, SQ1 has no task field, SQ3 cannot attribute an evidence status to a single intervention and SQ4 has no field at all.
-2. Supplementary-search decision. Decide whether a dated, separately documented search for literature on LLM use in social-work tasks without a bias focus extends the corpus (decision 2). If it is adopted, it runs as its own search layer with its own denominators through the intake path of [[update-protocol]] and the source preparation under [[#Controlled corpus completion]].
-3. Coding run. Once decisions 1 and 3 permit it, run the governed analysis-coding agent over the included Works with full text, followed by the separate AI Agent Review under [[update-protocol#Agent-assisted completion]]. The field-state report and `meta.analysis_coverage` then show the reached coverage ([[data#Analysis field states and coverage]]).
-4. Distillates and Assertions per sub-question. Distil the included Works with direct content for a sub-question that lack an active distillate, starting with those listed in [the SQ1 chapter](../research-vault/40_output/literature-report/sq1-use.md#what-is-needed-to-complete-the-answer). Screen the Works whose distillates already support SQ1 Assertions but carry no screening decision. Write the Assertions for SQ2 to SQ5 after the coding run. Every Assertion set receives a source-grounded AI Agent Review by an agent other than its author before an answer chapter treats it as reviewed. The SQ1 Assertions are grounded and await this review. SQ5 additionally needs the external framework of decision 4.
+1. Codebook. The amendment v1.4 described in [[codebook-v1.4-proposal]] is being adopted for the coding run, recorded in [[update-protocol#Amendment record]] with its change to `assessment/categories.yaml`, the regenerated projections and the recoding of Works coded under v1.3.
+2. Human screening. The two reviewers screen their assigned open papers in PRISM. Their records enter the agreement analysis against the agent track under the method consequence of ADR-044.
+3. Coding run. The analysis-coding agents run over the included Works with full text in two isolated tracks, followed by the separate AI Agent Review under [[update-protocol#Agent-assisted completion]]. The run model is decision 10. The field-state report and `meta.analysis_coverage` then show the reached coverage ([[data#Analysis field states and coverage]]).
+4. Distillates and Assertions per sub-question. Distil the included Works with direct content for a sub-question that lack an active distillate, starting with those listed in [the SQ1 chapter](../research-vault/40_output/literature-report/sq1-use.md#what-is-needed-to-complete-the-answer). Write the Assertions for SQ2 to SQ5 after the coding run. Every Assertion set receives a source-grounded AI Agent Review by an agent other than its author before an answer chapter treats it as reviewed. The SQ1 Assertions are grounded and await this review. SQ5 additionally needs the external framework of decision 9, and the four reviewed Assertions with the earlier numbering wait for decision 2.
 5. Expert verification. Domain experts verify the Assertions and coded fields that the answers use, under [[#Domain-expert verification]].
-6. Synthesis. The mapping layer presents evidence-and-gap maps from the relabelled SQ tables. Best-fit framework synthesis runs over reviewed Assertions, and the interpretive layer follows decision 5 ([[analysis-methods#Synthesis layer]]). Contradicting evidence and not determinable cells stay explicit.
-7. Report and paper. The SQ1 chapter under `research-vault/40_output/literature-report/` sets the form of an answer. The report scaffold `00-structure.md` still follows the earlier topic order and is aligned once decision 11 fixes the division of report, paper and Companion. Authors and venue follow decision 12, and the steps under [[#Publication]] complete the manuscript.
+6. Synthesis. The mapping layer presents evidence-and-gap maps from the SQ tables. Best-fit framework synthesis runs over reviewed Assertions, and the interpretive layer follows decision 8 ([[analysis-methods#Synthesis layer]]). Contradicting evidence and not determinable cells stay explicit. A supplementary search (decision 7) would extend the corpus as its own search layer with its own denominators.
+7. Report and paper. The SQ1 chapter under `research-vault/40_output/literature-report/` sets the form of an answer. The report scaffold `00-structure.md` still follows the earlier topic order and is aligned once decision 6 fixes the division of report, paper and Companion. The steps under [[#Publication]] complete the manuscript.
 
 ### Analysis and Assertions
 
@@ -63,40 +65,41 @@ The sub-questions are answered in the following order. Steps that depend on an o
 
 - Name the new completion-package blocks for field states, SQ associations, the round-one selection check and the agent-track diagnostics in the completion-package schema.
 - Build the Tier 1 analyses that [[analysis-methods#Implementation state]] names as not yet implemented.
-- Record PRISMA-ScR in [[standards]] as an applied reporting standard if decision 5 adds it for the mapping layer ([[standards#Open reporting decision on PRISMA-ScR]]).
+- Record PRISMA-ScR in [[standards]] as an applied reporting standard if decision 4 adopts it for the mapping layer.
+- Fill the open fields of the round-two run record listed in [[standards#Identification and selection reporting]].
 
 ## UI development
 
 The public Evidence Companion is specified in [[specification#Public Evidence Companion]].
 
 1. Emit German display labels for analysis fields and values from `assessment/categories.yaml` through `build_analysis_fields.py`, and let the site read them.
-2. Add an explicit sub-question field to the Assertion schema and `build_assertion_index.py`, replacing the topic table in `release-fragen.js` ([[specification#Open interface questions]]). Assertions already carry the optional frontmatter field `research-questions`, which the validator does not check against a vocabulary ([[research-vault#Assertions]]). The schema field would make it checked and released.
+2. Add an explicit sub-question field to the Assertion schema and `build_assertion_index.py`, replacing the topic table in `release-fragen.js` ([[specification#Open interface questions]]). Assertions already carry the frontmatter field `research-questions`, which the validator checks against SQ1 to SQ5 ([[research-vault#Assertions]]). The schema field would carry it into the released index.
 3. Replace the long internal agent coding notes in the public work list by field-level evidence once it exists. Until then the note stays collapsed and labelled as the rationale of the coding agent, never as evidence.
 4. Let the site read `analysis.field_states`, so that it shows absent fields apart from fields not yet coded instead of folding both together.
-5. Fix the clipped labels of the Netz view at 390 px. Its public visibility follows decision 7.
+5. Fix the clipped labels of the Netz view at 390 px. Its public visibility follows decision 12.
 6. Run the [[testing#Independent acceptance review of the result site]], which recomputes every displayed figure from the released data and checks display rules, keyboard operation, zoom, contrast and content fitness. Its findings are recorded in this plan. An operator review on the phone follows, and an acceptance session with the domain experts comes later.
-7. Switch Pages to `build/site/` under [[#Deployment]]. Until then Pages serves `docs/` including internal working data.
-8. Keep the internal working application `docs/index.html` local. Its Kategorien view still lists concepts from the historical concept graph ([[data#Historical concept graph and divergence classification]]), and the page is not part of the public site.
+7. Switch Pages to `build/site/` under [[#Deployment]] once decision 3 is taken. Until then Pages serves `docs/` including internal working data.
+8. Keep the internal working application `docs/index.html` local. Its Kategorien view still lists concepts from the historical concept graph ([[data#Historical concept graph and divergence classification]]).
 
 ## Deployment
 
-GitHub Pages serves `docs/` from `main` as a legacy build at https://chpollin.github.io/FemPrompt_SozArb/ and therefore exposes the internal working surfaces. The repository has been private since 1 October 2026, while the Pages site stays public, so links from public pages to the repository are dead for the public. The operator decided on 29 September 2026 that Pages shows only the result page and that protected full texts leave the public repository. The target is therefore the allowlisted result site from `build/site/` under [[governance#Publication boundary]].
+GitHub Pages serves `docs/` from `main` as a legacy build at https://chpollin.github.io/FemPrompt_SozArb/ and therefore exposes the internal working surfaces, while the git-ignored reading layer stays off the site. The repository has been private since 1 October 2026 and the Pages site stays public, so links from public pages to the repository are dead for the public. The operator decided on 29 September 2026 that Pages shows only the result page. The target is the allowlisted result site from `build/site/` under [[governance#Publication boundary]], and the switch is decision 3.
 
-1. Obtain the operator's approval for the deployment and for merging the branch that carries the result site into `main` (decision 3).
+1. Obtain the operator's approval for the switch.
 2. Set the Pages source of the repository to GitHub Actions.
 3. Dispatch `.github/workflows/pages.yml`, which runs on `main`, builds and checks the project and uploads only `build/site/`.
 4. Check the deployed state at the public address. A local build or passing local checks do not establish it.
 
 ## Provenance and verification alignment
 
-The accepted scope permits human verification of individual fields or statements and first produces comparative literature synthesis. [[governance#Verification scope decision, 22 September 2026]] owns the authority rule, and [[research-vault#Comparative synthesis scope]] owns the analytical scope. The whole-record path exists in Bearbeiten (ADR-040, unified by ADR-042). The experts' scope is the 2026 intake and the agent-coded records, and round-one annotations stay valid without a new verification event.
+The accepted scope permits human verification of individual fields or statements and first produces comparative literature synthesis. [[governance#Verification scope decision, 22 September 2026]] owns the authority rule, and [[research-vault#Comparative synthesis scope]] owns the analytical scope. Since ADR-044 PRISM offers no human verification action. The verification data model of ADR-040 and existing entries stay readable, and round-one annotations stay valid corpus decisions without a new verification event.
 
 1. Implement human review targets at field or statement level without promoting their parent. Bind the reviewed content and its evidence dependencies to an identified person, actual review time, declared scope and outcome. A change to relevant evidence invalidates the review even if the field value or statement text is unchanged. Unrelated field changes need not invalidate an otherwise unchanged target.
-2. Project current verification coverage per target and expose it in PRISM. Preserve the existing whole-record path and historical events until compatibility has been checked. Human verification receipts remain separate from AI-review receipts and deterministic checks.
+2. Decide where such reviews are recorded, given that human sessions in PRISM must not show the agent coding before the human decision (ADR-044). Human verification receipts remain separate from AI-review receipts and deterministic checks.
 3. Define publication of mixed-authority content before simplifying the publisher. Determine which verified fields, statements and necessary context belong to the result view. Preserve historical approvals and the existing preliminary AI-reviewed policy. A target-level verification must never make unrelated contents public or verified.
 4. Check the integrated behaviour with changed-source, stale-review, rejected-review and mixed-scope cases. Keep field coverage, review validity and actual scholarly correctness as separate acceptance claims.
 
-Clarify the substantive question answered by a field-level acceptance and the public projection of mixed-authority material. Concrete interpretive disagreements go to domain-expert review with their evidence. These questions do not block source preparation, truthful inventory corrections or preparation of the comparative synthesis.
+These questions do not block human screening, source preparation, truthful inventory corrections or preparation of the comparative synthesis.
 
 ## Controlled corpus completion
 
@@ -134,7 +137,7 @@ Bounded subagent assignments receive explicit record lists, permitted write path
 - Repair the source-identified formula and figure losses in *Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models* and *Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models*, as specified by the [conversion-QC receipts](../generated/source-acquisition/completion-20260921/conversion-qc/oa-review/conversion-qc.json).
 - Bind or convert any further Paper representation only after its work identity has passed the source audit.
 - Resolve the [registered-identifier gaps](../corpus/source-acquisition/completion-20260921/existing-version-contract-gaps.json) for the located reports before binding their reading copies.
-- Bind the prepared 2026 reading texts that fail the quoted-DOI rule once the binding-contract decision under [[#Open decisions]] is taken, and rebuild the registry.
+- Bind the prepared 2026 reading texts that fail the quoted-DOI rule once decision 1 permits the rule change, and rebuild the registry.
 - Rebuild the agent-screening queue after each source or corpus change.
 - Among the 2026 works without a usable full text, only the JSSWR paper on Chinese social work standards has an open-access author preprint, recorded in `generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22.json` and converted locally without source QC or binding. The others are publisher-restricted and stay on the manual acquisition list `fehlende-volltexte-2026.xlsx`, which the partners received.
 
@@ -148,36 +151,33 @@ Execute newly source-ready works under [[update-protocol#Agent-assisted completi
 
 ### Domain-expert verification
 
-- Present the 2026 intake and the agent-coded records in PRISM verification mode.
-- Record accepted, corrected and accepted, changes requested, or rejected for each reviewed statement, field or explicitly scoped whole record. Use the existing whole-record path only when that entire record was checked. Field-level recording depends on [[#Provenance and verification alignment]].
+- Verify the Assertions that support the answer chapters, the literature report and the paper, each against its evidence.
+- Verify the coded fields that the answers use, once [[#Provenance and verification alignment]] provides a field-level record that keeps the agent coding out of the human screening session.
 - Preserve each correction as a superseding annotation with a field-level difference record.
-- Verify the Assertions that support the answer chapters, the literature report and the paper.
 - Verify the scholarly interpretation of the report and manuscript after their complete synthesis exists.
 
 The accepted scope is defined in [[governance#Verification scope decision, 22 September 2026]]. New evidence requires checking the affected review dependencies while preserving previous versions.
 
 ### Publication
 
-- Generate the final PRISMA 2020 and PRISMA-trAIce reporting artifacts from the governed records, and PRISMA-ScR artifacts if decision 5 adds that standard.
+- Generate the final PRISMA 2020 and PRISMA-trAIce reporting artifacts from the governed records, and PRISMA-ScR artifacts if decision 4 adopts that standard.
+- Report the identification through AI-assisted deep research without database search with the declared deviation for items 6 and 7 and the wording recorded in [[standards#Identification and selection reporting]].
 - Insert the verified quantitative and qualitative findings into the canonical manuscript.
 - Check the current author instructions of Adult Literacy Education before submission, send the optional draft for editorial feedback by 1 December 2026 and submit by 15 February 2027 ([[project#Publication context]]).
-- Report the AI-assisted deep-research identification without database search as a declared PRISMA 2020 deviation.
 - Apply the already authorised AI-source-reviewed release policy to eligible preliminary results. Record person-attributed publication approval for the final scholarly records and manuscript when that later authority is claimed.
 - Rebuild and inspect the separate result site from its policy-filtered projections.
 
 ## Technical follow-up
 
 - Confirm the native Chromium directory-permission and physical-write path in a disposable clone.
-- Exercise the setup path with a person who did not build PRISM before extracting a reusable configuration guide.
-- Prepare and hand over the domain experts' GitHub Desktop clone with the built full-text layer, since `docs/data/fulltext/` is git-ignored and a plain clone shows abstracts only.
+- Exercise the setup path of the README with a person who did not build PRISM before, on a fresh Windows clone, and correct the documentation where it fails.
 
 ## Waiting on the project owner
 
 These steps need an operator contribution. Additive Zotero import has its own explicit authorisation under [[governance#Authorised additive Zotero import]].
 
 - Curation of ambiguous duplicate and Version relations in Zotero remains separate from adding missing records. Existing group records are not silently merged or rewritten, and `corpus/zotero_sync.json` records library membership and confirmed aliases.
-- Deployment of the result site under [[#Deployment]].
-- Acceptance session of PRISM with the domain experts. The user stories in [[specification]] were written by the technical lead as a user proxy, and the verification mode has been exercised by automated tests and agents only.
+- Acceptance session of PRISM with the domain experts. The user stories in [[specification]] were written by the technical lead as a user proxy.
 - Resolution of the works with conflicts or holds listed below.
 - The decisions listed under [[#Open decisions]].
 
@@ -195,23 +195,42 @@ The works in the source acquisition queue lack a reviewed Paper source. Their bl
 
 ### Open decisions
 
-None of these decisions has been taken. The numbers are referenced from the steps above.
+The numbers are referenced from the steps above. The status column states how far each decision has come.
 
-| No. | Decision | Required contribution |
+| No. | Decision | Status | Required contribution |
+|---|---|---|---|
+| 1 | Source-binding rule for the prepared 2026 reading texts whose converted Markdown lost its DOI, by accepting acquisition receipts (publisher landing URL and PDF hash) as identity evidence | Decided in principle on 1 October 2026 that all texts are to be bound. The rule change waits for explicit permission | Operator permission for the change of the binding contract |
+| 2 | Remapping of the four Assertions with AI Agent Review that carry the earlier numbering or no sub-question field ([[research-vault#Assertions]]). An edit invalidates their review receipts | Open, proposals recorded | Editorial decision by the operator |
+| 3 | Switch of GitHub Pages from `docs/` to the result site in `build/site/` ([[#Deployment]]) | Open. The target was decided on 29 September 2026 | Operator authorisation |
+| 4 | PRISMA-ScR as reporting frame for the mapping layer ([[standards#Open reporting decision on PRISMA-ScR]]) | Recommended, not decided | Operator decision |
+| 5 | Publication of the round-one matrix | Open | Operator decision on scope and form |
+| 6 | Article type, paper architecture and author order of the result paper for Adult Literacy Education. The Paper-Pipeline document in the personal vault still describes the methodological workflow as the main part, and the division of literature report, paper and Companion is open | Open. Venue decided | Decision by the co-author group |
+| 7 | Supplementary search for literature on LLM use in social-work tasks without a bias focus, as a dated, separately documented search layer with its own denominators, or an answer limited to the existing bias-focused corpus | Open | Operator decision |
+| 8 | Interpretive synthesis method, critical interpretive synthesis or meta-narrative review ([[analysis-methods#Synthesis layer]]) | Open | Operator decision |
+| 9 | External framework of general prompt guidance for SQ5. The candidate is the taxonomy of Schulhoff et al. (2024), *The Prompt Report*, which the technique vocabulary appears to follow. The project's own five-step formula must not serve as the standard | Open | Operator decision |
+| 10 | LLM and harness for the analysis-coding run | Open. The run itself is decided and is being made harness-agnostic | Operator choice within the project's model default |
+| 11 | Deletion of superseded files, among them the redirect page `docs/onboarding.html` and the files of the old Literaturbild and the concept-graph network that the working application no longer loads | Open | Explicit operator confirmation per deletion |
+| 12 | Whether the Netz view appears publicly before coding coverage is sufficient. The critical review advised against it | Open | Operator decision |
+| 13 | Whether aggregate coverage counts about unreleased works may appear on the result site ([[governance#Publication boundary]]) | Open | Governance decision by the operator |
+| 14 | Kubes (2024), *Feministische KI – Künstliche Intelligenz für alle?*, is released as an AI Include although its consolidated human decision is Exclude, a documented round-specific divergence, and it appears in the public matrix ([[governance#Publication boundary]]) | Open | Operator decision on its public treatment |
+| 15 | Whether historical divergence classifications from the Git history are restored as a committed, attributed source ([[data#Historical concept graph and divergence classification]]) | Open | Operator decision |
+| 16 | Whether the full-text cascade switches to creator-based `author_year` keys, which would change the source binding of several records | Open | Source-identity decision by the operator |
+| 17 | Tier 2 reference coding needs a PRISM session mode that also hides the consolidated expert decision, and a randomly drawn verification sample in addition to the assigned scope ([[analysis-methods#Tier 2, analyses after complete expert-verified coding]]) | Open | Operator decision on tool contract and sampling |
+| 18 | Final scholarly release of verified research records and outputs | Open. The preliminary AI-source-reviewed release is authorised | Person-attributed publication approval |
+| 19 | Final submission package | Open | Approval of manuscript, supplement, disclosures and venue requirements |
+| 20 | Whether PRISM drops the analysis-coding step that it still requires of a human reviewer on an Include (FR-14 in [[specification]]), now that the analysis fields are coded by AI agents | Open. Code and division of labour disagree | Operator decision, then a PRISM change |
+
+### Decisions taken
+
+These decisions left the open list. Their content lives at the linked place.
+
+| Date | Decision | Recorded in |
 |---|---|---|
-| 1 | Codebook amendment v1.4 before the coding run, as proposed by the critical review of 1 October 2026 and described in [[update-protocol#Proposed codebook amendment v1.4]], with intervention-status pairs, a task field, a state for fields not collected under v1.3, sharper definitions for harm types and bias axes and recoding of the coded works | Operator decision on adoption and scope |
-| 2 | Supplementary search for literature on LLM use in social-work tasks without a bias focus, as a dated, separately documented search layer with its own denominators, or an answer limited to the existing bias-focused corpus | Operator decision |
-| 3 | Permission for the Codex coding run with elevated Windows sandbox, and push and merge of `companion-redesign` and of the laptop branch `prepare-expert-verification` | Operator authorisation |
-| 4 | External framework of general prompt guidance for SQ5. The candidate is the taxonomy of Schulhoff et al. (2024), *The Prompt Report*, which the technique vocabulary appears to follow. The project's own five-step formula must not serve as the standard | Operator decision |
-| 5 | Interpretive synthesis method, critical interpretive synthesis or meta-narrative review, and whether PRISMA-ScR is added as reporting frame for the mapping layer ([[analysis-methods#Synthesis layer]], [[standards#Open reporting decision on PRISMA-ScR]]) | Operator decision |
-| 6 | Whether aggregate coverage counts about unreleased works may appear on the result site ([[governance#Publication boundary]]) | Governance decision by the operator |
-| 7 | Whether the Netz view appears publicly before coding coverage is sufficient. The critical review advised against it | Operator decision |
-| 8 | Kubes (2024), *Feministische KI – Künstliche Intelligenz für alle?*, is released as an AI Include although its consolidated human decision is Exclude, a documented round-specific divergence, and it appears in the public matrix ([[governance#Publication boundary]]) | Operator decision on its public treatment |
-| 9 | Whether historical divergence classifications from the Git history are restored as a committed, attributed source ([[data#Historical concept graph and divergence classification]]) | Operator decision |
-| 10 | Whether the full-text cascade switches to creator-based `author_year` keys, which would change the source binding of several records | Source-identity decision by the operator |
-| 11 | Paper architecture after the priority change. The Paper-Pipeline document in the personal vault still describes the methodological workflow as the main part, and the division of literature report, paper and Companion is open | Operator decision |
-| 12 | Author set and order of the result paper. The venue is the special issue recorded in [[project#Publication context]] | Decision by the co-author group |
-| 13 | Whether the source-binding contract accepts acquisition receipts, meaning the publisher landing URL and PDF hash, as identity evidence for prepared 2026 reading texts whose converted Markdown lost its DOI | Operator decision on the binding contract |
-| 14 | Tier 2 reference coding needs a PRISM session mode that also hides the consolidated expert decision, since ADR-044 already hides the LLM proposal and the agent coding, and a randomly drawn verification sample in addition to the assigned scope ([[analysis-methods#Tier 2, analyses after complete expert-verified coding]]) | Operator decision on tool contract and sampling |
-| 15 | Final scholarly release of verified research records and outputs | Person-attributed publication approval. The preliminary AI-source-reviewed release is already authorised |
-| 16 | Final submission package | Approval of manuscript, supplement, disclosures, and selected venue requirements |
+| 24 September 2026 | The editors of Adult Literacy Education accepted the expression of interest, which fixes the venue | [[project#Publication context]] |
+| 1 October 2026 | The main question and the five sub-questions SQ1 to SQ5 were merged | [[project#Research questions]] |
+| 1 October 2026 | Human reviewers screen without AI pre-assessment | ADR-044 in [[specification]] |
+| 1 October 2026 | The open papers are split between the two reviewers | ADR-043 in [[specification]] |
+| 1 October 2026 | The codebook amendment v1.4 is adopted for the coding run, with the integration under way | [[codebook-v1.4-proposal]], [[update-protocol#Amendment record]] |
+| 1 October 2026 | The working Companion and PRISM redesign were merged into `main` and pushed. The elevated sandbox permission of the earlier coding-run plan is replaced by a harness-agnostic run | [[journal]] |
+| 1 October 2026 | Full texts stay in the private repository, superseding the plan of 29 September 2026 to remove protected texts. The laptop branch `prepare-expert-verification`, which carried that removal, is not merged | [[governance#Publication boundary]] |
+| 1 October 2026 | All prepared reading texts are to be bound, in principle | Decision 1 above |

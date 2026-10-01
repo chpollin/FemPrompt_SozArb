@@ -26,7 +26,7 @@ The test system establishes the technical behaviour of PRISM, the public result 
 `npm run check` is the integrated gate and runs four parts in order.
 
 1. `npm run check:data` runs `python -m src.publish.build_project --check`, which rejects changed inputs, missing outputs or stale hashes across the generated data, the completion package and `build/site/`, and then `npm run check:schemas`.
-2. `npm test` runs five Node suites, the PRISM suite `tests/run.mjs`, the working-application suite `tests/companion.mjs`, the grounded chat suite `tests/chat.mjs`, the Literaturbild suite `tests/literature-landscape.mjs` and the visual source-asset check `tests/review-cases/verify-source-assets.mjs`.
+2. `npm test` runs the Node suites, namely the PRISM suite `tests/run.mjs`, the working-application suite `tests/companion.mjs`, the grounded chat suite `tests/chat.mjs`, the Literaturbild suite `tests/literature-landscape.mjs` and the visual source-asset check `tests/review-cases/verify-source-assets.mjs`.
 3. `npm run test:python` runs `python -m pytest tests/ -q`.
 4. `npm run test:release` runs `tests/browser/release.mjs` against the built `build/site/`, so it needs a preceding `npm run build`.
 
@@ -62,12 +62,15 @@ The browser test of the working application (`npm run test:browser-companion`) a
 | Claim and Vault checks | Assertion anchors, adjacent-layer references, status discipline | `python -m src.publish.check_claims` and `python -m src.publish.validate_research_vault` |
 | Library and knowledge coverage | Complete live membership, preserved benchmark annotations, null categories for unassessed records, source-bound active and recovered documents, independent reporting of missing full text and knowledge documents | `python -m pytest tests/test_generate_docs_data.py tests/test_project_active_distillates.py tests/test_project_recovered_knowledge.py tests/test_literature_readiness.py` |
 | Schemas | Governed and generated JSON shapes against `schemas/` | `python -m pytest tests/test_schemas.py` and `npm run check:schemas` |
+| PRISMA flow per identification source | The round-one flow equals the canonical replay, every later source balances, the current decision state partitions records and Works, multiple-find matrices are symmetric and the output is deterministic | `python -m pytest tests/test_prisma_flow.py` |
+| Reviewer assignment | Open papers alternate between the two reviewers, a rerun is append-only and idempotent, an unknown reviewer is refused, and the committed assignment file is current | `python -m pytest tests/test_build_assignment.py` |
+| Tracked path length | Every tracked path stays within 120 characters and title-derived stems are bounded and deterministic | `python -m pytest tests/test_path_length.py` |
 
 ### Result-site browser test
 
 `tests/browser/release.mjs` first evaluates `release-model.js` from `build/site/` on fixture records. It checks the field states value, none, undecidable and not yet coded, both forms of `analysis.undecidable`, category groups without members, work-level fields, the coverage partition, cross-tabulation of multi-valued codes, the reader of `meta.analysis_coverage` against the data contract and its fallback, category evidence, network neighbours and the folding of umlauts in search.
 
-It then serves `build/site/` locally and drives Chromium at 1440 by 900 pixels. The checks cover the main question and sub-questions on the start page, the absence of an inventory counter and of any claim that a question is answered, navigation labels equal to view titles, the answer page with the coded-share line first and the four parts Befunde, Karte, Offen and Werke, matrix cells that link to the matrix, the suffix "des Werks" on work-level fields, the joint-coding wording of cells and its absence for work-level crosses, the work list of a cell with evidence quotations and locators, cell selection in the URL and its restoration on reload, browser back, focus on the work list after keyboard activation of a cell, the status line and the collapsed technical record of a work, the Korpus counter only after a search, the rendered Assertions with their review record, the network graph with its table equivalent, no provider request from the chat without evidence, unavailable working data, no horizontal document overflow at 390 by 844 pixels on the start, matrix, answer, Netz and Korpus views, no runtime errors and no external runtime request. Screenshots at both widths go to `tests/browser/out/release/`.
+It then serves `build/site/` locally and drives Chromium at 1440 by 900 pixels. The checks cover the main question and sub-questions on the start page, the absence of an inventory counter and of any claim that a question is answered, navigation labels equal to view titles, the answer page with the coded-share line first and the four parts Befunde, Matrix, Offen and Werke, matrix cells that link to the matrix, the suffix "des Werks" on work-level fields, the joint-coding wording of cells and its absence for work-level crosses, the work list of a cell with evidence quotations and locators, cell selection in the URL and its restoration on reload, browser back, focus on the work list after keyboard activation of a cell, the status line and the collapsed technical record of a work, the Korpus counter only after a search, the rendered Assertions with their review record, the network graph with its table equivalent, no provider request from the chat without evidence, unavailable working data, no horizontal document overflow at 390 by 844 pixels on the start, matrix, answer, Netz and Korpus views, no runtime errors and no external runtime request. Screenshots at both widths go to `tests/browser/out/release/`.
 
 ## Guaranteed behaviours
 
@@ -133,7 +136,7 @@ Use Python 3.11 or later and Node.js 22. From the repository root, install the b
 
 ```sh
 python -m pip install -r requirements-build.txt
-npm ci
+npm install
 npx playwright install chromium
 npm run build
 npm run check
@@ -141,15 +144,17 @@ npm run test:browser-companion
 npm run pilot
 ```
 
-The build reconstructs the ignored local reading layer, source-readiness and completion queues, corpus projections, Assertion index, downloads and separate result site at `build/site/`. It uses the local source representations and performs no new AI reviews or external API calls. Fresh acquisition, PDF conversion and LLM distillation require the broader research environment described in [[methods]].
+On Windows, clone into a short path such as `C:\femprompt`, for example with GitHub Desktop, and use a python.org installation, since the Microsoft Store alias for `python` does not run the build. Continuous integration uses `npm ci`.
 
-Hash-bearing research artifacts use canonical LF text so their checksums remain stable across operating systems. The browser pilot selects an available local port by default, with `--port` available for explicit binding. The native folder-picker checks remain in [the manual checklist](../tests/manual-checklist.md). The committed replay checks the retrospective benchmark counts and agreement figures.
+The build reconstructs the git-ignored reading layer under `docs/data/fulltext/` from the tracked `generated/markdown_clean/`, the source-readiness and completion queues, corpus projections, Assertion index, the PRISMA flow in `generated/prisma-flow/`, downloads and the separate result site at `build/site/`. It uses the local source representations and performs no new AI reviews or external API calls. Fresh acquisition, PDF conversion and LLM distillation require the broader research environment described in [[methods]].
+
+Hash-bearing research artifacts use canonical LF text so their checksums remain stable across operating systems. A build on Windows can leave line-ending-only drift in tracked files, which is discarded by checking the path out again. The browser pilot selects an available local port by default, with `--port` available for explicit binding. The native folder-picker checks remain in [the manual checklist](../tests/manual-checklist.md). The committed replay checks the retrospective benchmark counts and agreement figures.
 
 ## Local preview and deployment
 
-Run `npm run preview` and open [the working application](http://127.0.0.1:8870/index.html), [PRISM](http://127.0.0.1:8870/prisma.html) or, after a build, [the result site](http://127.0.0.1:8870/results/index.html), which is served from `build/site/`. Use `npm run preview -- --port 8871` to select another port.
+Run `npm run preview`, which starts `python -X utf8 -m src.publish.serve`, and open [the working application](http://127.0.0.1:8870/index.html), [PRISM](http://127.0.0.1:8870/prisma.html) or, after a build, [the result site](http://127.0.0.1:8870/results/index.html), which is served from `build/site/`. Use `npm run preview -- --port 8871` to select another port.
 
-`.github/workflows/quality.yml` runs the build, `npm run check`, the working-application browser test and the PRISM pilot in continuous integration. The manually dispatched `.github/workflows/pages.yml` runs on `main`, builds and checks the result, and uploads only `build/site/`. It takes effect once GitHub Actions is the repository's Pages source. On 1 October 2026 the repository became private while GitHub Pages stayed public and still served `docs/` from `main` through the branch build, including the working application and its data. Switching the Pages source requires the project owner's authorisation under [[plan]]. A local build does not update the live site, and passing local checks does not establish that either remote workflow has run.
+`.github/workflows/quality.yml` runs the build, `npm run check`, the working-application browser test and the PRISM pilot in continuous integration. The manually dispatched `.github/workflows/pages.yml` runs on `main`, builds and checks the result, and uploads only `build/site/`. It takes effect once GitHub Actions is the repository's Pages source. On 1 October 2026 the repository became private while GitHub Pages stayed public and still served `docs/` from `main` through the branch build, including the working application and its data but not the git-ignored reading layer. Switching the Pages source requires the project owner's authorisation under [[plan]]. A local build does not update the live site, and passing local checks does not establish that either remote workflow has run.
 
 ## Change gates
 
@@ -169,3 +174,6 @@ Run `npm run preview` and open [the working application](http://127.0.0.1:8870/i
 | Grounded Vault model or Assertions | Grounded Vault validator and claim-anchor check |
 | Paper figures or count-bearing claims | Canonical replay and the applicable analysis generator |
 | Governed or generated JSON shape, or a schema in `schemas/` | `python -m pytest tests/test_schemas.py` and `npm run check:schemas` |
+| Reviewer assignment | Assignment tests |
+| PRISMA flow or identification records | PRISMA-flow tests, then build and `npm run check:data` |
+| File naming or a new tracked path | Path-length test |

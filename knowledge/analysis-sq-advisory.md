@@ -8,7 +8,7 @@ method:
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
 status: draft
 language: en
-version: "0.6"
+version: "0.7"
 created: 2026-07-21
 updated: 2026-10-01
 authors: [Christopher Pollin]

@@ -8,7 +8,7 @@ method:
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
 status: complete
 language: en
-version: "0.6"
+version: "0.7"
 created: 2026-07-21
 updated: 2026-10-01
 authors: [Christopher Pollin]
@@ -61,7 +61,7 @@ The classification supports case inspection and assigns no correctness label. Th
 
 ## Worked cases
 
-The case identified by `K3YCLBXK` illustrates Implicit Field Membership. The consolidated expert annotation includes the Paper, while the LLM finds the technical dimension and no qualifying social dimension. The strict inclusion rule therefore produces different decisions from two readings of field relevance.
+The case identified by `K3YCLBXK` is read here as an illustration of Implicit Field Membership, while the generated data hold no classification for it. The consolidated expert annotation includes the Paper, while the LLM finds the technical dimension and no qualifying social dimension. The strict inclusion rule therefore produces different decisions from two readings of field relevance.
 
 The case identified by `CF6T2RD7` illustrates a workflow exclusion. The expert record marks a duplicate, while the Paper-isolated LLM judges the article content as relevant. The repeated title and associated Zotero identities are properties of the corpus. This case leaves the content-only subset.
 

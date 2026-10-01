@@ -440,12 +440,12 @@ What the screening view reads and searches, and what it deliberately does not.
 
 | What | Where | Note |
 |---|---|---|
-| Reading text (Volltext layer) | `docs/data/fulltext/{id}.md` via `fetchFullText`, listed in `fulltext_manifest.json` | the cleaned Docling full text, built by `src/publish/build_fulltext.py`; local clone only, gitignored (ADR-025). Current coverage is derived from the manifest. |
+| Reading text (Volltext layer) | `docs/data/fulltext/{id}.md` via `fetchFullText`, listed in `fulltext_manifest.json` | the cleaned Docling full text, built by `src/publish/build_fulltext.py`; rebuilt in every clone by `npm run build`, git-ignored (ADR-025). Current coverage is derived from the manifest. |
 | LLM-Wissensdestillat layer | the generated distillation from `paper.knowledge_doc` (`## Kernbefund` onward) | shown as a separate reference layer and excluded from the Paper-evidence gate (ADR-016/028/029/030) |
 | Abstract fallback | `paper.abstract` in `research_vault_v2.json` | used when no full text exists; not every paper has an abstract |
 | Corpus search index | `docs/data/fulltext_index.json` (built by `src/publish/build_screening_index.py`) | stays distillation-based, not the full text, for the same copyright reason |
 
-The raw Docling full texts live in `generated/markdown_clean/` and hold copyrighted, paywalled papers. `build_fulltext.py` cleans them (frontmatter, image comments, GLYPH artefacts) into `docs/data/fulltext/`, which is gitignored and never pushed; the public Pages site keeps only the fallback. Publishing the full texts publicly is outward-facing and a separate, rights-gated decision (ADR-025).
+The raw Docling full texts live in the tracked `generated/markdown_clean/` and hold copyrighted, paywalled papers, which stay in the private repository by operator decision of 1 October 2026. `build_fulltext.py` cleans them (frontmatter, image comments, GLYPH artefacts) into `docs/data/fulltext/`, which is git-ignored and rebuilt by `npm run build` in every clone. The Pages site serves only the fallback. Publishing the full texts publicly is outward-facing and a separate, rights-gated decision (ADR-025).
 
 The screening view fetches the full text and the knowledge document together (`loadReadingInto`). The Papertext layer renders the paper with the built-in Markdown renderer, including pipe tables, glossaries under an acronym heading and Docling `/uniXXXX` glyph names, resolved at render time only so the served full texts keep their recovery hashes; the `LLM-Wissensdestillat` layer renders the generated distillation from `## Kernbefund` onward. In-text search runs over the active document; corpus-wide search runs over `fulltext_index.json`. The model proposal (`paper.llm`) is separate from both reading layers and is shown as a labelled reference in human sessions (ADR-038). The layer a snippet is pinned from sets `source_layer`; the configured run sets `actor` independently (ADR-030).
 

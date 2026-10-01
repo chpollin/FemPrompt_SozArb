@@ -21,7 +21,7 @@ generated-with: Claude Code (Claude Opus 5.5), Codex (GPT-6)
 related: [project, analysis-methods, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, codebook-v1.4-proposal, research-vault, analysis-divergence, analysis-sq-advisory, project-review-2026-09-05]
 ---
 
-FemPrompt SozArb is a qualitative literature review on how social work professionals can use large language models responsibly, with attention to bias, gender and the groups affected. The project also builds the epistemic infrastructure that makes its AI-assisted research traceable, with two review rounds, the comparative round-one benchmark, the agent-assisted round-two workflow, PRISM as governed screening and verification surface, the Grounded Vault and the public Evidence Companion. Concrete numbers live in `generated/`, `docs/data/` and their generated views.
+FemPrompt SozArb is a qualitative literature review on how social work professionals can use large language models responsibly, with attention to bias, gender and the groups affected. The project also builds the epistemic infrastructure that makes its AI-assisted research traceable, with two review rounds, the comparative round-one benchmark, the agent-assisted round-two workflow, PRISM as the governed human screening surface, the Grounded Vault and the public Evidence Companion. Concrete numbers live in `generated/`, `docs/data/` and their generated views.
 
 ## Documents
 
@@ -38,10 +38,10 @@ In function order, not alphabetical.
 | [[governance]] | Authority, lifecycle, correction, provenance, and publication rules for people, AI agents, and software agents | per governance decision |
 | [[testing]] | Commands, test layers, technical guarantees, the independent acceptance review of the result site, the manual acceptance boundary, setup, local preview and deployment | per test-contract change |
 | [[verification]] | Evidence and authority state of externally relevant claims and research artifacts | per verification event |
-| [[plan]] | Remaining work towards the answers to the sub-questions, analysis tool and interface development, deployment, completion criteria and the open operator decisions | per material change |
+| [[plan]] | Remaining work towards the answers to the sub-questions, analysis tool and interface development, deployment, completion criteria, the open operator decisions with their status and the decisions taken | per material change |
 | [[journal]] | The chronological session log with decisions and learnings | per session |
-| [[handoff]] | Current branch state, continuation point for the next session on either machine, and checkout conditions | per session close |
-| [[project-review-2026-09-05]] | Dated review of 2026-09-05 with the findings, the implemented remedies and the uses of the completed data | closed |
+| [[handoff]] | Current state of `main`, continuation point for the next session on either machine, and checkout conditions | per session close |
+| [[project-review-2026-09-05]] | Dated review of 2026-09-05 with the findings, the implemented remedies and the uses of the completed data | snapshot, not updated |
 | [[update-protocol]] | The round-two pre-registration, the analysis-field design, the pilot findings, the coding procedure, the amendment record and the RIS procedure | per protocol amendment |
 | [[codebook-v1.4-proposal]] | The draft codebook amendment v1.4 for the five sub-questions, with the UF4 and task fields, sharper bias and harm rules, stage-status pairs, the not-collected state, the recoding recommendation and the pilot protocol, awaiting the operator's decision | per amendment decision |
 | [[analysis-divergence]] | The licensed round-one divergence analysis that the methodological part of the paper cites, decomposed and read off named replay keys | per replay change |
@@ -65,6 +65,7 @@ In function order, not alphabetical.
 - Prepare the literature update and source readiness through [[plan#Controlled corpus completion]], [[update-protocol]] and [[standards]]. `generated/literature-readiness.json` and its CSV projection, rebuilt by `npm run build`, distinguish live Zotero membership, reading material, knowledge-document authority and remaining preparation.
 - Inspect retained local sources through [[data#Local source preservation]] and reproduce technical guarantees through [[testing]].
 - Add missing prepared references to Zotero through [[governance#Authorised additive Zotero import]] for the write scope and [[methods#Zotero reconciliation and import]] for commands and receipts.
+- Set up a clone through the README and [[testing#Clean-checkout verification]].
 - Onboard a new collaborator through [[project]], [[methods]] and [[specification]]. The reviewing colleagues use `docs/help.html#prism`, and nothing on their path requires this knowledge base.
 
 ## Convention
@@ -84,6 +85,9 @@ The Work-level partition of the intended Include scope for each analysis field, 
 
 ### Assertion
 An atomic, evidence-linked statement in the Grounded Vault. An Assertion cites identified statements in one or more distilled knowledge documents and may support the literature report, the paper, or both. Its status records how far the evidence chain has been checked.
+
+### Bearbeiten and Lesen
+The two modes of PRISM (ADR-042). `Lesen` shows every document with its current human annotation and writes nothing. `Bearbeiten` exists only in a local clone whose build created the full-text manifest, opened in a browser with File System Access, and saves into the reviewer's own file. Neither mode shows an AI pre-assessment (ADR-044).
 
 ### Beleg
 A pinned passage in PRISM, stored with term, surrounding snippet, timestamp, source layer, and actor. A pin from the Paper layer starts an empty category at `teilweise`, and the reviewer decides whether the aspect is central enough for `ja`. A pin from the LLM-Wissensdestillat remains advisory and cannot satisfy the Paper-evidence gate. The legacy `origin` field is retained only for compatibility, while `source_layer` and `actor` carry the current provenance.
@@ -111,6 +115,9 @@ A division of labour in which the agents process knowledge in fundamentally diff
 
 ### Epistemic infrastructure
 The totality of procedures, documentation structures, distinct control points, and responsibility assignments that make LLM contributions in research verifiable, traceable, and accountable. The project's guiding concept. Its core principle holds that reliability is not a property of the system to be presupposed but a property of the process to be established.
+
+### Erfasst and offen
+The two states of the PRISM status filter. A document is erfasst when it has an own record or a decision of the consolidated expert assessment, which counts as done. Every other document is offen, including one with only an agent record (ADR-042, ADR-044).
 
 ### Evidence Companion
 The public Evidence Companion is the result site that `src/publish/build_release.py` builds from `docs/release.html` into `build/site/`. It presents the allowlisted, AI-source-reviewed subset along the main question and the sub-questions, with matrix, network, work, Assertion and method views, a grounded chat that retrieves only released Assertions and their evidence, and a matching download ([[specification#Public Evidence Companion]]). The internal working application `docs/index.html` renders corpus metadata, the historical benchmark and the legacy knowledge archive. It is meant to stay local but remains publicly reachable until Pages switches to the result site ([[plan#Deployment]]). It carried the name Evidence Companion earlier and keeps it in tests and data contracts such as `tests/companion.mjs` and the Companion records of [[data]]. A local build does not establish what is currently deployed at the GitHub Pages address.
@@ -169,6 +176,9 @@ The ordered record states `identified → curated → agent-annotated → ai-age
 ### Source-grounded AI Agent Review
 A separate AI-agent activity that checks screening annotations and evidence against the assigned Paper source. It can advance an agent annotation to `ai-agent-reviewed`. It cannot produce domain-expert verification or publication approval.
 
+### Sub-questions SQ1 to SQ5
+The five sub-questions of the main question, SQ1 Use, SQ2 Bias forms, SQ3 Handling of bias, SQ4 Conceptual grounding and SQ5 Competences, merged on 1 October 2026. They correspond to the German UF1 to UF5 of the interface and to the Assertion field `research-questions`. [[project#Research questions]] holds their wording.
+
 ### Sycophancy
 The documented tendency of LLMs to over-agree with a prompt's presuppositions. Countered in the assessment prompts by negative constraints and calibration items.
 
@@ -180,3 +190,6 @@ The documented domain-expert assessment of a named statement, field, annotation,
 
 ### Work and Work-Version Registry
 A Work is the stable project identity for one intellectual publication, independent of the expressions through which it is available. `corpus/work_version_registry.json` assigns a stable `work_id`, separate `version_id` values, exact record bindings, relations between versions, and distinct preferred and latest versions. Screening coverage is evaluated at Work level, while evidence, full text, distillates, and Assertions retain the exact Version used.
+
+### Zuteilung
+The assignment of the open papers to the two reviewers in `docs/data/screening/assignment.json`, and the PRISM list filter of the same name (ADR-043). The file is append-only, so a done paper keeps its entry, and it is no reviewer file. [[data#Reviewer assignment]] defines it.
