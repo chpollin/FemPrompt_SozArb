@@ -9,6 +9,8 @@ checked:
 grounding:
   - "[[20_distillates/publications/kaneko-2024-cot-and-gender-bias#^s1]]"
 contested-with: []
+research-questions:
+  - SQ3
 created: 2026-08-23
 updated: 2026-08-23
 ---

@@ -176,6 +176,14 @@
     {
       "path": "generated/verification/recovered-source-artifact-reviews-2026-09-05.json",
       "sha256": "sha256:5c69e87d54a9889cdcfaa2b774a73c5d5a07ee0eeaeff9b9f47df03f584061eb"
+    },
+    {
+      "path": "generated/verification/assertion-remap-invalidation-2026-10-01.json",
+      "sha256": "sha256:022b3e91bccd9dd4e08ab5f0cf91fd198fc1cb3f6448e24e7319dff22d936d3e"
+    },
+    {
+      "path": "generated/verification/assertion-reviews-2026-10-01.json",
+      "sha256": "sha256:1eb5719cc5e7478ef5ffe2a3b1a02aec7b0ad0104254b0de740e860873e71792"
     }
   ],
   "authority": "Immutable attributed source-review batches; exact hashes bind each batch. This index does not create new reviews or human verification."
