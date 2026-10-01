@@ -280,6 +280,15 @@
         "publication-approved"
       ]
     },
+    "researchVaultState": {
+      "enum": [
+        "preparation",
+        "grounded",
+        "ai-agent-reviewed",
+        "verified",
+        "publication-approved"
+      ]
+    },
     "canonicalBinding": {
       "type": "object",
       "required": ["record_id", "work_id", "version_id"],
@@ -583,7 +592,7 @@
         "path": { "type": "string", "minLength": 1 },
         "title": { "type": "string", "minLength": 1 },
         "statement": { "type": "string", "minLength": 1 },
-        "state": { "$ref": "#/$defs/lifecycleState" },
+        "state": { "$ref": "#/$defs/researchVaultState" },
         "authority_note": { "type": "string", "minLength": 1 },
         "structural_grounding_complete": { "type": "boolean" },
         "work_ids": {
@@ -621,7 +630,7 @@
               "record_id": { "$ref": "#/$defs/zoteroKey" },
               "work_id": { "$ref": "#/$defs/workId" },
               "version_id": { "$ref": "#/$defs/versionId" },
-              "distillate_state": { "$ref": "#/$defs/lifecycleState" },
+              "distillate_state": { "$ref": "#/$defs/researchVaultState" },
               "current_ai_source_review": { "$ref": "#/$defs/aiSourceReview" }
             }
           }
