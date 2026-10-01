@@ -1,0 +1,174 @@
+// Partner acceptance run for the reviewer workflow (knowledge/testing.md, "Partner
+// acceptance run"). It drives a fresh local clone that already ran `npm run build` and
+// serves it with `python -X utf8 -m src.publish.serve`:
+//
+//   node tests/browser/partner.mjs --clone C:\tmp\fp-partner-<date> --base http://127.0.0.1:<port> --reviewer sabine
+//
+// Everything a reviewer does runs in Chromium against the real build, except the native
+// folder picker and its permission prompt, which need a user gesture that automation
+// cannot give. The script replaces window.showDirectoryPicker with a handle whose reads
+// and writes go to the clone on disk through a bridge confined to the clone directory, so
+// the application's own File System Access write path produces the real reviewer file.
+// It never commits, pushes or deletes anything.
+import { chromium } from 'playwright';
+import { readFileSync, writeFileSync, existsSync, statSync, readdirSync, mkdirSync } from 'node:fs';
+import { resolve, sep, join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const args = process.argv.slice(2);
+const opt = { clone: null, base: null, reviewer: 'sabine', out: null };
+for (let i = 0; i < args.length; i++) {
+  if (args[i] === '--clone') opt.clone = args[++i];
+  else if (args[i] === '--base') opt.base = args[++i];
+  else if (args[i] === '--reviewer') opt.reviewer = args[++i];
+  else if (args[i] === '--out') opt.out = args[++i];
+}
+if (!opt.clone || !opt.base) { console.error('usage: --clone <path> --base <url> [--reviewer key] [--out dir]'); process.exit(2); }
+const root = resolve(opt.clone);
+const outDir = resolve(opt.out || join(dirname(fileURLToPath(import.meta.url)), 'out', 'partner'));
+mkdirSync(outDir, { recursive: true });
+
+// the bridge resolves every path below the clone root and refuses anything outside it
+const inside = (rel) => {
+  const p = resolve(root, '.' + sep + String(rel).replace(/^\/+/, ''));
+  if (p !== root && !p.startsWith(root + sep)) throw new Error('outside the clone: ' + rel);
+  return p;
+};
+const writes = [];
+const checks = [];
+let failed = 0;
+function check(name, ok, detail) {
+  checks.push({ name, ok: !!ok, detail });
+  if (!ok) failed++;
+  console.log((ok ? 'ok   ' : 'FAIL ') + name + (!ok && detail !== undefined ? '  >> ' + JSON.stringify(detail).slice(0, 600) : ''));
+}
+
+const browser = await chromium.launch();
+const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, locale: 'de-AT' });
+await context.exposeFunction('__fsList', (rel) => readdirSync(inside(rel), { withFileTypes: true })
+  .map((d) => ({ name: d.name, kind: d.isDirectory() ? 'directory' : 'file' })));
+await context.exposeFunction('__fsDir', (rel, create) => {
+  const p = inside(rel);
+  if (existsSync(p)) return statSync(p).isDirectory();
+  if (!create) return false;
+  mkdirSync(p, { recursive: true });
+  return true;
+});
+await context.exposeFunction('__fsFile', (rel, create) => {
+  const p = inside(rel);
+  if (existsSync(p)) return statSync(p).isFile();
+  if (!create) return false;
+  writeFileSync(p, '');
+  writes.push(rel);
+  return true;
+});
+await context.exposeFunction('__fsRead', (rel) => { const p = inside(rel); return existsSync(p) ? readFileSync(p, 'utf8') : null; });
+await context.exposeFunction('__fsWrite', (rel, text) => { writeFileSync(inside(rel), text); writes.push(rel); return true; });
+// Own properties stay plain strings, so the handle survives the structured clone into
+// IndexedDB that connectRepo performs; the methods live on the prototype.
+await context.addInitScript(() => {
+  const notFound = () => new DOMException('not found', 'NotFoundError');
+  class FileH {
+    constructor(path, name) { this.kind = 'file'; this.name = name; this.path = path; }
+    async getFile() {
+      const text = await window.__fsRead(this.path);
+      if (text === null) throw notFound();
+      return { name: this.name, size: text.length, lastModified: Date.now(), text: async () => text };
+    }
+    async createWritable() {
+      let body = '';
+      const path = this.path;
+      return { async write(value) { body = String(value); }, async close() { await window.__fsWrite(path, body); } };
+    }
+    async isSameEntry(other) { return !!other && other.path === this.path; }
+  }
+  class DirH {
+    constructor(path, name) { this.kind = 'directory'; this.name = name; this.path = path; }
+    async getDirectoryHandle(name, o) { if (!(await window.__fsDir(this.path + '/' + name, !!(o && o.create)))) throw notFound(); return new DirH(this.path + '/' + name, name); }
+    async getFileHandle(name, o) { if (!(await window.__fsFile(this.path + '/' + name, !!(o && o.create)))) throw notFound(); return new FileH(this.path + '/' + name, name); }
+    async *values() {
+      for (const e of await window.__fsList(this.path)) yield e.kind === 'file' ? new FileH(this.path + '/' + e.name, e.name) : new DirH(this.path + '/' + e.name, e.name);
+    }
+    async queryPermission() { return 'granted'; }
+    async requestPermission() { return 'granted'; }
+    async isSameEntry(other) { return !!other && other.path === this.path; }
+  }
+  window.showDirectoryPicker = async () => { window.__pickerCalls = (window.__pickerCalls || 0) + 1; return new DirH('', 'fp-partner-clone'); };
+});
+
+const page = await context.newPage();
+const errors = [];
+page.on('pageerror', (e) => errors.push(String(e)));
+const key = opt.reviewer;
+let paperId = null;
+try {
+  await page.goto(opt.base + '/prisma.html');
+  await page.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('#pt-doc'), null, { timeout: 30000 });
+  check('1 open: prisma.html loads from the clone server and offers Lesen and Bearbeiten',
+    await page.evaluate(() => window.__PRISMA_TEST__.localEditingAvailable() && document.querySelectorAll('.pt-mode-seg button').length === 2));
+
+  await page.getByRole('button', { name: 'Bearbeiten', exact: true }).click();
+  await page.waitForFunction(() => window.__PRISMA_TEST__.canEdit());
+  await page.fill('#pt-reviewer-key', key);
+  await page.click('.pt-reviewer-set');
+  await page.waitForFunction((k) => window.__PRISMA_TEST__.getState().reviewer === k, key);
+  check('2 Bearbeiten: the reviewer key is set', (await page.evaluate(() => window.__PRISMA_TEST__.getState().reviewer)) === key);
+
+  await page.click('.pt-folder-action');
+  await page.waitForFunction(() => /verbunden/.test(document.getElementById('pt-save-status')?.textContent || ''), null, { timeout: 15000 });
+  check('3 folder: the folder action calls the picker once and connects the clone root (picker and permission prompt stubbed)',
+    (await page.evaluate(() => window.__pickerCalls)) === 1, await page.textContent('#pt-save-status'));
+
+  await page.click('.pt-status-seg [data-status="offen"]');
+  await page.click(`.pt-assignee-seg [data-assignee="${key}"]`);
+  await page.click('#pt-corpus-list .pt-nav-item');
+  await page.waitForFunction(() => !window.__PRISMA_TEST__.readingPending() && document.querySelector('#pt-assess-col .pt-dim'), null, { timeout: 15000 });
+  paperId = await page.evaluate(() => window.EC.getAllPapers()[window.__PRISMA_TEST__.getState().index].id);
+  const assigned = JSON.parse(readFileSync(join(root, 'docs/data/screening/assignment.json'), 'utf8')).assignments[paperId];
+  check('4 list: Offen plus Zuteilung opens a paper assigned to the reviewer', assigned === key, { paperId, assigned });
+
+  // one Paper Beleg from the in-text search, then an exclusion reason, then the disk action
+  const term = await page.evaluate(() => {
+    const words = (document.getElementById('pt-doc').textContent.match(/[A-Za-z]{7,}/g) || []);
+    return words[Math.min(5, words.length - 1)] || null;
+  });
+  await page.fill('#pt-intext', term);
+  await page.waitForFunction(() => document.querySelectorAll('#pt-doc mark.pt-hit').length > 0);
+  await page.click('#pt-pin-hit');
+  await page.click('#pt-pinmenu .category-chip[data-cat="Soziale_Arbeit"]');
+  await page.click('#pt-assess-col .pt-reason-chip[data-reason="Not_relevant_topic"]');
+  await page.waitForSelector('#pt-record:not([disabled])', { timeout: 10000 });
+  await page.screenshot({ path: join(outDir, 'partner-before-save.png') });
+  await page.keyboard.press('Control+S');
+  await page.waitForFunction(() => /Gespeichert in/.test(document.getElementById('pt-save-status')?.textContent || ''), null, { timeout: 15000 });
+  await page.screenshot({ path: join(outDir, 'partner-after-save.png') });
+  check('5 assess: one pinned Paper Beleg and a reason, saved with Ctrl+S', /Gespeichert in docs\/data\/screening\//.test(await page.textContent('#pt-save-status')), { paperId, term, status: await page.textContent('#pt-save-status') });
+
+  const file = join(root, 'docs/data/screening', key + '.json');
+  const written = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : null;
+  const rec = written && written.decisions && written.decisions[paperId];
+  check('6 file: docs/data/screening/<key>.json in the clone holds the record',
+    written && written.schema === 'femprompt-prisma-reviewer/0.5' && written.reviewer === key && rec && rec.decision === 'Exclude' &&
+      rec.reason === 'Not_relevant_topic' && (rec.evidence.Soziale_Arbeit || []).length === 1 && rec.actor === 'human',
+    { schema: written && written.schema, reviewer: written && written.reviewer, rec });
+  const distinct = Array.from(new Set(writes));
+  check('7 writes: the application wrote only the reviewer file', distinct.length === 1 && distinct[0] === `/docs/data/screening/${key}.json`, distinct);
+  // the saved paper leaves Offen; under Erfasst it is listed with the PRISM capture mark
+  await page.click('.pt-status-seg [data-status="erfasst"]');
+  check('8 list: the saved paper moves from Offen to Erfasst with its capture mark', await page.evaluate((id) => {
+    const item = Array.from(document.querySelectorAll('#pt-corpus-list .pt-nav-item'))
+      .find((el) => window.EC.getAllPapers()[parseInt(el.dataset.i, 10)].id === id);
+    return !!item && item.dataset.state === 'erfasst' && !!item.querySelector('.pt-mark-erfasst');
+  }, paperId));
+  check('9 no script errors', errors.length === 0, errors);
+} catch (e) {
+  failed++;
+  checks.push({ name: 'driver exception', ok: false, detail: String(e && e.stack || e) });
+  console.error('driver exception:', e);
+  try { await page.screenshot({ path: join(outDir, 'partner-error.png') }); } catch (_) {}
+} finally {
+  writeFileSync(join(outDir, 'partner-trace.json'), JSON.stringify({ clone: root, base: opt.base, reviewer: key, paperId, writes, checks }, null, 2) + '\n');
+  await browser.close();
+}
+console.log(`\n${failed ? 'FAIL' : 'PASS'} partner run: ${checks.filter((c) => c.ok).length}/${checks.length} checks, paper ${paperId}, out: ${outDir}`);
+process.exit(failed ? 1 : 0);

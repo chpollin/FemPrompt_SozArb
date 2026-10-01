@@ -114,7 +114,40 @@ The automated suites cover the following contracts.
 
 ## Manual acceptance boundary
 
-The native browser permission dialogue for the File System Access API remains a manual environment check because headless automation cannot grant the browser-owned permission. `tests/manual-checklist.md` defines that check. The independent acceptance review of the result site, the project owner's review on a phone and the later acceptance session with the domain experts are manual procedures. Domain-expert usability and scholarly verification are research activities and therefore remain outside technical test success. A green `npm run check` establishes none of them.
+The native browser permission dialogue for the File System Access API remains a manual environment check because headless automation cannot grant the browser-owned permission. `tests/manual-checklist.md` defines that check, and the [partner acceptance run](#partner-acceptance-run) covers everything after the picker. The independent acceptance review of the result site, the project owner's review on a phone and the later acceptance session with the domain experts are manual procedures. Domain-expert usability and scholarly verification are research activities and therefore remain outside technical test success. A green `npm run check` establishes none of them.
+
+## Partner acceptance run
+
+The run reproduces the workflow of the two domain reviewers in a fresh clone of the private repository, from the build to the reviewer file that GitHub Desktop would commit. It clones from a local repository path into a short directory outside the working tree, so nothing leaves the machine, builds there, serves the clone with `python -X utf8 -m src.publish.serve --port <port>` and then runs
+
+```sh
+node tests/browser/partner.mjs --clone C:\tmp\fp-partner-<date> --base http://127.0.0.1:<port> --reviewer sabine
+```
+
+The script drives Chromium through the real build. It opens `prisma.html`, switches to `Bearbeiten`, sets the reviewer key, connects the working folder, narrows the list to `Offen` and the reviewer's `Zuteilung`, pins one Paper Beleg from the in-text search, chooses an exclusion reason, saves with Ctrl+S and reads the reviewer file back from disk. The native folder picker and its permission prompt need a user gesture that automation cannot give, so the script replaces `window.showDirectoryPicker` with a handle whose reads and writes reach the clone on disk through a bridge confined to the clone directory. Everything after the picker, including the resolution of `docs/data/screening` below the picked root and the write through `createWritable`, is the application's own code. The script never commits, pushes or deletes, and it records every write.
+
+### Run of 1 October 2026
+
+Clone of the branch with the provisional PRISM fixes of the same day, made from the local worktree into `C:\tmp\fp-partner-20261001`.
+
+| Step | Result | Evidence |
+|---|---|---|
+| Clone from the local path | pass | `git remote -v` names only the local worktree |
+| Dependencies | pass | the existing Python environment already held `requirements-build.txt`, so no install ran, and `node_modules` was a junction to the main checkout |
+| `npm run build` | pass, with drift | the build ends with "OK", and `git status` then lists four data files as modified (`analysis_fields`, `assertion_index`, `literature_landscape`, `promptotyping_v2`) although `git diff` is empty and staging adds nothing. They were checked out again |
+| Server and `prisma.html` | pass | the page offers `Lesen` and `Bearbeiten`, so the manifest and File System Access were recognised |
+| Reviewer key | pass | key `sabine` set in `Bearbeiten` |
+| Folder connection | pass, picker stubbed | one picker call, status "Arbeitsordner verbunden" |
+| Assigned paper | pass | `Offen` plus `Zuteilung` Sabine opened a paper that `assignment.json` assigns to `sabine` |
+| Assessment and save | pass | Paper Beleg from the in-text search on Soziale Arbeit, reason "Thema nicht einschlägig", Ctrl+S, status "Gespeichert in docs/data/screening/sabine.json" |
+| Saved file | pass | `docs/data/screening/sabine.json` in the clone carries schema `femprompt-prisma-reviewer/0.5`, reviewer `sabine`, the Exclude with its reason, `text_source` `raw` and the Beleg with `source_layer` `paper`. `python -m src.publish.validate_schemas` reports ok |
+| Written paths | pass | the application wrote only `docs/data/screening/sabine.json` |
+| `git status` | pass | `git status --short --untracked-files=all` shows exactly `?? docs/data/screening/sabine.json` |
+| List state | pass | the saved paper leaves `Offen` and appears under `Erfasst` with the PRISM capture mark |
+
+Two observations concern the hand-over. A reviewer who builds on Windows sees the four drifted data files as changed in GitHub Desktop, and the safe action is to discard them, as [Clean-checkout verification](#clean-checkout-verification) describes. A pushed reviewer file is an input of the build manifest, so `npm run check` on `main` reports a stale build until the next `npm run build`, which is an integration step for the operator and not for the reviewers.
+
+What stays manual for the reviewers is the native folder picker with the choice of the clone root and the browser's permission prompt for editing that folder, the renewed permission after the browser was closed ("Arbeitsordner einmal freigeben"), which the stubbed handle cannot reproduce after a reload, the commit and push in GitHub Desktop, and the visual and scholarly judgement of the assessment itself. `tests/manual-checklist.md` covers the native permission dialogue.
 
 ## Independent acceptance review of the result site
 

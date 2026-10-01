@@ -316,7 +316,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     payload = build_index(args.vault, args.registry, args.policy, args.ledger)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    args.output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     print(f"Chat index: {payload['meta']['published_assertions']} published, "
           f"{payload['meta']['withheld_assertions']} withheld assertions")
     return 0

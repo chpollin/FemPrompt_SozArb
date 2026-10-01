@@ -958,7 +958,7 @@ def main(argv=None) -> int:
         return 0
     output_path.parent.mkdir(parents=True, exist_ok=True)
     temporary = output_path.with_suffix(output_path.suffix + ".tmp")
-    temporary.write_text(serialized, encoding="utf-8")
+    temporary.write_text(serialized, encoding="utf-8", newline="\n")
     temporary.replace(output_path)
     print(f"OK: {output_path}; {len(data['papers'])} canonical records")
     return 0

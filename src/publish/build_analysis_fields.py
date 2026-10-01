@@ -173,7 +173,7 @@ def main() -> int:
         print(f"ERROR: {error}", file=sys.stderr)
         return 1
     JSON_OUT.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n"
     )
     fields = payload["fields"]
     print(f"Wrote {JSON_OUT.relative_to(ROOT)}")
