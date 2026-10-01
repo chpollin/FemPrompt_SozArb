@@ -46,6 +46,26 @@
         <article class="prose">
             <h2>Hilfe</h2>
 
+            <h3 id="start"><i class="fas fa-house"></i> Startansicht und Argumentkarte</h3>
+            <p>Die Startansicht nennt die Hauptfrage und führt zu den fünf Teilfragen. Darunter steht die
+            Argumentkarte. Jede Aussage des Reviews ist dort eine Kachel in der Spalte jeder Teilfrage, die sie
+            betrifft. Aussagen ohne Teilfrage stehen in einer eigenen Gruppe darunter, eine leere Spalte zeigt
+            &bdquo;Noch keine Aussage&ldquo;.</p>
+            <ul>
+                <li>Eine gefüllte Kachel ist eine veröffentlichte Aussage, eine nur umrandete ein Entwurf.
+                    Veröffentlichte Aussagen stehen in jeder Spalte vorn.</li>
+                <li>Die Punkte in der Kachel zählen die Werke, auf die sich die Aussage stützt. Titel, Stand und
+                    Zahl der Werke nennt der Tooltip.</li>
+                <li>Ein Klick, die Eingabe- oder die Leertaste wählt eine Kachel. Hervorgehoben bleiben die Kacheln,
+                    die mindestens ein Werk mit ihr teilen. Kacheln, die als widersprechend vermerkt sind, tragen
+                    einen gestrichelten Rand und das Zeichen &ne;. Alle übrigen treten zurück.</li>
+                <li>Das Detailfeld zeigt Aussage, Stand, Teilfragen und die Werke mit Links zur Werkansicht und zu
+                    PRISM. Widersprechende Aussagen lassen sich dort direkt wählen. Esc oder ein zweiter Klick hebt
+                    die Auswahl auf.</li>
+            </ul>
+            <p>In einer lokalen Projektkopie nach <code>npm run build</code> zeigt die Karte auch die Entwürfe und
+            die Widerspruchsvermerke. Die veröffentlichte Seite zeigt nur die veröffentlichten Aussagen.</p>
+
             <h3><i class="fas fa-comments"></i> Wissens-Chat</h3>
             <p>Stellen Sie Fragen an das synthetisierte Wissen des Korpus. Die Antworten werden von
             Gemini 3 Flash generiert, mit Kontext aus dem Forschungskorpus.</p>
@@ -72,15 +92,68 @@
             Jahr und Studientyp filtern die eingeschlossenen Papers. Ein Klick auf eine Matrixzelle oder einen
             Balken zeigt die zugehoerigen Papers und Belege. Vorlaeufige Agententracks bleiben gekennzeichnet.</p>
 
-            <h3><i class="fas fa-th-large"></i> Kategorien</h3>
-            <p>10 Kategorien als interaktives Spektrum (Gegenstand bis Perspektive). Klick auf eine Kategorie zeigt:
-            den Vergleich der Human- und LLM-Klassifikationsraten, die konkreten Divergenz-Papers mit LLM-Begruendung,
-            und die haeufigsten Konzepte in dieser Kategorie. Cross-Links zum Korpus und Wissensnetz.</p>
+            <h3 id="kategorien"><i class="fas fa-th-large"></i> Kategorien</h3>
+            <p>Die Kategorien-Ansicht ist eine Landkarte der Screening-Kategorien. Die vier Gegenstand-Kategorien
+            stehen als Zeilen gegen die sechs Perspektive-Kategorien als Spalten. Eine Zelle sagt, dass beide
+            Kategorien im selben Werk kodiert sind, nicht, dass sie zusammenhängen. Vier Schalter über der Karte
+            wählen das Maß, die Überschrift nennt die Werke, auf denen es beruht.</p>
+            <ul>
+                <li>Werke zählt die Werke, deren Expert:innen-Entscheidung beide Kategorien trägt.</li>
+                <li>Einschluss ist der Anteil eingeschlossener Werke unter ihnen.</li>
+                <li>Übereinstimmung vergleicht Expert:innen und LLM der ersten Runde über die Werke, die beide Seiten
+                    bewertet haben. Gezählt wird, wie viele Werke beide Seiten kodiert haben, geteilt durch die
+                    Werke, die mindestens eine Seite kodiert hat.</li>
+                <li>Aktualität ist der Anteil der Werke mit bekanntem Jahr, die 2025 oder später erschienen sind.</li>
+            </ul>
+            <p>Die Füllung einer Zelle folgt dem Wert, der Wert steht zusätzlich als Zahl in der Zelle, die Legende
+            nennt kleinsten und größten Wert. Die Balken an den Kopfzeilen zeigen den Wert einer Kategorie allein.
+            Ein Klick auf eine Zelle wählt beide Kategorien, ein Klick auf eine Kopfzeile die Kategorie allein, ein
+            zweiter Klick hebt die Auswahl auf. Die Pfeiltasten bewegen sich zwischen den Zellen. Das Detailfeld
+            zeigt die Werke der Auswahl mit ihrer Entscheidung, die Raten beider Seiten und die häufigsten
+            Konzepte. Unter Übereinstimmung stehen die abweichenden Werke vorn, markiert mit H für nur
+            Expert:innen, L für nur LLM und H+L für beide. Die LLM-Begründung eines Werks öffnet sich auf Wunsch.
+            Jedes Werk führt zu seinem Eintrag im Korpus. Maß und Auswahl stehen in der URL.</p>
 
-            <h3><i class="fas fa-table"></i> Korpus</h3>
-            <p>Der gesamte Korpus als durchsuchbare Tabelle. Filter nach LLM/Human-Entscheidung, Jahr, Kategorien.
-            Klick auf eine Zeile oeffnet das Detail-Panel mit Assessment-Vergleich, Abstract und LLM-Begruendung.
-            Der Korpus ist die Referenzschicht -- von allen anderen Bereichen aus erreichbar ueber Zitationslinks.</p>
+            <h3 id="korpus"><i class="fas fa-table"></i> Korpus</h3>
+            <p>Der Korpus ist die Arbeitsfläche des Reviews. Er zeigt jedes erfasste Werk mit seinem Stand und
+            führt zu den Werken, an denen Arbeit offen ist. Links steht die Filterleiste, rechts der Stand, die
+            Exporte und die Tabelle.</p>
+            <h4>Stand in zwei Leisten</h4>
+            <p>Die Leiste Screening zählt die Werke als Identifiziert, mit Text, bewertet und eingeschlossen. Die
+            Leiste Auswertung zählt sie als kodiert und in Aussagen. Die beiden Leisten sind getrennt, weil die
+            Stufen nicht ineinander liegen. Der KI-Agent hat in der zweiten Runde auch Werke kodiert, die noch
+            niemand bewertet hat, und Aussagen stützen sich auch auf solche Werke. Deshalb nennt jede Stufe der
+            Auswertung kleiner daneben mit &bdquo;davon &hellip; eingeschlossen&ldquo;, wie viele ihrer Werke
+            eingeschlossen sind.</p>
+            <ul>
+                <li>Mit Text heißt, dass für das Werk ein Volltext in der Leseschicht vorliegt. Diese Stufe gibt es
+                    nur in einer lokalen Projektkopie nach <code>npm run build</code>.</li>
+                <li>Bewertet heißt, dass eine menschliche Entscheidung vorliegt. Das ist eine in PRISM gespeicherte
+                    Bewertung oder, wo es keine gibt, die Expert:innen-Entscheidung der ersten Runde. Eine in PRISM
+                    gespeicherte Bewertung ersetzt die Expert:innen-Entscheidung, bei zwei Bewertungen gilt die
+                    jüngere.</li>
+                <li>Kodiert heißt, dass der KI-Agent die Analysefelder des Werks kodiert hat. In Aussagen heißt,
+                    dass mindestens eine Aussage sich auf das Werk stützt.</li>
+            </ul>
+            <p>Ein Klick auf eine Stufe filtert die Tabelle, ein zweiter Klick hebt den Filter auf. Auch &bdquo;davon
+            eingeschlossen&ldquo; ist ein Filter. Alle Zahlen berücksichtigen die übrigen Filter.</p>
+            <h4>Arbeitslisten und Filter</h4>
+            <p>Die Arbeitslisten in der Filterleiste führen zu den Lücken, nämlich Werken ohne Volltext, offenen
+            Werken, je Bearbeiterin aufgeteilt, eingeschlossenen Werken ohne Kodierung und eingeschlossenen Werken
+            ohne Aussage. Darunter stehen die Zeitachse der Erscheinungsjahre, die Kategorien und die Filter nach
+            LLM- und Expert:innen-Entscheidung.</p>
+            <p>Die Zeitachse zeigt je Jahr eine Säule, gestapelt nach eingeschlossen, ausgeschlossen und offen,
+            und eine Säule o. J. für Werke ohne Jahr. Der Tooltip nennt die Zahlen. Ein Klick wählt ein Jahr,
+            Umschalt und Klick erweitert die Auswahl zu einem Zeitraum, ein zweiter Klick hebt sie auf.</p>
+            <h4>Tabelle und Export</h4>
+            <p>Die Tabelle ist nach Stand sortiert, die am weitesten gekommenen Werke zuerst. Die Spalte Stand zeigt
+            vier Marken in fester Reihenfolge für Volltext, Screening, Kodierung und Aussagen. Gefüllt heißt
+            erreicht, umrandet heißt nicht erreicht. Die Screening-Marke zeigt + für eingeschlossen, &minus; für
+            ausgeschlossen, ? für unklar und einen gestrichelten Kreis für offen. Der Tooltip jeder Marke nennt ihre
+            Bedeutung. Ein Klick auf einen Titel öffnet das Detailfeld des Werks.</p>
+            <p>CSV, Markdown und Vault exportieren die aktuelle Auswahl. Die CSV-Datei enthält den Stand je Werk,
+            ihr Dateiname nennt die gewählte Stufe oder Arbeitsliste. Alle Filter stehen in der URL, ein Link
+            öffnet dieselbe Auswahl.</p>
 
             <h3><i class="fas fa-keyboard"></i> Tastaturkuerzel</h3>
             <table class="help-shortcuts">
