@@ -10,9 +10,9 @@ status: complete
 language: en
 version: "0.6"
 created: 2026-07-21
-updated: 2026-08-23
+updated: 2026-10-01
 authors: [Christopher Pollin]
-generated-with: Claude Code, Codex (GPT-5.6)
+generated-with: Claude Code, Codex (GPT-5.6), Claude Code (Claude Opus 5.5)
 related: [methods, verification, standards, journal, project, INDEX]
 ---
 
@@ -57,7 +57,7 @@ The project uses three descriptive patterns to organise content disagreements.
 - Implicit Field Membership covers cases where domain experts recognise field relevance from disciplinary cues that the Paper-level prompt does not surface.
 - Keyword Inclusion covers category assignment from a lexical cue without sufficient contextual support.
 
-The classification supports case inspection and assigns no correctness label. Per-Paper assignments remain in the generated divergence data rendered by the Evidence Companion.
+The classification supports case inspection and assigns no correctness label. The generated divergence data holds no per-Paper assignment. The earlier assignments came from a local LLM cache that the reproducible build no longer reads, so every divergence item carries a `null` pattern until an attributed classification source exists, as [[data#Historical concept graph and divergence classification]] records.
 
 ## Worked cases
 
