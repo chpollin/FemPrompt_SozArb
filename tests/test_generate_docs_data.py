@@ -413,3 +413,19 @@ def test_full_publication_is_byte_deterministic(tmp_path: Path) -> None:
     docs_data.main(["--output", str(second)])
 
     assert first.read_bytes() == second.read_bytes()
+
+
+def test_human_assessment_reads_the_diversity_column_of_the_human_sheet(
+    tmp_path: Path,
+) -> None:
+    header = ["Zotero_Key", "Decision", *docs_data.CATEGORIES]
+    header[header.index("Diversitaet")] = "Diversitaet / Intersektionalität"
+    row = ["K1", "Include", *["Nein"] * len(docs_data.CATEGORIES)]
+    row[header.index("Diversitaet / Intersektionalität")] = "Ja"
+    sheet = tmp_path / "human.csv"
+    sheet.write_text(",".join(header) + "\n" + ",".join(row) + "\n", encoding="utf-8")
+
+    human = docs_data.load_human_assessment(sheet)["K1"]
+
+    assert human["all_categories"]["Diversitaet"] == 1
+    assert human["categories"] == ["Diversitaet"]

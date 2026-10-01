@@ -542,6 +542,20 @@ def parse_llm_row(
     }
 
 
+# The human sheet spells the diversity column differently from the category key,
+# as src/replay/replay_round1.py records; reading the key alone zeroed every cell.
+HUMAN_CATEGORY_COLUMNS = {
+    "Diversitaet": ("Diversitaet / Intersektionalität", "Diversitaet / Intersektionalitaet"),
+}
+
+
+def human_category_cell(row: dict[str, str], cat: str) -> str | None:
+    for column in (cat, *HUMAN_CATEGORY_COLUMNS.get(cat, ())):
+        if column in row:
+            return row[column]
+    return None
+
+
 def load_human_assessment(filepath: str | Path) -> dict[str, dict[str, Any]]:
     """Return dict: Zotero_Key -> human assessment dict."""
     rows = read_csv(filepath)
@@ -555,7 +569,7 @@ def load_human_assessment(filepath: str | Path) -> dict[str, dict[str, Any]]:
         all_cats = {}
         positive_cats = []
         for cat in CATEGORIES:
-            val = ja_nein_to_bool(row.get(cat))
+            val = ja_nein_to_bool(human_category_cell(row, cat))
             all_cats[cat] = 1 if val else 0
             if val:
                 positive_cats.append(cat)
