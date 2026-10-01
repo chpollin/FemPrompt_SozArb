@@ -217,7 +217,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const stages = loadData().then(function() { return window.EC.korpusStages.load(allPapers); });
     Promise.all([stages, release]).then(function() {
         initializeUI();
-        renderCategoryChips();
         logInit();
         // Chat is the default tab; initialize it up front.
         if (window.initWissensChat) window.initWissensChat();
@@ -399,6 +398,27 @@ function initializeUI() {
         });
     });
 
+    // Category chips are rebuilt with every selection, so their clicks are delegated.
+    document.getElementById('category-chips').addEventListener('click', function(e) {
+        const chip = e.target.closest('.category-chip');
+        if (!chip) return;
+        const cat = chip.dataset.cat;
+        if (activeCategories.has(cat)) activeCategories.delete(cat);
+        else activeCategories.add(cat);
+        applyFilters();
+    });
+
+    document.getElementById('active-filters').addEventListener('click', function(e) {
+        const btn = e.target.closest('button[data-clear]');
+        if (!btn) return;
+        const rest = clearFilter(btn.dataset.clear);
+        applyFilters();
+        // Focus moves to the chip that took the removed one's place, else to the search.
+        const chips = document.querySelectorAll('#active-filters button[data-clear]');
+        const target = chips[Math.min(rest, chips.length - 1)] || document.getElementById('search-box');
+        target.focus();
+    });
+
     // Dropdown navigation
     setupDropdownNav();
 
@@ -432,16 +452,24 @@ function initializeUI() {
             e.preventDefault();
             downloadKnowledgeDoc(currentDetailPaper.knowledge_doc, currentDetailPaper.title);
         }
+        const tab = e.target.closest('.detail-tab');
+        if (tab) showDetailTab(tab.dataset.detailTab);
+        if (e.target.closest('[data-action="read-fulltext"]')) {
+            showDetailTab('volltext');
+            document.getElementById('dtab-volltext').focus();
+        }
     });
 
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closePaperModal();
+        const panelOpen = currentView === 'korpus' && document.getElementById('paper-modal').classList.contains('active');
+        if (e.key === 'Escape' && panelOpen) closePaperModal({ returnFocus: true });
         if (e.key === '/' && !e.target.matches('input, textarea')) {
             e.preventDefault();
             document.getElementById('search-box').focus();
         }
-        // Arrow keys for detail panel navigation
-        if (document.getElementById('paper-modal').classList.contains('active')) {
+        // Arrow keys step through the works while the panel is open, but never take them
+        // from a field, a select or the year histogram.
+        if (panelOpen && !e.target.matches('input, textarea, select, .year-col')) {
             if (e.key === 'ArrowLeft') {
                 const prev = document.getElementById('detail-prev');
                 if (prev) prev.click();
@@ -456,24 +484,74 @@ function initializeUI() {
 
 // Category Chips
 
-function renderCategoryChips() {
-    let container = document.getElementById('category-chips');
-    container.innerHTML = categoryChips(CATEGORIES, function(cat) { return { pressed: activeCategories.has(cat) }; });
-
-    container.addEventListener('click', function(e) {
-        const chip = e.target.closest('.category-chip');
-        if (!chip) return;
-        let cat = chip.dataset.cat;
-        if (activeCategories.has(cat)) {
-            activeCategories.delete(cat);
-        } else {
-            activeCategories.add(cat);
-        }
-        container.querySelectorAll('.category-chip').forEach(function(c) {
-            c.setAttribute('aria-pressed', String(activeCategories.has(c.dataset.cat)));
-        });
-        applyFilters();
+// Only the categories that occur in the current selection are offered; a pressed one
+// stays so that it can be released.
+function renderCategoryChips(papers) {
+    const container = document.getElementById('category-chips');
+    const present = CATEGORIES.filter(function(cat) {
+        return activeCategories.has(cat) || papers.some(function(p) { return p.llm.all_categories[cat] === 1; });
     });
+    const active = document.activeElement;
+    const focused = active && active.closest && active.closest('#category-chips .category-chip');
+    container.innerHTML = categoryChips(present, function(cat) { return { pressed: activeCategories.has(cat) }; });
+    if (focused) {
+        const again = container.querySelector('.category-chip[data-cat="' + focused.dataset.cat + '"]');
+        if (again) again.focus();
+    }
+}
+
+// Active filters
+
+function selectedOptionText(id) {
+    const sel = document.getElementById(id);
+    return sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].textContent : sel.value;
+}
+
+function yearChipLabel() {
+    if (yearSel === NO_YEAR) return 'o. J.';
+    return yearSel.indexOf('-') > 0 ? 'Jahre ' + yearSel.replace('-', '\u2013') : 'Jahr ' + yearSel;
+}
+
+// Every active filter as { key, label }, in the order of the sidebar; the sort is no filter.
+function activeFilters() {
+    const list = [];
+    const q = document.getElementById('search-box').value.trim();
+    if (q) list.push({ key: 'q', label: 'Suche \u201E' + q + '\u201C' });
+    if (stageSel !== 'all') list.push({ key: 'stage', label: window.EC.korpusStages.labelOf(stageSel) });
+    if (yearSel !== 'all') list.push({ key: 'year', label: yearChipLabel() });
+    CATEGORIES.forEach(function(cat) {
+        if (activeCategories.has(cat)) list.push({ key: 'cat:' + cat, label: catLabel(cat) });
+    });
+    if (document.getElementById('filter-decision').value !== 'all') list.push({ key: 'dec', label: 'LLM ' + selectedOptionText('filter-decision') });
+    if (document.getElementById('filter-human').value !== 'all') list.push({ key: 'hum', label: 'Expert:innen ' + selectedOptionText('filter-human') });
+    return list;
+}
+
+// Clears one filter or, for 'all', every filter; returns the position of the cleared chip.
+function clearFilter(key) {
+    const index = activeFilters().map(function(f) { return f.key; }).indexOf(key);
+    const all = key === 'all';
+    if (all || key === 'q') {
+        document.getElementById('search-box').value = '';
+        filteredPapers = allPapers.slice();
+    }
+    if (all || key === 'stage') stageSel = 'all';
+    if (all || key === 'year') { yearSel = 'all'; yearAnchor = null; }
+    if (all || key === 'dec') document.getElementById('filter-decision').value = 'all';
+    if (all || key === 'hum') document.getElementById('filter-human').value = 'all';
+    if (all) activeCategories.clear();
+    else if (key.indexOf('cat:') === 0) activeCategories.delete(key.slice(4));
+    return Math.max(index, 0);
+}
+
+function renderActiveFilters() {
+    const box = document.getElementById('active-filters');
+    const list = activeFilters();
+    box.hidden = list.length === 0;
+    box.innerHTML = list.map(function(f) {
+        return '<button type="button" class="filter-chip" data-clear="' + escapeHtml(f.key) + '" aria-label="' +
+            escapeHtml(f.label + ' aufheben') + '"><span>' + escapeHtml(f.label) + '</span><span class="filter-chip-x" aria-hidden="true">&times;</span></button>';
+    }).join('') + (list.length ? '<button type="button" class="filter-clear-all" data-clear="all">alle aufheben</button>' : '');
 }
 
 // Search & Filter
@@ -585,7 +663,10 @@ function applyFilters() {
     filtered = sortPapers(filtered, currentSort);
     korpusResult = filtered;
     currentPage = 1;
+    renderCategoryChips(filtered);
+    renderActiveFilters();
     renderPapers(filtered);
+    highlightActiveRow(currentDetailPaper);
     syncUrl();
 }
 
@@ -828,17 +909,21 @@ function renderPapers(papers) {
     const start = (currentPage - 1) * PAGE_SIZE;
     const pageItems = papers.slice(start, start + PAGE_SIZE);
 
+    const stages = window.EC.korpusStages;
     let rows = pageItems.map(function(p, i) {
         let idx = start + i;
-        const titleShort = p.title.length > 80 ? p.title.substring(0, 77) + '...' : p.title;
-        const authorShort = (p.author_year || '').length > 22 ? (p.author_year || '').substring(0, 20) + '...' : (p.author_year || '');
+        const author = authorParts(p);
 
         // The title is a button so that the row detail opens by keyboard as well.
         return '<tr class="paper-row" data-idx="' + idx + '" data-id="' + escapeHtml(p.id) + '">' +
-            '<td class="col-title" title="' + escapeHtml(p.title) + '"><button type="button" class="row-open">' + escapeHtml(titleShort) + '</button></td>' +
-            '<td class="col-author">' + escapeHtml(authorShort) + '</td>' +
+            '<td class="col-title" title="' + escapeHtml(p.title) + '"><button type="button" class="row-open" aria-controls="paper-modal">' + escapeHtml(p.title) + '</button></td>' +
+            '<td class="col-author">' + escapeHtml(author.name) +
+                (author.year ? '<span class="author-year"> ' + escapeHtml(author.year) + '</span>' : '') + '</td>' +
             '<td class="col-year">' + escapeHtml(p.year || '') + '</td>' +
-            '<td class="col-stage">' + window.EC.korpusStages.trackHtml(p) + '</td>' +
+            // The next step stands in its own column and, where that column is hidden on
+            // a phone, under the stage; CSS shows exactly one of the two.
+            '<td class="col-stage">' + stages.trackHtml(p) + '<span class="st-next-inline">' + stages.nextHtml(p) + '</span></td>' +
+            '<td class="col-next">' + stages.nextHtml(p) + '</td>' +
             '<td class="col-cats"><div class="cat-labels">' + catLabels(p) + '</div></td>' +
         '</tr>';
     }).join('');
@@ -853,6 +938,7 @@ function renderPapers(papers) {
             '<th class="col-author sortable" data-sort="author">Autor' + sortArrow('author') + '</th>' +
             '<th class="col-year sortable" data-sort="year">Jahr' + sortArrow('year') + '</th>' +
             '<th class="col-stage sortable" data-sort="stage" title="Volltext, Screening, Kodierung, Aussagen">Stand' + sortArrow('stage') + '</th>' +
+            '<th class="col-next">Nächster Schritt</th>' +
             '<th class="col-cats">Kategorien</th>' +
         '</tr></thead>' +
         '<tbody>' + rows + '</tbody></table>';
@@ -877,6 +963,15 @@ function renderPapers(papers) {
 }
 
 // Table cell helpers
+
+// author_year carries the year in brackets; the table shows it in its own column and
+// the author cell repeats it only where that column is hidden.
+function authorParts(paper) {
+    const text = String(paper.author_year || '');
+    const m = /^(.*?)\s*(\((?:\d{4}|o\. ?J\.|n\.d\.)\))$/.exec(text);
+    return m ? { name: m[1], year: m[2] } : { name: text, year: '' };
+}
+
 function catLabels(paper) {
     let html = '';
     CATEGORIES.forEach(function(cat, i) {
@@ -890,13 +985,21 @@ function catLabels(paper) {
 
 // Paper Detail Panel
 
+const ITEM_TYPE_LABELS = {
+    journalArticle: 'Zeitschriftenartikel', report: 'Bericht', conferencePaper: 'Konferenzbeitrag',
+    bookSection: 'Buchkapitel', preprint: 'Preprint', book: 'Buch', webpage: 'Webseite', document: 'Dokument',
+    blogPost: 'Blogbeitrag', thesis: 'Abschlussarbeit', manuscript: 'Manuskript',
+};
+
 function showPaperDetail(paper, paperList) {
+    // A user's choice moves focus into the panel; a restored link or a cross-view jump does not.
+    const byUser = !applyingFromUrl;
     currentDetailPaper = paper;
     if (paperList) currentDetailList = paperList;
     const modal = document.getElementById('paper-modal');
     document.getElementById('modal-title').textContent = paper.title;
-    document.getElementById('modal-author').textContent =
-        (paper.author_year || '') + (paper.year ? ' | ' + paper.year : '') + (paper.item_type ? ' | ' + paper.item_type : '');
+    const type = ITEM_TYPE_LABELS[paper.item_type] || paper.item_type || '';
+    document.getElementById('modal-author').textContent = (paper.author_year || '') + (type ? ', ' + type : '');
 
     let bodyHtml = buildDetailContent(paper);
 
@@ -904,31 +1007,21 @@ function showPaperDetail(paper, paperList) {
         let idx = currentDetailList.indexOf(paper);
         bodyHtml += '<div class="detail-nav">';
         if (idx > 0) {
-            bodyHtml += '<button class="detail-nav-btn" id="detail-prev"><i class="fas fa-arrow-left"></i> Vorheriges</button>';
+            bodyHtml += '<button type="button" class="detail-nav-btn" id="detail-prev"><i class="fas fa-arrow-left" aria-hidden="true"></i> Vorheriges</button>';
         }
         if (idx < currentDetailList.length - 1) {
-            bodyHtml += '<button class="detail-nav-btn" id="detail-next" style="margin-left:auto;">Naechstes <i class="fas fa-arrow-right"></i></button>';
+            bodyHtml += '<button type="button" class="detail-nav-btn" id="detail-next" style="margin-left:auto;">Nächstes <i class="fas fa-arrow-right" aria-hidden="true"></i></button>';
         }
         bodyHtml += '</div>';
     }
 
     document.getElementById('modal-body').innerHTML = bodyHtml;
+    modal.hidden = false;
     modal.classList.add('active');
-    document.body.classList.add('panel-open');
-    modal.querySelector('.modal-content').scrollTop = 0;
+    modal.closest('.korpus-layout').classList.add('has-detail');
+    modal.scrollTop = 0;
     highlightActiveRow(paper);
-
-    // Detail tab switching
-    document.querySelectorAll('.detail-tab').forEach(function(tab) {
-        tab.addEventListener('click', function() {
-            let target = tab.dataset.detailTab;
-            document.querySelectorAll('.detail-tab').forEach(function(t) { t.classList.toggle('active', t === tab); });
-            document.querySelectorAll('.detail-tab-content').forEach(function(c) {
-                c.style.display = c.id === 'dtab-' + target ? '' : 'none';
-                c.classList.toggle('active', c.id === 'dtab-' + target);
-            });
-        });
-    });
+    if (byUser && currentView === 'korpus') document.getElementById('modal-title').focus();
 
     const prevBtn = document.getElementById('detail-prev');
     const nextBtn = document.getElementById('detail-next');
@@ -945,6 +1038,34 @@ function showPaperDetail(paper, paperList) {
         });
     }
     syncUrl();
+}
+
+function showDetailTab(target) {
+    document.querySelectorAll('#modal-body .detail-tab').forEach(function(t) {
+        t.classList.toggle('active', t.dataset.detailTab === target);
+    });
+    document.querySelectorAll('#modal-body .detail-tab-content').forEach(function(c) {
+        c.style.display = c.id === 'dtab-' + target ? '' : 'none';
+        c.classList.toggle('active', c.id === 'dtab-' + target);
+    });
+    if (target === 'volltext') loadFulltext(currentDetailPaper);
+}
+
+// The reading layer (docs/data/fulltext/, local clones only) holds Markdown, which a
+// browser downloads instead of showing; the panel therefore shows it as wrapped plain
+// text. A response for a work the panel has since left is dropped.
+function loadFulltext(paper) {
+    const box = document.getElementById('dtab-volltext');
+    if (!box || !paper || box.dataset.loaded === paper.id) return;
+    box.dataset.loaded = paper.id;
+    box.textContent = 'Volltext lädt …';
+    fetch('data/fulltext/' + encodeURIComponent(paper.id) + '.md')
+        .then(function(r) { return r.ok ? r.text() : null; })
+        .catch(function() { return null; })
+        .then(function(text) {
+            if (currentDetailPaper !== paper) return;
+            box.textContent = text && text.trim() ? text : 'Der Volltext ist in dieser Kopie nicht lesbar.';
+        });
 }
 
 // Dropdown Navigation
@@ -1056,23 +1177,40 @@ function releaseGo(params, options) {
     try { store.set(Object.assign({}, next, stateFromUI())); } finally { navMode = null; }
 }
 
-function closePaperModal() {
-    document.getElementById('paper-modal').classList.remove('active');
-    document.body.classList.remove('panel-open');
+function closePaperModal(options) {
+    const modal = document.getElementById('paper-modal');
+    const closed = currentDetailPaper;
+    modal.classList.remove('active');
+    modal.hidden = true;
+    modal.closest('.korpus-layout').classList.remove('has-detail');
     highlightActiveRow(null);
     currentDetailPaper = null;
     syncUrl();
+    // Escape returns the keyboard to the row the panel belonged to.
+    const row = closed && options && options.returnFocus ? rowOf(closed.id) : null;
+    if (row) row.querySelector('.row-open').focus();
+}
+
+// The rendered table row of a work, matched on data-id rather than a selector built from
+// the id, which comes from the data.
+function rowOf(id) {
+    return Array.prototype.find.call(document.querySelectorAll('#papers-grid tr[data-id]'), function(r) {
+        return r.dataset.id === id;
+    }) || null;
 }
 
 function highlightActiveRow(paper) {
     document.querySelectorAll('.papers-table tbody tr.row--active').forEach(function(r) {
         r.classList.remove('row--active');
+        const open = r.querySelector('.row-open');
+        if (open) open.removeAttribute('aria-current');
     });
-    if (!paper || !currentDetailList) return;
-    let idx = currentDetailList.indexOf(paper);
-    if (idx >= 0) {
-        let row = document.querySelector('tr[data-idx="' + idx + '"]');
-        if (row) row.classList.add('row--active');
+    if (!paper) return;
+    const row = rowOf(paper.id);
+    if (row) {
+        row.classList.add('row--active');
+        const open = row.querySelector('.row-open');
+        if (open) open.setAttribute('aria-current', 'true');
     }
 }
 
@@ -1269,12 +1407,37 @@ function buildDetailContent(paper) {
     const hasKnowledge = paper.knowledge && paper.knowledge.sections &&
         Object.keys(paper.knowledge.sections).length > 0;
 
-    let html = '';
+    const stages = window.EC.korpusStages;
+    let html = '<dl class="detail-state">' + stages.stateItems(paper).map(function(item) {
+        return '<div><dt>' + escapeHtml(item[0]) + '</dt><dd>' + escapeHtml(item[1]) + '</dd></div>';
+    }).join('') + '</dl>';
+
+    // PRISM opens a work by ?paper=; the reading layer serves its text where the manifest
+    // lists one, and a work without text leads to the acquisition work list.
+    const actions = ['<a class="detail-action" href="prisma.html?paper=' + encodeURIComponent(paper.id) + '">In PRISM öffnen</a>'];
+    const text = stages.hasText(paper);
+    if (text === true) {
+        actions.push('<button type="button" class="detail-action" data-action="read-fulltext" aria-controls="dtab-volltext">Volltext lesen</button>');
+    } else if (text === false && stageSel !== 'ohne-text') {
+        actions.push('<a class="detail-action" href="' +
+            escapeHtml(serializeState(Object.assign({}, stateFromUI(), { stage: 'ohne-text', paper: paper.id }))) + '">Beschaffung</a>');
+    }
+    if (paper.doi && paper.doi !== 'nan') {
+        actions.push('<a href="https://doi.org/' + escapeHtml(paper.doi) + '" target="_blank" rel="noopener" class="detail-link">DOI</a>');
+    }
+    if (paper.url && paper.url !== 'nan' && paper.url !== '' && isHttpUrl(paper.url)) {
+        actions.push('<a href="' + escapeHtml(paper.url) + '" target="_blank" rel="noopener" class="detail-link">Quelle</a>');
+    }
+    if (paper.knowledge_doc) {
+        actions.push('<a href="#" data-action="download-doc" class="detail-link">Wissensdokument (.md)</a>');
+    }
+    html += '<div class="detail-actions">' + actions.join('') + '</div>';
 
     // Tabs
     html += '<div class="detail-tabs">';
     html += '<button class="detail-tab active" data-detail-tab="bewertung">Bewertung</button>';
     html += '<button class="detail-tab" data-detail-tab="wissen">' + (hasKnowledge ? 'Wissensdokument' : 'Wissen') + '</button>';
+    if (text === true) html += '<button class="detail-tab" data-detail-tab="volltext">Volltext</button>';
     html += '</div>';
 
     // Tab: Bewertung
@@ -1287,32 +1450,22 @@ function buildDetailContent(paper) {
         '</div>';
     }
 
-    const links = [];
-    if (paper.doi && paper.doi !== 'nan') {
-        links.push('<a href="https://doi.org/' + escapeHtml(paper.doi) + '" target="_blank" rel="noopener" class="detail-link"><i class="fas fa-external-link-alt"></i> DOI</a>');
-    }
-    if (paper.url && paper.url !== 'nan' && paper.url !== '' && isHttpUrl(paper.url)) {
-        links.push('<a href="' + escapeHtml(paper.url) + '" target="_blank" rel="noopener" class="detail-link"><i class="fas fa-globe"></i> Quelle</a>');
-    }
-    if (paper.knowledge_doc) {
-        links.push('<a href="#" data-action="download-doc" class="detail-link"><i class="fas fa-download"></i> .md</a>');
-    }
-    if (links.length) {
-        html += '<div class="detail-links">' + links.join('') + '</div>';
-    }
-
     html += '<div class="detail-section"><h3>Bewertung</h3><div class="assessment-grid">';
 
-    const llmDecColor = paper.llm.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
-    html += '<div class="assessment-panel">' +
-        '<div class="panel-header">LLM (Claude Haiku 4.5)</div>' +
-        '<div class="assessment-decision" style="color:' + llmDecColor + '">' + paper.llm.decision + '</div>' +
-        catGridColored(paper.llm.all_categories);
-    if (paper.llm.reasoning) {
-        html += '<div class="reasoning-section"><span class="reasoning-label">Begruendung</span>' +
-            '<p class="reasoning-text">' + escapeHtml(paper.llm.reasoning) + '</p></div>';
+    // The round-one LLM assessment appears only beside a human decision, as the
+    // comparison it was made for; an open work shows no AI pre-assessment (ADR-044).
+    if (stages.decision(paper) !== 'open') {
+        const llmDecColor = paper.llm.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
+        html += '<div class="assessment-panel">' +
+            '<div class="panel-header">LLM (Claude Haiku 4.5)</div>' +
+            '<div class="assessment-decision" style="color:' + llmDecColor + '">' + escapeHtml(paper.llm.decision) + '</div>' +
+            catGridColored(paper.llm.all_categories);
+        if (paper.llm.reasoning) {
+            html += '<div class="reasoning-section"><span class="reasoning-label">Begründung</span>' +
+                '<p class="reasoning-text">' + escapeHtml(paper.llm.reasoning) + '</p></div>';
+        }
+        html += '</div>';
     }
-    html += '</div>';
 
     if (paper.benchmark.has_human && paper.human && paper.human.decision) {
         const hDecColor = paper.human.decision === 'Include' ? 'var(--success)' : 'var(--gray-500)';
@@ -1322,11 +1475,9 @@ function buildDetailContent(paper) {
             catGridColored(paper.human.all_categories) +
         '</div>';
     } else {
-        let total = vaultMeta.total_papers || allPapers.length;
-        const withHuman = vaultMeta.papers_with_human != null ? vaultMeta.papers_with_human : '';
         html += '<div class="assessment-panel assessment-panel--empty">' +
             '<div class="panel-header">Expert:innen</div>' +
-            '<p class="empty-note">Nicht bewertet. Human Assessment deckt ' + withHuman + ' von ' + total + ' Papers ab.</p>' +
+            '<p class="empty-note">Keine Entscheidung der ersten Runde.</p>' +
         '</div>';
     }
 
@@ -1338,7 +1489,7 @@ function buildDetailContent(paper) {
             html += '<div class="divergence-panel">' +
                 '<strong>Divergenz</strong>';
             if (paper.benchmark.disagreement_type) {
-                html += ' &mdash; ' + paper.benchmark.disagreement_type.replace(/_/g, ' ');
+                html += ', ' + escapeHtml(paper.benchmark.disagreement_type.replace(/_/g, ' '));
             }
             if (paper.benchmark.severity) {
                 html += ' <span class="severity-badge severity-' + paper.benchmark.severity + '">' + paper.benchmark.severity + '</span>';
@@ -1348,7 +1499,7 @@ function buildDetailContent(paper) {
             }
             html += '</div>';
         } else {
-            html += '<div class="agreement-panel"><strong>Konsens</strong> &mdash; Beide Bewertungspfade kommen zum selben Ergebnis.</div>';
+            html += '<div class="agreement-panel"><strong>Konsens.</strong> Beide Bewertungspfade kommen zum selben Ergebnis.</div>';
         }
     }
 
@@ -1385,19 +1536,18 @@ function buildDetailContent(paper) {
         }
         if (paper.knowledge_doc) {
             html += '<div style="margin-top:1rem;">';
-            html += '<a href="#" data-action="download-doc" class="export-button"><i class="fas fa-download"></i> Vollstaendiges Wissensdokument (.md)</a>';
+            html += '<a href="#" data-action="download-doc" class="export-button"><i class="fas fa-download" aria-hidden="true"></i> Vollständiges Wissensdokument (.md)</a>';
             html += '</div>';
         }
     } else {
-        const totalKd = vaultMeta.total_papers || allPapers.length;
-        const withoutKd = totalKd - allPapers.filter(function(p) { return p.knowledge_doc; }).length;
         html += '<div class="kd-empty">';
-        html += '<p><i class="fas fa-file-alt" style="font-size:1.5rem;color:var(--gray-300);"></i></p>';
-        html += '<p>Kein Wissensdokument verfuegbar.</p>';
-        html += '<p style="font-size:var(--text-xs);color:var(--gray-400);">Fuer dieses Paper konnte kein PDF akquiriert werden (' + withoutKd + ' von ' + totalKd + ' Papers betroffen).</p>';
+        html += '<p>Kein Wissensdokument vorhanden.</p>';
         html += '</div>';
     }
     html += '</div>'; // close dtab-wissen
+    if (text === true) {
+        html += '<div class="detail-tab-content fulltext-reader" id="dtab-volltext" tabindex="-1" aria-label="Volltext" style="display:none;"></div>';
+    }
 
     return html;
 }
@@ -1529,7 +1679,7 @@ function exportFilteredMarkdown() {
     const withDocs = korpusResult.filter(function(p) { return p.knowledge_doc; });
 
     if (withDocs.length === 0) {
-        alert('Keine Wissensdokumente fuer die aktuelle Auswahl verfuegbar.');
+        alert('Keine Wissensdokumente für die aktuelle Auswahl vorhanden.');
         return;
     }
 

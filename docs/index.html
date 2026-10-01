@@ -110,6 +110,8 @@
                 <div class="korpus-main">
                     <div class="stage-bar" id="stage-bar"></div>
 
+                    <div class="active-filters" id="active-filters" role="group" aria-label="Aktive Filter" hidden></div>
+
                     <div class="results-row">
                         <p class="results-counter" id="results-counter" aria-live="polite">
                             <strong id="results-count">0</strong> <span id="results-label">Werke</span>
@@ -130,10 +132,22 @@
                     <div id="papers-grid">
                         <div class="loading">
                             <div class="loading-spinner"></div>
-                            <p>Lade Papers...</p>
+                            <p>Lade Werke …</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Detail of the selected work: beside the table on wide screens, below it on narrow ones -->
+                <aside class="korpus-detail" id="paper-modal" aria-labelledby="modal-title" hidden>
+                    <div class="korpus-detail-head">
+                        <div>
+                            <h2 id="modal-title" tabindex="-1"></h2>
+                            <p id="modal-author" class="modal-author"></p>
+                        </div>
+                        <button type="button" class="modal-close" onclick="closePaperModal()" aria-label="Detail schließen">&times;</button>
+                    </div>
+                    <div class="korpus-detail-body" id="modal-body"></div>
+                </aside>
             </div>
         </section>
 
@@ -223,21 +237,6 @@
             <a href="downloads/vault.zip">Paper-Wissenssammlung (.zip)</a>
         </p>
     </footer>
-
-    <!-- Paper Detail Panel -->
-    <div class="modal" id="paper-modal" role="dialog" aria-modal="true" aria-label="Paper-Detail">
-        <div class="modal-overlay" onclick="closePaperModal()"></div>
-        <div class="modal-content">
-            <div class="modal-header">
-                <div>
-                    <h2 id="modal-title">Paper Title</h2>
-                    <p id="modal-author" class="modal-author"></p>
-                </div>
-                <button class="modal-close" onclick="closePaperModal()" aria-label="Schliessen">&times;</button>
-            </div>
-            <div class="modal-body" id="modal-body"></div>
-        </div>
-    </div>
 
     <!-- Scripts -->
     <script src="js/research-app.js"></script>

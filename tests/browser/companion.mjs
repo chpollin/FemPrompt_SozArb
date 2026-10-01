@@ -1,7 +1,7 @@
 // Chromium acceptance run for the working Companion docs/index.html: start view, answer
 // pages, Argumentkarte, Literaturbild matrix, Wissensnetz, work view, Landkarte lenses, legacy hashes, nav
 // tooltips, the Korpus workbench (sidebar, year histogram, review stages, work lists,
-// exports, stage track) and reflow.
+// exports, stage track with next step, filter chips, detail panel actions) and reflow.
 import { chromium } from 'playwright';
 import { createServer } from 'node:http';
 import { existsSync, mkdirSync, readFileSync, statSync } from 'node:fs';
@@ -782,18 +782,146 @@ try {
     hashParams().get('year') === '2025' && await resultCount() === included2025);
   await page.goto(`${base}/index.html#view=korpus&stage=bogus`, { waitUntil: 'networkidle' });
   await page.waitForSelector('#stage-bar button');
-  check('an invalid stage parameter is no filter', await resultCount() === corpus.length &&
-    await page.locator('#stage-bar button[data-stage="all"]').getAttribute('aria-pressed') === 'true');
+  check('an invalid stage parameter is no filter and presses no stage', await resultCount() === corpus.length &&
+    await page.locator('#view-korpus button[data-stage][aria-pressed="true"]').count() === 0);
 
   await page.locator('#stage-bar button[data-stage="eingeschlossen"]').focus();
   await page.keyboard.press('Enter');
   check('a stage is selectable by keyboard with a visible focus', await resultCount() === expectedCounts(corpus).eingeschlossen &&
     await page.evaluate(() => document.activeElement.dataset.stage === 'eingeschlossen' && getComputedStyle(document.activeElement).outlineStyle !== 'none'));
+  const keyedId = await page.locator('#papers-grid tr[data-id]').first().getAttribute('data-id');
   await page.locator('#papers-grid .row-open').first().focus();
   await page.keyboard.press('Enter');
   await page.waitForSelector('#paper-modal.active');
-  check('a row opens its detail by keyboard and keeps the paper link in the hash', hashParams().get('paper') !== null);
+  check('a row opens its detail by keyboard, focus moves to the panel title and the hash keeps the paper',
+    hashParams().get('paper') === keyedId && await page.evaluate(() => document.activeElement.id === 'modal-title'));
   await page.keyboard.press('Escape');
+  check('Escape closes the panel and returns focus to its row', !(await page.locator('#paper-modal').isVisible()) &&
+    !hashParams().has('paper') && await page.evaluate((id) => document.activeElement.closest('tr') &&
+      document.activeElement.closest('tr').dataset.id === id, keyedId));
+
+  // Second UI round: next step per row, no pressed stage by default, visible subsets,
+  // active-filter chips, categories of the selection, author cell and detail actions.
+  {
+    const nextOf = (p) => {
+      const dec = decisionOf(p);
+      if (dec === 'Exclude') return '';
+      if (textOf(p) === false) return 'Volltext beschaffen';
+      if (dec === null) return 'bewerten';
+      if (dec === 'Unclear') return 'entscheiden';
+      if (!codedWorks.has(p.work_id)) return 'kodieren';
+      if (!claimsOf(p)) return 'Aussage bilden';
+      return '';
+    };
+    await page.setViewportSize({ width: 1280, height: 800 });
+    await page.goto(`${base}/index.html#view=korpus`, { waitUntil: 'networkidle' });
+    await page.waitForSelector('#papers-grid tr[data-idx]');
+    check('on load no stage is pressed, the list shows all works sorted nach Stand and no filter chip stands',
+      await page.locator('#view-korpus button[data-stage][aria-pressed="true"]').count() === 0 &&
+      await resultCount() === corpus.length && await page.locator('#sort-by').inputValue() === 'stage' &&
+      await page.locator('#active-filters').isHidden() && await page.locator('#active-filters button').count() === 0);
+    const subs = await page.$$eval('#stage-bar .stage-sub', (nodes) => nodes.map((n) => ({
+      visible: n.offsetParent !== null && n.getBoundingClientRect().width > 0,
+      border: getComputedStyle(n).borderTopColor, tag: n.tagName, disabled: n.disabled })));
+    check('the davon subsets stand as visible, framed buttons',
+      subs.length === SUB_KEYS.length && subs.every((s) => s.visible && s.tag === 'BUTTON' && s.border !== 'rgba(0, 0, 0, 0)'), JSON.stringify(subs));
+    const rows = await page.$$eval('#papers-grid tr[data-id]', (trs) => trs.map((tr) => ({
+      id: tr.dataset.id, title: tr.querySelector('.row-open').textContent,
+      next: tr.querySelector('.col-next').textContent, reached: tr.querySelector('.st-reached').textContent,
+      author: tr.querySelector('.col-author').innerText.trim(),
+    })));
+    const reachedOf = (p) => claimsOf(p) ? 'in Aussagen' : codedWorks.has(p.work_id) ? 'kodiert'
+      : decisionOf(p) ? { Include: 'eingeschlossen', Exclude: 'ausgeschlossen', Unclear: 'unklar' }[decisionOf(p)]
+        : textOf(p) ? 'mit Text' : 'identifiziert';
+    const badNext = rows.filter((r) => r.next !== nextOf(corpusById[r.id]) || r.reached !== reachedOf(corpusById[r.id]));
+    check('each row names the reached stage and the next step derived from the stage data', rows.length > 0 && badNext.length === 0,
+      JSON.stringify(badNext.slice(0, 3)));
+    check('titles stand in full, authors without the year that has its own column',
+      rows.every((r) => r.title === corpusById[r.id].title) &&
+      rows.every((r) => !/\(\d{4}\)$/.test(r.author)), JSON.stringify(rows.slice(0, 2)));
+
+    // Filter chips: stage, year and category; each removable, then all at once.
+    const chipCat = schema.categories.map((c) => c.key)
+      .find((key) => corpus.some((p) => stageRules.offen(p) && yearOf(p) === '2025' && p.llm.all_categories[key] === 1));
+    await page.locator('#gap-list button[data-stage="offen"]').click();
+    await page.locator('#year-hist .year-col[data-year="2025"]').click();
+    await page.locator(`#category-chips .category-chip[data-cat="${chipCat}"]`).click();
+    const chipLabels = await page.locator('#active-filters .filter-chip').allInnerTexts();
+    const wantN = corpus.filter((p) => stageRules.offen(p) && yearOf(p) === '2025' && p.llm.all_categories[chipCat] === 1).length;
+    check('active filters appear as removable chips with one alle aufheben control',
+      chipLabels.length === 3 && chipLabels[0].startsWith('offen') && chipLabels[1].startsWith('Jahr 2025') &&
+      await page.locator('#active-filters .filter-clear-all').count() === 1 &&
+      (await page.locator('#active-filters .filter-clear-all').innerText()).trim() === 'alle aufheben' && await resultCount() === wantN,
+      JSON.stringify(chipLabels));
+    const resultIds = await page.$$eval('#papers-grid tr[data-id]', (trs) => trs.map((tr) => tr.dataset.id));
+    const presentCats = schema.categories.map((c) => c.key).filter((key) => key === chipCat ||
+      corpus.filter((p) => stageRules.offen(p) && yearOf(p) === '2025' && p.llm.all_categories[chipCat] === 1).some((p) => p.llm.all_categories[key] === 1));
+    const shownCats = await page.$$eval('#category-chips .category-chip', (chips) => chips.map((c) => c.dataset.cat));
+    check('the sidebar offers only the categories that occur in the selection',
+      resultIds.length === wantN && shownCats.sort().join() === presentCats.sort().join(), `${shownCats.join()} / ${presentCats.join()}`);
+    await page.locator('#active-filters .filter-chip[data-clear="year"]').click();
+    check('removing one chip clears only its filter and keeps the focus among the chips',
+      !hashParams().has('year') && hashParams().get('stage') === 'offen' && hashParams().get('cat') === chipCat &&
+      await page.locator('#active-filters .filter-chip').count() === 2 &&
+      await page.evaluate(() => document.activeElement.closest('#active-filters') !== null));
+    await page.locator('#active-filters .filter-clear-all').click();
+    check('alle aufheben clears every filter and hides the chip row',
+      await resultCount() === corpus.length && !hashParams().has('stage') && !hashParams().has('cat') &&
+      await page.locator('#active-filters').isHidden());
+
+    // Detail panel actions on a work with text and on one without; both need the
+    // reading-layer manifest that npm run build writes.
+    if (manifest) {
+      const withText = corpus.find((p) => textOf(p) === true && decisionOf(p) === null);
+      const noText = corpus.find((p) => textOf(p) === false && decisionOf(p) === null);
+      await page.goto(`${base}/index.html#view=korpus&paper=${encodeURIComponent(withText.id)}`, { waitUntil: 'networkidle' });
+      await page.waitForSelector('#paper-modal.active');
+      await page.reload({ waitUntil: 'networkidle' });
+      await page.waitForSelector('#paper-modal.active');
+      const panel = await page.evaluate(() => {
+        const r = (sel) => document.querySelector(sel).getBoundingClientRect();
+        return { main: r('.korpus-main'), detail: r('#paper-modal'), table: r('.papers-table'),
+          actions: [...document.querySelectorAll('#modal-body .detail-actions a, #modal-body .detail-actions button')]
+            .map((a) => [a.textContent, a.getAttribute('href') || a.dataset.action]),
+          llm: [...document.querySelectorAll('#modal-body .panel-header')].some((n) => n.textContent.startsWith('LLM')),
+          title: document.getElementById('modal-title').textContent };
+      });
+      const actionOf = (list, label) => (list.find(([text]) => text === label) || [])[1];
+      check('a selected work survives reload and its panel stands right of the list at 1280 px',
+        panel.title === withText.title && panel.detail.left >= panel.main.right && panel.table.right <= panel.main.right + 1 &&
+      hashParams().get('paper') === withText.id, JSON.stringify(panel));
+      check('the panel links the work into PRISM and to its full text, without a Beschaffung action',
+        actionOf(panel.actions, 'In PRISM öffnen') === `prisma.html?paper=${encodeURIComponent(withText.id)}` &&
+        actionOf(panel.actions, 'Volltext lesen') === 'read-fulltext' &&
+        !actionOf(panel.actions, 'Beschaffung'), JSON.stringify(panel.actions));
+      check('an open work shows no AI pre-assessment in its panel', !panel.llm);
+      // The reading layer is Markdown, which a browser downloads, so the panel shows it itself.
+      const diskText = readFileSync(resolve(docs, 'data', 'fulltext', `${withText.id}.md`), 'utf8');
+      await page.locator('#modal-body .detail-action', { hasText: 'Volltext lesen' }).click();
+      await page.waitForFunction(() => !document.getElementById('dtab-volltext').textContent.startsWith('Volltext lädt'));
+      check('Volltext lesen shows the reading-layer text in the panel and moves focus to it',
+        await page.locator('#dtab-volltext').isVisible() && await page.locator('#dtab-volltext').textContent() === diskText &&
+        await page.evaluate(() => document.activeElement.id === 'dtab-volltext'));
+      await page.goto(`${base}/index.html#view=korpus&paper=${encodeURIComponent(noText.id)}`, { waitUntil: 'networkidle' });
+      await page.waitForSelector('#paper-modal.active');
+      const noTextActions = await page.$$eval('#modal-body .detail-actions a, #modal-body .detail-actions button',
+        (as) => as.map((a) => [a.textContent, a.getAttribute('href') || a.dataset.action]));
+      check('a work without full text offers Beschaffung instead of Volltext lesen',
+        !actionOf(noTextActions, 'Volltext lesen') && /stage=ohne-text/.test(actionOf(noTextActions, 'Beschaffung') || ''), JSON.stringify(noTextActions));
+      await page.locator('#modal-body .detail-action', { hasText: 'Beschaffung' }).click();
+      await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('stage') === 'ohne-text');
+      await page.waitForTimeout(100);
+      check('Beschaffung opens the acquisition work list and keeps the work selected',
+        await page.locator('#gap-list button[data-stage="ohne-text"]').getAttribute('aria-pressed') === 'true' &&
+        hashParams().get('paper') === noText.id && await page.locator('#paper-modal').isVisible());
+      await page.setViewportSize({ width: 390, height: 844 });
+      await page.waitForTimeout(150);
+      check('at 390 px the panel stacks below the list', await page.evaluate(() =>
+        document.getElementById('paper-modal').getBoundingClientRect().top >= document.querySelector('.korpus-main').getBoundingClientRect().bottom &&
+        document.documentElement.scrollWidth <= window.innerWidth + 1));
+      await page.setViewportSize({ width: 1440, height: 900 });
+    }
+  }
 
   await page.locator('#tab-korpus').focus();
   const tipId = await page.locator('#tab-korpus').getAttribute('aria-describedby');
