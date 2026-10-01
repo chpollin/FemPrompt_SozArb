@@ -1,9 +1,9 @@
 {
   "schema": "femprompt-assertion-index/0.1",
   "meta": {
-    "source_assertions": 16,
+    "source_assertions": 72,
     "published_assertions": 4,
-    "withheld_assertions": 12,
+    "withheld_assertions": 68,
     "allowed_states": [
       "ai-agent-reviewed",
       "verified",

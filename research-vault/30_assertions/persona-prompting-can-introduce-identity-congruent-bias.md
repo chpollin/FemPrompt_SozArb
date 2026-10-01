@@ -1,0 +1,46 @@
+---
+type: assertion
+assertion-id: persona-prompting-can-introduce-identity-congruent-bias
+topics:
+- '[[Prompting and Bias Mitigation]]'
+status: grounded
+checked:
+  validation: '2026-10-01'
+grounding:
+- '[[20_distillates/publications/persistent-outgroup-bias-personas#^s1]]'
+- '[[20_distillates/publications/persona-motivated-reasoning#^s1]]'
+contested-with: []
+research-questions:
+- SQ3
+- SQ4
+intended-output:
+- literature-report
+created: '2026-10-01'
+updated: '2026-10-01'
+prepared-by:
+  agent-id: claude-code-subagent/sq4-competences
+  model: Claude Opus 5.5 (claude-opus-5-5)
+  prepared-at: '2026-10-01'
+  task-context: SQ4 best-fit framework synthesis draft. Wording derived from the cited active distillate statements; no historical screening tracks or advisory SQ outputs used as evidence.
+  artifact-review-status: pending; no AI Agent Review or domain-expert verification has occurred
+---
+
+# Persona prompting can introduce identity-congruent bias
+
+## Statement
+
+Two experiments report that assigning a social-identity persona to an LLM can introduce identity-congruent bias, measured as outgroup bias in one study and as reduced veracity discernment in the other.
+
+## Support
+
+- [[20_distillates/publications/persistent-outgroup-bias-personas#^s1]]. The study measures ingroup favouritism and negative treatment of outgroups under persona prompts.
+- [[20_distillates/publications/persona-motivated-reasoning#^s1]]. The study measures identity-congruent errors and reports reduced veracity discernment after persona assignment.
+
+## Scope boundary
+
+The experiments cover political, gender and sociodemographic personas, English, United States contexts, selected models and binary gender categories. Neither study concerns social-work tasks. The Assertion concerns social-identity personas and makes no claim about professional role prompts.
+
+## Related
+
+- [[30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories]]
+- [[30_assertions/xiao-et-al-find-no-fair-prompting-strategy-effective-in-every-tested-scenario]]
