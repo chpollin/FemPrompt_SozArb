@@ -261,4 +261,6 @@ EC.registerView('methode', {
 });
 
 EC.questions = QUESTIONS;
+// The start view of docs/index.html labels each question card with its findings.
+EC.findingsFor = function (id) { return model && question(String(id)) ? findingsFor(question(String(id))) : []; };
 })();

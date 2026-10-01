@@ -44,7 +44,15 @@ function isJoint(axes) {
     return axes.every(function (axis) { return !isStatusKey(axis.key) && !model.dim(axis.dimId).workLevel; });
 }
 
+// A category of a category-group axis is set as a category chip.
+function chipOf(dimId, key, level) {
+    const category = model.dim(dimId).kind === 'group' && !isStatusKey(key) ? model.category(key) : null;
+    return category ? EC.categoryChip(category, { small: true, level: level }) : '';
+}
+
 function headerHtml(dimId, key) {
+    const chip = chipOf(dimId, key);
+    if (chip) return chip;
     if (!isStatusKey(key) || !statusKeyGlyph(key)) return EC.esc(keyLabel(dimId, key));
     return EC.esc(statusKeyText(key)) + ' <span class="mark-glyph" aria-hidden="true">' + EC.esc(statusKeyGlyph(key)) + '</span>';
 }
@@ -195,7 +203,7 @@ function evidenceBlocks(work, dimId, key) {
     // Only quotations are evidence. Correction reasons are agent rationale and stay on
     // the Werk page; record keys stay in its collapsed review record.
     return model.evidenceFor(work, dimId, key).filter(function (item) { return item.kind === 'quote'; }).map(function (item) {
-        return '<figure class="evidence"><figcaption class="evidence-code">' + EC.esc(dim.valueLabel(key)) +
+        return '<figure class="evidence"><figcaption class="evidence-code">' + (chipOf(dimId, key, item.level) || EC.esc(dim.valueLabel(key))) +
             (LEVEL_LABELS[item.level] ? ' · ' + LEVEL_LABELS[item.level] : '') + '</figcaption>' +
             '<blockquote class="evidence-quote">' + EC.highlight(item.text, item.term) + '</blockquote>' +
             '<p class="evidence-locator">' + EC.esc(TEXT_SOURCE_LABELS[item.textSource] || 'Textgrundlage offen') + '</p></figure>';
@@ -207,9 +215,11 @@ function cellCodes(work, axes) {
     return '<dl class="code-list code-list--compact">' + axes.map(function (axis) {
         const dim = model.dim(axis.dimId);
         const state = model.stateOf(work, axis.dimId);
-        const text = state.state === 'value' ? state.values.map(dim.valueLabel).join(', ')
-            : statusKeyText(model.keysOf(work, axis.dimId)[0]);
-        return '<div class="code-row"><dt>' + EC.esc(dim.label) + '</dt><dd>' + EC.esc(text) + '</dd></div>';
+        const text = state.state === 'value'
+            ? (dim.kind === 'group' ? state.values.map(function (key) { return chipOf(axis.dimId, key); }).join(' ')
+                : EC.esc(state.values.map(dim.valueLabel).join(', ')))
+            : EC.esc(statusKeyText(model.keysOf(work, axis.dimId)[0]));
+        return '<div class="code-row"><dt>' + EC.esc(dim.label) + '</dt><dd>' + text + '</dd></div>';
     }).join('') + '</dl>';
 }
 

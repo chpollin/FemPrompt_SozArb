@@ -24,6 +24,9 @@ FONTS_PRISMA = ""
 
 FONT_AWESOME = '<link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">'
 
+# The tooltips of the shared header navigation, keyed by each item's data-tip-key.
+NAV_TIPS = '<script defer src="js/nav-tips.js"></script>'
+
 
 def favicon(letter: str, size: int) -> str:
     return (
@@ -70,6 +73,7 @@ def head(
         parts.append(fonts)
     if scripts:
         parts.append(scripts)
+    parts.append(NAV_TIPS)
     parts.append(FONT_AWESOME)
     parts.append('<link rel="stylesheet" href="css/tokens.css">')
     parts.append('<link rel="stylesheet" href="css/research.css">')
@@ -103,7 +107,7 @@ def subpage_header(active: str, extra: str = "") -> str:
     links = ""
     for href, label, key in NAV_LINKS:
         cls = "nav-link nav-link-active" if key == active else "nav-link"
-        links += f'\n                    <a href="{href}" class="{cls}">{label}</a>'
+        links += f'\n                    <a href="{href}" class="{cls}" data-tip-key="{key}">{label}</a>'
         if key == "prisma":
             onboarding_cls = "nav-link nav-link-active" if active == "onboarding" else "nav-link"
             links += (
@@ -123,15 +127,15 @@ def subpage_header(active: str, extra: str = "") -> str:
                     {brand}
                 </div>
                 <nav class="header-nav" aria-label="Hauptnavigation">
-                    <a href="index.html#chat" class="nav-link">Wissens-Chat</a>
-                    <a href="index.html#wissensnetz" class="nav-link">Wissensnetz</a>
-                    <a href="index.html#literaturbild" class="nav-link">Literaturbild</a>
-                    <a href="index.html#vergleich" class="nav-link">Kategorien</a>
-                    <a href="index.html#korpus" class="nav-link">Korpus</a>
+                    <a href="index.html#chat" class="nav-link" data-tip-key="chat">Wissens-Chat</a>
+                    <a href="index.html#wissensnetz" class="nav-link" data-tip-key="wissensnetz">Wissensnetz</a>
+                    <a href="index.html#literaturbild" class="nav-link" data-tip-key="literaturbild">Literaturbild</a>
+                    <a href="index.html#vergleich" class="nav-link" data-tip-key="vergleich">Kategorien</a>
+                    <a href="index.html#korpus" class="nav-link" data-tip-key="korpus">Korpus</a>
                     <span class="nav-sep"></span>{links}
                     <span class="nav-sep"></span>
-                    <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
-                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="Paper-Wissenssammlung (.zip)"><i class="fas fa-download"></i></a>
+                    <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener" aria-label="Repository" data-tip-key="repo"><i class="fas fa-code-branch" aria-hidden="true"></i></a>
+                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" aria-label="Paper-Wissenssammlung (.zip)" data-tip-key="download"><i class="fas fa-download" aria-hidden="true"></i></a>
                 </nav>
             </div>{extra_block}
         </div>

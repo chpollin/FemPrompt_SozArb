@@ -26,8 +26,8 @@ window.initializeKategorien = function() {
     // One delegated listener per stable container instead of rebinding on every
     // detail render.
     document.getElementById('kategorie-spektrum').addEventListener('click', function(e) {
-        const card = e.target.closest('.kategorie-card');
-        if (card) selectCategory(card.dataset.cat);
+        const chip = e.target.closest('.category-chip');
+        if (chip) selectCategory(chip.dataset.cat);
     });
     document.getElementById('kategorie-detail').addEventListener('click', function(e) {
         const paper = e.target.closest('.kdetail-paper');
@@ -51,37 +51,26 @@ function renderSpektrum() {
     if (!container) return;
 
     const kappas = EC.getKappas();
-    let html = '<p class="spektrum-intro">10 Kategorien, zwei Perspektiven -- waehlen Sie eine Kategorie, um die Divergenz zwischen LLM und Expert:innen zu explorieren.</p>';
-
-    html += '<div class="spektrum-groups">';
-    html += '<span class="spektrum-group-label">Gegenstand</span>';
-    html += '<span class="spektrum-group-label" style="text-align:right;">Perspektive</span>';
-    html += '</div>';
-
-    html += '<div class="spektrum-cards">';
-    EC.CATEGORIES.forEach(function(cat) {
+    // One single-select chip per category, grouped Gegenstand | Perspektive like the
+    // Korpus filter, each with its rate difference between LLM and Expert:innen.
+    const keys = EC.CATEGORIES.filter(function(cat) { return kappas[cat]; });
+    const html = '<p class="category-chips">' + EC.categoryChipRow(keys.map(function(cat) {
         const d = kappas[cat];
-        if (!d) return;
-        const color = EC.CAT_COLORS[cat] || '#999';
         const diff = d.agent_yes_rate - d.human_yes_rate;
-        const diffLabel = (diff > 0 ? '+' : '') + Math.round(diff) + 'pp';
         const direction = Math.abs(diff) < 5 ? 'neutral' : diff > 0 ? 'llm-more' : 'human-more';
-
-        html += '<button class="kategorie-card" data-cat="' + cat + '" style="--cat-color:' + color + ';">';
-        html += '<span class="kcard-color" style="background:' + color + ';"></span>';
-        html += '<span class="kcard-name">' + label(cat) + '</span>';
-        html += '<span class="kcard-diff ' + direction + '">' + diffLabel + '</span>';
-        html += '</button>';
-    });
-    html += '</div>';
+        return {
+            category: { key: cat, label: label(cat), color: EC.CAT_COLORS[cat] },
+            options: { pressed: cat === activeCategory, extra: ' <span class="kcard-diff ' + direction + '">' + (diff > 0 ? '+' : '') + Math.round(diff) + 'pp</span>' },
+        };
+    }), EC.categoryGroups()) + '</p>';
 
     container.innerHTML = html;
 }
 
 function selectCategory(cat) {
     activeCategory = cat;
-    document.querySelectorAll('.kategorie-card').forEach(function(btn) {
-        btn.classList.toggle('active', btn.dataset.cat === cat);
+    document.querySelectorAll('#kategorie-spektrum .category-chip').forEach(function(btn) {
+        btn.setAttribute('aria-pressed', String(btn.dataset.cat === cat));
     });
     renderDetail(cat);
 }

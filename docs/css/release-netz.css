@@ -81,6 +81,10 @@
     min-inline-size: 46rem;
 }
 
+/* On narrow screens the whole figure scales into the column, so no label is cut off at
+   the edge of a scroll region; the table above it carries the readable equivalent. */
+@media (max-width: 40rem) { .netz-graph { min-inline-size: 0; } }
+
 .netz-graph text { font-family: var(--font-body); }
 
 .netz-label { font-size: 13px; fill: var(--gray-900); }
@@ -204,7 +208,8 @@ rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
 .netz-list button[aria-pressed="true"] { background: var(--gray-800); border-color: var(--gray-800); color: var(--gray-50); }
 
 @container (inline-size < 34rem) {
+    .netz-list { font-size: var(--text-sm); hyphens: auto; }
     .netz-list th,
     .netz-list td { padding-inline: var(--space-xs); }
-    .netz-list button { padding-inline: var(--space-xs); }
+    .netz-list button { padding-inline: var(--space-xs); white-space: normal; }
 }

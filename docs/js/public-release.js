@@ -96,6 +96,39 @@ function agentRole(agentId) {
 }
 
 // The stored term can be cut mid-word; the mark is widened to whole words.
+// Category chips share one markup across the Korpus filter, the Kategorien view, the
+// matrix, the work lists and the Werk page; the canonical look lives in research.css
+// under "Category chip (shared)". category is { key, label, color }. A chip is a
+// toggle button when options.pressed is a boolean and a static label otherwise.
+const CHIP_GROUP_LABELS = { object: 'Gegenstand', perspective: 'Perspektive' };
+const CHIP_LEVEL_LABELS = { 1: 'teilweise', 2: 'ja' };
+
+function categoryChip(category, options) {
+    const opts = options || {};
+    const toggle = typeof opts.pressed === 'boolean';
+    const level = CHIP_LEVEL_LABELS[opts.level] === 'teilweise' ? ' data-level="teilweise"' : '';
+    const attrs = ' class="category-chip' + (opts.small ? ' category-chip--sm' : '') + '"' +
+        (toggle ? ' type="button" aria-pressed="' + opts.pressed + '"' : '') +
+        ' data-cat="' + esc(category.key) + '"' + level + ' style="--chip-color:' + esc(category.color || 'var(--gray-500)') + '"';
+    const body = '<span class="chip-dot" aria-hidden="true"></span>' + esc(category.label || category.key) +
+        (level ? '<span class="sr-only">, teilweise</span>' : '') + (opts.extra || '');
+    return toggle ? '<button' + attrs + '>' + body + '</button>' : '<span' + attrs + '>' + body + '</span>';
+}
+
+// items: [{ category, options }] in any order; groups: the schema's group map
+// ({ object: [...keys], perspective: [...keys] }). Items are grouped and ordered as the
+// schema lists them, each group under its label, groups divided by a separator.
+function categoryChipRow(items, groups) {
+    const byKey = {};
+    items.forEach(function (item) { byKey[item.category.key] = item; });
+    return Object.keys(groups || {}).map(function (group) {
+        const chips = groups[group].filter(function (key) { return byKey[key]; }).map(function (key) {
+            return categoryChip(byKey[key].category, byKey[key].options);
+        });
+        return chips.length ? '<span class="chip-group-label">' + esc(CHIP_GROUP_LABELS[group] || group) + '</span>' + chips.join('') : '';
+    }).filter(Boolean).join('<span class="chip-group-sep" aria-hidden="true"></span>');
+}
+
 function highlight(text, term) {
     const body = String(text || '');
     const needle = String(term || '').trim();
@@ -252,6 +285,7 @@ Object.assign(EC, {
     statusMark: statusMark, workCount: workCount, versionLabel: versionLabel, highlight: highlight,
     germanDate: germanDate, agentRole: agentRole, screeningLabel: screeningLabel,
     renderAssertion: renderAssertion, registerView: registerView,
+    categoryChip: categoryChip, categoryChipRow: categoryChipRow,
 });
 // A host keeps its own escaping helper and lets the grounded chat open its own paper view.
 if (!host) {

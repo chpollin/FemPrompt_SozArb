@@ -1,35 +1,45 @@
-/* Start view of the working Companion: one coverage sentence above the question cards.
-   The sentence reads the pipeline coverage contract (knowledge/data.md, Analysis field
-   states and coverage) so it names the included works, not only the released ones. */
+/* Start view of the working Companion: the status sentence under the main question and
+   the finding line of each question card. Both read the release model that research-app
+   loads, so the coverage figures follow the pipeline coverage contract (knowledge/data.md,
+   Analysis field states and coverage) and the findings follow the same assignment as the
+   answer pages. Without the model both stay empty rather than show a wrong figure. */
 (function () {
     'use strict';
 
-    function codedOf(entry) {
-        return entry.value + entry.none + entry.undecidable;
+    const EC = window.EC = window.EC || {};
+
+    function statusSentence(model) {
+        const fields = model.dims.filter(function (dim) { return dim.id.indexOf('AN_') === 0; })
+            .map(function (dim) { return dim.id; });
+        if (!fields.length) return '';
+        const summary = model.codedSummary(model.includes, fields, true);
+        const scope = summary.source === 'pipeline' ? ' eingeschlossenen Werken codiert'
+            : ' veröffentlichten eingeschlossenen Werken codiert';
+        const verified = model.includes.filter(function (work) { return work.status === 'verified'; }).length;
+        return 'Vorläufig: ' + summary.coded + ' von ' + summary.total + scope + ', ' +
+            (verified ? 'davon ' + verified + ' fachlich verifiziert.' : 'keines fachlich verifiziert.');
     }
 
-    function render(landscape) {
-        const target = document.getElementById('start-status');
-        if (!target) return;
-        const coverage = landscape.meta && landscape.meta.analysis_coverage;
-        if (!coverage || !coverage.scope || !coverage.fields) return;
-        const fields = Object.keys(coverage.fields)
-            .filter(function (name) { return name.indexOf('AN_') === 0; })
-            .map(function (name) { return coverage.fields[name]; });
-        if (!fields.length) return;
-        const coded = Math.min.apply(null, fields.map(codedOf));
-        const verified = (landscape.records || []).filter(function (record) {
-            return record.lifecycle_state === 'verified' || record.lifecycle_state === 'publication-approved';
+    // Reviewed and verified findings are named apart, so an AI source review never reads as verification.
+    function findingLine(findings) {
+        if (!findings.length) return 'noch kein geprüfter Befund';
+        const verified = findings.filter(function (item) {
+            return item.status === 'verified' || item.status === 'publication-approved';
         }).length;
-        target.textContent = 'Vorläufiger Stand: ' + coded + ' von ' + coverage.scope.work_total +
-            ' eingeschlossenen Werken sind codiert und KI-quellengeprüft, ' +
-            (verified ? verified + ' davon fachlich verifiziert.' : 'noch keines ist fachlich verifiziert.');
+        const reviewed = findings.length - verified;
+        const parts = [];
+        if (reviewed) parts.push(reviewed + (reviewed === 1 ? ' KI-geprüfter Befund' : ' KI-geprüfte Befunde'));
+        if (verified) parts.push(verified + (verified === 1 ? ' fachlich verifizierter Befund' : ' fachlich verifizierte Befunde'));
+        return parts.join(' · ');
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        fetch('data/literature_landscape.json')
-            .then(function (response) { return response.ok ? response.json() : null; })
-            .then(function (data) { if (data) render(data); })
-            .catch(function () { /* the sentence stays empty rather than showing a wrong figure */ });
-    });
+    EC.renderStart = function (model) {
+        const status = document.getElementById('start-status');
+        if (status) status.textContent = statusSentence(model);
+        if (!EC.findingsFor) return;
+        document.querySelectorAll('#view-start .start-card[data-sq]').forEach(function (card) {
+            const line = card.querySelector('.start-card-status');
+            if (line) line.textContent = findingLine(EC.findingsFor(card.dataset.sq));
+        });
+    };
 })();

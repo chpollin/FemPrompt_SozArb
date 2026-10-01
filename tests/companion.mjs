@@ -57,7 +57,7 @@ function inject(rel) {
   el.textContent = readFileSync(join(root, rel), 'utf8');
   window.document.body.appendChild(el);
 }
-[...readFileSync(join(docs, 'index.html'), 'utf8').matchAll(/<script src="(js\/[^"]+)"><\/script>/g)]
+[...readFileSync(join(docs, 'index.html'), 'utf8').matchAll(/<script (?:defer )?src="(js\/[^"]+)"><\/script>/g)]
   .map((match) => 'docs/' + match[1]).forEach(inject);
 
 // research-app initializes on DOMContentLoaded. jsdom fires that event once after
@@ -125,16 +125,25 @@ await check('EC helpers behave', async () => {
 });
 
 await check('category chip toggles active (delegation)', async () => {
-  const chip = doc.querySelector('.category-chip[data-cat]');
+  const chip = doc.querySelector('#category-chips .category-chip[data-cat]');
   if (!chip) throw new Error('no category chip');
   chip.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
-  await waitFor(() => doc.querySelector('.category-chip.active') !== null, 'chip active');
+  await waitFor(() => doc.querySelector('#category-chips .category-chip[aria-pressed="true"]') !== null, 'chip active');
+});
+
+await check('category chips share one grouped markup', async () => {
+  const labels = [...doc.querySelectorAll('#category-chips .chip-group-label')].map((n) => n.textContent);
+  if (labels.join('|') !== 'Gegenstand|Perspektive') throw new Error(labels.join('|'));
+  const chips = [...doc.querySelectorAll('#category-chips .category-chip')];
+  if (chips.some((c) => !c.style.getPropertyValue('--chip-color') || !c.hasAttribute('aria-pressed') || c.querySelector('.chip-dot[style]'))) {
+    throw new Error('chip markup deviates from the shared contract');
+  }
 });
 
 await check('category explorer initializes on view switch', async () => {
   window.switchView('vergleich');
-  await waitFor(() => doc.querySelectorAll('#kategorie-spektrum .kategorie-card').length > 0, 'spektrum cards');
-  const card = doc.querySelector('.kategorie-card[data-cat]');
+  await waitFor(() => doc.querySelectorAll('#kategorie-spektrum .category-chip').length > 0, 'spektrum cards');
+  const card = doc.querySelector('#kategorie-spektrum .category-chip[data-cat]');
   card.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
   await waitFor(() => doc.querySelector('#kategorie-detail .kdetail-header') !== null, 'detail rendered');
 });
@@ -148,6 +157,35 @@ await check('one router: only research-app listens to hashchange', async () => {
 await check('start cards open the answer pages', async () => {
   const hrefs = [...doc.querySelectorAll('#view-start .start-card')].map((a) => a.getAttribute('href'));
   if (hrefs.join(' ') !== '#view=frage&sq=1 #view=frage&sq=2 #view=frage&sq=3 #view=frage&sq=4') throw new Error(hrefs.join(' '));
+});
+
+await check('start view states coverage and each question card its findings', async () => {
+  await waitFor(() => doc.getElementById('start-status').textContent !== '', 'status sentence');
+  const cov = literatureLandscape.meta.analysis_coverage;
+  const coded = Math.min(...Object.entries(cov.fields).filter(([k]) => k.startsWith('AN_')).map(([, f]) => f.value + f.none + f.undecidable));
+  const expected = `Vorläufig: ${coded} von ${cov.scope.work_total} eingeschlossenen Werken codiert, `;
+  if (!doc.getElementById('start-status').textContent.startsWith(expected)) throw new Error(doc.getElementById('start-status').textContent);
+  if (doc.querySelector('#view-start .start-btn, #view-start .start-actions')) throw new Error('duplicate nav buttons remain');
+  const lines = [...doc.querySelectorAll('#view-start .start-card-status')].map((n) => n.textContent);
+  if (lines.length !== 4 || lines.some((t) => !/^(\d+ KI-geprüfte?r? Befunde?|noch kein geprüfter Befund)/.test(t))) throw new Error(lines.join(' | '));
+  const assertions = JSON.parse(readFileSync(join(root, dataFiles['data/assertion_index.json']), 'utf8')).assertions;
+  const forSq1 = assertions.filter((a) => (a.research_questions || []).includes('SQ1')).length;
+  if (forSq1 && !lines[0].startsWith(forSq1 + ' ')) throw new Error('SQ1 count ' + lines[0]);
+});
+
+await check('nav tooltips show on focus, describe the item and hide on Escape', async () => {
+  const items = [...doc.querySelectorAll('.header-nav a, .header-nav button')];
+  if (!items.length || items.some((item) => !item.dataset.tipKey)) throw new Error('nav item without tip key');
+  const button = doc.getElementById('tab-korpus');
+  const tip = doc.getElementById(button.getAttribute('aria-describedby'));
+  if (!tip || tip.getAttribute('role') !== 'tooltip' || !tip.textContent) throw new Error('no described tooltip');
+  if (/\d/.test(tip.textContent)) throw new Error('tooltip carries a count');
+  button.dispatchEvent(new window.FocusEvent('focus'));
+  if (tip.hidden) throw new Error('tooltip hidden on focus');
+  doc.dispatchEvent(new window.KeyboardEvent('keydown', { key: 'Escape' }));
+  if (!tip.hidden) throw new Error('Escape did not hide');
+  const repo = doc.querySelector('.header-nav a[data-tip-key="repo"]');
+  if (!repo.getAttribute('aria-label')) throw new Error('repo icon has no accessible name');
 });
 
 await check('Literaturbild shows the joint-coding matrix under its denominators', async () => {
@@ -254,8 +292,8 @@ await check('URL hash restores view, filter, category and paper', async () => {
   setHash('#view=korpus&dec=Include&cat=Gender&paper=' + encodeURIComponent(p0.id));
   await waitFor(() => EC.store.get().view === 'korpus' && EC.store.get().paper === p0.id, 'store restored');
   if (doc.getElementById('filter-decision').value !== 'Include') throw new Error('decision filter not applied');
-  const genderChip = doc.querySelector('.category-chip[data-cat="Gender"]');
-  if (!genderChip || !genderChip.classList.contains('active')) throw new Error('Gender chip not active');
+  const genderChip = doc.querySelector('#category-chips .category-chip[data-cat="Gender"]');
+  if (!genderChip || genderChip.getAttribute('aria-pressed') !== 'true') throw new Error('Gender chip not active');
   if (!doc.getElementById('view-korpus').classList.contains('active')) throw new Error('korpus view not active');
   if (!doc.getElementById('paper-modal').classList.contains('active')) throw new Error('paper modal not open');
   if (doc.getElementById('modal-title').textContent !== p0.title) throw new Error('wrong paper restored');
@@ -299,7 +337,7 @@ await check('unknown cat= is ignored, corpus stays populated', async () => {
   await waitFor(() => EC.store.get().view === 'korpus' && EC.store.get().cat.length === 0, 'restored');
   if (EC.store.get().cat.length !== 0) throw new Error('bogus cat kept in store: ' + EC.store.get().cat);
   if (doc.querySelectorAll('#papers-grid tr[data-idx]').length === 0) throw new Error('corpus emptied by a bogus cat');
-  if (doc.querySelector('.category-chip.active')) throw new Error('a chip is active for a bogus cat');
+  if (doc.querySelector('#category-chips .category-chip[aria-pressed="true"]')) throw new Error('a chip is active for a bogus cat');
 });
 
 // URL state: a stale/unknown paper id is cleaned out of both store and hash, not left

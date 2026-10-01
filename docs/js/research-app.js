@@ -9,6 +9,7 @@
 const CATEGORIES = [];
 const CAT_COLORS = {};
 const CATEGORY_LABELS = {};
+let categoryGroups = {}; // schema group map, the order of the Gegenstand and Perspektive chip groups
 
 function escapeHtml(text) {
     if (!text) return '';
@@ -20,6 +21,14 @@ function escapeHtml(text) {
 // Human-readable category label from the underscore key.
 function catLabel(cat) {
     return CATEGORY_LABELS[cat] || String(cat || '').replace(/_/g, ' ');
+}
+
+// The shared category chip row (EC.categoryChipRow from public-release.js) over the
+// given keys; options(key) returns the chip options of one key.
+function categoryChips(keys, options) {
+    return window.EC.categoryChipRow(keys.map(function(key) {
+        return { category: { key: key, label: catLabel(key), color: CAT_COLORS[key] }, options: options ? options(key) : {} };
+    }), categoryGroups);
 }
 
 function normalizeSearch(text) {
@@ -124,6 +133,7 @@ window.EC = {
     download: download,
     paperStatus: paperStatus,
     CAT_COLORS: CAT_COLORS,
+    categoryGroups: function() { return categoryGroups; },
     CATEGORIES: CATEGORIES,
     // Central store (subscribe/set/get) holding the URL-serialized view state
     store: store,
@@ -190,9 +200,9 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeUI();
         renderCategoryChips();
         logInit();
-        initRichTooltips();
         // Chat is the default tab; initialize it up front.
         if (window.initWissensChat) window.initWissensChat();
+        if (releaseState === 'ready' && window.EC.renderStart) window.EC.renderStart(window.EC.model);
         // The hash carries view, corpus filters and selected paper. Restoring it
         // renders the table, so the standalone applyFilters is folded into this.
         initUrlState();
@@ -235,6 +245,7 @@ function loadData() {
             CAT_COLORS[category.key] = category.color;
             CATEGORY_LABELS[category.key] = category.label;
         });
+        categoryGroups = categorySchema.groups || {};
         allPapers = data.papers;
         vaultMeta = data.meta;
         kappas = data.kappa_by_category;
@@ -417,23 +428,7 @@ function initializeUI() {
 
 function renderCategoryChips() {
     let container = document.getElementById('category-chips');
-    const technik = CATEGORIES.slice(0, 4);
-    const sozial = CATEGORIES.slice(4);
-
-    function chipHtml(cat) {
-        const label = catLabel(cat);
-        let color = CAT_COLORS[cat];
-        return '<button class="category-chip" data-cat="' + cat + '">' +
-            '<span class="chip-dot" style="background:' + color + '"></span>' + label +
-        '</button>';
-    }
-
-    container.innerHTML =
-        '<span class="chip-group-label">Gegenstand</span>' +
-        technik.map(chipHtml).join('') +
-        '<span class="chip-group-sep"></span>' +
-        '<span class="chip-group-label">Perspektive</span>' +
-        sozial.map(chipHtml).join('');
+    container.innerHTML = categoryChips(CATEGORIES, function(cat) { return { pressed: activeCategories.has(cat) }; });
 
     container.addEventListener('click', function(e) {
         const chip = e.target.closest('.category-chip');
@@ -445,7 +440,7 @@ function renderCategoryChips() {
             activeCategories.add(cat);
         }
         container.querySelectorAll('.category-chip').forEach(function(c) {
-            c.classList.toggle('active', activeCategories.has(c.dataset.cat));
+            c.setAttribute('aria-pressed', String(activeCategories.has(c.dataset.cat)));
         });
         applyFilters();
     });
@@ -724,96 +719,6 @@ function setupDropdownNav() {
     });
 }
 
-// Rich Tooltips (data-driven, HTML content)
-
-function initRichTooltips() {
-    // Create tooltip container
-    const tip = document.createElement('div');
-    tip.className = 'rich-tooltip';
-    tip.style.display = 'none';
-    document.body.appendChild(tip);
-
-    // Build tooltip content from real data
-    const tipContent = buildTooltipContent();
-
-    // Attach to all .has-tip elements
-    document.querySelectorAll('.has-tip').forEach(function(el) {
-        let key = el.dataset.tipKey;
-        if (!key) return;
-
-        el.addEventListener('mouseenter', function(e) {
-            let html = tipContent[key];
-            if (!html) return;
-            tip.innerHTML = html;
-            tip.style.display = 'block';
-            positionTooltip(tip, el);
-        });
-
-        el.addEventListener('mouseleave', function() {
-            tip.style.display = 'none';
-        });
-    });
-}
-
-function positionTooltip(tip, anchor) {
-    const rect = anchor.getBoundingClientRect();
-    const tipRect = tip.getBoundingClientRect();
-    let left = rect.left + rect.width / 2 - tipRect.width / 2;
-    let top = rect.bottom + 10;
-
-    // Keep within viewport
-    if (left < 8) left = 8;
-    if (left + tipRect.width > window.innerWidth - 8) left = window.innerWidth - tipRect.width - 8;
-    if (top + tipRect.height > window.innerHeight - 8) top = rect.top - tipRect.height - 10;
-
-    tip.style.left = left + 'px';
-    tip.style.top = top + window.scrollY + 'px';
-}
-
-function buildTooltipContent() {
-    let papers = allPapers;
-
-    // Single pass over the corpus for the aggregates the view tooltips need.
-    let total = papers.length;
-    let withDecision = 0, llmInclude = 0;
-    papers.forEach(function(p) {
-        if (p.llm && p.llm.decision === 'Include') llmInclude++;
-        if (p.human && p.human.decision) withDecision++;
-    });
-
-    // --- Nav buttons ---
-    const tipChat = '<div class="tip-title">Wissens-Chat</div>' +
-        '<div class="tip-text">Fragen Sie das synthetisierte Wissen. Ein LLM (Gemini 3 Flash) antwortet mit Inline-Zitationen, die direkt zum Korpus verlinken.</div>' +
-        '<div class="tip-text tip-muted">Zweifach LLM-vermittelt: Wissensextraktion + Antwortgenerierung.</div>';
-
-    const tipNetz = '<div class="tip-title">Wissensnetz</div>' +
-        '<div class="tip-text">Begriffe des Codebuchs, die mit einem gewählten Begriff in denselben Werken codiert sind. ' +
-        'Eine Verbindung zählt Werke und behauptet keine Beziehung.</div>';
-
-    const tipVergleich = '<div class="tip-title">Kategorien-Explorer</div>' +
-        '<div class="tip-text">10 Kategorien als interaktives Spektrum. Waehlen Sie eine Kategorie, um Human- und LLM-Raten, Divergenz-Papers und Konzepte zu explorieren.</div>' +
-        '<div class="tip-text tip-muted">Die Raten je Kategorie weichen unterschiedlich stark ab; die Auswahl zeigt Richtung und Ausmass pro Kategorie.</div>';
-
-    const tipLiteraturbild = '<div class="tip-title">Literaturbild</div>' +
-        '<div class="tip-text">Kreuzt zwei codierte Dimensionen der eingeschlossenen Werke. Jede Zelle führt zu ihren Werken mit Codes und Belegstellen.</div>';
-
-    const tipKorpus = '<div class="tip-title">Korpus</div>' +
-        '<div class="tip-grid">' +
-            '<div class="tip-stat"><span class="tip-stat-val">' + total + '</span><span class="tip-stat-lbl">Papers</span></div>' +
-            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--success)">' + llmInclude + '</span><span class="tip-stat-lbl">LLM Include</span></div>' +
-            '<div class="tip-stat"><span class="tip-stat-val">' + withDecision + '</span><span class="tip-stat-lbl">Human bewertet</span></div>' +
-        '</div>' +
-        '<div class="tip-text">Durchsuchbar, filterbar, sortierbar. Detail-Panel mit Assessment-Vergleich.</div>';
-
-    return {
-        chat: tipChat,
-        wissensnetz: tipNetz,
-        literaturbild: tipLiteraturbild,
-        vergleich: tipVergleich,
-        korpus: tipKorpus
-    };
-}
-
 window.switchView = function(viewId) { switchView(viewId); };
 
 // params and ctx come from the router (applyStateToUI); a navigation button passes
@@ -978,7 +883,7 @@ function applyStateToUI(s, ctx) {
             (s.cat || []).forEach(function(c) { activeCategories.add(c); });
             const chipBox = document.getElementById('category-chips');
             if (chipBox) chipBox.querySelectorAll('.category-chip').forEach(function(c) {
-                c.classList.toggle('active', activeCategories.has(c.dataset.cat));
+                c.setAttribute('aria-pressed', String(activeCategories.has(c.dataset.cat)));
             });
 
             // Reproduce the search base the same way handleSearch does.
@@ -1187,10 +1092,7 @@ function buildDetailContent(paper) {
                 html += ' <span class="severity-badge severity-' + paper.benchmark.severity + '">' + paper.benchmark.severity + '</span>';
             }
             if (affectedCats.length) {
-                html += '<p class="affected-cats">Betroffene Kategorien: ' + affectedCats.map(function(c) {
-                    let color = CAT_COLORS[c] || 'var(--gray-400)';
-                    return '<span style="color:' + color + ';font-weight:600;">' + catLabel(c) + '</span>';
-                }).join(', ') + '</p>';
+                html += '<p class="affected-cats">Betroffene Kategorien ' + categoryChips(affectedCats, function() { return { small: true }; }) + '</p>';
             }
             html += '</div>';
         } else {
@@ -1248,20 +1150,11 @@ function buildDetailContent(paper) {
     return html;
 }
 
+// The categories an assessment assigns, as grouped category chips.
 function catGridColored(allCategories) {
-    let html = '<div class="category-grid-10">';
-    CATEGORIES.forEach(function(cat) {
-        let active = allCategories[cat] === 1;
-        let color = active ? CAT_COLORS[cat] : 'var(--gray-300)';
-        const textColor = active ? 'var(--gray-800)' : 'var(--gray-400)';
-        const fontWeight = active ? '600' : '400';
-        html += '<div class="cat-grid-item" style="color:' + textColor + ';font-weight:' + fontWeight + '">' +
-            '<span class="cat-dot" style="background:' + color + '"></span>' +
-            '<span>' + catLabel(cat) + '</span>' +
-        '</div>';
-    });
-    html += '</div>';
-    return html;
+    const assigned = CATEGORIES.filter(function(cat) { return allCategories[cat] === 1; });
+    return '<p class="category-chips assessment-categories">' +
+        (assigned.length ? categoryChips(assigned, function() { return { small: true }; }) : 'keine Kategorie') + '</p>';
 }
 
 // Export & Download

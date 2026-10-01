@@ -13,6 +13,7 @@
     <meta property="og:title" content="Feministische AI Literacies -- Systematischer Review">
     <meta property="og:description" content="Interaktive Evidenz zum systematischen Literature Review zu feministischen AI Literacies im Feld der Sozialen Arbeit.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231e3a5f'/><text x='50' y='68' font-size='60' font-family='serif' font-weight='bold' fill='white' text-anchor='middle'>F</text></svg>">
+    <script defer src="js/nav-tips.js"></script>
     <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/research.css">
@@ -38,13 +39,13 @@
                     <button class="nav-view-btn has-tip" id="tab-vergleich" aria-pressed="false" data-view="vergleich" data-tip-key="vergleich">Kategorien</button>
                     <button class="nav-view-btn has-tip" id="tab-korpus" aria-pressed="false" data-view="korpus" data-tip-key="korpus">Korpus</button>
                     <span class="nav-sep"></span>
-                    <a href="prisma.html" class="nav-link">PRISM</a>
-                    <a href="about.html" class="nav-link">About</a>
-                    <a href="methoden.html" class="nav-link">Methoden</a>
-                    <a href="help.html" class="nav-link">Hilfe</a>
+                    <a href="prisma.html" class="nav-link" data-tip-key="prisma">PRISM</a>
+                    <a href="about.html" class="nav-link" data-tip-key="about">About</a>
+                    <a href="methoden.html" class="nav-link" data-tip-key="methoden">Methoden</a>
+                    <a href="help.html" class="nav-link" data-tip-key="help">Hilfe</a>
                     <span class="nav-sep"></span>
-                    <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
-                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" title="Paper-Wissenssammlung (.zip)"><i class="fas fa-download"></i></a>
+                    <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener" aria-label="Repository" data-tip-key="repo"><i class="fas fa-code-branch" aria-hidden="true"></i></a>
+                    <a href="downloads/vault.zip" class="nav-link nav-link-ext" aria-label="Paper-Wissenssammlung (.zip)" data-tip-key="download"><i class="fas fa-download" aria-hidden="true"></i></a>
                 </nav>
             </div>
         </div>
@@ -145,27 +146,27 @@
         <section class="content-section view-content active" id="view-start" aria-labelledby="start-title">
             <div class="start">
                 <h2 class="start-title" id="start-title">Wie können Fachkräfte der Sozialen Arbeit verantwortlich mit LLMs arbeiten, und was zeigt die Literatur dazu?</h2>
-                <p class="start-status" id="start-status" role="status"></p>
-                <div class="start-actions">
-                    <a class="start-btn start-btn--primary" href="#view=literaturbild">Literatur erkunden</a>
-                    <a class="start-btn" href="#view=korpus">Korpus durchsuchen</a>
-                </div>
+                <p class="start-status" id="start-status"></p>
                 <ul class="start-cards" role="list">
-                    <li><a class="start-card start-card--use" href="#view=frage&amp;sq=1">
+                    <li><a class="start-card start-card--use" href="#view=frage&amp;sq=1" data-sq="1">
                         <h3>Nutzung</h3>
                         <p>Für welche Aufgaben und Felder der Sozialen Arbeit beschreibt die Literatur den Einsatz von LLMs, und welchen Nutzen berichtet sie?</p>
+                        <p class="start-card-status"></p>
                     </a></li>
-                    <li><a class="start-card start-card--risk" href="#view=frage&amp;sq=2">
+                    <li><a class="start-card start-card--risk" href="#view=frage&amp;sq=2" data-sq="2">
                         <h3>Risiken</h3>
                         <p>Welche Bias-Achsen und Schadensarten benennt die Literatur, und für welche Gruppen?</p>
+                        <p class="start-card-status"></p>
                     </a></li>
-                    <li><a class="start-card start-card--practice" href="#view=frage&amp;sq=3">
+                    <li><a class="start-card start-card--practice" href="#view=frage&amp;sq=3" data-sq="3">
                         <h3>Praktiken</h3>
-                        <p>Welche Prompting-Techniken und Schutzmaßnahmen werden vorgeschlagen, demonstriert oder evaluiert, und mit welchen berichteten Wirkungen und Grenzen?</p>
+                        <p>Welche Prompting-Techniken und Schutzmaßnahmen werden vorgeschlagen, demonstriert oder evaluiert, zu welchem Zweck, auf welcher Stufe und mit welchen berichteten Wirkungen und Grenzen?</p>
+                        <p class="start-card-status"></p>
                     </a></li>
-                    <li><a class="start-card start-card--competence" href="#view=frage&amp;sq=4">
+                    <li><a class="start-card start-card--competence" href="#view=frage&amp;sq=4" data-sq="4">
                         <h3>Kompetenzen</h3>
-                        <p>Welche Kompetenzen und organisationalen Voraussetzungen nennt die Literatur, und wo greifen allgemeine Prompting-Anleitungen zu kurz?</p>
+                        <p>Welche Kompetenzen und organisationalen Voraussetzungen nennt die Literatur, und wo greifen allgemeine Prompting-Anleitungen für die Soziale Arbeit zu kurz?</p>
+                        <p class="start-card-status"></p>
                     </a></li>
                 </ul>
             </div>
