@@ -1,429 +1,499 @@
-// Kategorien view: the Landkarte of the expert assessment over Gegenstand x Perspektive,
-// then each of the 10 categories as an entry point into the round-one divergence data
-// (rates, divergent papers, linked concepts).
+// Kategorien view: the Landkarte, Gegenstand rows against Perspektive columns as one
+// heatmap under a switchable lens, linked to a detail panel for the chosen cell or
+// category. A cell states joint coding in the same work, never a relation.
 
 (function() {
 'use strict';
 
 const EC = window.EC;
 let initialized = false;
-let activeCategory = null;
-let nodeLabelMap = null; // conceptId -> label, built once on first detail render
 
 // catLabel turns Bias_Ungleichheit into "Bias Ungleichheit"; only the ampersand
 // form is a genuine override, the rest match the underscore-to-space default.
 const LABEL_OVERRIDE = { Bias_Ungleichheit: 'Bias & Ungleichheit' };
 function label(cat) { return LABEL_OVERRIDE[cat] || EC.catLabel(cat); }
 
-window.initializeKategorien = function() {
-    if (initialized) return;
-    initialized = true;
-
-    // The Landkarte reads only the consolidated expert assessment, so it stands even
-    // without the round-one comparison data below it.
-    initLandkarte();
-
-    if (!EC.getKappas()) { console.warn('[Kategorien] no data'); return; }
-
-    renderSpektrum();
-
-    // One delegated listener per stable container instead of rebinding on every
-    // detail render.
-    document.getElementById('kategorie-spektrum').addEventListener('click', function(e) {
-        const chip = e.target.closest('.category-chip');
-        if (chip) selectCategory(chip.dataset.cat);
-    });
-    document.getElementById('kategorie-detail').addEventListener('click', function(e) {
-        const paper = e.target.closest('.kdetail-paper');
-        if (paper) { EC.navigateToPaper(paper.dataset.paperId); return; }
-        const concept = e.target.closest('.kdetail-concept');
-        if (concept) { EC.focusConcept(concept.dataset.concept); return; }
-        const expand = e.target.closest('#kdetail-expand');
-        if (expand) {
-            document.getElementById('kategorie-detail')
-                .querySelectorAll('[data-expandable]').forEach(function(el) { el.style.display = ''; });
-            expand.style.display = 'none';
-        }
-    });
-
-    selectCategory('Gender');
-    console.log('[Kategorien] initialized, 10 categories');
+const RECENT_YEAR = 2025;
+const DECISIONS = {
+    include: { label: 'Include', mark: '+' },
+    exclude: { label: 'Exclude', mark: '−' },
+    unclear: { label: 'Unclear', mark: '?' },
 };
+// Under Übereinstimmung a work of the selection is coded by the experts only, by the
+// LLM only, or by both; the divergent ones lead the list.
+const SIDES = {
+    expert: { mark: 'H', label: 'nur Expert:innen' },
+    llm: { mark: 'L', label: 'nur LLM' },
+    both: { mark: 'H+L', label: 'Expert:innen und LLM' },
+};
+const SIDE_ORDER = { expert: 0, llm: 1, both: 2 };
 
-// Landkarte: Gegenstand rows against Perspektive columns. A cell holds the works whose
-// consolidated expert assessment carries both categories; it states joint coding in
-// the same work, never a relation. Works without that assessment carry no categories.
-const DECISIONS = [
-    { key: 'include', label: 'Include' },
-    { key: 'exclude', label: 'Exclude' },
-    { key: 'unclear', label: 'Unclear' },
-];
-let landkarte = null; // { rows, cols, cells: {row: {col: [paper]}}, max }
-let selectedCell = null; // 'row|col'
-let cellTip = null;
+function pct(value) { return Math.round(value * 100) + ' %'; }
+function share(part, whole) { return whole ? part / whole : null; }
+
+// Each lens reads one value off the stats of a category set; null means no works.
+const LENSES = {
+    werke: {
+        label: 'Werke',
+        legend: 'Werke, von Expert:innen mit beiden Kategorien codiert',
+        value: function(s) { return s.expert.length; },
+        format: function(v) { return String(v); },
+        tip: function(s) { return tallyText(s.expert); },
+    },
+    einschluss: {
+        label: 'Einschluss',
+        legend: 'Anteil Include an diesen Werken',
+        value: function(s) { return share(s.include, s.expert.length); },
+        format: pct,
+        tip: function(s) { return s.include + ' von ' + EC.workCount(s.expert.length) + ' Include'; },
+    },
+    uebereinstimmung: {
+        label: 'Übereinstimmung',
+        legend: 'Von beiden codiert, Anteil an den von mindestens einer Seite codierten Werken',
+        value: function(s) { return share(s.both.length, s.union.length); },
+        format: pct,
+        tip: function(s) {
+            return 'Expert:innen ' + s.human.length + ', LLM ' + s.llm.length + ', beide ' + s.both.length +
+                ', also ' + s.both.length + ' von ' + EC.workCount(s.union.length) + ' übereinstimmend' +
+                ' (Werke mit beiden Codierungen)';
+        },
+    },
+    aktualitaet: {
+        label: 'Aktualität',
+        legend: 'Anteil der Werke ab ' + RECENT_YEAR,
+        value: function(s) { return share(s.recent, s.dated); },
+        format: pct,
+        tip: function(s) { return s.recent + ' von ' + EC.workCount(s.dated) + ' ab ' + RECENT_YEAR; },
+    },
+};
+const LENS_KEYS = Object.keys(LENSES);
+
+let map = null; // { rows, cols, works, assessed, paired, total }
+const statsCache = {};
+let lens = 'werke';
+let selection = null; // [row, col] for a cell, [category] for a header
+let openReason = null; // id of the one work whose LLM reasoning is shown
+let tip = null;
+let pendingParams = null;
 
 function decisionKey(paper) {
     const d = paper.human.decision;
     return d === 'Include' ? 'include' : d === 'Exclude' ? 'exclude' : 'unclear';
 }
 
-function buildLandkarte() {
-    const groups = EC.categoryGroups();
-    const rows = (groups.object || []).slice();
-    const cols = (groups.perspective || []).slice();
-    const cells = {};
-    rows.forEach(function(row) {
-        cells[row] = {};
-        cols.forEach(function(col) { cells[row][col] = []; });
-    });
-    let assessed = 0;
-    EC.getAllPapers().forEach(function(paper) {
-        const human = paper.human;
-        if (!human || !human.decision) return;
-        assessed++;
-        const cats = human.all_categories || {};
-        rows.forEach(function(row) {
-            if (cats[row] !== 1) return;
-            cols.forEach(function(col) { if (cats[col] === 1) cells[row][col].push(paper); });
-        });
-    });
-    let max = 0;
-    rows.forEach(function(row) { cols.forEach(function(col) { max = Math.max(max, cells[row][col].length); }); });
-    return { rows: rows, cols: cols, cells: cells, max: max, assessed: assessed, total: EC.getAllPapers().length };
-}
-
-function tally(papers) {
+function tallyText(papers) {
     const counts = { include: 0, exclude: 0, unclear: 0 };
     papers.forEach(function(paper) { counts[decisionKey(paper)]++; });
-    return counts;
+    return Object.keys(DECISIONS).filter(function(key) { return counts[key] || key !== 'unclear'; })
+        .map(function(key) { return counts[key] + ' ' + DECISIONS[key].label; }).join(', ');
 }
 
-function tallyText(papers) {
-    const counts = tally(papers);
-    return DECISIONS.filter(function(d) { return counts[d.key] || d.key !== 'unclear'; })
-        .map(function(d) { return counts[d.key] + ' ' + d.label; }).join(', ');
+function coded(value) { return value === 0 || value === 1; }
+
+function llmAssessed(paper) {
+    return Boolean(paper.llm && paper.llm.assessment_status === 'assessed' && paper.llm.all_categories);
 }
 
-function chipFor(cat) {
-    return EC.categoryChip({ key: cat, label: label(cat), color: EC.CAT_COLORS[cat] }, { small: true });
-}
-
-function cellLabel(row, col, papers) {
-    return label(row) + ' und ' + label(col) + ', gemeinsam codiert in ' + EC.workCount(papers.length) +
-        (papers.length ? ', ' + tallyText(papers) : '');
-}
-
-// One scale for the whole matrix: the bar track is the largest cell.
-function cellHtml(row, col) {
-    const papers = landkarte.cells[row][col];
-    if (!papers.length) {
-        return '<td><span class="lk-cell lk-cell--empty" aria-label="' + EC.escapeHtml(cellLabel(row, col, papers)) + '">0</span></td>';
-    }
-    const counts = tally(papers);
-    const width = (papers.length / landkarte.max * 100).toFixed(1);
-    const segments = DECISIONS.filter(function(d) { return counts[d.key]; }).map(function(d) {
-        return '<span class="lk-seg lk-seg--' + d.key + '" style="flex-grow:' + counts[d.key] + '"></span>';
-    }).join('');
-    const key = row + '|' + col;
-    return '<td><button type="button" class="lk-cell" data-row="' + EC.escapeHtml(row) + '" data-col="' + EC.escapeHtml(col) +
-        '" data-count="' + papers.length + '" aria-pressed="' + (selectedCell === key) + '" aria-label="' +
-        EC.escapeHtml(cellLabel(row, col, papers)) + '">' +
-        '<span class="lk-count" aria-hidden="true">' + papers.length + '</span>' +
-        '<span class="lk-track" aria-hidden="true"><span class="lk-bar" style="width:' + width + '%">' + segments + '</span></span>' +
-        '</button></td>';
-}
-
-function swatch(key) { return '<span class="lk-swatch lk-seg--' + key + '" aria-hidden="true"></span>'; }
-
-function renderLandkarte() {
-    const root = document.getElementById('landkarte');
-    if (!root) return;
-    const lk = landkarte;
-    const unclear = lk.rows.some(function(row) {
-        return lk.cols.some(function(col) { return tally(lk.cells[row][col]).unclear > 0; });
+// The expert lenses read every work with a consolidated expert decision. Übereinstimmung
+// compares only works in which both the experts and the LLM coded each category of the
+// set (0 or 1); this is the basis of the canonical per-category rates in kappa_by_category.
+function stats(cats) {
+    const key = cats.join(',');
+    if (statsCache[key]) return statsCache[key];
+    const expert = map.works.filter(function(p) {
+        const h = p.human.all_categories || {};
+        return cats.every(function(c) { return h[c] === 1; });
     });
-    let html = '<p class="lk-caption" id="landkarte-caption">Gemeinsam codiert in denselben Werken, Einschätzung der Expert:innen, ' +
-        lk.assessed + ' von ' + lk.total + ' Werken eingeschätzt</p>';
+    const dated = expert.filter(function(p) { return typeof p.year === 'number'; });
+    const paired = map.works.filter(function(p) {
+        if (!llmAssessed(p)) return false;
+        const h = p.human.all_categories || {};
+        return cats.every(function(c) { return coded(h[c]) && coded(p.llm.all_categories[c]); });
+    });
+    const human = [], llm = [], both = [], union = [];
+    paired.forEach(function(p) {
+        const h = cats.every(function(c) { return p.human.all_categories[c] === 1; });
+        const l = cats.every(function(c) { return p.llm.all_categories[c] === 1; });
+        if (h) human.push(p);
+        if (l) llm.push(p);
+        if (h && l) both.push(p);
+        if (h || l) union.push(p);
+    });
+    statsCache[key] = {
+        cats: cats, expert: expert,
+        include: expert.filter(function(p) { return decisionKey(p) === 'include'; }).length,
+        dated: dated.length,
+        recent: dated.filter(function(p) { return p.year >= RECENT_YEAR; }).length,
+        paired: paired, human: human, llm: llm, both: both, union: union,
+    };
+    return statsCache[key];
+}
+
+function sideOf(paper, s) {
+    const h = s.human.indexOf(paper) >= 0;
+    const l = s.llm.indexOf(paper) >= 0;
+    return h && l ? 'both' : h ? 'expert' : 'llm';
+}
+
+function buildMap() {
+    const groups = EC.categoryGroups();
+    const works = EC.getAllPapers().filter(function(p) { return p.human && p.human.decision; });
+    return {
+        rows: (groups.object || []).slice(),
+        cols: (groups.perspective || []).slice(),
+        works: works,
+        assessed: works.length,
+        paired: works.filter(llmAssessed).length,
+        total: EC.getAllPapers().length,
+    };
+}
+
+function selectionKey(sel) { return sel ? sel.join(',') : ''; }
+
+function chipFor(cat, pressed) {
+    const category = { key: cat, label: label(cat), color: EC.CAT_COLORS[cat] };
+    return EC.categoryChip(category, typeof pressed === 'boolean' ? { small: true, pressed: pressed } : { small: true });
+}
+
+function setLabel(cats) { return cats.map(label).join(' und '); }
+
+// The lens scale runs over the values the cells actually reach.
+function cellRange() {
+    const values = [];
+    map.rows.forEach(function(row) {
+        map.cols.forEach(function(col) {
+            const v = LENSES[lens].value(stats([row, col]));
+            if (v !== null) values.push(v);
+        });
+    });
+    return { min: Math.min.apply(null, values), max: Math.max.apply(null, values) };
+}
+
+// Fill intensity in percent of the heat colour; an empty cell stays white.
+function heat(value, range) {
+    if (value === null) return 0;
+    const t = range.max > range.min ? (value - range.min) / (range.max - range.min) : 1;
+    return Math.round(8 + t * 84);
+}
+
+function headerScale(cats) {
+    if (lens !== 'werke') return 1;
+    return Math.max.apply(null, cats.map(function(c) { return stats([c]).expert.length; })) || 1;
+}
+
+function renderSkeleton() {
+    const root = document.getElementById('landkarte');
+    let html = '<p class="lk-caption" id="landkarte-caption"></p>';
     html += '<div class="lk-layout"><div class="lk-main">';
+    html += '<div class="lk-lenses" role="group" aria-label="Maß der Landkarte">' + LENS_KEYS.map(function(key) {
+        return '<button type="button" class="lk-lens" data-lens="' + key + '" aria-pressed="false">' + LENSES[key].label + '</button>';
+    }).join('') + '</div>';
     html += '<div class="lk-wrap" role="region" tabindex="0" aria-label="Landkarte, horizontal verschiebbar">';
     html += '<table class="lk-table" aria-labelledby="landkarte-caption"><thead><tr>' +
         '<th scope="col" class="lk-corner"><span>Gegenstand</span> <span aria-hidden="true">×</span> <span>Perspektive</span></th>';
-    lk.cols.forEach(function(col) { html += '<th scope="col" class="lk-col">' + chipFor(col) + '</th>'; });
+    map.cols.forEach(function(col, ci) {
+        html += '<th scope="col" class="lk-col" data-cat="' + EC.escapeHtml(col) + '" data-ci="' + ci + '">' + chipFor(col, false) +
+            '<span class="lk-marg" aria-hidden="true"><span class="lk-marg-bar"></span><span class="lk-marg-val"></span></span></th>';
+    });
     html += '</tr></thead><tbody>';
-    lk.rows.forEach(function(row) {
-        html += '<tr><th scope="row" class="lk-row">' + chipFor(row) + '</th>';
-        lk.cols.forEach(function(col) { html += cellHtml(row, col); });
+    map.rows.forEach(function(row, ri) {
+        html += '<tr><th scope="row" class="lk-row" data-cat="' + EC.escapeHtml(row) + '" data-ri="' + ri + '"><span class="lk-row-head">' + chipFor(row, false) +
+            '<span class="lk-marg" aria-hidden="true"><span class="lk-marg-bar"></span><span class="lk-marg-val"></span></span></span></th>';
+        map.cols.forEach(function(col, ci) {
+            html += '<td><button type="button" class="lk-cell" data-row="' + EC.escapeHtml(row) + '" data-col="' + EC.escapeHtml(col) +
+                '" data-ri="' + ri + '" data-ci="' + ci + '" aria-pressed="false" style="--delay:' + (ri + ci) * 35 + 'ms">' +
+                '<span class="lk-val" aria-hidden="true"></span></button></td>';
+        });
         html += '</tr>';
     });
     html += '</tbody></table></div>';
-    html += '<p class="lk-legend">' + DECISIONS.filter(function(d) { return d.key !== 'unclear' || unclear; }).map(function(d) {
-        return '<span class="lk-legend-item">' + swatch(d.key) + d.label + '</span>';
-    }).join('') + '<span class="lk-legend-item">Balkenlänge 0 bis ' + lk.max + ' Werke</span></p>';
-    html += '</div><section class="lk-works" id="landkarte-works" aria-labelledby="landkarte-works-title" hidden></section></div>';
+    html += '<p class="lk-legend" id="landkarte-legend"></p>';
+    html += '</div><section class="lk-detail" id="landkarte-detail" aria-labelledby="landkarte-detail-title" hidden></section></div>';
     root.innerHTML = html;
 }
 
-function decisionLabel(paper) {
-    const key = decisionKey(paper);
-    return DECISIONS.filter(function(d) { return d.key === key; })[0].label;
+// Re-encodes the same map under the active lens; the CSS transition on the fill is the
+// one orchestrated moment of the view.
+function paint() {
+    const root = document.getElementById('landkarte');
+    const L = LENSES[lens];
+    const range = cellRange();
+    document.getElementById('landkarte-caption').textContent = lens === 'uebereinstimmung'
+        ? 'Gemeinsam codiert in denselben Werken, Expert:innen und LLM, ' + map.paired + ' von ' + map.total + ' Werken von beiden eingeschätzt'
+        : 'Gemeinsam codiert in denselben Werken, Einschätzung der Expert:innen, ' + map.assessed + ' von ' + map.total + ' Werken eingeschätzt';
+    root.querySelectorAll('.lk-lens').forEach(function(btn) { btn.setAttribute('aria-pressed', String(btn.dataset.lens === lens)); });
+    const key = selectionKey(selection);
+    root.querySelectorAll('button.lk-cell').forEach(function(cell) {
+        const s = stats([cell.dataset.row, cell.dataset.col]);
+        const v = L.value(s);
+        const h = heat(v, range);
+        cell.style.setProperty('--heat', h + '%');
+        cell.classList.toggle('is-dark', h >= 70);
+        cell.dataset.value = v === null ? '' : String(Math.round(v * 10000) / 10000);
+        cell.querySelector('.lk-val').textContent = v === null ? '–' : L.format(v);
+        cell.setAttribute('aria-label', setLabel(s.cats) + ', ' + L.label + ' ' + (v === null ? 'keine Werke' : L.format(v)) + ', ' + L.tip(s));
+        cell.setAttribute('aria-pressed', String(cell.dataset.row + ',' + cell.dataset.col === key));
+    });
+    [['th.lk-row', map.rows], ['th.lk-col', map.cols]].forEach(function(pair) {
+        const scale = headerScale(pair[1]);
+        root.querySelectorAll(pair[0]).forEach(function(th) {
+            const s = stats([th.dataset.cat]);
+            const v = L.value(s);
+            th.querySelector('.lk-marg-bar').style.setProperty('--w', (v === null ? 0 : v / scale * 100).toFixed(1) + '%');
+            th.querySelector('.lk-marg-val').textContent = v === null ? '–' : L.format(v);
+            th.dataset.value = v === null ? '' : String(Math.round(v * 10000) / 10000);
+            const chip = th.querySelector('.category-chip');
+            chip.setAttribute('aria-pressed', String(th.dataset.cat === key));
+            chip.setAttribute('aria-label', label(th.dataset.cat) + ' allein, ' + L.label + ' ' + (v === null ? 'keine Werke' : L.format(v)) + ', ' + L.tip(s));
+        });
+    });
+    document.getElementById('landkarte-legend').innerHTML =
+        '<span class="lk-legend-label">' + EC.escapeHtml(L.legend) + '</span>' +
+        '<span class="lk-scale"><span class="lk-scale-val">' + EC.escapeHtml(L.format(range.min)) + '</span>' +
+        '<span class="lk-ramp" aria-hidden="true"></span>' +
+        '<span class="lk-scale-val">' + EC.escapeHtml(L.format(range.max)) + '</span></span>';
+    renderDetail();
 }
 
-function renderWorks() {
-    const box = document.getElementById('landkarte-works');
-    if (!box) return;
-    if (!selectedCell) { box.hidden = true; box.innerHTML = ''; return; }
-    const parts = selectedCell.split('|');
+function sortWorks(papers, s) {
     const order = { include: 0, exclude: 1, unclear: 2 };
-    const papers = landkarte.cells[parts[0]][parts[1]].slice().sort(function(a, b) {
-        return order[decisionKey(a)] - order[decisionKey(b)] || (b.year || 0) - (a.year || 0) ||
-            String(a.author_year || '').localeCompare(String(b.author_year || ''), 'de');
+    const byAuthor = function(a, b) { return String(a.author_year || '').localeCompare(String(b.author_year || ''), 'de'); };
+    const byYear = function(a, b) { return (b.year || 0) - (a.year || 0); };
+    const byDecision = function(a, b) { return order[decisionKey(a)] - order[decisionKey(b)]; };
+    return papers.slice().sort(function(a, b) {
+        if (lens === 'uebereinstimmung') return SIDE_ORDER[sideOf(a, s)] - SIDE_ORDER[sideOf(b, s)] || byYear(a, b) || byAuthor(a, b);
+        if (lens === 'aktualitaet') return byYear(a, b) || byDecision(a, b) || byAuthor(a, b);
+        return byDecision(a, b) || byYear(a, b) || byAuthor(a, b);
     });
-    // The Korpus detail is the work view for every record of the working data; the
-    // release Werk view covers released works only.
-    box.innerHTML = '<h3 class="lk-works-title" id="landkarte-works-title" tabindex="-1">' + chipFor(parts[0]) +
-        ' <span class="lk-and">und</span> ' + chipFor(parts[1]) + '</h3>' +
-        '<p class="lk-works-count">' + EC.escapeHtml(EC.workCount(papers.length) + ', ' + tallyText(papers)) + '</p>' +
-        '<ol class="lk-list" role="list">' + papers.map(function(paper) {
-            return '<li class="lk-item" data-decision="' + decisionKey(paper) + '">' + swatch(decisionKey(paper)) +
-                '<a class="lk-item-title" href="#view=korpus&amp;paper=' + encodeURIComponent(paper.id) + '">' + EC.escapeHtml(paper.title) + '</a>' +
-                '<span class="lk-item-meta"><span class="lk-dec">' + decisionLabel(paper) + '</span>' +
-                (paper.author_year ? ', ' + EC.escapeHtml(paper.author_year) : '') + '</span></li>';
-        }).join('') + '</ol>';
+}
+
+// Concepts of the historical, frozen concept graph, counted over the listed works.
+function conceptCounts(papers) {
+    const data = EC.getConceptData();
+    if (!data || !data.papers) return [];
+    const labels = {};
+    (data.nodes || []).forEach(function(n) { labels[n.id] = n.label; });
+    const ids = new Set(papers.map(function(p) { return p.id; }));
+    const counts = {};
+    data.papers.forEach(function(p) {
+        if (!ids.has(p.id)) return;
+        (p.concepts || []).forEach(function(c) { counts[c] = (counts[c] || 0) + 1; });
+    });
+    return Object.keys(counts).map(function(c) { return { label: labels[c] || c, count: counts[c] }; })
+        .sort(function(a, b) { return b.count - a.count || a.label.localeCompare(b.label, 'de'); });
+}
+
+function compareHtml(s) {
+    const n = s.paired.length;
+    if (!n) return '';
+    const kappa = s.cats.length === 1 && EC.getKappas() ? EC.getKappas()[s.cats[0]] : null;
+    const row = function(name, part, cls) {
+        const v = part / n;
+        return '<span class="lk-cmp-name">' + name + '</span>' +
+            '<span class="lk-cmp-track" aria-hidden="true"><span class="lk-cmp-fill ' + cls + '" style="width:' + (v * 100).toFixed(1) + '%"></span></span>' +
+            '<span class="lk-cmp-val">' + pct(v) + '</span>';
+    };
+    return '<div class="lk-cmp" role="group" aria-label="Expert:innen und LLM im Vergleich">' +
+        row('Expert:innen', s.human.length, 'lk-cmp-fill--human') + row('LLM', s.llm.length, 'lk-cmp-fill--llm') +
+        '<span class="lk-cmp-base">Anteil an ' + (n === 1 ? '1 Werk' : n + ' Werken') + ' mit beiden Codierungen' +
+        (kappa ? ', κ ' + String(kappa.kappa.toFixed(2)).replace('.', ',') : '') + '</span></div>';
+}
+
+function reasonOf(paper) {
+    return (paper.divergence && paper.divergence.llm_reasoning) || (paper.llm && paper.llm.reasoning) || '';
+}
+
+function itemHtml(paper, s) {
+    const dec = DECISIONS[decisionKey(paper)];
+    const side = lens === 'uebereinstimmung' ? sideOf(paper, s) : null;
+    const reason = reasonOf(paper);
+    const open = openReason === paper.id;
+    const reasonId = 'lk-reason-' + EC.escapeHtml(paper.id);
+    const pattern = paper.divergence && paper.divergence.pattern;
+    let html = '<li class="lk-item" data-decision="' + decisionKey(paper) + '"' + (side ? ' data-side="' + side + '"' : '') + '>';
+    html += '<span class="lk-mark lk-mark--' + decisionKey(paper) + '" aria-hidden="true">' + dec.mark + '</span>';
+    html += '<span class="lk-item-body"><a class="lk-item-title" href="#view=korpus&amp;paper=' + encodeURIComponent(paper.id) + '">' + EC.escapeHtml(paper.title) + '</a>';
+    html += '<span class="lk-item-meta">' +
+        (side ? '<span class="lk-side lk-side--' + side + '" title="' + SIDES[side].label + '"><span aria-hidden="true">' + SIDES[side].mark +
+            '</span><span class="sr-only">' + SIDES[side].label + '</span></span> ' : '') +
+        '<span class="lk-dec">' + dec.label + '</span>' + (paper.author_year ? ', ' + EC.escapeHtml(paper.author_year) : '') +
+        (reason ? ' <button type="button" class="lk-why" data-paper-id="' + EC.escapeHtml(paper.id) + '" aria-expanded="' + open +
+            '" aria-controls="' + reasonId + '">LLM-Begründung</button>' : '') + '</span>';
+    if (reason) {
+        html += '<span class="lk-reason" id="' + reasonId + '"' + (open ? '' : ' hidden') + '>' +
+            (pattern ? '<span class="lk-pattern">' + EC.escapeHtml(pattern) + '</span> ' : '') + EC.escapeHtml(reason) + '</span>';
+    }
+    return html + '</span></li>';
+}
+
+function renderDetail() {
+    const box = document.getElementById('landkarte-detail');
+    if (!selection) { box.hidden = true; box.innerHTML = ''; return; }
+    const s = stats(selection);
+    const papers = sortWorks(lens === 'uebereinstimmung' ? s.union : s.expert, s);
+    let count;
+    if (lens === 'uebereinstimmung') {
+        count = EC.workCount(papers.length) + ' von mindestens einer Seite codiert, ' + s.both.length + ' von beiden';
+    } else {
+        count = EC.workCount(papers.length) + (papers.length ? ', ' + tallyText(papers) : '');
+    }
+    const concepts = conceptCounts(papers).slice(0, 6);
+    let html = '<h3 class="lk-detail-title" id="landkarte-detail-title" tabindex="-1">' +
+        selection.map(function(c) { return chipFor(c); }).join(' <span class="lk-and">und</span> ') + '</h3>';
+    html += '<p class="lk-detail-count">' + EC.escapeHtml(count) + '</p>';
+    html += compareHtml(s);
+    if (concepts.length) {
+        html += '<ul class="lk-concepts" aria-label="Häufige Konzepte">' + concepts.map(function(c) {
+            return '<li class="lk-concept">' + EC.escapeHtml(c.label) + ' <span class="lk-concept-count">' + c.count + '</span></li>';
+        }).join('') + '</ul>';
+    }
+    html += '<ol class="lk-list" role="list">' + papers.map(function(p) { return itemHtml(p, s); }).join('') + '</ol>';
+    box.innerHTML = html;
     box.hidden = false;
 }
 
-function selectCell(key, focusList) {
-    selectedCell = selectedCell === key ? null : key;
-    document.querySelectorAll('#landkarte .lk-cell[aria-pressed]').forEach(function(btn) {
-        btn.setAttribute('aria-pressed', String(btn.dataset.row + '|' + btn.dataset.col === selectedCell));
-    });
-    renderWorks();
-    if (selectedCell && focusList) {
-        const title = document.getElementById('landkarte-works-title');
-        // On narrow screens the list stands below the matrix and would be out of view.
+function select(cats, focusDetail) {
+    const key = selectionKey(cats);
+    selection = key === selectionKey(selection) ? null : cats;
+    openReason = null;
+    paint();
+    EC.viewParams.changed();
+    if (selection && focusDetail) {
+        const title = document.getElementById('landkarte-detail-title');
+        // On narrow screens the panel stands below the map and would be out of view.
         if (title && title.getBoundingClientRect().top > window.innerHeight) title.scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
 }
 
-// Reuses the look of the navigation tooltips (.rich-tooltip). The cell's aria-label
+function setLens(key) {
+    if (key === lens || !LENSES[key]) return;
+    lens = key;
+    paint();
+    EC.viewParams.changed();
+}
+
+function parseSelection(value) {
+    const parts = String(value || '').split(',').filter(Boolean);
+    if (parts.length === 2 && map.rows.indexOf(parts[0]) >= 0 && map.cols.indexOf(parts[1]) >= 0) return parts;
+    if (parts.length === 1 && (map.rows.indexOf(parts[0]) >= 0 || map.cols.indexOf(parts[0]) >= 0)) return parts;
+    return null;
+}
+
+function applyParams(vp) {
+    if (!initialized || !map) { pendingParams = vp; return; }
+    lens = LENSES[vp.lens] ? vp.lens : 'werke';
+    const next = parseSelection(vp.sel);
+    if (selectionKey(next) !== selectionKey(selection)) openReason = null;
+    selection = next;
+    paint();
+}
+
+EC.viewParams.register('vergleich', {
+    keys: ['lens', 'sel'],
+    get: function() { return { lens: lens === 'werke' ? '' : lens, sel: selectionKey(selection) }; },
+    apply: applyParams,
+});
+
+// Reuses the look of the navigation tooltips (.rich-tooltip). The target's aria-label
 // already carries the same text, so the tooltip is hidden from assistive technology.
-function showTip(cell) {
-    if (!cellTip) {
-        cellTip = document.createElement('div');
-        cellTip.className = 'rich-tooltip lk-tip';
-        cellTip.setAttribute('aria-hidden', 'true');
-        cellTip.innerHTML = '<div class="tip-text"></div>';
-        document.body.appendChild(cellTip);
+function showTip(target) {
+    if (!tip) {
+        tip = document.createElement('div');
+        tip.className = 'rich-tooltip lk-tip';
+        tip.setAttribute('aria-hidden', 'true');
+        tip.innerHTML = '<div class="tip-text"></div>';
+        document.body.appendChild(tip);
     }
-    const papers = landkarte.cells[cell.dataset.row][cell.dataset.col];
-    cellTip.firstChild.innerHTML = '<strong>' + EC.escapeHtml(label(cell.dataset.row) + ' und ' + label(cell.dataset.col)) + '</strong><br>' +
-        EC.escapeHtml(EC.workCount(papers.length) + ', ' + tallyText(papers));
-    cellTip.hidden = false;
-    const rect = cell.getBoundingClientRect();
-    const box = cellTip.getBoundingClientRect();
+    const cats = target.dataset.row ? [target.dataset.row, target.dataset.col] : [target.closest('th').dataset.cat];
+    const s = stats(cats);
+    const L = LENSES[lens];
+    const v = L.value(s);
+    tip.firstChild.innerHTML = '<strong>' + EC.escapeHtml(setLabel(cats)) + '</strong><br>' +
+        EC.escapeHtml(L.label + ' ' + (v === null ? 'keine Werke' : L.format(v))) + '<br>' + EC.escapeHtml(L.tip(s));
+    tip.hidden = false;
+    const rect = target.getBoundingClientRect();
+    const box = tip.getBoundingClientRect();
     let left = rect.left + rect.width / 2 - box.width / 2;
     let top = rect.bottom + 8;
     if (left < 8) left = 8;
     if (left + box.width > window.innerWidth - 8) left = window.innerWidth - box.width - 8;
     if (top + box.height > window.innerHeight - 8) top = rect.top - box.height - 8;
-    cellTip.style.left = left + window.scrollX + 'px';
-    cellTip.style.top = top + window.scrollY + 'px';
+    tip.style.left = left + window.scrollX + 'px';
+    tip.style.top = top + window.scrollY + 'px';
 }
 
-function hideTip() { if (cellTip) cellTip.hidden = true; }
+function hideTip() { if (tip) tip.hidden = true; }
 
-function initLandkarte() {
+// Crosshair: the row and column of the cell under the pointer or focus.
+function cross(cell) {
+    const root = document.getElementById('landkarte');
+    const ri = cell ? cell.dataset.ri : null;
+    const ci = cell ? cell.dataset.ci : null;
+    root.querySelectorAll('.lk-table [data-ri], .lk-table [data-ci]').forEach(function(el) {
+        el.classList.toggle('is-cross', cell !== null && (el.dataset.ri === ri || el.dataset.ci === ci) && el !== cell);
+    });
+}
+
+function tipTarget(e) { return e.target.closest('button.lk-cell, th .category-chip'); }
+
+function moveFocus(cell, key) {
+    const step = { ArrowLeft: [0, -1], ArrowRight: [0, 1], ArrowUp: [-1, 0], ArrowDown: [1, 0] }[key];
+    if (!step) return false;
+    const ri = Number(cell.dataset.ri) + step[0];
+    const ci = Number(cell.dataset.ci) + step[1];
+    const next = document.querySelector('#landkarte button.lk-cell[data-ri="' + ri + '"][data-ci="' + ci + '"]');
+    if (next) next.focus();
+    return true;
+}
+
+window.initializeKategorien = function() {
+    if (initialized) return;
+    initialized = true;
     const root = document.getElementById('landkarte');
     if (!root) return;
-    landkarte = buildLandkarte();
-    renderLandkarte();
+    map = buildMap();
+    renderSkeleton();
+    if (pendingParams) { applyParams(pendingParams); pendingParams = null; } else paint();
+
     root.addEventListener('click', function(e) {
+        const lensBtn = e.target.closest('.lk-lens');
+        if (lensBtn) { setLens(lensBtn.dataset.lens); return; }
         const cell = e.target.closest('button.lk-cell');
-        if (cell) { hideTip(); selectCell(cell.dataset.row + '|' + cell.dataset.col, true); }
+        if (cell) { hideTip(); select([cell.dataset.row, cell.dataset.col], true); return; }
+        const head = e.target.closest('.lk-table th .category-chip');
+        if (head) { hideTip(); select([head.dataset.cat], true); return; }
+        const why = e.target.closest('.lk-why');
+        if (why) {
+            openReason = openReason === why.dataset.paperId ? null : why.dataset.paperId;
+            document.querySelectorAll('#landkarte-detail .lk-why').forEach(function(btn) {
+                const open = btn.dataset.paperId === openReason;
+                btn.setAttribute('aria-expanded', String(open));
+                document.getElementById(btn.getAttribute('aria-controls')).hidden = !open;
+            });
+        }
+    });
+    root.addEventListener('keydown', function(e) {
+        const cell = e.target.closest('button.lk-cell');
+        if (cell && moveFocus(cell, e.key)) e.preventDefault();
     });
     root.addEventListener('mouseover', function(e) {
-        const cell = e.target.closest('button.lk-cell');
-        if (cell) showTip(cell);
+        const target = tipTarget(e);
+        if (target) showTip(target);
+        cross(e.target.closest('button.lk-cell'));
     });
     root.addEventListener('mouseout', function(e) {
-        const cell = e.target.closest('button.lk-cell');
-        if (cell && !cell.contains(e.relatedTarget) && document.activeElement !== cell) hideTip();
+        const target = tipTarget(e);
+        if (target && !target.contains(e.relatedTarget) && document.activeElement !== target) hideTip();
+        if (!root.contains(e.relatedTarget)) cross(null);
     });
     root.addEventListener('focusin', function(e) {
-        const cell = e.target.closest('button.lk-cell');
-        if (cell && cell.matches(':focus-visible')) showTip(cell); else hideTip();
+        const target = tipTarget(e);
+        if (target && target.matches(':focus-visible')) showTip(target); else hideTip();
+        cross(e.target.closest('button.lk-cell'));
     });
-    root.addEventListener('focusout', hideTip);
+    root.addEventListener('focusout', function() { hideTip(); cross(null); });
     root.addEventListener('scroll', hideTip, true);
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') hideTip(); });
-}
-
-function renderSpektrum() {
-    const container = document.getElementById('kategorie-spektrum');
-    if (!container) return;
-
-    const kappas = EC.getKappas();
-    // One single-select chip per category, grouped Gegenstand | Perspektive like the
-    // Korpus filter, each with its rate difference between LLM and Expert:innen.
-    const keys = EC.CATEGORIES.filter(function(cat) { return kappas[cat]; });
-    const html = '<p class="category-chips">' + EC.categoryChipRow(keys.map(function(cat) {
-        const d = kappas[cat];
-        const diff = d.agent_yes_rate - d.human_yes_rate;
-        const direction = Math.abs(diff) < 5 ? 'neutral' : diff > 0 ? 'llm-more' : 'human-more';
-        return {
-            category: { key: cat, label: label(cat), color: EC.CAT_COLORS[cat] },
-            options: { pressed: cat === activeCategory, extra: ' <span class="kcard-diff ' + direction + '">' + (diff > 0 ? '+' : '') + Math.round(diff) + 'pp</span>' },
-        };
-    }), EC.categoryGroups()) + '</p>';
-
-    container.innerHTML = html;
-}
-
-function selectCategory(cat) {
-    activeCategory = cat;
-    document.querySelectorAll('#kategorie-spektrum .category-chip').forEach(function(btn) {
-        btn.setAttribute('aria-pressed', String(btn.dataset.cat === cat));
-    });
-    renderDetail(cat);
-}
-
-function renderDetail(cat) {
-    const container = document.getElementById('kategorie-detail');
-    if (!container) return;
-
-    const d = EC.getKappas()[cat];
-    if (!d) return;
-
-    const color = EC.CAT_COLORS[cat] || '#999';
-    const diff = d.agent_yes_rate - d.human_yes_rate;
-    const absDiff = Math.abs(diff);
-    let direction = diff > 0 ? 'LLM sieht mehr' : 'Expert:innen sehen mehr';
-    if (absDiff < 5) direction = 'Aehnliche Raten';
-
-    const catDivergences = EC.getCategoryDivergences(cat);
-    const catConcepts = getCategoryConceptCounts(cat);
-
-    let html = '<div class="kdetail-header" style="border-left-color:' + color + ';">';
-    html += '<h3 style="color:' + color + ';">' + label(cat) + '</h3>';
-    html += '</div>';
-
-    html += '<div class="kdetail-rates">';
-    html += renderRateBar('Expert:innen', d.human_yes_rate, '#d4943a');
-    html += renderRateBar('LLM', d.agent_yes_rate, '#4b7bab');
-    html += '<div class="kdetail-diff-label">';
-    if (absDiff >= 5) {
-        html += '<span style="color:' + (diff > 0 ? '#4b7bab' : '#d4943a') + ';font-weight:600;">' +
-            (diff > 0 ? '+' : '') + Math.round(diff) + ' Prozentpunkte</span> &middot; ' + direction;
-    } else {
-        html += '<span style="color:var(--gray-500);">Geringe Differenz (' + Math.round(absDiff) + 'pp)</span>';
-    }
-    html += ' &middot; n=' + d.n;
-    html += '</div>';
-    html += '</div>';
-
-    // Concepts before papers: more compact and immediately visible.
-    if (catConcepts.length > 0) {
-        html += '<div class="kdetail-section">';
-        html += '<h4>Haeufige Konzepte</h4>';
-        html += '<div class="kdetail-concepts">';
-        catConcepts.slice(0, 10).forEach(function(c) {
-            html += '<span class="kdetail-concept" data-concept="' + EC.escapeHtml(c.id) + '">' +
-                EC.escapeHtml(c.label) + ' <span class="kdetail-concept-count">' + c.count + '</span></span>';
-        });
-        html += '</div>';
-        html += '</div>';
-    }
-
-    catDivergences.sort(function(a, b) {
-        return (b.divergence.severity || 0) - (a.divergence.severity || 0);
-    });
-    const INITIAL_SHOW = 8;
-
-    if (catDivergences.length > 0) {
-        html += '<div class="kdetail-section">';
-        html += '<h4>Divergenz in dieser Kategorie <span class="kdetail-count">' + catDivergences.length + '</span></h4>';
-        html += '<div class="kdetail-papers" id="kdetail-papers-list">';
-        catDivergences.forEach(function(p, idx) {
-            const cc = p.divergence.category_comparison || {};
-            const catComp = cc[cat] || {};
-            const humanVal = catComp.human === 'Ja' ? 'Ja' : catComp.human === 'Nein' ? 'Nein' : '–';
-            const llmVal = catComp.llm === 'Ja' ? 'Ja' : catComp.llm === 'Nein' ? 'Nein' : '–';
-            const pattern = p.divergence.pattern || '';
-            const patClass = pattern === 'Semantische Expansion' ? 'pattern-badge-semantic'
-                         : pattern === 'Keyword-Inklusion' ? 'pattern-badge-keyword'
-                         : 'pattern-badge-implicit';
-
-            const hidden = idx >= INITIAL_SHOW ? ' style="display:none;" data-expandable' : '';
-
-            html += '<div class="kdetail-paper" data-paper-id="' + EC.escapeHtml(p.id) + '"' + hidden + '>';
-            html += '<div class="kdetail-paper-title">' + EC.escapeHtml(p.title.substring(0, 70)) + (p.title.length > 70 ? '...' : '') + '</div>';
-            html += '<div class="kdetail-paper-meta">';
-            html += '<span class="kdetail-paper-author">' + EC.escapeHtml(p.author_year || '') + '</span>';
-            html += '<span class="kdetail-verdict">';
-            html += '<span style="color:#d4943a;">H:' + humanVal + '</span>';
-            html += ' <span style="color:var(--gray-300);">/</span> ';
-            html += '<span style="color:#4b7bab;">L:' + llmVal + '</span>';
-            html += '</span>';
-            if (pattern) {
-                html += '<span class="pattern-badge ' + patClass + '">' + EC.escapeHtml(pattern) + '</span>';
-            }
-            html += '</div>';
-
-            if (p.divergence.llm_reasoning) {
-                html += '<p class="kdetail-reasoning">' +
-                    EC.escapeHtml(p.divergence.llm_reasoning.substring(0, 250)) +
-                    (p.divergence.llm_reasoning.length > 250 ? '...' : '') + '</p>';
-            }
-
-            html += '</div>';
-        });
-
-        if (catDivergences.length > INITIAL_SHOW) {
-            html += '<button class="kdetail-expand-btn" id="kdetail-expand">Alle ' +
-                catDivergences.length + ' anzeigen</button>';
-        }
-        html += '</div>';
-        html += '</div>';
-    }
-
-    container.innerHTML = html;
-}
-
-function renderRateBar(rowLabel, rate, color) {
-    return '<div class="kdetail-rate-row">' +
-        '<span class="kdetail-rate-label">' + rowLabel + '</span>' +
-        '<div class="kdetail-rate-track">' +
-            '<div class="kdetail-rate-fill" style="width:' + rate + '%;background:' + color + ';"></div>' +
-        '</div>' +
-        '<span class="kdetail-rate-value" style="color:' + color + ';">' + Math.round(rate) + '%</span>' +
-    '</div>';
-}
-
-function getCategoryConceptCounts(cat) {
-    const conceptData = EC.getConceptData();
-    if (!conceptData || !conceptData.papers) return [];
-
-    if (!nodeLabelMap) {
-        nodeLabelMap = {};
-        (conceptData.nodes || []).forEach(function(n) { nodeLabelMap[n.id] = n.label; });
-    }
-
-    const catPaperIds = new Set();
-    EC.getAllPapers().forEach(function(p) {
-        const llmYes = p.llm && p.llm.all_categories && p.llm.all_categories[cat];
-        const humanYes = p.human && p.human.all_categories && p.human.all_categories[cat];
-        if (llmYes || humanYes) catPaperIds.add(p.id);
-    });
-
-    const counts = {};
-    conceptData.papers.forEach(function(p) {
-        if (!catPaperIds.has(p.id)) return;
-        (p.concepts || []).forEach(function(c) { counts[c] = (counts[c] || 0) + 1; });
-    });
-
-    return Object.keys(counts).map(function(c) {
-        return { id: c, label: nodeLabelMap[c] || c, count: counts[c] };
-    }).sort(function(a, b) { return b.count - a.count; });
-}
+};
 
 })();

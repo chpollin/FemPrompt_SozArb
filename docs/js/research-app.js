@@ -108,8 +108,13 @@ const lastReleaseParams = {}; // per navigation tab, restored when the tab is ch
 // framework-free views. This store is the only router of the page: the release
 // modules navigate through EC.host and never listen to the hash themselves.
 const DEFAULT_STATE = {
-    view: 'start', q: '', dec: 'all', hum: 'all', year: 'all', stage: 'all', sort: 'relevance', cat: [], paper: null, rp: {},
+    view: 'start', q: '', dec: 'all', hum: 'all', year: 'all', stage: 'all', sort: 'relevance', cat: [], paper: null, rp: {}, vp: {},
 };
+
+// A working view with parameters of its own (kategorien.js) registers a codec
+// { keys, get, apply } here; the router serializes them as vp and stays the only writer
+// of the hash.
+const VIEW_PARAMS = {};
 
 function createStore(initial) {
     let state = initial;
@@ -156,6 +161,14 @@ window.EC = {
     showPaperDetail: function(p, list) { showPaperDetail(p, list); },
     closePaperModal: function() { closePaperModal(); },
     applyFilters: function() { applyFilters(); },
+    viewParams: {
+        register: function(view, codec) { VIEW_PARAMS[view] = codec; },
+        // A changed view parameter is a navigation step, so Back restores the previous one.
+        changed: function() {
+            navMode = 'push';
+            try { syncUrl(); } finally { navMode = null; }
+        },
+    },
     // Category divergences: papers where a specific category is divergent
     getCategoryDivergences: function(cat) {
         return divergencesList.filter(function(p) {
@@ -1073,6 +1086,7 @@ function stateFromUI() {
         cat: Array.from(activeCategories),
         paper: currentDetailPaper ? currentDetailPaper.id : null,
         rp: releaseParams,
+        vp: VIEW_PARAMS[currentView] ? VIEW_PARAMS[currentView].get() : {},
     };
 }
 
@@ -1124,6 +1138,7 @@ function applyStateToUI(s, ctx) {
         }
 
         switchView(s.view || 'start', release ? (s.rp || {}) : null, ctx);
+        if (VIEW_PARAMS[s.view]) VIEW_PARAMS[s.view].apply(s.vp || {});
         if (!release) applyFilters();
 
         if (s.paper) {
@@ -1154,6 +1169,7 @@ function serializeState(s) {
     if (s.stage && s.stage !== 'all') p.set('stage', s.stage);
     if (s.sort && s.sort !== 'relevance') p.set('sort', s.sort);
     if (s.cat && s.cat.length) p.set('cat', s.cat.join(','));
+    if (VIEW_PARAMS[s.view]) VIEW_PARAMS[s.view].keys.forEach(function(key) { if (s.vp && s.vp[key]) p.set(key, s.vp[key]); });
     if (s.paper) p.set('paper', s.paper);
     const qs = p.toString();
     return qs ? '#' + qs : '';
@@ -1186,6 +1202,8 @@ function deserializeState(hashStr) {
         cat: p.get('cat') ? p.get('cat').split(',').filter(function(c) { return CATEGORIES.indexOf(c) >= 0; }) : [],
         paper: p.get('paper') || null,
         rp: {},
+        // The registered view validates its own values in apply.
+        vp: VIEW_PARAMS[view] ? Object.fromEntries(VIEW_PARAMS[view].keys.map(function(key) { return [key, p.get(key) || '']; })) : {},
     };
 }
 

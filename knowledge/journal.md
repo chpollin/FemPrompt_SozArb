@@ -24,6 +24,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: Kategorien view as one linked lens map
+
+After the operator found the Kategorien view two disconnected halves, with a Landkarte whose similar boxes hid the density and a text-heavy round-one explorer below it, the view became one heatmap with four lenses, Werke, Einschluss, Übereinstimmung and Aktualität, and one detail panel that a cell or a header chip fills. The category chip row and the stacked explorer card were removed. Their percentage-point comparison moved into the Übereinstimmung lens and the panel's expert and LLM rates, and the standing list of LLM reasoning gave way to a reasoning shown on request for one work. Übereinstimmung is defined as coded by both over coded by at least one side, over the works both tracks coded, because a share of the expert set alone would hide what the LLM adds. Lens and selection reach the hash through a small codec seam in the router, since the router is the only writer of the URL. Two questions stay open, whether the frozen concept graph should keep supplying the concept chips, and whether the methods page should still promise a confusion matrix in this view.
+
 ### 2026-10-01: Korpus view as a review workbench
 
 After the operator found that the filters pushed the entries far down, the Korpus view received a sticky filter sidebar and a stage bar over the table, so that it supports conducting the review instead of showing the round-one comparison. The LLM, Human and Status columns gave way to a four-mark stage track, and the comparison stays reachable through the LLM and Expert:innen filters. Work lists for missing texts, open papers per reviewer and included works without coding or Assertion turn the exports into work packages. Coding and Assertions count per Work, because several corpus records share a Work. Two questions stay open, whether saved records of the human reviewer files should count as bewertet, as PRISM's `isDone` does for the active reviewer, and whether the default sort should stay LLM-Include first.

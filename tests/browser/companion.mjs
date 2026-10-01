@@ -1,5 +1,5 @@
 // Chromium acceptance run for the working Companion docs/index.html: start view, answer
-// pages, Argumentkarte, Literaturbild matrix, Wissensnetz, work view, Landkarte, legacy hashes, nav
+// pages, Argumentkarte, Literaturbild matrix, Wissensnetz, work view, Landkarte lenses, legacy hashes, nav
 // tooltips, the Korpus workbench (sidebar, year histogram, review stages, work lists,
 // exports, stage track) and reflow.
 import { chromium } from 'playwright';
@@ -236,65 +236,181 @@ try {
   check('Wissensnetz shows the network of review knowledge',
     await page.locator('#netz-graph').count() === 1 && await page.locator('#tab-wissensnetz[aria-pressed="true"]').count() === 1);
 
-  // Landkarte of the Kategorien view: every cell counts the works whose expert
-  // assessment carries both categories, recomputed here from the working data.
-  const expected = {};
-  for (const row of schema.groups.object) for (const col of schema.groups.perspective) {
-    expected[`${row}|${col}`] = vault.papers.filter((p) => p.human && p.human.decision &&
-      p.human.all_categories && p.human.all_categories[row] === 1 && p.human.all_categories[col] === 1).length;
-  }
+  // Landkarte of the Kategorien view: every lens value of every cell and header is
+  // recomputed here from the working data, independently of kategorien.js.
+  const assessedWorks = vault.papers.filter((p) => p.human && p.human.decision);
+  const isCoded = (v) => v === 0 || v === 1;
+  const ratio = (part, whole) => (whole ? part / whole : null);
+  const lensValue = (lensKey, cats) => {
+    const expertSet = assessedWorks.filter((p) => cats.every((c) => (p.human.all_categories || {})[c] === 1));
+    if (lensKey === 'werke') return expertSet.length;
+    if (lensKey === 'einschluss') return ratio(expertSet.filter((p) => p.human.decision === 'Include').length, expertSet.length);
+    if (lensKey === 'aktualitaet') {
+      const dated = expertSet.filter((p) => typeof p.year === 'number');
+      return ratio(dated.filter((p) => p.year >= 2025).length, dated.length);
+    }
+    const paired = assessedWorks.filter((p) => p.llm && p.llm.assessment_status === 'assessed' && p.llm.all_categories &&
+      cats.every((c) => isCoded((p.human.all_categories || {})[c]) && isCoded(p.llm.all_categories[c])));
+    const h = paired.filter((p) => cats.every((c) => p.human.all_categories[c] === 1));
+    const l = paired.filter((p) => cats.every((c) => p.llm.all_categories[c] === 1));
+    const both = h.filter((p) => l.includes(p)).length;
+    return ratio(both, h.length + l.length - both);
+  };
+  const lensKeys = ['werke', 'einschluss', 'uebereinstimmung', 'aktualitaet'];
+  const fmt = (lensKey, v) => (lensKey === 'werke' ? String(v) : `${Math.round(v * 100)} %`);
+  const near = (shown, v) => (v === null ? shown === '' : Math.abs(Number(shown) - v) < 1e-3);
+
+  await page.setViewportSize({ width: 1280, height: 800 });
   await page.goto(`${base}/index.html#view=vergleich`, { waitUntil: 'networkidle' });
   await page.waitForSelector('#landkarte .lk-table');
   const grid = await page.evaluate(() => ({
-    rows: [...document.querySelectorAll('#landkarte tbody th[scope="row"] .category-chip')].map((n) => n.dataset.cat),
-    cols: [...document.querySelectorAll('#landkarte thead th.lk-col .category-chip')].map((n) => n.dataset.cat),
-    cells: Object.fromEntries([...document.querySelectorAll('#landkarte tbody td')].map((td, i) => {
-      const button = td.querySelector('button.lk-cell');
-      return [i, button ? `${button.dataset.row}|${button.dataset.col}|${button.dataset.count}` : 'empty'];
-    })),
+    rows: [...document.querySelectorAll('#landkarte tbody th.lk-row')].map((n) => n.dataset.cat),
+    cols: [...document.querySelectorAll('#landkarte thead th.lk-col')].map((n) => n.dataset.cat),
+    cells: document.querySelectorAll('#landkarte tbody td button.lk-cell').length,
   }));
   check('the Landkarte crosses the four Gegenstand rows with the six Perspektive columns',
-    grid.rows.join() === schema.groups.object.join() && grid.cols.join() === schema.groups.perspective.join() &&
-    Object.keys(grid.cells).length === 24, JSON.stringify(grid.rows.concat(grid.cols)));
-  const mismatched = Object.values(grid.cells).filter((cell) => {
-    const [row, col, count] = cell.split('|');
-    return cell !== 'empty' && expected[`${row}|${col}`] !== Number(count);
-  });
-  check('every Landkarte cell counts the expert-assessed works carrying both categories',
-    mismatched.length === 0 && Object.values(grid.cells).filter((c) => c !== 'empty').length === Object.values(expected).filter(Boolean).length,
-    mismatched.join(' '));
-  check('the Landkarte work list is closed before a cell is chosen', await page.locator('#landkarte-works').isHidden());
+    grid.rows.join() === schema.groups.object.join() && grid.cols.join() === schema.groups.perspective.join() && grid.cells === 24,
+    JSON.stringify(grid));
+  check('the Werke lens is active and the detail panel closed before a choice',
+    await page.locator('#landkarte .lk-lens[aria-pressed="true"]').getAttribute('data-lens') === 'werke' &&
+    await page.locator('#landkarte-detail').isHidden() && !hashParams().has('lens') && !hashParams().has('sel'));
+  for (const lensKey of lensKeys) {
+    await page.locator(`#landkarte .lk-lens[data-lens="${lensKey}"]`).click();
+    const shown = await page.evaluate(() => ({
+      cells: [...document.querySelectorAll('#landkarte button.lk-cell')].map((b) => [b.dataset.row, b.dataset.col, b.dataset.value, b.textContent.trim()]),
+      heads: [...document.querySelectorAll('#landkarte th[data-cat]')].map((th) => [th.dataset.cat, th.dataset.value]),
+      legend: [...document.querySelectorAll('#landkarte-legend .lk-scale-val')].map((n) => n.textContent),
+    }));
+    const wrongCells = shown.cells.filter(([row, col, value, text]) => {
+      const v = lensValue(lensKey, [row, col]);
+      return !near(value, v) || text !== (v === null ? '–' : fmt(lensKey, v));
+    });
+    const wrongHeads = shown.heads.filter(([cat, value]) => !near(value, lensValue(lensKey, [cat])));
+    check(`every cell and header value of the lens ${lensKey} recomputes from the working data`,
+      wrongCells.length === 0 && wrongHeads.length === 0 && shown.cells.length === 24 && shown.heads.length === 10,
+      JSON.stringify(wrongCells.concat(wrongHeads).slice(0, 3)));
+    const values = shown.cells.map(([row, col]) => lensValue(lensKey, [row, col])).filter((v) => v !== null);
+    check(`the legend of the lens ${lensKey} spans the values the cells reach`,
+      shown.legend.join() === [fmt(lensKey, Math.min(...values)), fmt(lensKey, Math.max(...values))].join(), shown.legend.join());
+    check(`the lens ${lensKey} is pressed and reaches the hash`,
+      await page.locator(`#landkarte .lk-lens[data-lens="${lensKey}"]`).getAttribute('aria-pressed') === 'true' &&
+      (lensKey === 'werke' ? !hashParams().has('lens') : hashParams().get('lens') === lensKey));
+  }
+  await page.locator('#landkarte .lk-lens[data-lens="werke"]').click();
+
   const firstCell = page.locator('#landkarte button.lk-cell').first();
   await firstCell.click();
-  await page.waitForSelector('#landkarte-works:not([hidden])');
-  const cellCount = Number(await firstCell.getAttribute('data-count'));
-  const items = await page.evaluate(() => [...document.querySelectorAll('#landkarte-works .lk-item')].map((li) => ({
+  await page.waitForSelector('#landkarte-detail:not([hidden])');
+  const cellCount = Number(await firstCell.getAttribute('data-value'));
+  const items = await page.evaluate(() => [...document.querySelectorAll('#landkarte-detail .lk-item')].map((li) => ({
     decision: li.dataset.decision, label: li.querySelector('.lk-dec').textContent, href: li.querySelector('a').getAttribute('href'),
+    mark: li.querySelector('.lk-mark').textContent,
   })));
-  check('a Landkarte cell click lists its works and presses the cell',
-    await firstCell.getAttribute('aria-pressed') === 'true' && items.length === cellCount && cellCount > 0);
-  check('listed works link to the Korpus detail and name their decision in text',
+  check('a cell click selects it, lists its works and writes the selection into the hash',
+    await firstCell.getAttribute('aria-pressed') === 'true' && items.length === cellCount && cellCount > 0 &&
+    hashParams().get('sel') === `${schema.groups.object[0]},${schema.groups.perspective[0]}`, `${items.length} / ${cellCount} ${page.url()}`);
+  check('listed works link to the Korpus detail and name their decision in text and sign',
     items.every((item) => item.href.startsWith('#view=korpus&paper=') &&
-      ({ include: 'Include', exclude: 'Exclude', unclear: 'Unclear' })[item.decision] === item.label), JSON.stringify(items.slice(0, 2)));
+      ({ include: 'Include', exclude: 'Exclude', unclear: 'Unclear' })[item.decision] === item.label &&
+      ({ include: '+', exclude: '−', unclear: '?' })[item.decision] === item.mark), JSON.stringify(items.slice(0, 2)));
+  check('at 1280 x 800 the map and the detail panel with its first works stand in the first viewport', await page.evaluate(() => {
+    const inView = (el) => { const r = el.getBoundingClientRect(); return r.top >= 0 && r.bottom <= window.innerHeight && r.width > 0; };
+    return window.scrollY === 0 && inView(document.querySelector('#landkarte .lk-table')) && inView(document.querySelector('#landkarte .lk-lenses')) &&
+      inView(document.getElementById('landkarte-legend')) && inView(document.getElementById('landkarte-detail-title')) &&
+      inView(document.querySelector('#landkarte-detail .lk-item'));
+  }));
+  check('no LLM reasoning stands in the panel before it is asked for',
+    await page.locator('#landkarte-detail .lk-reason:visible').count() === 0 && await page.locator('#landkarte-detail .lk-why').count() > 0);
+  await page.locator('#landkarte-detail .lk-why').nth(0).click();
+  await page.locator('#landkarte-detail .lk-why').nth(1).click();
+  check('the LLM reasoning opens for one work at a time',
+    await page.locator('#landkarte-detail .lk-reason:visible').count() === 1 &&
+    await page.locator('#landkarte-detail .lk-why').nth(1).getAttribute('aria-expanded') === 'true' &&
+    await page.locator('#landkarte-detail .lk-why').nth(0).getAttribute('aria-expanded') === 'false');
   await firstCell.click();
-  check('a second click on the chosen cell closes its list',
-    await firstCell.getAttribute('aria-pressed') === 'false' && await page.locator('#landkarte-works').isHidden());
+  check('a second click on the chosen cell clears the selection',
+    await firstCell.getAttribute('aria-pressed') === 'false' && await page.locator('#landkarte-detail').isHidden() && !hashParams().has('sel'));
+
+  // A header selects its category alone; its expert and LLM rates are the canonical
+  // per-category rates of the round-one comparison.
+  const genderHead = page.locator('#landkarte th.lk-col[data-cat="Gender"] .category-chip');
+  await genderHead.click();
+  await page.waitForSelector('#landkarte-detail:not([hidden])');
+  const kappa = vault.kappa_by_category.Gender;
+  const rates = await page.locator('#landkarte-detail .lk-cmp-val').allInnerTexts();
+  check('a column header selects its category alone with the canonical expert and LLM rates',
+    await genderHead.getAttribute('aria-pressed') === 'true' && hashParams().get('sel') === 'Gender' &&
+    await page.locator('#landkarte-detail-title .category-chip').count() === 1 &&
+    await page.locator('#landkarte-detail .lk-item').count() === lensValue('werke', ['Gender']) &&
+    rates.join() === [`${Math.round(kappa.human_yes_rate)} %`, `${Math.round(kappa.agent_yes_rate)} %`].join(), rates.join());
+  await page.locator('#landkarte th.lk-row[data-cat="Prompting"] .category-chip').click();
+  check('a row header selects its category alone', hashParams().get('sel') === 'Prompting' &&
+    await page.locator('#landkarte th.lk-row[data-cat="Prompting"] .category-chip').getAttribute('aria-pressed') === 'true' &&
+    await genderHead.getAttribute('aria-pressed') === 'false');
+
+  await page.locator('#landkarte .lk-lens[data-lens="uebereinstimmung"]').click();
+  await page.locator('#landkarte button.lk-cell[data-row="Generative_KI"][data-col="Gender"]').click();
+  const sides = await page.evaluate(() => [...document.querySelectorAll('#landkarte-detail .lk-item')].map((li) => [li.dataset.side, li.querySelector('.lk-side [aria-hidden]').textContent]));
+  const order = { expert: 0, llm: 1, both: 2 };
+  check('under Übereinstimmung the panel lists divergent works first, each marked H, L or H+L',
+    sides.length > 0 && sides.every(([side, mark], i) => mark === ({ expert: 'H', llm: 'L', both: 'H+L' })[side] &&
+      (i === 0 || order[sides[i - 1][0]] <= order[side])) && sides.some(([side]) => side !== 'both'), JSON.stringify(sides.slice(0, 3)));
+  await page.locator('#landkarte button.lk-cell[data-row="Generative_KI"][data-col="Gender"]').hover();
+  check('hovering a cell crosses its row and column headers', await page.evaluate(() =>
+    document.querySelector('#landkarte th.lk-row[data-cat="Generative_KI"]').classList.contains('is-cross') &&
+    document.querySelector('#landkarte th.lk-col[data-cat="Gender"]').classList.contains('is-cross') &&
+    !document.querySelector('#landkarte th.lk-col[data-cat="Fairness"]').classList.contains('is-cross')));
+  check('the cell tooltip names the counts behind the agreement',
+    /Expert:innen \d+, LLM \d+, beide \d+/.test(await page.locator('.lk-tip').innerText()));
+
+  await page.goto(`${base}/about.html`, { waitUntil: 'networkidle' });
+  await page.goto(`${base}/index.html#view=vergleich&lens=aktualitaet&sel=Prompting%2CGender`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#landkarte-detail:not([hidden])');
+  check('a link with lens and selection restores both',
+    await page.locator('#landkarte .lk-lens[data-lens="aktualitaet"]').getAttribute('aria-pressed') === 'true' &&
+    await page.locator('#landkarte button.lk-cell[data-row="Prompting"][data-col="Gender"]').getAttribute('aria-pressed') === 'true');
+  await page.locator('#landkarte button.lk-cell[data-row="KI_Sonstige"][data-col="Fairness"]').click();
+  await page.goBack();
+  await page.waitForTimeout(150);
+  check('Back restores the previous selection',
+    hashParams().get('sel') === 'Prompting,Gender' &&
+    await page.locator('#landkarte button.lk-cell[data-row="Prompting"][data-col="Gender"]').getAttribute('aria-pressed') === 'true' &&
+    await page.locator('#landkarte button.lk-cell[aria-pressed="true"]').count() === 1, page.url());
+  await page.goto(`${base}/index.html#view=vergleich&lens=bogus&sel=Gender%2CPrompting`, { waitUntil: 'networkidle' });
+  await page.waitForTimeout(150);
+  check('an unknown lens or selection in the hash falls back and is dropped from it',
+    await page.locator('#landkarte .lk-lens[aria-pressed="true"]').getAttribute('data-lens') === 'werke' &&
+    await page.locator('#landkarte-detail').isHidden() && !hashParams().has('lens') && !hashParams().has('sel'), page.url());
+
   const keyCell = page.locator('#landkarte button.lk-cell').nth(7);
   await page.keyboard.press('Tab');
   await keyCell.focus();
   check('the tooltip of a cell shows on keyboard focus', await page.locator('.lk-tip').isVisible());
   await page.keyboard.press('Escape');
   check('Escape hides the cell tooltip', await page.locator('.lk-tip').isHidden());
+  await page.keyboard.press('ArrowRight');
+  const nextCell = page.locator('#landkarte button.lk-cell').nth(8);
+  check('arrow keys move the focus across the cells', await nextCell.evaluate((el) => el === document.activeElement));
   await page.keyboard.press('Enter');
-  await page.waitForSelector('#landkarte-works:not([hidden])');
-  check('a Landkarte cell opens its list by keyboard', await keyCell.getAttribute('aria-pressed') === 'true' &&
+  await page.waitForSelector('#landkarte-detail:not([hidden])');
+  check('a cell is selected by keyboard', await nextCell.getAttribute('aria-pressed') === 'true' &&
     await page.locator('#landkarte .lk-cell[aria-pressed="true"]').count() === 1);
-  const workLink = page.locator('#landkarte-works .lk-item a').first();
+  await page.locator('#landkarte .lk-lens[data-lens="einschluss"]').focus();
+  await page.keyboard.press('Space');
+  check('a lens is switched by keyboard', await page.locator('#landkarte .lk-lens[data-lens="einschluss"]').getAttribute('aria-pressed') === 'true' &&
+    hashParams().get('lens') === 'einschluss');
+  check('the lens transition runs on the cell fill', await nextCell.evaluate((el) => parseFloat(getComputedStyle(el).transitionDuration) > 0));
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  check('reduced motion switches the lens transition off', await nextCell.evaluate((el) =>
+    getComputedStyle(el).transitionDuration.split(',').every((d) => parseFloat(d) === 0)));
+  await page.emulateMedia({ reducedMotion: null });
+  const workLink = page.locator('#landkarte-detail .lk-item a').first();
   const workTitle = (await workLink.innerText()).trim();
   await workLink.click();
   await page.waitForSelector('#paper-modal.active');
   check('a listed work opens its Korpus detail', await visibleView() === 'view-korpus' &&
     (await page.locator('#modal-title').innerText()).trim() === workTitle);
+  await page.setViewportSize({ width: 1440, height: 900 });
 
   for (const [hash, view] of [['#chat', 'view-chat'], ['#wissensnetz', 'view-wissensnetz'], ['#literaturbild', 'view-literaturbild'],
     ['#korpus', 'view-korpus'], ['#vergleich', 'view-vergleich']]) {
@@ -552,14 +668,17 @@ try {
   }
   await page.setViewportSize({ width: 390, height: 844 });
 
-  await page.goto(`${base}/index.html#view=vergleich`, { waitUntil: 'networkidle' });
+  await page.goto(`${base}/index.html#view=vergleich&lens=uebereinstimmung`, { waitUntil: 'networkidle' });
   await page.waitForSelector('#landkarte button.lk-cell');
   await page.locator('#landkarte button.lk-cell').last().click();
-  await page.waitForSelector('#landkarte-works:not([hidden])');
-  check('at 390 px the Landkarte with an open work list scrolls only inside its own container', await page.evaluate(() => {
+  await page.waitForSelector('#landkarte-detail:not([hidden])');
+  check('at 390 px the Landkarte with an open panel scrolls only inside its own container', await page.evaluate(() => {
     const wrap = document.querySelector('#landkarte .lk-wrap');
-    return document.documentElement.scrollWidth <= window.innerWidth + 1 && wrap.clientWidth <= window.innerWidth;
+    return document.documentElement.scrollWidth <= window.innerWidth + 1 && wrap.clientWidth <= window.innerWidth &&
+      document.querySelector('#landkarte .lk-lenses').getBoundingClientRect().right <= window.innerWidth;
   }));
+  check('at 390 px the detail panel stands below the map', await page.evaluate(() =>
+    document.getElementById('landkarte-detail').getBoundingClientRect().top >= document.getElementById('landkarte-legend').getBoundingClientRect().bottom));
 
   await page.goto(`${base}/index.html#view=wissensnetz`, { waitUntil: 'networkidle' });
   await page.waitForSelector('#netz-graph');

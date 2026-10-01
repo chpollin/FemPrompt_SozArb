@@ -2,7 +2,7 @@
 // kategorien, wissenschat, and the release modules hosted by research-app). It loads
 // the real docs/index.html into jsdom so every element id exists, mocks fetch with the
 // on-disk data JSONs, and drives the render paths: data load, corpus table, delegated
-// row click, category explorer, the integrated Literaturbild matrix, Wissensnetz,
+// row click, Landkarte lenses, the integrated Literaturbild matrix, Wissensnetz,
 // answer and work views under the one router, chat UI, and the EC helpers.
 import { JSDOM } from 'jsdom';
 import { readFileSync } from 'node:fs';
@@ -140,23 +140,23 @@ await check('category chips share one grouped markup', async () => {
   }
 });
 
-await check('category explorer initializes on view switch', async () => {
+await check('the Landkarte initializes on view switch and replaces the old category explorer', async () => {
   window.switchView('vergleich');
-  await waitFor(() => doc.querySelectorAll('#kategorie-spektrum .category-chip').length > 0, 'spektrum cards');
-  const card = doc.querySelector('#kategorie-spektrum .category-chip[data-cat]');
-  card.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
-  await waitFor(() => doc.querySelector('#kategorie-detail .kdetail-header') !== null, 'detail rendered');
+  await waitFor(() => doc.querySelectorAll('#landkarte button.lk-cell').length === 24, 'landkarte cells');
+  if (doc.getElementById('kategorie-spektrum') || doc.getElementById('kategorie-detail')) throw new Error('old explorer remains');
 });
 
-await check('the Landkarte renders the Gegenstand x Perspektive cells and lists the works of a cell', async () => {
-  const cells = doc.querySelectorAll('#landkarte .lk-table tbody td');
-  if (cells.length !== 24) throw new Error('cells: ' + cells.length);
+await check('a Landkarte cell lists its works and a lens re-encodes the map, both kept in the store', async () => {
   const button = doc.querySelector('#landkarte button.lk-cell');
   button.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
-  const items = doc.querySelectorAll('#landkarte-works .lk-item');
-  if (button.getAttribute('aria-pressed') !== 'true' || items.length !== Number(button.dataset.count)) {
-    throw new Error('list ' + items.length + ' for count ' + button.dataset.count);
+  const items = doc.querySelectorAll('#landkarte-detail .lk-item');
+  if (button.getAttribute('aria-pressed') !== 'true' || items.length !== Number(button.dataset.value)) {
+    throw new Error('list ' + items.length + ' for value ' + button.dataset.value);
   }
+  doc.querySelector('#landkarte .lk-lens[data-lens="einschluss"]').dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
+  if (!button.querySelector('.lk-val').textContent.endsWith('%')) throw new Error('lens did not re-encode the cell');
+  const vp = EC.store.get().vp;
+  if (vp.lens !== 'einschluss' || vp.sel !== button.dataset.row + ',' + button.dataset.col) throw new Error(JSON.stringify(vp));
 });
 
 await check('one router: only research-app listens to hashchange', async () => {
