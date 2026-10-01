@@ -36,35 +36,34 @@ window.initWissensChat = function() {
 };
 
 function buildChatUI(savedKey) {
-    return '<form class="chat-setup" autocomplete="off" onsubmit="return false;">' +
+    return '<h2 class="chat-title" id="chat-title">Fragen an die veröffentlichten Aussagen</h2>' +
+    '<form class="chat-setup" autocomplete="off" onsubmit="return false;">' +
         '<div class="chat-key-row">' +
             '<label for="gemini-key">Gemini API Key</label>' +
             '<input type="password" id="gemini-key" placeholder="AIza..." value="' + EC.escapeHtml(savedKey) + '" autocomplete="off">' +
             '<a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener" class="chat-key-help">' +
-                '<i class="fas fa-key"></i> Key erstellen' +
+                '<i class="fas fa-key" aria-hidden="true"></i> Key erstellen' +
             '</a>' +
         '</div>' +
         '<p class="chat-key-note">' +
-            '<i class="fas fa-lock"></i> Der Key bleibt in diesem Browser-Tab. Frage und ausgewählte Forschungsdaten werden direkt an die Google API gesendet.' +
+            '<i class="fas fa-lock" aria-hidden="true"></i> Der Key bleibt in diesem Browser-Tab. Frage und ausgewählte Forschungsdaten werden direkt an die Google API gesendet.' +
         '</p>' +
     '</form>' +
-    '<div class="chat-messages" id="chat-messages">' +
+    '<div class="chat-messages" id="chat-messages" role="log" aria-live="polite" aria-labelledby="chat-title">' +
         '<div class="chat-welcome">' +
-            '<p class="chat-welcome-title">Recherche im Forschungskorpus</p>' +
-            '<p>Der Chat beantwortet Fragen anhand quellengeprüfter Aussagen und ihrer belegten Textpassagen. ' +
-                'Jede Referenz nennt Fundstelle, Werk und verwendete Publikationsfassung. KI-Quellenprüfung und fachliche Verifikation werden getrennt ausgewiesen.</p>' +
             '<div class="chat-suggestions">' +
-                '<button class="chat-suggestion">Welche Papers behandeln AI Literacy in der Sozialen Arbeit?</button>' +
-                '<button class="chat-suggestion">Welche Wirkungen von Chain-of-Thought Prompting auf Bias wurden berichtet?</button>' +
-                '<button class="chat-suggestion">Welche feministischen Perspektiven auf KI-Bias gibt es im Korpus?</button>' +
+                '<button type="button" class="chat-suggestion">Welche Papers behandeln AI Literacy in der Sozialen Arbeit?</button>' +
+                '<button type="button" class="chat-suggestion">Welche Wirkungen von Chain-of-Thought Prompting auf Bias wurden berichtet?</button>' +
+                '<button type="button" class="chat-suggestion">Welche feministischen Perspektiven auf KI-Bias gibt es im Korpus?</button>' +
             '</div>' +
         '</div>' +
     '</div>' +
     '<p class="chat-key-note" id="chat-evidence-status" role="status">Quellenindex wird geladen…</p>' +
     '<div class="chat-input-row">' +
-        '<textarea id="chat-input" placeholder="Frage zum Forschungskorpus stellen..." rows="1"></textarea>' +
-        '<button id="chat-send" class="chat-send-btn" title="Senden (Enter)">' +
-            '<i class="fas fa-paper-plane"></i>' +
+        '<label for="chat-input">Frage</label>' +
+        '<textarea id="chat-input" rows="1"></textarea>' +
+        '<button type="button" id="chat-send" class="chat-send-btn" title="Senden (Enter)" aria-label="Senden">' +
+            '<i class="fas fa-paper-plane" aria-hidden="true"></i>' +
         '</button>' +
     '</div>';
 }
@@ -132,7 +131,7 @@ async function sendMessage() {
         input.style.height = 'auto';
         if (!context.assertions.length) {
             messages[messages.length - 1].local = true;
-            messages.push({ role: 'model', complete: true, local: true, text:
+            messages.push({ role: 'model', complete: true, local: true, at: new Date(), text:
                 evidenceIndex.assertions.length
                     ? 'Zu dieser Frage wurden keine passenden quellengeprüften Aussagen gefunden. Daraus folgt nicht, dass es im Korpus keine Literatur zum Thema gibt. Bitte präzisieren Sie die Frage oder suchen Sie in der Korpusansicht. Es wurde keine Frage an die Google API gesendet.'
                     : 'Der öffentliche Quellenindex enthält derzeit keine Aussagen mit den erforderlichen Prüfbelegen. Eine inhaltliche Synthese ist deshalb noch nicht möglich. Die Literatur können Sie in der Korpusansicht durchsuchen. Es wurde keine Frage an die Google API gesendet.'
@@ -280,7 +279,7 @@ function callGemini(apiKey, context) {
     isStreaming = true;
     updateSendButton(true);
 
-    messages.push({ role: 'model', text: '', sources: context.sources, complete: false });
+    messages.push({ role: 'model', text: '', sources: context.sources, complete: false, at: new Date() });
     renderMessages();
 
     const systemPrompt = buildSystemPrompt(context);
@@ -436,7 +435,7 @@ function renderMessages() {
     if (!container || messages.length === 0) return;
 
     const html = messages.map(function(msg) {
-        const cls = msg.role === 'user' ? 'chat-msg-user' : 'chat-msg-model';
+        const cls = msg.role === 'user' ? 'chat-msg-user' : 'chat-msg-model' + (msg.local ? ' chat-msg-local' : '');
         let content;
         if (msg.role === 'model') {
             content = (msg.complete && msg.finalHtml) ? msg.finalHtml : renderMarkdown(msg.text || '');
@@ -444,6 +443,7 @@ function renderMessages() {
             content = EC.escapeHtml(msg.text);
         }
         let msgHtml = '<div class="chat-msg ' + cls + '">' +
+            (msg.role === 'model' ? buildMessageHead(msg) : '') +
             '<div class="chat-msg-content">' + content + '</div>';
         if (msg.complete && msg.citedPapers && msg.citedPapers.length > 0) {
             msgHtml += buildReferenceListHtml(msg.citedPapers);
@@ -454,6 +454,14 @@ function renderMessages() {
 
     container.innerHTML = html;
     container.scrollTop = container.scrollHeight;
+}
+
+// A model answer is a proposal that carries its provenance; a local notice is
+// not an answer and says that no provider request was made.
+function buildMessageHead(msg) {
+    if (msg.local) return '<p class="chat-msg-head">Hinweis ohne KI-Anfrage</p>';
+    const time = (msg.at || new Date()).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+    return '<p class="chat-msg-head">' + EC.escapeHtml('KI-Antwort, Vorschlag · ' + MODEL + ' · ' + time) + '</p>';
 }
 
 // Re-rendering the whole growing markdown on every SSE chunk is quadratic, so
@@ -525,7 +533,10 @@ function finalizeLastMessage() {
         if (messages.length > 1 && messages[messages.length - 2].role === 'user') {
             messages[messages.length - 2].local = true;
         }
-        result.html = renderMarkdown(lastMsg.text);
+        lastMsg.finalHtml = renderMarkdown(lastMsg.text);
+        lastMsg.citedPapers = [];
+        renderMessages(); // restyle as local notice, header included
+        return;
     }
 
     lastMsg.finalHtml = result.html;
@@ -552,11 +563,17 @@ function linkifyCitations(html, sources) {
     return { html: result, cited: cited };
 }
 
+// ISO timestamp to dd.mm.yyyy; anything else is shown as given.
+function germanDate(value) {
+    const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(value));
+    return match ? match[3] + '.' + match[2] + '.' + match[1] : String(value);
+}
+
 function reviewLabel(source) {
     const review = source.review;
     let label = source.status === 'publication-approved' ? 'Publikationsfreigegeben'
         : source.status === 'verified' ? 'Fachlich verifiziert' : 'KI-quellengeprüft';
-    if (review) label += ' · KI-Prüfung: ' + review.model + ' · ' + review.agent_id + ' · ' + review.reviewed_at;
+    if (review) label += ' · KI-Prüfung ' + review.model + ' · ' + germanDate(review.reviewed_at);
     return label;
 }
 
@@ -566,14 +583,19 @@ function buildReferenceListHtml(sources) {
     sources.forEach(function(source) {
         const url = sourceUrl(source.source_url);
         if (!url) return;
+        const review = source.review;
+        // Technical identifiers stay available for audit but out of the reading line.
+        const record = [source.id, review && review.agent_id, source.work_id, source.version_id,
+            source.statement_ref, review && review.reviewed_at].filter(Boolean).join(' · ');
         html += '<div class="chat-source">' +
             '<a href="' + EC.escapeHtml(url) + '" target="_blank" rel="noopener noreferrer">' +
-                EC.escapeHtml(source.id + ' · ' + (source.author_year || '') + ' · ' + source.title) + '</a>' +
+                EC.escapeHtml([source.author_year, source.title].filter(Boolean).join(' · ')) + '</a>' +
             '<p>' + EC.escapeHtml(source.locator + ' · ' + source.version_type + ' · ' + reviewLabel(source)) + '</p>' +
             '<blockquote>' + EC.escapeHtml(source.quote) + '</blockquote>' +
-            '<p><small>' + EC.escapeHtml(source.work_id + ' · ' + source.version_id + ' · ' + source.statement_ref) + '</small></p>' +
-            '<a class="chat-ref-item" href="#view=korpus&amp;paper=' + encodeURIComponent(source.record_id) +
-                '" data-paper-id="' + EC.escapeHtml(source.record_id) + '">Im Korpus ansehen</a>' +
+            '<a class="chat-ref-item" href="#view=werk&amp;id=' + encodeURIComponent(source.work_id) +
+                '" data-paper-id="' + EC.escapeHtml(source.record_id) + '">Werk ansehen</a>' +
+            '<details class="chat-source-record"><summary>Prüfnachweis</summary>' +
+                '<p>' + EC.escapeHtml(record) + '</p></details>' +
             '</div>';
     });
     return html + '</div>';
@@ -582,8 +604,8 @@ function buildReferenceListHtml(sources) {
 function showError(msg) {
     const container = document.getElementById('chat-messages');
     if (!container) return;
-    container.insertAdjacentHTML('beforeend', '<div class="chat-error">' +
-        '<i class="fas fa-exclamation-triangle"></i> ' + EC.escapeHtml(msg) + '</div>');
+    container.insertAdjacentHTML('beforeend', '<div class="chat-error" role="alert">' +
+        '<i class="fas fa-exclamation-triangle" aria-hidden="true"></i> ' + EC.escapeHtml(msg) + '</div>');
     container.scrollTop = container.scrollHeight;
 }
 
@@ -591,9 +613,10 @@ function updateSendButton(streaming) {
     const btn = document.getElementById('chat-send');
     if (!btn) return;
     btn.title = streaming ? 'Abbrechen' : 'Senden (Enter)';
+    btn.setAttribute('aria-label', streaming ? 'Abbrechen' : 'Senden');
     btn.innerHTML = streaming
-        ? '<i class="fas fa-stop"></i>'
-        : '<i class="fas fa-paper-plane"></i>';
+        ? '<i class="fas fa-stop" aria-hidden="true"></i>'
+        : '<i class="fas fa-paper-plane" aria-hidden="true"></i>';
 }
 
 })();

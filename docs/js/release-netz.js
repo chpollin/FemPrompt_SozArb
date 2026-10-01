@@ -55,14 +55,20 @@ function shapeOf(dimId, size) {
     }).join(' ') + '"/>';
 }
 
+// Neighbours come from subject fields. The coding basis and the screening category
+// groups describe the review process, not what a work addresses.
+function neighbourDims() {
+    return model.dims.filter(function (dim) { return dim.kind === 'field' && !dim.process; });
+}
+
 function defaultFields() {
-    return model.dims.map(function (dim) { return dim.id; }).filter(function (id) { return DEFAULT_FIELDS.indexOf(id) >= 0; });
+    return neighbourDims().map(function (dim) { return dim.id; }).filter(function (id) { return DEFAULT_FIELDS.indexOf(id) >= 0; });
 }
 
 function readFields(raw) {
     if (raw === 'none') return [];
     const picked = raw ? String(raw).split(',') : [];
-    const valid = model.dims.map(function (dim) { return dim.id; }).filter(function (id) { return picked.indexOf(id) >= 0; });
+    const valid = neighbourDims().map(function (dim) { return dim.id; }).filter(function (id) { return picked.indexOf(id) >= 0; });
     return valid.length ? valid : defaultFields();
 }
 
@@ -106,15 +112,18 @@ function termOptions(groups) {
 function shellHtml(groups) {
     return '<div class="controls netz-controls">' +
         '<label>Begriff <select id="netz-term">' + termOptions(groups) + '</select></label>' +
-        '<fieldset id="netz-fields" class="netz-fields"><legend>Nachbarn aus</legend>' + model.dims.map(function (dim) {
+        '<fieldset id="netz-fields" class="netz-fields"><legend>Nachbarn aus</legend>' + neighbourDims().map(function (dim) {
             return '<label class="netz-check"><input type="checkbox" value="' + EC.esc(dim.id) + '"> ' + EC.esc(dim.label) + '</label>';
         }).join('') + '</fieldset>' +
         '<label class="netz-works-toggle"><input type="checkbox" id="netz-works"> Werke zeigen</label>' +
         '</div>' +
         '<h2 id="netz-heading" class="netz-heading" tabindex="-1"></h2>' +
-        '<div id="netz-figure" class="netz-figure"></div>' +
+        '<div id="netz-summary"></div>' +
+        '<div class="netz-body">' +
+        '<div id="netz-figure" class="netz-figure" role="region" tabindex="0" aria-label="Netzgrafik, horizontal verschiebbar"></div>' +
         '<ul id="netz-legend" class="netz-legend" role="list"></ul>' +
         '<div id="netz-list-wrap" class="netz-list-wrap"></div>' +
+        '</div>' +
         '<section id="worklist-netz" class="worklist-section" aria-labelledby="worklist-netz-title" hidden></section>';
 }
 
@@ -152,7 +161,7 @@ function radialFigure(ego, neighbours, selected) {
         const sin = Math.sin(angle);
         const x = radius * cos;
         const y = radius * sin;
-        const label = labelOf(item);
+        const label = isWorkLevel(item) ? phrase(item) : labelOf(item);
         const end = radius + 16 + label.length * LABEL_CHAR;
         grow(x, y, 14);
         grow(end * cos, end * sin, 10);
@@ -200,7 +209,9 @@ function bipartiteFigure(ego, neighbours, selected) {
     const workWidth = works.reduce(function (max, work) { return Math.max(max, (work.authorYear || work.title).length + 2); }, 8) * LABEL_CHAR;
     const left = Math.max(140, workWidth + 40);
     const right = left + 380;
-    const termWidth = neighbours.reduce(function (max, item) { return Math.max(max, labelOf(item).length + 4); }, 8) * LABEL_CHAR;
+    const termWidth = neighbours.reduce(function (max, item) {
+        return Math.max(max, (isWorkLevel(item) ? phrase(item) : labelOf(item)).length + 4);
+    }, 8) * LABEL_CHAR;
     const total = right + 24 + termWidth + 16;
     const index = {};
     works.forEach(function (work, i) { index[work.id] = i; });
@@ -225,7 +236,7 @@ function bipartiteFigure(ego, neighbours, selected) {
         const y = round(yTerm(j));
         const token = model.token(item.dimId, item.key);
         const chosen = token === selected;
-        const label = labelOf(item);
+        const label = isWorkLevel(item) ? phrase(item) : labelOf(item);
         return '<g class="netz-item netz-term ' + dimClass(item.dimId) + (chosen ? ' is-selected' : '') + '" role="button" tabindex="-1" aria-pressed="' + chosen +
             '" data-act="edge" data-token="' + EC.esc(token) + '" aria-label="' + EC.esc(edgeName(ego, item) + ', Werke anzeigen') + '">' +
             '<rect class="netz-hit" x="' + (right - 6) + '" y="' + round(y - rowHeight / 2) + '" width="' + round(total - right + 6) + '" height="' + rowHeight + '"/>' +
@@ -283,7 +294,8 @@ function render(params) {
     const heading = root.querySelector('#netz-heading');
     if (!state.term) {
         heading.textContent = '';
-        figure.innerHTML = '<p class="empty-state">Kein Include-Werk trägt einen codierten Begriff.</p>';
+        figure.innerHTML = '<p class="empty-state">Kein veröffentlichtes eingeschlossenes Werk trägt einen codierten Begriff.</p>';
+        root.querySelector('#netz-summary').innerHTML = '';
         root.querySelector('#netz-legend').innerHTML = '';
         root.querySelector('#netz-list-wrap').innerHTML = '';
         list.hidden = true;
@@ -295,7 +307,10 @@ function render(params) {
     const chosen = neighbours.find(function (item) { return model.token(item.dimId, item.key) === state.edge; });
     const selected = chosen ? state.edge : '';
     const bipartite = state.works && wide.matches;
-    heading.innerHTML = EC.esc(labelOf(ego)) + '<span class="netz-heading-dim">' + EC.esc(model.dim(ego.dimId).label) + '</span>';
+    // The hidden comma keeps term and field apart in the heading's accessible name.
+    heading.innerHTML = EC.esc(labelOf(ego)) + '<span class="sr-only">, </span><span class="netz-heading-dim">' +
+        EC.esc(model.dim(ego.dimId).label) + '</span>';
+    root.querySelector('#netz-summary').innerHTML = EC.summaryLine(model.includes, [ego.dimId].concat(state.fields), false);
     const key = model.token(ego.dimId, ego.key) + '|' + (bipartite ? 'works' : 'radial');
     const scroll = figure.dataset.key === key ? figure.scrollLeft : null;
     if (neighbours.length) {
@@ -349,7 +364,7 @@ function onChange(event) {
         navigate({ works: target.checked });
     } else if (target.closest('#netz-fields')) {
         const checked = Array.from(root.querySelectorAll('#netz-fields input:checked')).map(function (box) { return box.value; });
-        const fields = model.dims.map(function (dim) { return dim.id; }).filter(function (id) { return checked.indexOf(id) >= 0; });
+        const fields = neighbourDims().map(function (dim) { return dim.id; }).filter(function (id) { return checked.indexOf(id) >= 0; });
         const edge = model.parseToken(current.edge);
         navigate({ fields: fields, edge: edge && fields.indexOf(edge.dimId) >= 0 ? current.edge : '' });
     }
@@ -388,7 +403,7 @@ EC.registerView('netz', {
     init: function (instance) {
         model = instance;
         root = document.getElementById('netz-root');
-        const groups = model.terms(model.includes);
+        const groups = model.terms(model.includes).filter(function (group) { return !group.dim.process; });
         groups.forEach(function (group) {
             group.values.forEach(function (item) { termTokens[model.token(item.dimId, item.key)] = true; });
         });

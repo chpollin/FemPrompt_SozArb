@@ -286,6 +286,95 @@ await check('stream abort restores controls without a spurious API error', async
   } finally { h.close(); }
 });
 
+await check('controls carry names and roles: heading, labelled input, labelled send button, log region', async () => {
+  const h = await harness();
+  try {
+    const doc = h.document;
+    assert.equal(doc.getElementById('chat-title').tagName, 'H2');
+    assert.ok(!doc.querySelector('.chat-welcome p'), 'no standing explanatory paragraph');
+    assert.ok(doc.querySelector('label[for="chat-input"]'));
+    assert.ok(doc.querySelector('label[for="gemini-key"]'));
+    const send = doc.getElementById('chat-send');
+    assert.equal(send.getAttribute('type'), 'button');
+    assert.equal(send.getAttribute('aria-label'), 'Senden');
+    assert.equal(send.querySelector('i').getAttribute('aria-hidden'), 'true');
+    assert.equal(doc.getElementById('chat-messages').getAttribute('role'), 'log');
+    assert.equal(doc.getElementById('chat-evidence-status').getAttribute('role'), 'status');
+    for (const icon of doc.querySelectorAll('#chat-container i')) assert.equal(icon.getAttribute('aria-hidden'), 'true');
+    for (const button of doc.querySelectorAll('.chat-suggestion')) assert.equal(button.getAttribute('type'), 'button');
+  } finally { h.close(); }
+});
+
+await check('error banner is an alert and the stop state is labelled', async () => {
+  const h = await harness({ respond: (_url, options) => new Promise((_resolve, reject) => {
+    options.signal.addEventListener('abort', () => reject(new DOMException('Aborted', 'AbortError')));
+  }) });
+  try {
+    h.send('AI literacy');
+    await waitFor(() => h.document.querySelector('.chat-error'));
+    assert.equal(h.document.querySelector('.chat-error').getAttribute('role'), 'alert');
+    h.send('AI literacy', 'fixture-key');
+    await waitFor(() => h.calls.length === 1);
+    const send = h.document.getElementById('chat-send');
+    assert.equal(send.getAttribute('aria-label'), 'Abbrechen');
+    assert.equal(send.querySelector('i').getAttribute('aria-hidden'), 'true');
+    send.click();
+    await waitFor(() => send.getAttribute('aria-label') === 'Senden');
+  } finally { h.close(); }
+});
+
+await check('model answer carries provenance header, local notice is set apart', async () => {
+  const h = await harness();
+  try {
+    h.send('Quantenchromodynamik');
+    await waitFor(() => h.document.querySelector('.chat-msg-model'));
+    const notice = h.document.querySelector('.chat-msg-model');
+    assert.ok(notice.classList.contains('chat-msg-local'));
+    assert.equal(notice.querySelector('.chat-msg-head').textContent, 'Hinweis ohne KI-Anfrage');
+    h.send('AI literacy', 'fixture-key');
+    await waitFor(() => h.document.querySelector('.chat-references'));
+    const answer = h.document.querySelectorAll('.chat-msg-model')[1];
+    assert.ok(!answer.classList.contains('chat-msg-local'));
+    assert.match(answer.querySelector('.chat-msg-head').textContent, /^KI-Antwort, Vorschlag · gemini-3-flash-preview · \d{2}:\d{2}$/);
+  } finally { h.close(); }
+});
+
+await check('withheld uncited answer is restyled as a local notice', async () => {
+  const h = await harness({ respond: () => streamed('An unsupported claim.') });
+  try {
+    h.send('AI literacy', 'fixture-key');
+    await waitFor(() => h.document.querySelector('.chat-msg-model')?.textContent.includes('keine gültigen Quellen-IDs'));
+    const notice = h.document.querySelector('.chat-msg-model');
+    assert.ok(notice.classList.contains('chat-msg-local'));
+    assert.equal(notice.querySelector('.chat-msg-head').textContent, 'Hinweis ohne KI-Anfrage');
+  } finally { h.close(); }
+});
+
+await check('reference list: work link, readable review line, identifiers only in the collapsed record', async () => {
+  const h = await harness();
+  try {
+    h.send('AI literacy', 'fixture-key');
+    await waitFor(() => h.document.querySelector('.chat-references'));
+    const refs = h.document.querySelector('.chat-references');
+    const link = refs.querySelector('.chat-ref-item');
+    assert.equal(link.textContent, 'Werk ansehen');
+    assert.ok(link.getAttribute('href').startsWith('#view=werk&id='));
+    assert.equal(link.getAttribute('href'), '#view=werk&id=' + encodeURIComponent(source.work_id));
+    assert.equal(link.dataset.paperId, 'LITERACY');
+    const details = refs.querySelector('details.chat-source-record');
+    assert.equal(details.querySelector('summary').textContent, 'Prüfnachweis');
+    const visible = refs.cloneNode(true);
+    visible.querySelector('details').remove();
+    for (const value of [review.agent_id, source.id, source.version_id, source.statement_ref]) {
+      assert.ok(details.textContent.includes(value), value);
+      assert.ok(!visible.textContent.includes(value), 'identifier outside details: ' + value);
+    }
+    assert.ok(visible.textContent.includes('Author (2026) · AI Literacy in Social Work'));
+    assert.ok(visible.textContent.includes('KI-Prüfung fixture-model · 05.09.2026'));
+    assert.ok(details.textContent.includes(review.reviewed_at));
+  } finally { h.close(); }
+});
+
 for (const result of tests) if (!result.ok) console.error('FAIL ' + result.name + '\n' + result.error);
 const passed = tests.filter((result) => result.ok).length;
 console.log(`${passed === tests.length ? 'PASS' : 'FAIL'} ${passed}/${tests.length} grounded chat tests`);

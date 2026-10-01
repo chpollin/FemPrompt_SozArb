@@ -11,9 +11,9 @@ const UNDECIDABLE = '__undecidable';
 const ABSENT = '__absent';
 const STUDY_FIELD = 'Studientyp';
 
-// The analysis vocabulary carries no display labels yet. A label or value_labels
-// entry in analysis_fields.json takes precedence as soon as the pipeline emits it;
-// until then the controlled identifier is shown without the AN_ prefix.
+// label, definition, value_labels and value_definitions in analysis_fields.json take
+// precedence when the pipeline emits them; without them the controlled identifier is
+// shown without the AN_ prefix.
 function humanise(identifier) {
     return String(identifier == null ? '' : identifier).replace(/^AN_/, '').replace(/_/g, ' ');
 }
@@ -35,8 +35,10 @@ function fieldDimension(field) {
         return value && typeof value === 'object' ? value.value : value;
     });
     const labels = Object.assign({}, field.value_labels || {});
+    const definitions = Object.assign({}, field.value_definitions || {});
     (field.values || []).forEach(function (value) {
         if (value && typeof value === 'object' && value.label) labels[value.value] = value.label;
+        if (value && typeof value === 'object' && value.definition) definitions[value.value] = value.definition;
     });
     // A single-valued field describes the whole work. Naming it "des Werks" keeps a
     // cross-tab from reading as if, say, one technique had been evaluated.
@@ -44,9 +46,13 @@ function fieldDimension(field) {
     return {
         id: field.name, kind: 'field', workLevel: workLevel,
         label: (field.label || humanise(field.name)) + (workLevel ? ' des Werks' : ''),
+        definition: typeof field.definition === 'string' ? field.definition : '',
+        // The coding basis records how a work was coded, not what it addresses.
+        process: field.name === 'AN_Coding_Basis',
         values: values.filter(function (value) { return value !== 'None'; }),
         statusKeys: [NONE, UNDECIDABLE, ABSENT],
         valueLabel: function (value) { return labels[value] || humanise(value); },
+        valueDefinition: function (value) { return typeof definitions[value] === 'string' ? definitions[value] : ''; },
     };
 }
 
@@ -70,10 +76,11 @@ function createModel(input) {
         const first = categoryByKey[members[0]] || {};
         const groupName = String(first.group || group);
         dims.push({
-            id: group, kind: 'group', workLevel: false, values: members.slice(),
+            id: group, kind: 'group', workLevel: false, process: false, values: members.slice(), definition: '',
             label: 'Kategoriegruppe ' + groupName.charAt(0).toUpperCase() + groupName.slice(1),
             statusKeys: [NONE, ABSENT],
             valueLabel: function (key) { return (categoryByKey[key] && categoryByKey[key].label) || humanise(key); },
+            valueDefinition: function (key) { return (categoryByKey[key] && categoryByKey[key].definition) || ''; },
         });
     });
     const dimById = {};
@@ -116,8 +123,14 @@ function createModel(input) {
             if (work.recordIds.indexOf(evidence.record_id) < 0) work.recordIds.push(evidence.record_id);
         });
     });
+    // Search covers bibliography plus every code and category the work carries,
+    // as identifier and as label.
     works.forEach(function (work) {
-        work.search = fold([work.title, work.authors, work.authorYear, work.year, work.doi, work.journal].join(' '));
+        const codes = [];
+        dims.forEach(function (dim) {
+            stateOf(work, dim.id).values.forEach(function (value) { codes.push(value, dim.valueLabel(value)); });
+        });
+        work.search = fold([work.title, work.authors, work.authorYear, work.year, work.doi, work.journal].concat(codes).join(' '));
     });
 
     const allWorks = Array.from(works.values()).sort(function (a, b) {
@@ -206,6 +219,18 @@ function createModel(input) {
         };
     }
 
+    // A zero can only be stated when no included work is still open for the axis.
+    // Pipeline figures decide where present; otherwise a coverage scope larger than
+    // the released Include works means coding of the scope is incomplete.
+    function codingComplete(selection, dimId) {
+        if (selection.some(function (work) { return stateOf(work, dimId).state === 'absent'; })) return false;
+        const pipeline = pipelineCoverage(dimId);
+        if (pipeline) return pipeline.not_coded + pipeline.withheld === 0;
+        const block = (landscape.meta || {}).analysis_coverage;
+        const total = block && block.scope && block.scope.work_total;
+        return typeof total !== 'number' || total <= includes.length;
+    }
+
     // "n von N eingeschlossenen Werken codiert": coded means any recorded state
     // (value, none, undecidable) in every named field. Per-field pipeline figures
     // cannot express "every field", so their smallest coded total is the bound.
@@ -242,7 +267,14 @@ function createModel(input) {
         const record = work.record;
         const category = record && (record.categories || []).find(function (item) { return item.key === key; });
         if (!category) return [];
-        return (category.evidence || []).map(function (passage) {
+        // A merged work can carry the same passage from two records; it is shown once.
+        const seen = new Set();
+        return (category.evidence || []).filter(function (passage) {
+            const text = String(passage.snippet || passage.term || '').replace(/\s+/g, ' ').trim();
+            if (seen.has(text)) return false;
+            seen.add(text);
+            return true;
+        }).map(function (passage) {
             return {
                 kind: 'quote', text: passage.snippet || passage.term || '', term: passage.term || '',
                 recordId: passage.source_record_id || record.id, versionId: passage.version_id || record.version_id,
@@ -333,6 +365,7 @@ function createModel(input) {
         works: allWorks, includes: includes, workById: workById,
         stateOf: stateOf, keysOf: keysOf, rowKeys: rowKeys, crossTab: crossTab,
         coverage: coverage, pipelineCoverage: pipelineCoverage, codedSummary: codedSummary, filterWorks: filterWorks,
+        codingComplete: codingComplete,
         evidenceFor: evidenceFor, categoryEvidence: categoryEvidence,
         token: token, parseToken: parseToken, termLabel: termLabel, worksWith: worksWith,
         neighbours: neighbours, terms: terms, fold: fold, humanise: humanise,

@@ -68,6 +68,11 @@
 
 .netz-figure { overflow-x: auto; }
 
+/* On narrow screens the figure cannot show its labels at a readable size, so the
+   table with the same terms and counts comes first and the figure follows. */
+.netz-body { display: flex; flex-direction: column; }
+@media (max-width: 40rem) { .netz-list-wrap { order: -1; } }
+
 .netz-graph {
     display: block;
     inline-size: 100%;
@@ -185,7 +190,7 @@ rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
 .netz-list button {
     min-block-size: 1.75rem;
     padding: 0 var(--space-sm);
-    border: 1px solid var(--gray-300);
+    border: 1px solid var(--gray-500);
     border-radius: var(--radius-sm);
     background: Canvas;
     color: var(--gray-900);

@@ -29,9 +29,9 @@ function metaLine(work) {
 }
 
 function stateText(state) {
-    if (state.state === 'none') return '<span aria-hidden="true">–</span> trifft nicht zu';
+    if (state.state === 'none') return 'nicht zutreffend';
     if (state.state === 'undecidable') return 'nicht entscheidbar';
-    if (state.state === 'absent') return '<span aria-hidden="true">?</span> noch nicht codiert';
+    if (state.state === 'absent') return 'noch nicht codiert';
     return '';
 }
 
@@ -46,7 +46,7 @@ function categorySection(work) {
         const label = (model.schema.categories.find(function (c) { return c.key === category.key; }) || {}).label || category.key;
         const quotes = model.categoryEvidence(work, category.key).map(function (item) {
             return '<blockquote class="evidence-quote">' + EC.highlight(item.text, item.term) + '</blockquote>' +
-                '<p class="evidence-locator">' + EC.esc((TEXT_SOURCE_LABELS[item.textSource] || 'Textgrundlage offen') + ' · Eintrag ' + item.recordId) + '</p>';
+                '<p class="evidence-locator">' + EC.esc(TEXT_SOURCE_LABELS[item.textSource] || 'Textgrundlage offen') + '</p>';
         }).join('');
         return '<div class="code-row" data-code="' + EC.esc(category.key) + '"><dt>' + EC.esc(label) + '</dt><dd>' +
             '<p class="code-values">' + EC.esc(LEVEL_LABELS[category.level] || ('Stufe ' + category.level)) + '</p>' + quotes + '</dd></div>';
@@ -60,22 +60,22 @@ function analysisSection(work) {
     const rows = fields.map(function (dim) {
         const state = model.stateOf(work, dim.id);
         const values = state.state === 'value' ? state.values.map(function (value) { return EC.esc(dim.valueLabel(value)); }).join(', ') : stateText(state);
+        // A correction reason is the agent's rationale, never evidence, so it is not set as a quotation.
         const correction = ((record.ai_correction && record.ai_correction.changes) || []).filter(function (change) {
             return change.path === '/analysis/fields/' + dim.id;
         }).map(function (change) {
-            return '<blockquote class="evidence-note">' + EC.esc(change.reason) + '</blockquote>' +
-                '<p class="evidence-locator">Korrekturbegründung · KI-Agent</p>';
+            return '<p class="rationale">Korrekturbegründung des KI-Agenten, kein Beleg. ' + EC.esc(change.reason) + '</p>';
         }).join('');
         return '<div class="code-row" data-code="' + EC.esc(dim.id) + '" data-state="' + state.state + '"><dt>' + EC.esc(dim.label) +
             '</dt><dd><p class="code-values">' + values + '</p>' + correction + '</dd></div>';
     }).join('');
     const notes = record.analysis && record.analysis.notes;
-    const actor = record.actor === 'agent' ? 'KI-Agent ' + record.reviewer : 'Fachexpert:in ' + record.reviewer;
+    const actor = record.actor === 'agent' ? 'des codierenden KI-Agenten' : 'der codierenden Fachexpertin oder des Fachexperten';
+    // The coding note explains the coding; it is no source passage and stays collapsed.
     return '<h3>Analysefelder</h3><dl class="code-list">' + rows + '</dl>' +
-        (notes ? '<figure class="evidence"><figcaption class="evidence-code">Codiernotiz</figcaption>' +
-            '<blockquote class="evidence-note">' + EC.esc(notes) + '</blockquote>' +
-            '<p class="evidence-locator">' + EC.esc(actor) + ' · keine feldbezogene Belegstelle erfasst</p></figure>'
-            : '<p class="evidence-missing">Für Analysefelder ist keine Belegstelle erfasst.</p>');
+        '<p class="evidence-missing">Für Analysefelder ist keine Belegstelle erfasst.</p>' +
+        (notes ? '<details class="rationale-record"><summary>Begründung ' + EC.esc(actor) + ', kein Beleg</summary>' +
+            '<p class="rationale">' + EC.esc(notes) + '</p></details>' : '');
 }
 
 function decisionLine(work) {
@@ -111,7 +111,7 @@ function technicalSection(work) {
             const correction = record.ai_correction;
             rows.push(['KI-Korrektur', correction.agent_id + ' · ' + correction.model + ' · ' + correction.corrected_at]);
         }
-        rows.push(['Codierung', (record.actor === 'agent' ? 'KI-Agent ' : 'Fachexpert:in ') + record.reviewer]);
+        rows.push(['Codierung', (record.actor === 'agent' ? 'codierender KI-Agent ' : 'Fachexpertin oder Fachexperte ') + record.reviewer]);
     } else {
         work.papers.forEach(function (paper) { rows.push(['Fassungs-ID ' + paper.id, paper.version_id]); });
     }
@@ -177,8 +177,8 @@ function korpusItem(work) {
     const study = studyOf(work).join(', ');
     return '<li class="korpus-item" data-work-id="' + EC.esc(work.id) + '">' +
         '<a class="korpus-title" href="' + EC.esc(EC.href({ view: 'werk', id: work.id })) + '">' + EC.esc(work.title) + '</a>' +
-        '<p class="work-meta">' + [work.authorYear, study, decisionLabel(decisionOf(work))].filter(Boolean).map(EC.esc).join(' · ') +
-        ' · ' + EC.statusMark(work.status) + '</p></li>';
+        '<p class="work-meta">' + [work.authorYear, study, decisionLabel(decisionOf(work))].filter(Boolean).map(EC.esc)
+            .concat([EC.statusMark(work.status)]).join(' · ') + '</p></li>';
 }
 
 function renderKorpusList(params) {
@@ -190,12 +190,16 @@ function renderKorpusList(params) {
     FACETS.forEach(function (facet) {
         const select = document.getElementById(facet.id);
         const value = params[facet.key] || '';
-        select.innerHTML = '<option value="">' + EC.esc(facet.all) + '</option>' + facetValues(facet).map(function (option) {
-            const count = model.works.filter(function (work) {
+        const options = facetValues(facet);
+        // A facet with one value filters nothing and is not offered.
+        select.closest('label').hidden = options.length < 2 && !value;
+        select.innerHTML = '<option value="">' + EC.esc(facet.all) + '</option>' + options.map(function (option) {
+            // Counts answer a search or filter, so they appear only while one is active.
+            const count = active ? ' (' + model.works.filter(function (work) {
                 return matches(work, params, facet.key) && facet.values(work).indexOf(option) >= 0;
-            }).length;
+            }).length + ')' : '';
             return '<option value="' + EC.esc(option) + '"' + (option === value ? ' selected' : '') + '>' +
-                EC.esc((facet.labelOf ? facet.labelOf(option) : option) + ' (' + count + ')') + '</option>';
+                EC.esc((facet.labelOf ? facet.labelOf(option) : option) + count) + '</option>';
         }).join('');
     });
 }

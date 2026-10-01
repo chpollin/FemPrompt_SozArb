@@ -11,6 +11,8 @@ const NAV_OF_VIEW = { frage: 'fragen' };
 let model = null;
 let currentView = null;
 let booted = false;
+// Set by go() so render() can tell a control change from a deep link, Back or Forward.
+let internalNavigation = false;
 
 function esc(value) {
     return String(value == null ? '' : value).replace(/[&<>"']/g, function (char) {
@@ -43,6 +45,7 @@ function hashOf(params) {
 // browser back restores the previous state; typing in a search box replaces it.
 function go(params, options) {
     const hash = hashOf(params);
+    internalNavigation = true;
     if (options && options.replace) {
         history.replaceState(null, '', hash);
         render();
@@ -70,12 +73,37 @@ function versionLabel(value) {
     return labels[value] || (value ? String(value).replace(/_/g, ' ') : '');
 }
 
+function germanDate(value) {
+    const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(value || ''));
+    return match ? match[3] + '.' + match[2] + '.' + match[1] : String(value || '');
+}
+
+// Agent identifiers are run paths; the public view names the role they played.
+const AGENT_ROLES = {
+    aggregation: 'KI-Agent der Zusammenführung', research_completion: 'KI-Agent der Recherche-Ergänzung',
+    source_review_check: 'KI-Agent der Quellenprüfung', grounded_chat: 'KI-Agent des Chats',
+};
+function agentRole(agentId) {
+    const name = String(agentId || '').split('/').pop();
+    return AGENT_ROLES[name] || 'KI-Agent';
+}
+
+// The stored term can be cut mid-word; the mark is widened to whole words.
 function highlight(text, term) {
     const body = String(text || '');
     const needle = String(term || '').trim();
-    const at = needle ? body.indexOf(needle) : -1;
-    if (at < 0) return esc(body);
-    return esc(body.slice(0, at)) + '<mark>' + esc(needle) + '</mark>' + esc(body.slice(at + needle.length));
+    let start = needle ? body.indexOf(needle) : -1;
+    if (start < 0) return esc(body);
+    let end = start + needle.length;
+    const letter = /[\p{L}\p{N}]/u;
+    while (start > 0 && letter.test(body[start - 1]) && letter.test(body[start])) start -= 1;
+    while (end < body.length && letter.test(body[end]) && letter.test(body[end - 1])) end += 1;
+    return esc(body.slice(0, start)) + '<mark>' + esc(body.slice(start, end)) + '</mark>' + esc(body.slice(end));
+}
+
+function screeningLabel(work) {
+    if (!work || !work.record) return 'nicht gescreent';
+    return 'Screening ' + work.record.decision;
 }
 
 function renderAssertion(assertion, options) {
@@ -89,6 +117,7 @@ function renderAssertion(assertion, options) {
             : esc(item.author_year || item.title);
         return '<li class="evidence-item"><blockquote class="evidence-quote">' + esc(item.quote) + '</blockquote>' +
             '<p class="evidence-locator">' + workLink + ' · ' + esc(item.locator) +
+            ' · <span class="screening-state">' + esc(screeningLabel(work)) + '</span>' +
             (item.version_type ? ' · ' + esc(versionLabel(item.version_type)) : '') +
             (url ? ' · <a href="' + esc(url) + '" target="_blank" rel="noopener">Quelle öffnen</a>' : '') + '</p></li>';
     }).join('');
@@ -98,8 +127,9 @@ function renderAssertion(assertion, options) {
         (assertion.topics && assertion.topics.length ? ' · ' + esc(assertion.topics.join(', ')) : '') + '</p>' +
         '<ul class="evidence-list" role="list">' + evidence + '</ul>' +
         '<details class="assertion-review"><summary>Prüfnachweis</summary>' +
-        '<p class="review-line">KI-Agent ' + esc(review.agent_id) + ' · Modell ' + esc(review.model) +
-        ' · geprüft ' + esc(review.reviewed_at) + '</p><p>' + esc(review.findings) + '</p></details></article>';
+        '<p class="review-line">' + esc(agentRole(review.agent_id)) + ' · Modell ' + esc(review.model) +
+        ' · geprüft am ' + esc(germanDate(review.reviewed_at)) + '</p><p>' + esc(review.findings) + '</p>' +
+        '<p class="review-line">Agentenkennung ' + esc(review.agent_id) + ' · Aussage ' + esc(assertion.id) + '</p></details></article>';
 }
 
 function registerView(name, view) { views[name] = view; }
@@ -126,14 +156,33 @@ function render() {
         node.hidden = node.dataset.viewRoot !== params.view;
     });
     currentView = params.view;
-    view.render(params, { changed: changed });
+    const external = !internalNavigation || !booted;
+    internalNavigation = false;
+    view.render(params, { changed: changed, external: external });
     if (!NAV_OF_VIEW[params.view] && params.view !== 'werk') lastParams[params.view] = params;
     updateNav(params.view);
-    document.title = (view.title ? view.title(params) + ' · ' : '') + SITE_TITLE;
-    if (changed && booted) {
-        const heading = document.querySelector('[data-view-root="' + params.view + '"] h1');
-        if (heading) { heading.setAttribute('tabindex', '-1'); heading.focus({ preventScroll: false }); }
+    const heading = visibleHeading();
+    // The tab title repeats the page heading.
+    const headingText = heading ? heading.textContent.trim() : '';
+    document.title = (headingText ? headingText + ' · ' : '') + SITE_TITLE;
+    // A deep link, Back or Forward into an open work list lands on that list.
+    const list = external ? document.querySelector('[data-view-root="' + params.view + '"] .worklist-section:not([hidden]) h2') : null;
+    if (list) {
+        list.setAttribute('tabindex', '-1');
+        list.focus({ preventScroll: true });
+        list.scrollIntoView({ block: 'start' });
+    } else if (changed && booted && heading) {
+        focusHeading(heading);
     }
+}
+
+function visibleHeading() {
+    return document.querySelector('[data-view-root]:not([hidden]) h1');
+}
+
+function focusHeading(heading) {
+    heading.setAttribute('tabindex', '-1');
+    heading.focus({ preventScroll: false });
 }
 
 registerView('aussagen', {
@@ -173,9 +222,20 @@ registerView('chat', {
     },
 });
 
+// The skip link moves focus to the visible view's heading without touching the hash,
+// which holds the view state.
+document.addEventListener('click', function (event) {
+    const link = event.target.closest && event.target.closest('.skip-link');
+    if (!link) return;
+    event.preventDefault();
+    const heading = visibleHeading();
+    if (heading) focusHeading(heading);
+});
+
 Object.assign(EC, {
     escapeHtml: esc, esc: esc, safeUrl: safeUrl, go: go, href: href, parseHash: parseHash,
     statusMark: statusMark, workCount: workCount, versionLabel: versionLabel, highlight: highlight,
+    germanDate: germanDate, agentRole: agentRole, screeningLabel: screeningLabel,
     renderAssertion: renderAssertion, registerView: registerView,
     // The grounded chat links a cited record to its Work.
     navigateToPaper: function (recordId) {

@@ -6,12 +6,12 @@ const EC = window.EC;
 
 // The one place that defines the research questions shown on the site: the main
 // question as start heading and, per sub-question, its wording, matrix presets, the
-// analysis fields it draws on and the assertion topics assigned to it. Canonical
-// wording and answer plan live in knowledge/project.md#research-questions and
+// analysis fields it draws on, what is not yet determinable for it (`limits`) and the
+// assertion topics assigned to it. Canonical wording and limits live in
+// knowledge/project.md#research-questions and
 // knowledge/analysis-methods.md#answering-the-research-questions.
-// Assertions carry topics rather than a sub-question; upgrade path is an explicit
-// sub-question field in the assertion schema, emitted by
-// src/publish/build_assertion_index.py, which then replaces the `topics` lists.
+// An assertion's `research_questions` decides its assignment; the `topics` lists
+// are the fallback while the assertion index carries no such field.
 const MAIN_QUESTION = 'Wie können Fachkräfte der Sozialen Arbeit verantwortlich mit LLMs arbeiten, und was zeigt die Literatur dazu?';
 const QUESTIONS = [
     {
@@ -20,6 +20,10 @@ const QUESTIONS = [
         // A task field follows once the codebook amendment adds it.
         maps: [{ rows: 'AN_Population', cols: 'AN_Prompting_Role' }],
         fields: ['AN_Population', 'AN_Prompting_Role'],
+        // A work coded only as not specific to social work describes no use in it.
+        outside: { field: 'AN_Population', value: 'Not_SW_Specific', label: 'Nicht spezifisch für die Soziale Arbeit' },
+        limits: 'Das Codebuch hat noch kein Feld für Aufgaben, die Nutzung lässt sich deshalb nicht nach Aufgaben abbilden. ' +
+            'Literatur zu Aufgaben ohne Bezug zu Bias ist möglicherweise unterrepräsentiert, weil die Suche auf Bias und Gender ausgerichtet war.',
         topics: [],
     },
     {
@@ -27,6 +31,8 @@ const QUESTIONS = [
         text: 'Welche Bias-Achsen und Schadensarten benennt die Literatur, und für welche Gruppen?',
         maps: [{ rows: 'AN_Bias_Axes', cols: 'AN_Harm_Types' }, { rows: 'AN_Bias_Axes', cols: 'AN_Population' }],
         fields: ['AN_Bias_Axes', 'AN_Harm_Types', 'AN_Population'],
+        limits: 'Die Definitionen der Bias-Achsen und Schadensarten sind noch nicht geschärft. ' +
+            'Zwei unabhängige Codierungen durch KI-Agenten weichen in beiden Feldern oft voneinander ab.',
         topics: [],
     },
     {
@@ -34,6 +40,7 @@ const QUESTIONS = [
         text: 'Welche Prompting-Techniken und Schutzmaßnahmen werden vorgeschlagen, demonstriert oder evaluiert, zu welchem Zweck, auf welcher Stufe und mit welchen berichteten Wirkungen und Grenzen?',
         maps: [{ rows: 'AN_Prompt_Techniques', cols: 'AN_Prompting_Role' }, { rows: 'AN_Mitigation_Stage', cols: 'AN_Mitigation_Status' }],
         fields: ['AN_Prompt_Techniques', 'AN_Prompting_Role', 'AN_Mitigation_Stage', 'AN_Mitigation_Status'],
+        limits: 'Der Status einer Maßnahme ist ein Wert je Werk. Welche Technik oder Stufe evaluiert, demonstriert oder nur vorgeschlagen ist, lässt sich daraus nicht bestimmen.',
         topics: ['Prompting and Bias Mitigation'],
     },
     {
@@ -41,6 +48,8 @@ const QUESTIONS = [
         text: 'Welche Kompetenzen und organisationalen Voraussetzungen nennt die Literatur, und wo greifen allgemeine Prompting-Anleitungen für die Soziale Arbeit zu kurz?',
         maps: [{ rows: 'AN_Mitigation_Stage', cols: 'AN_Prompting_Role' }],
         fields: ['AN_Mitigation_Stage', 'AN_Prompting_Role'],
+        limits: 'Das externe Rahmenwerk allgemeiner Prompting-Anleitungen ist noch nicht benannt. ' +
+            'Wo solche Anleitungen für die Soziale Arbeit zu kurz greifen, ist deshalb noch nicht bestimmbar.',
         topics: ['AI Literacy'],
     },
 ];
@@ -64,27 +73,37 @@ function renderStart() {
             return '<a class="sq-matrix-link" href="' + EC.esc(matrixHref(map)) + '">' + EC.esc(mapLabel(map)) + '</a>';
         }).join(' · ');
         return '<li class="sq-item" data-sq="' + item.id + '"><a class="sq-link" href="' + EC.esc(EC.href({ view: 'frage', sq: item.id })) + '">' +
-            EC.esc(item.text) + '</a>' + EC.summaryLine(model.includes, item.fields, false) +
+            EC.esc(item.text) + '</a>' + EC.summaryLine(model.includes, item.fields, false, '', { status: true }) +
             (maps ? '<p class="sq-maps">Matrix ' + maps + '</p>' : '') + '</li>';
     }).join('');
 }
 
+// "SQ3", "sq3", 3 and "3" all name the third sub-question.
+function questionIds(value) {
+    return (Array.isArray(value) ? value : [value]).map(function (entry) {
+        const match = /(\d+)/.exec(String(entry == null ? '' : entry));
+        return match ? match[1] : '';
+    }).filter(Boolean);
+}
+
 function findingsFor(item) {
+    const assigned = model.assertions.some(function (assertion) { return assertion.research_questions != null; });
     return model.assertions.filter(function (assertion) {
+        if (assigned) return questionIds(assertion.research_questions).indexOf(item.id) >= 0;
         return (assertion.topics || []).some(function (topic) { return item.topics.indexOf(topic) >= 0; });
     });
 }
 
 function openSection(item) {
-    return item.fields.filter(function (field) { return model.dim(field); }).map(function (field) {
+    const limits = item.limits ? '<p class="open-limits">' + EC.esc(item.limits) + '</p>' : '';
+    return limits + item.fields.filter(function (field) { return model.dim(field); }).map(function (field) {
         const dim = model.dim(field);
         const own = model.coverage(model.includes, field);
         const pipeline = model.pipelineCoverage(field);
         const notCoded = pipeline && pipeline.not_coded != null ? pipeline.not_coded : own.not_coded;
         const undecidable = pipeline && pipeline.undecidable != null ? pipeline.undecidable : own.undecidable;
-        // One denominator per line: the pipeline scope when its figures are used, else the released works.
-        const inScope = pipeline && pipeline.in_scope != null ? pipeline.in_scope : own.in_scope;
-        const parts = ['<span aria-hidden="true">?</span> ' + notCoded + ' noch nicht codiert', undecidable + ' nicht entscheidbar'];
+        // The denominator stands once in the summary line at the top of the page.
+        const parts = [notCoded + ' noch nicht codiert', undecidable + ' nicht entscheidbar'];
         if (pipeline && pipeline.absent) parts.push(pipeline.absent + ' ohne Angabe');
         if (pipeline && pipeline.withheld != null) parts.push(pipeline.withheld + ' zurückgehalten');
         const open = model.includes.filter(function (work) {
@@ -92,7 +111,7 @@ function openSection(item) {
             return state === 'absent' || state === 'undecidable';
         });
         return '<div class="open-field" data-field="' + EC.esc(field) + '"><h3>' + EC.esc(dim.label) + '</h3>' +
-            '<p class="denominator">' + inScope + ' Include-Werke · ' + parts.join(' · ') + '</p>' +
+            '<p class="denominator">' + parts.join(' · ') + '</p>' +
             (open.length ? '<ul class="open-works" role="list">' + open.map(function (work) {
                 const state = model.stateOf(work, field).state === 'undecidable' ? 'nicht entscheidbar' : 'noch nicht codiert';
                 return '<li><a href="' + EC.esc(EC.href({ view: 'werk', id: work.id })) + '">' + EC.esc(work.authorYear || work.title) +
@@ -105,9 +124,9 @@ function fieldValuesText(work, field) {
     const dim = model.dim(field);
     const state = model.stateOf(work, field);
     if (state.state === 'value') return state.values.map(function (value) { return EC.esc(dim.valueLabel(value)); }).join(', ');
-    if (state.state === 'none') return '<span aria-hidden="true">–</span> trifft nicht zu';
+    if (state.state === 'none') return 'nicht zutreffend';
     if (state.state === 'undecidable') return 'nicht entscheidbar';
-    return '<span aria-hidden="true">?</span> noch nicht codiert';
+    return 'noch nicht codiert';
 }
 
 function worksSection(item) {
@@ -115,19 +134,34 @@ function worksSection(item) {
     // A work-level value such as the work's status alone does not make a work
     // contribute; it needs a code of the question's own subject fields.
     const subject = fields.filter(function (field) { return !model.dim(field).workLevel; });
-    const works = model.includes.filter(function (work) {
+    const coded = model.includes.filter(function (work) {
         return subject.some(function (field) { return model.stateOf(work, field).state === 'value'; });
     });
-    if (!works.length) return '<p class="empty-state">Kein veröffentlichtes Werk trägt einen Code in diesen Feldern.</p>';
-    return '<p class="worklist-count">' + EC.esc(EC.workCount(works.length)) + ' mit mindestens einem Code in diesen Feldern</p>' +
-        '<ol class="worklist" role="list">' + works.map(function (work) {
-            return '<li class="work-item" data-work-id="' + EC.esc(work.id) + '"><h3 class="work-title"><a href="' +
-                EC.esc(EC.href({ view: 'werk', id: work.id })) + '">' + EC.esc(work.title) + '</a></h3>' +
-                '<p class="work-meta">' + EC.esc(work.authorYear) + ' · ' + EC.statusMark(work.status) + '</p>' +
+    const outside = item.outside && model.dim(item.outside.field) ? item.outside : null;
+    const isOutside = function (work) {
+        const values = model.stateOf(work, outside.field).values;
+        return values.length === 1 && values[0] === outside.value;
+    };
+    const works = outside ? coded.filter(function (work) { return !isOutside(work); }) : coded;
+    const rest = outside ? coded.filter(isOutside) : [];
+    const list = function (selection, level) {
+        return '<ol class="worklist" role="list">' + selection.map(function (work) {
+            return '<li class="work-item" data-work-id="' + EC.esc(work.id) + '"><h' + level + ' class="work-title"><a href="' +
+                EC.esc(EC.href({ view: 'werk', id: work.id })) + '">' + EC.esc(work.title) + '</a></h' + level + '>' +
+                '<p class="work-meta">' + [work.authorYear].filter(Boolean).map(EC.esc).concat([EC.statusMark(work.status)]).join(' · ') + '</p>' +
                 '<dl class="code-list code-list--compact">' + fields.map(function (field) {
                     return '<div class="code-row"><dt>' + EC.esc(model.dim(field).label) + '</dt><dd>' + fieldValuesText(work, field) + '</dd></div>';
                 }).join('') + '</dl></li>';
         }).join('') + '</ol>';
+    };
+    const main = works.length
+        ? '<p class="worklist-count">' + EC.esc(EC.workCount(works.length)) + ' mit mindestens einem Code in diesen Feldern</p>' + list(works, 3)
+        : '<p class="empty-state">Kein veröffentlichtes eingeschlossenes Werk trägt einen Code in diesen Feldern.</p>';
+    if (!rest.length) return main;
+    return main + '<section class="outside-group" data-group="outside" aria-labelledby="frage-outside-title">' +
+        '<h3 id="frage-outside-title">' + EC.esc(outside.label) + '</h3>' +
+        '<p class="worklist-count">' + EC.esc(EC.workCount(rest.length)) + ', in ' + EC.esc(model.dim(outside.field).label) +
+        ' nur als ' + EC.esc(model.dim(outside.field).valueLabel(outside.value)) + ' codiert</p>' + list(rest, 4) + '</section>';
 }
 
 function renderAnswer(params) {
@@ -143,27 +177,23 @@ function renderAnswer(params) {
         return '<div class="answer-map"><h3 id="' + id + '">' + EC.esc(mapLabel(map)) + '</h3>' +
             EC.coverageLine(model.includes, map.rows, 'rows', false) +
             (map.rows !== map.cols ? EC.coverageLine(model.includes, map.cols, 'cols', false) : '') +
+            EC.matrixCaptionHtml(map.rows, map.cols) +
             '<div class="matrix-wrap" role="region" tabindex="0" aria-labelledby="' + id + '">' +
             EC.matrixTable(model.includes, map.rows, map.cols, { cellHref: function (row, col) { return matrixHref(map, row + '|' + col); } }) +
             '</div><p class="answer-map-link"><a href="' + EC.esc(matrixHref(map)) + '">In der Matrix öffnen</a></p></div>';
     }).join('');
     root.innerHTML = '<article class="answer" data-sq="' + item.id + '">' +
         '<h1>' + EC.esc(item.text) + '</h1>' +
-        EC.summaryLine(model.includes, item.fields, false, 'Was die bisher geprüfte Literatur zeigt') +
+        EC.summaryLine(model.includes, item.fields, false, 'Was die bisher geprüfte Literatur zeigt', { status: true }) +
         '<section class="answer-part" id="frage-befunde" aria-labelledby="frage-befunde-title"><h2 id="frage-befunde-title">Befunde</h2>' +
         (findings.length ? findings.map(function (assertion) { return EC.renderAssertion(assertion, { level: 3 }); }).join('')
             : '<p class="empty-state">Zu dieser Frage liegt noch keine KI-quellengeprüfte oder fachlich verifizierte Aussage vor.</p>') +
         '</section>' +
-        '<section class="answer-part" id="frage-karte" aria-labelledby="frage-karte-title"><h2 id="frage-karte-title">Karte</h2>' + maps +
+        '<section class="answer-part" id="frage-matrix" aria-labelledby="frage-matrix-title"><h2 id="frage-matrix-title">Matrix</h2>' + maps +
         '<p class="mark-legend">' + EC.markLegendHtml() + '</p></section>' +
         '<section class="answer-part" id="frage-offen" aria-labelledby="frage-offen-title"><h2 id="frage-offen-title">Offen</h2>' + openSection(item) + '</section>' +
         '<section class="answer-part" id="frage-werke" aria-labelledby="frage-werke-title"><h2 id="frage-werke-title">Werke</h2>' + worksSection(item) + '</section>' +
         '</article>';
-}
-
-function germanDate(value) {
-    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value || ''));
-    return match ? match[3] + '.' + match[2] + '.' + match[1] : String(value || '');
 }
 
 function renderMethode() {
@@ -176,21 +206,29 @@ function renderMethode() {
             return '<dt>' + EC.esc(category.label) + '</dt><dd>' + EC.esc(category.definition) + '</dd>';
         }).join('') + '</dl>';
     }).join('');
+    // Value definitions appear once the pipeline emits them; until then the values are listed.
     const fields = model.dims.filter(function (dim) { return dim.kind === 'field'; }).map(function (dim) {
-        return '<dt>' + EC.esc(dim.label) + '</dt><dd>' + dim.values.map(function (value) { return EC.esc(dim.valueLabel(value)); }).join(' · ') + '</dd>';
+        const defined = dim.values.some(function (value) { return dim.valueDefinition(value); });
+        const values = defined
+            ? '<dl class="value-definitions">' + dim.values.map(function (value) {
+                return '<dt>' + EC.esc(dim.valueLabel(value)) + '</dt><dd>' + EC.esc(dim.valueDefinition(value)) + '</dd>';
+            }).join('') + '</dl>'
+            : '<p>' + dim.values.map(function (value) { return EC.esc(dim.valueLabel(value)); }).join(' · ') + '</p>';
+        return '<dt>' + EC.esc(dim.label) + '</dt><dd>' + (dim.definition ? '<p>' + EC.esc(dim.definition) + '</p>' : '') + values + '</dd>';
     }).join('');
     document.getElementById('methode-root').innerHTML =
         '<section aria-labelledby="methode-pruefstand"><h2 id="methode-pruefstand">Prüfstand</h2><dl class="definition-list mark-definitions">' +
         '<dt><span aria-hidden="true">◆</span> ' + EC.esc(model.publicLabel) + '</dt><dd>Ein KI-Agent hat Codierung und Belegstellen gegen die Quelle geprüft. ' +
         'Agent, Modell und Prüfzeitpunkt stehen bei jedem Werk. Eine fachliche Verifikation ist damit nicht verbunden.</dd>' +
         '<dt><span aria-hidden="true">●</span> fachlich verifiziert</dt><dd>Eine Fachexpertin oder ein Fachexperte hat die Codierung geprüft und angenommen.</dd>' +
-        '<dt><span aria-hidden="true">–</span> trifft nicht zu</dt><dd>Das Feld ist codiert, und keiner seiner Werte trifft auf das Werk zu.</dd>' +
+        '<dt>n. z. nicht zutreffend</dt><dd>Das Feld ist codiert, und keiner seiner Werte trifft auf das Werk zu.</dd>' +
         '<dt>n. e. nicht entscheidbar</dt><dd>Das Feld ist codiert, aber die Quelle erlaubt keine Entscheidung.</dd>' +
-        '<dt><span aria-hidden="true">?</span> noch nicht codiert</dt><dd>Für das Werk liegt in diesem Feld noch keine Codierung vor.</dd></dl></section>' +
+        '<dt>noch nicht codiert</dt><dd>Für das Werk liegt in diesem Feld noch keine Codierung vor.</dd>' +
+        '<dt>n. b. nicht bestimmbar</dt><dd>Eine leere Zelle, solange eingeschlossene Werke noch nicht codiert sind. Eine 0 steht erst, wenn die Codierung der Auswahl vollständig ist.</dd></dl></section>' +
         '<section aria-labelledby="methode-umfang"><h2 id="methode-umfang">Umfang</h2>' +
         '<p>Die Veröffentlichung zeigt den bereits quellengeprüften Teil des Literaturreviews, nicht den abgeschlossenen Review. ' +
         'Ein Werk, das hier fehlt, ist zurückgehalten oder noch in Bearbeitung. Sein Fehlen ist keine Ausschlussentscheidung.' +
-        (meta.search_cutoff ? ' Der Suchstand ist der ' + EC.esc(germanDate(meta.search_cutoff)) + '.' : '') + '</p>' +
+        (meta.search_cutoff ? ' Der Suchstand ist der ' + EC.esc(EC.germanDate(meta.search_cutoff)) + '.' : '') + '</p>' +
         '<p>Ein Werk wird eingeschlossen, wenn Technik- und Sozialdimension je mindestens eine Kategorie mit ja tragen. ' +
         'Tragen beide höchstens teilweise zutreffende Kategorien, bleibt es unklar, und fehlt einer Dimension jede Kategorie, wird es ausgeschlossen. ' +
         'Die Analysefelder werden nur für eingeschlossene Werke codiert. Ein Feld ist eine Liste von Codes je Werk, eine Zelle der Matrix ' +
