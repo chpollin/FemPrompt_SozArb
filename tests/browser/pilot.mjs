@@ -1131,7 +1131,39 @@ try {
     /status=erfasst/.test(filtered.url) && /cats=Gender/.test(filtered.url), filtered);
   await filterPage.click('.pt-cat-filter .category-chip[data-cat="Gender"]');
   check('URL state: removing a filter updates the URL', !/cats=/.test(new URL(filterPage.url()).search), filterPage.url());
+  check('assignment: without an assignment file there is no Zuteilung filter',
+    await filterPage.evaluate(() => !document.querySelector('.pt-assignee-seg')));
   await filterPage.close();
+
+  // The Zuteilung segment narrows the list, combines with the status filter and keeps
+  // its state in the URL. The assignment file is a fixture over the pilot corpus.
+  const assignContext = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  await installFixtureRoutes(assignContext);
+  await assignContext.route('**/data/screening/assignment.json', (route) => route.fulfill({ contentType: 'application/json', body: JSON.stringify({
+    schema: 'femprompt-prisma-assignment/1.0', reviewers: [{ key: 'sabine', label: 'Sabine' }, { key: 'susi', label: 'Susi' }],
+    assigned_on: '2026-10-01', rule: 'pilot fixture', assignments: { 'PILOT-A': 'sabine', 'PILOT-B': 'susi', AIGLDZ4C: 'susi' } }) }));
+  const assignPage = await assignContext.newPage();
+  await assignPage.goto(base + '/prisma.html?status=offen');
+  await assignPage.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('.pt-assignee-seg'), null, { timeout: 15000 });
+  const listIds = () => assignPage.evaluate(() => Array.from(document.querySelectorAll('#pt-corpus-list .pt-nav-item'))
+    .map((el) => window.EC.getAllPapers()[parseInt(el.dataset.i, 10)].id));
+  const allIds = await listIds();
+  const labelled = await assignPage.evaluate(() => document.querySelectorAll('#pt-corpus-list .pt-nav-assignee').length);
+  await assignPage.click('.pt-assignee-seg [data-assignee="susi"]');
+  const susiIds = await listIds();
+  const assignState = await assignPage.evaluate(() => ({
+    pressed: document.querySelector('.pt-assignee-seg [aria-pressed="true"]')?.dataset.assignee,
+    labels: document.querySelectorAll('#pt-corpus-list .pt-nav-assignee').length,
+    url: location.search
+  }));
+  check('assignment: the Zuteilung segment narrows the open list to the assignee',
+    allIds.length === 3 && labelled === 3 && susiIds.join('|') === 'PILOT-B|AIGLDZ4C' && assignState.pressed === 'susi' &&
+      assignState.labels === 0 && /assignee=susi/.test(assignState.url) && /status=offen/.test(assignState.url),
+    { allIds, labelled, susiIds, assignState });
+  await assignPage.reload();
+  await assignPage.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('.pt-assignee-seg'), null, { timeout: 15000 });
+  check('assignment: the selected assignee is restored from the URL', (await listIds()).join('|') === 'PILOT-B|AIGLDZ4C');
+  await assignContext.close();
 
   // 9 the pending-reading gate and the out-of-order load, each in a fresh profile so the
   // full-text cache is empty and the delayed route is really in flight

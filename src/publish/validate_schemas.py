@@ -23,12 +23,18 @@ SCHEMAS = REPO / "schemas"
 # schema stem -> repository glob patterns relative to the repository root
 BINDINGS: dict[str, tuple[str, ...]] = {
     "femprompt-completion-package-1.0": ("generated/completion/completion-package.json",),
+    "femprompt-prisma-assignment-1.0": ("docs/data/screening/assignment.json",),
     "femprompt-prisma-reviewer-0.5": ("docs/data/screening/*.json",),
     "femprompt-source-readiness-0.2": (
         "generated/source-acquisition/codex-websearch-2026/source-readiness.json",
     ),
     "femprompt-source-version-bindings-0.2": ("corpus/source_version_bindings.json",),
     "femprompt-work-version-registry-0.1": ("corpus/work_version_registry.json",),
+}
+# Files a glob above matches although another binding describes them. The reviewer
+# split shares the screening folder with the reviewer files without being one.
+EXCLUDED: dict[str, tuple[str, ...]] = {
+    "femprompt-prisma-reviewer-0.5": ("docs/data/screening/assignment.json",),
 }
 
 
@@ -40,7 +46,8 @@ def bound_files(stem: str, repo: Path = REPO) -> list[Path]:
     paths: list[Path] = []
     for pattern in BINDINGS[stem]:
         paths.extend(sorted(repo.glob(pattern)))
-    return paths
+    excluded = {repo / name for name in EXCLUDED.get(stem, ())}
+    return [path for path in paths if path not in excluded]
 
 
 def validate_file(stem: str, path: Path) -> list[str]:

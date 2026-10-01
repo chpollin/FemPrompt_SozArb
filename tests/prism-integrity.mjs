@@ -152,5 +152,28 @@ export async function runIntegrityChecks(root) {
     check('folder change: in-memory records of the previous folder are discarded',
       switched === true && !T.getState().reviewers.cp);
   }
+
+  // 5. The assignment file is optional and never read as a reviewer file.
+  {
+    const assignmentText = readFileSync(join(root, 'docs/data/screening/assignment.json'), 'utf8');
+    const { window, T } = tool(root, corpus);
+    const unreachable = await T.loadAssignment(); // the harness fetch rejects
+    check('assignment: an unreachable file leaves the filter out without an error',
+      unreachable === null && !T.assigneeFilterAvailable() && !/pt-assignee-seg/.test(T.filtersHtml()));
+    window.fetch = () => Promise.resolve({ ok: false, status: 404, json: () => Promise.reject(new Error('404')) });
+    const missing = await T.loadAssignment();
+    check('assignment: a missing file leaves the filter out without an error', missing === null && !T.assigneeFilterAvailable());
+    window.fetch = (url) => Promise.resolve({ ok: true, json: () => Promise.resolve(JSON.parse(assignmentText)), url });
+    const loaded = await T.loadAssignment();
+    check('assignment: the served file enables the filter with the declared reviewers',
+      loaded && loaded.reviewers.map((r) => r.key).join('|') === 'sabine|susi' && /data-assignee="susi"/.test(T.filtersHtml()));
+    const folder = memoryFolder({ 'ar2.json': ar2Text, 'assignment.json': assignmentText });
+    T.setScreeningHandle(folder);
+    T.selectReviewer('ev');
+    await T.loadAllReviewers();
+    check('assignment: the file beside the reviewer files raises no reviewer error and is never loaded as a track',
+      !T.reviewerFileErrors().assignment && !T.getState().reviewers.assignment, T.reviewerFileErrors());
+    check('assignment: its name cannot become a reviewer key', T.selectReviewer('assignment') === false);
+  }
   return checks;
 }

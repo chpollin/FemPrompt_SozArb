@@ -30,6 +30,12 @@ A clone on Windows failed with "Filename too long", because paper notes named af
 
 Open. The change takes effect for others only after the operator merges it into main, and a checkout that already failed needs a fresh clone afterwards.
 
+### 2026-10-01: The open documents are split between the two reviewers
+
+The operator divided all open documents between the two reviewers and asked for the split as a further list filter. `docs/data/screening/assignment.json` now assigns every open paper, separated into papers with an agent record and unassessed papers and alternating within each group in corpus order, so both reviewers receive an even share of both kinds. The builder is append-only, so a done paper keeps its entry and a rerun only adds newly open papers. PRISM shows a segmented filter `Zuteilung` beside the status filter, combinable with status and categories and kept in the URL, and names the assignee in the list while all papers are shown (ADR-043, [[data#Reviewer assignment]]).
+
+Decided with the change. The counts of the status and assignee segments each follow the other segment, so a combined selection adds up. The assignment file shares the screening folder but is no reviewer file, so PRISM, the schema check and the reviewer-key rule exclude it. A reviewer key preselects no assignee, the filter starts at `Alle`.
+
 ### 2026-10-01: PRISM checks and corrects the existing annotation
 
 The operator asked for two modes instead of three, no rounds in the interface, prefilled categories as colour toggles, a list that shows what is already captured and a panel without scrolling. PRISM now shows every document with its current annotation, the own record, the productive agent record or the consolidated expert decision as prefill, and one save writes either an own record or a verification entry into the reviewer's file ([[specification#ADR-042 One assessment over the current annotation, two modes, editing only in a local copy]]). The expert decision is taken over as it stands, with an override where the derivation rule disagrees and a new controlled exclusion reason for confirming an expert Exclude. Unchanged expert levels need no Paper Beleg, every change does. Editing exists only in a local project copy.
