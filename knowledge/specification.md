@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-09-22
+updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6)
 method:
@@ -265,6 +265,64 @@ ADR-025 fixes the evidence basis: a local clone serves the cleaned Docling text 
 1. The synthesis surface level (KI1): per article, corpus-wide, or both. This remains an operator decision for a future research function.
 2. Stable, source-hashed text anchors for evidence projected beyond the local reviewer file.
 3. A canonical consensus writer for human reconciliation; the current utilities provide deterministic comparison only.
+
+## Public Evidence Companion
+
+The public Evidence Companion is the result site that `src/publish/build_release.py` builds into `build/site/` from `docs/release.html` and its allowlist. It shows released material only, namely `literature_landscape.json`, `assertion_index.json`, `analysis_fields.json`, `category_schema.json` and the bibliographic `public_release.json`. The working application `docs/index.html` and PRISM are separate surfaces and share no view code with it. The release boundary itself is defined in [[governance#Publication boundary]].
+
+### Views
+
+Navigation labels equal the view titles. Each view answers one task.
+
+| View | Task | Module |
+|---|---|---|
+| Fragen | Enter through the main question and the sub-questions | `docs/js/release-fragen.js` |
+| Answer page per sub-question | Read what the reviewed literature shows, in the order Befunde, Karte, Offen, Werke | `docs/js/release-fragen.js` |
+| Matrix | Cross two coded dimensions under year, study type and review-status filters and open the works of a cell | `docs/js/release-matrix.js` |
+| Netz | Explore the terms coded together with one selected term, radial or as a works-terms column view on wide screens | `docs/js/release-netz.js` |
+| Korpus | Search and facet all released works | `docs/js/release-werk.js` |
+| Werk | Read one work with status, codes, evidence, Assertions and a collapsed technical record | `docs/js/release-werk.js` |
+| Aussagen | Search the released Assertions with their quotations | `docs/js/public-release.js` |
+| Chat | The grounded chat of `docs/js/wissenschat.js` | `docs/js/public-release.js` |
+| Methode | Status marks, release scope, screening rule, category definitions, analysis vocabulary, downloads | `docs/js/release-fragen.js` |
+
+`docs/js/release-model.js` holds the client-side model, and `docs/js/public-release.js` holds the hash router and the shared renderers. The research questions, their matrix presets, their fields and their assigned Assertion topics live in the single `QUESTIONS` structure of `release-fragen.js`, with the canonical wording in [[project#Research questions]]. Removing the Netz view takes its script and stylesheet lines in `docs/release.html` and its two entries in `PUBLIC_FILES`, because the router hides the navigation entry of any view whose module is not loaded.
+
+### Data contract
+
+The site derives the state of each analysis field per work from the released record. A value list is coded, `["None"]` is coded as not applicable, a field named in `analysis.undecidable` is undecidable, and a missing analysis or an empty value is not yet coded. A category group without a member category is coded as not applicable. When `meta.analysis_coverage` is present, the site reads its per-field figures for the unfiltered denominators and the withheld count and falls back to counts over the released records when it is absent. The client computes nothing beyond cross-tabulation over released records. Labels come from `category_schema.json` and from `analysis_fields.json`. The analysis vocabulary carries no display labels yet, so the site shows the controlled identifier without its prefix until the pipeline emits a `label` or `value_labels` entry, which then takes precedence.
+
+### Epistemic display rules
+
+- A matrix cell and a network edge count works in which two codes occur together. They state no relation, direction or effect, and their wording reads "gemeinsam codiert in n Werken".
+- A single-valued field describes the whole work and carries the suffix "des Werks". A cell that crosses it with a multi-valued field counts works and never attributes the work's status to one technique or stage.
+- The line "n von N eingeschlossenen Werken codiert" stands first above every matrix and every answer page. An empty cell reads "n. b." while works on its axes are not yet coded and reads 0 only when every work in the selection is coded.
+- Status marks are ◆ KI-quellengeprüft, ● fachlich verifiziert, – codiert und trifft nicht zu, n. e. nicht entscheidbar and ? noch nicht codiert. Each mark comes with text or an accessible label, so no meaning depends on colour.
+- Category evidence appears as the quotation with its text basis and record. Analysis fields carry no field-level evidence in the data, so the site shows the coding note and any correction reason and states that no field-level evidence is recorded.
+- Recommendations in codes and Assertions are reported as recommendations of their source. Start and answer pages describe what the reviewed literature shows and never call a question answered.
+
+### URL state
+
+Every view state is a hash of URL parameters, so browser history and deep links restore it.
+
+```
+#view=fragen
+#view=frage&sq=<id>
+#view=matrix&rows=<dim>&cols=<dim>&year=<y>&study=<type>&status=ki|verified&cell=<rowKey>|<colKey>
+#view=netz&term=<dim>:<key>&fields=<dim>,<dim>|none&edge=<dim>:<key>&works=1
+#view=korpus&q=<text>&decision=Include|Exclude|Unclear|unscreened&study=<type>&year=<y>&status=ki|verified
+#view=aussagen&q=<text>
+#view=werk&id=<work_id>
+```
+
+A dimension is an analysis field name, `Studientyp`, or a category group key from `category_schema.json`. Status rows and columns use the keys `__none`, `__undecidable` and `__absent`.
+
+### Open interface questions
+
+1. German display labels for the analysis fields and their values belong in `assessment/categories.yaml` and its projection, which the site would then read.
+2. The exact key names of `meta.analysis_coverage` need confirmation against the reader in `release-model.js`.
+3. Assertions carry topics rather than a sub-question. An explicit sub-question field in the Assertion schema would replace the topic lists in `QUESTIONS`.
+4. Category evidence has a record locator but no page or section locator, unlike Assertion evidence.
 
 ## Decisions
 

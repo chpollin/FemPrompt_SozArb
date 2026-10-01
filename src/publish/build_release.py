@@ -23,6 +23,8 @@ ROOT = Path(__file__).resolve().parents[2]
 PUBLIC_FILES = (
     "css/tokens.css", "css/research.css", "css/literaturbild.css", "css/release.css",
     "js/public-release.js", "js/literaturbild.js", "js/wissenschat.js",
+    "js/release-model.js", "js/release-matrix.js", "js/release-netz.js", "js/release-werk.js",
+    "js/release-fragen.js", "css/release-netz.css",
     "vendor/fontawesome/css/all.min.css", "vendor/fontawesome/LICENSE.txt",
     "data/category_schema.json", "data/analysis_fields.json",
     "data/literature_landscape.json", "data/assertion_index.json",
