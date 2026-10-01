@@ -148,6 +148,17 @@ await check('category explorer initializes on view switch', async () => {
   await waitFor(() => doc.querySelector('#kategorie-detail .kdetail-header') !== null, 'detail rendered');
 });
 
+await check('the Landkarte renders the Gegenstand x Perspektive cells and lists the works of a cell', async () => {
+  const cells = doc.querySelectorAll('#landkarte .lk-table tbody td');
+  if (cells.length !== 24) throw new Error('cells: ' + cells.length);
+  const button = doc.querySelector('#landkarte button.lk-cell');
+  button.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
+  const items = doc.querySelectorAll('#landkarte-works .lk-item');
+  if (button.getAttribute('aria-pressed') !== 'true' || items.length !== Number(button.dataset.count)) {
+    throw new Error('list ' + items.length + ' for count ' + button.dataset.count);
+  }
+});
+
 await check('one router: only research-app listens to hashchange', async () => {
   if (hashchangeListeners !== 1) throw new Error('hashchange listeners: ' + hashchangeListeners);
   if (typeof EC.host.go !== 'function' || typeof EC.release.render !== 'function') throw new Error('host seam missing');

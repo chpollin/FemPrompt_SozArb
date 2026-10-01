@@ -1,5 +1,5 @@
 // Chromium acceptance run for the working Companion docs/index.html: start view, answer
-// pages, Literaturbild matrix, Wissensnetz, work view, legacy hashes, nav tooltips, the corpus
+// pages, Literaturbild matrix, Wissensnetz, work view, Landkarte, legacy hashes, nav tooltips, the corpus
 // year histogram and reflow.
 import { chromium } from 'playwright';
 import { createServer } from 'node:http';
@@ -10,6 +10,8 @@ import { fileURLToPath } from 'node:url';
 const here = dirname(fileURLToPath(import.meta.url));
 const docs = resolve(here, '..', '..', 'docs');
 const landscape = JSON.parse(readFileSync(resolve(docs, 'data', 'literature_landscape.json')));
+const vault = JSON.parse(readFileSync(resolve(docs, 'data', 'research_vault_v2.json')));
+const schema = JSON.parse(readFileSync(resolve(docs, 'data', 'category_schema.json')));
 const mime = {
   '.css': 'text/css; charset=utf-8', '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8',
@@ -136,6 +138,66 @@ try {
   check('Wissensnetz shows the network of review knowledge',
     await page.locator('#netz-graph').count() === 1 && await page.locator('#tab-wissensnetz[aria-pressed="true"]').count() === 1);
 
+  // Landkarte of the Kategorien view: every cell counts the works whose expert
+  // assessment carries both categories, recomputed here from the working data.
+  const expected = {};
+  for (const row of schema.groups.object) for (const col of schema.groups.perspective) {
+    expected[`${row}|${col}`] = vault.papers.filter((p) => p.human && p.human.decision &&
+      p.human.all_categories && p.human.all_categories[row] === 1 && p.human.all_categories[col] === 1).length;
+  }
+  await page.goto(`${base}/index.html#view=vergleich`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#landkarte .lk-table');
+  const grid = await page.evaluate(() => ({
+    rows: [...document.querySelectorAll('#landkarte tbody th[scope="row"] .category-chip')].map((n) => n.dataset.cat),
+    cols: [...document.querySelectorAll('#landkarte thead th.lk-col .category-chip')].map((n) => n.dataset.cat),
+    cells: Object.fromEntries([...document.querySelectorAll('#landkarte tbody td')].map((td, i) => {
+      const button = td.querySelector('button.lk-cell');
+      return [i, button ? `${button.dataset.row}|${button.dataset.col}|${button.dataset.count}` : 'empty'];
+    })),
+  }));
+  check('the Landkarte crosses the four Gegenstand rows with the six Perspektive columns',
+    grid.rows.join() === schema.groups.object.join() && grid.cols.join() === schema.groups.perspective.join() &&
+    Object.keys(grid.cells).length === 24, JSON.stringify(grid.rows.concat(grid.cols)));
+  const mismatched = Object.values(grid.cells).filter((cell) => {
+    const [row, col, count] = cell.split('|');
+    return cell !== 'empty' && expected[`${row}|${col}`] !== Number(count);
+  });
+  check('every Landkarte cell counts the expert-assessed works carrying both categories',
+    mismatched.length === 0 && Object.values(grid.cells).filter((c) => c !== 'empty').length === Object.values(expected).filter(Boolean).length,
+    mismatched.join(' '));
+  check('the Landkarte work list is closed before a cell is chosen', await page.locator('#landkarte-works').isHidden());
+  const firstCell = page.locator('#landkarte button.lk-cell').first();
+  await firstCell.click();
+  await page.waitForSelector('#landkarte-works:not([hidden])');
+  const cellCount = Number(await firstCell.getAttribute('data-count'));
+  const items = await page.evaluate(() => [...document.querySelectorAll('#landkarte-works .lk-item')].map((li) => ({
+    decision: li.dataset.decision, label: li.querySelector('.lk-dec').textContent, href: li.querySelector('a').getAttribute('href'),
+  })));
+  check('a Landkarte cell click lists its works and presses the cell',
+    await firstCell.getAttribute('aria-pressed') === 'true' && items.length === cellCount && cellCount > 0);
+  check('listed works link to the Korpus detail and name their decision in text',
+    items.every((item) => item.href.startsWith('#view=korpus&paper=') &&
+      ({ include: 'Include', exclude: 'Exclude', unclear: 'Unclear' })[item.decision] === item.label), JSON.stringify(items.slice(0, 2)));
+  await firstCell.click();
+  check('a second click on the chosen cell closes its list',
+    await firstCell.getAttribute('aria-pressed') === 'false' && await page.locator('#landkarte-works').isHidden());
+  const keyCell = page.locator('#landkarte button.lk-cell').nth(7);
+  await page.keyboard.press('Tab');
+  await keyCell.focus();
+  check('the tooltip of a cell shows on keyboard focus', await page.locator('.lk-tip').isVisible());
+  await page.keyboard.press('Escape');
+  check('Escape hides the cell tooltip', await page.locator('.lk-tip').isHidden());
+  await page.keyboard.press('Enter');
+  await page.waitForSelector('#landkarte-works:not([hidden])');
+  check('a Landkarte cell opens its list by keyboard', await keyCell.getAttribute('aria-pressed') === 'true' &&
+    await page.locator('#landkarte .lk-cell[aria-pressed="true"]').count() === 1);
+  const workLink = page.locator('#landkarte-works .lk-item a').first();
+  const workTitle = (await workLink.innerText()).trim();
+  await workLink.click();
+  await page.waitForSelector('#paper-modal.active');
+  check('a listed work opens its Korpus detail', await visibleView() === 'view-korpus' &&
+    (await page.locator('#modal-title').innerText()).trim() === workTitle);
+
   for (const [hash, view] of [['#chat', 'view-chat'], ['#wissensnetz', 'view-wissensnetz'], ['#literaturbild', 'view-literaturbild'],
     ['#korpus', 'view-korpus'], ['#vergleich', 'view-vergleich']]) {
     await page.goto(`${base}/about.html`, { waitUntil: 'networkidle' });
@@ -239,6 +301,15 @@ try {
     }
   }
   await page.setViewportSize({ width: 390, height: 844 });
+
+  await page.goto(`${base}/index.html#view=vergleich`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#landkarte button.lk-cell');
+  await page.locator('#landkarte button.lk-cell').last().click();
+  await page.waitForSelector('#landkarte-works:not([hidden])');
+  check('at 390 px the Landkarte with an open work list scrolls only inside its own container', await page.evaluate(() => {
+    const wrap = document.querySelector('#landkarte .lk-wrap');
+    return document.documentElement.scrollWidth <= window.innerWidth + 1 && wrap.clientWidth <= window.innerWidth;
+  }));
 
   await page.goto(`${base}/index.html#view=wissensnetz`, { waitUntil: 'networkidle' });
   await page.waitForSelector('#netz-graph');
