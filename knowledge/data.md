@@ -289,7 +289,7 @@ Schema 0.4 adds the stable Work identity and the exact Version used for the deci
 
 The `decision` follows the three-level rule. Include requires at least one category at level 2 in each dimension. Unclear requires at least level 1 in each dimension without meeting Include. Exclude follows when one dimension remains empty. The active reviewer may override the derivation in either direction. An override to Include records a free-text `override_reason`, and an override to Exclude carries the exclusion `reason` (O2, ADR-023; RAISE P3). A category toggle that flips the derivation clears a stale override. The consolidated expert record retains corpus authority for round one. Round-two agent decisions require later domain-expert verification.
 
-Aggregation loads every `*.json` in the folder into `reviewers[key]`. The explicitly selected reviewer role determines the reviewer side of the Flow. The earlier expert assessment (`paper.human`) and the model proposal (`paper.llm`) come from the corpus. The model proposal is never stored in a reviewer file and can be taken over at category level only (ADR-038). The expert decision seeds the draft of a paper without own or agent record (ADR-042). Its binary values map 1 to ja and 0 or null to nein, the decision is taken over as it stands with an override where the derivation rule disagrees, and an expert Exclude carries `Consolidated_expert_exclusion`. Agent runs receive neither.
+Aggregation loads every `*.json` in the folder into `reviewers[key]`, except the reviewer assignment `assignment.json`. The explicitly selected reviewer role determines the reviewer side of the Flow. The earlier expert assessment (`paper.human`) and the model proposal (`paper.llm`) come from the corpus. The model proposal is never stored in a reviewer file and can be taken over at category level only (ADR-038). The expert decision seeds the draft of a paper without own or agent record (ADR-042). Its binary values map 1 to ja and 0 or null to nein, the decision is taken over as it stands with an override where the derivation rule disagrees, and an expert Exclude carries `Consolidated_expert_exclusion`. Agent runs receive neither.
 
 ### Human records written by PRISM (ADR-042)
 
@@ -303,6 +303,26 @@ A record PRISM writes for a person carries the embedded contract of schema 0.5, 
 A verification entry over an agent record carries `reviewer_id` and `actor_ids` from the reviewer key and one `activity_id` per editing session. Its `note` is required for `changes_requested` and `rejected` and optional for `accepted` and `corrected_and_accepted`. A correction body is built from the panel and replaces only the fields the reviewer changed. Without a note the correction names its changed paths as its reason, because the lifecycle contract requires a reason.
 
 Versioning uses Git outside PRISM. Schema 0.4 is the version-aware isolated capture shape for new reviewer exports. A productive agent track is projected to schema 0.5 after the separate source-grounded AI Agent Review. The file `ar2.json` is append-only at the record level. A merge accepts new IDs, treats identical repeated input as idempotent, and rejects a divergent overwrite. Productive records carry `actor: agent` with their run-specific provenance and may reach `ai-agent-reviewed`. This state establishes operational completion and supports internal analysis. Domain-expert verification and publication approval require later person-attributed events.
+
+### Reviewer assignment
+
+`docs/data/screening/assignment.json` splits the open documents between the two reviewers (ADR-043). It is written only by `src/assess/build_assignment.py` and read by PRISM for the list filter `Zuteilung`. PRISM never writes it, and `assignment` is a reserved reviewer key.
+
+```json
+{
+  "schema": "femprompt-prisma-assignment/1.0",
+  "reviewers": [{ "key": "<reviewer key>", "label": "<display label>" }],
+  "assigned_on": "2026-10-01",
+  "updated_on": "<date of the latest run that added entries, absent before>",
+  "rule": "<the assignment rule as text>",
+  "assignments": { "<paperId>": "<reviewer key>" }
+}
+```
+
+- Open means what PRISM counts as not done for every reviewer, neither a decision of the consolidated expert assessment nor a record or verification in a human reviewer file. An open paper with a record in an agent track belongs to the group `agent`, every other open paper to the group `unassessed`.
+- Within each group the papers alternate between the reviewers in corpus order, and each group starts with the reviewer holding fewer entries, ties following the order of `reviewers`.
+- Entries are append-only. A rerun adds open papers without an entry, never changes an existing one and keeps the entries of papers that have been done since. An entry naming a key outside `reviewers` makes the builder fail and is ignored by PRISM.
+- `schemas/femprompt-prisma-assignment-1.0.schema.json` describes the file, and a test compares the committed file with a fresh build, so a corpus that gains open papers shows up as a failing check until the builder is rerun.
 
 ## Current intake and screening gates
 
@@ -470,6 +490,7 @@ The divergence items in `promptotyping_v2.json` carry `pattern` and `justificati
 `schemas/` holds the JSON Schema (draft 2020-12) descriptions of the governed and generated JSON contracts. A schema documents the shape a generator already writes. It grants no authority beyond structural conformance and never replaces the canonical owner of a vocabulary, which stays with `assessment/categories.yaml`, `docs/data/work_version_contract.json` and `docs/data/screening_lifecycle_contract.json`.
 
 - `femprompt-completion-package-1.0` describes `generated/completion/completion-package.json`, the provisional preparation package joining registry, productive track, 2026 candidates, Assertions and knowledge coverage. Its `researchVaultState` admits the Grounded Vault states `preparation`, `grounded`, `ai-agent-reviewed`, `verified` and `publication-approved` for Assertions and distillates ([[research-vault#Status and checks]]). The analysis blocks added on 1 October 2026 pass as additional properties without a constraint of their own.
+- `femprompt-prisma-assignment-1.0` describes the reviewer assignment `docs/data/screening/assignment.json`, which the reviewer schema excludes.
 - `femprompt-prisma-reviewer-0.5` describes a productive PRISM track under `docs/data/screening/`, with embedded provenance, immutable annotation versions, check receipts and lifecycle. The optional `verification_schema` and `verifications` keys are admitted without constraining the verification record itself.
 - `femprompt-source-readiness-0.2` describes `generated/source-acquisition/codex-websearch-2026/source-readiness.json`.
 - `femprompt-source-version-bindings-0.2` describes the governed source-binding manifest `corpus/source_version_bindings.json`.

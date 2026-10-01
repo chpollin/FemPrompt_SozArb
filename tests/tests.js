@@ -2277,13 +2277,77 @@ test('list filters: status counts, category AND filter on the current annotation
     delete S.reviewers.cp;
 });
 
+test('assignee filter: segment counts, combination with status, list label and URL round trip', function() {
+    var papersFix = [
+        { id: 'A1', title: 'a', human: { decision: 'Include', all_categories: { Gender: 1 } } },
+        { id: 'A2', title: 'b', author_year: 'X 2020' },
+        { id: 'A3', title: 'c', author_year: 'Y 2021' },
+        { id: 'A4', title: 'd' }
+    ];
+    T.setPapers(papersFix);
+    var S = T.getState();
+    S.statusFilter = 'alle'; S.catFilter = []; S.assigneeFilter = 'alle';
+    T.setAssignment(null);
+    assertEqual(T.assigneeFilterAvailable(), false, 'without a file there is no filter');
+    assertNotContains(T.filtersHtml(), 'pt-assignee-seg');
+    S.assigneeFilter = 'susi';
+    assertEqual(T.visibleRows().length, 4, 'a requested assignee without a file narrows nothing');
+    assertEqual(T.normalizeAssignment({ schema: 'other', reviewers: [], assignments: {} }), null);
+    T.setAssignment({ schema: 'femprompt-prisma-assignment/1.0',
+        reviewers: [{ key: 'sabine', label: 'Sabine' }, { key: 'susi', label: 'Susi' }],
+        assignments: { A1: 'sabine', A2: 'sabine', A3: 'susi', A4: 'nobody' } });
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'A3');
+    S.assigneeFilter = 'sabine';
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'A1|A2');
+    S.statusFilter = 'offen';
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'A2', 'status and assignee combine');
+    var html = T.filtersHtml();
+    assertContains(html, 'data-assignee="sabine" aria-pressed="true">Sabine <span class="pt-seg-count">1</span>', 'assignee counts follow the status filter');
+    assertContains(html, 'data-assignee="susi" aria-pressed="false">Susi <span class="pt-seg-count">1</span>');
+    assertContains(html, 'data-status="offen" aria-pressed="true">Offen <span class="pt-seg-count">1</span>', 'status counts follow the assignee filter');
+    assertContains(html, 'data-status="alle" aria-pressed="false">Alle <span class="pt-seg-count">2</span>');
+    assertNotContains(T.corpusListHtml(), 'pt-nav-assignee', 'no label while one assignee is selected');
+    S.assigneeFilter = 'alle'; S.statusFilter = 'alle';
+    var list = T.corpusListHtml();
+    assertContains(list, 'X 2020<span class="pt-nav-assignee"> &middot; Sabine</span>');
+    assertContains(list, 'Y 2021<span class="pt-nav-assignee"> &middot; Susi</span>');
+    assertEqual((list.match(/pt-nav-assignee/g) || []).length, 3, 'an entry naming an undeclared reviewer shows no label');
+    var abstract = 'A substantive abstract that is long enough to support category screening and records the source basis without pretending that a full text was read. This sentence keeps the fixture above the quality threshold.';
+    papersFix[1].abstract = abstract; papersFix[2].abstract = abstract;
+    assertEqual(T.firstEntryIndex(), 1, 'without an assignee the first open paper of the corpus');
+    S.assigneeFilter = 'susi';
+    assertEqual(T.firstEntryIndex(), 2, 'an assignee link opens on the first open paper of that list');
+    S.assigneeFilter = 'nobody';
+    assertEqual(T.activeAssignee(), 'alle', 'an undeclared key falls back to all papers');
+
+    T.readFilterQuery(new URLSearchParams('assignee=Susi&status=offen'));
+    assertEqual(S.assigneeFilter, 'susi', 'the URL key is normalised');
+    window.history.replaceState(null, '', '/prisma.html');
+    T.syncUrl();
+    assertContains(window.location.search, 'assignee=susi');
+    assertContains(window.location.search, 'status=offen');
+    S.assigneeFilter = 'alle';
+    T.syncUrl();
+    assertNotContains(window.location.search, 'assignee=');
+    T.readFilterQuery(new URLSearchParams(''));
+    assertEqual(S.assigneeFilter, 'alle');
+    S.statusFilter = 'alle';
+    T.setAssignment(null);
+    window.history.replaceState(null, '', '/');
+});
+
 test('reserved and agent keys cannot become a reviewer key', function() {
     var S = T.getState();
     var before = S.reviewer;
     assertEqual(T.selectReviewer('seed'), false, 'the built-in expert reference key is reserved');
     assertEqual(T.selectReviewer('acceptance'), false);
     assertEqual(T.selectReviewer('ar2'), false, 'the productive agent track key is refused');
+    assertEqual(T.selectReviewer('assignment'), false, 'the assignment file name is reserved');
     assertEqual(S.reviewer, before);
+    ['sabine', 'susi'].forEach(function(key) {
+        assertEqual(T.normalizedReviewerKey(key), key, key + ' is a valid reviewer key');
+        assertEqual(T.reservedKey(key), false, key + ' is not reserved');
+    });
 });
 
 test('the browser snapshot holds own work and changed drafts, never a loaded agent track', function() {

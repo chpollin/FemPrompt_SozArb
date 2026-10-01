@@ -95,9 +95,13 @@ const GOVERNED_SCHEMA = 'femprompt-prisma-reviewer/0.5';
 const VERIFICATION_SCHEMA = 'femprompt-prisma-verification/0.1';
 const SEED = 'seed'; // built-in reviewer = the existing expert assessment (paper.human)
 const REVIEWER_KEY_PATTERN = /^[A-Za-z][A-Za-z0-9_-]{1,11}$/;
-// Keys that name built-in tracks. 'seed' collides with the expert reference and
-// 'acceptance' with the read-only review fixture.
-const RESERVED_KEYS = [SEED, 'acceptance'];
+// The split of open papers between reviewers lives beside the reviewer files as
+// docs/data/screening/assignment.json; it is read, never written by PRISM.
+const ASSIGNMENT_KEY = 'assignment';
+const ASSIGNMENT_SCHEMA = 'femprompt-prisma-assignment/1.0';
+// Keys that name built-in tracks or files. 'seed' collides with the expert reference,
+// 'acceptance' with the read-only review fixture and 'assignment' with the split.
+const RESERVED_KEYS = [SEED, 'acceptance', ASSIGNMENT_KEY];
 // Productive agent tracks served with the working application. Read mode loads them
 // over HTTP so the corpus list can show agent records without a connected folder; a
 // connected folder supersedes them. They are never written by PRISM.
@@ -200,6 +204,7 @@ const state = {
     reviewers: {},         // reviewerKey -> { paperId -> decision }
     disclosure: {},        // in-memory disclosure parameters for disclosureMarkdown (operator utility)
     statusFilter: 'alle',  // corpus list: 'alle' | 'offen' | 'erfasst'
+    assigneeFilter: 'alle', // corpus list: 'alle' | an assignee key of the assignment file
     catFilter: []          // corpus list: categories the current annotation must carry (AND)
 };
 
@@ -223,6 +228,7 @@ const lastDiskText = {};       // reviewerKey -> file text last read or written 
 // copy: a display projection can never reach a track a save would serialize.
 let agentTrack = { reviewer: null, records: {} };
 let servedAgentEnvelope = null; // HTTP-served agent track, used while no folder supplies one
+let assignment = null;          // { reviewers: [{ key, label }], byPaper: { paperId -> key } } or null
 const verificationRecords = {}; // reviewerKey -> verification events this reviewer recorded
 // Unsaved drafts per paper. A draft starts as a copy of the current annotation and is
 // kept (and persisted in the browser) only once the reviewer changes something.
@@ -916,7 +922,7 @@ async function loadAllReviewers() {
         if (entry.kind !== 'file' || !/\.json$/.test(entry.name)) continue;
         const fileKey = entry.name.replace(/\.json$/, '');
         const key = normalizedReviewerKey(fileKey);
-        if (!key) continue;
+        if (!key || key === ASSIGNMENT_KEY) continue;
         if (key !== fileKey) {
             errors[key] = 'Der Dateiname muss in kanonischer Kleinschreibung vorliegen.';
             continue;
@@ -1037,6 +1043,33 @@ function loadServedAgentTracks() {
         adoptAgentTrack();
         return servedAgentEnvelope;
     });
+}
+
+// The assignment file is optional: a missing or malformed file leaves the feature out.
+// Only entries naming a declared reviewer are kept.
+function normalizeAssignment(obj) {
+    if (!obj || obj.schema !== ASSIGNMENT_SCHEMA || !Array.isArray(obj.reviewers) ||
+            !obj.assignments || typeof obj.assignments !== 'object' || Array.isArray(obj.assignments)) return null;
+    const reviewers = [];
+    obj.reviewers.forEach(function(r) {
+        const key = r && normalizedReviewerKey(r.key);
+        if (key && key === r.key && !reviewers.some(function(x) { return x.key === key; }))
+            reviewers.push({ key: key, label: String(r.label || key) });
+    });
+    if (!reviewers.length) return null;
+    const byPaper = {};
+    Object.keys(obj.assignments).forEach(function(pid) {
+        if (reviewers.some(function(r) { return r.key === obj.assignments[pid]; })) byPaper[pid] = obj.assignments[pid];
+    });
+    return { reviewers: reviewers, byPaper: byPaper };
+}
+
+function loadAssignment() {
+    if (acceptanceMode || typeof fetch !== 'function') return Promise.resolve(null);
+    return fetch('data/screening/' + ASSIGNMENT_KEY + '.json')
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .catch(function() { return null; })
+        .then(function(obj) { assignment = normalizeAssignment(obj); return assignment; });
 }
 
 // Expert verification lives in the expert's own file. The agent record shown is the
@@ -1621,7 +1654,7 @@ window.initializePrisma = function() {
     }
     // The first paint waits for the manifest and the served agent track: the manifest
     // decides whether editing is offered, the track which annotation a paper shows.
-    Promise.all([loadFulltextManifest(), loadServedAgentTracks()]).then(function() {
+    Promise.all([loadFulltextManifest(), loadServedAgentTracks(), loadAssignment()]).then(function() {
         // Trial and agent URLs explicitly select an authoring workflow. ?verify=1 is the
         // former verification entry and opens Bearbeiten where editing is available.
         // Ordinary links, including paper deep links and cached reviewer profiles,
@@ -1739,6 +1772,8 @@ function readFilterQuery(query) {
     state.statusFilter = status === 'offen' || status === 'erfasst' ? status : 'alle';
     const cats = String(query.get('cats') || '').split(',').filter(function(c) { return ALL_CATS.indexOf(c) !== -1; });
     state.catFilter = cats.filter(function(c, i) { return cats.indexOf(c) === i; });
+    // checked against the assignment file when the filter is applied, which loads later
+    state.assigneeFilter = normalizedReviewerKey(query.get('assignee')) || 'alle';
 }
 
 function syncUrl() {
@@ -1751,6 +1786,8 @@ function syncUrl() {
     else url.searchParams.delete('status');
     if (state.catFilter.length) url.searchParams.set('cats', state.catFilter.join(','));
     else url.searchParams.delete('cats');
+    if (activeAssignee() !== 'alle') url.searchParams.set('assignee', activeAssignee());
+    else url.searchParams.delete('assignee');
     const next = url.pathname + url.search + url.hash;
     if (next !== window.location.pathname + window.location.search + window.location.hash) {
         try { window.history.replaceState(null, '', next); } catch (e) { /* sandboxed frames refuse it */ }
@@ -1853,7 +1890,11 @@ function isScreenable(p) {
     return !!(p && (hasFullText(p) || abstractQuality(p).ok));
 }
 
+// A link with list filters (an assignee's own link) opens on the first open paper of
+// that list; without one in the list the whole corpus is searched.
 function firstEntryIndex() {
+    const listed = visibleRows().find(function(row) { return !isDone(row.paper) && isScreenable(row.paper); });
+    if (listed) return listed.index;
     for (let i = 0; i < papers.length; i++) {
         if (!isDone(papers[i]) && isScreenable(papers[i])) return i;
     }
@@ -2005,9 +2046,37 @@ function baseRows() {
     return rows.filter(function(row) { return matchesCategoryFilter(row.paper); });
 }
 
+// The assignee filter exists where the status filter does and an assignment file
+// was loaded. A requested key the file does not declare falls back to all papers.
+function assigneeFilterAvailable() {
+    return statusFilterAvailable() && !!assignment;
+}
+
+function activeAssignee() {
+    if (!assigneeFilterAvailable()) return 'alle';
+    const key = state.assigneeFilter;
+    return assignment.reviewers.some(function(r) { return r.key === key; }) ? key : 'alle';
+}
+
+function assigneeOf(p) {
+    return assignment && p ? (assignment.byPaper[p.id] || null) : null;
+}
+
+function assigneeLabel(key) {
+    const r = assignment && assignment.reviewers.find(function(x) { return x.key === key; });
+    return r ? r.label : '';
+}
+
+function matchesAssigneeFilter(p, key) {
+    return key === 'alle' || assigneeOf(p) === key;
+}
+
 function visibleRows() {
     const status = statusFilterAvailable() ? state.statusFilter : 'alle';
-    return baseRows().filter(function(row) { return matchesStatusFilter(row.paper, status); });
+    const assignee = activeAssignee();
+    return baseRows().filter(function(row) {
+        return matchesStatusFilter(row.paper, status) && matchesAssigneeFilter(row.paper, assignee);
+    });
 }
 
 // Surface: Screening (read + search + pin evidence)
@@ -2087,14 +2156,33 @@ function positionBarHtml() {
 function filtersHtml() {
     let h = '<div class="pt-list-filters">';
     if (statusFilterAvailable()) {
+        // Each segment counts the base rows as narrowed by the other segment, so the
+        // numbers of a combined selection add up.
         const base = baseRows();
-        const counts = { alle: base.length, offen: 0, erfasst: 0 };
-        base.forEach(function(row) { if (isDone(row.paper)) counts.erfasst++; else counts.offen++; });
-        h += '<div class="pt-status-seg" role="group" aria-label="Status">';
+        const assignee = activeAssignee();
+        const counts = { alle: 0, offen: 0, erfasst: 0 };
+        base.forEach(function(row) {
+            if (!matchesAssigneeFilter(row.paper, assignee)) return;
+            counts.alle++;
+            if (isDone(row.paper)) counts.erfasst++; else counts.offen++;
+        });
+        h += '<div class="pt-seg-row"><div class="pt-status-seg" role="group" aria-label="Status">';
         [['alle', 'Alle'], ['offen', 'Offen'], ['erfasst', 'Erfasst']].forEach(function(item) {
             h += '<button type="button" class="pt-seg-btn" data-status="' + item[0] + '" aria-pressed="' + (state.statusFilter === item[0]) + '">' +
                 item[1] + ' <span class="pt-seg-count">' + counts[item[0]] + '</span></button>';
         });
+        h += '</div>';
+        if (assigneeFilterAvailable()) {
+            const statusRows = base.filter(function(row) { return matchesStatusFilter(row.paper, state.statusFilter); });
+            h += '<div class="pt-assignee-seg" role="group" aria-label="Zuteilung">';
+            h += '<button type="button" class="pt-seg-btn" data-assignee="alle" aria-pressed="' + (assignee === 'alle') + '">Alle</button>';
+            assignment.reviewers.forEach(function(r) {
+                const n = statusRows.filter(function(row) { return assigneeOf(row.paper) === r.key; }).length;
+                h += '<button type="button" class="pt-seg-btn" data-assignee="' + EC.escapeHtml(r.key) + '" aria-pressed="' + (assignee === r.key) + '">' +
+                    EC.escapeHtml(r.label) + ' <span class="pt-seg-count">' + n + '</span></button>';
+            });
+            h += '</div>';
+        }
         h += '</div>';
     }
     h += '<div class="category-chips pt-cat-filter" role="group" aria-label="Nach Kategorien der aktuellen Annotation filtern">';
@@ -2134,9 +2222,12 @@ function corpusListHtml() {
     if (!rows.length) return '<p class="pt-muted pt-corpus-empty">' + (q
         ? 'Keine Treffer für &bdquo;' + EC.escapeHtml(corpusQuery) + '&ldquo;.'
         : 'Keine Dokumente in dieser Auswahl.') + '</p>';
+    // the assignee shows only while the list is not narrowed to one of them
+    const showAssignee = assigneeFilterAvailable() && activeAssignee() === 'alle';
     return rows.map(function(result) {
         const p = result.paper, i = result.index;
         const st = listState(p);
+        const who = showAssignee ? assigneeLabel(assigneeOf(p)) : '';
         const cats = currentCategories(p);
         const catNames = ALL_CATS.filter(function(c) { return catLevel(cats[c]) > 0; }).map(function(c) { return CAT_LABELS[c]; });
         const badge = q ? '<span class="pt-hit-badge">' + EC.escapeHtml(result.kind === 'Text'
@@ -2146,10 +2237,11 @@ function corpusListHtml() {
             (active ? ' aria-current="true"' : '') + ' data-state="' + st + '" data-match-kind="' + EC.escapeHtml(result.kind || '') + '">' +
             '<span class="pt-nav-mark pt-mark-' + st + '" aria-hidden="true"></span>' +
             '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
-            '<span class="pt-nav-m">' + EC.escapeHtml(p.author_year || p.authors || 'Autor:in/Jahr unbekannt') + '</span>' +
+            '<span class="pt-nav-m">' + EC.escapeHtml(p.author_year || p.authors || 'Autor:in/Jahr unbekannt') +
+            (who ? '<span class="pt-nav-assignee"> &middot; ' + EC.escapeHtml(who) + '</span>' : '') + '</span>' +
             (q && result.kind === 'DOI' && p.doi ? '<span class="pt-nav-id">DOI ' + EC.escapeHtml(p.doi) + '</span>' : '') +
             '</span>' + categoryDotsHtml(cats) + badge +
-            '<span class="pt-sr-only">, ' + statusLabel(st) + (catNames.length ? ', ' + EC.escapeHtml(catNames.join(', ')) : '') + '</span>' +
+            '<span class="pt-sr-only">, ' + statusLabel(st) + (who ? ', zugeteilt: ' + EC.escapeHtml(who) : '') + (catNames.length ? ', ' + EC.escapeHtml(catNames.join(', ')) : '') + '</span>' +
             '</button>';
     }).join('');
 }
@@ -2196,6 +2288,15 @@ function bindFilters() {
             refreshCorpusList();
             syncUrl();
             const again = document.querySelector('.pt-nav [data-status="' + state.statusFilter + '"]');
+            if (again) again.focus();
+        });
+    });
+    filters.querySelectorAll('[data-assignee]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            state.assigneeFilter = btn.dataset.assignee;
+            refreshCorpusList();
+            syncUrl();
+            const again = document.querySelector('.pt-nav [data-assignee="' + state.assigneeFilter + '"]');
             if (again) again.focus();
         });
     });
@@ -4346,6 +4447,9 @@ const TEST_HOOK = {
     draftFor: draftFor, saveGate: saveGate, saveMode: saveMode, workDirty: function() { return !!work.dirty; },
     setWork: function(w) { work = w; }, markDirty: markDirty, drafts: function() { return JSON.parse(JSON.stringify(drafts)); },
     capturedCount: capturedCount, visibleRows: visibleRows, filtersHtml: filtersHtml, readFilterQuery: readFilterQuery,
+    normalizeAssignment: normalizeAssignment, loadAssignment: loadAssignment, activeAssignee: activeAssignee,
+    assigneeFilterAvailable: assigneeFilterAvailable,
+    setAssignment: function(obj) { assignment = normalizeAssignment(obj); },
     syncUrl: syncUrl, gotoNextOpen: gotoNextOpen, renderScreening: renderScreening, workspaceBarHtml: workspaceBarHtml,
     modeSwitchAvailable: modeSwitchAvailable, localEditingAvailable: localEditingAvailable,
     setManifestReachable: function(value) { manifestReachable = !!value; },
