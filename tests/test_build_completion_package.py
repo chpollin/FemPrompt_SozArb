@@ -832,10 +832,14 @@ def test_full_package_has_explicit_denominators_and_no_promoted_authority():
         row["scope"] == "included_in_completion_target_pending_curation_and_screening"
         for row in package["candidates_2026"]
     )
-    assert all(
-        row["authority"] == "provisional_recorded_ai_review"
-        for row in package["analysis_tables"]
-    )
+    for row in package["analysis_tables"]:
+        breakdown = row["authority_breakdown"]
+        assert sum(breakdown["coding_lifecycle_state"].values()) == row["work_count"]
+        assert row["authority"] == (
+            "no_contributing_works"
+            if row["work_count"] == 0
+            else min(breakdown["coding_lifecycle_state"], key=completion.STATES.index)
+        )
     assert all(issue["type"] == "unmapped_human_record" for issue in package["issues"])
     assert package["counts"]["unmapped_historical_human_records"] == len(
         package["issues"]
@@ -866,3 +870,264 @@ def test_conformance_uses_current_manuscript_and_synthesis_subitems():
         for key in ("13a", "13b", "13c", "13d", "20a")
     )
     assert (completion.REPO / completion.MANUSCRIPT).is_file()
+
+
+def mapping_registry(*keys):
+    """One record and Work per key, plus a second alias record for Work A."""
+    index = {
+        key: {"work_id": f"work:{key}", "version_id": f"version:{key}"} for key in keys
+    }
+    index["A2"] = {"work_id": "work:A", "version_id": "version:A2"}
+    return {
+        "record_index": index,
+        "works": [{"work_id": f"work:{key}", "canonical_title": key} for key in keys],
+    }
+
+
+def coded(record_id, decision="Include", state="ai-agent-reviewed", **fields):
+    return {
+        "record_id": record_id,
+        "decision": decision,
+        "state": state,
+        "analysis": fields,
+        "undecidable": {},
+        "categories": {},
+    }
+
+
+def mapping_works():
+    """One Include work per field state, with an alias and multi-codes."""
+    multi = {"AN_Bias_Axes": ["Age", "Gender"], "AN_Harm_Types": ["Stereotyping"]}
+    undecidable = coded("C", AN_Bias_Axes=["Gender"])
+    undecidable["undecidable"] = {"AN_Bias_Axes": "nicht entscheidbar aus Fulltext"}
+    open_review = coded("G", AN_Bias_Axes=["Gender"])
+    open_review["current_ai_review_result"] = "changes_requested"
+    agents = {
+        "A": [coded("A", **multi)],
+        "A2": [coded("A2", state="verified", **multi)],
+        "B": [coded("B", AN_Bias_Axes=["None"], AN_Harm_Types=["None"])],
+        "C": [undecidable],
+        "D": [coded("D", AN_Bias_Axes=["Gender"]), coded("D", AN_Bias_Axes=["Age"])],
+        "F": [coded("F", decision="Exclude")],
+        "G": [open_review],
+        "H": [coded("H", AN_Bias_Axes=["Gender"])],
+        "I": [coded("I", AN_Bias_Axes=["Bogus"])],
+        "J": [coded("J", decision="Exclude")],
+    }
+    human = [
+        {"Zotero_Key": "E", "Decision": "Include"},
+        {"Zotero_Key": "F", "Decision": "Include"},
+    ]
+    resolution = {
+        "work_resolutions": {"work:H": {"withhold_from_current_synthesis": True}}
+    }
+    works, _ = completion._work_rows(
+        mapping_registry(*"ABCDEFGHIJ"), human, agents, {}, resolution
+    )
+    return works
+
+
+def test_field_states_partition_the_include_denominator_per_track():
+    works = mapping_works()
+    states = completion._field_states(works, schema())
+    expected = {
+        "work:A": "coded",
+        "work:B": "explicit_none",
+        "work:C": "undecidable",
+        "work:D": "conflict_coding",
+        "work:E": "missing",
+        "work:F": "conflict_decision",
+        "work:G": "open_negative_review",
+        "work:H": "hold",
+        "work:I": "invalid_code",
+    }
+    for row in states:
+        listed = [i for entry in row["states"].values() for i in entry["work_ids"]]
+        assert (
+            sum(entry["count"] for entry in row["states"].values())
+            == row["include_denominator"]
+            == len(listed)
+            == len(set(listed))
+        )
+    bias = {row["track"]: row for row in states if row["field"] == "AN_Bias_Axes"}
+    assert bias["all"]["include_denominator"] == len(expected)
+    assert "work:J" not in json.dumps(bias)
+    for work_id, state in expected.items():
+        assert work_id in bias["all"]["states"][state]["work_ids"]
+    assert bias["legacy_human"]["include_denominator"] == 2
+    assert bias["ai_review"]["include_denominator"] == 7
+    population = next(
+        row
+        for row in states
+        if row["track"] == "all" and row["field"] == "AN_Population"
+    )
+    assert "work:A" in population["states"]["missing"]["work_ids"]
+    table = next(
+        row
+        for row in completion._analysis(works, schema())
+        if row["field"] == "AN_Bias_Axes" and row["value"] == "Gender"
+    )
+    decided = bias["all"]["states"]
+    assert table["denominator_field_coded_works"] == (
+        decided["coded"]["count"] + decided["explicit_none"]["count"]
+    )
+    assert table["work_ids"] == ["work:A"]
+    assert table["authority"] == "ai-agent-reviewed"
+
+
+def test_association_cells_count_works_once_and_never_report_gaps():
+    works = mapping_works()
+    matrices = {m["matrix"]: m for m in completion._associations(works, schema())}
+    matrix = matrices["AN_Bias_Axes x AN_Harm_Types"]
+    cells = {(c["row_value"], c["column_value"]): c for c in matrix["cells"]}
+    assert matrix["determinable_work_ids"] == ["work:A", "work:B"]
+    assert len(matrix["open_work_ids"]) == 7
+    gender = cells[("Gender", "Stereotyping")]
+    assert gender["work_ids"] == ["work:A"] and gender["work_count"] == 1
+    assert gender["status"] == "observed"
+    # The alias at verified does not lift the work above its weakest coding row.
+    assert gender["authority"] == "ai-agent-reviewed"
+    assert gender["authority_breakdown"]["coding_lifecycle_state"] == {
+        "ai-agent-reviewed": 1
+    }
+    assert cells[("None", "None")]["work_ids"] == ["work:B"]
+    empty = cells[("Religion", "Toxicity")]
+    assert empty["status"] == "not_determinable"
+    assert empty["authority"] == "no_contributing_works"
+    assert "gap" not in json.dumps(matrices)
+    complete = completion._matrix(
+        "test",
+        "x",
+        "y",
+        ["a"],
+        ["b"],
+        works[:1],
+        {works[0]["work_id"]: (set(), set())},
+        "test",
+    )
+    assert complete["cells"][0]["status"] == "zero_in_complete_coding"
+
+
+def test_category_matrix_uses_all_governed_decisions_and_skips_inconsistent_levels():
+    agents = {
+        "A": [coded("A")],
+        "A2": [coded("A2")],
+        "B": [coded("B", decision="Exclude")],
+    }
+    agents["A"][0]["categories"] = {"KI_Sonstige": 2, "Gender": 2}
+    agents["A2"][0]["categories"] = {"KI_Sonstige": 2, "Gender": 1}
+    agents["B"][0]["categories"] = {"Prompting": 2, "Gender": 1}
+    works, _ = completion._work_rows(mapping_registry("A", "B"), [], agents, {})
+    matrices = {m["matrix"]: m for m in completion._associations(works, schema())}
+    strict = matrices["Gegenstand x Perspektive (ja)"]
+    partial = matrices["Gegenstand x Perspektive (teilweise_or_ja)"]
+    assert strict["open_work_ids"] == ["work:A"]
+    assert strict["determinable_work_ids"] == ["work:B"]
+    strict_cells = {(c["row_value"], c["column_value"]): c for c in strict["cells"]}
+    partial_cells = {(c["row_value"], c["column_value"]): c for c in partial["cells"]}
+    assert strict_cells[("Prompting", "Gender")]["status"] == "not_determinable"
+    assert partial_cells[("Prompting", "Gender")]["work_ids"] == ["work:B"]
+    assert partial_cells[("Prompting", "Gender")]["authority_breakdown"][
+        "decision_authority"
+    ] == {"ai_review": 1}
+
+
+def test_integrity_hold_alone_removes_coding_from_analysis():
+    resolution = {"work_resolutions": {"work:one": {"integrity_hold": True}}}
+    works, _ = completion._work_rows(
+        registry(), [], {"A": [agent("A", ["ICL"])]}, {}, resolution
+    )
+    assert works[0]["analysis_eligible"] is False
+    assert all(
+        row["states"]["hold"]["count"] == 1
+        for row in completion._field_states(works, schema())
+        if row["track"] == "all"
+    )
+
+
+def test_round_one_cooccurrence_separates_tracks_and_populations(tmp_path):
+    categories = [c["name"] for c in schema()["categories"]]
+    rows = {
+        "R1": ("Include", {"KI_Sonstige", "Gender"}),
+        "R2": ("Include", {"KI_Sonstige", "Gender", "Fairness"}),
+        "R3": ("Exclude", {"KI_Sonstige"}),
+        "R4": ("Exclude", {"Gender", "Fairness"}),
+        "R5": ("", {"KI_Sonstige", "Gender"}),
+        "R6": ("Exclude", set()),
+    }
+    (tmp_path / "assessment").mkdir()
+    for name in ("human_assessment.csv", "llm_assessment_10k.csv"):
+        lines = ["Zotero_Key,Decision," + ",".join(categories)]
+        for key, (decision, positive) in rows.items():
+            # R3 leaves its negative cells empty; empty never counts as Ja.
+            empty = "" if key == "R3" else "Nein"
+            cells = ["Ja" if c in positive else empty for c in categories]
+            lines.append(",".join([key, decision, *cells]))
+        (tmp_path / "assessment" / name).write_text(
+            "\n".join(lines) + "\n", encoding="utf-8"
+        )
+    inputs = set()
+    result = completion._round_one_selection(tmp_path, inputs, schema())
+    assert inputs == {
+        "assessment/human_assessment.csv",
+        "assessment/llm_assessment_10k.csv",
+    }
+    entries = {(t["track"], t["population"]): t for t in result["tracks"]}
+    assert set(entries) == {
+        (track, population)
+        for track in ("human", "llm")
+        for population in ("screened", "included")
+    }
+    screened, included = entries[("human", "screened")], entries[("human", "included")]
+    assert (screened["records"], included["records"]) == (5, 2)
+    assert screened["records_with_ten_ja_nein_categories"] == 4
+    assert screened["records_meeting_include_rule"] == 2
+    assert included["records_meeting_include_rule"] == 2
+
+    def pair(entry, first, second):
+        return next(
+            p
+            for p in entry["pairs"]
+            if (p["category_a"], p["category_b"]) == (first, second)
+        )
+
+    across = pair(screened, "KI_Sonstige", "Gender")
+    assert across["pair_kind"] == "across_groups"
+    assert (across["both_ja"], across["a_ja"], across["b_ja"]) == (2, 3, 3)
+    assert across["jaccard"] == 0.5
+    assert pair(included, "KI_Sonstige", "Gender")["jaccard"] == 1.0
+    assert pair(screened, "Gender", "Fairness")["pair_kind"] == "within_Perspektive"
+    assert pair(screened, "AI_Literacies", "Prompting")["jaccard"] is None
+    text = json.dumps(result).casefold()
+    assert "p_value" not in text and "odds" not in text
+
+
+def test_full_package_field_states_match_sq_denominators():
+    package = completion.build_package()
+    include = package["counts"]["canonical_decisions"].get("Include", 0)
+    tables = {
+        row["field"]: row["denominator_field_coded_works"]
+        for row in package["analysis_tables"]
+    }
+    for row in package["analysis_field_states"]:
+        assert (
+            sum(entry["count"] for entry in row["states"].values())
+            == row["include_denominator"]
+        )
+        if row["track"] == "all":
+            assert row["include_denominator"] == include
+            if row["field"] in tables:
+                states = row["states"]
+                assert tables[row["field"]] == (
+                    states["coded"]["count"] + states["explicit_none"]["count"]
+                )
+    statuses = {
+        cell["status"]
+        for matrix in package["analysis_associations"]
+        for cell in matrix["cells"]
+    }
+    assert statuses <= {"observed", "not_determinable", "zero_in_complete_coding"}
+    assert (
+        package["agent_track_diagnostics"]["label"]
+        == "workflow_diagnostic_not_accuracy"
+    )
