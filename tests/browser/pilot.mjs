@@ -267,7 +267,10 @@ async function screenPaper(paperSpec, decisionSpec) {
   });
   check(`${id}: the action dock stays visible at the foot of the assessment rail`, dock.visible, dock);
   await shot(page, `${id}-before-commit`);
-  await page.click('#pt-record');
+  // one paper is saved with the keyboard shortcut, the others with the disk action
+  if (id === 'PILOT-B') await page.keyboard.press('Control+s');
+  else await page.click('#pt-record');
+  await page.waitForFunction((paperId) => !!window.__PRISMA_TEST__.curDec()[paperId], id, { timeout: 5000 }).catch(() => {});
   const rec = await hook(page, `window.__PRISMA_TEST__.curDec()[${JSON.stringify(id)}] || null`);
   check(`${id}: record exists`, !!rec);
   check(`${id}: decision`, rec && rec.decision === decisionSpec.expected_decision, rec && rec.decision);
@@ -353,6 +356,20 @@ try {
   check('read mode: another paper opens without enabling authoring', await currentPaperId() === 'PILOT-B' &&
     !(await page.evaluate(() => window.__PRISMA_TEST__.canEdit())));
   await page.click('#pt-corpus-list .pt-nav-item[data-i="0"]');
+  await page.waitForFunction(() => !window.__PRISMA_TEST__.readingPending());
+  await page.goBack();
+  await page.waitForFunction(() => window.EC.getAllPapers()[window.__PRISMA_TEST__.getState().index].id === 'PILOT-B');
+  check('history: the back button returns to the previously opened paper', /paper=PILOT-B/.test(page.url()));
+  await page.goForward();
+  await page.waitForFunction(() => window.EC.getAllPapers()[window.__PRISMA_TEST__.getState().index].id === 'PILOT-A');
+  check('corpus list: one tab stop, the open paper', await page.evaluate(() => {
+    const items = Array.from(document.querySelectorAll('#pt-corpus-list .pt-nav-item'));
+    return items.filter((item) => item.tabIndex === 0).length === 1 && items.find((item) => item.tabIndex === 0).classList.contains('active');
+  }));
+  await page.focus('#pt-corpus-list .pt-nav-item.active');
+  await page.keyboard.press('ArrowDown');
+  check('corpus list: the arrow keys move focus within the list', await page.evaluate(() =>
+    document.activeElement.dataset.i === '1' && document.activeElement.tabIndex === 0));
   await enterEditing(page);
   check('edit transition: reviewer setup appears with keyboard focus and without fixed-role radios', await page.evaluate(() =>
     !!document.getElementById('pt-reviewer-key') && document.activeElement === document.getElementById('pt-reviewer-key') &&

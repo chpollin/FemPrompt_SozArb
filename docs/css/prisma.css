@@ -214,8 +214,8 @@ body.pt-fullscreen [hidden] { display: none !important; }
 .pt-sync-identity { display: inline-flex; align-items: baseline; flex-wrap: wrap; gap: 0.2rem 0.5rem; min-width: 0; font-size: var(--pt-xs); }
 .pt-sync-identity strong { font-family: var(--pt-mono); }
 .pt-sync-identity code { overflow-wrap: anywhere; color: var(--pt-ink-3); font-size: var(--pt-2xs); }
-.pt-folder-status { color: var(--pt-ink-2); font-size: var(--pt-xs); }
-.pt-change-folder { font-size: var(--pt-2xs); }
+.pt-sync-ready .pt-sync-identity, .pt-folder-setup .pt-sync-identity { flex-basis: 100%; }
+.pt-folder-status { display: inline-flex; align-items: baseline; gap: 0.6rem; color: var(--pt-ink-2); font-size: var(--pt-xs); }
 .pt-sync-browser-note { margin: 0; color: var(--pt-warn-ink); font-size: var(--pt-xs); }
 .pt-save-status { flex-basis: 100%; margin: 0.15rem 0 0; padding: 0.35rem 0.5rem; border-radius: var(--pt-r-sm); font-size: var(--pt-xs); }
 .pt-save-saved { color: var(--pt-include); background: var(--pt-include-bg); }
@@ -223,6 +223,7 @@ body.pt-fullscreen [hidden] { display: none !important; }
 .pt-save-dirty { color: var(--pt-warn-ink); background: var(--pt-warn-bg); }
 .pt-save-error { color: var(--pt-exclude); background: var(--pt-exclude-bg); }
 .pt-conflict { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem; padding: 0.35rem 0.15rem; font-size: var(--pt-xs); color: var(--pt-exclude); }
+.pt-conflict .pt-btn { max-width: 100%; white-space: normal; text-align: left; }
 .pt-trial-note { font-size: var(--pt-xs); color: var(--pt-ink-3); }
 
 /* WORKSPACE: reading column. Title and metadata stay in place, only the text scrolls. */
@@ -232,7 +233,8 @@ body.pt-fullscreen [hidden] { display: none !important; }
 .pt-paper-metadata { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.15rem 0.7rem; margin: 0; padding: 0; color: var(--pt-ink-3); }
 .pt-paper-metadata > div { min-width: 0; display: inline-flex; align-items: baseline; gap: 0.25rem; max-width: 100%; }
 .pt-paper-metadata dt { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; } /* spoken, not shown: the values identify themselves */
-.pt-paper-metadata > div + div::before { content: "·"; color: var(--pt-ink-4); margin-right: 0.3rem; }
+/* the separator trails its item, so a wrapped line never starts with one */
+.pt-paper-metadata > div:not(:last-child)::after { content: "·"; color: var(--pt-ink-4); margin-left: 0.15rem; }
 .pt-paper-metadata dd { min-width: 0; margin: 0; font-size: var(--pt-xs); color: var(--pt-ink-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pt-paper-metadata .pt-meta-warn dd, .pt-paper-metadata .pt-source-mark dd { color: var(--pt-warn-ink); font-weight: 600; }
 .pt-doi-link, .pt-source-link { display: inline-block; max-width: 26ch; overflow: hidden; text-overflow: ellipsis; vertical-align: bottom; color: var(--pt-human); text-decoration-thickness: 1px; text-underline-offset: 2px; }
@@ -270,7 +272,8 @@ body.pt-fullscreen [hidden] { display: none !important; }
   width: 26px; height: 28px; border: 1px solid var(--pt-border-2); background: var(--pt-surface);
   border-radius: var(--pt-r-sm); cursor: pointer; color: var(--pt-ink-2); font-size: var(--pt-md); line-height: 1;
 }
-.pt-intext-nav:hover { border-color: var(--pt-ink-4); }
+.pt-intext-nav:hover:not([disabled]) { border-color: var(--pt-ink-4); }
+.pt-intext-nav[disabled] { opacity: 0.45; cursor: not-allowed; }
 .pt-pin-hit { height: 28px; }
 
 .pt-doc { max-width: 68ch; margin: 0 auto; font-family: var(--pt-serif); font-size: var(--pt-md); line-height: 1.76; color: var(--pt-ink); }
@@ -439,7 +442,8 @@ body.pt-fullscreen [hidden] { display: none !important; }
 .pt-override-input:focus-visible,
 .pt-provenance-details summary:focus-visible,
 .pt-doi-link:focus-visible,
-.pt-source-link:focus-visible {
+.pt-source-link:focus-visible,
+.pt-doc-table:focus-visible {
   outline: 2px solid var(--pt-human); outline-offset: 2px;
 }
 .pt-paper-title:focus-visible { outline: 2px solid var(--pt-human); outline-offset: 4px; border-radius: var(--pt-r-sm); }

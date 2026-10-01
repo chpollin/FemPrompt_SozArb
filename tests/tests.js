@@ -1240,7 +1240,7 @@ test('a toggle click switches a category on and off and re-renders the decision 
     function decision() { return document.getElementById('pt-decision').textContent; }
 
     assert(chip(tech), 'a technical toggle is rendered and clickable');
-    assertEqual(decision(), 'Exclude', 'empty set derives Exclude');
+    assert(!document.getElementById('pt-decision'), 'an untouched empty draft shows no decision');
     chip(tech).click();
     assertEqual(T.getWork().cats[tech], 2, 'a click switches the category on (ja)');
     assertEqual(chip(tech).getAttribute('aria-pressed'), 'true');
@@ -2265,6 +2265,29 @@ test('list dots and the category filter never show agent or LLM codes (ADR-044)'
     delete S.reviewers.ev;
 });
 
+test('Nächstes offen continues after a paper that a save removed from the Offen list', function() {
+    T.setPapers([{ id: 'N1', title: 'one' }, { id: 'N2', title: 'two' }, { id: 'N3', title: 'three' }, { id: 'N4', title: 'four' }]);
+    var S = T.getState(), prevRev = S.reviewer;
+    S.reviewer = 'nx'; S.reviewers.nx = {}; S.catFilter = []; S.assigneeFilter = 'alle';
+    T.setCorpusQuery('');
+    S.statusFilter = 'offen'; S.index = 1;
+    S.reviewers.nx.N2 = { decision: 'Exclude', reason: 'Duplicate', categories: {}, ts: '2026-10-01T00:00:00Z' };
+    T.gotoNextOpen();
+    assertEqual(T.getState().index, 2, 'the next open paper follows the saved one');
+    S.reviewers.nx.N3 = { decision: 'Exclude', reason: 'Duplicate', categories: {}, ts: '2026-10-01T00:00:00Z' };
+    S.reviewers.nx.N4 = { decision: 'Exclude', reason: 'Duplicate', categories: {}, ts: '2026-10-01T00:00:00Z' };
+    T.gotoNextOpen();
+    assertEqual(T.getState().index, 0, 'past the end of the list it wraps to the first open paper');
+    S.statusFilter = 'alle'; delete S.reviewers.nx; S.reviewer = prevRev;
+});
+test('a conflict message names the paper by title, not by its identifier', function() {
+    T.setPapers([{ id: 'CF1', title: 'A readable paper title' }]);
+    var ts = '2026-08-22T12:00:00.000Z';
+    var merged = T.mergeReviewerDecisions({ CF1: { decision: 'Exclude', ts: ts } }, { CF1: { decision: 'Include', ts: ts } });
+    assertContains(merged.conflict, '„A readable paper title“');
+    assertNotContains(merged.conflict, 'CF1');
+});
+
 test('a verification entry of an earlier build still loads and serializes, without making the paper captured (ADR-044)', function() {
     var p = { id: 'AG3', title: 'X' };
     T.setPapers([p]);
@@ -2482,7 +2505,7 @@ test('recordRequirements also checks the exclusion reason and the derivation of 
 
 test('the reader renders pipe tables and glossaries and resolves glyph names', function() {
     var table = T.renderMarkdown('## Document History\n\n| Version | Date | Author(s) |\n|-----------|------------|------|\n| V0.1 | 03/05/2024 | A <b> |\n| V1.0 | 07/06/2024 | B |\n\nAfter.');
-    assertContains(table, '<div class="pt-doc-table"><table><thead><tr><th>Version</th><th>Date</th><th>Author(s)</th></tr></thead>');
+    assertContains(table, '<div class="pt-doc-table" role="region" aria-label="Tabelle"><table><thead><tr><th>Version</th><th>Date</th><th>Author(s)</th></tr></thead>');
     assertContains(table, '<td>V1.0</td>');
     assertContains(table, '&lt;b&gt;', 'cell text is escaped');
     assertContains(table, '<p class="pt-doc-p">After.</p>');

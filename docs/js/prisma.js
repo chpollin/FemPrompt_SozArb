@@ -257,6 +257,7 @@ let pinTerm = '', pinSnippet = '', pinOrigin = 'human'; // pinOrigin = source la
 let pinReturnFocus = null, pinKeyHandler = null, pinOutsideHandler = null;
 let focusReadingOnRender = false; // move focus to the paper heading after a paper switch (a11y)
 let renderedPaperId = null;
+let pageListenersBound = false;      // the page-wide Ctrl+S and history listeners are attached once
 let railStep = 'assess';       // 'assess' | 'analysis': the Include analysis coding is its own step
 let readToken = 0;             // monotonic load token; a reading response for a stale token is dropped
 let readingPending = false;    // true between a reading load and its applied response; commit waits for it
@@ -477,6 +478,9 @@ function save() {
             setSaveStatus('saved', 'Gespeichert in ' + reviewerPath(key) + '.');
         return true;
     }).catch(function(e) {
+        // the browser now holds records the file lacks; the disk action stays available
+        // to write them once the cause is resolved
+        reviewerRecoveryPending[key] = true;
         if (state.reviewer === key && version === writeVersion)
             setSaveStatus('error', 'Speichern fehlgeschlagen: ' + (e.message || e));
         console.warn('[PRISMA] file write failed:', e);
@@ -608,6 +612,14 @@ function reviewerPath(key) {
     return trialMode ? 'isolierter Testlauf/' + key + '.json' : 'docs/data/screening/' + key + '.json';
 }
 
+// The target path already names docs/data/screening; beside it only the clone or the
+// picked folder itself identifies where the file is written.
+function folderNameLabel() {
+    if (!screeningHandle) return '';
+    if (connectScope === 'root') return dirHandle && dirHandle.name ? dirHandle.name : '';
+    return selectedFolderLabel();
+}
+
 function selectedFolderLabel() {
     if (!screeningHandle) return 'nicht verbunden';
     if (connectScope === 'root') return (dirHandle && dirHandle.name ? dirHandle.name + '/' : '') + 'docs/data/screening';
@@ -620,6 +632,7 @@ function setSaveStatus(kind, message) {
     if (status) {
         status.className = 'pt-save-status pt-save-' + kind;
         status.textContent = message;
+        status.hidden = !saveStatusShown(kind);
     }
     if (kind === 'error' || kind === 'saved') announce(message);
 }
@@ -652,6 +665,15 @@ function normalizedReviewerDecisions(decisions, key) {
         if (copy[pid] && typeof copy[pid] === 'object') copy[pid].reviewer = key;
     });
     return copy;
+}
+
+// A paper named in a message: its short title, the identifier only for a paper the
+// corpus does not know.
+function paperLabel(pid) {
+    const paper = papers.find(function(p) { return p.id === pid; });
+    if (!paper || !paper.title) return 'Paper ' + pid;
+    const title = paper.title.length > 60 ? paper.title.slice(0, 57).replace(/\s+\S*$/, '') + ' …' : paper.title;
+    return '„' + title + '“';
 }
 
 function recordTimestamp(record) {
@@ -688,7 +710,7 @@ function mergeReviewerDecisions(fileDecisions, localDecisions) {
         // the other until the reviewer chooses one side.
         conflictDetail = { pid: pid, disk: disk[pid], local: local[pid] };
         merged[pid] = local[pid];
-        conflict = 'Browser- und Dateistand widersprechen sich bei Paper ' + pid +
+        conflict = 'Browser- und Dateistand widersprechen sich bei ' + paperLabel(pid) +
             (diskTs !== null && localTs !== null
                 ? ' trotz identischem Zeitstempel.'
                 : ' ohne vergleichbare Zeitstempel.');
@@ -1475,6 +1497,12 @@ function paperBodyMarkdown(md, paper) {
     while (lines.length && !lines[0].trim()) lines.shift();
     const title = normalizedLine(paper && paper.title);
     if (lines.length && title && normalizedLine(lines[0]) === title) lines.shift();
+    // Docling often sets the title as a heading below the journal line; the structured
+    // title above the text already carries it
+    const titleHeading = title ? lines.findIndex(function(line, i) {
+        return i < 40 && /^#{1,6}\s/.test(line.trim()) && normalizedLine(line.trim().replace(/^#{1,6}\s+/, '')) === title;
+    }) : -1;
+    if (titleHeading !== -1) lines.splice(titleHeading, 1);
     while (lines.length && !lines[0].trim()) lines.shift();
     const known = [paper && paper.authors, paper && paper.author_year, paper && paper.journal]
         .map(normalizedLine).filter(Boolean);
@@ -1538,7 +1566,8 @@ function renderTable(lines, i) {
         for (let c = 0; c < width; c++) out += '<' + tag + '>' + inlineMd(row[c] || '') + '</' + tag + '>';
         return out;
     };
-    const html = '<div class="pt-doc-table"><table><thead><tr>' + cells(head, 'th') + '</tr></thead><tbody>' +
+    // a wide table scrolls on its own and Chromium makes it a tab stop, so it gets a name
+    const html = '<div class="pt-doc-table" role="region" aria-label="Tabelle"><table><thead><tr>' + cells(head, 'th') + '</tr></thead><tbody>' +
         rows.map(function(row) { return '<tr>' + cells(row, 'td') + '</tr>'; }).join('') + '</tbody></table></div>';
     return { html: html, next: k };
 }
@@ -1636,6 +1665,17 @@ window.initializePrisma = function() {
     applyLifecycleContract();
     applyWorkVersionContract();
     initialized = true;
+    // Ctrl+S (Cmd+S) saves in Bearbeiten: the disk action sits above the list, far from
+    // the assessment in the tab order, and the browser's own page save is never wanted here
+    if (!pageListenersBound) {
+        pageListenersBound = true;
+        window.addEventListener('popstate', restoreFromUrl);
+        document.addEventListener('keydown', function(e) {
+            if (!(e.ctrlKey || e.metaKey) || e.altKey || e.shiftKey || String(e.key).toLowerCase() !== 's' || !canEdit()) return;
+            e.preventDefault();
+            saveCurrent();
+        });
+    }
     papers = (EC && EC.getAllPapers) ? (EC.getAllPapers() || []) : [];
     const query = new URLSearchParams(window.location.search);
     trialMode = query.get('trial') === '1';
@@ -1797,8 +1837,24 @@ function syncUrl() {
     else url.searchParams.delete('assignee');
     const next = url.pathname + url.search + url.hash;
     if (next !== window.location.pathname + window.location.search + window.location.hash) {
-        try { window.history.replaceState(null, '', next); } catch (e) { /* sandboxed frames refuse it */ }
+        // another paper is a new history entry, so the browser's back button returns to
+        // the previous one; a filter change replaces the current entry
+        const shown = new URLSearchParams(window.location.search).get('paper');
+        const push = !!(shown && paper && shown !== paper.id && typeof window.history.pushState === 'function');
+        try { window.history[push ? 'pushState' : 'replaceState'](null, '', next); } catch (e) { /* sandboxed frames refuse it */ }
     }
+}
+
+function restoreFromUrl() {
+    if (!initialized || acceptanceMode || !papers.length) return;
+    const query = new URLSearchParams(window.location.search);
+    readFilterQuery(query);
+    const wanted = query.get('paper');
+    const index = wanted ? papers.findIndex(function(p) { return p.id === wanted; }) : -1;
+    if (index !== -1) state.index = index;
+    closePinMenu();
+    focusReadingOnRender = true;
+    renderScreening();
 }
 
 // Decision helpers
@@ -2086,7 +2142,8 @@ function renderScreening() {
     if (state.index >= papers.length) state.index = papers.length - 1;
 
     const p = papers[state.index];
-    if (renderedPaperId !== p.id) {
+    const paperChanged = renderedPaperId !== p.id;
+    if (paperChanged) {
         state.readMode = 'full';
         renderedPaperId = p.id;
         railStep = 'assess';
@@ -2112,7 +2169,7 @@ function renderScreening() {
     if (list) {
         if (listScroll !== null) list.scrollTop = listScroll;
         const active = list.querySelector('.pt-nav-item.active');
-        if (active && typeof active.scrollIntoView === 'function') active.scrollIntoView({ block: 'nearest' });
+        if (active && typeof active.scrollIntoView === 'function') active.scrollIntoView({ block: paperChanged ? 'center' : 'nearest' });
     }
     syncUrl();
 
@@ -2143,7 +2200,7 @@ function positionBarHtml() {
         html += '<span class="pt-spacer"></span>';
         if (gate.storage) html += '<span class="pt-save-hint" id="pt-save-hint">' + EC.escapeHtml(gate.storage) + '</span>';
         const label = gate.ok ? gate.label : 'Speichern nicht möglich: ' + (gate.storage || gate.reasons[0] || gate.label);
-        html += '<button class="pt-save-icon" id="pt-record" type="button" aria-label="' + EC.escapeHtml(label) +
+        html += '<button class="pt-save-icon" id="pt-record" type="button" aria-keyshortcuts="Control+S" aria-label="' + EC.escapeHtml(label) +
             '" title="' + EC.escapeHtml(label) + '"' + (gate.ok ? '' : ' disabled') + '>' +
             '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3h12l2 2v16H5V3Zm2 2v5h9V5H7Zm1 9v5h8v-5H8Z"></path></svg></button>';
     }
@@ -2222,7 +2279,7 @@ function corpusListHtml() {
         : 'Keine Dokumente in dieser Auswahl.') + '</p>';
     // the assignee shows only while the list is not narrowed to one of them
     const showAssignee = assigneeFilterAvailable() && activeAssignee() === 'alle';
-    return rows.map(function(result) {
+    return rows.map(function(result, n) {
         const p = result.paper, i = result.index;
         const st = listState(p);
         const who = showAssignee ? assigneeLabel(assigneeOf(p)) : '';
@@ -2231,7 +2288,11 @@ function corpusListHtml() {
         const badge = q ? '<span class="pt-hit-badge">' + EC.escapeHtml(result.kind === 'Text'
             ? result.count + ' Texttreffer' : result.kind) + '</span>' : '';
         const active = i === state.index;
+        // one tab stop for the whole list: the open paper, else the first row; the arrow
+        // keys move within the list (bindCorpusItems)
+        const tabStop = active || (n === 0 && !rows.some(function(row) { return row.index === state.index; }));
         return '<button type="button" class="pt-nav-item' + (active ? ' active' : '') + '" data-i="' + i + '"' +
+            (tabStop ? '' : ' tabindex="-1"') +
             (active ? ' aria-current="true"' : '') + ' data-state="' + st + '" data-match-kind="' + EC.escapeHtml(result.kind || '') + '">' +
             '<span class="pt-nav-mark pt-mark-' + st + '" aria-hidden="true"></span>' +
             '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
@@ -2270,6 +2331,17 @@ function openPaper(index) {
 
 function bindCorpusItems() {
     const list = document.getElementById('pt-corpus-list'); if (!list) return;
+    list.onkeydown = function(e) {
+        const items = Array.prototype.slice.call(list.querySelectorAll('.pt-nav-item'));
+        const at = items.indexOf(document.activeElement);
+        if (at === -1) return;
+        const to = { ArrowDown: at + 1, ArrowUp: at - 1, Home: 0, End: items.length - 1 }[e.key];
+        if (to === undefined) return;
+        e.preventDefault();
+        const next = items[Math.max(0, Math.min(items.length - 1, to))];
+        items.forEach(function(item) { item.tabIndex = item === next ? 0 : -1; });
+        next.focus();
+    };
     list.querySelectorAll('.pt-nav-item').forEach(function(btn) {
         btn.addEventListener('click', function() {
             pendingInText = corpusQuery.trim() && btn.dataset.matchKind === 'Text' ? corpusQuery.trim() : null;
@@ -2352,7 +2424,7 @@ function doiHref(raw) {
 // read: a non-preferred version and a missing or pending review are flagged.
 function versionMetaHtml(p) {
     let h = '';
-    if (p.version_type && p.version_type !== 'unknown')
+    if (p.version_type && p.version_type !== 'unknown' && p.version_type !== 'version_of_record')
         h += '<div><dt>Fassung</dt><dd>' + EC.escapeHtml(versionLabel(p.version_type)) + '</dd></div>';
     if (p.preferred_version_id && p.is_preferred_version === false)
         h += '<div class="pt-meta-warn"><dt>Hinweis</dt><dd>nicht die bevorzugte Fassung</dd></div>';
@@ -2390,8 +2462,8 @@ function readingShellHtml(p) {
     h += '<div class="pt-intext-bar" id="pt-intext-bar" hidden>' +
         '<input id="pt-intext" type="search" aria-label="Im Text suchen" aria-keyshortcuts="Enter Shift+Enter" placeholder="Im Text suchen">' +
         '<span class="pt-intext-count" id="pt-intext-count" aria-hidden="true"></span>' +
-        '<button type="button" class="pt-intext-nav" id="pt-intext-prev" aria-label="Vorheriger Treffer">&lsaquo;</button>' +
-        '<button type="button" class="pt-intext-nav" id="pt-intext-next" aria-label="Nächster Treffer">&rsaquo;</button>' +
+        '<button type="button" class="pt-intext-nav" id="pt-intext-prev" aria-label="Vorheriger Treffer" disabled>&lsaquo;</button>' +
+        '<button type="button" class="pt-intext-nav" id="pt-intext-next" aria-label="Nächster Treffer" disabled>&rsaquo;</button>' +
         (canEdit() ? '<button type="button" class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled aria-describedby="pt-pin-help">Treffer anheften</button>' +
             '<span class="pt-sr-only" id="pt-pin-help">Heftet den aktuellen Treffer als Beleg an eine Kategorie. Eine markierte Textstelle lässt sich ebenso anheften. ' +
             'Ein Paper-Beleg setzt eine leere Kategorie auf teilweise.</span>' : '') +
@@ -2521,9 +2593,11 @@ function applyInText(q) {
     docMarks = []; docMarkIdx = 0;
     let cnt = document.getElementById('pt-intext-count');
     let pinBtn = document.getElementById('pt-pin-hit');
+    const stepBtns = ['pt-intext-prev', 'pt-intext-next'].map(function(id) { return document.getElementById(id); }).filter(Boolean);
+    const setStepping = function(on) { stepBtns.forEach(function(b) { b.disabled = !on; }); };
     q = (q || '').trim();
     appliedInTextQuery = q;
-    if (q.length < 2) { if (cnt) cnt.textContent = ''; if (pinBtn) pinBtn.disabled = true; return; }
+    if (q.length < 2) { if (cnt) cnt.textContent = ''; if (pinBtn) pinBtn.disabled = true; setStepping(false); return; }
     const ql = q.toLowerCase();
     const walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT, null);
     let nodes = [], n;
@@ -2541,6 +2615,7 @@ function applyInText(q) {
         node.parentNode.replaceChild(frag, node);
     });
     if (pinBtn) pinBtn.disabled = docMarks.length === 0;
+    setStepping(docMarks.length > 1);
     if (docMarks.length) setActiveMark(0);
     else {
         if (cnt) cnt.textContent = '0 Treffer';
@@ -3226,6 +3301,12 @@ function saveGate(p) {
     const subject = paperSubject(p);
     const mode = saveMode(p, subject);
     const reasons = draftReasons(p, subject, mode);
+    // records held only in the browser (a restored recovery, a failed write) are written
+    // by the same disk action even when the open paper is unchanged
+    if (mode === 'none' && canEdit() && !trialMode && state.reviewer && reviewerRecoveryPending[state.reviewer]) {
+        const pending = storageReason();
+        return { ok: !pending, mode: 'file', storage: pending, reasons: [], label: 'Ausstehende Änderungen in die Datei schreiben' };
+    }
     const storage = mode === 'none' ? '' : storageReason();
     const label = mode === 'none' ? 'Gespeichert, keine Änderung' : 'Bewertung speichern';
     return { ok: mode !== 'none' && !storage && !reasons.length, mode: mode, storage: storage, reasons: reasons, label: label };
@@ -3347,7 +3428,8 @@ function referenceProposalsHtml(p, subject) {
 }
 
 function dimHtml(label, keys, cats, editable, basis) {
-    return '<div class="pt-dim"><h3 class="pt-sub-head">' + label + '</h3><div class="category-chips">' +
+    const headId = 'pt-dim-' + label.toLowerCase();
+    return '<div class="pt-dim"><h3 class="pt-sub-head" id="' + headId + '">' + label + '</h3><div class="category-chips" role="group" aria-labelledby="' + headId + '">' +
         keys.map(function(c) { return categoryChipHtml(c, cats[c], { disabled: !editable, expertBasis: !!(basis && basis[c]) }); }).join('') +
         '</div></div>';
 }
@@ -3358,7 +3440,9 @@ function reasonChipsHtml(record, editable) {
         return r !== EXPERT_EXCLUSION_REASON || offerExpert || record.reason === r;
     });
     return '<div class="pt-reason-block" id="pt-reason-block"><h3 class="pt-sub-head" id="pt-reason-title">Ausschlussgrund</h3>' +
-        '<div class="pt-reason-chips" role="group" aria-labelledby="pt-reason-title">' + reasons.map(function(r) {
+        '<div class="pt-reason-chips" role="group" aria-labelledby="pt-reason-title">' + reasons.filter(function(r) {
+            return editable || record.reason === r;
+        }).map(function(r) {
             const on = record.reason === r;
             return '<button type="button" class="pt-reason-chip' + (on ? ' sel' : '') + '" data-reason="' + EC.escapeHtml(r) + '" aria-pressed="' + on + '"' +
                 (editable ? '' : ' disabled') + '>' + EC.escapeHtml(reasonLabel(r)) + '</button>';
@@ -3366,6 +3450,7 @@ function reasonChipsHtml(record, editable) {
 }
 
 function overrideHtml(record, editable) {
+    if (!editable && !record.override) return '';
     const derived = deriveDecision(record.categories || {});
     let h = '<div class="pt-override-row"><label class="pt-override"><span class="pt-switch"><input type="checkbox" id="pt-override"' +
         (record.override ? ' checked' : '') + (editable ? '' : ' disabled') + '><span class="pt-switch-track"></span></span> ' +
@@ -3395,7 +3480,8 @@ function railHtml(p) {
     const editable = railEditable(p, subject);
     const record = editable ? workingDecisionRecord() : (subject.record || null);
     let h = '<div class="pt-rail-head"><h2 class="pt-rail-title">Bewertung</h2>';
-    if (record) h += decisionBadgeHtml(record, subject.kind === 'own' || (editable && work.dirty));
+    // an untouched empty draft has no decision yet, only the provenance line says so
+    if (record && !(subject.kind === 'empty' && !work.dirty)) h += decisionBadgeHtml(record, subject.kind === 'own' || (editable && work.dirty));
     h += '</div><p class="pt-provenance" id="pt-provenance">' + EC.escapeHtml(provenanceLine(p, subject)) +
         (editable && work.dirty && subject.kind !== 'empty' ? ' · geändert' : '') + '</p>';
     h += '<div class="pt-rail-body">';
@@ -3734,6 +3820,7 @@ function saveCurrent() {
     if (!p || !canEdit()) return Promise.resolve(false);
     const gate = saveGate(p);
     if (!gate.ok) { syncDockHint(p); announce(gate.storage || gate.reasons[0] || gate.label); return Promise.resolve(false); }
+    if (gate.mode === 'file') return save().then(function(ok) { refreshSaveGate(); return ok; });
     return Promise.resolve(commit());
 }
 
@@ -3856,7 +3943,13 @@ function gotoNextOpen() {
         renderScreening();
         return;
     }
-    const at = rows.findIndex(function(row) { return row.index === state.index; });
+    let at = rows.findIndex(function(row) { return row.index === state.index; });
+    // a paper that just left the list (saved under Offen) keeps its place: the search
+    // continues after it in corpus order instead of restarting at the top
+    if (at === -1 && !corpusQuery.trim()) {
+        const after = rows.findIndex(function(row) { return row.index > state.index; });
+        at = (after === -1 ? rows.length : after) - 1;
+    }
     for (let k = 1; k <= rows.length; k++) {
         const row = rows[(at + k + rows.length) % rows.length];
         if (row && row.index !== state.index && !isDone(row.paper)) {
@@ -3973,14 +4066,24 @@ function reviewerKeyFormHtml(value) {
         '<span class="pt-reviewer-error" id="pt-reviewer-error" role="status"></span></form>';
 }
 
+// ready states need no standing line; dirty, error, saving and saved states do
+function saveStatusShown(kind) { return ['dirty', 'error', 'saving', 'saved'].indexOf(kind) !== -1; }
+
 function statusLineHtml() {
-    // ready and saved states need no standing line; dirty and error states do
-    const show = ['dirty', 'error', 'saving', 'saved'].indexOf(saveStatus.kind) !== -1;
+    const show = saveStatusShown(saveStatus.kind);
     return '<p class="pt-save-status pt-save-' + saveStatus.kind + '" id="pt-save-status"' + (show ? '' : ' hidden') + '>' +
         EC.escapeHtml(saveStatus.message) + '</p>';
 }
 
 let changingKey = false;
+
+// What each side of a conflict holds, so the choice is not taken blind.
+function conflictSideLabel(record) {
+    if (!record || !record.decision) return '';
+    const parts = [record.decision];
+    if (record.decision === 'Exclude' && record.reason) parts.push(reasonLabel(record.reason));
+    return ': ' + EC.escapeHtml(parts.join(', '));
+}
 
 function renderData(targetEl) {
     const el = targetEl || document.getElementById('pt-data-inline'); if (!el) return;
@@ -4014,8 +4117,8 @@ function renderData(targetEl) {
     }
 
     const identity = '<span class="pt-sync-identity"><strong>' + EC.escapeHtml(state.reviewer) + '</strong>' +
-        '<code>' + EC.escapeHtml(reviewerPath(state.reviewer)) + '</code>' +
-        (trialMode ? '' : '<button type="button" class="pt-link-btn pt-change-key">Kürzel ändern</button>') + '</span>';
+        '<code>' + EC.escapeHtml(reviewerPath(state.reviewer)) + '</code></span>' +
+        (trialMode ? '' : '<button type="button" class="pt-link-btn pt-change-key">Kürzel ändern</button>');
     let h;
     if (trialMode) {
         h = '<div class="pt-sync-ready pt-trial-ready">' + identity +
@@ -4024,8 +4127,8 @@ function renderData(targetEl) {
             '<span class="pt-trial-note">Keine Forschungsdaten werden geschrieben.</span></div>';
     } else if (screeningHandle) {
         h = '<div class="pt-sync-ready">' + identity +
-            '<span class="pt-folder-status">Arbeitsordner: ' + EC.escapeHtml(selectedFolderLabel()) +
-            ' <button class="pt-change-folder pt-link-btn" type="button">Ordner ändern</button></span>' + statusLineHtml() + '</div>';
+            '<span class="pt-folder-status">' + EC.escapeHtml(folderNameLabel()) +
+            '<button class="pt-change-folder pt-link-btn" type="button">Ordner ändern</button></span>' + statusLineHtml() + '</div>';
     } else {
         const actionLabel = storedHandleAvailable ? 'Arbeitsordner freigeben' : 'Arbeitsordner wählen';
         h = '<div class="pt-folder-setup">' + identity +
@@ -4035,9 +4138,9 @@ function renderData(targetEl) {
     }
     const conflict = reviewerConflicts[state.reviewer];
     if (conflict && !trialMode)
-        h += '<div class="pt-conflict" role="group" aria-label="Widerspruch auflösen"><span>Paper ' + EC.escapeHtml(conflict.pid) + ' unterscheidet sich in Datei und Browser.</span>' +
-            '<button type="button" class="pt-btn pt-btn-sm" data-keep="disk">Dateistand übernehmen</button>' +
-            '<button type="button" class="pt-btn pt-btn-sm" data-keep="local">Browserstand übernehmen</button></div>';
+        h += '<div class="pt-conflict" role="group" aria-label="Widerspruch auflösen">' +
+            '<button type="button" class="pt-btn pt-btn-sm" data-keep="disk">Dateistand übernehmen' + conflictSideLabel(conflict.disk) + '</button>' +
+            '<button type="button" class="pt-btn pt-btn-sm" data-keep="local">Browserstand übernehmen' + conflictSideLabel(conflict.local) + '</button></div>';
     if (secondTabNotice && !trialMode) h += '<p class="pt-save-status pt-save-dirty">' + EC.escapeHtml(secondTabNotice) + '</p>';
     el.innerHTML = h;
     const exportBtn = el.querySelector('.pt-trial-export');
@@ -4058,7 +4161,12 @@ function renderData(targetEl) {
     });
     el.querySelectorAll('[data-keep]').forEach(function(btn) {
         btn.addEventListener('click', function() {
-            if (resolveReviewerConflict(state.reviewer, btn.dataset.keep)) { renderData(el); renderScreening(); }
+            // the choice is the decision; writing it at once leaves no state that only
+            // the browser holds
+            if (resolveReviewerConflict(state.reviewer, btn.dataset.keep)) {
+                renderData(el); renderScreening();
+                save().then(function() { renderData(el); refreshSaveGate(); });
+            }
         });
     });
 }
