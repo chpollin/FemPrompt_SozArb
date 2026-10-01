@@ -44,6 +44,19 @@ The choice between them is open for the project lead. Critical interpretive synt
 
 Thematic synthesis (Thomas and Harden 2008), reported by ENTREQ (Tong et al. 2012), applies only to the empirical subset of qualitative primary studies, because it presupposes findings extracted from primary research. Realist synthesis asks what works for whom under which circumstances (Pawson et al. 2005). It belongs to practice recommendations, which require a separate decision and an appraisal of study quality and transfer conditions ([[research-vault#Comparative synthesis scope]]).
 
+## Answering the research questions
+
+The research questions in [[project#Research questions]] are answered in two layers. A descriptive map shows from coded fields where the literature addresses a topic, where it does not, and where coding is still open. Source-linked Assertions carry everything a code cannot state, which includes benefits, effects, conditions, limitations and competences. A map cell means that codes occur jointly in the same Work. It states no relation between them.
+
+| Question | Map from coded fields | Assertions and synthesis | Current limits |
+|---|---|---|---|
+| SQ1 Use | Population or setting, prompting role (recommended practice), a task field once a codebook amendment adds it | Reported benefits with task, setting, conditions and limitations | No task field exists. Much of the coded literature is not specific to social work, which is a finding only once coding is complete. Task literature without a bias focus may be underrepresented because identification centred on bias and gender. |
+| SQ2 Risks | Bias axes, harm types and populations, jointly coded | Harm mechanisms and affected groups with their study conditions | Answerable with the current codebook. Two isolated agent tracks often disagree on harm types and bias axes, so the vocabulary needs sharper definitions and anchor examples before the full coding run. |
+| SQ3 Practices | Prompt techniques, prompting role, mitigation stage and status | Reported effects, conditions and limitations of evaluated and demonstrated practices | Mitigation status is one value per Work, so a status cannot be attributed to a single technique or stage. Intervention-status pairs require a codebook amendment. |
+| SQ4 Competences | Organisational mitigation stage and learning content as prompting role, eligibility category AI literacies | Best-fit framework synthesis against the working definition of feminist AI literacies and a named external framework of general prompt guidance | The external framework has to be named before synthesis. Comparing the corpus with the project's own prompt formula would make the gap self-referential. |
+
+Across all questions the answer is limited by the coverage of coding. Every view and every text states how many included Works are coded for the fields it uses. An empty cell with open Works is not determinable and never a gap in the literature. What the literature recommends is reported as the recommendation of its source, never as a recommendation of the project ([[project#Project goal]]).
+
 ## Analysis plan
 
 ### Tier 1, analyses on the current data

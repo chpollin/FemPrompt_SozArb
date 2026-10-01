@@ -40,11 +40,7 @@ Round-two searches ran under the initial protocol and were documented in `corpus
 
 The methodological question asks how LLMs and AI agents can be integrated into a qualitative literature review with traceable contributions, re-executable processing, and final scholarly authority assigned to domain experts.
 
-The literature analysis uses three sub-questions.
-
-- SQ1 identifies prompting techniques and their evidence status.
-- SQ2 maps bias axes and harm types to proposed, demonstrated, or evaluated mitigations.
-- SQ3 identifies social-work-specific contexts, constraints, and research gaps.
+The literature analysis originally used three sub-questions on prompting techniques and their evidence status, on the mapping of bias axes and harm types to proposed, demonstrated or evaluated mitigations, and on social-work-specific contexts, constraints and research gaps. On 1 October 2026 the operator made the substantive question primary and reformulated the sub-questions around the tasks of social work. [[project#Research questions]] holds the current wording and the mapping from the earlier questions. The coding vocabularies below remain valid until a codebook amendment is decided.
 
 ## Eligibility
 

@@ -25145,7 +25145,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:f93b5573926f0a696ddcd7a29bd13e237d3fe38f6345e70f6b69fbfafc35f6ef",
+  "source_fingerprint": "sha256:f1aab2b55f422e761d63a3876ff3962c533e561b9764f1703b29b266aaf55f48",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -27473,7 +27473,7 @@
     },
     {
       "path": "knowledge/project.md",
-      "sha256": "569a739ea7fd4f273084755eefb5287820584e0bcf6541de3b6cc4f0607b6b9a"
+      "sha256": "a64ae340c7ba3295c485a4151a3daad2dd808ea9ef08d10ba81dc23524b2557d"
     },
     {
       "path": "research-vault/10_distillates/A+ Alliance_2024_Incubating_Feminist_AI_Executive_Summary_2021-2024.md",

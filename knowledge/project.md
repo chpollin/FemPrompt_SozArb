@@ -10,34 +10,51 @@ status: complete
 language: en
 version: "0.6"
 created: 2026-02-21
-updated: 2026-09-22
+updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 topics: ["[[Epistemic Infrastructure]]", "[[Feminist AI]]"]
-related: [INDEX, methods, standards, governance, verification, plan, journal]
+related: [INDEX, methods, analysis-methods, standards, governance, verification, plan, journal]
 ---
 
 FemPrompt SozArb is a qualitative literature review on generative AI, gender, bias, and social work, together with the epistemic infrastructure that makes its AI-assisted research operations traceable. It forms part of the Elisabeth List Fellowship project "Diversity-Sensitive Engagement with Artificial Intelligence" at the University of Graz. The round-one expert and LLM divergence motivates the record design. The round-two workflow demonstrates how AI agents can prepare a corpus for later domain-expert verification.
 
 ## Project goal
 
-The primary goal is to describe and operationalise an epistemic infrastructure for LLM- and agent-assisted qualitative literature review. The case study examines generative AI, gender, and bias in social work. The infrastructure records evidence, provenance, deterministic validation, source-grounded AI Agent Review, domain-expert verification, and publication approval as distinct operations.
+The primary goal is substantive. The review establishes what the literature shows about how social work professionals can use large language models for their tasks responsibly, constructively and productively, which risks this use carries for which groups, and which practices, competences and organisational conditions support it. The operator set this priority on 1 October 2026.
 
-A secondary goal is to create a conceptual basis for a social-work bias benchmark. The review identifies relevant terms, bias axes, mitigation approaches, population contexts, and domain-specific constraints that can inform later test scenarios.
+The review delivers the evidence base, not practice recommendations of its own. It reports what the literature shows and which recommendations the literature itself makes, each with its source and evidence status. Recommendations of the project require a further step with appraisal of study quality, transfer conditions and domain-expert validation, which the planned orientation guide of the fellowship can take up ([[research-vault#Comparative synthesis scope]]).
+
+The methodological goal is to describe and operationalise the epistemic infrastructure with which the review is conducted. It records evidence, provenance, deterministic validation, source-grounded AI Agent Review, domain-expert verification, and publication approval as distinct operations.
+
+A further goal is a conceptual basis for a social-work bias benchmark. The review identifies relevant terms, bias axes, mitigation approaches, population contexts, and domain-specific constraints that can inform later test scenarios.
 
 Working definition of feminist AI literacies: diversity-sensitive, intersectional, and bias-aware competencies that social work professionals need when engaging with generative AI, with a focus on prompting, critical output evaluation, and context and application sensitivity.
 
 ## Research questions
 
-The paper has one methodological integration question. How can LLMs and AI agents be integrated into a qualitative literature review with traceable contributions, re-executable processing, and final scholarly authority assigned to domain experts?
+The main question of the literature analysis is substantive.
 
-The literature analysis answers three sub-questions.
+> How can social work professionals use large language models for their tasks, which risks does this carry for which groups, which practices and safeguards are proposed, demonstrated or evaluated, and which competences and organisational conditions does the literature name for responsible use?
 
-- SQ1 identifies the prompting techniques discussed in the literature and distinguishes proposed, demonstrated, and evaluated uses.
-- SQ2 maps bias axes and harm types to mitigation stages and evidence status.
-- SQ3 identifies social-work-specific constraints, population contexts, practice settings, and gaps in general-purpose prompt-engineering guidance.
+German short form for the interface: „Wie können Fachkräfte der Sozialen Arbeit verantwortlich mit LLMs arbeiten, und was zeigt die Literatur dazu?“
 
-The methodological question frames the paper. SQ1 to SQ3 demonstrate what the governed workflow yields from the literature. Their controlled fields and coding rules live in [[update-protocol]].
+Four sub-questions structure the answer.
+
+| SQ | Question | German interface wording |
+|---|---|---|
+| SQ1 Use | For which tasks and settings of social work does the literature describe the use of LLMs, and which benefits does it report? | Für welche Aufgaben und Felder der Sozialen Arbeit beschreibt die Literatur den Einsatz von LLMs, und welchen Nutzen berichtet sie? |
+| SQ2 Risks | Which bias axes and harm types does the literature identify for the use of LLMs, and for which groups? | Welche Bias-Achsen und Schadensarten benennt die Literatur, und für welche Gruppen? |
+| SQ3 Practices | Which prompting techniques and safeguards does the literature propose, demonstrate or evaluate, for which purpose, at which stage, and with which reported effects and limitations? | Welche Prompting-Techniken und Schutzmaßnahmen werden vorgeschlagen, demonstriert oder evaluiert, zu welchem Zweck, auf welcher Stufe und mit welchen berichteten Wirkungen und Grenzen? |
+| SQ4 Competences | Which competences of professionals and which organisational conditions does the literature name for responsible use, and where does general prompt-engineering guidance fall short of the requirements of social work? | Welche Kompetenzen und organisationalen Voraussetzungen nennt die Literatur, und wo greifen allgemeine Prompting-Anleitungen für die Soziale Arbeit zu kurz? |
+
+The feminist perspective of the working definition runs through the main question and SQ2 as attention to groups and structural disadvantage. It is not a separate sub-question, because the eligibility category Feministisch also admits implicit feminist approaches and cannot be coded reliably as a finding.
+
+The questions ask what the literature shows. SQ1 to SQ3 combine a descriptive mapping from coded fields with source-linked Assertions for benefits, effects and limitations. SQ4 is answered by framework synthesis over Assertions against the working definition above and a named external framework of general prompt guidance. [[analysis-methods#Answering the research questions]] states for each question its data, method and current limits.
+
+The methodological question is the second question of the paper. How can LLMs and AI agents be integrated into a qualitative literature review with traceable contributions, re-executable processing, and final scholarly authority assigned to domain experts?
+
+The previous sub-questions of 2026 are absorbed as follows. The former question on prompting techniques and their evidence status becomes part of SQ3. The former mapping of bias axes and harm types to mitigations is divided between SQ2 and SQ3. The former question on social-work-specific constraints, populations, settings and guidance gaps is divided between SQ1 and SQ4. Coding vocabularies and rules remain in [[update-protocol]] until a codebook amendment is decided.
 
 ## Target audience
 
