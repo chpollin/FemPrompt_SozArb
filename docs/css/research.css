@@ -655,8 +655,8 @@ main {
     display: inline-flex;
     align-items: baseline;
     gap: 0.25rem;
-    padding: 0.15rem 0.35rem;
-    border: 1px solid transparent;
+    padding: 0.15rem 0.4rem;
+    border: 1px solid var(--gray-300);
     border-radius: var(--radius-sm);
     background: none;
     font: inherit;
@@ -667,7 +667,7 @@ main {
 }
 
 .stage-sub:hover:not(:disabled) {
-    border-color: var(--gray-300);
+    border-color: var(--gray-500);
 }
 
 .stage-sub[aria-pressed="true"] {
@@ -703,6 +703,72 @@ main {
 
 .stage-btn:hover:not(:disabled) {
     border-color: var(--gray-500);
+}
+
+/* The active filters as removable chips above the list, shown only while one applies. */
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs);
+    padding-block: var(--space-sm) 0;
+}
+
+.active-filters[hidden] {
+    display: none;
+}
+
+.filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    max-inline-size: 100%;
+    padding: 0.15rem 0.3rem 0.15rem 0.55rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 999px;
+    background: var(--gray-50);
+    font: inherit;
+    font-size: var(--text-sm);
+    color: var(--gray-800);
+    cursor: pointer;
+    overflow-wrap: anywhere;
+    text-align: start;
+}
+
+.filter-chip:hover {
+    border-color: var(--gray-500);
+}
+
+.filter-chip-x {
+    display: inline-grid;
+    place-items: center;
+    inline-size: 1.1rem;
+    block-size: 1.1rem;
+    border-radius: 50%;
+    color: var(--gray-500);
+    line-height: 1;
+}
+
+.filter-chip:hover .filter-chip-x {
+    background: var(--gray-200);
+    color: var(--gray-900);
+}
+
+.filter-clear-all {
+    padding: 0.15rem 0.35rem;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: var(--text-sm);
+    color: var(--primary);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.filter-chip:focus-visible,
+.filter-clear-all:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
 }
 
 /* The stage track of a table row: Volltext, Screening, Kodierung, Aussagen. Filled is
@@ -870,16 +936,39 @@ main {
 .papers-table .col-title {
     font-weight: 500;
     color: var(--gray-900);
-    max-width: 360px;
+    min-inline-size: 14rem;
+    overflow-wrap: break-word;
 }
 
 .papers-table .col-author {
     font-size: var(--text-sm);
     color: var(--gray-500);
-    white-space: nowrap;
-    max-width: 160px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    min-inline-size: 6rem;
+    max-width: 9rem;
+}
+
+/* The year stands in its own column; the author cell repeats it only where that column is hidden. */
+.papers-table .author-year {
+    display: none;
+}
+
+.papers-table .col-next {
+    width: 8rem;
+    font-size: var(--text-sm);
+}
+
+.st-next {
+    color: var(--gray-800);
+}
+
+.st-next-inline {
+    display: none;
+}
+
+/* Under the stage the next step needs a sign that it is the step ahead, not the one reached. */
+.st-next-inline .st-next::before {
+    content: "92 a0" / "";
+    color: var(--gray-500);
 }
 
 .papers-table .col-year {
@@ -890,8 +979,14 @@ main {
 }
 
 .papers-table .col-stage {
-    width: 84px;
-    white-space: nowrap;
+    width: 7rem;
+}
+
+.st-reached {
+    display: block;
+    margin-block-start: 0.15rem;
+    font-size: var(--text-xs);
+    color: var(--gray-600);
 }
 
 .row-open {
@@ -1247,70 +1342,47 @@ main {
 
 /* (dashboard grid, chart containers, old graph viz removed -- replaced by Wissensnetz) */
 
-/* Detail Panel (slide-in from right) */
-.modal {
+/* Detail of the selected work: a third column beside the table on wide screens, below
+   the table on narrower ones, sticky with its own scroll like the sidebar. */
+.korpus-detail {
     display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
+    min-inline-size: 0;
+    padding: var(--space-md) var(--space-lg) var(--space-lg);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    background: white;
 }
 
-.modal.active {
+.korpus-detail.active {
     display: block;
 }
 
-.modal-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.15);
-}
-
-.modal-content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: min(480px, 45vw);
-    height: 100%;
-    background: white;
-    overflow-y: auto;
-    border-left: 1px solid var(--gray-200);
-    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.08);
-    animation: slideIn 0.25s ease;
-}
-
-@keyframes slideIn {
-    from { transform: translateX(100%); }
-    to { transform: translateX(0); }
-}
-
-.modal-header {
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid var(--gray-200);
+.korpus-detail-head {
     display: flex;
     justify-content: space-between;
     align-items: start;
-    position: sticky;
-    top: 0;
-    background: white;
-    z-index: 10;
-    gap: 1rem;
+    gap: var(--space-sm);
+    padding-block-end: var(--space-sm);
+    margin-block-end: var(--space-md);
+    border-bottom: 1px solid var(--gray-200);
 }
 
-.modal-header h2 {
+.korpus-detail-head h2 {
     font-family: var(--font-display);
     font-weight: 600;
     letter-spacing: -0.01em;
     line-height: 1.3;
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
+    overflow-wrap: anywhere;
 }
+
+.korpus-detail-head h2:focus { outline: none; }
+.korpus-detail-head h2:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 
 .modal-author {
     color: var(--gray-500);
     margin-top: 0.25rem;
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
 }
 
 .modal-close {
@@ -1333,28 +1405,150 @@ main {
     color: var(--gray-900);
 }
 
-.modal-body {
-    padding: 1.5rem 2rem 2rem;
+.modal-close:focus-visible,
+.detail-action:focus-visible,
+.detail-link:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
 }
 
-/* Panel-open state (desktop): table adapts, no blocking overlay */
-@media (min-width: 769px) {
-    body.panel-open .modal-overlay {
-        background: transparent;
-        pointer-events: none;
+/* The stage of the work in words, one row per mark of the track. */
+.detail-state {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    gap: 0.2rem var(--space-md);
+    font-size: var(--text-sm);
+}
+
+.detail-state > div {
+    display: contents;
+}
+
+.detail-state dt {
+    color: var(--gray-500);
+}
+
+.detail-state dd {
+    color: var(--gray-800);
+}
+
+.detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs) var(--space-md);
+    margin: var(--space-md) 0 var(--space-lg);
+    padding-block: var(--space-sm);
+    border-block: 1px solid var(--gray-100);
+}
+
+.detail-action {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--gray-800);
+    border-radius: var(--radius-sm);
+    background: var(--gray-800);
+    color: white;
+    font-size: var(--text-sm);
+    text-decoration: none;
+}
+
+.detail-action:hover {
+    background: var(--gray-900);
+}
+
+.detail-action + .detail-action {
+    border-color: var(--gray-300);
+    background: white;
+    color: var(--gray-800);
+}
+
+.detail-action + .detail-action:hover {
+    border-color: var(--gray-500);
+}
+
+button.detail-action {
+    font: inherit;
+    font-size: var(--text-sm);
+    cursor: pointer;
+}
+
+/* The reading-layer Markdown as wrapped plain text. */
+.fulltext-reader {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-size: var(--text-sm);
+    line-height: 1.6;
+    color: var(--gray-800);
+}
+
+.fulltext-reader:focus { outline: none; }
+
+/* Below the wide layout the panel grows with the page, so the text keeps its own scroll. */
+@media (max-width: 1199px) {
+    .fulltext-reader {
+        max-block-size: 70vh;
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    main:has(> #view-korpus.active) {
+        max-width: 1440px;
     }
 
-    body.panel-open .papers-table .col-year,
-    body.panel-open .papers-table .col-cats {
+    .korpus-layout.has-detail {
+        grid-template-columns: 15.5rem minmax(0, 1fr) minmax(20rem, 26rem);
+    }
+
+    .korpus-detail {
+        position: sticky;
+        top: var(--space-lg);
+        max-block-size: calc(100vh - 2 * var(--space-lg));
+        overflow-y: auto;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1199px) {
+    .korpus-detail {
+        grid-column: 2;
+    }
+}
+
+/* Between the phone layout and the wide one the sidebar leaves no room for the category
+   dots, which the sidebar chips filter anyway. */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .papers-table .col-cats {
+        display: none;
+    }
+}
+
+/* While the panel stands beside the table, the table gives up the year and category
+   columns, and the author cell takes the year back. */
+@media (min-width: 1200px) {
+    .korpus-layout.has-detail .papers-table .col-year,
+    .korpus-layout.has-detail .papers-table .col-cats {
         display: none;
     }
 
-    body.panel-open .papers-table .col-title {
-        max-width: 260px;
+    .korpus-layout.has-detail .papers-table .author-year {
+        display: inline;
     }
 
-    body.panel-open .papers-table .col-author {
-        max-width: 120px;
+    /* The next step moves under the stage, as on a phone, so the narrowed table fits. */
+    .korpus-layout.has-detail .papers-table .col-next {
+        display: none;
+    }
+
+    .korpus-layout.has-detail .papers-table .st-next-inline {
+        display: block;
+        margin-block-start: 0.15rem;
+        font-size: var(--text-xs);
+    }
+
+    .korpus-layout.has-detail .papers-table .col-title {
+        min-inline-size: 10rem;
     }
 }
 
@@ -1502,25 +1696,27 @@ main {
     }
 
     .papers-table .col-title {
-        max-width: none;
+        min-inline-size: 0;
         overflow-wrap: anywhere;
     }
 
-    .papers-table .col-stage { inline-size: 5.25rem; }
+    .papers-table .col-stage { inline-size: 6.75rem; }
 
     .papers-table thead th,
     .papers-table tbody td {
         padding-inline: 0.5rem;
     }
 
-    .modal-content {
-        width: 100vw;
-        border-left: none;
+    .papers-table .col-next { display: none; }
+
+    .papers-table .st-next-inline {
+        display: block;
+        margin-block-start: 0.15rem;
+        font-size: var(--text-xs);
     }
 
-    .modal-header,
-    .modal-body {
-        padding: 1rem;
+    .korpus-detail {
+        padding: var(--space-md);
     }
 }
 
@@ -3168,7 +3364,8 @@ main {
     .korpus-side,
     .stage-bar,
     .export-button,
-    .modal,
+    .korpus-detail,
+    .active-filters,
     .graph-toolbar,
     .pagination,
     .detail-nav {

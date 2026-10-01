@@ -1,6 +1,6 @@
 // Review stages of the Korpus view: per work whether a full text exists, the human
 // screening decision, analysis coding and use in Assertions, as two stage bars, work
-// lists of the gaps and a compact stage track per table row. research-app.js owns the
+// lists of the gaps, a stage track with the reached stage and the next step per row. research-app.js owns the
 // filter pipeline and the URL; this module owns the stage data and its markup.
 (function () {
 'use strict';
@@ -236,7 +236,8 @@ function counts(papers) {
 function werke(n) { return n === 1 ? '1 Werk' : n + ' Werke'; }
 
 function button(cls, key, label, n, selected) {
-    const on = selected === key;
+    // Identifiziert is the whole corpus, so it clears a stage but is never itself pressed.
+    const on = selected === key && key !== 'all';
     // A selected empty list stays enabled so that it can be cleared.
     return '<button type="button" class="' + cls + '" data-stage="' + esc(key) + '" aria-pressed="' + on + '"' +
         (n === 0 && !on ? ' disabled' : '') + ' aria-label="' + esc(label + ', ' + werke(n)) + '">' +
@@ -258,8 +259,7 @@ function group(id, label, items) {
         '<ul class="stage-list">' + items + '</ul></div>';
 }
 
-// Two bars over the table. Identifiziert is the unfiltered state, so it is pressed
-// while no stage or work list applies.
+// Two bars over the table. No stage is pressed while no stage or work list applies.
 function barHtml(c, selected) {
     const screening = SCREENING.filter(function (s) { return !s.needsText || textKnown(); }).map(function (s) {
         return '<li>' + button('stage-btn', s.key, s.label, c[s.key], selected) + '</li>';
@@ -303,7 +303,61 @@ function trackHtml(p) {
         mark('dec', dec, 'Screening: ' + DECISION_LABEL[dec]) +
         mark('code', isCoded(p) ? 'on' : 'off', isCoded(p) ? 'kodiert' : 'nicht kodiert') +
         mark('claim', n ? 'on' : 'off', n ? 'in ' + (n === 1 ? '1 Aussage' : n + ' Aussagen') : 'in keiner Aussage') +
-        '</span>';
+        '</span><span class="st-reached">' + esc(reached(p)) + '</span>';
+}
+
+// The furthest stage a work has reached, in the order of the two bars.
+function reached(p) {
+    const dec = decision(p);
+    if (assertionCount(p)) return 'in Aussagen';
+    if (isCoded(p)) return 'kodiert';
+    if (dec !== 'open') return DECISION_LABEL[dec];
+    if (hasText(p)) return 'mit Text';
+    return 'identifiziert';
+}
+
+// The first open step in the order of the stages, read from the same data as the work
+// lists: an excluded work has none, an Unclear record still awaits a decision.
+const NEXT = {
+    text: 'Volltext beschaffen', screen: 'bewerten', decide: 'entscheiden',
+    code: 'kodieren', claim: 'Aussage bilden',
+};
+
+function nextStep(p) {
+    const dec = decision(p);
+    if (dec === 'exclude') return null;
+    if (hasText(p) === false) return { key: 'text', label: NEXT.text };
+    if (dec === 'open') return { key: 'screen', label: NEXT.screen };
+    if (dec === 'unclear') return { key: 'decide', label: NEXT.decide };
+    if (!isCoded(p)) return { key: 'code', label: NEXT.code };
+    if (!assertionCount(p)) return { key: 'claim', label: NEXT.claim };
+    return null;
+}
+
+function nextHtml(p) {
+    const next = nextStep(p);
+    return next ? '<span class="st-next st-next--' + next.key + '">' + esc(next.label) + '</span>' : '';
+}
+
+// The four marks in text, for the detail panel.
+function stateItems(p) {
+    const text = hasText(p);
+    const dec = decision(p);
+    const source = decisionSource(p);
+    const reviewer = reviewers.find(function (r) { return r.key.toLowerCase() === source; });
+    const n = assertionCount(p);
+    const items = [];
+    if (text !== null) items.push(['Volltext', text ? 'vorhanden' : 'fehlt']);
+    items.push(['Screening', DECISION_LABEL[dec] + (source === 'expert' ? ', Expert:innen Runde 1' : reviewer ? ', ' + reviewer.label : '')]);
+    if (dec === 'open' && assigneeOf[p.id]) {
+        const assignee = reviewers.find(function (r) { return r.key === assigneeOf[p.id]; });
+        if (assignee) items.push(['Zugeteilt', assignee.label]);
+    }
+    items.push(['Kodierung', isCoded(p) ? 'kodiert' : 'nicht kodiert']);
+    items.push(['Aussagen', n ? (n === 1 ? '1 Aussage' : n + ' Aussagen') : 'keine']);
+    const next = nextStep(p);
+    items.push(['Nächster Schritt', next ? next.label : 'keiner']);
+    return items;
 }
 
 // How far a work has come, for the sort by stage.
@@ -338,7 +392,7 @@ window.EC.korpusStages = {
     load: load, decision: decision, decisionSource: decisionSource, hasUnclear: hasUnclear,
     keys: keys, parse: parse, match: match, counts: counts,
     barHtml: barHtml, gapsHtml: gapsHtml, trackHtml: trackHtml, depth: depth, csvFields: csvFields,
-    labelOf: labelOf,
+    labelOf: labelOf, reached: reached, nextStep: nextStep, nextHtml: nextHtml, stateItems: stateItems, hasText: hasText,
     assertionSource: function () { return assertionSource; },
 };
 })();
