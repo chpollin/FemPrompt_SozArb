@@ -1,0 +1,1061 @@
+{
+  "schema": "femprompt-path-migration/1.0",
+  "date": "2026-10-01",
+  "reason": "Keep every tracked repository-relative path at 120 characters or less so that a Windows clone without core.longpaths stays below the 260-character path limit.",
+  "rule": "Title-derived file-name stems longer than 72 characters keep a prefix cut at a word boundary and end with a hyphen and the first six hex digits of the SHA-256 of the case-folded full stem (src/file_naming.py). Visual-evidence image names shorten pdf-pNNN-table- to pNNN-t.",
+  "content": "Renamed paper notes are byte-identical, so sha256 bindings stay valid. Other renamed or referencing files changed only in path references. source_file values that name local PDFs under pipeline/pdfs keep the original acquisition filename.",
+  "moves": [
+    {
+      "from": "docs/vault/Papers/-It happened to be the perfect thing-- Experiences of generative AI chatbots for mental health.md",
+      "to": "docs/vault/Papers/-It happened to be the perfect thing-- Experiences of generative-7bc5e1.md"
+    },
+    {
+      "from": "docs/vault/Papers/A Competency Framework for AI Literacy- Variations by Different Learner Groups and an Implied Learning Pathway.md",
+      "to": "docs/vault/Papers/A Competency Framework for AI Literacy- Variations by Different-d788c6.md"
+    },
+    {
+      "from": "docs/vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and perceived trustworthiness in an operational schematization.md",
+      "to": "docs/vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and-c21c09.md"
+    },
+    {
+      "from": "docs/vault/Papers/A framework for the learning and teaching of Critical AI Literacy skills (Version 0.1).md",
+      "to": "docs/vault/Papers/A framework for the learning and teaching of Critical AI Literacy-126b8e.md"
+    },
+    {
+      "from": "docs/vault/Papers/A sociolinguistic approach to stereotype assessment in large language models.md",
+      "to": "docs/vault/Papers/A sociolinguistic approach to stereotype assessment in large-a42519.md"
+    },
+    {
+      "from": "docs/vault/Papers/AI Creates the Message- Integrating AI Language Learning Models into Social Work Education and Practice.md",
+      "to": "docs/vault/Papers/AI Creates the Message- Integrating AI Language Learning Models-a370c9.md"
+    },
+    {
+      "from": "docs/vault/Papers/AI Literacy- A Framework to Understand, Evaluate, and Use Emerging Technology.md",
+      "to": "docs/vault/Papers/AI Literacy- A Framework to Understand, Evaluate, and Use-74e320.md"
+    },
+    {
+      "from": "docs/vault/Papers/AI algorithm transparency, pipelines for trust not prisms- mitigating general negative attitudes and enhancing trust toward AI.md",
+      "to": "docs/vault/Papers/AI algorithm transparency, pipelines for trust not prisms-dc7821.md"
+    },
+    {
+      "from": "docs/vault/Papers/AI for decision support- What are possible futures, social impacts, regulatory options, ethical conundrums and agency constellations-.md",
+      "to": "docs/vault/Papers/AI for decision support- What are possible futures, social-1eacb6.md"
+    },
+    {
+      "from": "docs/vault/Papers/AI for impact- The PRISM framework for responsible AI in social innovation.md",
+      "to": "docs/vault/Papers/AI for impact- The PRISM framework for responsible AI in social-2e9e98.md"
+    },
+    {
+      "from": "docs/vault/Papers/AI literacy and competency- definitions, frameworks, development and future research directions.md",
+      "to": "docs/vault/Papers/AI literacy and competency- definitions, frameworks, development-63b1d4.md"
+    },
+    {
+      "from": "docs/vault/Papers/AI literacy for users – A comprehensive review and future research directions of learning methods, components, and effects.md",
+      "to": "docs/vault/Papers/AI literacy for users – A comprehensive review and future-4a0ab1.md"
+    },
+    {
+      "from": "docs/vault/Papers/AI literacy in teacher education- Empowering educators through critical co-discovery.md",
+      "to": "docs/vault/Papers/AI literacy in teacher education- Empowering educators through-42b896.md"
+    },
+    {
+      "from": "docs/vault/Papers/Algorithmic discrimination- examining its types and regulatory measures with emphasis on US legal practices.md",
+      "to": "docs/vault/Papers/Algorithmic discrimination- examining its types and regulatory-bc13ad.md"
+    },
+    {
+      "from": "docs/vault/Papers/Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice- A Systematic Review.md",
+      "to": "docs/vault/Papers/Algorithmic-Assisted Decision-Making Tools in Child Welfare-472695.md"
+    },
+    {
+      "from": "docs/vault/Papers/Are -Intersectionally Fair- AI Algorithms Really Fair to Women of Color- A Philosophical Analysis.md",
+      "to": "docs/vault/Papers/Are -Intersectionally Fair- AI Algorithms Really Fair to Women of-745fe7.md"
+    },
+    {
+      "from": "docs/vault/Papers/Assessing GPT's bias towards stigmatized social groups- An intersectional case study on nationality prejudice and psychophobia.md",
+      "to": "docs/vault/Papers/Assessing GPT's bias towards stigmatized social groups- An-fdfde4.md"
+    },
+    {
+      "from": "docs/vault/Papers/Assessing trustworthy AI- Technical and legal perspectives of fairness in AI.md",
+      "to": "docs/vault/Papers/Assessing trustworthy AI- Technical and legal perspectives of-81c4a9.md"
+    },
+    {
+      "from": "docs/vault/Papers/Beyond transparency and explainability- On the need for adequate and contextualized user guidelines for LLM use.md",
+      "to": "docs/vault/Papers/Beyond transparency and explainability- On the need for adequate-818efd.md"
+    },
+    {
+      "from": "docs/vault/Papers/Bias in decision-making for AI's ethical dilemmas- A comparative study of ChatGPT and Claude.md",
+      "to": "docs/vault/Papers/Bias in decision-making for AI's ethical dilemmas- A comparative-c76b4e.md"
+    },
+    {
+      "from": "docs/vault/Papers/Bias, accuracy, and trust- Gender-diverse perspectives on large language models.md",
+      "to": "docs/vault/Papers/Bias, accuracy, and trust- Gender-diverse perspectives on large-4f9fa6.md"
+    },
+    {
+      "from": "docs/vault/Papers/Can prompt modifiers control bias- A comparative analysis of text-to-image generative models.md",
+      "to": "docs/vault/Papers/Can prompt modifiers control bias- A comparative analysis of-9cf0bd.md"
+    },
+    {
+      "from": "docs/vault/Papers/Clinical Social Workers’ Perceptions of Large Language Models in Practice- Resistance to Automation and Prospects for Integration.md",
+      "to": "docs/vault/Papers/Clinical Social Workers’ Perceptions of Large Language Models in-1c09b1.md"
+    },
+    {
+      "from": "docs/vault/Papers/Coded injustice- Surveillance and discrimination in Denmark's automated welfare state.md",
+      "to": "docs/vault/Papers/Coded injustice- Surveillance and discrimination in Denmark's-0e3b1e.md"
+    },
+    {
+      "from": "docs/vault/Papers/Considering a unified model of artificial intelligence enhanced social work- A systematic review.md",
+      "to": "docs/vault/Papers/Considering a unified model of artificial intelligence enhanced-578307.md"
+    },
+    {
+      "from": "docs/vault/Papers/DR.GAP- Mitigating bias in large language models using gender-aware prompting with demonstration and reasoning.md",
+      "to": "docs/vault/Papers/DR.GAP- Mitigating bias in large language models using-26e3dd.md"
+    },
+    {
+      "from": "docs/vault/Papers/Datafied ageing futures- Regimes of anticipation and participatory futuring.md",
+      "to": "docs/vault/Papers/Datafied ageing futures- Regimes of anticipation and-ece59e.md"
+    },
+    {
+      "from": "docs/vault/Papers/Decision support and algorithmic support- The construction of algorithms and professional discretion in social work.md",
+      "to": "docs/vault/Papers/Decision support and algorithmic support- The construction of-705ec0.md"
+    },
+    {
+      "from": "docs/vault/Papers/Der Einfluss der Algorithmen- Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz.md",
+      "to": "docs/vault/Papers/Der Einfluss der Algorithmen- Neue Qualitäten durch Big Data-bacc2b.md"
+    },
+    {
+      "from": "docs/vault/Papers/Developing an artificial intelligence literacy framework- Evaluation of a literacy course for senior secondary students using a project-based learning approach.md",
+      "to": "docs/vault/Papers/Developing an artificial intelligence literacy framework-7fecb8.md"
+    },
+    {
+      "from": "docs/vault/Papers/Development of the “Scale for the assessment of non-experts’ AI literacy” – An exploratory factor analysis.md",
+      "to": "docs/vault/Papers/Development of the “Scale for the assessment of non-experts’ AI-50785d.md"
+    },
+    {
+      "from": "docs/vault/Papers/Diskriminierung durch Algorithmen – Überlegungen zur Stärkung KI-bezogener Kompetenzen.md",
+      "to": "docs/vault/Papers/Diskriminierung durch Algorithmen – Überlegungen zur Stärkung-296e56.md"
+    },
+    {
+      "from": "docs/vault/Papers/Engineers on responsibility- feminist approaches to who's responsible for ethical AI.md",
+      "to": "docs/vault/Papers/Engineers on responsibility- feminist approaches to who's-c00aae.md"
+    },
+    {
+      "from": "docs/vault/Papers/Ethical issues related to the use of technology in social work practice- A systematic review.md",
+      "to": "docs/vault/Papers/Ethical issues related to the use of technology in social work-73568f.md"
+    },
+    {
+      "from": "docs/vault/Papers/Evaluating gender bias in large language models via chain-of-thought prompting.md",
+      "to": "docs/vault/Papers/Evaluating gender bias in large language models via-01fc8e.md"
+    },
+    {
+      "from": "docs/vault/Papers/Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds.md",
+      "to": "docs/vault/Papers/Evaluation of an artificial intelligence literacy course for-b0e290.md"
+    },
+    {
+      "from": "docs/vault/Papers/Exploring complex mental health symptoms via classifying social media data with explainable LLMs.md",
+      "to": "docs/vault/Papers/Exploring complex mental health symptoms via classifying social-de1c03.md"
+    },
+    {
+      "from": "docs/vault/Papers/Exploring machine learning to support decision-making for placement stabilization and preservation in child welfare.md",
+      "to": "docs/vault/Papers/Exploring machine learning to support decision-making for-019e6d.md"
+    },
+    {
+      "from": "docs/vault/Papers/Exploring opportunities and risks in decision support technologies for social workers- An empirical study in the field of disabled people's services.md",
+      "to": "docs/vault/Papers/Exploring opportunities and risks in decision support-672f1e.md"
+    },
+    {
+      "from": "docs/vault/Papers/Factoring the Matrix of Domination- A Critical Review and Reimagination of Intersectionality in AI Fairness.md",
+      "to": "docs/vault/Papers/Factoring the Matrix of Domination- A Critical Review and-915922.md"
+    },
+    {
+      "from": "docs/vault/Papers/Failing our youngest- On the biases, pitfalls, and risks in a decision support algorithm used for child protection.md",
+      "to": "docs/vault/Papers/Failing our youngest- On the biases, pitfalls, and risks in a-86570b.md"
+    },
+    {
+      "from": "docs/vault/Papers/Fairness Beyond the Algorithmic Frame- Actionable Recommendations for an Intersectional Approach.md",
+      "to": "docs/vault/Papers/Fairness Beyond the Algorithmic Frame- Actionable Recommendations-afef5f.md"
+    },
+    {
+      "from": "docs/vault/Papers/Female perspectives on algorithmic bias- Implications for AI researchers and practitioners.md",
+      "to": "docs/vault/Papers/Female perspectives on algorithmic bias- Implications for AI-ecabd2.md"
+    },
+    {
+      "from": "docs/vault/Papers/Feminist perspectives on AI- Ethical considerations in algorithmic decision-making.md",
+      "to": "docs/vault/Papers/Feminist perspectives on AI- Ethical considerations in-2b0e9f.md"
+    },
+    {
+      "from": "docs/vault/Papers/Feministische Netzpolitik und Künstliche Intelligenz in der politischen Bildung [Feminist network politics and artificial intelligence in political education].md",
+      "to": "docs/vault/Papers/Feministische Netzpolitik und Künstliche Intelligenz in der-ff9db7.md"
+    },
+    {
+      "from": "docs/vault/Papers/Flexible intersectional stereotype extraction (FISE)- Analyzing intersectional biases in large language models.md",
+      "to": "docs/vault/Papers/Flexible intersectional stereotype extraction (FISE)- Analyzing-122d5e.md"
+    },
+    {
+      "from": "docs/vault/Papers/Gender in a stereo-(gender)typical EU AI law- A feminist reading of the AI Act.md",
+      "to": "docs/vault/Papers/Gender in a stereo-(gender)typical EU AI law- A feminist reading-ccf71c.md"
+    },
+    {
+      "from": "docs/vault/Papers/Gender, race, and intersectional bias in AI resume screening via language model retrieval.md",
+      "to": "docs/vault/Papers/Gender, race, and intersectional bias in AI resume screening via-04363e.md"
+    },
+    {
+      "from": "docs/vault/Papers/Governance of generative AI- A comprehensive framework for navigating challenges and opportunities.md",
+      "to": "docs/vault/Papers/Governance of generative AI- A comprehensive framework for-04ace4.md"
+    },
+    {
+      "from": "docs/vault/Papers/Governing discriminatory content in conversational AI- A cross-system, cross-lingual, and cross-topic audit.md",
+      "to": "docs/vault/Papers/Governing discriminatory content in conversational AI- A-07efd0.md"
+    },
+    {
+      "from": "docs/vault/Papers/Guardrails, not guidance- Understanding responses to LGBTQ+ language in large language models.md",
+      "to": "docs/vault/Papers/Guardrails, not guidance- Understanding responses to LGBTQ+-b49e6a.md"
+    },
+    {
+      "from": "docs/vault/Papers/Improving diversity of demographic representation in people entities in Large Language Models.md",
+      "to": "docs/vault/Papers/Improving diversity of demographic representation in people-b2c4dd.md"
+    },
+    {
+      "from": "docs/vault/Papers/Improving human-AI partnerships in child welfare- Understanding worker practices, challenges, and desires for algorithmic decision support.md",
+      "to": "docs/vault/Papers/Improving human-AI partnerships in child welfare- Understanding-b6ae67.md"
+    },
+    {
+      "from": "docs/vault/Papers/In search of artificial intelligence (AI) literacy in teacher education- A scoping review.md",
+      "to": "docs/vault/Papers/In search of artificial intelligence (AI) literacy in teacher-f047d6.md"
+    },
+    {
+      "from": "docs/vault/Papers/Inclusive prompt engineering- A methodology for hacking biased AI image generation.md",
+      "to": "docs/vault/Papers/Inclusive prompt engineering- A methodology for hacking biased AI-daa679.md"
+    },
+    {
+      "from": "docs/vault/Papers/Indecision on the use of artificial intelligence in healthcare- A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS.md",
+      "to": "docs/vault/Papers/Indecision on the use of artificial intelligence in healthcare- A-75a4cd.md"
+    },
+    {
+      "from": "docs/vault/Papers/Intersectional Stereotypes in Large Language Models- Dataset and Analysis.md",
+      "to": "docs/vault/Papers/Intersectional Stereotypes in Large Language Models- Dataset and-12e417.md"
+    },
+    {
+      "from": "docs/vault/Papers/Intersectional analysis of visual generative AI- the case of stable diffusion.md",
+      "to": "docs/vault/Papers/Intersectional analysis of visual generative AI- the case of-9df0b9.md"
+    },
+    {
+      "from": "docs/vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns and Recommendations for Action.md",
+      "to": "docs/vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns-ba9ec5.md"
+    },
+    {
+      "from": "docs/vault/Papers/Introducing Generative Artificial Intelligence into the MSW Curriculum- A Proposal for the 2029 Educational Policy and Accreditation Standards.md",
+      "to": "docs/vault/Papers/Introducing Generative Artificial Intelligence into the MSW-4e4f4a.md"
+    },
+    {
+      "from": "docs/vault/Papers/Introduction to the digital welfare state- Contestations, considerations and entanglements.md",
+      "to": "docs/vault/Papers/Introduction to the digital welfare state- Contestations-5af8b3.md"
+    },
+    {
+      "from": "docs/vault/Papers/Investigating AI systems- examining data and algorithmic bias through hermeneutic reverse engineering.md",
+      "to": "docs/vault/Papers/Investigating AI systems- examining data and algorithmic bias-be6c43.md"
+    },
+    {
+      "from": "docs/vault/Papers/Künstliche Intelligenz in der Sozialen Arbeit- Grundlagen, Entwicklungen, Herausforderungen.md",
+      "to": "docs/vault/Papers/Künstliche Intelligenz in der Sozialen Arbeit- Grundlagen-98f94e.md"
+    },
+    {
+      "from": "docs/vault/Papers/Large Language Models and User Trust- Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals.md",
+      "to": "docs/vault/Papers/Large Language Models and User Trust- Consequence of-08909c.md"
+    },
+    {
+      "from": "docs/vault/Papers/Leitfaden Digitale Verwaltung und Ethik- Praxisleitfaden für KI in der Verwaltung, Version 1.0.md",
+      "to": "docs/vault/Papers/Leitfaden Digitale Verwaltung und Ethik- Praxisleitfaden für KI-7ccb8b.md"
+    },
+    {
+      "from": "docs/vault/Papers/Less knowledge, more trust- Exploring potentially uncritical attitudes towards AI in higher education.md",
+      "to": "docs/vault/Papers/Less knowledge, more trust- Exploring potentially uncritical-0e78a1.md"
+    },
+    {
+      "from": "docs/vault/Papers/Measuring and identifying factors of individuals' trust in large language models.md",
+      "to": "docs/vault/Papers/Measuring and identifying factors of individuals' trust in large-753854.md"
+    },
+    {
+      "from": "docs/vault/Papers/Measuring user competence in using artificial intelligence- validity and reliability of artificial intelligence literacy scale.md",
+      "to": "docs/vault/Papers/Measuring user competence in using artificial intelligence-9f654f.md"
+    },
+    {
+      "from": "docs/vault/Papers/MirrorStories- Reflecting Diversity through Personalized Narrative Generation with Large Language Models.md",
+      "to": "docs/vault/Papers/MirrorStories- Reflecting Diversity through Personalized-df407d.md"
+    },
+    {
+      "from": "docs/vault/Papers/Model explanations for gender and ethnicity bias mitigation in AI-generated narratives.md",
+      "to": "docs/vault/Papers/Model explanations for gender and ethnicity bias mitigation in-f75eca.md"
+    },
+    {
+      "from": "docs/vault/Papers/More or less wrong- A benchmark for directional bias in LLM comparative reasoning.md",
+      "to": "docs/vault/Papers/More or less wrong- A benchmark for directional bias in LLM-9b7e01.md"
+    },
+    {
+      "from": "docs/vault/Papers/Operationalizing positive-constructive pedagogy to artificial intelligence- the 3E model for scaffolding AI technology adoption.md",
+      "to": "docs/vault/Papers/Operationalizing positive-constructive pedagogy to artificial-1391df.md"
+    },
+    {
+      "from": "docs/vault/Papers/Positionings, challenges, and ambivalences in children's and parents' perspectives in digitalized familial contexts.md",
+      "to": "docs/vault/Papers/Positionings, challenges, and ambivalences in children's and-ccff4a.md"
+    },
+    {
+      "from": "docs/vault/Papers/PreciseDebias- An automatic prompt engineering approach for generative AI to mitigate image demographic biases.md",
+      "to": "docs/vault/Papers/PreciseDebias- An automatic prompt engineering approach for-dea2cb.md"
+    },
+    {
+      "from": "docs/vault/Papers/Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups.md",
+      "to": "docs/vault/Papers/Prejudiced interactions with large language models (LLMs) reduce-93ea04.md"
+    },
+    {
+      "from": "docs/vault/Papers/Promises and challenges of generative artificial intelligence for human learning.md",
+      "to": "docs/vault/Papers/Promises and challenges of generative artificial intelligence for-93edd3.md"
+    },
+    {
+      "from": "docs/vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models- A Systematic Review.md",
+      "to": "docs/vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias-181915.md"
+    },
+    {
+      "from": "docs/vault/Papers/Prompten nach Plan- Das PCRR-Framework als pädagogisches Werkzeug für den Einsatz von Künstlicher Intelligenz.md",
+      "to": "docs/vault/Papers/Prompten nach Plan- Das PCRR-Framework als pädagogisches Werkzeug-f9d8d0.md"
+    },
+    {
+      "from": "docs/vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes.md",
+      "to": "docs/vault/Papers/Prompting techniques for reducing social bias in LLMs through-c8c6ac.md"
+    },
+    {
+      "from": "docs/vault/Papers/RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE- OPPORTUNITIES, RISKS, AND FUTURE PERSPECTIVES.md",
+      "to": "docs/vault/Papers/RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE-6ff43c.md"
+    },
+    {
+      "from": "docs/vault/Papers/ReflectAI- Design and evaluation of an AI coach to support public servants' self-reflection.md",
+      "to": "docs/vault/Papers/ReflectAI- Design and evaluation of an AI coach to support public-68a47e.md"
+    },
+    {
+      "from": "docs/vault/Papers/Reflexive prompt engineering- A framework for responsible prompt engineering and AI interaction design.md",
+      "to": "docs/vault/Papers/Reflexive prompt engineering- A framework for responsible prompt-56fc38.md"
+    },
+    {
+      "from": "docs/vault/Papers/Responsible prompting recommendation- Fostering responsible AI practices in prompting-time.md",
+      "to": "docs/vault/Papers/Responsible prompting recommendation- Fostering responsible AI-7f23db.md"
+    },
+    {
+      "from": "docs/vault/Papers/Scaling implicit bias analysis across transformer-based language models through embedding association test and prompt engineering.md",
+      "to": "docs/vault/Papers/Scaling implicit bias analysis across transformer-based language-fa2137.md"
+    },
+    {
+      "from": "docs/vault/Papers/Self-debiasing large language models- Zero-shot recognition and reduction of stereotypes.md",
+      "to": "docs/vault/Papers/Self-debiasing large language models- Zero-shot recognition and-76c818.md"
+    },
+    {
+      "from": "docs/vault/Papers/Social work in the age of artificial intelligence- A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis.md",
+      "to": "docs/vault/Papers/Social work in the age of artificial intelligence- A rights-based-a7f978.md"
+    },
+    {
+      "from": "docs/vault/Papers/Tech workers' perspectives on ethical issues in AI development- Foregrounding feminist approaches.md",
+      "to": "docs/vault/Papers/Tech workers' perspectives on ethical issues in AI development-9b6f60.md"
+    },
+    {
+      "from": "docs/vault/Papers/Tensions in digital welfare states- Three perspectives on care and control.md",
+      "to": "docs/vault/Papers/Tensions in digital welfare states- Three perspectives on care-5963ce.md"
+    },
+    {
+      "from": "docs/vault/Papers/The AI Act, gender equality and non-discrimination- what role for the AI Office-.md",
+      "to": "docs/vault/Papers/The AI Act, gender equality and non-discrimination- what role for-f846aa.md"
+    },
+    {
+      "from": "docs/vault/Papers/The AI literacy development canvas- Assessing and building AI literacy in organizations.md",
+      "to": "docs/vault/Papers/The AI literacy development canvas- Assessing and building AI-d0ef54.md"
+    },
+    {
+      "from": "docs/vault/Papers/The influence of mental state attributions on trust in large language models.md",
+      "to": "docs/vault/Papers/The influence of mental state attributions on trust in large-515a74.md"
+    },
+    {
+      "from": "docs/vault/Papers/The power of prompts- Evaluating and mitigating gender bias in MT with LLMs.md",
+      "to": "docs/vault/Papers/The power of prompts- Evaluating and mitigating gender bias in MT-446b3e.md"
+    },
+    {
+      "from": "docs/vault/Papers/The role of artificial intelligence (AI) and machine learning in social work practice.md",
+      "to": "docs/vault/Papers/The role of artificial intelligence (AI) and machine learning in-a6ace5.md"
+    },
+    {
+      "from": "docs/vault/Papers/Thinking like a scientist- Can interactive simulations foster critical AI literacy-.md",
+      "to": "docs/vault/Papers/Thinking like a scientist- Can interactive simulations foster-503aa9.md"
+    },
+    {
+      "from": "docs/vault/Papers/Towards Substantive Equality in Artificial Intelligence- Transformative AI Policy for Gender Equality and Diversity.md",
+      "to": "docs/vault/Papers/Towards Substantive Equality in Artificial Intelligence-a00b30.md"
+    },
+    {
+      "from": "docs/vault/Papers/Towards responsible AI for education- Hybrid human-AI to confront the Elephant in the room.md",
+      "to": "docs/vault/Papers/Towards responsible AI for education- Hybrid human-AI to confront-75f85c.md"
+    },
+    {
+      "from": "docs/vault/Papers/Training in Co-Creation as a Methodological Approach to Improve AI Fairness.md",
+      "to": "docs/vault/Papers/Training in Co-Creation as a Methodological Approach to Improve-dfbc6f.md"
+    },
+    {
+      "from": "docs/vault/Papers/Transparency enhances positive perceptions of social artificial intelligence.md",
+      "to": "docs/vault/Papers/Transparency enhances positive perceptions of social artificial-9875e4.md"
+    },
+    {
+      "from": "docs/vault/Papers/Trust in artificial intelligence–based clinical decision support systems among health care workers- Systematic review.md",
+      "to": "docs/vault/Papers/Trust in artificial intelligence–based clinical decision support-25e0d1.md"
+    },
+    {
+      "from": "docs/vault/Papers/Voll (dia)logisch- Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung für Soziale Arbeit – Curriculare Überlegungen und veränderte Akteurskonstellationen.md",
+      "to": "docs/vault/Papers/Voll (dia)logisch- Ein Werkstattbericht über den Einsatz von-aa3866.md"
+    },
+    {
+      "from": "docs/vault/Papers/What are artificial intelligence literacy and competency- A comprehensive framework to support them.md",
+      "to": "docs/vault/Papers/What are artificial intelligence literacy and competency- A-33af20.md"
+    },
+    {
+      "from": "docs/vault/Papers/What’s in a name- Auditing large language models for race and gender bias.md",
+      "to": "docs/vault/Papers/What’s in a name- Auditing large language models for race and-b553d0.md"
+    },
+    {
+      "from": "docs/vault/Papers/Who cares about data- Data care arrangements in everyday organisational practice.md",
+      "to": "docs/vault/Papers/Who cares about data- Data care arrangements in everyday-31c653.md"
+    },
+    {
+      "from": "generated/distilled/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md",
+      "to": "generated/distilled/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md"
+    },
+    {
+      "from": "generated/distilled/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+      "to": "generated/distilled/European Commission. Joint Research Centre._2017_DigComp_2.1_the-8a861f.md"
+    },
+    {
+      "from": "generated/distilled/_stage1_json/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.json",
+      "to": "generated/distilled/_stage1_json/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.json"
+    },
+    {
+      "from": "generated/distilled/_stage1_json/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.json",
+      "to": "generated/distilled/_stage1_json/European Commission. Joint Research Centre._2017_DigComp_2.1_the-8a861f.json"
+    },
+    {
+      "from": "generated/distilled/_stage2_draft/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md",
+      "to": "generated/distilled/_stage2_draft/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md"
+    },
+    {
+      "from": "generated/distilled/_stage2_draft/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+      "to": "generated/distilled/_stage2_draft/European Commission. Joint Research Centre._2017_DigComp_2.1_the-8a861f.md"
+    },
+    {
+      "from": "generated/distilled/_verification/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.json",
+      "to": "generated/distilled/_verification/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.json"
+    },
+    {
+      "from": "generated/markdown/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md",
+      "to": "generated/markdown/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md"
+    },
+    {
+      "from": "generated/markdown/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+      "to": "generated/markdown/European Commission. Joint Research Centre._2017_DigComp_2.1_the-8a861f.md"
+    },
+    {
+      "from": "generated/markdown_clean/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md",
+      "to": "generated/markdown_clean/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md"
+    },
+    {
+      "from": "generated/markdown_clean/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md",
+      "to": "generated/markdown_clean/European Commission. Joint Research Centre._2017_DigComp_2.1_the-8a861f.md"
+    },
+    {
+      "from": "generated/markdown_clean/Quaid-i-Azam University, Islamabad, Pakistan_2025_Gender_Bias_in_Artificial_Intelligence_Empowering.md",
+      "to": "generated/markdown_clean/Quaid-i-Azam University, Islamabad, Pakistan_2025_Gender_Bias_in-93ac28.md"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/pdf-p013-table-3-image-1.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/p013-t3-image-1.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/pdf-p013-table-3-image-2.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/p013-t3-image-2.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/pdf-p013-table-3-image-3.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/p013-t3-image-3.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/pdf-p013-table-3-image-4.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/p013-t3-image-4.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/pdf-p013-table-3-image-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/3cb613d559a8c57c13c1/p013-t3-image-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p016-table-2-1-chatgpt-5-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p016-t2-1-chatgpt-5-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p016-table-2-1-gemini-flash-3-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p016-t2-1-gemini-flash-3-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p016-table-2-chatgpt-5-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p016-t2-chatgpt-5-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p016-table-2-gemini-flash-3-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p016-t2-gemini-flash-3-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p017-table-3-1-chatgpt-5-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p017-t3-1-chatgpt-5-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p017-table-3-1-gemini-flash-3-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p017-t3-1-gemini-flash-3-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p017-table-3-chatgpt-5-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p017-t3-chatgpt-5-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p017-table-3-gemini-flash-3-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p017-t3-gemini-flash-3-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p018-table-4-1-chatgpt-5-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p018-t4-1-chatgpt-5-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p018-table-4-1-gemini-3-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p018-t4-1-gemini-3-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p018-table-4-chatgpt-5-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p018-t4-chatgpt-5-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p018-table-4-gemini-flash-3-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p018-t4-gemini-flash-3-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p019-table-4-2-chatgpt-5-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p019-t4-2-chatgpt-5-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p019-table-4-2-gemini-3-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p019-t4-2-gemini-3-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p019-table-4-3-chatgpt-5-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p019-t4-3-chatgpt-5-5.png"
+    },
+    {
+      "from": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/pdf-p019-table-4-3-gemini-3-5.png",
+      "to": "generated/source-acquisition/codex-websearch-2026/visual-evidence/fe0639bed94ac912274d/p019-t4-3-gemini-3-5.png"
+    },
+    {
+      "from": "generated/vault/Papers/-It happened to be the perfect thing-- Experiences of generative AI chatbots for mental health.md",
+      "to": "generated/vault/Papers/-It happened to be the perfect thing-- Experiences of generative-7bc5e1.md"
+    },
+    {
+      "from": "generated/vault/Papers/A Competency Framework for AI Literacy- Variations by Different Learner Groups and an Implied Learni.md",
+      "to": "generated/vault/Papers/A Competency Framework for AI Literacy- Variations by Different-d788c6.md"
+    },
+    {
+      "from": "generated/vault/Papers/A Survey on Intersectional Fairness in Machine Learning- Notions, Mitigation, and Challenges.md",
+      "to": "generated/vault/Papers/A Survey on Intersectional Fairness in Machine Learning- Notions-65b25f.md"
+    },
+    {
+      "from": "generated/vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and perceived trustworthiness in an ope.md",
+      "to": "generated/vault/Papers/A formal account of AI trustworthiness- Connecting intrinsic and-c21c09.md"
+    },
+    {
+      "from": "generated/vault/Papers/A framework for the learning and teaching of Critical AI Literacy skills (Version 0.1).md",
+      "to": "generated/vault/Papers/A framework for the learning and teaching of Critical AI Literacy-126b8e.md"
+    },
+    {
+      "from": "generated/vault/Papers/A sociolinguistic approach to stereotype assessment in large language models.md",
+      "to": "generated/vault/Papers/A sociolinguistic approach to stereotype assessment in large-a42519.md"
+    },
+    {
+      "from": "generated/vault/Papers/A systematic review of sophisticated predictive and prescriptive analytics in child welfare- Accurac.md",
+      "to": "generated/vault/Papers/A systematic review of sophisticated predictive and prescriptive-e738f8.md"
+    },
+    {
+      "from": "generated/vault/Papers/AI Creates the Message- Integrating AI Language Learning Models into Social Work Education and Pract.md",
+      "to": "generated/vault/Papers/AI Creates the Message- Integrating AI Language Learning Models-a370c9.md"
+    },
+    {
+      "from": "generated/vault/Papers/AI FORA – Artificial Intelligence for Assessment- Fairness bei der Verteilung öffentlicher sozialer .md",
+      "to": "generated/vault/Papers/AI FORA – Artificial Intelligence for Assessment- Fairness bei-328a5d.md"
+    },
+    {
+      "from": "generated/vault/Papers/AI Literacy - Towards Measuring Human Competency in Artificial Intelligence.md",
+      "to": "generated/vault/Papers/AI Literacy - Towards Measuring Human Competency in Artificial-e88a64.md"
+    },
+    {
+      "from": "generated/vault/Papers/AI Literacy- A Framework to Understand, Evaluate, and Use Emerging Technology.md",
+      "to": "generated/vault/Papers/AI Literacy- A Framework to Understand, Evaluate, and Use-74e320.md"
+    },
+    {
+      "from": "generated/vault/Papers/AI algorithm transparency, pipelines for trust not prisms- mitigating general negative attitudes and.md",
+      "to": "generated/vault/Papers/AI algorithm transparency, pipelines for trust not prisms-dc7821.md"
+    },
+    {
+      "from": "generated/vault/Papers/AI for decision support- What are possible futures, social impacts, regulatory options, ethical conu.md",
+      "to": "generated/vault/Papers/AI for decision support- What are possible futures, social-1eacb6.md"
+    },
+    {
+      "from": "generated/vault/Papers/AI for impact- The PRISM framework for responsible AI in social innovation.md",
+      "to": "generated/vault/Papers/AI for impact- The PRISM framework for responsible AI in social-2e9e98.md"
+    },
+    {
+      "from": "generated/vault/Papers/AI literacy and competency- definitions, frameworks, development and future research directions.md",
+      "to": "generated/vault/Papers/AI literacy and competency- definitions, frameworks, development-63b1d4.md"
+    },
+    {
+      "from": "generated/vault/Papers/AI literacy for users – A comprehensive review and future research directions of learning methods, c.md",
+      "to": "generated/vault/Papers/AI literacy for users – A comprehensive review and future-4a0ab1.md"
+    },
+    {
+      "from": "generated/vault/Papers/AI literacy in teacher education- Empowering educators through critical co-discovery.md",
+      "to": "generated/vault/Papers/AI literacy in teacher education- Empowering educators through-42b896.md"
+    },
+    {
+      "from": "generated/vault/Papers/Akzeptanz von KI und organisationale Rahmenbedingungen in der Sozialen Arbeit – Eine empirische Unte.md",
+      "to": "generated/vault/Papers/Akzeptanz von KI und organisationale Rahmenbedingungen in der-6fb935.md"
+    },
+    {
+      "from": "generated/vault/Papers/Algorithmic decision-making in social work practice and pedagogy- confronting the competency-critiqu.md",
+      "to": "generated/vault/Papers/Algorithmic decision-making in social work practice and pedagogy-dbf605.md"
+    },
+    {
+      "from": "generated/vault/Papers/Algorithmic discrimination- examining its types and regulatory measures with emphasis on US legal pr.md",
+      "to": "generated/vault/Papers/Algorithmic discrimination- examining its types and regulatory-bc13ad.md"
+    },
+    {
+      "from": "generated/vault/Papers/Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice- A Systematic Review.md",
+      "to": "generated/vault/Papers/Algorithmic-Assisted Decision-Making Tools in Child Welfare-472695.md"
+    },
+    {
+      "from": "generated/vault/Papers/Are -Intersectionally Fair- AI Algorithms Really Fair to Women of Color- A Philosophical Analysis.md",
+      "to": "generated/vault/Papers/Are -Intersectionally Fair- AI Algorithms Really Fair to Women of-745fe7.md"
+    },
+    {
+      "from": "generated/vault/Papers/Artificial Intelligence (AI) Literacy for Social Work- Implications for Core Competencies.md",
+      "to": "generated/vault/Papers/Artificial Intelligence (AI) Literacy for Social Work-599234.md"
+    },
+    {
+      "from": "generated/vault/Papers/Artificial Intelligence (AI) literacy – an argument for AI literacy in education.md",
+      "to": "generated/vault/Papers/Artificial Intelligence (AI) literacy – an argument for AI-e114b8.md"
+    },
+    {
+      "from": "generated/vault/Papers/Artificial Intelligence and Structural Injustice- Foundations for Equity, Values, and Responsibility.md",
+      "to": "generated/vault/Papers/Artificial Intelligence and Structural Injustice- Foundations for-a76b12.md"
+    },
+    {
+      "from": "generated/vault/Papers/Artificial Intelligence in Social Sciences and Social Work- Bridging Technology and Humanity to Revo.md",
+      "to": "generated/vault/Papers/Artificial Intelligence in Social Sciences and Social Work-e01f97.md"
+    },
+    {
+      "from": "generated/vault/Papers/Assessing GPT's bias towards stigmatized social groups- An intersectional case study on nationality .md",
+      "to": "generated/vault/Papers/Assessing GPT's bias towards stigmatized social groups- An-fdfde4.md"
+    },
+    {
+      "from": "generated/vault/Papers/Assessing trustworthy AI- Technical and legal perspectives of fairness in AI.md",
+      "to": "generated/vault/Papers/Assessing trustworthy AI- Technical and legal perspectives of-81c4a9.md"
+    },
+    {
+      "from": "generated/vault/Papers/Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit- Eine exemplarische arbeitsfeldübergrei.md",
+      "to": "generated/vault/Papers/Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit-e42289.md"
+    },
+    {
+      "from": "generated/vault/Papers/Beyond transparency and explainability- On the need for adequate and contextualized user guidelines .md",
+      "to": "generated/vault/Papers/Beyond transparency and explainability- On the need for adequate-818efd.md"
+    },
+    {
+      "from": "generated/vault/Papers/Bias in decision-making for AI's ethical dilemmas- A comparative study of ChatGPT and Claude.md",
+      "to": "generated/vault/Papers/Bias in decision-making for AI's ethical dilemmas- A comparative-c76b4e.md"
+    },
+    {
+      "from": "generated/vault/Papers/Bias, accuracy, and trust- Gender-diverse perspectives on large language models.md",
+      "to": "generated/vault/Papers/Bias, accuracy, and trust- Gender-diverse perspectives on large-4f9fa6.md"
+    },
+    {
+      "from": "generated/vault/Papers/Bildungsteilhabe - Flucht - Digitalisierung- Eine multilokale Ethnografie im (digitalen) Alltag jung.md",
+      "to": "generated/vault/Papers/Bildungsteilhabe - Flucht - Digitalisierung- Eine multilokale-ef9b2f.md"
+    },
+    {
+      "from": "generated/vault/Papers/CAIL – Critical AI Literacy- Kritische Technikkompetenz für konstruktiven Umgang mit KI-basierter Te.md",
+      "to": "generated/vault/Papers/CAIL – Critical AI Literacy- Kritische Technikkompetenz für-1884a3.md"
+    },
+    {
+      "from": "generated/vault/Papers/Can prompt modifiers control bias- A comparative analysis of text-to-image generative models.md",
+      "to": "generated/vault/Papers/Can prompt modifiers control bias- A comparative analysis of-9cf0bd.md"
+    },
+    {
+      "from": "generated/vault/Papers/Challenging systematic prejudices- an Investigation into Gender Bias in Large Language Models.md",
+      "to": "generated/vault/Papers/Challenging systematic prejudices- an Investigation into Gender-af6ee7.md"
+    },
+    {
+      "from": "generated/vault/Papers/Clinical Social Workers’ Perceptions of Large Language Models in Practice- Resistance to Automation .md",
+      "to": "generated/vault/Papers/Clinical Social Workers’ Perceptions of Large Language Models in-1c09b1.md"
+    },
+    {
+      "from": "generated/vault/Papers/Coded injustice- Surveillance and discrimination in Denmark's automated welfare state.md",
+      "to": "generated/vault/Papers/Coded injustice- Surveillance and discrimination in Denmark's-0e3b1e.md"
+    },
+    {
+      "from": "generated/vault/Papers/Considering a unified model of artificial intelligence enhanced social work- A systematic review.md",
+      "to": "generated/vault/Papers/Considering a unified model of artificial intelligence enhanced-578307.md"
+    },
+    {
+      "from": "generated/vault/Papers/DR.GAP- Mitigating bias in large language models using gender-aware prompting with demonstration and.md",
+      "to": "generated/vault/Papers/DR.GAP- Mitigating bias in large language models using-26e3dd.md"
+    },
+    {
+      "from": "generated/vault/Papers/Datafied ageing futures- Regimes of anticipation and participatory futuring.md",
+      "to": "generated/vault/Papers/Datafied ageing futures- Regimes of anticipation and-ece59e.md"
+    },
+    {
+      "from": "generated/vault/Papers/Decision support and algorithmic support- The construction of algorithms and professional discretion.md",
+      "to": "generated/vault/Papers/Decision support and algorithmic support- The construction of-705ec0.md"
+    },
+    {
+      "from": "generated/vault/Papers/Der Einfluss der Algorithmen- Neue Qualitäten durch Big Data Analytics und Künstliche Intelligenz.md",
+      "to": "generated/vault/Papers/Der Einfluss der Algorithmen- Neue Qualitäten durch Big Data-bacc2b.md"
+    },
+    {
+      "from": "generated/vault/Papers/Developing an artificial intelligence literacy framework- Evaluation of a literacy course for senior.md",
+      "to": "generated/vault/Papers/Developing an artificial intelligence literacy framework-7fecb8.md"
+    },
+    {
+      "from": "generated/vault/Papers/Development of the “Scale for the assessment of non-experts’ AI literacy” – An exploratory factor an.md",
+      "to": "generated/vault/Papers/Development of the “Scale for the assessment of non-experts’ AI-50785d.md"
+    },
+    {
+      "from": "generated/vault/Papers/DigComp 2.1- the digital competence framework for citizens with eight proficiency levels and example.md",
+      "to": "generated/vault/Papers/DigComp 2.1- the digital competence framework for citizens with-cacdb2.md"
+    },
+    {
+      "from": "generated/vault/Papers/Diskriminierung durch Algorithmen – Überlegungen zur Stärkung KI-bezogener Kompetenzen.md",
+      "to": "generated/vault/Papers/Diskriminierung durch Algorithmen – Überlegungen zur Stärkung-296e56.md"
+    },
+    {
+      "from": "generated/vault/Papers/Engineers on responsibility- feminist approaches to who's responsible for ethical AI.md",
+      "to": "generated/vault/Papers/Engineers on responsibility- feminist approaches to who's-c00aae.md"
+    },
+    {
+      "from": "generated/vault/Papers/Ethical issues related to the use of technology in social work practice- A systematic review.md",
+      "to": "generated/vault/Papers/Ethical issues related to the use of technology in social work-73568f.md"
+    },
+    {
+      "from": "generated/vault/Papers/Evaluating gender bias in large language models via chain-of-thought prompting.md",
+      "to": "generated/vault/Papers/Evaluating gender bias in large language models via-01fc8e.md"
+    },
+    {
+      "from": "generated/vault/Papers/Evaluation of an artificial intelligence literacy course for university students with diverse study .md",
+      "to": "generated/vault/Papers/Evaluation of an artificial intelligence literacy course for-b0e290.md"
+    },
+    {
+      "from": "generated/vault/Papers/Exploring complex mental health symptoms via classifying social media data with explainable LLMs.md",
+      "to": "generated/vault/Papers/Exploring complex mental health symptoms via classifying social-de1c03.md"
+    },
+    {
+      "from": "generated/vault/Papers/Exploring machine learning to support decision-making for placement stabilization and preservation i.md",
+      "to": "generated/vault/Papers/Exploring machine learning to support decision-making for-019e6d.md"
+    },
+    {
+      "from": "generated/vault/Papers/Exploring opportunities and risks in decision support technologies for social workers- An empirical .md",
+      "to": "generated/vault/Papers/Exploring opportunities and risks in decision support-672f1e.md"
+    },
+    {
+      "from": "generated/vault/Papers/Factoring the matrix of domination- A critical review and reimagination of intersectionality in AI f.md",
+      "to": "generated/vault/Papers/Factoring the matrix of domination- A critical review and-915922.md"
+    },
+    {
+      "from": "generated/vault/Papers/Failing our youngest- On the biases, pitfalls, and risks in a decision support algorithm used for ch.md",
+      "to": "generated/vault/Papers/Failing our youngest- On the biases, pitfalls, and risks in a-86570b.md"
+    },
+    {
+      "from": "generated/vault/Papers/Fairness Beyond the Algorithmic Frame- Actionable Recommendations for an Intersectional Approach.md",
+      "to": "generated/vault/Papers/Fairness Beyond the Algorithmic Frame- Actionable Recommendations-afef5f.md"
+    },
+    {
+      "from": "generated/vault/Papers/Female perspectives on algorithmic bias- Implications for AI researchers and practitioners.md",
+      "to": "generated/vault/Papers/Female perspectives on algorithmic bias- Implications for AI-ecabd2.md"
+    },
+    {
+      "from": "generated/vault/Papers/Feminist perspectives on AI- Ethical considerations in algorithmic decision-making.md",
+      "to": "generated/vault/Papers/Feminist perspectives on AI- Ethical considerations in-2b0e9f.md"
+    },
+    {
+      "from": "generated/vault/Papers/Feministische KI – Künstliche Intelligenz für alle- [Feminist AI – Artificial intelligence for every.md",
+      "to": "generated/vault/Papers/Feministische KI – Künstliche Intelligenz für alle- [Feminist AI-22f85c.md"
+    },
+    {
+      "from": "generated/vault/Papers/Feministische Netzpolitik und Künstliche Intelligenz in der politischen Bildung [Feminist network po.md",
+      "to": "generated/vault/Papers/Feministische Netzpolitik und Künstliche Intelligenz in der-ff9db7.md"
+    },
+    {
+      "from": "generated/vault/Papers/Flexible intersectional stereotype extraction (FISE)- Analyzing intersectional biases in large langu.md",
+      "to": "generated/vault/Papers/Flexible intersectional stereotype extraction (FISE)- Analyzing-122d5e.md"
+    },
+    {
+      "from": "generated/vault/Papers/Gender Bias in Artificial Intelligence- Empowering Women Through Digital Literacy.md",
+      "to": "generated/vault/Papers/Gender Bias in Artificial Intelligence- Empowering Women Through-afd76e.md"
+    },
+    {
+      "from": "generated/vault/Papers/Gender in a stereo-(gender)typical EU AI law- A feminist reading of the AI Act.md",
+      "to": "generated/vault/Papers/Gender in a stereo-(gender)typical EU AI law- A feminist reading-ccf71c.md"
+    },
+    {
+      "from": "generated/vault/Papers/Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval.md",
+      "to": "generated/vault/Papers/Gender, Race, and Intersectional Bias in Resume Screening via-b257e1.md"
+    },
+    {
+      "from": "generated/vault/Papers/Governance of generative AI- A comprehensive framework for navigating challenges and opportunities.md",
+      "to": "generated/vault/Papers/Governance of generative AI- A comprehensive framework for-04ace4.md"
+    },
+    {
+      "from": "generated/vault/Papers/Governing discriminatory content in conversational AI- A cross-system, cross-lingual, and cross-topi.md",
+      "to": "generated/vault/Papers/Governing discriminatory content in conversational AI- A-07efd0.md"
+    },
+    {
+      "from": "generated/vault/Papers/Guardrails, not guidance- Understanding responses to LGBTQ+ language in large language models.md",
+      "to": "generated/vault/Papers/Guardrails, not guidance- Understanding responses to LGBTQ+-b49e6a.md"
+    },
+    {
+      "from": "generated/vault/Papers/Improving diversity of demographic representation in people entities in Large Language Models.md",
+      "to": "generated/vault/Papers/Improving diversity of demographic representation in people-b2c4dd.md"
+    },
+    {
+      "from": "generated/vault/Papers/Improving human-AI partnerships in child welfare- Understanding worker practices, challenges, and de.md",
+      "to": "generated/vault/Papers/Improving human-AI partnerships in child welfare- Understanding-b6ae67.md"
+    },
+    {
+      "from": "generated/vault/Papers/In search of artificial intelligence (AI) literacy in teacher education- A scoping review.md",
+      "to": "generated/vault/Papers/In search of artificial intelligence (AI) literacy in teacher-f047d6.md"
+    },
+    {
+      "from": "generated/vault/Papers/Inclusive prompt engineering- A methodology for hacking biased AI image generation.md",
+      "to": "generated/vault/Papers/Inclusive prompt engineering- A methodology for hacking biased AI-daa679.md"
+    },
+    {
+      "from": "generated/vault/Papers/Indecision on the use of artificial intelligence in healthcare- A qualitative study of patient persp.md",
+      "to": "generated/vault/Papers/Indecision on the use of artificial intelligence in healthcare- A-75a4cd.md"
+    },
+    {
+      "from": "generated/vault/Papers/Intersectional Artificial Intelligence Is Essential- Polyvocal, Multimodal, Experimental Methods to .md",
+      "to": "generated/vault/Papers/Intersectional Artificial Intelligence Is Essential- Polyvocal-5d2e64.md"
+    },
+    {
+      "from": "generated/vault/Papers/Intersectional Stereotypes in Large Language Models- Dataset and Analysis.md",
+      "to": "generated/vault/Papers/Intersectional Stereotypes in Large Language Models- Dataset and-12e417.md"
+    },
+    {
+      "from": "generated/vault/Papers/Intersectional analysis of visual generative AI- the case of sta (Sharma_2024_Intersectional).md",
+      "to": "generated/vault/Papers/Intersectional analysis of visual generative AI- the case of sta-5082c2.md"
+    },
+    {
+      "from": "generated/vault/Papers/Intersectional analysis of visual generative AI- the case of stable diffusion.md",
+      "to": "generated/vault/Papers/Intersectional analysis of visual generative AI- the case of-9df0b9.md"
+    },
+    {
+      "from": "generated/vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns and Recommendations for Action.md",
+      "to": "generated/vault/Papers/Intersectionality in Artificial Intelligence- Framing Concerns-ba9ec5.md"
+    },
+    {
+      "from": "generated/vault/Papers/Introducing Generative Artificial Intelligence into the MSW Curriculum- A Proposal for the 2029 Educ.md",
+      "to": "generated/vault/Papers/Introducing Generative Artificial Intelligence into the MSW-4e4f4a.md"
+    },
+    {
+      "from": "generated/vault/Papers/Introduction to the digital welfare state- Contestations, considerations and entanglements.md",
+      "to": "generated/vault/Papers/Introduction to the digital welfare state- Contestations-5af8b3.md"
+    },
+    {
+      "from": "generated/vault/Papers/Investigating AI systems- examining data and algorithmic bias through hermeneutic reverse engineerin.md",
+      "to": "generated/vault/Papers/Investigating AI systems- examining data and algorithmic bias-be6c43.md"
+    },
+    {
+      "from": "generated/vault/Papers/Künstliche Intelligenz in der Sozialen Arbeit- Grundlagen für Theorie und Praxis.md",
+      "to": "generated/vault/Papers/Künstliche Intelligenz in der Sozialen Arbeit- Grundlagen für-d5f9b3.md"
+    },
+    {
+      "from": "generated/vault/Papers/Künstliche Intelligenz in der Sozialen Arbeit- Grundlagen, Entwicklungen, Herausforderungen.md",
+      "to": "generated/vault/Papers/Künstliche Intelligenz in der Sozialen Arbeit- Grundlagen-98f94e.md"
+    },
+    {
+      "from": "generated/vault/Papers/Large Language Models and User Trust- Consequence of Self-Referential Learning Loop and the Deskilli.md",
+      "to": "generated/vault/Papers/Large Language Models and User Trust- Consequence of-08909c.md"
+    },
+    {
+      "from": "generated/vault/Papers/Leitfaden Digitale Verwaltung und Ethik- Praxisleitfaden für KI in der Verwaltung, Version 1.0.md",
+      "to": "generated/vault/Papers/Leitfaden Digitale Verwaltung und Ethik- Praxisleitfaden für KI-7ccb8b.md"
+    },
+    {
+      "from": "generated/vault/Papers/Less knowledge, more trust- Exploring potentially uncritical attitudes towards AI in higher educatio.md",
+      "to": "generated/vault/Papers/Less knowledge, more trust- Exploring potentially uncritical-0e78a1.md"
+    },
+    {
+      "from": "generated/vault/Papers/Measuring and identifying factors of individuals' trust in large language models.md",
+      "to": "generated/vault/Papers/Measuring and identifying factors of individuals' trust in large-753854.md"
+    },
+    {
+      "from": "generated/vault/Papers/Measuring gender and racial biases in large language models- Intersectional evidence from automated .md",
+      "to": "generated/vault/Papers/Measuring gender and racial biases in large language models-fe69c5.md"
+    },
+    {
+      "from": "generated/vault/Papers/Measuring user competence in using artificial intelligence- validity and reliability of artificial i.md",
+      "to": "generated/vault/Papers/Measuring user competence in using artificial intelligence-9f654f.md"
+    },
+    {
+      "from": "generated/vault/Papers/MirrorStories- Reflecting Diversity through Personalized Narrative Generation with Large Language Mo.md",
+      "to": "generated/vault/Papers/MirrorStories- Reflecting Diversity through Personalized-df407d.md"
+    },
+    {
+      "from": "generated/vault/Papers/Model explanations for gender and ethnicity bias mitigation in AI-generated narratives.md",
+      "to": "generated/vault/Papers/Model explanations for gender and ethnicity bias mitigation in-f75eca.md"
+    },
+    {
+      "from": "generated/vault/Papers/More or less wrong- A benchmark for directional bias in LLM comparative reasoning.md",
+      "to": "generated/vault/Papers/More or less wrong- A benchmark for directional bias in LLM-9b7e01.md"
+    },
+    {
+      "from": "generated/vault/Papers/Operationalizing positive-constructive pedagogy to artificial intelligence- the 3E model for scaffol.md",
+      "to": "generated/vault/Papers/Operationalizing positive-constructive pedagogy to artificial-1391df.md"
+    },
+    {
+      "from": "generated/vault/Papers/PreciseDebias- An automatic prompt engineering approach for generative AI to mitigate image demograp.md",
+      "to": "generated/vault/Papers/PreciseDebias- An automatic prompt engineering approach for-dea2cb.md"
+    },
+    {
+      "from": "generated/vault/Papers/Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral inte.md",
+      "to": "generated/vault/Papers/Prejudiced interactions with large language models (LLMs) reduce-93ea04.md"
+    },
+    {
+      "from": "generated/vault/Papers/Promises and challenges of generative artificial intelligence for human learning.md",
+      "to": "generated/vault/Papers/Promises and challenges of generative artificial intelligence for-93edd3.md"
+    },
+    {
+      "from": "generated/vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Langua.md",
+      "to": "generated/vault/Papers/Prompt Engineering Techniques for Mitigating Cultural Bias-181915.md"
+    },
+    {
+      "from": "generated/vault/Papers/Prompten nach Plan- Das PCRR-Framework als pädagogisches Werkzeug für den Einsatz von Künstlicher In.md",
+      "to": "generated/vault/Papers/Prompten nach Plan- Das PCRR-Framework als pädagogisches Werkzeug-f9d8d0.md"
+    },
+    {
+      "from": "generated/vault/Papers/Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive proces.md",
+      "to": "generated/vault/Papers/Prompting techniques for reducing social bias in LLMs through-c8c6ac.md"
+    },
+    {
+      "from": "generated/vault/Papers/RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE- OPPORTUNITIES, RISKS, AND FUTURE PERSPECTIV.md",
+      "to": "generated/vault/Papers/RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE-6ff43c.md"
+    },
+    {
+      "from": "generated/vault/Papers/Recommendations for social work researchers and journal editors on the use of generative AI and larg.md",
+      "to": "generated/vault/Papers/Recommendations for social work researchers and journal editors-adbb66.md"
+    },
+    {
+      "from": "generated/vault/Papers/ReflectAI- Design and evaluation of an AI coach to support public servants' self-reflection.md",
+      "to": "generated/vault/Papers/ReflectAI- Design and evaluation of an AI coach to support public-68a47e.md"
+    },
+    {
+      "from": "generated/vault/Papers/Reflexive prompt engineering- A framework for responsible prompt engineering and AI interaction desi.md",
+      "to": "generated/vault/Papers/Reflexive prompt engineering- A framework for responsible prompt-56fc38.md"
+    },
+    {
+      "from": "generated/vault/Papers/Research on the application risks and countermeasures of ChatGPT generative artificial intelligence .md",
+      "to": "generated/vault/Papers/Research on the application risks and countermeasures of ChatGPT-b4c4b8.md"
+    },
+    {
+      "from": "generated/vault/Papers/Responsible prompting recommendation- Fostering responsible AI practices in prompting-time.md",
+      "to": "generated/vault/Papers/Responsible prompting recommendation- Fostering responsible AI-7f23db.md"
+    },
+    {
+      "from": "generated/vault/Papers/Scaling implicit bias analysis across transformer-based language models through embedding associatio.md",
+      "to": "generated/vault/Papers/Scaling implicit bias analysis across transformer-based language-fa2137.md"
+    },
+    {
+      "from": "generated/vault/Papers/Self-debiasing large language models- Zero-shot recognition and reduction of stereotypes.md",
+      "to": "generated/vault/Papers/Self-debiasing large language models- Zero-shot recognition and-76c818.md"
+    },
+    {
+      "from": "generated/vault/Papers/Social work in the age of artificial intelligence- A rights-based framework for evidence-based pract.md",
+      "to": "generated/vault/Papers/Social work in the age of artificial intelligence- A rights-based-a7f978.md"
+    },
+    {
+      "from": "generated/vault/Papers/Tech workers' perspectives on ethical issues in AI development- Foregrounding feminist approaches.md",
+      "to": "generated/vault/Papers/Tech workers' perspectives on ethical issues in AI development-9b6f60.md"
+    },
+    {
+      "from": "generated/vault/Papers/Tensions in digital welfare states- Three perspectives on care and control.md",
+      "to": "generated/vault/Papers/Tensions in digital welfare states- Three perspectives on care-5963ce.md"
+    },
+    {
+      "from": "generated/vault/Papers/The AI Act, gender equality and non-discrimination- what role for the AI Office-.md",
+      "to": "generated/vault/Papers/The AI Act, gender equality and non-discrimination- what role for-f846aa.md"
+    },
+    {
+      "from": "generated/vault/Papers/The AI literacy development canvas- Assessing and building AI literacy in organizations.md",
+      "to": "generated/vault/Papers/The AI literacy development canvas- Assessing and building AI-d0ef54.md"
+    },
+    {
+      "from": "generated/vault/Papers/The influence of mental state attributions on trust in large language models.md",
+      "to": "generated/vault/Papers/The influence of mental state attributions on trust in large-515a74.md"
+    },
+    {
+      "from": "generated/vault/Papers/The power of prompts- Evaluating and mitigating gender bias in MT with LLMs.md",
+      "to": "generated/vault/Papers/The power of prompts- Evaluating and mitigating gender bias in MT-446b3e.md"
+    },
+    {
+      "from": "generated/vault/Papers/The role of artificial intelligence (AI) and machine learning in social work practice.md",
+      "to": "generated/vault/Papers/The role of artificial intelligence (AI) and machine learning in-a6ace5.md"
+    },
+    {
+      "from": "generated/vault/Papers/Thinking like a scientist- Can interactive simulations foster critical AI literacy-.md",
+      "to": "generated/vault/Papers/Thinking like a scientist- Can interactive simulations foster-503aa9.md"
+    },
+    {
+      "from": "generated/vault/Papers/Towards responsible AI for education- Hybrid human-AI to confront the Elephant in the room.md",
+      "to": "generated/vault/Papers/Towards responsible AI for education- Hybrid human-AI to confront-75f85c.md"
+    },
+    {
+      "from": "generated/vault/Papers/Towards substantive equality in artificial intelligence- Transformative AI policy for gender equalit.md",
+      "to": "generated/vault/Papers/Towards substantive equality in artificial intelligence-a00b30.md"
+    },
+    {
+      "from": "generated/vault/Papers/Training in Co-Creation as a Methodological Approach to Improve AI Fairness.md",
+      "to": "generated/vault/Papers/Training in Co-Creation as a Methodological Approach to Improve-dfbc6f.md"
+    },
+    {
+      "from": "generated/vault/Papers/Transparency enhances positive perceptions of social artificial intelligence.md",
+      "to": "generated/vault/Papers/Transparency enhances positive perceptions of social artificial-9875e4.md"
+    },
+    {
+      "from": "generated/vault/Papers/Trust in artificial intelligence–based clinical decision support systems among health care workers- .md",
+      "to": "generated/vault/Papers/Trust in artificial intelligence–based clinical decision support-25e0d1.md"
+    },
+    {
+      "from": "generated/vault/Papers/Voll (dia)logisch- Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung .md",
+      "to": "generated/vault/Papers/Voll (dia)logisch- Ein Werkstattbericht über den Einsatz von-aa3866.md"
+    },
+    {
+      "from": "generated/vault/Papers/What are artificial intelligence literacy and competency- A comprehensive framework to support them.md",
+      "to": "generated/vault/Papers/What are artificial intelligence literacy and competency- A-33af20.md"
+    },
+    {
+      "from": "generated/vault/Papers/What’s in a name- Auditing large language models for race and gender bias.md",
+      "to": "generated/vault/Papers/What’s in a name- Auditing large language models for race and-b553d0.md"
+    },
+    {
+      "from": "generated/vault/Papers/Who cares about data- Data care arrangements in everyday organisational practice.md",
+      "to": "generated/vault/Papers/Who cares about data- Data care arrangements in everyday-31c653.md"
+    },
+    {
+      "from": "research-vault/10_distillates/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md",
+      "to": "research-vault/10_distillates/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md"
+    },
+    {
+      "from": "research-vault/references/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.json",
+      "to": "research-vault/references/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.json"
+    }
+  ]
+}

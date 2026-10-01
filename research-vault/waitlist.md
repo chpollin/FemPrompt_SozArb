@@ -106,7 +106,7 @@ Je Distillat die Zahl der nach Stufe 1b offenen Zitat-Ansprüche. Distillate mit
 - `generated/distilled/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md` (1 offen)
 - `generated/distilled/Dencik_2024_Automated_government_benefits_and_welfare.md` (2 offen)
 - `generated/distilled/Engelhardt_2025_Voll_(dia)logisch_Ein_Werkstattbericht_über_den.md` (3 offen)
-- `generated/distilled/European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md` (1 offen)
+- `generated/distilled/European Commission. Joint Research Centre._2017_DigComp_2.1_the-8a861f.md` (1 offen)
 - `generated/distilled/Fraile-Rojas_2025_Female_perspectives_on_algorithmic_bias.md` (1 offen)
 - `generated/distilled/Freinhofer_2025_Prompten_nach_Plan_Das_PCRR-Framework_als.md` (1 offen)
 - `generated/distilled/Fujii_2024_Bildungsteilhabe_-_Flucht_-_Digitalisierung_Eine.md` (1 offen)

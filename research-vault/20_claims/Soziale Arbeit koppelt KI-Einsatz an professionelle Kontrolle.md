@@ -14,7 +14,7 @@ Profession und Fachkräfte der Sozialen Arbeit erkennen Effizienz- und Unterstü
 
 ## Belege
 
-- [[British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance#Kernbefund]], Entlastungspotenzial nur unter strenger professioneller Prüfung.
+- [[British Association of Social Workers_2025_Generative_AI_&_social-c91bcf#Kernbefund]], Entlastungspotenzial nur unter strenger professioneller Prüfung.
 - [[Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and#Kernbefund]], Chancen und Risiken verlangen die kritische Auseinandersetzung der Profession zum Schutz vulnerabler Populationen.
 - [[Creswell Báez_2025_Clinical_Social_Workers’_Perceptions_of_Large#Kernbefund]], klinische Fachkräfte sehen Potenzial, begrenzen Akzeptanz aber wegen Datenschutz, Bias und beruflicher Normen.
 - [[Chen_2025_Social_work_and_artificial_intelligence#Kernbefund]], Effizienzgewinne verlangen robuste ethische Richtlinien und erweiterte KI-Kompetenzen.

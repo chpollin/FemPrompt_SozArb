@@ -41,7 +41,7 @@
       "image_count": 2,
       "images": [
         {
-          "file": "pdf-p016-table-2-chatgpt-5-5.png",
+          "file": "p016-t2-chatgpt-5-5.png",
           "model_label": "Chat GPT 5.5",
           "pdf_xref": 126,
           "soft_mask_xref": 125,
@@ -51,7 +51,7 @@
           "sha256": "bc8029f2d7f2ab5f1b0019fea4b60f50ded7beb88fc77452d79dd7ee91267132"
         },
         {
-          "file": "pdf-p016-table-2-gemini-flash-3-5.png",
+          "file": "p016-t2-gemini-flash-3-5.png",
           "model_label": "Gemini Flash 3.5",
           "pdf_xref": 128,
           "soft_mask_xref": 127,
@@ -73,7 +73,7 @@
       "image_count": 2,
       "images": [
         {
-          "file": "pdf-p016-table-2-1-chatgpt-5-5.png",
+          "file": "p016-t2-1-chatgpt-5-5.png",
           "model_label": "Chat GPT 5.5",
           "pdf_xref": 130,
           "soft_mask_xref": 129,
@@ -83,7 +83,7 @@
           "sha256": "06850bfb12be1c9142c734667be41ae36c36c7bd87053f4c330b55652e2ee3c7"
         },
         {
-          "file": "pdf-p016-table-2-1-gemini-flash-3-5.png",
+          "file": "p016-t2-1-gemini-flash-3-5.png",
           "model_label": "Gemini Flash 3.5",
           "pdf_xref": 132,
           "soft_mask_xref": 131,
@@ -105,7 +105,7 @@
       "image_count": 2,
       "images": [
         {
-          "file": "pdf-p017-table-3-chatgpt-5-5.png",
+          "file": "p017-t3-chatgpt-5-5.png",
           "model_label": "Chat GPT 5.5",
           "pdf_xref": 147,
           "soft_mask_xref": 146,
@@ -115,7 +115,7 @@
           "sha256": "e9559c3cbf42c52f87ad0078db6e5eed707cc17b632e17da433e48e2c601671c"
         },
         {
-          "file": "pdf-p017-table-3-gemini-flash-3-5.png",
+          "file": "p017-t3-gemini-flash-3-5.png",
           "model_label": "Gemini Flash 3.5",
           "pdf_xref": 149,
           "soft_mask_xref": 148,
@@ -137,7 +137,7 @@
       "image_count": 2,
       "images": [
         {
-          "file": "pdf-p017-table-3-1-chatgpt-5-5.png",
+          "file": "p017-t3-1-chatgpt-5-5.png",
           "model_label": "Chat GPT 5.5",
           "pdf_xref": 151,
           "soft_mask_xref": 150,
@@ -147,7 +147,7 @@
           "sha256": "2c7eef5fb577ff4ea0c499652ddccd1c99d6c0fd1c03be85fc4a5745e1568f68"
         },
         {
-          "file": "pdf-p017-table-3-1-gemini-flash-3-5.png",
+          "file": "p017-t3-1-gemini-flash-3-5.png",
           "model_label": "Gemini Flash 3.5",
           "pdf_xref": 153,
           "soft_mask_xref": 152,
@@ -169,7 +169,7 @@
       "image_count": 2,
       "images": [
         {
-          "file": "pdf-p018-table-4-chatgpt-5-5.png",
+          "file": "p018-t4-chatgpt-5-5.png",
           "model_label": "Chat GPT 5.5",
           "pdf_xref": 163,
           "soft_mask_xref": 162,
@@ -179,7 +179,7 @@
           "sha256": "bad5c6d71f7c61a19df75a1794cfe6c754677381cf8808d453b3d93bd8b26946"
         },
         {
-          "file": "pdf-p018-table-4-gemini-flash-3-5.png",
+          "file": "p018-t4-gemini-flash-3-5.png",
           "model_label": "Gemini Flash 3.5",
           "pdf_xref": 165,
           "soft_mask_xref": 164,
@@ -201,7 +201,7 @@
       "image_count": 2,
       "images": [
         {
-          "file": "pdf-p018-table-4-1-chatgpt-5-5.png",
+          "file": "p018-t4-1-chatgpt-5-5.png",
           "model_label": "Chat GPT 5.5",
           "pdf_xref": 167,
           "soft_mask_xref": 166,
@@ -211,7 +211,7 @@
           "sha256": "309f31837afc49a78db6e023f6d25499e6de9c91278141df92fce4672c0695bc"
         },
         {
-          "file": "pdf-p018-table-4-1-gemini-3-5.png",
+          "file": "p018-t4-1-gemini-3-5.png",
           "model_label": "Gemini 3.5",
           "pdf_xref": 169,
           "soft_mask_xref": 168,
@@ -233,7 +233,7 @@
       "image_count": 2,
       "images": [
         {
-          "file": "pdf-p019-table-4-2-chatgpt-5-5.png",
+          "file": "p019-t4-2-chatgpt-5-5.png",
           "model_label": "Chat GPT 5.5",
           "pdf_xref": 179,
           "soft_mask_xref": 178,
@@ -243,7 +243,7 @@
           "sha256": "239e062c085ac7f318a49f806a7294311551df29860ffae4834668cf8600fa86"
         },
         {
-          "file": "pdf-p019-table-4-2-gemini-3-5.png",
+          "file": "p019-t4-2-gemini-3-5.png",
           "model_label": "Gemini 3.5",
           "pdf_xref": 181,
           "soft_mask_xref": 180,
@@ -265,7 +265,7 @@
       "image_count": 2,
       "images": [
         {
-          "file": "pdf-p019-table-4-3-chatgpt-5-5.png",
+          "file": "p019-t4-3-chatgpt-5-5.png",
           "model_label": "Chat GPT 5.5",
           "pdf_xref": 183,
           "soft_mask_xref": 182,
@@ -275,7 +275,7 @@
           "sha256": "4f96ef9dcfa86e619ffaac1faf82d8ae18caa3af6bdb62a0d4393bc7c7216d0c"
         },
         {
-          "file": "pdf-p019-table-4-3-gemini-3-5.png",
+          "file": "p019-t4-3-gemini-3-5.png",
           "model_label": "Gemini 3.5",
           "pdf_xref": 185,
           "soft_mask_xref": 184,

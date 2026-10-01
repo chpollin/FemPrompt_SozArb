@@ -1,14 +1,18 @@
 ---
+layer: distillate
 title: "Generative AI and Social Work: Initial Guidance for Practice and Ethics"
 authors: ["British Association of Social Workers (BASW)"]
 year: 2025
 type: report
 language: en
-processed: 2026-02-05
-source_file: British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.md
-confidence: 95
+source_distillate: "generated/distilled/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md"
+migrated: 2026-07-17
+audit: P-pending
+audit-stage1b: "bestätigt 2026-07-18, deterministisch (src/assess/waitlist_resolution.py)"
+reference: "research-vault/references/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.json"
+status: migrated
+references-to: 00_representation/
 ---
-
 # Generative AI and Social Work: Initial Guidance for Practice and Ethics
 
 ## Kernbefund

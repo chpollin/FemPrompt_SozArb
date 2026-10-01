@@ -17,7 +17,7 @@ Ein Distillat je Quelle, Belegkette im Frontmatter (source_distillate, audit, au
 | [[Asseri et al._2025_Prompt_Engineering_Techniques_for_Mitigating]] | Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in La | clean | 2026-07-18 |
 | [[Baker_2025_Artificial_intelligence_in_social_work_An_EPIC]] | Artificial Intelligence in Social Work: An EPIC Model for Practice | P-pending | 2026-07-17 |
 | [[Biagini_2024_Less_knowledge,_more_trust_Exploring_potentially]] | Less knowledge, more trust? Exploring potentially uncritical attitudes towards AI in highe | clean | 2026-07-18 |
-| [[British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance]] | Generative AI and Social Work: Initial Guidance for Practice and Ethics | P-pending | 2026-07-17 |
+| [[British Association of Social Workers_2025_Generative_AI_&_social-c91bcf]] | Generative AI and Social Work: Initial Guidance for Practice and Ethics | P-pending | 2026-07-17 |
 | [[Casal-Otero_2023_AI_literacy_in_K-12_a_systematic_literature_review]] | AI literacy in K-12: a systematic literature review | P-pending | 2026-07-18 |
 | [[Chen_2023_Ideology_Prediction_from_Scarce_and_Biased]] | Ideology Prediction from Scarce and Biased Supervision: Learn to Disregard the 'What' and  | P-pending | 2026-07-18 |
 | [[Chen_2024_Exploring_complex_mental_health_symptoms_via]] | Exploring Complex Mental Health Symptoms via Classifying Social Media Data with Explainabl | P-pending | 2026-07-17 |

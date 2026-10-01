@@ -4,9 +4,14 @@ authors: ["Stephanie Carretero", "Riina Vuorikari", "Yves Punie"]
 year: 2017
 type: report
 language: en
+categories:
+  - AI_Literacies
+  - KI_Sonstige
+  - Bias_Ungleichheit
+  - Diversitaet
+  - Fairness
 processed: 2026-02-05
-source_file: European Commission. Joint Research Centre._2017_DigComp_2.1_the_digital_competence_framework_for.md
-confidence: 75
+source_file: European Commission. Joint Research Centre._2017_DigComp_2.1_the-8a861f.md
 ---
 
 # DigComp 2.1: The Digital Competence Framework for Citizens with eight proficiency levels and examples of use
@@ -32,23 +37,23 @@ Theoretisch/Konzeptionell mit empirischer Validierung: Entwicklung eines Referen
 
 ## Kategorie-Evidenz
 
-### Evidenz 1
+### AI_Literacies
 
 Framework behandelt digitale Kompetenzen zentral: 'The European Digital Competence Framework for Citizens, also known as DigComp, offers a tool to improve citizens' digital competence.' Umfasst Knowledge, Skills und Attitudes für digitale Technologienutzung.
 
-### Evidenz 2
+### KI_Sonstige
 
 Breiter Fokus auf digitale Technologien und deren Anwendung: 'digital technologies to interact', 'digital tools and technologies for collaborative processes', 'digital environments' als integraler Bestandteil der Kompetenzrahmen.
 
-### Evidenz 3
+### Bias_Ungleichheit
 
 Framework adressiert digitale Inklusion und Zugang: 'improve access to lifelong learning' und 'social inclusion' sind explizite Ziele. Fokus auf Chancengleichheit durch Kompetenzentwicklung für alle Bürger.
 
-### Evidenz 4
+### Diversitaet
 
 Explizit mehrere Dimensionen von Vielfalt: 'cultural and generational diversity aspects to consider in digital environments' ist integrierte Kompetenz 2.5. Framework betont Inklusion unterschiedlicher Gruppen in digitale Partizipation.
 
-### Evidenz 5
+### Fairness
 
 Framework strebt faire Partizipation an: 'participate in society as a citizen' und 'empower myself and to participate in society as a citizen' sind zentrale Ziele. Fokus auf gerechtem Zugang zu digitalen Mitteln für alle Bürger.
 
