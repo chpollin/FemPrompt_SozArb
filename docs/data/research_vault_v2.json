@@ -335,9 +335,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Generative_KI",
+          "Bias_Ungleichheit",
+          "Diversitaet",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -449,9 +454,15 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Generative_KI",
+          "Prompting",
+          "Bias_Ungleichheit",
+          "Diversitaet",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -688,9 +699,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "KI_Sonstige",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -798,9 +813,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -911,9 +928,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Generative_KI",
+          "KI_Sonstige",
+          "Bias_Ungleichheit",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -1024,9 +1046,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Generative_KI",
+          "Prompting",
+          "KI_Sonstige",
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -1566,9 +1593,15 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Generative_KI",
+          "Prompting",
+          "KI_Sonstige",
+          "Bias_Ungleichheit",
+          "Gender"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -1668,7 +1701,7 @@
         ],
         "all_categories": {
           "AI_Literacies": 1,
-          "Generative_KI": 0,
+          "Generative_KI": null,
           "Prompting": 0,
           "KI_Sonstige": 1,
           "Soziale_Arbeit": 0,
@@ -1794,9 +1827,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "KI_Sonstige",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -2238,9 +2275,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "KI_Sonstige",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -2468,9 +2509,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Prompting",
+          "KI_Sonstige",
+          "Bias_Ungleichheit",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -2806,9 +2852,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -2908,7 +2956,7 @@
         ],
         "all_categories": {
           "AI_Literacies": 1,
-          "Generative_KI": 0,
+          "Generative_KI": null,
           "Prompting": 0,
           "KI_Sonstige": 1,
           "Soziale_Arbeit": 0,
@@ -5480,9 +5528,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "KI_Sonstige",
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -5599,9 +5650,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -5695,7 +5748,8 @@
           "Soziale_Arbeit",
           "Bias_Ungleichheit",
           "Gender",
-          "Diversitaet"
+          "Diversitaet",
+          "Fairness"
         ],
         "all_categories": {
           "AI_Literacies": 0,
@@ -5707,7 +5761,7 @@
           "Gender": 1,
           "Diversitaet": 1,
           "Feministisch": 0,
-          "Fairness": 0
+          "Fairness": 1
         }
       },
       "benchmark": {
@@ -5821,9 +5875,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -5917,20 +5973,20 @@
           "AI_Literacies": 0,
           "Generative_KI": 0,
           "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -6277,9 +6333,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -6612,9 +6670,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Prompting",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -6726,9 +6789,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -6837,9 +6903,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Soziale_Arbeit",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -6945,7 +7015,7 @@
           "Generative_KI": 1,
           "Prompting": 0,
           "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
+          "Soziale_Arbeit": null,
           "Bias_Ungleichheit": 0,
           "Gender": 0,
           "Diversitaet": 0,
@@ -6956,9 +7026,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Prompting",
+          "Soziale_Arbeit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -7181,23 +7255,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -7423,23 +7497,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -7697,9 +7771,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Generative_KI",
+          "Gender",
+          "Fairness"
+        ]
       },
       "knowledge_authority": {
         "status": "ai-agent-reviewed",
@@ -8051,9 +8129,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "KI_Sonstige",
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -8161,9 +8242,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Bias_Ungleichheit",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -8381,23 +8465,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -8484,23 +8568,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -8702,19 +8786,22 @@
           "Prompting": 0,
           "KI_Sonstige": 0,
           "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "KI_Sonstige",
+          "Soziale_Arbeit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -8824,9 +8911,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Bias_Ungleichheit",
+          "Gender",
+          "Diversitaet",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -9056,9 +9148,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -9167,9 +9262,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Generative_KI"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -9391,9 +9488,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Generative_KI"
+        ]
       },
       "knowledge_authority": {
         "status": "historical_unreviewed",
@@ -9519,9 +9619,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Gender",
+          "Diversitaet",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -9640,23 +9745,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -10607,9 +10712,15 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Generative_KI",
+          "Prompting",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "knowledge_authority": {
         "status": "historical_unreviewed",
@@ -10880,7 +10991,8 @@
           "Soziale_Arbeit",
           "Bias_Ungleichheit",
           "Gender",
-          "Diversitaet"
+          "Diversitaet",
+          "Fairness"
         ],
         "all_categories": {
           "AI_Literacies": 1,
@@ -10892,7 +11004,7 @@
           "Gender": 1,
           "Diversitaet": 1,
           "Feministisch": 0,
-          "Fairness": 0
+          "Fairness": 1
         }
       },
       "benchmark": {
@@ -11134,9 +11246,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "KI_Sonstige",
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -11369,9 +11485,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Generative_KI"
+        ]
       },
       "knowledge_authority": {
         "status": "historical_unreviewed",
@@ -11602,23 +11721,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -11740,23 +11859,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -12205,23 +12324,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -12313,16 +12432,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -12896,23 +13015,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -13073,9 +13192,15 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Generative_KI",
+          "Prompting",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "knowledge_authority": {
         "status": "historical_unreviewed",
@@ -13200,23 +13325,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -13559,9 +13684,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Generative_KI",
+          "Soziale_Arbeit",
+          "Gender"
+        ]
       },
       "knowledge_authority": {
         "status": "historical_unreviewed",
@@ -13657,15 +13786,15 @@
         ],
         "all_categories": {
           "AI_Literacies": 1,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -13883,23 +14012,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -14530,9 +14659,16 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Generative_KI",
+          "Prompting",
+          "KI_Sonstige",
+          "Bias_Ungleichheit",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -14652,9 +14788,16 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Generative_KI",
+          "Prompting",
+          "KI_Sonstige",
+          "Bias_Ungleichheit",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -14755,22 +14898,22 @@
         ],
         "all_categories": {
           "AI_Literacies": 1,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -15017,9 +15160,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Bias_Ungleichheit",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -15259,9 +15405,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Prompting",
+          "KI_Sonstige",
+          "Gender"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -15378,9 +15528,15 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Generative_KI",
+          "Prompting",
+          "KI_Sonstige",
+          "Bias_Ungleichheit",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -15913,9 +16069,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Gender"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -16027,9 +16185,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Bias_Ungleichheit",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -16141,9 +16303,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Prompting",
+          "KI_Sonstige",
+          "Diversitaet",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -16373,9 +16540,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Prompting",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -16469,16 +16640,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -16701,23 +16872,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -17176,9 +17347,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Generative_KI",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -17617,16 +17792,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -17725,16 +17900,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -17861,23 +18036,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -18009,23 +18184,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -18163,9 +18338,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "KI_Sonstige",
+          "Bias_Ungleichheit",
+          "Gender"
+        ]
       },
       "knowledge_authority": {
         "status": "ai-agent-reviewed",
@@ -18456,16 +18636,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -18681,16 +18861,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -18813,9 +18993,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "AI_Literacies",
+          "Generative_KI",
+          "Soziale_Arbeit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -18907,16 +19091,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -19039,9 +19223,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -19154,9 +19340,15 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Generative_KI",
+          "Prompting",
+          "KI_Sonstige",
+          "Bias_Ungleichheit",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -19265,9 +19457,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -19383,9 +19578,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Gender"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -19475,16 +19672,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -19697,16 +19894,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -19833,23 +20030,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -20005,16 +20202,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -20135,23 +20332,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -20289,9 +20486,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "KI_Sonstige",
+          "Bias_Ungleichheit",
+          "Gender"
+        ]
       },
       "knowledge_authority": {
         "status": "ai-agent-reviewed",
@@ -20420,9 +20622,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -20552,9 +20756,15 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Generative_KI",
+          "Prompting",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "knowledge_authority": {
         "status": "historical_unreviewed",
@@ -20669,9 +20879,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "AI_Literacies",
+          "Prompting",
+          "Gender"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -20765,16 +20979,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -20875,22 +21089,22 @@
         "categories": [],
         "all_categories": {
           "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -21098,16 +21312,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -21210,16 +21424,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -21343,9 +21557,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Gender"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -21661,16 +21877,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -21797,23 +22013,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -22331,9 +22547,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -22620,9 +22838,15 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Generative_KI",
+          "Prompting",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "knowledge_authority": {
         "status": "historical_unreviewed",
@@ -22748,9 +22972,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -22927,23 +23154,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -23063,9 +23290,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Gender",
+          "Diversitaet",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -23186,9 +23417,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Prompting",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -23962,9 +24197,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Gender",
+          "Diversitaet",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -24211,9 +24450,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Prompting",
+          "KI_Sonstige",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -24809,9 +25053,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Bias_Ungleichheit",
+          "Diversitaet",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -25481,8 +25729,8 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
         "affected_categories": []
       },
       "zotero_library": {
@@ -26071,9 +26319,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "KI_Sonstige",
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -26163,23 +26415,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -26456,23 +26708,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -26765,9 +27017,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Gender"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -27225,23 +27479,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -27364,9 +27618,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Generative_KI",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -27478,9 +27735,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Diversitaet",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -27632,9 +27892,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Generative_KI",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -27761,8 +28024,8 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -28223,23 +28486,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -28535,23 +28798,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -28760,23 +29023,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -29051,9 +29314,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -29170,9 +29435,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -29420,9 +29687,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Feministisch",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -29934,9 +30204,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -30028,23 +30301,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -30162,9 +30435,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Gender",
+          "Feministisch"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -30256,23 +30532,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -30527,23 +30803,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -30759,7 +31035,7 @@
           "Fairness"
         ],
         "all_categories": {
-          "AI_Literacies": 0,
+          "AI_Literacies": null,
           "Generative_KI": 0,
           "Prompting": 0,
           "KI_Sonstige": 1,
@@ -31041,9 +31317,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -31287,9 +31565,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -31383,23 +31664,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -31495,23 +31776,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -31779,23 +32060,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -31913,9 +32194,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -32033,9 +32317,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Bias_Ungleichheit",
+          "Gender"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -32269,9 +32556,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Fairness"
+        ]
       },
       "knowledge_authority": {
         "status": "historical_unreviewed",
@@ -32625,8 +32915,8 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -32833,16 +33123,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
@@ -33059,23 +33349,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -33196,9 +33486,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Prompting",
+          "KI_Sonstige",
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -33316,9 +33610,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -33690,8 +33986,8 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -33800,9 +34096,14 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Bias_Ungleichheit",
+          "Gender",
+          "Feministisch"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -33919,8 +34220,8 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -34151,9 +34452,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Generative_KI",
+          "Bias_Ungleichheit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -34252,23 +34556,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -35007,9 +35311,13 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Gender",
+          "Feministisch",
+          "Fairness"
+        ]
       },
       "knowledge_authority": {
         "status": "historical_unreviewed",
@@ -35285,9 +35593,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Generative_KI"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -36751,9 +37062,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "KI_Sonstige",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -36867,9 +37181,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -36985,9 +37302,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Generative_KI"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -37104,9 +37423,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -37194,23 +37515,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -37449,9 +37770,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -37588,23 +37911,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -37721,23 +38044,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "knowledge_authority": {
@@ -37833,23 +38156,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -38091,9 +38414,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "AI_Literacies",
+          "Generative_KI"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -38209,9 +38535,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Generative_KI",
+          "Soziale_Arbeit"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -38446,9 +38775,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Feministisch"
+        ]
       },
       "knowledge_authority": {
         "status": "historical_unreviewed",
@@ -38570,9 +38901,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Feministisch"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -38806,8 +39139,8 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -38920,9 +39253,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Gender",
+          "Diversitaet"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -39036,9 +39372,12 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Prompting",
+          "Gender"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -39266,9 +39605,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Include_Agent_Exclude",
+        "severity": "high",
+        "affected_categories": [
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -39382,9 +39723,11 @@
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
-        "affected_categories": []
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
+        "affected_categories": [
+          "Fairness"
+        ]
       },
       "zotero_library": {
         "group_id": "6080294",
@@ -39491,23 +39834,23 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {
         "has_human": true,
         "agreement": false,
-        "disagreement_type": null,
-        "severity": null,
+        "disagreement_type": "Human_Exclude_Agent_Include",
+        "severity": "medium",
         "affected_categories": []
       },
       "zotero_library": {
@@ -51864,16 +52207,16 @@
         "decision": "Exclude",
         "categories": [],
         "all_categories": {
-          "AI_Literacies": 0,
-          "Generative_KI": 0,
-          "Prompting": 0,
-          "KI_Sonstige": 0,
-          "Soziale_Arbeit": 0,
-          "Bias_Ungleichheit": 0,
-          "Gender": 0,
-          "Diversitaet": 0,
-          "Feministisch": 0,
-          "Fairness": 0
+          "AI_Literacies": null,
+          "Generative_KI": null,
+          "Prompting": null,
+          "KI_Sonstige": null,
+          "Soziale_Arbeit": null,
+          "Bias_Ungleichheit": null,
+          "Gender": null,
+          "Diversitaet": null,
+          "Feministisch": null,
+          "Fairness": null
         }
       },
       "benchmark": {

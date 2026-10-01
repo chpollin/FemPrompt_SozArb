@@ -162,6 +162,7 @@ def _analysis_payload(
     if not expected_basis or fields.get("AN_Coding_Basis") != expected_basis:
         raise ValueError(f"{paper_id}: invalid AN_Coding_Basis for the reading source")
 
+    states = {}
     for definition in definitions:
         name = definition.get("name")
         value = fields.get(name)
@@ -190,6 +191,7 @@ def _analysis_payload(
         else:
             if value is not None and value not in vocabulary:
                 raise ValueError(f"{paper_id}: invalid value in {name}")
+            values = [] if value is None else [value]
             filled = value is not None
 
         required = not definition.get("optional")
@@ -199,14 +201,26 @@ def _analysis_payload(
             required = True
         if required and not filled and not is_undecidable:
             raise ValueError(f"{paper_id}: required analysis field {name} is empty")
+        states[name] = (
+            "undecidable"
+            if is_undecidable
+            else "none"
+            if values == ["None"]
+            else "value"
+            if filled
+            else "absent"
+        )
+    states["Studientyp"] = "value"
 
-    ordered_names = [definition.get("name") for definition in definitions]
+    # Only coded values enter `fields`; an empty list or null would make an
+    # absent or undecidable field look like a coding, so field_states carries it.
     return {
         "fields": {
             name: fields[name]
-            for name in (*ordered_names, "Studientyp")
-            if name in fields and name != "AN_Notes"
+            for name in states
+            if states[name] in ("value", "none")
         },
+        "field_states": states,
         "notes": str(fields.get("AN_Notes", "")).strip(),
         "undecidable": sorted(name for name, value in undecidable.items() if value),
     }
@@ -557,6 +571,124 @@ def _aggregate_works(
     return works
 
 
+COVERAGE_STATES = ("value", "none", "undecidable", "absent", "not_coded", "withheld")
+# Precedence when a Work is withheld for several reasons, so each Work counts once.
+WITHHELD_REASONS = (
+    "source_hold",
+    "decision_conflict",
+    "open_negative_review",
+    "stale_source_review",
+    "review_pending",
+    "field_conflict",
+)
+DECISION_CONFLICTS = frozenset(
+    (
+        "conflicting_human_decisions",
+        "conflicting_agent_decisions",
+        "human_agent_decision_divergence",
+    )
+)
+
+
+def _work_withheld_reason(
+    row: dict[str, Any],
+    withheld_reasons: dict[str, str],
+    released_other_decision: set[str],
+) -> str | None:
+    """Name why a recorded Include Work has no released coding, if a reason exists."""
+    reasons = {
+        withheld_reasons[record_id]
+        for record_id in row["record_ids"]
+        if record_id in withheld_reasons
+    }
+    if row["integrity_hold"] or {"source_integrity_hold", "source_version_hold"} & set(
+        row["conflicts"]
+    ):
+        reasons.add("source_hold")
+    if DECISION_CONFLICTS & set(row["conflicts"]) or (
+        row["work_id"] in released_other_decision
+    ):
+        reasons.add("decision_conflict")
+    if row["open_ai_source_review_record_ids"]:
+        reasons.add("open_negative_review")
+    return next((reason for reason in WITHHELD_REASONS if reason in reasons), None)
+
+
+def analysis_coverage(
+    repo: Path,
+    records: list[dict[str, Any]],
+    withheld_reasons: dict[str, str],
+    analysis_schema: dict[str, Any],
+) -> dict[str, Any]:
+    """Count per analysis field how the intended Include scope is covered.
+
+    The scope joins the recorded Include Works of the completion package (human
+    decision priority) with the released Include Works, so an empty matrix cell
+    can be read against its denominator instead of as a research gap. Only
+    counts leave this function; unreleased content stays internal.
+    """
+    from src.analysis.build_completion_package import canonical_work_rows
+    from src.assess.artifact_verification import load_reviews
+
+    _, _, _, works, _ = canonical_work_rows(repo, set(), load_reviews(repo))
+    rows = {row["work_id"]: row for row in works}
+    recorded = {
+        work_id
+        for work_id, row in rows.items()
+        if row["effective_decision"] == "Include"
+    }
+    released = {
+        record["work_id"]: record for record in records if record["decision"] == "Include"
+    }
+    released_other_decision = {
+        record["work_id"] for record in records if record["decision"] != "Include"
+    }
+    names = [
+        definition["name"]
+        for definition in analysis_schema.get("fields", [])
+        if not definition.get("free_text")
+    ] + ["Studientyp"]
+    fields = {
+        name: {
+            **{state: 0 for state in COVERAGE_STATES},
+            "withheld_by_reason": {reason: 0 for reason in WITHHELD_REASONS},
+        }
+        for name in names
+    }
+    for work_id in sorted(recorded | set(released)):
+        record = released.get(work_id)
+        if record is not None:
+            for name in names:
+                fields[name][record["analysis"]["field_states"][name]] += 1
+            continue
+        row = rows[work_id]
+        reason = _work_withheld_reason(row, withheld_reasons, released_other_decision)
+        for name in names:
+            field_reason = reason or (
+                "field_conflict" if name in row["analysis_conflicts"] else None
+            )
+            if field_reason:
+                fields[name]["withheld"] += 1
+                fields[name]["withheld_by_reason"][field_reason] += 1
+            else:
+                fields[name]["not_coded"] += 1
+    return {
+        "unit": "work",
+        "authority": "Recorded Include decisions with human priority; released field states are attributed AI source review, not domain-expert verification.",
+        "scope": {
+            "work_total": len(recorded | set(released)),
+            "recorded_include_work_total": len(recorded),
+            "released_include_work_total": len(released),
+            "released_include_outside_recorded_include_work_total": len(
+                set(released) - recorded
+            ),
+        },
+        "states": list(COVERAGE_STATES),
+        "withheld_reasons": list(WITHHELD_REASONS),
+        "fields": fields,
+    }
+
+
 def build(
     screening_path: Path,
     corpus_path: Path,
@@ -566,8 +698,13 @@ def build(
     publication_policy: dict[str, Any] | None = None,
     verification_receipts: dict[str, dict[str, Any]] | None = None,
     repo: Path | None = None,
+    with_analysis_coverage: bool = False,
 ) -> dict[str, Any]:
-    """Join and verify the productive track, returning deterministic public data."""
+    """Join and verify the productive track, returning deterministic public data.
+
+    `with_analysis_coverage` adds the scope coverage of every analysis field from
+    the canonical Work rows of `repo`; it requires the complete repository inputs.
+    """
     repo = repo or REPO_ROOT
     screening = _read_json(screening_path)
     try:
@@ -613,6 +750,7 @@ def build(
 
     records = []
     withheld_total = 0
+    withheld_reasons: dict[str, str] = {}
     from src.analysis.historical_resolution import load_source_holds
 
     source_holds = load_source_holds(repo)
@@ -622,6 +760,7 @@ def build(
             raise ValueError(f"{paper_id}: screening decision has no corpus metadata")
         if paper.get("source_hold") or paper.get("work_id") in source_holds:
             withheld_total += 1
+            withheld_reasons[paper_id] = "source_hold"
             continue
         decision = decisions[paper_id]
         if not isinstance(decision, dict):
@@ -629,6 +768,7 @@ def build(
         state = decision.get("lifecycle", {}).get("state")
         if state not in allowed_states:
             withheld_total += 1
+            withheld_reasons[paper_id] = "review_pending"
             continue
         receipt = None
         correction = None
@@ -643,6 +783,9 @@ def build(
             )
             if receipt is None or receipt.get("result") != "accepted":
                 withheld_total += 1
+                withheld_reasons[paper_id] = (
+                    "review_pending" if receipt is None else "open_negative_review"
+                )
                 continue
             if not correction and receipt.get("artifact") != artifact:
                 raise ValueError(
@@ -673,6 +816,7 @@ def build(
             )
         except StaleSourceVerificationError:
             withheld_total += 1
+            withheld_reasons[paper_id] = "stale_source_review"
             continue
         records.append(record)
         if correction:
@@ -688,6 +832,15 @@ def build(
     }
     approved_works = {record["work_id"] for record in records}
     source_status = str(screening.get("status", "unknown"))
+    coverage = (
+        {
+            "analysis_coverage": analysis_coverage(
+                repo, records, withheld_reasons, analysis_schema
+            )
+        }
+        if with_analysis_coverage
+        else {}
+    )
     return {
         "schema": "femprompt-literature-landscape/1.2",
         "source": {
@@ -740,6 +893,7 @@ def build(
                 "unclear_total": "published_work_total",
                 "thematic_total": "published_work_total",
             },
+            **coverage,
         },
         "category_groups": {
             "object": object_categories,
@@ -809,6 +963,7 @@ def main() -> int:
             args.work_version_contract.resolve(),
             policy,
             receipts,
+            with_analysis_coverage=True,
         )
         _write_json_atomic(args.output.resolve(), payload)
     except (FileNotFoundError, json.JSONDecodeError, ValueError) as error:

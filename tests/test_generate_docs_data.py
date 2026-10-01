@@ -429,3 +429,32 @@ def test_human_assessment_reads_the_diversity_column_of_the_human_sheet(
 
     assert human["all_categories"]["Diversitaet"] == 1
     assert human["categories"] == ["Diversitaet"]
+
+
+def test_human_assessment_keeps_uncoded_cells_null_and_reads_case_variants(
+    tmp_path: Path,
+) -> None:
+    header = ["Zotero_Key", "Decision", *docs_data.CATEGORIES]
+    row = ["K1", "Include", *["Nein"] * len(docs_data.CATEGORIES)]
+    row[header.index("Gender")] = ""
+    row[header.index("Fairness")] = "ja"
+    row[header.index("Feministisch")] = "nein"
+    sheet = tmp_path / "human.csv"
+    sheet.write_text(",".join(header) + "\n" + ",".join(row) + "\n", encoding="utf-8")
+
+    human = docs_data.load_human_assessment(sheet)["K1"]["all_categories"]
+
+    assert human["Gender"] is None
+    assert human["Fairness"] == 1
+    assert human["Feministisch"] == 0
+
+
+def test_every_recorded_disagreement_reaches_its_published_record() -> None:
+    disagreements = docs_data.load_disagreements(docs_data.INPUT_DISAGREEMENTS)
+    published = json.loads(docs_data.OUTPUT_VAULT.read_text(encoding="utf-8"))
+    by_id = {paper["id"]: paper["benchmark"] for paper in published["papers"]}
+
+    assert disagreements
+    for key, recorded in disagreements.items():
+        assert by_id[key]["disagreement_type"] == recorded["disagreement_type"]
+        assert by_id[key]["severity"] == recorded["severity"]

@@ -53,6 +53,178 @@
       "excluded_total": "published_work_total",
       "unclear_total": "published_work_total",
       "thematic_total": "published_work_total"
+    },
+    "analysis_coverage": {
+      "unit": "work",
+      "authority": "Recorded Include decisions with human priority; released field states are attributed AI source review, not domain-expert verification.",
+      "scope": {
+        "work_total": 155,
+        "recorded_include_work_total": 154,
+        "released_include_work_total": 20,
+        "released_include_outside_recorded_include_work_total": 1
+      },
+      "states": [
+        "value",
+        "none",
+        "undecidable",
+        "absent",
+        "not_coded",
+        "withheld"
+      ],
+      "withheld_reasons": [
+        "source_hold",
+        "decision_conflict",
+        "open_negative_review",
+        "stale_source_review",
+        "review_pending",
+        "field_conflict"
+      ],
+      "fields": {
+        "AN_Prompting_Role": {
+          "value": 7,
+          "none": 13,
+          "undecidable": 0,
+          "absent": 0,
+          "not_coded": 132,
+          "withheld": 3,
+          "withheld_by_reason": {
+            "source_hold": 1,
+            "decision_conflict": 0,
+            "open_negative_review": 0,
+            "stale_source_review": 2,
+            "review_pending": 0,
+            "field_conflict": 0
+          }
+        },
+        "AN_Prompt_Techniques": {
+          "value": 6,
+          "none": 14,
+          "undecidable": 0,
+          "absent": 0,
+          "not_coded": 132,
+          "withheld": 3,
+          "withheld_by_reason": {
+            "source_hold": 1,
+            "decision_conflict": 0,
+            "open_negative_review": 0,
+            "stale_source_review": 2,
+            "review_pending": 0,
+            "field_conflict": 0
+          }
+        },
+        "AN_Bias_Axes": {
+          "value": 19,
+          "none": 1,
+          "undecidable": 0,
+          "absent": 0,
+          "not_coded": 132,
+          "withheld": 3,
+          "withheld_by_reason": {
+            "source_hold": 1,
+            "decision_conflict": 0,
+            "open_negative_review": 0,
+            "stale_source_review": 2,
+            "review_pending": 0,
+            "field_conflict": 0
+          }
+        },
+        "AN_Harm_Types": {
+          "value": 19,
+          "none": 1,
+          "undecidable": 0,
+          "absent": 0,
+          "not_coded": 132,
+          "withheld": 3,
+          "withheld_by_reason": {
+            "source_hold": 1,
+            "decision_conflict": 0,
+            "open_negative_review": 0,
+            "stale_source_review": 2,
+            "review_pending": 0,
+            "field_conflict": 0
+          }
+        },
+        "AN_Mitigation_Stage": {
+          "value": 19,
+          "none": 1,
+          "undecidable": 0,
+          "absent": 0,
+          "not_coded": 132,
+          "withheld": 3,
+          "withheld_by_reason": {
+            "source_hold": 1,
+            "decision_conflict": 0,
+            "open_negative_review": 0,
+            "stale_source_review": 2,
+            "review_pending": 0,
+            "field_conflict": 0
+          }
+        },
+        "AN_Mitigation_Status": {
+          "value": 19,
+          "none": 1,
+          "undecidable": 0,
+          "absent": 0,
+          "not_coded": 132,
+          "withheld": 3,
+          "withheld_by_reason": {
+            "source_hold": 1,
+            "decision_conflict": 0,
+            "open_negative_review": 0,
+            "stale_source_review": 2,
+            "review_pending": 0,
+            "field_conflict": 0
+          }
+        },
+        "AN_Population": {
+          "value": 20,
+          "none": 0,
+          "undecidable": 0,
+          "absent": 0,
+          "not_coded": 132,
+          "withheld": 3,
+          "withheld_by_reason": {
+            "source_hold": 1,
+            "decision_conflict": 0,
+            "open_negative_review": 0,
+            "stale_source_review": 2,
+            "review_pending": 0,
+            "field_conflict": 0
+          }
+        },
+        "AN_Coding_Basis": {
+          "value": 20,
+          "none": 0,
+          "undecidable": 0,
+          "absent": 0,
+          "not_coded": 132,
+          "withheld": 3,
+          "withheld_by_reason": {
+            "source_hold": 1,
+            "decision_conflict": 0,
+            "open_negative_review": 0,
+            "stale_source_review": 2,
+            "review_pending": 0,
+            "field_conflict": 0
+          }
+        },
+        "Studientyp": {
+          "value": 20,
+          "none": 0,
+          "undecidable": 0,
+          "absent": 0,
+          "not_coded": 132,
+          "withheld": 3,
+          "withheld_by_reason": {
+            "source_hold": 1,
+            "decision_conflict": 0,
+            "open_negative_review": 0,
+            "stale_source_review": 2,
+            "review_pending": 0,
+            "field_conflict": 0
+          }
+        }
+      }
     }
   },
   "category_groups": {
@@ -292,6 +464,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Empirisch"
         },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "Die evaluierte Mitigation ist ein Hochschulkurs zur AI Literacy. Studienfach und vorherige Programmiererfahrung sind Vergleichsmerkmale, keine im Beitrag analysierten Bias-Achsen; Prompting gehört nicht zum Kursinhalt.",
         "undecidable": []
       },
@@ -510,6 +693,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Empirisch"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "Die evaluierte Mitigation ist ein Hochschulkurs zur AI Literacy. Studienfach und vorherige Programmiererfahrung sind Vergleichsmerkmale, keine im Beitrag analysierten Bias-Achsen; Prompting gehört nicht zum Kursinhalt.",
             "undecidable": []
@@ -823,6 +1017,17 @@
           ],
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Empirisch"
+        },
+        "field_states": {
+          "AN_Prompting_Role": "value",
+          "AN_Prompt_Techniques": "value",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
         },
         "notes": "General_Guidance: \"employing gender-intentional text prompts\". Der globale Policy-Report beruht auf regionalen Konsultationen und Praxisinitiativen. Wohlfahrtsautomatisierung und Governance sozialer Sektordaten tragen Social_Assistance_Admin; weitere Gesundheitsbezüge bleiben Beispiele innerhalb eines nicht sozialarbeitsspezifischen Rahmens.",
         "undecidable": []
@@ -1140,6 +1345,17 @@
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Empirisch"
             },
+            "field_states": {
+              "AN_Prompting_Role": "value",
+              "AN_Prompt_Techniques": "value",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
+            },
             "notes": "General_Guidance: \"employing gender-intentional text prompts\". Der globale Policy-Report beruht auf regionalen Konsultationen und Praxisinitiativen. Wohlfahrtsautomatisierung und Governance sozialer Sektordaten tragen Social_Assistance_Admin; weitere Gesundheitsbezüge bleiben Beispiele innerhalb eines nicht sozialarbeitsspezifischen Rahmens.",
             "undecidable": []
           }
@@ -1439,6 +1655,17 @@
           ],
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Theoretisch"
+        },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
         },
         "notes": "Theoretischer Beitrag zu KI, kritischen digitalen Kompetenzen und sozialarbeiterischer Bildung.",
         "undecidable": []
@@ -1787,6 +2014,17 @@
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Theoretisch"
             },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
+            },
             "notes": "Theoretischer Beitrag zu KI, kritischen digitalen Kompetenzen und sozialarbeiterischer Bildung.",
             "undecidable": []
           },
@@ -2094,6 +2332,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Experimentell"
         },
+        "field_states": {
+          "AN_Prompting_Role": "value",
+          "AN_Prompt_Techniques": "value",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "Own experiments, not a synthesised evaluation. ReGiFT extracts SQuAD-v2 traces and retains only final-answer-correct examples (3.1, Algorithm 1: Pre_Processing); section 6 assesses Correct-Only, Incorrect-Only and Full-Set selection. Supervised fine-tuning jointly teaches traces and answers (3.2: In_Training). Section 5.2 and Table 3 assess a CoT prompting comparator (Prompt_Practice) and criticise prompt sensitivity and demographic generalisation. Prompting is Research_Instrument and Object_of_Critique. Thought_Generation comprises CoT and explicit think/answer prompts. General_Guidance, verbatim A.1: Answer each question using the information in the preceding background paragraph. If there is not enough information provided, answer with ‘Not in background.’ A.1 explicitly excludes demonstrations in the zero-shot prompt; no ICL. The abstention/context guidance is used, but its isolated mitigation efficacy is not tested. Evaluated denotes completed ReGiFT, data-selection, instruction-tuning and CoT intervention assessments with reported results, not universal effectiveness. Tables 1–3 report ReGiFT gains relative to base models on BBQ; CoT outcomes are mixed or negative. Age, Religion and Nationality_Migration are the three separately evaluated axes (4.1, 5; no interacting-axis analysis). Stereotyping is the explicit harm (Figures 1/3, A.5); demographic benchmark scenarios do not establish a social-work or professional-education setting. Study type Experimentell; population Not_SW_Specific; Fulltext plus all three original PNGs. Answer extraction, Unknown normalisation and LLM-as-Judge serve measurement (4.3, A.2–A.3); they do not establish Post_Processing, Intra_Processing or Organisational_Process mitigation. Correct final answers are an admitted proxy for trace validity (3.1 footnote), not direct verification of reasoning correctness. The paper limits its claim to stereotypes associated with flawed contextual reasoning and mid-sized models, without complete bias removal or demonstrated transfer to social-work practice. Numerical limitations: Tables 1 and 3 disagree on Mistral ReGiFT age (82.78/84.01 versus 82.58/83.91) and Phi-4 religion/nationality entries; section 5.2 overgeneralises CoT as modest gains. Several displayed overall entries also do not equal the mean of displayed ambiguous/disambiguous entries (e.g. Table 1 LLaMA base religion 12.45/66.52/49.48 and Table 4 Correct-Only age 70.04/89.13/75.59); the paper supplies no reconciliation. Table 5 is nonmonotonic and does not substantiate a universal 40% plateau; its prose mentions 50% although no 50% row is shown. Figure 4 shows printed means 139.62 and 243.81 tokens with undefined error bars and unspecified sample sizes; no confidence interval, statistical significance, trace-length causal effect or operational threshold is inferred. These limitations restrict quantitative synthesis, but the topical coding and completed-assessment status remain decidable.",
         "undecidable": []
       },
@@ -2366,6 +2615,17 @@
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Experimentell"
             },
+            "field_states": {
+              "AN_Prompting_Role": "value",
+              "AN_Prompt_Techniques": "value",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
+            },
             "notes": "Own experiments, not a synthesised evaluation. ReGiFT extracts SQuAD-v2 traces and retains only final-answer-correct examples (3.1, Algorithm 1: Pre_Processing); section 6 assesses Correct-Only, Incorrect-Only and Full-Set selection. Supervised fine-tuning jointly teaches traces and answers (3.2: In_Training). Section 5.2 and Table 3 assess a CoT prompting comparator (Prompt_Practice) and criticise prompt sensitivity and demographic generalisation. Prompting is Research_Instrument and Object_of_Critique. Thought_Generation comprises CoT and explicit think/answer prompts. General_Guidance, verbatim A.1: Answer each question using the information in the preceding background paragraph. If there is not enough information provided, answer with ‘Not in background.’ A.1 explicitly excludes demonstrations in the zero-shot prompt; no ICL. The abstention/context guidance is used, but its isolated mitigation efficacy is not tested. Evaluated denotes completed ReGiFT, data-selection, instruction-tuning and CoT intervention assessments with reported results, not universal effectiveness. Tables 1–3 report ReGiFT gains relative to base models on BBQ; CoT outcomes are mixed or negative. Age, Religion and Nationality_Migration are the three separately evaluated axes (4.1, 5; no interacting-axis analysis). Stereotyping is the explicit harm (Figures 1/3, A.5); demographic benchmark scenarios do not establish a social-work or professional-education setting. Study type Experimentell; population Not_SW_Specific; Fulltext plus all three original PNGs. Answer extraction, Unknown normalisation and LLM-as-Judge serve measurement (4.3, A.2–A.3); they do not establish Post_Processing, Intra_Processing or Organisational_Process mitigation. Correct final answers are an admitted proxy for trace validity (3.1 footnote), not direct verification of reasoning correctness. The paper limits its claim to stereotypes associated with flawed contextual reasoning and mid-sized models, without complete bias removal or demonstrated transfer to social-work practice. Numerical limitations: Tables 1 and 3 disagree on Mistral ReGiFT age (82.78/84.01 versus 82.58/83.91) and Phi-4 religion/nationality entries; section 5.2 overgeneralises CoT as modest gains. Several displayed overall entries also do not equal the mean of displayed ambiguous/disambiguous entries (e.g. Table 1 LLaMA base religion 12.45/66.52/49.48 and Table 4 Correct-Only age 70.04/89.13/75.59); the paper supplies no reconciliation. Table 5 is nonmonotonic and does not substantiate a universal 40% plateau; its prose mentions 50% although no 50% row is shown. Figure 4 shows printed means 139.62 and 243.81 tokens with undefined error bars and unspecified sample sizes; no confidence interval, statistical significance, trace-length causal effect or operational threshold is inferred. These limitations restrict quantitative synthesis, but the topical coding and completed-assessment status remain decidable.",
             "undecidable": []
           }
@@ -2613,6 +2873,17 @@
           ],
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Empirisch"
+        },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
         },
         "notes": "Die Framing-Analyse wertet vier Policy-Reports aus. Die Berichte behandeln die aufgeführten Achsen einschließlich ihrer Verschränkungen; Kultur und sprachliche Biases sind Teil der synthetisierten Problem- und Handlungsperspektive.",
         "undecidable": []
@@ -2867,6 +3138,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Empirisch"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "Die Framing-Analyse wertet vier Policy-Reports aus. Die Berichte behandeln die aufgeführten Achsen einschließlich ihrer Verschränkungen; Kultur und sprachliche Biases sind Teil der synthetisierten Problem- und Handlungsperspektive.",
             "undecidable": []
@@ -3138,6 +3420,17 @@
           ],
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Konzept"
+        },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
         },
         "notes": "Fachlicher Kommentar zu gendergerechter KI, feministischen Datenpraktiken und organisationaler Gestaltung.",
         "undecidable": []
@@ -3414,6 +3707,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Konzept"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "Fachlicher Kommentar zu gendergerechter KI, feministischen Datenpraktiken und organisationaler Gestaltung.",
             "undecidable": []
@@ -3981,6 +4285,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Theoretisch"
         },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "Der Text diskutiert Risiken und vorgeschlagene Gegenmaßnahmen. Prompting ist kein eigener Gegenstand.",
         "undecidable": []
       },
@@ -4208,6 +4523,17 @@
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Theoretisch"
             },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
+            },
             "notes": "Der Text diskutiert Risiken und vorgeschlagene Gegenmaßnahmen. Prompting ist kein eigener Gegenstand.",
             "undecidable": []
           }
@@ -4419,6 +4745,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Theoretisch"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "Der Text diskutiert Risiken und vorgeschlagene Gegenmaßnahmen. Prompting ist kein eigener Gegenstand.",
             "undecidable": []
@@ -5261,6 +5598,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Empirisch"
         },
+        "field_states": {
+          "AN_Prompting_Role": "value",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "Issue Brief mit drei empirischen Biasstudien und Policy-Empfehlungen. Study 1 untersucht Wortassoziationen zu Gender und Alter, einschließlich age and pleasantness; die Satzvervollständigung in den weiteren Studien dient als Bias-Probe. Die Empfehlungen bleiben Proposed. Vergleiche verschiedener Modelle sind kein kontrollierter kausaler Nachweis einer universell wirksamen Bias-Mitigation.",
         "undecidable": []
       },
@@ -5545,6 +5893,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Empirisch"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "value",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "Issue Brief mit drei empirischen Biasstudien und Policy-Empfehlungen. Study 1 untersucht Wortassoziationen zu Gender und Alter, einschließlich age and pleasantness; die Satzvervollständigung in den weiteren Studien dient als Bias-Probe. Die Empfehlungen bleiben Proposed. Vergleiche verschiedener Modelle sind kein kontrollierter kausaler Nachweis einer universell wirksamen Bias-Mitigation.",
             "undecidable": []
@@ -5855,6 +6214,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Literaturreview"
         },
+        "field_states": {
+          "AN_Prompting_Role": "value",
+          "AN_Prompt_Techniques": "value",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "ICL beruht auf der ausdrücklich behandelten Zero-shot- und Few-shot-Aufgabenadaptation. Evaluated bezeichnet die in §4 (Understanding bias, Referenz [57], Gonen/Goldberg 2019) diskutierte negative Evaluation bestehender Word-Embedding-Debiasing-Verfahren: verbleibender Bias wird verdeckt statt vollständig entfernt. Dies ist synthetisierte Evaluation, keine eigene Mitigationsstudie dieses Reviews; die gesonderte Messung von Bias allein würde Evaluated nicht begründen. Die weiteren Empfehlungen zu ausgewogenen Trainingsdaten, Fine-Tuning und organisatorischer Zusammenarbeit gelten dadurch nicht sämtlich als evaluiert. Kein Nachweis allgemeiner Fairness-Wirksamkeit oder eines Transfers in die Soziale Arbeit.",
         "undecidable": []
       },
@@ -6147,6 +6517,17 @@
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Literaturreview"
             },
+            "field_states": {
+              "AN_Prompting_Role": "value",
+              "AN_Prompt_Techniques": "value",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
+            },
             "notes": "ICL beruht auf der ausdrücklich behandelten Zero-shot- und Few-shot-Aufgabenadaptation. Evaluated bezeichnet die in §4 (Understanding bias, Referenz [57], Gonen/Goldberg 2019) diskutierte negative Evaluation bestehender Word-Embedding-Debiasing-Verfahren: verbleibender Bias wird verdeckt statt vollständig entfernt. Dies ist synthetisierte Evaluation, keine eigene Mitigationsstudie dieses Reviews; die gesonderte Messung von Bias allein würde Evaluated nicht begründen. Die weiteren Empfehlungen zu ausgewogenen Trainingsdaten, Fine-Tuning und organisatorischer Zusammenarbeit gelten dadurch nicht sämtlich als evaluiert. Kein Nachweis allgemeiner Fairness-Wirksamkeit oder eines Transfers in die Soziale Arbeit.",
             "undecidable": []
           },
@@ -6394,6 +6775,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Theoretisch"
         },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "Theoretische soziotechnische Einordnung algorithmischen Managements in Arbeitskontexten.",
         "undecidable": []
       },
@@ -6627,6 +7019,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Theoretisch"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "Theoretische soziotechnische Einordnung algorithmischen Managements in Arbeitskontexten.",
             "undecidable": []
@@ -7426,6 +7829,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Experimentell"
         },
+        "field_states": {
+          "AN_Prompting_Role": "value",
+          "AN_Prompt_Techniques": "value",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "General_Guidance bezeichnet die zehn Aufgabeninstruktionen für das Retrieval. Der Beitrag schlägt als eigene Mitigation umfassende Audits, Policy und organisatorische Entscheidungsmechanismen vor; referierte Modell- und Datenverfahren werden nicht als eigene Intervention codiert.",
         "undecidable": []
       },
@@ -7684,6 +8098,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Experimentell"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "value",
+              "AN_Prompt_Techniques": "value",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "General_Guidance bezeichnet die zehn Aufgabeninstruktionen für das Retrieval. Der Beitrag schlägt als eigene Mitigation umfassende Audits, Policy und organisatorische Entscheidungsmechanismen vor; referierte Modell- und Datenverfahren werden nicht als eigene Intervention codiert.",
             "undecidable": []
@@ -8237,6 +8662,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Theoretisch"
         },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "Kritische theoretische Analyse algorithmischer Entscheidungen, Daten und Gerechtigkeit im Kinderschutz.",
         "undecidable": []
       },
@@ -8477,6 +8913,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Theoretisch"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "Kritische theoretische Analyse algorithmischer Entscheidungen, Daten und Gerechtigkeit im Kinderschutz.",
             "undecidable": []
@@ -8730,6 +9177,17 @@
           ],
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Empirisch"
+        },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
         },
         "notes": "Der Bericht kombiniert Literaturauswertung, vergleichende Systemanalyse und Expert:inneninterviews. Sozialarbeit erscheint als Praxisbeispiel.",
         "undecidable": []
@@ -8987,6 +9445,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Empirisch"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "Der Bericht kombiniert Literaturauswertung, vergleichende Systemanalyse und Expert:inneninterviews. Sozialarbeit erscheint als Praxisbeispiel.",
             "undecidable": []
@@ -9489,6 +9958,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Konzept"
         },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "DIVERSIFAIR-Toolkit, Fassung November 2024, mit Schwerpunkt Industrie und Governance; Wohlfahrtsdienste sind Fallmaterial. Pre_Processing: Audit, Diversifizierung und Kontextanpassung der Datensätze (S.18). Organisational_Process: Beteiligung, Schulung, Aufsicht und Incident-/Korrekturlog (S.19–21,26). Allgemeines Monitoring und ‚corrective actions‘ verorten keinen technischen Inferenz- oder Ausgabeeingriff. Proposed bleibt: S.17 kündigt die weitere Evaluation der Empfehlungen an; daraus wird keine bereits geprüfte Mitigationswirkung abgeleitet.",
         "undecidable": []
       },
@@ -9782,6 +10262,17 @@
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Konzept"
             },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
+            },
             "notes": "DIVERSIFAIR-Toolkit, Fassung November 2024, mit Schwerpunkt Industrie und Governance; Wohlfahrtsdienste sind Fallmaterial. Pre_Processing: Audit, Diversifizierung und Kontextanpassung der Datensätze (S.18). Organisational_Process: Beteiligung, Schulung, Aufsicht und Incident-/Korrekturlog (S.19–21,26). Allgemeines Monitoring und ‚corrective actions‘ verorten keinen technischen Inferenz- oder Ausgabeeingriff. Proposed bleibt: S.17 kündigt die weitere Evaluation der Empfehlungen an; daraus wird keine bereits geprüfte Mitigationswirkung abgeleitet.",
             "undecidable": []
           },
@@ -10062,6 +10553,17 @@
           ],
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Empirisch"
+        },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
         },
         "notes": "Empirischer Forschungsbericht: Befragung mit 49 Items und 382 vollständig ausgefüllten Fragebögen zu KI-Kompetenz, Geschlechterdifferenzen und Vertrauen. §5.2 empfiehlt Kompetenzaufbau, Sensibilisierung und organisatorische Verantwortung; deren Wirksamkeit wird nicht geprüft (Proposed). AIF360 wird als mögliches Hilfsmittel genannt, ohne eine konkrete Post-Processing-Intervention zu beschreiben. Bibliografische Lücke separat: Der dokumentierte Projektzeitraum endet Februar 2021, während Jahr und Berichtstyp im Korpus fehlen.",
         "undecidable": []
@@ -10352,6 +10854,17 @@
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Empirisch"
             },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
+            },
             "notes": "Empirischer Forschungsbericht: Befragung mit 49 Items und 382 vollständig ausgefüllten Fragebögen zu KI-Kompetenz, Geschlechterdifferenzen und Vertrauen. §5.2 empfiehlt Kompetenzaufbau, Sensibilisierung und organisatorische Verantwortung; deren Wirksamkeit wird nicht geprüft (Proposed). AIF360 wird als mögliches Hilfsmittel genannt, ohne eine konkrete Post-Processing-Intervention zu beschreiben. Bibliografische Lücke separat: Der dokumentierte Projektzeitraum endet Februar 2021, während Jahr und Berichtstyp im Korpus fehlen.",
             "undecidable": []
           },
@@ -10641,6 +11154,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Konzept"
         },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "Der nichtkommerzielle FU-Berlin-Beitrag präsentiert ein durchgeführtes Hochschulseminar und einen Queerbot-Workshop mit identifizierter Fachautorin und weiterführender Fachliteratur; Wirksamkeitsdaten werden nicht berichtet.",
         "undecidable": []
       },
@@ -10896,6 +11420,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Konzept"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "Der nichtkommerzielle FU-Berlin-Beitrag präsentiert ein durchgeführtes Hochschulseminar und einen Queerbot-Workshop mit identifizierter Fachautorin und weiterführender Fachliteratur; Wirksamkeitsdaten werden nicht berichtet.",
             "undecidable": []
@@ -11154,6 +11689,17 @@
           ],
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Konzept"
+        },
+        "field_states": {
+          "AN_Prompting_Role": "value",
+          "AN_Prompt_Techniques": "value",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
         },
         "notes": "Konzeptleitfaden für KMU. General_Guidance: Spezifität, Kontext, Sprache und detaillierte Beschreibung. Originalbeleg: ‚Spezifisch sein. Je beschreibender und detaillierter der Prompt, desto besser die Ergebnisse.‘ ICL: Beispiele für gewünschten Stil oder erwartetes Ergebnis; Role_Persona: explizite Rollenzuweisung. Reflexion, Feedback und Vier-Augen-Prinzip beschreiben menschliche Prüfung, keine belegte Modell-Selbstkritik. §5.1 nennt außerdem Klasse, kulturelle Herkunft und Religion; §5.2 behandelt sprachbedingte Verzerrungen. Empfehlungen bleiben Proposed; keine kontrollierte Wirksamkeitsevaluation.",
         "undecidable": []
@@ -11471,6 +12017,17 @@
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Konzept"
             },
+            "field_states": {
+              "AN_Prompting_Role": "value",
+              "AN_Prompt_Techniques": "value",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
+            },
             "notes": "Konzeptleitfaden für KMU. General_Guidance: Spezifität, Kontext, Sprache und detaillierte Beschreibung. Originalbeleg: ‚Spezifisch sein. Je beschreibender und detaillierter der Prompt, desto besser die Ergebnisse.‘ ICL: Beispiele für gewünschten Stil oder erwartetes Ergebnis; Role_Persona: explizite Rollenzuweisung. Reflexion, Feedback und Vier-Augen-Prinzip beschreiben menschliche Prüfung, keine belegte Modell-Selbstkritik. §5.1 nennt außerdem Klasse, kulturelle Herkunft und Religion; §5.2 behandelt sprachbedingte Verzerrungen. Empfehlungen bleiben Proposed; keine kontrollierte Wirksamkeitsevaluation.",
             "undecidable": []
           },
@@ -11736,6 +12293,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Empirisch"
         },
+        "field_states": {
+          "AN_Prompting_Role": "value",
+          "AN_Prompt_Techniques": "value",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "none",
+          "AN_Mitigation_Stage": "none",
+          "AN_Mitigation_Status": "none",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "Empirisches NBER Working Paper zur globalen ChatGPT-Nutzung und demografischen Unterschieden; keine Mitigationsintervention. General_Guidance: Klassifikationsrubriken, Entscheidungsregeln und Ausgabeformat in Appendix A.3/A.4; Originalbeleg: ‚Return exactly two lines and nothing else:‘ ICL: kategorisierte Beispielanfragen in A.3 sowie User Message/Expected output in A.4. Die Prompt-Techniken dienen als Forschungsinstrument; daraus folgt kein Nachweis zur Verbesserung von Fairness in der Sozialen Arbeit.",
         "undecidable": []
       },
@@ -11984,6 +12552,17 @@
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Empirisch"
             },
+            "field_states": {
+              "AN_Prompting_Role": "value",
+              "AN_Prompt_Techniques": "value",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "none",
+              "AN_Mitigation_Stage": "none",
+              "AN_Mitigation_Status": "none",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
+            },
             "notes": "Empirisches NBER Working Paper zur globalen ChatGPT-Nutzung und demografischen Unterschieden; keine Mitigationsintervention. General_Guidance: Klassifikationsrubriken, Entscheidungsregeln und Ausgabeformat in Appendix A.3/A.4; Originalbeleg: ‚Return exactly two lines and nothing else:‘ ICL: kategorisierte Beispielanfragen in A.3 sowie User Message/Expected output in A.4. Die Prompt-Techniken dienen als Forschungsinstrument; daraus folgt kein Nachweis zur Verbesserung von Fairness in der Sozialen Arbeit.",
             "undecidable": []
           },
@@ -12230,6 +12809,17 @@
           ],
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Literaturreview"
+        },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "value",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
         },
         "notes": "Systematischer Review ethischer Probleme und Strategien für KI im Gesundheitsbereich. Pre_Processing: ‚preprocessing the training dataset‘ (§3.1.4). In_Training: ausdrückliche Trainingsempfehlung für nachhaltige ML-Entscheidungshilfen in der Arbeitsmedizin (§3.10.2: ‚training these tools with the best-known algorithms‘); dies ist eine breite ethische Empfehlung, keine getestete Fairness-Trainingsmethode. Organisational_Process: Zusammenarbeit mit Ethik-, Sozialwissenschafts- und Regulierungsexpertise sowie ethische Prüfung. Die geforderte Validierung von Ausgaben/Subpopulationen ist keine berichtete Durchführung oder Ausgabetransformation. ‚Compensating‘ legt keinen technischen Zeitpunkt fest. Proposed bleibt; weder eine durchgeführte Inferenzintervention noch ein konkretes Post-Processing-Verfahren wird behauptet.",
         "undecidable": []
@@ -12491,6 +13081,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Literaturreview"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "value",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "Systematischer Review ethischer Probleme und Strategien für KI im Gesundheitsbereich. Pre_Processing: ‚preprocessing the training dataset‘ (§3.1.4). In_Training: ausdrückliche Trainingsempfehlung für nachhaltige ML-Entscheidungshilfen in der Arbeitsmedizin (§3.10.2: ‚training these tools with the best-known algorithms‘); dies ist eine breite ethische Empfehlung, keine getestete Fairness-Trainingsmethode. Organisational_Process: Zusammenarbeit mit Ethik-, Sozialwissenschafts- und Regulierungsexpertise sowie ethische Prüfung. Die geforderte Validierung von Ausgaben/Subpopulationen ist keine berichtete Durchführung oder Ausgabetransformation. ‚Compensating‘ legt keinen technischen Zeitpunkt fest. Proposed bleibt; weder eine durchgeführte Inferenzintervention noch ein konkretes Post-Processing-Verfahren wird behauptet.",
             "undecidable": []
@@ -13042,6 +13643,17 @@
           "AN_Coding_Basis": "Fulltext",
           "Studientyp": "Theoretisch"
         },
+        "field_states": {
+          "AN_Prompting_Role": "none",
+          "AN_Prompt_Techniques": "none",
+          "AN_Bias_Axes": "none",
+          "AN_Harm_Types": "value",
+          "AN_Mitigation_Stage": "value",
+          "AN_Mitigation_Status": "value",
+          "AN_Population": "value",
+          "AN_Coding_Basis": "value",
+          "Studientyp": "value"
+        },
         "notes": "Der konzeptionelle Beitrag behandelt arbeitsfeldübergreifende Beratung, Altenhilfe sowie Kinder- und Jugendhilfe. Alter und Gender erscheinen als Anwendungs- oder Literaturkontext, werden jedoch nicht als eigene Bias-Achsen analysiert.",
         "undecidable": []
       },
@@ -13253,6 +13865,17 @@
               ],
               "AN_Coding_Basis": "Fulltext",
               "Studientyp": "Theoretisch"
+            },
+            "field_states": {
+              "AN_Prompting_Role": "none",
+              "AN_Prompt_Techniques": "none",
+              "AN_Bias_Axes": "none",
+              "AN_Harm_Types": "value",
+              "AN_Mitigation_Stage": "value",
+              "AN_Mitigation_Status": "value",
+              "AN_Population": "value",
+              "AN_Coding_Basis": "value",
+              "Studientyp": "value"
             },
             "notes": "Der konzeptionelle Beitrag behandelt arbeitsfeldübergreifende Beratung, Altenhilfe sowie Kinder- und Jugendhilfe. Alter und Gender erscheinen als Anwendungs- oder Literaturkontext, werden jedoch nicht als eigene Bias-Achsen analysiert.",
             "undecidable": []

@@ -127,7 +127,7 @@ def build_files(repo: Path = ROOT) -> dict[str, bytes]:
         repo / "docs/data/screening/ar2.json", repo / "docs/data/research_vault_v2.json",
         repo / "docs/data/analysis_fields.json", repo / "docs/data/category_schema.json",
         repo / "docs/data/work_version_contract.json", publication_policy=policy,
-        verification_receipts=reviews, repo=repo,
+        verification_receipts=reviews, repo=repo, with_analysis_coverage=True,
     )
     corpus = json.loads((repo / "docs/data/research_vault_v2.json").read_text(encoding="utf-8"))
     evidence_records = {e["record_id"] for a in assertions["assertions"] for e in a["evidence"]}

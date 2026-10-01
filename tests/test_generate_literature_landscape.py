@@ -797,3 +797,141 @@ def test_unknown_paper_and_category_fail_closed(tmp_path: Path) -> None:
             _write(tmp_path / "unknown-category.json", unknown_category),
             _write(tmp_path / "corpus-2.json", corpus),
         )
+
+
+def test_analysis_payload_states_none_undecidable_and_absent_explicitly() -> None:
+    schema = json.loads(
+        (ROOT / "docs/data/analysis_fields.json").read_text(encoding="utf-8")
+    )
+    decision = {
+        "text_source": "abstract",
+        "analysis": {
+            "fields": {
+                "AN_Prompting_Role": ["None"],
+                "AN_Prompt_Techniques": ["ICL"],
+                "AN_Bias_Axes": [],
+                "AN_Mitigation_Stage": ["Prompt_Practice"],
+                "AN_Mitigation_Status": "None",
+                "AN_Population": ["General_Social_Work"],
+                "AN_Coding_Basis": "Abstract",
+                "Studientyp": "Empirisch",
+            },
+            "undecidable": {"AN_Bias_Axes": True},
+        },
+    }
+
+    payload = landscape._analysis_payload("P1", decision, schema)
+
+    states = payload["field_states"]
+    assert states["AN_Prompting_Role"] == "none"
+    assert states["AN_Mitigation_Status"] == "none"
+    assert states["AN_Prompt_Techniques"] == "value"
+    assert states["AN_Bias_Axes"] == "undecidable"
+    assert states["AN_Harm_Types"] == "absent"
+    assert states["Studientyp"] == "value"
+    assert "AN_Bias_Axes" not in payload["fields"]
+    assert "AN_Harm_Types" not in payload["fields"]
+    assert payload["fields"]["AN_Prompting_Role"] == ["None"]
+
+
+def _coverage_row(work_id: str, **overrides: object) -> dict[str, object]:
+    row = {
+        "work_id": work_id,
+        "record_ids": [work_id.upper()],
+        "effective_decision": "Include",
+        "integrity_hold": False,
+        "conflicts": [],
+        "open_ai_source_review_record_ids": [],
+        "analysis_conflicts": {},
+    }
+    row.update(overrides)
+    return row
+
+
+def test_analysis_coverage_partitions_scope_and_names_withheld_reasons(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    from src.analysis import build_completion_package
+    from src.assess import artifact_verification
+
+    rows = [
+        _coverage_row("w1"),
+        _coverage_row("w2", integrity_hold=True, conflicts=["source_integrity_hold"]),
+        _coverage_row("w3"),
+        _coverage_row("w4"),
+        _coverage_row("w5", analysis_conflicts={"AN_Bias_Axes": [["Age"], ["Gender"]]}),
+        _coverage_row("w7", effective_decision="Exclude"),
+    ]
+    monkeypatch.setattr(
+        build_completion_package,
+        "canonical_work_rows",
+        lambda repo, inputs, reviews: ({}, {}, None, rows, []),
+    )
+    monkeypatch.setattr(artifact_verification, "load_reviews", lambda repo: {})
+    schema = {
+        "fields": [
+            {"name": "AN_Bias_Axes", "multi": True, "values": ["Gender", "None"]},
+            {"name": "AN_Notes", "free_text": True},
+        ]
+    }
+    released = [
+        {
+            "work_id": "w1",
+            "decision": "Include",
+            "analysis": {"field_states": {"AN_Bias_Axes": "none", "Studientyp": "value"}},
+        },
+        {
+            "work_id": "w6",
+            "decision": "Include",
+            "analysis": {
+                "field_states": {"AN_Bias_Axes": "undecidable", "Studientyp": "value"}
+            },
+        },
+    ]
+
+    coverage = landscape.analysis_coverage(
+        ROOT, released, {"W4": "stale_source_review"}, schema
+    )
+
+    assert coverage["scope"] == {
+        "work_total": 6,
+        "recorded_include_work_total": 5,
+        "released_include_work_total": 2,
+        "released_include_outside_recorded_include_work_total": 1,
+    }
+    assert list(coverage["fields"]) == ["AN_Bias_Axes", "Studientyp"]
+    bias = coverage["fields"]["AN_Bias_Axes"]
+    assert {state: bias[state] for state in coverage["states"]} == {
+        "value": 0,
+        "none": 1,
+        "undecidable": 1,
+        "absent": 0,
+        "not_coded": 1,
+        "withheld": 3,
+    }
+    assert {k: v for k, v in bias["withheld_by_reason"].items() if v} == {
+        "source_hold": 1,
+        "stale_source_review": 1,
+        "field_conflict": 1,
+    }
+    study = coverage["fields"]["Studientyp"]
+    assert (study["value"], study["not_coded"], study["withheld"]) == (2, 2, 2)
+
+
+def test_published_analysis_coverage_matches_released_records() -> None:
+    data = json.loads(
+        (ROOT / "docs/data/literature_landscape.json").read_text(encoding="utf-8")
+    )
+    coverage = data["meta"]["analysis_coverage"]
+    released = [record for record in data["records"] if record["decision"] == "Include"]
+
+    assert coverage["scope"]["released_include_work_total"] == len(released)
+    for name, counts in coverage["fields"].items():
+        assert sum(counts[state] for state in coverage["states"]) == (
+            coverage["scope"]["work_total"]
+        )
+        assert sum(counts["withheld_by_reason"].values()) == counts["withheld"]
+        for state in ("value", "none", "undecidable", "absent"):
+            assert counts[state] == sum(
+                record["analysis"]["field_states"][name] == state for record in released
+            )
