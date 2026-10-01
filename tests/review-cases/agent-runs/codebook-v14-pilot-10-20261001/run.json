@@ -305,7 +305,7 @@
     "track_agreement": {
       "command": "python -m src.assess.agent_track_diagnostics tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001 --output tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/track-agreement.json",
       "path": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/track-agreement.json",
-      "sha256": "f41c7429c93bf2f0c486811bdcb3b2de64be7652e6baf2516922b7275809f525",
+      "sha256": "985868b0a25165feca4e4b0f1c0169d277da4a35a346900268120c777ca76b6e",
       "label": "workflow_diagnostic_not_accuracy"
     },
     "observations": [

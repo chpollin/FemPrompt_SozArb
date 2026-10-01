@@ -31614,7 +31614,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:98c1fa7e33f60d5c3ca8ad7aafca368312c443270adc9733896c72ccc7717c76",
+  "source_fingerprint": "sha256:1566927ae55a57009109835e3f5c28534503697c30cce12bb8b314fe5e34c8cf",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -34594,7 +34594,7 @@
     },
     {
       "path": "src/assess/agent_track_diagnostics.py",
-      "sha256": "20ed87bf4527a1e11a0a705def51b5a168fc0749088894d230400d1735030809"
+      "sha256": "dd2c88476d2ca1fc381f417a6592c1b471b43874d6081f98719c1c09bce906e1"
     },
     {
       "path": "src/assess/artifact_verification.py",
@@ -34626,7 +34626,7 @@
     },
     {
       "path": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/run.json",
-      "sha256": "2de3501e353caff3b3836a80cb6c41d56cc4f665e369e879fd4f6d62909905a8"
+      "sha256": "da5e6a752ef15b34267858771c47d0b6aa5f044aea6067790fd5f53f7dd59bce"
     },
     {
       "path": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/tracks/ar1-coding.json",

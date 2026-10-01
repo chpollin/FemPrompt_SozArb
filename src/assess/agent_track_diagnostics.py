@@ -456,7 +456,8 @@ def main(argv: list[str] | None = None) -> int:
     result = run_agreement(repo, run_dir)
     text = json.dumps(result, indent=2, ensure_ascii=False) + "\n"
     if args.output:
-        (repo / args.output).write_text(text, encoding="utf-8")
+        # LF bytes, so the hash a run manifest records survives a Git checkout.
+        (repo / args.output).write_text(text, encoding="utf-8", newline="\n")
     else:
         sys.stdout.write(text)
     return 0
