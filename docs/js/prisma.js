@@ -1817,7 +1817,7 @@ function surfaceEl() { return document.getElementById('pt-surface'); }
 function readFilterQuery(query) {
     const status = query.get('status');
     state.statusFilter = status === 'offen' || status === 'erfasst' ? status : 'alle';
-    const cats = String(query.get('cats') || '').split(',').filter(function(c) { return ALL_CATS.indexOf(c) !== -1; });
+    const cats = String(state.statusFilter === 'offen' ? '' : (query.get('cats') || '')).split(',').filter(function(c) { return ALL_CATS.indexOf(c) !== -1; });
     state.catFilter = cats.filter(function(c, i) { return cats.indexOf(c) === i; });
     // checked against the assignment file when the filter is applied, which loads later
     state.assigneeFilter = normalizedReviewerKey(query.get('assignee')) || 'alle';
@@ -2078,7 +2078,8 @@ function statusFilterAvailable() {
 }
 
 function matchesCategoryFilter(p) {
-    if (!state.catFilter.length) return true;
+    // an open document has no annotation, so category chips are not offered under Offen
+    if (!state.catFilter.length || (statusFilterAvailable() && state.statusFilter === 'offen')) return true;
     const cats = currentCategories(p);
     return state.catFilter.every(function(c) { return catLevel(cats[c]) > 0; });
 }
@@ -2240,6 +2241,7 @@ function filtersHtml() {
         }
         h += '</div>';
     }
+    if (statusFilterAvailable() && state.statusFilter === 'offen') return h + '</div>';
     h += '<div class="category-chips pt-cat-filter" role="group" aria-label="Nach Kategorien der aktuellen Annotation filtern">';
     [['Gegenstand', TECH_CATS], ['Perspektive', SOCIAL_CATS]].forEach(function(group, index) {
         if (index) h += '<span class="chip-group-sep" aria-hidden="true"></span>';
@@ -2297,7 +2299,8 @@ function corpusListHtml() {
             '<span class="pt-nav-mark pt-mark-' + st + '" aria-hidden="true"></span>' +
             '<span class="pt-nav-text"><span class="pt-nav-t">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
             '<span class="pt-nav-m">' + EC.escapeHtml(p.author_year || p.authors || 'Autor:in/Jahr unbekannt') +
-            (who ? '<span class="pt-nav-assignee"> &middot; ' + EC.escapeHtml(who) + '</span>' : '') + '</span>' +
+            (who ? '<span class="pt-nav-assignee"> &middot; ' + EC.escapeHtml(who) + '</span>' : '') +
+            (drafts[p.id] && drafts[p.id].dirty ? '<span class="pt-nav-draft"> &middot; nicht gespeichert</span>' : '') + '</span>' +
             (q && result.kind === 'DOI' && p.doi ? '<span class="pt-nav-id">DOI ' + EC.escapeHtml(p.doi) + '</span>' : '') +
             '</span>' + categoryDotsHtml(cats) + badge +
             '<span class="pt-sr-only">, ' + statusLabel(st) + (who ? ', zugeteilt: ' + EC.escapeHtml(who) : '') + (catNames.length ? ', ' + EC.escapeHtml(catNames.join(', ')) : '') + '</span>' +
@@ -2355,6 +2358,7 @@ function bindFilters() {
     filters.querySelectorAll('[data-status]').forEach(function(btn) {
         btn.addEventListener('click', function() {
             state.statusFilter = btn.dataset.status;
+            if (state.statusFilter === 'offen') state.catFilter = [];
             refreshCorpusList();
             syncUrl();
             const again = document.querySelector('.pt-nav [data-status="' + state.statusFilter + '"]');
@@ -2689,6 +2693,10 @@ function unpinEvidence(cat, idx) {
         work.evidence[cat].splice(idx, 1);
         if (!work.evidence[cat].length) delete work.evidence[cat];
     }
+    // teilweise exists only through a Paper pin; without one it falls back to off,
+    // unless the level is the unchanged expert judgement
+    const expertLevel = work.expertBasis && work.expertBasis[cat];
+    if (catLevel(work.cats[cat]) === 1 && expertLevel !== 1 && !((work.evidence[cat] || []).some(isPaperEvidence))) delete work.cats[cat];
     markDirty();
     refreshAssess();
 }
@@ -3340,6 +3348,10 @@ function railEditable(p, subject) {
     return !(paperIdentityRequired(p) && !paperIdentityReady(p));
 }
 
+// A changed draft that waits in Bearbeiten is named in Lesen, so leaving the mode never
+// hides unsaved work.
+function canEditAvailableDraft(draft) { return !!(draft && draft.dirty && !acceptanceMode && modeSwitchAvailable()); }
+
 function provenanceLine(p, subject) {
     if (subject.kind === 'own') {
         const r = subject.record;
@@ -3397,7 +3409,7 @@ function evidenceRowsHtml(record, editable) {
             '</span></li>');
     };
     summary(expertOnly, 'is-basis', 'Expert:innen-Urteil, ohne Textbeleg:');
-    summary(missing, 'is-missing', 'Paper-Beleg fehlt:');
+    if (!editable) summary(missing, 'is-missing', 'Paper-Beleg fehlt:'); // while editing, the dock hint names it
     if (!rows.length) return '';
     return '<section class="pt-evid" aria-labelledby="pt-evid-title"><h3 class="pt-sub-head" id="pt-evid-title">Belege</h3><ul class="pt-evid-list">' + rows.join('') + '</ul></section>';
 }
@@ -3482,8 +3494,11 @@ function railHtml(p) {
     let h = '<div class="pt-rail-head"><h2 class="pt-rail-title">Bewertung</h2>';
     // an untouched empty draft has no decision yet, only the provenance line says so
     if (record && !(subject.kind === 'empty' && !work.dirty)) h += decisionBadgeHtml(record, subject.kind === 'own' || (editable && work.dirty));
-    h += '</div><p class="pt-provenance" id="pt-provenance">' + EC.escapeHtml(provenanceLine(p, subject)) +
-        (editable && work.dirty && subject.kind !== 'empty' ? ' · geändert' : '') + '</p>';
+    const draft = drafts[p.id];
+    let provenance = provenanceLine(p, subject);
+    if (editable && work.dirty) provenance = subject.kind === 'empty' ? 'Neue Bewertung, nicht gespeichert' : provenance + ' · geändert, nicht gespeichert';
+    else if (!editable && canEditAvailableDraft(draft)) provenance += ' · Änderungen in Bearbeiten nicht gespeichert';
+    h += '</div><p class="pt-provenance" id="pt-provenance">' + EC.escapeHtml(provenance) + '</p>';
     h += '<div class="pt-rail-body">';
     const cats = record ? (record.categories || {}) : {};
     const basis = record ? (record.evidence_basis || {}) : {};
@@ -3967,13 +3982,18 @@ function gotoNextOpen() {
 // closes on Escape and on a click outside, and restores focus to the trigger on close.
 function placePinMenu(menu, anchor) {
     const rect = anchor && typeof anchor.getBoundingClientRect === 'function' ? anchor.getBoundingClientRect() : null;
-    menu.style.left = ''; menu.style.top = ''; menu.style.transform = '';
+    menu.style.left = ''; menu.style.top = ''; menu.style.transform = ''; menu.style.maxHeight = ''; menu.style.overflowY = '';
     if (!rect || (!rect.width && !rect.height)) return;
     const width = menu.offsetWidth, height = menu.offsetHeight;
     const left = Math.max(8, Math.min(rect.left, window.innerWidth - width - 8));
-    // below the passage when it fits, above it otherwise, never covering it
-    const below = rect.bottom + 8;
-    const top = below + height <= window.innerHeight - 8 ? below : Math.max(8, rect.top - height - 8);
+    // below the passage when it fits, else on the side with more room; a menu taller than
+    // that room scrolls inside instead of covering the passage (small or zoomed screens)
+    const roomBelow = window.innerHeight - rect.bottom - 16, roomAbove = rect.top - 16;
+    const placeBelow = height <= roomBelow || roomBelow >= roomAbove;
+    const room = Math.max(80, placeBelow ? roomBelow : roomAbove);
+    if (height > room) { menu.style.maxHeight = room + 'px'; menu.style.overflowY = 'auto'; }
+    const shown = Math.min(height, room);
+    const top = placeBelow ? rect.bottom + 8 : Math.max(8, rect.top - shown - 8);
     menu.style.left = left + 'px';
     menu.style.top = top + 'px';
     menu.style.transform = 'none';
@@ -4098,6 +4118,13 @@ function renderData(targetEl) {
     if (!state.reviewer || changingKey) {
         el.innerHTML = reviewerKeyFormHtml(changingKey ? state.reviewer : '') + statusLineHtml();
         const form = el.querySelector('#pt-reviewer-setup');
+        // a key change can be left without a new key: the button and Escape keep the old one
+        const cancelChange = function() { changingKey = false; renderData(el); const again = el.querySelector('.pt-change-key'); if (again) again.focus(); };
+        if (changingKey) {
+            form.insertAdjacentHTML('beforeend', '<button type="button" class="pt-link-btn pt-key-cancel">Abbrechen</button>');
+            form.querySelector('.pt-key-cancel').addEventListener('click', cancelChange);
+            form.addEventListener('keydown', function(e) { if (e.key === 'Escape') { e.preventDefault(); cancelChange(); } });
+        }
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             const input = el.querySelector('#pt-reviewer-key');

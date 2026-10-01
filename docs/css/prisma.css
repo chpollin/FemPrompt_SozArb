@@ -190,6 +190,7 @@ body.pt-fullscreen [hidden] { display: none !important; }
 .pt-nav-item.active .pt-nav-t { color: var(--pt-ink); font-weight: 600; }
 .pt-nav-m { display: block; font-size: var(--pt-2xs); color: var(--pt-ink-3); margin-top: 1px; }
 .pt-nav-assignee { color: var(--pt-ink-2); }
+.pt-nav-draft { color: var(--pt-warn-ink); font-weight: 600; }
 .pt-nav-id { display: block; font-size: var(--pt-2xs); color: var(--pt-ink-3); margin-top: 2px; overflow-wrap: anywhere; }
 .pt-nav-cats { flex: none; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 2px; max-width: 34px; margin-top: 4px; }
 .pt-nav-cats .chip-dot, .pt-ref-cats .chip-dot { width: 7px; height: 7px; }
@@ -472,6 +473,10 @@ body.pt-fullscreen [hidden] { display: none !important; }
   .pt-read { height: 70vh; border-inline: 0; border-block: 1px solid var(--pt-border); }
   .pt-rail { min-height: 0; }
   .pt-rail-body { overflow: visible; }
+}
+/* touch screens: the compact chips and segments reach a comfortable target height */
+@media (pointer: coarse) {
+  .pt-fullscreen .category-chip, .pt-seg-btn, .pt-reason-chip { min-height: 32px; }
 }
 @media (max-width: 700px) {
   #prisma-root { padding-inline: 0; }

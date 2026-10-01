@@ -2280,6 +2280,37 @@ test('Nächstes offen continues after a paper that a save removed from the Offen
     assertEqual(T.getState().index, 0, 'past the end of the list it wraps to the first open paper');
     S.statusFilter = 'alle'; delete S.reviewers.nx; S.reviewer = prevRev;
 });
+test('removing the last Paper pin clears the teilweise it had set, a ja stays', function() {
+    var paper = { id: 'UP1', title: 'unpin' };
+    T.setPapers([paper]);
+    var S = T.getState(), prevRev = S.reviewer;
+    S.reviewer = 'up'; S.reviewers.up = {}; S.index = 0;
+    T.resetWork(paper);
+    T.pinEvidence('Gender', 'gender', 'a gender passage', 'human');
+    assertEqual(T.getWork().cats.Gender, 1, 'a pin on an empty category sets teilweise');
+    T.unpinEvidence('Gender', 0);
+    assert(!T.getWork().cats.Gender, 'without its pin the category is off again');
+    T.getWork().cats.Prompting = 2;
+    T.pinEvidence('Prompting', 'prompt', 'a prompt passage', 'human');
+    T.unpinEvidence('Prompting', 0);
+    assertEqual(T.getWork().cats.Prompting, 2, 'a ja set by the reviewer stays');
+    delete S.reviewers.up; S.reviewer = prevRev;
+});
+test('under Offen the category filter is neither offered nor applied, and a changed draft is marked in the list', function() {
+    var paper = { id: 'OF1', title: 'open one' };
+    T.setPapers([paper, { id: 'OF2', title: 'open two' }]);
+    var S = T.getState(), prevRev = S.reviewer;
+    S.reviewer = 'of'; S.reviewers.of = {}; S.index = 0; S.assigneeFilter = 'alle';
+    T.setCorpusQuery('');
+    S.statusFilter = 'offen'; S.catFilter = ['Gender'];
+    assertNotContains(T.filtersHtml(), 'pt-cat-filter', 'no category chips under Offen');
+    assertEqual(T.visibleRows().length, 2, 'a stale category selection does not empty the open list');
+    var w = T.draftFor(paper); w.cats.Gender = 2; T.setWork(w); T.markDirty();
+    assertContains(T.corpusListHtml(), 'nicht gespeichert', 'the changed draft is marked');
+    S.statusFilter = 'alle'; S.catFilter = [];
+    T.discardDraft && T.discardDraft(paper);
+    delete S.reviewers.of; S.reviewer = prevRev;
+});
 test('a conflict message names the paper by title, not by its identifier', function() {
     T.setPapers([{ id: 'CF1', title: 'A readable paper title' }]);
     var ts = '2026-08-22T12:00:00.000Z';
