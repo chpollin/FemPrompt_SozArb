@@ -24,7 +24,7 @@ For current descriptive coding, use the [completion package and SQ tables](../ge
 
 ## Method chain
 
-The advisory workflow mapped round-one Includes to available distilled knowledge documents, coded the frozen analysis fields, aggregated the structured values, generated candidate syntheses for the three sub-questions of 2026, and ran an adversarial review against the coded records. The headings below keep that numbering and name where its content belongs among the current SQ1 to SQ4 of [[project#Research questions]]. The chain is documented in the following artifacts.
+The advisory workflow mapped round-one Includes to available distilled knowledge documents, coded the frozen analysis fields, aggregated the structured values, generated candidate syntheses for the three sub-questions of 2026, and ran an adversarial review against the coded records. The headings below keep that numbering and name where its content belongs among the current SQ1 to SQ5 of [[project#Research questions]]. The chain is documented in the following artifacts.
 
 | Artifact | Function |
 |---|---|
@@ -49,7 +49,7 @@ Gender and race or ethnicity form the most visible axes in the advisory coding. 
 
 The candidate pattern distinguishes representational harms from allocative and performance harms. Technical prompting studies focus mainly on stereotyping. Social-work literature more often raises proxy discrimination, unequal service outcomes, and governance duties. The final analysis must test this mismatch against the verified Paper sources.
 
-### Earlier SQ3, social-work-specific constraints (now SQ1 and SQ4)
+### Earlier SQ3, social-work-specific constraints (now SQ1 and SQ5)
 
 The advisory coding found little evidence that concrete prompting techniques have been evaluated in genuine social-work practice settings. Social-work sources instead emphasise professional judgement, vulnerable or involuntary clients, structural disadvantage, participatory design, data sovereignty, and accountability for consequential decisions.
 

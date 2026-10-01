@@ -26,12 +26,12 @@ The GitHub repository has been private since 1 October 2026. GitHub Pages stays 
 
 The branch carries the following changes, each documented at its canonical place.
 
-- The substantive question is primary, with SQ1 Use, SQ2 Risks, SQ3 Practices and SQ4 Competences, and the methodological question is the second question of the paper ([[project#Research questions]]).
+- The substantive question is primary, with SQ1 Use, SQ2 Bias forms, SQ3 Handling of bias, SQ4 Conceptual grounding and SQ5 Competences as merged on 1 October 2026, and the methodological question is the second question of the paper ([[project#Research questions]]).
 - The methodological basis of the literature analysis, with mapping and synthesis layers, analysis tiers and validation design ([[analysis-methods]]).
 - Explicit field states and analysis coverage in the public data ([[data#Analysis field states and coverage]]) and repaired projection errors, recorded in the [[journal]] entries of 1 October.
 - Descriptive mapping tools and agent-track process diagnostics ([[methods#Descriptive mapping and process diagnostics]]).
 - The rebuilt public Evidence Companion on the result site ([[specification#Public Evidence Companion]]).
-- An answer draft for SQ1 over grounded Assertions in [sq1-use.md](../research-vault/40_output/literature-report/sq1-use.md). Drafts for SQ2 to SQ4 were cancelled by the operator.
+- An answer draft for SQ1 over grounded Assertions in [sq1-use.md](../research-vault/40_output/literature-report/sq1-use.md). Drafts for the other sub-questions were cancelled by the operator.
 
 [[plan]] owns the remaining work and every open decision, [[verification]] the evidence and authority state, and [[journal]] the detailed history.
 
@@ -39,7 +39,7 @@ The branch carries the following changes, each documented at its canonical place
 
 1. Obtain the open decisions in [[plan#Open decisions]]. Decisions 1 to 3 gate the coding run, and decision 3 also gates bringing the branches together.
 2. Once authorised, push `companion-redesign`, have the laptop push `prepare-expert-verification`, compare both against `main` and merge. Conflicts in knowledge documents resolve towards the current research questions in [[project]] and the decisions recorded in [[plan]].
-3. Relabel the SQ tables to the current sub-questions under [[plan#Analysis tool follow-ups]].
+3. Decide the remapping of the four reviewed Assertions listed in [[research-vault#Assertions]], which still carry the earlier numbering or no field.
 4. Continue the SQ1 answer under step 4 of [[plan#Answering the research questions]], with the AI Agent Review of its Assertions and distillates for the included Works that lack one.
 5. Start the independent acceptance review of the Evidence Companion under [[plan#UI development]].
 6. Source preparation under [[plan#Controlled corpus completion]] does not wait for these decisions.

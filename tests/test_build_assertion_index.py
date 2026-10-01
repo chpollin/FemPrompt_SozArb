@@ -125,7 +125,7 @@ def test_current_work_source_hold_withholds_otherwise_approved_chain(tmp_path, s
     ("grounding", ["[[../local/source#^s1]]"], "invalid grounding"),
     ("grounding", [], "no grounding"),
     ("checked", {"validation": "2026-09-05"}, "requires checked"),
-    ("research-questions", ["SQ5"], "research-questions"),
+    ("research-questions", ["SQ6"], "research-questions"),
     ("research-questions", "SQ1", "research-questions"),
     ("research-questions", ["SQ1", "SQ1"], "research-questions"),
 ])

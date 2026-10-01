@@ -12,7 +12,9 @@ const EC = window.EC;
 // knowledge/analysis-methods.md#answering-the-research-questions.
 // An assertion's `research_questions` decides its assignment; the `topics` lists
 // are the fallback while the assertion index carries no such field.
-const MAIN_QUESTION = 'Wie können Fachkräfte der Sozialen Arbeit verantwortlich mit LLMs arbeiten, und was zeigt die Literatur dazu?';
+const MAIN_QUESTION = 'Wie können Fachkräfte der Sozialen Arbeit verantwortlich mit LLMs arbeiten, und welche Bias-Formen und welchen Umgang damit zeigt die Literatur?';
+// The ids follow the numbering of 1 October 2026 (SQ1 to SQ5 in the knowledge base).
+// A question without fields has no coding yet and says so instead of showing counts.
 const QUESTIONS = [
     {
         id: '1', name: 'Nutzung',
@@ -27,25 +29,34 @@ const QUESTIONS = [
         topics: [],
     },
     {
-        id: '2', name: 'Risiken',
-        text: 'Welche Bias-Achsen und Schadensarten benennt die Literatur, und für welche Gruppen?',
+        id: '2', name: 'Bias-Formen',
+        text: 'Welche Bias-Formen thematisiert die ausgewählte Literatur, mit welchen Schadensarten, für welche Gruppen, und welche Formen fehlen?',
         maps: [{ rows: 'AN_Bias_Axes', cols: 'AN_Harm_Types' }, { rows: 'AN_Bias_Axes', cols: 'AN_Population' }],
         fields: ['AN_Bias_Axes', 'AN_Harm_Types', 'AN_Population'],
         limits: 'Die Definitionen der Bias-Achsen und Schadensarten sind noch nicht geschärft. ' +
-            'Zwei unabhängige Codierungen durch KI-Agenten weichen in beiden Feldern oft voneinander ab.',
+            'Zwei unabhängige Codierungen durch KI-Agenten weichen in beiden Feldern oft voneinander ab. ' +
+            'Welche Formen fehlen, lässt sich erst nach vollständiger Codierung bestimmen.',
         topics: [],
     },
     {
-        id: '3', name: 'Praktiken',
-        text: 'Welche Prompting-Techniken und Schutzmaßnahmen werden vorgeschlagen, demonstriert oder evaluiert, zu welchem Zweck, auf welcher Stufe und mit welchen berichteten Wirkungen und Grenzen?',
+        id: '3', name: 'Umgang mit Bias',
+        text: 'Wie geht die Literatur mit den benannten Bias-Formen um, auf welcher Stufe, mit welchen Techniken und mit welchem Evidenzstatus?',
         maps: [{ rows: 'AN_Prompt_Techniques', cols: 'AN_Prompting_Role' }, { rows: 'AN_Mitigation_Stage', cols: 'AN_Mitigation_Status' }],
         fields: ['AN_Prompt_Techniques', 'AN_Prompting_Role', 'AN_Mitigation_Stage', 'AN_Mitigation_Status'],
         limits: 'Der Status einer Maßnahme ist ein Wert je Werk. Welche Technik oder Stufe evaluiert, demonstriert oder nur vorgeschlagen ist, lässt sich daraus nicht bestimmen.',
         topics: ['Prompting and Bias Mitigation'],
     },
     {
-        id: '4', name: 'Kompetenzen',
-        text: 'Welche Kompetenzen und organisationalen Voraussetzungen nennt die Literatur, und wo greifen allgemeine Prompting-Anleitungen für die Soziale Arbeit zu kurz?',
+        id: '4', name: 'Begriffliche Fundierung',
+        text: 'Definiert die Literatur Gender und Bias, welches Verständnis von Gender liegt ihr zugrunde, und auf welche Theorien stützt sie sich?',
+        maps: [],
+        fields: [],
+        limits: 'Die Frage ist nur aus Volltexten beantwortbar. Die Codierfelder dafür sind für das Codebuch vorgeschlagen und noch nicht beschlossen.',
+        topics: [],
+    },
+    {
+        id: '5', name: 'Kompetenzen',
+        text: 'Welche Kompetenzen und organisationalen Voraussetzungen nennt die Literatur für einen verantwortlichen Einsatz, und wo greifen allgemeine Prompting-Anleitungen für die Soziale Arbeit zu kurz?',
         maps: [{ rows: 'AN_Mitigation_Stage', cols: 'AN_Prompting_Role' }],
         fields: ['AN_Mitigation_Stage', 'AN_Prompting_Role'],
         limits: 'Das externe Rahmenwerk allgemeiner Prompting-Anleitungen ist noch nicht benannt. ' +
@@ -66,6 +77,15 @@ function matrixHref(map, cell) {
 
 function validMaps(item) { return item.maps.filter(function (map) { return model.dim(map.rows) && model.dim(map.cols); }); }
 
+// The coded-share line of a question. A question without coded fields states that
+// instead of a share, so no figure suggests coding that does not exist.
+function summaryHtml(item, prefix) {
+    if (!item.fields.length) {
+        return '<p class="denominator denominator--summary" data-coded="0">' + (prefix ? EC.esc(prefix) + ' · ' : '') + 'Noch nicht codiert</p>';
+    }
+    return EC.summaryLine(model.includes, item.fields, false, prefix, { status: true });
+}
+
 function renderStart() {
     document.getElementById('fragen-title').textContent = MAIN_QUESTION;
     document.getElementById('sq-list').innerHTML = QUESTIONS.map(function (item) {
@@ -73,7 +93,7 @@ function renderStart() {
             return '<a class="sq-matrix-link" href="' + EC.esc(matrixHref(map)) + '">' + EC.esc(mapLabel(map)) + '</a>';
         }).join(' · ');
         return '<li class="sq-item" data-sq="' + item.id + '"><a class="sq-link" href="' + EC.esc(EC.href({ view: 'frage', sq: item.id })) + '">' +
-            EC.esc(item.text) + '</a>' + EC.summaryLine(model.includes, item.fields, false, '', { status: true }) +
+            EC.esc(item.text) + '</a>' + summaryHtml(item, '') +
             (maps ? '<p class="sq-maps">Matrix ' + maps + '</p>' : '') + '</li>';
     }).join('');
 }
@@ -154,6 +174,7 @@ function worksSection(item) {
                 }).join('') + '</dl></li>';
         }).join('') + '</ol>';
     };
+    if (!fields.length) return '<p class="empty-state">Für diese Frage ist noch kein Werk codiert.</p>';
     const main = works.length
         ? '<p class="worklist-count">' + EC.esc(EC.workCount(works.length)) + ' mit mindestens einem Code in diesen Feldern</p>' + list(works, 3)
         : '<p class="empty-state">Kein veröffentlichtes eingeschlossenes Werk trägt einen Code in diesen Feldern.</p>';
@@ -184,13 +205,14 @@ function renderAnswer(params) {
     }).join('');
     root.innerHTML = '<article class="answer" data-sq="' + item.id + '">' +
         '<h1>' + EC.esc(item.text) + '</h1>' +
-        EC.summaryLine(model.includes, item.fields, false, 'Was die bisher geprüfte Literatur zeigt', { status: true }) +
+        summaryHtml(item, 'Was die bisher geprüfte Literatur zeigt') +
         '<section class="answer-part" id="frage-befunde" aria-labelledby="frage-befunde-title"><h2 id="frage-befunde-title">Befunde</h2>' +
         (findings.length ? findings.map(function (assertion) { return EC.renderAssertion(assertion, { level: 3 }); }).join('')
             : '<p class="empty-state">Zu dieser Frage liegt noch keine KI-quellengeprüfte oder fachlich verifizierte Aussage vor.</p>') +
         '</section>' +
-        '<section class="answer-part" id="frage-matrix" aria-labelledby="frage-matrix-title"><h2 id="frage-matrix-title">Matrix</h2>' + maps +
-        '<p class="mark-legend">' + EC.markLegendHtml() + '</p></section>' +
+        '<section class="answer-part" id="frage-matrix" aria-labelledby="frage-matrix-title"><h2 id="frage-matrix-title">Matrix</h2>' +
+        (maps ? maps + '<p class="mark-legend">' + EC.markLegendHtml() + '</p>'
+            : '<p class="empty-state">Ohne codierte Felder gibt es zu dieser Frage noch keine Matrix.</p>') + '</section>' +
         '<section class="answer-part" id="frage-offen" aria-labelledby="frage-offen-title"><h2 id="frage-offen-title">Offen</h2>' + openSection(item) + '</section>' +
         '<section class="answer-part" id="frage-werke" aria-labelledby="frage-werke-title"><h2 id="frage-werke-title">Werke</h2>' + worksSection(item) + '</section>' +
         '</article>';

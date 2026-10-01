@@ -156,7 +156,7 @@ await check('one router: only research-app listens to hashchange', async () => {
 
 await check('start cards open the answer pages', async () => {
   const hrefs = [...doc.querySelectorAll('#view-start .start-card')].map((a) => a.getAttribute('href'));
-  if (hrefs.join(' ') !== '#view=frage&sq=1 #view=frage&sq=2 #view=frage&sq=3 #view=frage&sq=4') throw new Error(hrefs.join(' '));
+  if (hrefs.join(' ') !== [1, 2, 3, 4, 5].map((n) => '#view=frage&sq=' + n).join(' ')) throw new Error(hrefs.join(' '));
 });
 
 await check('start view states coverage and each question card its findings', async () => {
@@ -167,8 +167,11 @@ await check('start view states coverage and each question card its findings', as
   if (!doc.getElementById('start-status').textContent.startsWith(expected)) throw new Error(doc.getElementById('start-status').textContent);
   if (doc.querySelector('#view-start .start-btn, #view-start .start-actions')) throw new Error('duplicate nav buttons remain');
   const lines = [...doc.querySelectorAll('#view-start .start-card-status')].map((n) => n.textContent);
-  if (lines.length !== 4 || lines.some((t) => !/^(\d+ KI-geprüfte?r? Befunde?|noch kein geprüfter Befund)/.test(t))) throw new Error(lines.join(' | '));
+  // SQ4 Conceptual grounding has no coded field yet and says so until a finding is assigned.
+  if (lines.length !== 5 || lines.some((t) => !/^(\d+ KI-geprüfte?r? Befunde?|noch kein geprüfter Befund|noch nicht codiert$)/.test(t))) throw new Error(lines.join(' | '));
   const assertions = JSON.parse(readFileSync(join(root, dataFiles['data/assertion_index.json']), 'utf8')).assertions;
+  const forSq4 = assertions.filter((a) => (a.research_questions || []).includes('SQ4')).length;
+  if (!forSq4 && lines[3] !== 'noch nicht codiert') throw new Error('SQ4 line ' + lines[3]);
   const forSq1 = assertions.filter((a) => (a.research_questions || []).includes('SQ1')).length;
   if (forSq1 && !lines[0].startsWith(forSq1 + ' ')) throw new Error('SQ1 count ' + lines[0]);
 });

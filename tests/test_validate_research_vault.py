@@ -325,14 +325,14 @@ def test_assertion_research_questions_are_optional_and_closed(tmp_path: Path) ->
     assertion = vault / "30_assertions" / "result.md"
     original = assertion.read_text(encoding="utf-8")
     errors = []
-    for value in ("[SQ2, SQ3]", "[SQ5]", "SQ1", "[]"):
+    for value in ("[SQ2, SQ3]", "[SQ4, SQ5]", "[SQ6]", "SQ1", "[]"):
         assertion.write_text(
             original.replace("contested-with: []", f"contested-with: []\nresearch-questions: {value}"),
             encoding="utf-8",
         )
         errors.append(any("research-questions" in e for e in validate_vault(vault).errors))
 
-    assert errors == [False, True, True, True]
+    assert errors == [False, False, True, True, True]
 
 
 def test_status_cannot_exceed_the_supporting_layer(tmp_path: Path) -> None:

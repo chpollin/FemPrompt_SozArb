@@ -304,14 +304,17 @@ def test_accepted_correction_resolves_review_without_mutating_history(tmp_path):
 
 
 def test_sub_question_grouping_follows_the_current_numbering():
-    """The tables follow `serves` in the codebook; SQ1 and SQ4 read scoped values only."""
+    """The tables follow `serves` in the codebook; SQ1 and SQ5 read scoped values only."""
     serves = {}
     for field in schema()["analysis_fields"]:
         values = field.get("serves", [])
         for question in [values] if isinstance(values, str) else values:
             if question.startswith("SQ"):
                 serves.setdefault(question, set()).add(field["name"])
-    assert {q: set(names) for q, names in completion.FIELDS.items()} == serves
+    assert {q: set(names) for q, names in completion.FIELDS.items() if names} == serves
+    # SQ4 Conceptual grounding has no coded field until codebook amendment v1.4.
+    assert completion.FIELDS["SQ4"] == ()
+    assert list(completion.FIELDS) == ["SQ1", "SQ2", "SQ3", "SQ4", "SQ5"]
     assert set(completion.QUESTION_TOPICS) == set(completion.FIELDS)
 
     record = coded(
@@ -327,24 +330,25 @@ def test_sub_question_grouping_follows_the_current_numbering():
         for row in tables
         if row["field"] == "AN_Mitigation_Stage"
     }
-    assert stage[("SQ3", "Prompt_Practice")] == stage[("SQ4", "Organisational_Process")] == 1
-    assert ("SQ4", "Prompt_Practice") not in stage
+    assert stage[("SQ3", "Prompt_Practice")] == stage[("SQ5", "Organisational_Process")] == 1
+    assert ("SQ5", "Prompt_Practice") not in stage
     assert {row["question"] for row in tables if row["field"] == "AN_Population"} == {"SQ1", "SQ2"}
     role = {
         (row["question"], row["value"]): row["work_count"]
         for row in tables
         if row["field"] == "AN_Prompting_Role"
     }
-    assert role[("SQ1", "Recommended_Practice")] == role[("SQ4", "Learning_Content")] == 1
+    assert role[("SQ1", "Recommended_Practice")] == role[("SQ5", "Learning_Content")] == 1
     assert ("SQ1", "Learning_Content") not in role
-    assert ("SQ4", "Recommended_Practice") not in role
+    assert ("SQ5", "Recommended_Practice") not in role
+    assert not any(row["question"] == "SQ4" for row in tables)
     labels = {
         m["matrix"]: m["question"] for m in completion._associations(rows, schema())
     }
     assert labels["AN_Bias_Axes x AN_Harm_Types"] == "SQ2"
     assert labels["AN_Prompt_Techniques x AN_Population"] == "SQ1, SQ2, SQ3"
-    assert labels["AN_Population x AN_Prompting_Role"] == "SQ1, SQ2, SQ3, SQ4"
-    assert labels["AN_Mitigation_Stage x AN_Mitigation_Status"] == "SQ3, SQ4"
+    assert labels["AN_Population x AN_Prompting_Role"] == "SQ1, SQ2, SQ3, SQ5"
+    assert labels["AN_Mitigation_Stage x AN_Mitigation_Status"] == "SQ3, SQ5"
 
 
 def test_stale_source_review_keeps_coding_out_like_the_result_site():

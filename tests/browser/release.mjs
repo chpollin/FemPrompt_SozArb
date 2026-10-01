@@ -112,7 +112,9 @@ try {
   await page.goto(base + '/index.html', { waitUntil: 'networkidle' });
   await visible('fragen');
   check('start page leads with the main question', (await page.locator('#fragen-title').innerText()).trim().endsWith('?'));
-  check('start page shows the research sub-questions', await page.locator('.sq-link').count() >= 3);
+  check('start page shows the five research sub-questions', await page.locator('.sq-link').count() === 5);
+  check('the conceptual-grounding question states that it is not yet coded',
+    (await page.locator('.sq-item[data-sq="4"] .denominator--summary').innerText()).trim() === 'Noch nicht codiert');
   check('start page carries no standing inventory counter', await page.locator('#release-counts').count() === 0);
   check('start page never claims an answered question', !/beantwortet/i.test(await page.locator('#view-fragen').innerText()));
   const verifiedWorks = landscape.records.filter(r => r.decision === 'Include' && (r.verification || r.publication_approval)).length;
@@ -149,6 +151,12 @@ try {
     check('assertion evidence names the screening state of its work', await answer.locator('.evidence-item').count() ===
       await answer.locator('.evidence-item .screening-state').count());
   }
+  await page.goto(base + '/index.html#view=frage&sq=4', { waitUntil: 'networkidle' });
+  await visible('frage');
+  check('the conceptual-grounding page shows no count and no matrix before coding',
+    (await answer.locator('h1 + .denominator--summary').innerText()).endsWith('Noch nicht codiert') &&
+    await answer.locator('.matrix-table').count() === 0 &&
+    await answer.locator('#frage-befunde, #frage-matrix, #frage-offen, #frage-werke').count() === 4);
   await page.goto(base + '/index.html#view=frage&sq=1', { waitUntil: 'networkidle' });
   await visible('frage');
   // Labels come from the projected vocabulary, so the check follows any relabelling.
@@ -304,7 +312,7 @@ try {
   await page.goto(base + '/index.html#view=matrix&rows=AN_Bias_Axes&cols=AN_Harm_Types', { waitUntil: 'networkidle' });
   await page.screenshot({ path: 'tests/browser/out/release/desktop.png', fullPage: true });
   await page.setViewportSize({ width: 390, height: 844 });
-  for (const hash of ['#view=fragen', '#view=matrix&rows=AN_Bias_Axes&cols=AN_Harm_Types', '#view=frage&sq=2', '#view=netz', '#view=korpus']) {
+  for (const hash of ['#view=fragen', '#view=matrix&rows=AN_Bias_Axes&cols=AN_Harm_Types', '#view=frage&sq=2', '#view=frage&sq=4', '#view=frage&sq=5', '#view=netz', '#view=korpus']) {
     await page.goto(base + '/index.html' + hash, { waitUntil: 'networkidle' });
     check('mobile has no horizontal document overflow: ' + hash, await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
   }
