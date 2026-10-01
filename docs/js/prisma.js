@@ -1353,7 +1353,7 @@ function sanitizeAnalysis(raw, textSource) {
     // The codebook version of the annotation survives every sanitize, so a field
     // introduced later reads as not collected rather than as missing. A record
     // without it counts as v1.3.
-    if (/^[0-9]+[.][0-9]+$/.test(String(raw.codebook_version || ''))) out.codebook_version = String(raw.codebook_version);
+    if (/^[0-9]+([.][0-9]+){1,2}$/.test(String(raw.codebook_version || ''))) out.codebook_version = String(raw.codebook_version);
     return out;
 }
 

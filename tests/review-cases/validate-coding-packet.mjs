@@ -176,7 +176,7 @@ export function validateCodingPacket(packet, run, reviewerId) {
   const recordsVersion = PACKET_SCHEMAS.get(packet?.schema) === true;
   const codebookVersion = recordsVersion ? packet?.codebook_version : BASELINE_CODEBOOK;
   if (recordsVersion) {
-    if (!/^[0-9]+[.][0-9]+$/.test(String(packet?.codebook_version || ''))) errors.push('codebook_version must be recorded as major.minor');
+    if (!/^[0-9]+([.][0-9]+){1,2}$/.test(String(packet?.codebook_version || ''))) errors.push('codebook_version must be recorded as major.minor or major.minor.patch');
     else if (packet.codebook_version !== run.codebook?.version) errors.push('codebook_version differs from the run manifest');
   } else if (packet && 'codebook_version' in packet) {
     errors.push('packet 0.1 carries no codebook_version');

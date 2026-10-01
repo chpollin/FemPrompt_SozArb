@@ -113,7 +113,7 @@ Agreement between the two AI-agent tracks is a workflow diagnostic. It provides 
 
 ## Analysis coding
 
-Every Include record captures the fields defined in `assessment/categories.yaml` version 1.4. The analysis fields are coded only by AI agent tracks, and human reviewers screen in PRISM without AI pre-assessment. The field rules (`rules`) and anchor passages (`anchors`) in the YAML are binding for the tracks. [[codebook-v1.4-proposal]] holds the reasons and the corpus patterns behind them.
+Every Include record captures the fields defined in `assessment/categories.yaml` version 1.4.1, whose clarifications over 1.4 are provisional and await the operator's acceptance ([[#Amendment record]]). The analysis fields are coded only by AI agent tracks, and human reviewers screen in PRISM without AI pre-assessment. The field rules (`rules`) and anchor passages (`anchors`) in the YAML are binding for the tracks. [[codebook-v1.4-proposal]] holds the reasons and the corpus patterns behind them.
 
 | Field | Sub-question | Coding rule |
 |---|---|---|
@@ -121,13 +121,13 @@ Every Include record captures the fields defined in `assessment/categories.yaml`
 | `AN_Population` | SQ1, SQ2 | Addressed population or setting, with professional education applied narrowly |
 | `AN_Prompting_Role` | SQ1, SQ3, SQ5 | Role of prompting in the paper, including recommended practice, research instrument, object of critique, or learning content |
 | `AN_Bias_Axes` | SQ2 | An axis the work analyses, measures, compares or uses as its own worked example. Enumerations, sample demographics, related work and outlook do not count, and `Intersectional` needs a passage whose outcome depends on the combination |
-| `AN_Harm_Types` | SQ2 | A mechanism the work demonstrates, measures or argues for its own object, one passage per value. Discrimination requires an allocation or a decision about persons, and name-based audits count as indirect discrimination. Required when the coding basis is full text |
+| `AN_Harm_Types` | SQ2 | A mechanism the work's own argument or result establishes for its own object, one passage per value, never a harm only cited from other work. Discrimination requires an allocation or a decision about persons, and name-based audits count as indirect discrimination. A difference in tone or style of output is not by itself `Disparate_Performance`. Required when the coding basis is full text |
 | `AN_Prompt_Techniques` | SQ3 | Named or recognisably described technique. `None` remains valid when prompting is present without a codable technique |
 | `AN_Mitigation_Stage` | SQ3, SQ5 | Stage at which the intervention operates |
 | `AN_Mitigation_Status` | SQ3 | Proposed, demonstrated, evaluated, or the applicable controlled status, one value per Work |
 | `AN_Gender_Definition` | SQ4 | Whether the work determines gender explicitly, only implicitly, not at all, or does not treat it. `Explicit` carries its located passage |
 | `AN_Bias_Definition` | SQ4 | The same four values for bias. A technical fairness criterion counts as a determination |
-| `AN_Gender_Understanding` | SQ4 | Understanding of gender underlying the work's own analysis. `Binary_Categorical` excludes `Non_Binary_Inclusive`, `Unclear` and `Not_Applicable` stand alone and pair with `Absent` and `Not_Applicable` of `AN_Gender_Definition` |
+| `AN_Gender_Understanding` | SQ4 | Understanding of gender underlying the work's own analysis. `Binary_Categorical` excludes `Non_Binary_Inclusive`, `Unclear` and `Not_Applicable` stand alone and pair with `Absent` and `Not_Applicable` of `AN_Gender_Definition`. `Social_Construct` needs an explicit statement in the work |
 | `AN_Theory_Reference` | SQ4 | `Yes` when a named theory frames the treatment of gender or bias. Each theory is recorded as a located theory reference with name, passage and location |
 | `Studientyp` | | Controlled study type reused from the project schema |
 | `AN_Coding_Basis` | | Paper source used for the coding |
@@ -237,5 +237,6 @@ In the pooled runs the two tracks agree on the decisions and differ most often o
 | 2026-10-01 | Research questions | Made the substantive question primary and reformulated the sub-questions as SQ1 to SQ4 ([[project#Research questions]]). The coding vocabulary and the eligibility rule remain unchanged. A codebook amendment v1.4 is proposed and not adopted. |
 | 2026-10-01 | Research questions | Merged grant questions, team-meeting grid and reformulation into SQ1 to SQ5. SQ4 Competences became SQ5, SQ4 Conceptual grounding is new and has no field under version 1.3. The `serves` entries follow the new numbering, and the vocabulary is unchanged. |
 | 2026-10-01 | Codebook 1.4 and harness runs | Adopted codebook 1.4 with the SQ4 fields, the pilot field `AN_Task`, sharpened rules for bias axes and harm types and the recorded codebook version per annotation, and deferred `AN_Stage_Status`. Analysis fields are coded by AI agent tracks only. The run became harness-agnostic under run schema 1.4 with per-track execution environments. Track agreement and a human spot check replace the human pilot. Eligibility and decision rule unchanged. |
+| 2026-10-01 | Codebook 1.4.1, provisional | Clarified three rules after the pilot run of 1 October 2026, in which `AN_Harm_Types` showed the lowest track agreement. A harm type is coded only when the work's own argument or result establishes it, not when the work cites it from other work. A difference in tone or style of model output is not by itself `Disparate_Performance`. `Social_Construct` in `AN_Gender_Understanding` requires an explicit statement in the work. Values, fields, pairing rules, eligibility and decision rule are unchanged, and annotations record 1.4.1 as their codebook version. The pilot run keeps its record under 1.4. The amendment was applied provisionally and awaits the operator's acceptance ([[plan#Decisions taken]]) |
 
 Detailed execution evidence remains in run manifests, the prompt changelog, `corpus/deep-research/round2/LAUFPROTOKOLL.md`, [[journal]], and ADR-026 through ADR-037 in [[specification]].

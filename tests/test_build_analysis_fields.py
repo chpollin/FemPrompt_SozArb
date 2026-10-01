@@ -69,7 +69,7 @@ def test_canonical_vocabulary_is_fully_labelled() -> None:
     payload = analysis_fields.build_payload(
         (ROOT / "assessment/categories.yaml").read_text(encoding="utf-8")
     )
-    assert payload["version"] == "1.4"
+    assert payload["version"] == "1.4.1"
     introduced = {f["name"]: f.get("introduced_in") for f in payload["fields"]}
     assert introduced["AN_Gender_Definition"] == introduced["AN_Task"] == "1.4"
     assert introduced["AN_Bias_Axes"] is None

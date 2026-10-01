@@ -1,5 +1,5 @@
 # Assessment Categories
-# Version: 1.4 (analysis fields amended for the five sub-questions SQ1 to SQ5; eligibility content unchanged from v1.2)
+# Version: 1.4.1 (analysis fields amended for the five sub-questions SQ1 to SQ5, rule clarifications of the 1.4 pilot; eligibility content unchanged from v1.2)
 # Synchronized with Human-Assessment Google Sheets schema
 # The analysis_presentation block at the end holds German display labels and short
 # definitions. It is presentation only and changes no coding value, key or rule.
@@ -16,6 +16,7 @@ metadata:
     levels: [nein, teilweise, ja]   # 0 / 1 / 2
     derivation: "both dimensions ja => Include; both at least teilweise => Unclear; any dimension entirely nein => Exclude"
   changelog:
+    - "v1.4.1 (2026-10-01, provisional, operator acceptance pending): three rule clarifications from the 1.4 pilot run, where AN_Harm_Types had the lowest track agreement. A harm type needs the work's own argument or result, not a harm cited from other work. A difference in tone or style of model output is not by itself Disparate_Performance. Social_Construct in AN_Gender_Understanding needs an explicit statement in the work. No value, field or eligibility rule changed."
     - "v1.4 (2026-10-01): operator adoption of the amended codebook (knowledge/codebook-v1.4-proposal.md, status adopted). New SQ4 fields AN_Gender_Definition, AN_Bias_Definition, AN_Gender_Understanding and AN_Theory_Reference, new pilot field AN_Task for SQ1, coding rules and anchors for AN_Bias_Axes and AN_Harm_Types, derived field state not_collected for annotations coded under an earlier codebook version. Analysis fields are coded by AI agent tracks only. AN_Stage_Status is deferred until a validator exists. Ten eligibility categories, decision rule and exclusion reasons unchanged."
     - "2026-10-01: exclusion reason Consolidated_expert_exclusion added so PRISM can confirm a consolidated expert Exclude without inventing a reason (ADR-042); German display labels for the exclusion reasons; categories, decision rule and analysis vocabulary unchanged."
     - "v1.3 (2026-07-17): analysis_fields block frozen after the pilot and operator study-goal clarification (update-protocol B.1); Studientyp becomes required for Include; eligibility content unchanged from v1.2."
@@ -209,7 +210,7 @@ study_types:
   - Literaturreview
   - Unclear
 
-# Analysis fields (TP4), frozen 2026-07-17 and amended to v1.4 on 2026-10-01
+# Analysis fields (TP4), frozen 2026-07-17, amended to v1.4 and clarified as v1.4.1 on 2026-10-01
 # (knowledge/codebook-v1.4-proposal.md). Descriptive coding fields for included papers,
 # NOT eligibility criteria; eligibility content above is unchanged (v1.2). Rules in
 # knowledge/update-protocol.md (Analysis coding). Coded only for Decision = Include and
@@ -250,10 +251,10 @@ analysis_fields:
     serves: SQ2
     values: [Derogatory_Language, Disparate_Performance, Erasure, Exclusionary_Norms, Misrepresentation, Stereotyping, Toxicity, Direct_Discrimination, Indirect_Discrimination, None]
     rules:
-      - "A harm type is coded when the work demonstrates, measures or argues the mechanism for its own object, and every assigned value has its own passage. A harm named only in background, in a definitions table or in a related-work passage is left uncoded. A review or taxonomy codes the harm types that structure its own synthesis as a section, table row or coded category."
+      - "A harm type is coded when the work demonstrates, measures or argues the mechanism for its own object, and every assigned value has its own passage. A harm named only in background, in a definitions table or in a related-work passage is left uncoded, and so is a harm the work only cites from other work, including a list of cited cases, when its own argument or result does not establish it. A review or taxonomy codes the harm types that structure its own synthesis as a section, table row or coded category."
       - "Allocational harms are separated from representational harms first (Gallegos et al. 2024, Table 1). Direct_Discrimination and Indirect_Discrimination require an allocation or a decision about persons or groups, such as hiring, benefits, screening-in or a risk score. Output that depicts or describes a group is a representational harm."
       - "Direct_Discrimination applies when the decision changes with the group attribute itself, stated in the input or the rule. Indirect_Discrimination applies when an apparently neutral criterion or proxy such as a name, postcode, prior service contact or digital access produces the disadvantage. An audit that varies names correlated with race or gender is indirect discrimination. When the work classifies the discrimination itself, its classification is coded."
-      - "Disparate_Performance covers differences in system quality between groups or language varieties, such as accuracy, error rate or recognition. A difference in decision outcomes is discrimination, a difference in quality is Disparate_Performance, and a work that shows both codes both."
+      - "Disparate_Performance covers differences in system quality between groups or language varieties, such as accuracy, error rate or recognition. A difference in decision outcomes is discrimination, a difference in quality is Disparate_Performance, and a work that shows both codes both. A difference in tone or style of model output between groups is not by itself Disparate_Performance."
       - "Exclusionary_Norms applies when the norm of a dominant group acts as default and other groups are left out or devalued, such as a male default, cis-centric answers or the assumption of digitally skilled clients. Stereotyping ascribes attributes to a group, Erasure leaves a group or its experience out, Misrepresentation generalises an unrepresentative depiction to a group."
     anchors:
       - "MS3CNU3S (taxonomy): Table 1 divides representational harms from allocational harms, the latter being the 'Disparate distribution of resources or opportunities between social groups'."
@@ -311,7 +312,7 @@ analysis_fields:
     binding_when: AN_Coding_Basis = Fulltext
     serves: SQ4
     values: [Binary_Categorical, Social_Construct, Non_Binary_Inclusive, Intersectional, Unclear, Not_Applicable]
-    note: "The understanding of gender that underlies the work's own analysis. A conceptual statement that the analysis does not follow goes to AN_Notes and the value follows the analysis. Binary_Categorical and Non_Binary_Inclusive exclude each other. Unclear and Not_Applicable stand alone. Social_Construct and Intersectional combine with each other and with Non_Binary_Inclusive. Intersectional follows the rule of Intersectional in AN_Bias_Axes. Non_Binary_Inclusive needs genders beyond the binary as categories of the analysis, a limitation sentence does not suffice."
+    note: "The understanding of gender that underlies the work's own analysis. A conceptual statement that the analysis does not follow goes to AN_Notes and the value follows the analysis. Binary_Categorical and Non_Binary_Inclusive exclude each other. Unclear and Not_Applicable stand alone. Social_Construct and Intersectional combine with each other and with Non_Binary_Inclusive. Intersectional follows the rule of Intersectional in AN_Bias_Axes. Non_Binary_Inclusive needs genders beyond the binary as categories of the analysis, a limitation sentence does not suffice. Social_Construct needs an explicit statement in the work that gender is socially produced, a relation or a power structure."
     anchors:
       - "2EBHMYU4 (Social_Construct and Intersectional): 'the traditional understanding of gender as binary (male/female) is being challenged today' with intersectionality as frame."
       - "3XMBE43Z (Non_Binary_Inclusive): 'we included variations that referenced non-binary individuals'."
@@ -450,7 +451,7 @@ analysis_presentation:
         definition: Beleidigungen, Schimpfwörter oder andere Ausdrücke, die eine soziale Gruppe herabsetzen.
       Disparate_Performance:
         label: Ungleiche Leistung
-        definition: Die Qualität des Systems, etwa Genauigkeit, Fehlerrate oder Erkennung, unterscheidet sich zwischen sozialen Gruppen oder Sprachvarietäten.
+        definition: Die Qualität des Systems, etwa Genauigkeit, Fehlerrate oder Erkennung, unterscheidet sich zwischen sozialen Gruppen oder Sprachvarietäten. Ein Unterschied in Ton oder Stil der Ausgabe ist für sich keine ungleiche Leistung.
       Erasure:
         label: Unsichtbarmachung
         definition: Sprache und Erfahrungen einer sozialen Gruppe werden ausgelassen oder unsichtbar gemacht.
@@ -613,7 +614,7 @@ analysis_presentation:
         definition: Geschlecht erscheint als zwei feste Kategorien, etwa Frau und Mann, ohne dass das Werk diese Setzung prüft.
       Social_Construct:
         label: Soziale Konstruktion
-        definition: Geschlecht gilt als sozial hergestellt, als Verhältnis oder als Machtstruktur.
+        definition: Das Werk hält ausdrücklich fest, dass Geschlecht sozial hergestellt, ein Verhältnis oder eine Machtstruktur ist.
       Non_Binary_Inclusive:
         label: Nicht-binär einschließend
         definition: Die Analyse führt Geschlechter jenseits der Binarität, etwa nicht-binäre oder trans Personen, als eigene Kategorien.

@@ -189,7 +189,7 @@ export function validateManifest(run, { path = '<memory>', allowLegacy = true } 
     if ('model' in run) errors.push('run schema 1.4 records models per track, not run-wide');
     const codebook = run.codebook || {};
     if (codebook.path !== 'assessment/categories.yaml') errors.push('codebook.path must be assessment/categories.yaml');
-    if (!/^[0-9]+[.][0-9]+$/.test(String(codebook.version || ''))) errors.push('codebook.version must be major.minor');
+    if (!/^[0-9]+([.][0-9]+){1,2}$/.test(String(codebook.version || ''))) errors.push('codebook.version must be major.minor or major.minor.patch');
     requireHash(codebook.sha256, 'codebook.sha256', errors);
   } else {
     const model = run.model || {};
