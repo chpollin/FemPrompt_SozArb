@@ -1,0 +1,3699 @@
+diff --git a/corpus/metadata_corrections.json b/corpus/metadata_corrections.json
+index c620d6a..504fd2c 100644
+--- a/corpus/metadata_corrections.json
++++ b/corpus/metadata_corrections.json
+@@ -946,6 +946,2246 @@
+           "quote": "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges"
+         }
+       ]
++    },
++    {
++      "record_id": "64DQYVVB",
++      "base_sha256": "sha256:efb8898b86516e4ec04df595f4cc08e09907656456252818cb114727591a7cc1",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record URL is arxiv.org/html/2506.03923v1, which is this paper; title and year match. The authors Liu, Sferrazza, Lupu are not associated with this arXiv ID in arXiv or DataCite and no work by them with this title was found in OpenAlex (64DQYVVB-openalex-search.json). File name stem \"Shafie\" is itself a truncation of Shafiei.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "H.",
++              "lastName": "Liu"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "C.",
++              "lastName": "Sferrazza"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Y.",
++              "lastName": "Lupu"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Mohammadamin",
++              "lastName": "Shafiei"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Hamidreza",
++              "lastName": "Saffari"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Nafise Sadat",
++              "lastName": "Moosavi"
++            }
++          ],
++          "reason": "data.attributes.creators in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "",
++          "after": "10.48550/arXiv.2506.03923",
++          "reason": "data.attributes.doi in the saved evidence states the corrected value."
++        },
++        {
++          "field": "itemType",
++          "before": "report",
++          "after": "preprint",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        },
++        {
++          "field": "repository",
++          "before": null,
++          "after": "arXiv",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/64DQYVVB-datacite.json",
++          "sha256": "sha256:822105d3f0c4c12ea85af005485d7891847910900d0f468ea3e4a8e1cca7bd5c",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2506.03923",
++          "locator": "data.attributes.creators",
++          "quote": "[{\"name\": \"Shafiei, Mohammadamin\", \"nameType\": \"Personal\", \"givenName\": \"Mohammadamin\", \"familyName\": \"Shafiei\", \"affiliation\": [], \"nameIdentifiers\": []}, {\"name\": \"Saffari, Hamidreza\", \"nameType\": \"Personal\", \"givenName\": \"Hamidreza\", \"familyName\": \"Saffari\", \"affiliation\": [], \"nameIdentifiers\": "
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/64DQYVVB-datacite.json",
++          "sha256": "sha256:822105d3f0c4c12ea85af005485d7891847910900d0f468ea3e4a8e1cca7bd5c",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2506.03923",
++          "locator": "data.attributes.doi",
++          "quote": "10.48550/arxiv.2506.03923"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/64DQYVVB-datacite.json",
++          "sha256": "sha256:822105d3f0c4c12ea85af005485d7891847910900d0f468ea3e4a8e1cca7bd5c",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2506.03923",
++          "locator": "data.attributes.publisher",
++          "quote": "arXiv"
++        }
++      ]
++    },
++    {
++      "record_id": "BR2LG8LD",
++      "base_sha256": "sha256:742035a691d3b94e3de0c6b1b2fea80e5eb88b489e81d1467f8e739fa6bade83",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record DOI resolves to this exact article (single author McAra-Hunter, CC BY 4.0). Kumar and Gartner do not appear in the DOI metadata. Title and DOI in the record are right; only creators are corrupt.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "A.",
++              "lastName": "Kumar"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "M.",
++              "lastName": "Gartner"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Dawn",
++              "lastName": "McAra-Hunter"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "AI and Ethics",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/BR2LG8LD-crossref.json",
++          "sha256": "sha256:548082effaab7c7d056a6c8ba44550eeca2ff096494648c3af673a6052e085f1",
++          "source_url": "https://api.crossref.org/works/10.1007/s43681-024-00423-8",
++          "locator": "message.author",
++          "quote": "[{\"ORCID\": \"https://orcid.org/0009-0005-3601-6981\", \"authenticated-orcid\": false, \"given\": \"Dawn\", \"family\": \"McAra-Hunter\", \"sequence\": \"first\", \"affiliation\": [], \"role\": [{\"vocabulary\": \"crossref\", \"role\": \"author\"}]}]"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/BR2LG8LD-crossref.json",
++          "sha256": "sha256:548082effaab7c7d056a6c8ba44550eeca2ff096494648c3af673a6052e085f1",
++          "source_url": "https://api.crossref.org/works/10.1007/s43681-024-00423-8",
++          "locator": "message.container-title[0]",
++          "quote": "AI and Ethics"
++        }
++      ]
++    },
++    {
++      "record_id": "CLKAD87H",
++      "base_sha256": "sha256:49d61b0a1341091953e90fbda85c32e90c7f2358982ee556b9aea74e15b7cc0e",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record DOI and title match the file and Crossref; creators James, Meeussen, Matthes, Siemon are not on this DOI. For itemType conferencePaper the Zotero field is proceedingsTitle (base field publicationTitle). Open access CC BY-NC 4.0 per Crossref license.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "P.",
++              "lastName": "James"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "M.",
++              "lastName": "Meeussen"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "I.",
++              "lastName": "Matthes"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "D.",
++              "lastName": "Siemon"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Vagner Figueredo de",
++              "lastName": "Santana"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Sara E",
++              "lastName": "Berger"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Heloisa",
++              "lastName": "Candello"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Tiago",
++              "lastName": "Machado"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Cassia Sampaio",
++              "lastName": "Sanctos"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Tianyu",
++              "lastName": "Su"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Lemara",
++              "lastName": "Williams"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/CLKAD87H-crossref.json",
++          "sha256": "sha256:849f4c828d8e2fa21c1babc7933102f4c2d1da52bdf5777931228458cc67d8cb",
++          "source_url": "https://api.crossref.org/works/10.1145/3706598.3713365",
++          "locator": "message.author",
++          "quote": "[{\"ORCID\": \"https://orcid.org/0000-0003-0325-1596\", \"authenticated-orcid\": false, \"given\": \"Vagner Figueredo de\", \"family\": \"Santana\", \"sequence\": \"first\", \"affiliation\": [{\"name\": \"Yorktown Heights, ..."
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/CLKAD87H-crossref.json",
++          "sha256": "sha256:849f4c828d8e2fa21c1babc7933102f4c2d1da52bdf5777931228458cc67d8cb",
++          "source_url": "https://api.crossref.org/works/10.1145/3706598.3713365",
++          "locator": "message.container-title[0]",
++          "quote": "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems"
++        }
++      ]
++    },
++    {
++      "record_id": "JGZDWMN3",
++      "base_sha256": "sha256:2b1ffd1ea9ed248587f3e6c955fa0132c264259b04b2e627785cd221ab70cbce",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record URL arxiv.org/html/2501.10484v2 is this paper. No author Wu on it. Author order conflict: the paper byline prints Yan, Zhu, Xu (corresponding), while arXiv/DataCite list Xu, Yan, Zhu; the correction follows the printed byline, names confirmed by DataCite. arXiv comment says accepted at ICWSM 2026; no published version found in OpenAlex yet (JGZDWMN3-openalex-published.json).",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "Z.",
++              "lastName": "Wu"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Yile",
++              "lastName": "Yan"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Yuqi",
++              "lastName": "Zhu"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Wentao",
++              "lastName": "Xu"
++            }
++          ],
++          "reason": "data.attributes.creators in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "",
++          "after": "10.48550/arXiv.2501.10484",
++          "reason": "data.attributes.doi in the saved evidence states the corrected value."
++        },
++        {
++          "field": "itemType",
++          "before": "report",
++          "after": "preprint",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        },
++        {
++          "field": "repository",
++          "before": null,
++          "after": "arXiv",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JGZDWMN3-datacite.json",
++          "sha256": "sha256:a99c9f99af08c9f745e2eeabe2b04391f265939257da1b6f9c2f46b427ced691",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2501.10484",
++          "locator": "data.attributes.creators",
++          "quote": "[{\"name\": \"Xu, Wentao\", \"nameType\": \"Personal\", \"givenName\": \"Wentao\", \"familyName\": \"Xu\", \"affiliation\": [], \"nameIdentifiers\": []}, {\"name\": \"Yan, Yile\", \"nameType\": \"Personal\", \"givenName\": \"Yile\", \"familyName\": \"Yan\", \"affiliation\": [], \"nameIdentifiers\": []}, {\"name\": \"Zhu, Yuqi\", \"nameType\": \""
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JGZDWMN3-datacite.json",
++          "sha256": "sha256:a99c9f99af08c9f745e2eeabe2b04391f265939257da1b6f9c2f46b427ced691",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2501.10484",
++          "locator": "data.attributes.doi",
++          "quote": "10.48550/arxiv.2501.10484"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JGZDWMN3-datacite.json",
++          "sha256": "sha256:a99c9f99af08c9f745e2eeabe2b04391f265939257da1b6f9c2f46b427ced691",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2501.10484",
++          "locator": "data.attributes.publisher",
++          "quote": "arXiv"
++        }
++      ]
++    },
++    {
++      "record_id": "JZ4P8V8S",
++      "base_sha256": "sha256:f60a143e019febc8151343dc057aa366b62b1b933d2fa2cbbd199b49d87693a2",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record DOI 10.3389/feduc.2024.1293235 is not registered (doi.org handle API responseCode 100, JZ4P8V8S-doiorg-record.json; Crossref 404). A Crossref bibliographic search for the exact record title returns only the Jaakkola article (JZ4P8V8S-crossref-search.json). Thwaites, Maas, Zhang and the Frontiers in Education DOI have no registered counterpart, so the record is a corrupted citation of the Jaakkola article. Open access CC BY 4.0.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "A.",
++              "lastName": "Thwaites"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "C.",
++              "lastName": "Maas"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Y.",
++              "lastName": "Zhang"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Maarit",
++              "lastName": "Jaakkola"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "date",
++          "before": "2024",
++          "after": "2025-07-10",
++          "reason": "message.issued.date-parts in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "10.3389/feduc.2024.1293235",
++          "after": "10.3389/fcomm.2025.1610111",
++          "reason": "message.DOI in the saved evidence states the corrected value."
++        },
++        {
++          "field": "url",
++          "before": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2024.1293235/full",
++          "after": "https://www.frontiersin.org/articles/10.3389/fcomm.2025.1610111/full",
++          "reason": "message.resource.primary.URL in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Frontiers in Communication",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JZ4P8V8S-crossref-file.json",
++          "sha256": "sha256:4fa4a664cca02603652c04b0baf623fb09a61da6c3690c9dc7057464099f9174",
++          "source_url": "https://api.crossref.org/works/10.3389/fcomm.2025.1610111",
++          "locator": "message.author",
++          "quote": "[{\"given\": \"Maarit\", \"family\": \"Jaakkola\", \"sequence\": \"first\", \"affiliation\": [], \"role\": [{\"vocabulary\": \"crossref\", \"role\": \"author\"}]}]"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JZ4P8V8S-crossref-file.json",
++          "sha256": "sha256:4fa4a664cca02603652c04b0baf623fb09a61da6c3690c9dc7057464099f9174",
++          "source_url": "https://api.crossref.org/works/10.3389/fcomm.2025.1610111",
++          "locator": "message.issued.date-parts",
++          "quote": "[[2025, 7, 10]]"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JZ4P8V8S-crossref-file.json",
++          "sha256": "sha256:4fa4a664cca02603652c04b0baf623fb09a61da6c3690c9dc7057464099f9174",
++          "source_url": "https://api.crossref.org/works/10.3389/fcomm.2025.1610111",
++          "locator": "message.DOI",
++          "quote": "10.3389/fcomm.2025.1610111"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JZ4P8V8S-crossref-file.json",
++          "sha256": "sha256:4fa4a664cca02603652c04b0baf623fb09a61da6c3690c9dc7057464099f9174",
++          "source_url": "https://api.crossref.org/works/10.3389/fcomm.2025.1610111",
++          "locator": "message.resource.primary.URL",
++          "quote": "https://www.frontiersin.org/articles/10.3389/fcomm.2025.1610111/full"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JZ4P8V8S-crossref-file.json",
++          "sha256": "sha256:4fa4a664cca02603652c04b0baf623fb09a61da6c3690c9dc7057464099f9174",
++          "source_url": "https://api.crossref.org/works/10.3389/fcomm.2025.1610111",
++          "locator": "message.container-title[0]",
++          "quote": "Frontiers in Communication"
++        }
++      ]
++    },
++    {
++      "record_id": "LMW8DZ78",
++      "base_sha256": "sha256:4aee6be694251ca46f4b7e38cb3634047b54404a5bcbae90c04f351d00fc7f81",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record DOI 10.1186/s12910-024-01143-5 (a BMC Medical Ethics pattern) is not registered (doi.org responseCode 100, LMW8DZ78-doiorg-record.json; Crossref 404). Title and the set of nine authors match the DIGITAL HEALTH article; the record has the authors in a different order (Funer, Langanke, Heyen, Aichinger, Bratan), the correction restores the registered order. Crossref search for the title returns only this article.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "D.",
++              "lastName": "Schneider"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "W.",
++              "lastName": "Liedtke"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "A. D.",
++              "lastName": "Klausen"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "M.",
++              "lastName": "Lipprandt"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "F.",
++              "lastName": "Funer"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "M.",
++              "lastName": "Langanke"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "N. B.",
++              "lastName": "Heyen"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "H.",
++              "lastName": "Aichinger"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "T.",
++              "lastName": "Bratan"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Diana",
++              "lastName": "Schneider"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Wenke",
++              "lastName": "Liedtke"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Andrea Diana",
++              "lastName": "Klausen"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Myriam",
++              "lastName": "Lipprandt"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Florian",
++              "lastName": "Funer"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Tanja",
++              "lastName": "Bratan"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Nils B.",
++              "lastName": "Heyen"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Heike",
++              "lastName": "Aichinger"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Martin",
++              "lastName": "Langanke"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "10.1186/s12910-024-01143-5",
++          "after": "10.1177/20552076251339522",
++          "reason": "message.DOI in the saved evidence states the corrected value."
++        },
++        {
++          "field": "url",
++          "before": "",
++          "after": "https://journals.sagepub.com/doi/10.1177/20552076251339522",
++          "reason": "message.resource.primary.URL in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "DIGITAL HEALTH",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/LMW8DZ78-crossref-file.json",
++          "sha256": "sha256:13bbfd2d3daa23e7bfdc5b3140158d93f51aaf376dcb391134506e5f3b26e90f",
++          "source_url": "https://api.crossref.org/works/10.1177/20552076251339522",
++          "locator": "message.author",
++          "quote": "[{\"ORCID\": \"https://orcid.org/0000-0002-7131-5005\", \"authenticated-orcid\": false, \"given\": \"Diana\", \"family\": \"Schneider\", \"sequence\": \"first\", \"affiliation\": [{\"name\": \"Department of Emerging Technol..."
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/LMW8DZ78-crossref-file.json",
++          "sha256": "sha256:13bbfd2d3daa23e7bfdc5b3140158d93f51aaf376dcb391134506e5f3b26e90f",
++          "source_url": "https://api.crossref.org/works/10.1177/20552076251339522",
++          "locator": "message.DOI",
++          "quote": "10.1177/20552076251339522"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/LMW8DZ78-crossref-file.json",
++          "sha256": "sha256:13bbfd2d3daa23e7bfdc5b3140158d93f51aaf376dcb391134506e5f3b26e90f",
++          "source_url": "https://api.crossref.org/works/10.1177/20552076251339522",
++          "locator": "message.resource.primary.URL",
++          "quote": "https://journals.sagepub.com/doi/10.1177/20552076251339522"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/LMW8DZ78-crossref-file.json",
++          "sha256": "sha256:13bbfd2d3daa23e7bfdc5b3140158d93f51aaf376dcb391134506e5f3b26e90f",
++          "source_url": "https://api.crossref.org/works/10.1177/20552076251339522",
++          "locator": "message.container-title[0]",
++          "quote": "DIGITAL HEALTH"
++        }
++      ]
++    },
++    {
++      "record_id": "M7AGB7LI",
++      "base_sha256": "sha256:6099ff979a17661ed068f2a3b47e7b1b7d12f82ed69de98ee0a74f942deeef90",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record is itemType thesis with a PDXScholar open_access_etds URL, i.e. it points at this thesis; only the creators are wrong. Crossref registers the thesis under DOI 10.15760/etd.3923 with author Martha Dimgba. No work by Salecha and Srijith with this title exists in Crossref or OpenAlex searches. Zotero thesis field university maps to base field publisher.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "A.",
++              "lastName": "Salecha"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "P. K.",
++              "lastName": "Srijith"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Martha Otisi",
++              "lastName": "Dimgba"
++            }
++          ],
++          "reason": "line 30 in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "",
++          "after": "10.15760/etd.3923",
++          "reason": "message.DOI in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publisher",
++          "before": null,
++          "after": "Portland State University",
++          "reason": "message.publisher in the saved evidence states the corrected value."
++        },
++        {
++          "field": "url",
++          "before": "https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=7888&context=open_access_etds",
++          "after": "https://pdxscholar.library.pdx.edu/open_access_etds/6800",
++          "reason": "message.resource.primary.URL in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md",
++          "sha256": "sha256:c8dde56e1eb9474ce7c019a16121f68658ab0ef28febec5ea8ff73a4744a34bf",
++          "source_url": "https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=7888&context=open_access_etds",
++          "locator": "line 30",
++          "quote": "Dimgba, Martha Otisi, \"Model Explanations for Gender and Ethnicity Bias Mitigation in AI-Generated Narratives\" (2025)."
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/M7AGB7LI-crossref.json",
++          "sha256": "sha256:efd75a562c8b0c30adae9208bfa6c801caa4b90e1b60d5a57f9b67900600889a",
++          "source_url": "https://api.crossref.org/works/10.15760/etd.3923",
++          "locator": "message.DOI",
++          "quote": "10.15760/etd.3923"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/M7AGB7LI-crossref.json",
++          "sha256": "sha256:efd75a562c8b0c30adae9208bfa6c801caa4b90e1b60d5a57f9b67900600889a",
++          "source_url": "https://api.crossref.org/works/10.15760/etd.3923",
++          "locator": "message.publisher",
++          "quote": "Portland State University Library"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/M7AGB7LI-crossref.json",
++          "sha256": "sha256:efd75a562c8b0c30adae9208bfa6c801caa4b90e1b60d5a57f9b67900600889a",
++          "source_url": "https://api.crossref.org/works/10.15760/etd.3923",
++          "locator": "message.resource.primary.URL",
++          "quote": "https://pdxscholar.library.pdx.edu/open_access_etds/6800"
++        }
++      ]
++    },
++    {
++      "record_id": "S8WGUVQT",
++      "base_sha256": "sha256:05915f77601d7d808237dbbaac1e1356c686d85eaa2911030c74ae2641cbcf3c",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record URL ojs.library.queensu.ca/.../article/view/16107 is the landing page registered for this DOI, and the record title equals the registered title. Dencik, Hintz, Redden, Warne (2024) are not authors of this article. Open access CC BY-NC-ND 4.0. Crossref container-title is HTML-escaped \"Surveillance &amp; Society\".",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "L.",
++              "lastName": "Dencik"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "A.",
++              "lastName": "Hintz"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "J.",
++              "lastName": "Redden"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "H.",
++              "lastName": "Warne"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Mike",
++              "lastName": "Zajko"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "date",
++          "before": "2024",
++          "after": "2023-09-24",
++          "reason": "message.issued.date-parts in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "",
++          "after": "10.24908/ss.v21i3.16107",
++          "reason": "message.DOI in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Surveillance & Society",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/S8WGUVQT-crossref.json",
++          "sha256": "sha256:f673deb70c486d1343086f2f9fc4e6b537d7f1f73e3e87a153024a89ee9892d3",
++          "source_url": "https://api.crossref.org/works/10.24908/ss.v21i3.16107",
++          "locator": "message.author",
++          "quote": "[{\"given\": \"Mike\", \"family\": \"Zajko\", \"sequence\": \"first\", \"affiliation\": [], \"role\": [{\"vocabulary\": \"crossref\", \"role\": \"author\"}]}]"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/S8WGUVQT-crossref.json",
++          "sha256": "sha256:f673deb70c486d1343086f2f9fc4e6b537d7f1f73e3e87a153024a89ee9892d3",
++          "source_url": "https://api.crossref.org/works/10.24908/ss.v21i3.16107",
++          "locator": "message.issued.date-parts",
++          "quote": "[[2023, 9, 24]]"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/S8WGUVQT-crossref.json",
++          "sha256": "sha256:f673deb70c486d1343086f2f9fc4e6b537d7f1f73e3e87a153024a89ee9892d3",
++          "source_url": "https://api.crossref.org/works/10.24908/ss.v21i3.16107",
++          "locator": "message.DOI",
++          "quote": "10.24908/ss.v21i3.16107"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/S8WGUVQT-crossref.json",
++          "sha256": "sha256:f673deb70c486d1343086f2f9fc4e6b537d7f1f73e3e87a153024a89ee9892d3",
++          "source_url": "https://api.crossref.org/works/10.24908/ss.v21i3.16107",
++          "locator": "message.container-title[0]",
++          "quote": "Surveillance &amp; Society"
++        }
++      ]
++    },
++    {
++      "record_id": "UB9NK8KI",
++      "base_sha256": "sha256:6c66056b112dcaf7b3e8826dd6a75fc51df3494b19c719739c8fd05657e2d295",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record URL mdpi.com/2076-3417/14/8/3483 is this article; title identical. No author Zayed. Open access CC BY 4.0.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "O.",
++              "lastName": "Zayed"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Ravi Varma Kumar",
++              "lastName": "Bevara"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Nishith Reddy",
++              "lastName": "Mannuru"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Sai Pranathi",
++              "lastName": "Karedla"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Ting",
++              "lastName": "Xiao"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "",
++          "after": "10.3390/app14083483",
++          "reason": "message.DOI in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Applied Sciences",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/UB9NK8KI-crossref.json",
++          "sha256": "sha256:00d42dd1994ac5487fef559941b14a88d1905490378f829590f032f09a589939",
++          "source_url": "https://api.crossref.org/works/10.3390/app14083483",
++          "locator": "message.author",
++          "quote": "[{\"ORCID\": \"https://orcid.org/0009-0007-2156-7937\", \"authenticated-orcid\": false, \"given\": \"Ravi Varma Kumar\", \"family\": \"Bevara\", \"sequence\": \"first\", \"affiliation\": [{\"name\": \"Department of Information Science, University of North Texas, Denton, TX 76205, USA\"}], \"role\": [{\"role\": \"author\", \"vocab"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/UB9NK8KI-crossref.json",
++          "sha256": "sha256:00d42dd1994ac5487fef559941b14a88d1905490378f829590f032f09a589939",
++          "source_url": "https://api.crossref.org/works/10.3390/app14083483",
++          "locator": "message.DOI",
++          "quote": "10.3390/app14083483"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/UB9NK8KI-crossref.json",
++          "sha256": "sha256:00d42dd1994ac5487fef559941b14a88d1905490378f829590f032f09a589939",
++          "source_url": "https://api.crossref.org/works/10.3390/app14083483",
++          "locator": "message.container-title[0]",
++          "quote": "Applied Sciences"
++        }
++      ]
++    },
++    {
++      "record_id": "UBYTNGNV",
++      "base_sha256": "sha256:cf2fb0de0271de13a36777faea60f8cc82a1c0d7e710a3253ca0d162a518c19c",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record DOI and title match the file and Crossref; Giannoni Adielsson and Öberg are not on this DOI. Open access CC BY 4.0.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "M.",
++              "lastName": "Giannoni Adielsson"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "J.",
++              "lastName": "Öberg"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Fabian",
++              "lastName": "Lütz"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "ERA Forum",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/UBYTNGNV-crossref.json",
++          "sha256": "sha256:1474139cae6e61f8a4345e40a8690239a22799a3b567925b2494dfbeae181524",
++          "source_url": "https://api.crossref.org/works/10.1007/s12027-024-00785-w",
++          "locator": "message.author",
++          "quote": "[{\"given\": \"Fabian\", \"family\": \"Lütz\", \"sequence\": \"first\", \"affiliation\": [], \"role\": [{\"vocabulary\": \"crossref\", \"role\": \"author\"}]}]"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/UBYTNGNV-crossref.json",
++          "sha256": "sha256:1474139cae6e61f8a4345e40a8690239a22799a3b567925b2494dfbeae181524",
++          "source_url": "https://api.crossref.org/works/10.1007/s12027-024-00785-w",
++          "locator": "message.container-title[0]",
++          "quote": "ERA Forum"
++        }
++      ]
++    },
++    {
++      "record_id": "XQM6WRU2",
++      "base_sha256": "sha256:554394e0293c9227cef9c5b4831d034f7f79cbb4551b06b11d213485f7ab114c",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record DOI and title match. \"Cher\" is a corruption of Chor; Adelson, McCrae, Barth are not on this DOI. Date: accepted 17 Dec 2024, published online 7 Jan 2025, issue 34(1) 2025; Crossref issued 2025-01. Not open access (Springer subscription, licence text-and-data-mining only).",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "K. H. B.",
++              "lastName": "Cher"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "S. L.",
++              "lastName": "Adelson"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "J. S.",
++              "lastName": "McCrae"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "R. P.",
++              "lastName": "Barth"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Ka Ho Brian",
++              "lastName": "Chor"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Zhidi",
++              "lastName": "Luo"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Kit T.",
++              "lastName": "Rodolfa"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Rayid",
++              "lastName": "Ghani"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "date",
++          "before": "2024",
++          "after": "2025-01",
++          "reason": "message.issued.date-parts in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Journal of Child and Family Studies",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XQM6WRU2-crossref.json",
++          "sha256": "sha256:f6a633f0b37cbf2e0885227efa30073de82d004b162513dc14697d809bbf2273",
++          "source_url": "https://api.crossref.org/works/10.1007/s10826-024-02993-x",
++          "locator": "message.author",
++          "quote": "[{\"ORCID\": \"https://orcid.org/0000-0003-2215-1830\", \"authenticated-orcid\": false, \"given\": \"Ka Ho Brian\", \"family\": \"Chor\", \"sequence\": \"first\", \"affiliation\": [], \"role\": [{\"vocabulary\": \"crossref\", \"role\": \"author\"}]}, {\"given\": \"Zhidi\", \"family\": \"Luo\", \"sequence\": \"additional\", \"affiliation\": []"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XQM6WRU2-crossref.json",
++          "sha256": "sha256:f6a633f0b37cbf2e0885227efa30073de82d004b162513dc14697d809bbf2273",
++          "source_url": "https://api.crossref.org/works/10.1007/s10826-024-02993-x",
++          "locator": "message.issued.date-parts",
++          "quote": "[[2025, 1]]"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XQM6WRU2-crossref.json",
++          "sha256": "sha256:f6a633f0b37cbf2e0885227efa30073de82d004b162513dc14697d809bbf2273",
++          "source_url": "https://api.crossref.org/works/10.1007/s10826-024-02993-x",
++          "locator": "message.container-title[0]",
++          "quote": "Journal of Child and Family Studies"
++        }
++      ]
++    },
++    {
++      "record_id": "YV53DKI2",
++      "base_sha256": "sha256:4775c1a3095b95f4e3a933ce3ce8c739e25effd1634d87dfe6eb25689a0c9b08",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record URL PMC12307450 maps to DOI 10.1007/s11023-025-09738-9 (NCBI ID converter), the Queloz article; the record title is a shortened form of it. No author J. D. Santos. Open access CC BY 4.0.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "J. D.",
++              "lastName": "Santos"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Matthieu",
++              "lastName": "Queloz"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "date",
++          "before": "2024",
++          "after": "2025-07-29",
++          "reason": "message.issued.date-parts in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "",
++          "after": "10.1007/s11023-025-09738-9",
++          "reason": "records[0] in the saved evidence states the corrected value."
++        },
++        {
++          "field": "title",
++          "before": "Explainability through systematicity: The hard systematicity challenge",
++          "after": "Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence",
++          "reason": "message.title[0] in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Minds and Machines",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YV53DKI2-crossref.json",
++          "sha256": "sha256:c5ea80fa1a27e25b3ff1c0e4f42f7cef83806e0fd8bb4da649af0d9847e4c40c",
++          "source_url": "https://api.crossref.org/works/10.1007/s11023-025-09738-9",
++          "locator": "message.author",
++          "quote": "[{\"ORCID\": \"https://orcid.org/0000-0001-6644-9992\", \"authenticated-orcid\": false, \"given\": \"Matthieu\", \"family\": \"Queloz\", \"sequence\": \"first\", \"affiliation\": [], \"role\": [{\"vocabulary\": \"crossref\", \"role\": \"author\"}]}]"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YV53DKI2-crossref.json",
++          "sha256": "sha256:c5ea80fa1a27e25b3ff1c0e4f42f7cef83806e0fd8bb4da649af0d9847e4c40c",
++          "source_url": "https://api.crossref.org/works/10.1007/s11023-025-09738-9",
++          "locator": "message.issued.date-parts",
++          "quote": "[[2025, 7, 29]]"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YV53DKI2-pmc-idconv.json",
++          "sha256": "sha256:f6a58f4bdaf002fb06927de06db3387ec311b401e621cd5549c7a403fa817524",
++          "source_url": "https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?ids=PMC12307450&format=json",
++          "locator": "records[0]",
++          "quote": "{\"doi\": \"10.1007/s11023-025-09738-9\", \"pmcid\": \"PMC12307450\", \"pmid\": 40746976, \"requested-id\": \"PMC12307450\"}"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YV53DKI2-crossref.json",
++          "sha256": "sha256:c5ea80fa1a27e25b3ff1c0e4f42f7cef83806e0fd8bb4da649af0d9847e4c40c",
++          "source_url": "https://api.crossref.org/works/10.1007/s11023-025-09738-9",
++          "locator": "message.title[0]",
++          "quote": "Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YV53DKI2-crossref.json",
++          "sha256": "sha256:c5ea80fa1a27e25b3ff1c0e4f42f7cef83806e0fd8bb4da649af0d9847e4c40c",
++          "source_url": "https://api.crossref.org/works/10.1007/s11023-025-09738-9",
++          "locator": "message.container-title[0]",
++          "quote": "Minds and Machines"
++        }
++      ]
++    },
++    {
++      "record_id": "99QJDBSV",
++      "base_sha256": "sha256:eaabb9d41d8cc454d5cb10bb4cdcecb5eb2d75db50f72ad6f32ffcba37eead29",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record URL arxiv.org/pdf/2507.00088 is this preprint. \"How large language models judge cooperation\" by Santos, Lages, Melo does not exist in OpenAlex (99QJDBSV-openalex-title.json); only F. P. Santos is a real co-author. Published version: Pires, Samson, Ghebreab, Santos, PNAS Nexus 5(9):pgag297 (2026), DOI 10.1093/pnasnexus/pgag297, CC BY 4.0, OA at https://academic.oup.com/pnasnexus/article/doi/10.1093/pnasnexus/pgag297/8836490 (99QJDBSV-crossref-published.json). Whether to cite the journal version instead is an operator choice; the file is the arXiv version.",
++      "changes": [
++        {
++          "field": "title",
++          "before": "How large language models judge cooperation",
++          "after": "How large language models judge and influence human cooperation",
++          "reason": "data.attributes.titles[0].title in the saved evidence states the corrected value."
++        },
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "F. P.",
++              "lastName": "Santos"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "M.",
++              "lastName": "Lages"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "F. S.",
++              "lastName": "Melo"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Alexandre S.",
++              "lastName": "Pires"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Laurens",
++              "lastName": "Samson"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Sennay",
++              "lastName": "Ghebreab"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Fernando P.",
++              "lastName": "Santos"
++            }
++          ],
++          "reason": "data.attributes.creators in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "",
++          "after": "10.48550/arXiv.2507.00088",
++          "reason": "data.attributes.doi in the saved evidence states the corrected value."
++        },
++        {
++          "field": "itemType",
++          "before": "report",
++          "after": "preprint",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        },
++        {
++          "field": "repository",
++          "before": null,
++          "after": "arXiv",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/99QJDBSV-datacite.json",
++          "sha256": "sha256:69cf1343f59f4f8d8cd1ddd2f92ec2eb3faa5d943926d62a90ef241536c9cdf7",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2507.00088",
++          "locator": "data.attributes.titles[0].title",
++          "quote": "How large language models judge and influence human cooperation"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/99QJDBSV-datacite.json",
++          "sha256": "sha256:69cf1343f59f4f8d8cd1ddd2f92ec2eb3faa5d943926d62a90ef241536c9cdf7",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2507.00088",
++          "locator": "data.attributes.creators",
++          "quote": "[{\"name\": \"Pires, Alexandre S.\", \"nameType\": \"Personal\", \"givenName\": \"Alexandre S.\", \"familyName\": \"Pires\", \"affiliation\": [], \"nameIdentifiers\": []}, {\"name\": \"Samson, Laurens\", \"nameType\": \"Personal\", \"givenName\": \"Laurens\", \"familyName\": \"Samson\", \"affiliation\": [], \"nameIdentifiers\": []}, {\"nam"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/99QJDBSV-datacite.json",
++          "sha256": "sha256:69cf1343f59f4f8d8cd1ddd2f92ec2eb3faa5d943926d62a90ef241536c9cdf7",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2507.00088",
++          "locator": "data.attributes.doi",
++          "quote": "10.48550/arxiv.2507.00088"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/99QJDBSV-datacite.json",
++          "sha256": "sha256:69cf1343f59f4f8d8cd1ddd2f92ec2eb3faa5d943926d62a90ef241536c9cdf7",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2507.00088",
++          "locator": "data.attributes.publisher",
++          "quote": "arXiv"
++        }
++      ]
++    },
++    {
++      "record_id": "E4G328PD",
++      "base_sha256": "sha256:c130f6bacfff0cacdd8c9ec074c30795a2edfbcc6500893dbb8a558fc2eb39cd",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record URL ai.nejm.org/doi/full/10.1056/AIoa2400802 and date 27 March 2025 point at this article. The record title is a paraphrase and Fernandez-Mendoza, Semien, Brown are not authors; no work with the record title exists in OpenAlex (E4G328PD-openalex-search.json). OA status not stated in Crossref (no licence entry).",
++      "changes": [
++        {
++          "field": "title",
++          "before": "Clinical trial of an LLM-based conversational AI psychotherapy",
++          "after": "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment",
++          "reason": "message.title[0] in the saved evidence states the corrected value."
++        },
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "M. V.",
++              "lastName": "Heinz"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "J.",
++              "lastName": "Fernandez-Mendoza"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "G.",
++              "lastName": "Semien"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "R.",
++              "lastName": "Brown"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "N. C.",
++              "lastName": "Jacobson"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Michael V.",
++              "lastName": "Heinz"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Daniel M.",
++              "lastName": "Mackin"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Brianna M.",
++              "lastName": "Trudeau"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Sukanya",
++              "lastName": "Bhattacharya"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Yinzhou",
++              "lastName": "Wang"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Haley A.",
++              "lastName": "Banta"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Abi D.",
++              "lastName": "Jewett"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Abigail J.",
++              "lastName": "Salzhauer"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Tess Z.",
++              "lastName": "Griffin"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Nicholas C.",
++              "lastName": "Jacobson"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "",
++          "after": "10.1056/AIoa2400802",
++          "reason": "message.DOI in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "NEJM AI",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/E4G328PD-crossref.json",
++          "sha256": "sha256:76275c49097442568fe0a5f3d1baf88730550142ba1b845b17ac9f27f85bc1be",
++          "source_url": "https://api.crossref.org/works/10.1056/AIoa2400802",
++          "locator": "message.title[0]",
++          "quote": "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/E4G328PD-crossref.json",
++          "sha256": "sha256:76275c49097442568fe0a5f3d1baf88730550142ba1b845b17ac9f27f85bc1be",
++          "source_url": "https://api.crossref.org/works/10.1056/AIoa2400802",
++          "locator": "message.author",
++          "quote": "[{\"ORCID\": \"https://orcid.org/0000-0003-0866-0508\", \"authenticated-orcid\": false, \"given\": \"Michael V.\", \"family\": \"Heinz\", \"sequence\": \"first\", \"affiliation\": [{\"name\": \"Center for Technology and Beh..."
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/E4G328PD-crossref.json",
++          "sha256": "sha256:76275c49097442568fe0a5f3d1baf88730550142ba1b845b17ac9f27f85bc1be",
++          "source_url": "https://api.crossref.org/works/10.1056/AIoa2400802",
++          "locator": "message.DOI",
++          "quote": "10.1056/aioa2400802"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/E4G328PD-crossref.json",
++          "sha256": "sha256:76275c49097442568fe0a5f3d1baf88730550142ba1b845b17ac9f27f85bc1be",
++          "source_url": "https://api.crossref.org/works/10.1056/AIoa2400802",
++          "locator": "message.container-title[0]",
++          "quote": "NEJM AI"
++        }
++      ]
++    },
++    {
++      "record_id": "XY2WVKBY",
++      "base_sha256": "sha256:78545e5904b9316ccc19fbf66cac15f9e66106bff01a75828a3bc06550cc709a",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record DOI resolves to this article; record title and the co-author van Es are not on it, and no work with the record title exists in OpenAlex (XY2WVKBY-openalex-search.json). Open access CC BY-NC-ND 4.0.",
++      "changes": [
++        {
++          "field": "title",
++          "before": "Governing discriminatory content in conversational AI: A cross-system, cross-lingual, and cross-topic audit",
++          "after": "Governance of discriminatory content in conversational AIs: a cross-platform and cross-cultural analysis",
++          "reason": "message.title[0] in the saved evidence states the corrected value."
++        },
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "J.",
++              "lastName": "Zeng"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "K.",
++              "lastName": "van Es"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Na",
++              "lastName": "Ta"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Jing",
++              "lastName": "Zeng"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Zhanghao",
++              "lastName": "Li"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Information, Communication & Society",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XY2WVKBY-crossref.json",
++          "sha256": "sha256:1f7b374535d6f9ba8a6465223a488f95d8388fbc8d09b837c35fe9e4cd1a0cd3",
++          "source_url": "https://api.crossref.org/works/10.1080/1369118X.2025.2537803",
++          "locator": "message.title[0]",
++          "quote": "Governance of discriminatory content in conversational AIs: a cross-platform and cross-cultural analysis"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XY2WVKBY-crossref.json",
++          "sha256": "sha256:1f7b374535d6f9ba8a6465223a488f95d8388fbc8d09b837c35fe9e4cd1a0cd3",
++          "source_url": "https://api.crossref.org/works/10.1080/1369118X.2025.2537803",
++          "locator": "message.author",
++          "quote": "[{\"ORCID\": \"https://orcid.org/0000-0002-6644-3467\", \"authenticated-orcid\": false, \"given\": \"Na\", \"family\": \"Ta\", \"sequence\": \"first\", \"affiliation\": [{\"name\": \"Renmin University of China\", \"place\": [\"Beijing, People’s Republic of China\"]}], \"role\": [{\"vocabulary\": \"crossref\", \"role\": \"author\"}]}, {\""
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XY2WVKBY-crossref.json",
++          "sha256": "sha256:1f7b374535d6f9ba8a6465223a488f95d8388fbc8d09b837c35fe9e4cd1a0cd3",
++          "source_url": "https://api.crossref.org/works/10.1080/1369118X.2025.2537803",
++          "locator": "message.container-title[0]",
++          "quote": "Information, Communication &amp; Society"
++        }
++      ]
++    },
++    {
++      "record_id": "6MJYP7ZX",
++      "base_sha256": "sha256:ac677e25baf41a0f8ac2f49c40a2df44fffe0e15f586dce723d7f59346f13b11",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record URL is the ResearchGate page of this exact review (publication 392942981 with the identical title). Prakash and Lee 2023 are not authors; the study covers literature up to 2024, so a 2023 date is impossible. Not a journal article: arXiv preprint only, arXiv comment \"Research is incomplete\" (6MJYP7ZX-arxiv.xml), no journal version in OpenAlex.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "A.",
++              "lastName": "Prakash"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "S.",
++              "lastName": "Lee"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Bushra",
++              "lastName": "Asseri"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Estabrag",
++              "lastName": "Abdelaziz"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Areej",
++              "lastName": "Al-Wabil"
++            }
++          ],
++          "reason": "data.attributes.creators in the saved evidence states the corrected value."
++        },
++        {
++          "field": "date",
++          "before": "2023",
++          "after": "2025",
++          "reason": "data.attributes.publicationYear in the saved evidence states the corrected value."
++        },
++        {
++          "field": "itemType",
++          "before": "journalArticle",
++          "after": "preprint",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        },
++        {
++          "field": "repository",
++          "before": null,
++          "after": "arXiv",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        },
++        {
++          "field": "url",
++          "before": "https://www.researchgate.net/publication/392942981_Prompt_Engineering_Techniques_for_Mitigating_Cultural_Bias_Against_Arabs_and_Muslims_in_Large_Language_Models_A_Systematic_Review",
++          "after": "https://arxiv.org/abs/2506.18199",
++          "reason": "data.attributes.url in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/6MJYP7ZX-datacite.json",
++          "sha256": "sha256:d1d9f526251c441e35b5a7296960b2711f8c82b8ba4a808ea1ec65a265ff605a",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2506.18199",
++          "locator": "data.attributes.creators",
++          "quote": "[{\"name\": \"Asseri, Bushra\", \"nameType\": \"Personal\", \"givenName\": \"Bushra\", \"familyName\": \"Asseri\", \"affiliation\": [], \"nameIdentifiers\": []}, {\"name\": \"Abdelaziz, Estabrag\", \"nameType\": \"Personal\", \"givenName\": \"Estabrag\", \"familyName\": \"Abdelaziz\", \"affiliation\": [], \"nameIdentifiers\": []}, {\"name\""
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/6MJYP7ZX-datacite.json",
++          "sha256": "sha256:d1d9f526251c441e35b5a7296960b2711f8c82b8ba4a808ea1ec65a265ff605a",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2506.18199",
++          "locator": "data.attributes.publicationYear",
++          "quote": "2025"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/6MJYP7ZX-datacite.json",
++          "sha256": "sha256:d1d9f526251c441e35b5a7296960b2711f8c82b8ba4a808ea1ec65a265ff605a",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2506.18199",
++          "locator": "data.attributes.publisher",
++          "quote": "arXiv"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/6MJYP7ZX-datacite.json",
++          "sha256": "sha256:d1d9f526251c441e35b5a7296960b2711f8c82b8ba4a808ea1ec65a265ff605a",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2506.18199",
++          "locator": "data.attributes.url",
++          "quote": "https://arxiv.org/abs/2506.18199"
++        }
++      ]
++    },
++    {
++      "record_id": "7WMD5JQ6",
++      "base_sha256": "sha256:e7a7292028e21862cac7dff179d667a2c176e4b9ecb3810abcb9802ee83e4d4a",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Same work; only the title carries markup. Crossref registers the title with JATS small-caps markup (\"<scp>AI</scp>\"); the Zotero import turned it into an HTML span. Corrected title strips the markup (hyphen U+2010 kept as registered). The file prints no DOI of its own (only reference DOIs such as 10.1002/poi3.171 in the bibliography); authors, title and the 3-page extent match DOI 10.1002/pra2.1472. Crossref licence is Wiley VOR terms, OA status not established.",
++      "changes": [
++        {
++          "field": "title",
++          "before": "Toward Agency‐Centered <span style=\"font-variant:small-caps;\">AI</span> Literacy: A Scoping Review",
++          "after": "Toward Agency‐Centered AI Literacy: A Scoping Review",
++          "reason": "message.title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/7WMD5JQ6-crossref.json",
++          "sha256": "sha256:c12a990997800cf66db2c938cf7498f653304aca77a10ddd30cf7de5197ff6d1",
++          "source_url": "https://api.crossref.org/works/10.1002/pra2.1472",
++          "locator": "message.title[0]",
++          "quote": "Toward Agency‐Centered\n                    <scp>AI</scp>\n                    Literacy: A Scoping Review"
++        }
++      ]
++    },
++    {
++      "record_id": "WS4KQPWN",
++      "base_sha256": "sha256:1dc3eec219eb687596dc3e4e83ce85ee2884f4de332147b7271a6752116f3482",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record DOI 10.17645/si.v12i1.7543 is not registered (doi.org handle API responseCode 100, WS4KQPWN-doiorg-v12i1.json); the real DOI is 10.17645/si.7543 (Crossref, volume 12, article number 7543, CC BY 4.0, OA at https://www.cogitatiopress.com/socialinclusion/article/view/7543). WS4KQPWN, 8U23BX2J, 9YCFMPVT and FDR5APIU are four records of one work and should be merged into one.",
++      "changes": [
++        {
++          "field": "DOI",
++          "before": "10.17645/si.v12i1.7543",
++          "after": "",
++          "reason": "responseCode 100 (handle not found) in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Social Inclusion",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/WS4KQPWN-doiorg-v12i1.json",
++          "sha256": "sha256:3ad1c924cacf485b97162ed0f32c5dc479bab1eb3833fb50ca925c997d19a1aa",
++          "source_url": "https://doi.org/api/handles/10.17645/si.v12i1.7543",
++          "locator": "responseCode 100 (handle not found)",
++          "quote": "\"responseCode\":100"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/WS4KQPWN-crossref.json",
++          "sha256": "sha256:3f9643058c7a490e6ad8db2ca4b9b313cf5cc420ebd62a5c98ddfb687e72eb98",
++          "source_url": "https://api.crossref.org/works/10.17645/si.7543",
++          "locator": "message.container-title[0]",
++          "quote": "Social Inclusion"
++        }
++      ]
++    },
++    {
++      "record_id": "8U23BX2J",
++      "base_sha256": "sha256:8b053142eb131554eb5f7b0d1aefe05e09356959ba36a4715a6151a319e5ece1",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record DOI 10.17645/si.v12.7543 is not registered (doi.org handle API responseCode 100, 8U23BX2J-doiorg-v12.json); the real DOI is 10.17645/si.7543 (Crossref, volume 12, article number 7543, CC BY 4.0, OA at https://www.cogitatiopress.com/socialinclusion/article/view/7543). WS4KQPWN, 8U23BX2J, 9YCFMPVT and FDR5APIU are four records of one work and should be merged into one.",
++      "changes": [
++        {
++          "field": "DOI",
++          "before": "10.17645/si.v12.7543",
++          "after": "",
++          "reason": "responseCode 100 (handle not found) in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Social Inclusion",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/8U23BX2J-doiorg-v12.json",
++          "sha256": "sha256:dbf2ec658a65727753dabd719ec6caa6ea6a41a9eb016760f3f73362e05658b3",
++          "source_url": "https://doi.org/api/handles/10.17645/si.v12.7543",
++          "locator": "responseCode 100 (handle not found)",
++          "quote": "\"responseCode\":100"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/WS4KQPWN-crossref.json",
++          "sha256": "sha256:3f9643058c7a490e6ad8db2ca4b9b313cf5cc420ebd62a5c98ddfb687e72eb98",
++          "source_url": "https://api.crossref.org/works/10.17645/si.7543",
++          "locator": "message.container-title[0]",
++          "quote": "Social Inclusion"
++        }
++      ]
++    },
++    {
++      "record_id": "9YCFMPVT",
++      "base_sha256": "sha256:2bf2e8fc1cfbe422e3def3fcd11ed15e96ca462bb05825f6516e252ee892ce74",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record DOI 10.17645/si.v12i2.7543 is not registered (doi.org handle API responseCode 100, 9YCFMPVT-doiorg-v12i2.json); the real DOI is 10.17645/si.7543 (Crossref, volume 12, article number 7543, CC BY 4.0, OA at https://www.cogitatiopress.com/socialinclusion/article/view/7543). WS4KQPWN, 8U23BX2J, 9YCFMPVT and FDR5APIU are four records of one work and should be merged into one.",
++      "changes": [
++        {
++          "field": "DOI",
++          "before": "10.17645/si.v12i2.7543",
++          "after": "",
++          "reason": "responseCode 100 (handle not found) in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Social Inclusion",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/9YCFMPVT-doiorg-v12i2.json",
++          "sha256": "sha256:fe4721f536ba280b22e33e12df7d1a4d74084c1abd9b02aee3aad0533d0523b8",
++          "source_url": "https://doi.org/api/handles/10.17645/si.v12i2.7543",
++          "locator": "responseCode 100 (handle not found)",
++          "quote": "\"responseCode\":100"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/WS4KQPWN-crossref.json",
++          "sha256": "sha256:3f9643058c7a490e6ad8db2ca4b9b313cf5cc420ebd62a5c98ddfb687e72eb98",
++          "source_url": "https://api.crossref.org/works/10.17645/si.7543",
++          "locator": "message.container-title[0]",
++          "quote": "Social Inclusion"
++        }
++      ]
++    },
++    {
++      "record_id": "FDR5APIU",
++      "base_sha256": "sha256:28e4372144336565a67e86660c57bca7f73c0c24909456864e549f65e7d845f9",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record DOI 10.17645/si.v12.7543 is not registered (doi.org handle API responseCode 100, 8U23BX2J-doiorg-v12.json); the real DOI is 10.17645/si.7543 (Crossref, volume 12, article number 7543, CC BY 4.0, OA at https://www.cogitatiopress.com/socialinclusion/article/view/7543). WS4KQPWN, 8U23BX2J, 9YCFMPVT and FDR5APIU are four records of one work and should be merged into one.",
++      "changes": [
++        {
++          "field": "DOI",
++          "before": "10.17645/si.v12.7543",
++          "after": "",
++          "reason": "responseCode 100 (handle not found) in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Social Inclusion",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/8U23BX2J-doiorg-v12.json",
++          "sha256": "sha256:dbf2ec658a65727753dabd719ec6caa6ea6a41a9eb016760f3f73362e05658b3",
++          "source_url": "https://doi.org/api/handles/10.17645/si.v12.7543",
++          "locator": "responseCode 100 (handle not found)",
++          "quote": "\"responseCode\":100"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/WS4KQPWN-crossref.json",
++          "sha256": "sha256:3f9643058c7a490e6ad8db2ca4b9b313cf5cc420ebd62a5c98ddfb687e72eb98",
++          "source_url": "https://api.crossref.org/works/10.17645/si.7543",
++          "locator": "message.container-title[0]",
++          "quote": "Social Inclusion"
++        }
++      ]
++    },
++    {
++      "record_id": "6QPLNNQK",
++      "base_sha256": "sha256:b874eeee522750205871a4f93d897b28ccd2d632468f3fc0338911e25c9b659c",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "The record means the study, not the news item: the UNESCO news article at the record URL (7 March 2024) names \"The study Bias Against Women and Girls in Large Language Models\" and links the full analysis at unesdoc ark:/48223/pf0000388971, which is the document in the file. \"Bias against women and girls in large language models\" is UNESCO's press label for the study; the document's own title and recommended citation is \"Challenging systematic prejudices\". No DOI exists; OpenAlex has no record (6QPLNNQK-openalex-search2.json). Evidence for title/creators is the printed document; the news page i",
++      "changes": [
++        {
++          "field": "title",
++          "before": "Bias against women and girls in large language models: A UNESCO study",
++          "after": "Challenging systematic prejudices: an investigation into gender bias in large language models",
++          "reason": "line 20 in the saved evidence states the corrected value."
++        },
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "name": "UNESCO"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "name": "UNESCO"
++            },
++            {
++              "creatorType": "author",
++              "name": "International Research Centre on Artificial Intelligence (IRCAI)"
++            }
++          ],
++          "reason": "line 20 in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
++          "sha256": "sha256:c5adaa629c69ae639e8922126cb80312abd16d9c58b274777a0a1c5d7043d1c6",
++          "source_url": "https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes",
++          "locator": "line 20",
++          "quote": "Cite as: UNESCO, IRCAI (2024). ' Challenging systematic prejudices: an Investigation into Gender Bias in Large Language Models '."
++        },
++        {
++          "source_path": "generated/markdown_clean/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
++          "sha256": "sha256:c5adaa629c69ae639e8922126cb80312abd16d9c58b274777a0a1c5d7043d1c6",
++          "source_url": "https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes",
++          "locator": "line 20",
++          "quote": "Cite as: UNESCO, IRCAI (2024)."
++        }
++      ]
++    },
++    {
++      "record_id": "7QQV7R9S",
++      "base_sha256": "sha256:32f4100667adfa2b162816ff2498b2b55fe82ebdf5d2b8fc5fd3e9cf0574d5cb",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Same work, minor title mismatch only. \"Generative AI & Social Work Practice Guidance\" is the title of the BASW resource web page at the record URL (page <title> \"Generative AI &amp; Social Work Practice Guidance | BASW\", description \"Initial guidance for practice and ethics.\", dated 19 March 2025; saved as scratchpad basw.html). The PDF itself is titled \"Generative AI and Social Work: Initial Guidance for Practice and Ethics\". Changing the title is optional; keeping the web-page title is defensible if the record is meant to cite the page. No DOI, no API record.",
++      "changes": [
++        {
++          "field": "title",
++          "before": "Generative AI & social work practice guidance",
++          "after": "Generative AI and Social Work: Initial Guidance for Practice and Ethics",
++          "reason": "line 8 in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md",
++          "sha256": "sha256:e65682722507a93955e4a04c2e3dbcbd46139562892883cd86758facad5e1f63",
++          "source_url": "https://basw.co.uk/policy-and-practice/resources/generative-ai-social-work-practice-guidance",
++          "locator": "line 8",
++          "quote": "## Generative AI and\n\n## Social Work:\n\nInitial Guidance for Practice and Ethics"
++        }
++      ]
++    },
++    {
++      "record_id": "NVZA58ML",
++      "base_sha256": "sha256:48a8ad5bb98c60a255c688a7381f5a48a437f8134a76f5027cd4df76faf4267a",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "The record title is word for word the Li et al. survey; the record URL is a 2023 mirror PDF of it. The \"Procedia Computer Science\" header and \"© 2011 Published by Elsevier Ltd.\" in the file are template placeholders of the arXiv preprint, not a Procedia publication; no Procedia version is registered in Crossref. The Zichong Wang survey is a different work with a different title: Chu, Wang, Zhang, \"Fairness in Large Language Models: A Taxonomic Survey\", ACM SIGKDD Explorations Newsletter 26(1):34-48, 2024, DOI 10.1145/3682112.3682117 (NVZA58ML-crossref-search-wang.json). Because the title and U",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "Z.",
++              "lastName": "Wang"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Yingji",
++              "lastName": "Li"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Mengnan",
++              "lastName": "Du"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Rui",
++              "lastName": "Song"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Xin",
++              "lastName": "Wang"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Ying",
++              "lastName": "Wang"
++            }
++          ],
++          "reason": "data.attributes.creators in the saved evidence states the corrected value."
++        },
++        {
++          "field": "date",
++          "before": "2024",
++          "after": "2023",
++          "reason": "data.attributes.publicationYear in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "",
++          "after": "10.48550/arXiv.2308.10149",
++          "reason": "data.attributes.doi in the saved evidence states the corrected value."
++        },
++        {
++          "field": "itemType",
++          "before": "report",
++          "after": "preprint",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        },
++        {
++          "field": "repository",
++          "before": null,
++          "after": "arXiv",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        },
++        {
++          "field": "url",
++          "before": "https://file.mixpaper.cn/paper_store/2023/5ddea1cd-c031-433f-a09b-14e7754f7826.pdf",
++          "after": "https://arxiv.org/abs/2308.10149",
++          "reason": "data.attributes.url in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/NVZA58ML-datacite.json",
++          "sha256": "sha256:57c8b251fa9e1c8d2d7f29258b05e34676fd046b10e31672937dee5644318a03",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2308.10149",
++          "locator": "data.attributes.creators",
++          "quote": "[{\"name\": \"Li, Yingji\", \"nameType\": \"Personal\", \"givenName\": \"Yingji\", \"familyName\": \"Li\", \"affiliation\": [], \"nameIdentifiers\": []}, {\"name\": \"Du, Mengnan\", \"nameType\": \"Personal\", \"givenName\": \"Mengnan\", \"familyName\": \"Du\", \"affiliation\": [], \"nameIdentifiers\": []}, {\"name\": \"Song, Rui\", \"nameType"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/NVZA58ML-datacite.json",
++          "sha256": "sha256:57c8b251fa9e1c8d2d7f29258b05e34676fd046b10e31672937dee5644318a03",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2308.10149",
++          "locator": "data.attributes.publicationYear",
++          "quote": "2023"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/NVZA58ML-datacite.json",
++          "sha256": "sha256:57c8b251fa9e1c8d2d7f29258b05e34676fd046b10e31672937dee5644318a03",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2308.10149",
++          "locator": "data.attributes.doi",
++          "quote": "10.48550/arxiv.2308.10149"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/NVZA58ML-datacite.json",
++          "sha256": "sha256:57c8b251fa9e1c8d2d7f29258b05e34676fd046b10e31672937dee5644318a03",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2308.10149",
++          "locator": "data.attributes.publisher",
++          "quote": "arXiv"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/NVZA58ML-datacite.json",
++          "sha256": "sha256:57c8b251fa9e1c8d2d7f29258b05e34676fd046b10e31672937dee5644318a03",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2308.10149",
++          "locator": "data.attributes.url",
++          "quote": "https://arxiv.org/abs/2308.10149"
++        }
++      ]
++    },
++    {
++      "record_id": "YUVR5YNQ",
++      "base_sha256": "sha256:c626c98eb56e38da38e8b44447b24ff193b085a7c75f72b5c4d114de775eb938",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record URL aclanthology.org/2025.naacl-short.74.pdf is this paper; title identical. Parrish and De-Arteaga are not authors. Crossref lists twelve authors and omits Jiuxiang Gu, who is the thirteenth author in the printed byline; the correction appends Gu from the byline. Earlier arXiv version: 10.48550/arXiv.2402.01981 (2024). OA at https://aclanthology.org/2025.naacl-short.74.pdf.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "A.",
++              "lastName": "Parrish"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "M.",
++              "lastName": "de-Arteaga"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Isabel O.",
++              "lastName": "Gallegos"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Ryan",
++              "lastName": "Aponte"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Ryan A.",
++              "lastName": "Rossi"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Joe",
++              "lastName": "Barrow"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Mehrab",
++              "lastName": "Tanjim"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Tong",
++              "lastName": "Yu"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Hanieh",
++              "lastName": "Deilamsalehy"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Ruiyi",
++              "lastName": "Zhang"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Sungchul",
++              "lastName": "Kim"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Franck",
++              "lastName": "Dernoncourt"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Nedim",
++              "lastName": "Lipka"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Deonna",
++              "lastName": "Owens"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Jiuxiang",
++              "lastName": "Gu"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Jiuxiang",
++              "lastName": "Gu"
++            }
++          ],
++          "reason": "message.author in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "",
++          "after": "10.18653/v1/2025.naacl-short.74",
++          "reason": "message.DOI in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publicationTitle",
++          "before": null,
++          "after": "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 2: Short Papers)",
++          "reason": "message.container-title[0] in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YUVR5YNQ-crossref.json",
++          "sha256": "sha256:f69c6f5f9ebc6fb76956278b9945cbeeeeee77be8d7e469f5d011a48d4be5a33",
++          "source_url": "https://api.crossref.org/works/10.18653/v1/2025.naacl-short.74",
++          "locator": "message.author",
++          "quote": "[{\"given\": \"Isabel O.\", \"family\": \"Gallegos\", \"sequence\": \"first\", \"affiliation\": [], \"role\": [{\"vocabulary\": \"crossref\", \"role\": \"author\"}]}, {\"given\": \"Ryan\", \"family\": \"Aponte\", \"sequence\": \"additi..."
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YUVR5YNQ-crossref.json",
++          "sha256": "sha256:f69c6f5f9ebc6fb76956278b9945cbeeeeee77be8d7e469f5d011a48d4be5a33",
++          "source_url": "https://api.crossref.org/works/10.18653/v1/2025.naacl-short.74",
++          "locator": "message.DOI",
++          "quote": "10.18653/v1/2025.naacl-short.74"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YUVR5YNQ-crossref.json",
++          "sha256": "sha256:f69c6f5f9ebc6fb76956278b9945cbeeeeee77be8d7e469f5d011a48d4be5a33",
++          "source_url": "https://api.crossref.org/works/10.18653/v1/2025.naacl-short.74",
++          "locator": "message.container-title[0]",
++          "quote": "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 2: Short Papers)"
++        }
++      ]
++    },
++    {
++      "record_id": "DWS4KXBW",
++      "base_sha256": "sha256:c9dd28c4030a113fcc2e02494f5a3abcc1745f2f4b6e9eb21ecffb5e8fb7b2cb",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Same work: title identical, and the record URL (Data-Pop Alliance publication page) lists this GPAI report (page title identical, GPAI image, datePublished 2024-11-27; scratchpad datapop.html). Anaelia Ovalle is only a member of the Consultation Expert Group thanked in the acknowledgements, not an author. The report's own recommended citation names GPAI as corporate author; personal authors per the acknowledgements would be Hellegren Létourneau (prepared by) with co-leads Ricaurte Quijano and Prud'homme. No DOI; OpenAlex has no record (DWS4KXBW-openalex-search2.json). Evidence is the printed d",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "A.",
++              "lastName": "Ovalle"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "name": "Global Partnership on AI"
++            }
++          ],
++          "reason": "line 57 in the saved evidence states the corrected value."
++        },
++        {
++          "field": "publisher",
++          "before": null,
++          "after": "Global Partnership on AI",
++          "reason": "line 57 in the saved evidence states the corrected value."
++        },
++        {
++          "field": "date",
++          "before": "2024",
++          "after": "2024-11",
++          "reason": "line 12 in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
++          "sha256": "sha256:164f39c1a39cdc016a617f8f01d5294f0ca798080691518e601edb7977aecd64",
++          "source_url": "https://datapopalliance.org/publications/towards-real-diversity-and-gender-equality-in-ai/",
++          "locator": "line 57",
++          "quote": "GPAI 2024. Towards Substantive Equality in Artificial Intelligence: Transformative AI Policy for Gender Equality and Diversity , Report, November 2024, Global Partnership on AI."
++        },
++        {
++          "source_path": "generated/markdown_clean/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
++          "sha256": "sha256:164f39c1a39cdc016a617f8f01d5294f0ca798080691518e601edb7977aecd64",
++          "source_url": "https://datapopalliance.org/publications/towards-real-diversity-and-gender-equality-in-ai/",
++          "locator": "line 57",
++          "quote": "Report, November 2024, Global Partnership on AI."
++        },
++        {
++          "source_path": "generated/markdown_clean/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
++          "sha256": "sha256:164f39c1a39cdc016a617f8f01d5294f0ca798080691518e601edb7977aecd64",
++          "source_url": "https://datapopalliance.org/publications/towards-real-diversity-and-gender-equality-in-ai/",
++          "locator": "line 12",
++          "quote": "November 2024"
++        }
++      ]
++    },
++    {
++      "record_id": "MPCZVZEW",
++      "base_sha256": "sha256:e98f85bc301d3d3da9a452a2a20a3c1b38cc4c0c902f7dd7b190ee5cb89efb89",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Record URL arxiv.org/pdf/2504.16148 is this preprint; title identical. Goellner, Kumar, Aleven are not authors. Published version: Computers and Education: Artificial Intelligence 9 (2025) 100524, DOI 10.1016/j.caeai.2025.100524, same authors (MPCZVZEW-crossref-published.json; DataCite relatedIdentifiers IsVersionOf). Crossref carries only Elsevier TDM licence entries, so OA status of the journal version is not established from this evidence. Whether to cite the journal version is an operator choice; the file is the arXiv version.",
++      "changes": [
++        {
++          "field": "creators",
++          "before": [
++            {
++              "creatorType": "author",
++              "firstName": "J.",
++              "lastName": "Goellner"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "V.",
++              "lastName": "Kumar"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "V.",
++              "lastName": "Aleven"
++            }
++          ],
++          "after": [
++            {
++              "creatorType": "author",
++              "firstName": "Danial",
++              "lastName": "Hooshyar"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Gustav",
++              "lastName": "Šír"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Yeongwook",
++              "lastName": "Yang"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Eve",
++              "lastName": "Kikas"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Raija",
++              "lastName": "Hämäläinen"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Tommi",
++              "lastName": "Kärkkäinen"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Dragan",
++              "lastName": "Gašević"
++            },
++            {
++              "creatorType": "author",
++              "firstName": "Roger",
++              "lastName": "Azevedo"
++            }
++          ],
++          "reason": "data.attributes.creators in the saved evidence states the corrected value."
++        },
++        {
++          "field": "DOI",
++          "before": "",
++          "after": "10.48550/arXiv.2504.16148",
++          "reason": "data.attributes.doi in the saved evidence states the corrected value."
++        },
++        {
++          "field": "itemType",
++          "before": "report",
++          "after": "preprint",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        },
++        {
++          "field": "repository",
++          "before": null,
++          "after": "arXiv",
++          "reason": "data.attributes.publisher in the saved evidence states the corrected value."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/MPCZVZEW-datacite.json",
++          "sha256": "sha256:998d24c367d1e826828f27f8bbdb2aaf2f3aef07072aad2232c6ca052a530df3",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2504.16148",
++          "locator": "data.attributes.creators",
++          "quote": "[{\"name\": \"Hooshyar, Danial\", \"nameType\": \"Personal\", \"givenName\": \"Danial\", \"familyName\": \"Hooshyar\", \"affiliation\": [], \"nameIdentifiers\": []}, {\"name\": \"Šír, Gustav\", \"nameType\": \"Personal\", \"given..."
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/MPCZVZEW-datacite.json",
++          "sha256": "sha256:998d24c367d1e826828f27f8bbdb2aaf2f3aef07072aad2232c6ca052a530df3",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2504.16148",
++          "locator": "data.attributes.doi",
++          "quote": "10.48550/arxiv.2504.16148"
++        },
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/MPCZVZEW-datacite.json",
++          "sha256": "sha256:998d24c367d1e826828f27f8bbdb2aaf2f3aef07072aad2232c6ca052a530df3",
++          "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2504.16148",
++          "locator": "data.attributes.publisher",
++          "quote": "arXiv"
++        }
++      ]
++    },
++    {
++      "record_id": "EUTEI9EJ",
++      "base_sha256": "sha256:fcaaf71dbdf417347a41c938e7f83c88a8ff2f9470f9b52382340d76fc8d1c97",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "Crossref registers a Spanish and an English title for DOI 10.25009/is.v11i21.3001. The acquired full text is the English version and prints the English title; the record carried the Spanish one.",
++      "changes": [
++        {
++          "field": "title",
++          "before": "Análisis de la desinformación y los sesgos de género generados por la inteligencia artificial",
++          "after": "Analysis on disinformation and gender bias generated by artificial intelligence",
++          "reason": "message.title[1] in the Crossref record is the English title of the same DOI, which the bound English text prints."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/EUTEI9EJ-crossref.json",
++          "sha256": "sha256:2dc6e2c6b34379b3428d3a261a18a25c1616eda4303defb58cca35717ab36b29",
++          "source_url": "https://api.crossref.org/works/10.25009/is.v11i21.3001",
++          "locator": "message.title[1]",
++          "quote": "Analysis on disinformation and gender bias generated by artificial intelligence"
++        }
++      ]
++    },
++    {
++      "record_id": "RM833D5N",
++      "base_sha256": "sha256:b77a48834d94bfe44b5f846b7da477c87c0eb8846d9f7de35fca8a8a0a5770c2",
++      "authority": "ai-source-reviewed-metadata",
++      "agent_id": "claude-code/metadata-resolution-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "findings": "The record URL names the paper acquired in the open-access batch of 2026-10-01; its printed title differs from the record title, which matches no published work.",
++      "changes": [
++        {
++          "field": "title",
++          "before": "On the steerability of large language models",
++          "after": "Evaluating the Prompt Steerability of Large Language Models",
++          "reason": "Title as printed in the acquired paper that the record URL names."
++        }
++      ],
++      "evidence": [
++        {
++          "source_path": "generated/source-acquisition/oa-batch-2026-10-01/RM833D5N.md",
++          "sha256": "sha256:b150ad32770fe3e48e960049a8aad94ebfeccbb95bd45b7ff9062fbb119a47d6",
++          "source_url": "https://aclanthology.org/2025.naacl-long.400.pdf",
++          "locator": "printed title on the first page",
++          "quote": "Evaluating the Prompt Steerability of Large Language Models"
++        }
++      ]
+     }
+   ]
+ }
+diff --git a/corpus/source_version_bindings.json b/corpus/source_version_bindings.json
+index 02c84a9..50dffe7 100644
+--- a/corpus/source_version_bindings.json
++++ b/corpus/source_version_bindings.json
+@@ -2145,8 +2145,8 @@
+       },
+       "version_relation": {
+         "source_version_type": "preprint",
+-        "preferred_version_id": "version:04fed931-77e4-551f-a65d-171b9355d611",
+-        "difference_to_preferred": "preprint bound while the preferred version is a version_of_record: "
++        "preferred_version_id": "version:fdf4d4e8-faf0-572f-8f75-1efddb963ed8",
++        "difference_to_preferred": "preprint bound while the preferred version is a preprint: "
+       },
+       "binding": {
+         "record_id": "5UAHQESQ",
+@@ -2154,7 +2154,7 @@
+         "bibliographic_version_id": "version:ab927bf4-8220-592a-a140-2f7bcaf1bcdf",
+         "source_version_id": "version:ab927bf4-8220-592a-a140-2f7bcaf1bcdf",
+         "source_version_type": "preprint",
+-        "preferred_version_id": "version:04fed931-77e4-551f-a65d-171b9355d611",
++        "preferred_version_id": "version:fdf4d4e8-faf0-572f-8f75-1efddb963ed8",
+         "is_preferred_version": false,
+         "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-v1.txt",
+         "source_sha256": "sha256:af3e41cf9b3475a6ad5b255942115a0928cb331afd40e72ddb126632304632eb"
+@@ -5945,6 +5945,59 @@
+         }
+       ]
+     },
++    "RM833D5N": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Open-access version of record acquired on 2026-10-01 (publisher OA (ACL Anthology)). The record URL is this NAACL 2025 paper, but the record title 'On the steerability of large language models' differs from the printed title.",
++      "bibliographic_identity": {
++        "title": "Evaluating the Prompt Steerability of Large Language Models"
++      },
++      "acquisition_receipt": {
++        "source_url": "https://aclanthology.org/2025.naacl-long.400.pdf",
++        "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/RM833D5N.pdf",
++        "retrieved_at": "2026-10-01T14:29:02+00:00",
++        "sha256": "sha256:3c7adae50839560a078433b1e64cf094146bd24ac1effabaf38c46a97c9836de",
++        "route": "publisher OA (ACL Anthology)",
++        "note": "Licence as stated by the source: not printed; ACL Anthology states CC BY 4.0 as its default licence."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_registered",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:bf6f5024-c422-5a54-8fcf-1a948b2502cc",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "RM833D5N",
++        "work_id": "work:0542622c-1314-56f0-9dc3-706ebfafef27",
++        "bibliographic_version_id": "version:bf6f5024-c422-5a54-8fcf-1a948b2502cc",
++        "source_version_id": "version:bf6f5024-c422-5a54-8fcf-1a948b2502cc",
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:bf6f5024-c422-5a54-8fcf-1a948b2502cc",
++        "is_preferred_version": true,
++        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/RM833D5N.md",
++        "source_sha256": "sha256:b150ad32770fe3e48e960049a8aad94ebfeccbb95bd45b7ff9062fbb119a47d6"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/source-acquisition/oa-batch-2026-10-01/RM833D5N.md",
++          "sha256": "sha256:b150ad32770fe3e48e960049a8aad94ebfeccbb95bd45b7ff9062fbb119a47d6",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        },
++        {
++          "source_path": "generated/source-acquisition/oa-batch-2026-10-01/receipts.json#/records/29",
++          "locator": "acquisition receipt",
++          "source_url": "https://aclanthology.org/2025.naacl-long.400.pdf",
++          "sha256": "sha256:645bf57e70e7d264537bd7d7958873e2cc03d472855eb946275daa71a91cc659"
++        }
++      ]
++    },
+     "TFMETSCH": {
+       "binding_mode": "acquisition_receipt",
+       "agent_id": "claude-code/source-binding-2026-10-01",
+@@ -6159,6 +6212,218 @@
+         }
+       ]
+     },
++    "WS4KQPWN": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Open-access version of record acquired on 2026-10-01 (publisher OA (Cogitatio Press)). Title and author match; Social Inclusion 2024, Volume 12, Article 7543. The PDF prints DOI 10.17645/si.v12.7543, while the four records carry si.v12i1.7543, si.v12.7543 and si.v12i2.7543.",
++      "bibliographic_identity": {
++        "title": "Intersectionality in artificial intelligence: Framing concerns and recommendations for action"
++      },
++      "acquisition_receipt": {
++        "source_url": "https://www.cogitatiopress.com/socialinclusion/article/download/7543/3744",
++        "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/WS4KQPWN.pdf",
++        "retrieved_at": "2026-10-01T14:46:40+00:00",
++        "sha256": "sha256:2c9b74bb82fc2b6a9736350dcfe312a5d8a06c76263b2cb45d7bbf7e79fcc29b",
++        "route": "publisher OA (Cogitatio Press)",
++        "note": "Licence as stated by the source: cc-by-4.0."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_registered",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:e84c1f71-8727-5700-b5f2-8004737385ba",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "WS4KQPWN",
++        "work_id": "work:7613a7ed-0f4e-56a5-a2da-6e361bf549a9",
++        "bibliographic_version_id": "version:e84c1f71-8727-5700-b5f2-8004737385ba",
++        "source_version_id": "version:e84c1f71-8727-5700-b5f2-8004737385ba",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:e84c1f71-8727-5700-b5f2-8004737385ba",
++        "is_preferred_version": true,
++        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/WS4KQPWN.md",
++        "source_sha256": "sha256:e8e68bb24bfeb2824b9f8fcbbffbe6dfb4b2f7d476bb7922dc505286f688fc20"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/source-acquisition/oa-batch-2026-10-01/WS4KQPWN.md",
++          "sha256": "sha256:e8e68bb24bfeb2824b9f8fcbbffbe6dfb4b2f7d476bb7922dc505286f688fc20",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        },
++        {
++          "source_path": "generated/source-acquisition/oa-batch-2026-10-01/receipts.json#/records/35",
++          "locator": "acquisition receipt",
++          "source_url": "https://www.cogitatiopress.com/socialinclusion/article/download/7543/3744",
++          "sha256": "sha256:16f9be14ac9a702eafcb721a8cf4f6958391c54f01765ecf73d743a79378cd48"
++        }
++      ]
++    },
++    "8U23BX2J": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Open-access version of record acquired on 2026-10-01 (publisher OA (Cogitatio Press)). Title and author match; Social Inclusion 2024, Volume 12, Article 7543. The PDF prints DOI 10.17645/si.v12.7543, while the four records carry si.v12i1.7543, si.v12.7543 and si.v12i2.7543.",
++      "bibliographic_identity": {
++        "title": "Intersectionality in artificial intelligence: Framing concerns and recommendations for action"
++      },
++      "acquisition_receipt": {
++        "source_url": "https://www.cogitatiopress.com/socialinclusion/article/download/7543/3744",
++        "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/WS4KQPWN.pdf",
++        "retrieved_at": "2026-10-01T14:46:40+00:00",
++        "sha256": "sha256:2c9b74bb82fc2b6a9736350dcfe312a5d8a06c76263b2cb45d7bbf7e79fcc29b",
++        "route": "publisher OA (Cogitatio Press)",
++        "note": "Licence as stated by the source: cc-by-4.0."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_registered",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:bf914473-4be9-5a97-ae1f-040bb19a6d1b",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "8U23BX2J",
++        "work_id": "work:37b79944-e5a1-51c4-af72-fd3719a8a08c",
++        "bibliographic_version_id": "version:bf914473-4be9-5a97-ae1f-040bb19a6d1b",
++        "source_version_id": "version:bf914473-4be9-5a97-ae1f-040bb19a6d1b",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:bf914473-4be9-5a97-ae1f-040bb19a6d1b",
++        "is_preferred_version": true,
++        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/WS4KQPWN.md",
++        "source_sha256": "sha256:e8e68bb24bfeb2824b9f8fcbbffbe6dfb4b2f7d476bb7922dc505286f688fc20"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/source-acquisition/oa-batch-2026-10-01/WS4KQPWN.md",
++          "sha256": "sha256:e8e68bb24bfeb2824b9f8fcbbffbe6dfb4b2f7d476bb7922dc505286f688fc20",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        },
++        {
++          "source_path": "generated/source-acquisition/oa-batch-2026-10-01/receipts.json#/records/35",
++          "locator": "acquisition receipt",
++          "source_url": "https://www.cogitatiopress.com/socialinclusion/article/download/7543/3744",
++          "sha256": "sha256:16f9be14ac9a702eafcb721a8cf4f6958391c54f01765ecf73d743a79378cd48"
++        }
++      ]
++    },
++    "9YCFMPVT": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Open-access version of record acquired on 2026-10-01 (publisher OA (Cogitatio Press)). Title and author match; Social Inclusion 2024, Volume 12, Article 7543. The PDF prints DOI 10.17645/si.v12.7543, while the four records carry si.v12i1.7543, si.v12.7543 and si.v12i2.7543.",
++      "bibliographic_identity": {
++        "title": "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action"
++      },
++      "acquisition_receipt": {
++        "source_url": "https://www.cogitatiopress.com/socialinclusion/article/download/7543/3744",
++        "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/WS4KQPWN.pdf",
++        "retrieved_at": "2026-10-01T14:46:40+00:00",
++        "sha256": "sha256:2c9b74bb82fc2b6a9736350dcfe312a5d8a06c76263b2cb45d7bbf7e79fcc29b",
++        "route": "publisher OA (Cogitatio Press)",
++        "note": "Licence as stated by the source: cc-by-4.0."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_registered",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:b5320eec-2c8d-5c06-a3fe-dda1a4bd2d28",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "9YCFMPVT",
++        "work_id": "work:b0b83157-1c47-5074-a168-84dcb5b8f8b2",
++        "bibliographic_version_id": "version:b5320eec-2c8d-5c06-a3fe-dda1a4bd2d28",
++        "source_version_id": "version:b5320eec-2c8d-5c06-a3fe-dda1a4bd2d28",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:b5320eec-2c8d-5c06-a3fe-dda1a4bd2d28",
++        "is_preferred_version": true,
++        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/WS4KQPWN.md",
++        "source_sha256": "sha256:e8e68bb24bfeb2824b9f8fcbbffbe6dfb4b2f7d476bb7922dc505286f688fc20"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/source-acquisition/oa-batch-2026-10-01/WS4KQPWN.md",
++          "sha256": "sha256:e8e68bb24bfeb2824b9f8fcbbffbe6dfb4b2f7d476bb7922dc505286f688fc20",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        },
++        {
++          "source_path": "generated/source-acquisition/oa-batch-2026-10-01/receipts.json#/records/35",
++          "locator": "acquisition receipt",
++          "source_url": "https://www.cogitatiopress.com/socialinclusion/article/download/7543/3744",
++          "sha256": "sha256:16f9be14ac9a702eafcb721a8cf4f6958391c54f01765ecf73d743a79378cd48"
++        }
++      ]
++    },
++    "FDR5APIU": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Open-access version of record acquired on 2026-10-01 (publisher OA (Cogitatio Press)). Title and author match; Social Inclusion 2024, Volume 12, Article 7543. The PDF prints DOI 10.17645/si.v12.7543, while the four records carry si.v12i1.7543, si.v12.7543 and si.v12i2.7543.",
++      "bibliographic_identity": {
++        "title": "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action"
++      },
++      "acquisition_receipt": {
++        "source_url": "https://www.cogitatiopress.com/socialinclusion/article/download/7543/3744",
++        "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/WS4KQPWN.pdf",
++        "retrieved_at": "2026-10-01T14:46:40+00:00",
++        "sha256": "sha256:2c9b74bb82fc2b6a9736350dcfe312a5d8a06c76263b2cb45d7bbf7e79fcc29b",
++        "route": "publisher OA (Cogitatio Press)",
++        "note": "Licence as stated by the source: cc-by-4.0."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_registered",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:bf914473-4be9-5a97-ae1f-040bb19a6d1b",
++        "difference_to_preferred": "version_of_record bound while the preferred version is a version_of_record: "
++      },
++      "binding": {
++        "record_id": "FDR5APIU",
++        "work_id": "work:37b79944-e5a1-51c4-af72-fd3719a8a08c",
++        "bibliographic_version_id": "version:9adc089b-f3be-58f5-af9a-522126d6b2c7",
++        "source_version_id": "version:9adc089b-f3be-58f5-af9a-522126d6b2c7",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:bf914473-4be9-5a97-ae1f-040bb19a6d1b",
++        "is_preferred_version": false,
++        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/WS4KQPWN.md",
++        "source_sha256": "sha256:e8e68bb24bfeb2824b9f8fcbbffbe6dfb4b2f7d476bb7922dc505286f688fc20"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/source-acquisition/oa-batch-2026-10-01/WS4KQPWN.md",
++          "sha256": "sha256:e8e68bb24bfeb2824b9f8fcbbffbe6dfb4b2f7d476bb7922dc505286f688fc20",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        },
++        {
++          "source_path": "generated/source-acquisition/oa-batch-2026-10-01/receipts.json#/records/35",
++          "locator": "acquisition receipt",
++          "source_url": "https://www.cogitatiopress.com/socialinclusion/article/download/7543/3744",
++          "sha256": "sha256:16f9be14ac9a702eafcb721a8cf4f6958391c54f01765ecf73d743a79378cd48"
++        }
++      ]
++    },
+     "WUMNU3W5": {
+       "binding_mode": "acquisition_receipt",
+       "agent_id": "claude-code/source-binding-2026-10-01",
+@@ -6373,6 +6638,1144 @@
+           "sha256": "sha256:a18b282e58e1ffd793f0ef803d4359367b1f503c4e6dc95a5274df5070a99de4"
+         }
+       ]
++    },
++    "64DQYVVB": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "More or less wrong: A benchmark for directional bias in LLM comparative reasoning",
++        "doi": "10.48550/arxiv.2506.03923"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.md",
++        "retrieved_at": "2026-02-03T09:23:05+01:00",
++        "sha256": "sha256:4eb99da2b239c093987716e495de0bfbc0fa3d21331d44ac1e79ce82fba3f578",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:8930b950-e750-5a9b-b810-8f89a206e4d1",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "64DQYVVB",
++        "work_id": "work:e2d9817a-faab-522d-8bf1-534765f083cf",
++        "bibliographic_version_id": "version:8930b950-e750-5a9b-b810-8f89a206e4d1",
++        "source_version_id": "version:8930b950-e750-5a9b-b810-8f89a206e4d1",
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:8930b950-e750-5a9b-b810-8f89a206e4d1",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.md",
++        "source_sha256": "sha256:4eb99da2b239c093987716e495de0bfbc0fa3d21331d44ac1e79ce82fba3f578"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Shafie_2025_More_or_less_wrong_A_benchmark_for_directional.md",
++          "sha256": "sha256:4eb99da2b239c093987716e495de0bfbc0fa3d21331d44ac1e79ce82fba3f578",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "BR2LG8LD": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "How AI hype impacts the LGBTQ+ community",
++        "doi": "10.1007/s43681-024-00423-8"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community.md",
++        "retrieved_at": "2026-02-03T09:05:08+01:00",
++        "sha256": "sha256:f669d6f7022b03b0041834ffe07df495e202dd172d0cfc1a7464741f3b3b58f7",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:a1ab159f-b5ce-55e9-b259-0a5ff46a4cde",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "BR2LG8LD",
++        "work_id": "work:3298f1c4-1a1d-5afe-8c74-e183f980e086",
++        "bibliographic_version_id": "version:a1ab159f-b5ce-55e9-b259-0a5ff46a4cde",
++        "source_version_id": "version:a1ab159f-b5ce-55e9-b259-0a5ff46a4cde",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:a1ab159f-b5ce-55e9-b259-0a5ff46a4cde",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community.md",
++        "source_sha256": "sha256:f669d6f7022b03b0041834ffe07df495e202dd172d0cfc1a7464741f3b3b58f7"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Kumar_2024_How_AI_hype_impacts_the_LGBTQ+_community.md",
++          "sha256": "sha256:f669d6f7022b03b0041834ffe07df495e202dd172d0cfc1a7464741f3b3b58f7",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "CLKAD87H": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Responsible prompting recommendation: Fostering responsible AI practices in prompting-time",
++        "doi": "10.1145/3706598.3713365"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/James_2025_Responsible_prompting_recommendation_Fostering.md",
++        "retrieved_at": "2026-02-03T09:00:51+01:00",
++        "sha256": "sha256:3032f1050ce81d713e2470a63fdd9e28fe522d6a1936b81c60795482e35141fe",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF James_2025_Responsible_prompting_recommendation_Fostering.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:475ad370-82a1-5dc1-8e8b-bae300569daa",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "CLKAD87H",
++        "work_id": "work:0b4ab982-d5f4-51f6-86ce-67a85417671e",
++        "bibliographic_version_id": "version:475ad370-82a1-5dc1-8e8b-bae300569daa",
++        "source_version_id": "version:475ad370-82a1-5dc1-8e8b-bae300569daa",
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:475ad370-82a1-5dc1-8e8b-bae300569daa",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/James_2025_Responsible_prompting_recommendation_Fostering.md",
++        "source_sha256": "sha256:3032f1050ce81d713e2470a63fdd9e28fe522d6a1936b81c60795482e35141fe"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/James_2025_Responsible_prompting_recommendation_Fostering.md",
++          "sha256": "sha256:3032f1050ce81d713e2470a63fdd9e28fe522d6a1936b81c60795482e35141fe",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "JGZDWMN3": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Bias in decision-making for AI's ethical dilemmas: A comparative study of ChatGPT and Claude",
++        "doi": "10.48550/arxiv.2501.10484"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.md",
++        "retrieved_at": "2026-02-03T09:32:00+01:00",
++        "sha256": "sha256:7befad2031222879e6a427fcaceba1cc846e6d0e2d02816215e486f2cfc99e2b",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:d0f4f1e0-8c1f-5c88-88d4-14798a564fc0",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "JGZDWMN3",
++        "work_id": "work:c8633f98-0462-5ed4-8bc4-c25ff72cdfec",
++        "bibliographic_version_id": "version:d0f4f1e0-8c1f-5c88-88d4-14798a564fc0",
++        "source_version_id": "version:d0f4f1e0-8c1f-5c88-88d4-14798a564fc0",
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:d0f4f1e0-8c1f-5c88-88d4-14798a564fc0",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.md",
++        "source_sha256": "sha256:7befad2031222879e6a427fcaceba1cc846e6d0e2d02816215e486f2cfc99e2b"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Wu_2025_Bias_in_decision-making_for_AI's_ethical_dilemmas.md",
++          "sha256": "sha256:7befad2031222879e6a427fcaceba1cc846e6d0e2d02816215e486f2cfc99e2b",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "JZ4P8V8S": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption",
++        "doi": "10.3389/fcomm.2025.1610111"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.md",
++        "retrieved_at": "2026-02-03T09:00:17+01:00",
++        "sha256": "sha256:d849cda89a1a6c96ee8d97c0e3eec147927e5c4c359281c8d3d5e5fe4e559947",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "pass",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:d2ed170e-a270-5607-b29b-fb0227b34d0e",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "JZ4P8V8S",
++        "work_id": "work:b5a11cfa-25a1-5519-a8ac-0bbe3ab045b3",
++        "bibliographic_version_id": "version:d2ed170e-a270-5607-b29b-fb0227b34d0e",
++        "source_version_id": "version:d2ed170e-a270-5607-b29b-fb0227b34d0e",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:d2ed170e-a270-5607-b29b-fb0227b34d0e",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.md",
++        "source_sha256": "sha256:d849cda89a1a6c96ee8d97c0e3eec147927e5c4c359281c8d3d5e5fe4e559947"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.md",
++          "sha256": "sha256:d849cda89a1a6c96ee8d97c0e3eec147927e5c4c359281c8d3d5e5fe4e559947",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "LMW8DZ78": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Indecision on the use of artificial intelligence in healthcare: A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS",
++        "doi": "10.1177/20552076251339522"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Schneider_2025_Indecision_on_the_use_of_artificial_intelligence.md",
++        "retrieved_at": "2026-02-03T09:20:44+01:00",
++        "sha256": "sha256:64fc9076afd744e72a2d0de19abd4e88aab2160b36ac72311cb8fd624660852a",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Schneider_2025_Indecision_on_the_use_of_artificial_intelligence.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "pass",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:8901e555-ab75-5508-870b-f27b27f4148a",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "LMW8DZ78",
++        "work_id": "work:9b7469ac-981a-5eb9-8cd7-a73f5a019f4a",
++        "bibliographic_version_id": "version:8901e555-ab75-5508-870b-f27b27f4148a",
++        "source_version_id": "version:8901e555-ab75-5508-870b-f27b27f4148a",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:8901e555-ab75-5508-870b-f27b27f4148a",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Schneider_2025_Indecision_on_the_use_of_artificial_intelligence.md",
++        "source_sha256": "sha256:64fc9076afd744e72a2d0de19abd4e88aab2160b36ac72311cb8fd624660852a"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Schneider_2025_Indecision_on_the_use_of_artificial_intelligence.md",
++          "sha256": "sha256:64fc9076afd744e72a2d0de19abd4e88aab2160b36ac72311cb8fd624660852a",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "M7AGB7LI": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Model explanations for gender and ethnicity bias mitigation in AI-generated narratives",
++        "doi": "10.15760/etd.3923"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md",
++        "retrieved_at": "2026-02-03T09:18:38+01:00",
++        "sha256": "sha256:c8dde56e1eb9474ce7c019a16121f68658ab0ef28febec5ea8ff73a4744a34bf",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:bb45d529-1ae6-5ee8-b23b-900caa24b437",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "M7AGB7LI",
++        "work_id": "work:2c4e0186-65b6-532a-b9a1-854a87541510",
++        "bibliographic_version_id": "version:bb45d529-1ae6-5ee8-b23b-900caa24b437",
++        "source_version_id": "version:bb45d529-1ae6-5ee8-b23b-900caa24b437",
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:bb45d529-1ae6-5ee8-b23b-900caa24b437",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md",
++        "source_sha256": "sha256:c8dde56e1eb9474ce7c019a16121f68658ab0ef28febec5ea8ff73a4744a34bf"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md",
++          "sha256": "sha256:c8dde56e1eb9474ce7c019a16121f68658ab0ef28febec5ea8ff73a4744a34bf",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "S8WGUVQT": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Automated government benefits and welfare surveillance",
++        "doi": "10.24908/ss.v21i3.16107"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Dencik_2024_Automated_government_benefits_and_welfare.md",
++        "retrieved_at": "2026-02-03T08:46:38+01:00",
++        "sha256": "sha256:0a528e6a9dc5881e6c6faec81f772fbb935f2b70718992fb7a1cb487e8914382",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Dencik_2024_Automated_government_benefits_and_welfare.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:46fd8577-57f9-5d87-acee-21302e91554d",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "S8WGUVQT",
++        "work_id": "work:0f32c6e1-9f19-5e58-b51e-6099f4cc91cd",
++        "bibliographic_version_id": "version:46fd8577-57f9-5d87-acee-21302e91554d",
++        "source_version_id": "version:46fd8577-57f9-5d87-acee-21302e91554d",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:46fd8577-57f9-5d87-acee-21302e91554d",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Dencik_2024_Automated_government_benefits_and_welfare.md",
++        "source_sha256": "sha256:0a528e6a9dc5881e6c6faec81f772fbb935f2b70718992fb7a1cb487e8914382"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Dencik_2024_Automated_government_benefits_and_welfare.md",
++          "sha256": "sha256:0a528e6a9dc5881e6c6faec81f772fbb935f2b70718992fb7a1cb487e8914382",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "UB9NK8KI": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Scaling implicit bias analysis across transformer-based language models through embedding association test and prompt engineering",
++        "doi": "10.3390/app14083483"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Zayed_2024_Scaling_implicit_bias_analysis_across.md",
++        "retrieved_at": "2026-02-03T09:34:04+01:00",
++        "sha256": "sha256:2e544c937021f7a912aab3d9db84fcdc3dffe460fd805d60b8faef57a336f442",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Zayed_2024_Scaling_implicit_bias_analysis_across.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "pass",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:f3ee255d-b908-5727-bc49-d56443cbd6e0",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "UB9NK8KI",
++        "work_id": "work:6cb20b02-4d3c-58e4-8e53-05b3885b28ce",
++        "bibliographic_version_id": "version:f3ee255d-b908-5727-bc49-d56443cbd6e0",
++        "source_version_id": "version:f3ee255d-b908-5727-bc49-d56443cbd6e0",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:f3ee255d-b908-5727-bc49-d56443cbd6e0",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Zayed_2024_Scaling_implicit_bias_analysis_across.md",
++        "source_sha256": "sha256:2e544c937021f7a912aab3d9db84fcdc3dffe460fd805d60b8faef57a336f442"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Zayed_2024_Scaling_implicit_bias_analysis_across.md",
++          "sha256": "sha256:2e544c937021f7a912aab3d9db84fcdc3dffe460fd805d60b8faef57a336f442",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "UBYTNGNV": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "The AI Act, gender equality and non-discrimination: what role for the AI Office?",
++        "doi": "10.1007/s12027-024-00785-w"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Lütz_2024_The_AI_Act,_gender_equality_and.md",
++        "retrieved_at": "2026-02-03T09:09:58+01:00",
++        "sha256": "sha256:e78fbdee4c695aeb29c6c64c26b876fbffc2dd1f5180287bff1d7504e1cdd473",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Lütz_2024_The_AI_Act,_gender_equality_and.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:cdbc8e30-1194-5e81-9669-cd338627231f",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "UBYTNGNV",
++        "work_id": "work:1c7bb6b2-9c36-5199-a172-76003d7cb61f",
++        "bibliographic_version_id": "version:cdbc8e30-1194-5e81-9669-cd338627231f",
++        "source_version_id": "version:cdbc8e30-1194-5e81-9669-cd338627231f",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:cdbc8e30-1194-5e81-9669-cd338627231f",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Lütz_2024_The_AI_Act,_gender_equality_and.md",
++        "source_sha256": "sha256:e78fbdee4c695aeb29c6c64c26b876fbffc2dd1f5180287bff1d7504e1cdd473"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Lütz_2024_The_AI_Act,_gender_equality_and.md",
++          "sha256": "sha256:e78fbdee4c695aeb29c6c64c26b876fbffc2dd1f5180287bff1d7504e1cdd473",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "XQM6WRU2": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Exploring machine learning to support decision-making for placement stabilization and preservation in child welfare",
++        "doi": "10.1007/s10826-024-02993-x"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Cher_2024_Exploring_machine_learning_to_support.md",
++        "retrieved_at": "2026-02-03T08:45:06+01:00",
++        "sha256": "sha256:1606345d09446dfdc2c08e4993fc20d0114d4f1d50e33b02b112073cabe3ce8c",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Cher_2024_Exploring_machine_learning_to_support.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:f481fbcc-5a3b-57ff-8326-7e2a3a2a5045",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "XQM6WRU2",
++        "work_id": "work:b694f6e0-f787-5edc-9d81-443a1eb83c5e",
++        "bibliographic_version_id": "version:f481fbcc-5a3b-57ff-8326-7e2a3a2a5045",
++        "source_version_id": "version:f481fbcc-5a3b-57ff-8326-7e2a3a2a5045",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:f481fbcc-5a3b-57ff-8326-7e2a3a2a5045",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Cher_2024_Exploring_machine_learning_to_support.md",
++        "source_sha256": "sha256:1606345d09446dfdc2c08e4993fc20d0114d4f1d50e33b02b112073cabe3ce8c"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Cher_2024_Exploring_machine_learning_to_support.md",
++          "sha256": "sha256:1606345d09446dfdc2c08e4993fc20d0114d4f1d50e33b02b112073cabe3ce8c",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "YV53DKI2": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence",
++        "doi": "10.1007/s11023-025-09738-9"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Santos_2024_Explainability_through_systematicity_The_hard.md",
++        "retrieved_at": "2026-02-03T09:19:50+01:00",
++        "sha256": "sha256:b75c9f24c2073d5f51885d159f57ed07d13d240f5b201b09edb36d8579b19e8a",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Santos_2024_Explainability_through_systematicity_The_hard.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:cb0ca879-cb67-5c4a-952a-f5d0969fe083",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "YV53DKI2",
++        "work_id": "work:02644be9-7d50-5d9e-a122-62e031e1263d",
++        "bibliographic_version_id": "version:cb0ca879-cb67-5c4a-952a-f5d0969fe083",
++        "source_version_id": "version:cb0ca879-cb67-5c4a-952a-f5d0969fe083",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:cb0ca879-cb67-5c4a-952a-f5d0969fe083",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Santos_2024_Explainability_through_systematicity_The_hard.md",
++        "source_sha256": "sha256:b75c9f24c2073d5f51885d159f57ed07d13d240f5b201b09edb36d8579b19e8a"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Santos_2024_Explainability_through_systematicity_The_hard.md",
++          "sha256": "sha256:b75c9f24c2073d5f51885d159f57ed07d13d240f5b201b09edb36d8579b19e8a",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "99QJDBSV": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "How large language models judge and influence human cooperation",
++        "doi": "10.48550/arxiv.2507.00088"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Santos_2025_How_large_language_models_judge_cooperation.md",
++        "retrieved_at": "2026-02-03T09:20:01+01:00",
++        "sha256": "sha256:ab839ab74a3c7be0cf65edd31e8ce89b8adebd4f3bf994c3476a9ec20a2924c9",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Santos_2025_How_large_language_models_judge_cooperation.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "not_printed"
++      },
++      "version_relation": {
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:e0aa7ced-5f42-54d9-97c2-ae40b2e66f5b",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "99QJDBSV",
++        "work_id": "work:7e584110-4e9e-5aed-924c-3a2ac9ab4c10",
++        "bibliographic_version_id": "version:e0aa7ced-5f42-54d9-97c2-ae40b2e66f5b",
++        "source_version_id": "version:e0aa7ced-5f42-54d9-97c2-ae40b2e66f5b",
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:e0aa7ced-5f42-54d9-97c2-ae40b2e66f5b",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Santos_2025_How_large_language_models_judge_cooperation.md",
++        "source_sha256": "sha256:ab839ab74a3c7be0cf65edd31e8ce89b8adebd4f3bf994c3476a9ec20a2924c9"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Santos_2025_How_large_language_models_judge_cooperation.md",
++          "sha256": "sha256:ab839ab74a3c7be0cf65edd31e8ce89b8adebd4f3bf994c3476a9ec20a2924c9",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "E4G328PD": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment",
++        "doi": "10.1056/aioa2400802"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.md",
++        "retrieved_at": "2026-02-03T08:59:45+01:00",
++        "sha256": "sha256:e8ec6b31667383a58fd078dfb01a5d23f68e0208837a5c23882f2f0b248105e3",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "not_registered"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:9325aebd-26a7-5181-a112-7098cf2de9ab",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "E4G328PD",
++        "work_id": "work:cb65a14f-9700-50d6-9336-37781f295e2f",
++        "bibliographic_version_id": "version:9325aebd-26a7-5181-a112-7098cf2de9ab",
++        "source_version_id": "version:9325aebd-26a7-5181-a112-7098cf2de9ab",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:9325aebd-26a7-5181-a112-7098cf2de9ab",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.md",
++        "source_sha256": "sha256:e8ec6b31667383a58fd078dfb01a5d23f68e0208837a5c23882f2f0b248105e3"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Heinz_2025_Clinical_trial_of_an_LLM-based_conversational_AI.md",
++          "sha256": "sha256:e8ec6b31667383a58fd078dfb01a5d23f68e0208837a5c23882f2f0b248105e3",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "XY2WVKBY": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Governance of discriminatory content in conversational AIs: a cross-platform and cross-cultural analysis",
++        "doi": "10.1080/1369118x.2025.2537803"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Zeng_2025_Governing_discriminatory_content_in.md",
++        "retrieved_at": "2026-02-03T09:34:16+01:00",
++        "sha256": "sha256:a092211fd9beab1be884402ee901a065ba9b595cc7cab9f47bb824921cef4c53",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Zeng_2025_Governing_discriminatory_content_in.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "pass",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:0ef9781d-6715-567f-9627-95cb7c340847",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "XY2WVKBY",
++        "work_id": "work:3a7b2508-c024-541e-8ec9-61523710133b",
++        "bibliographic_version_id": "version:0ef9781d-6715-567f-9627-95cb7c340847",
++        "source_version_id": "version:0ef9781d-6715-567f-9627-95cb7c340847",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:0ef9781d-6715-567f-9627-95cb7c340847",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Zeng_2025_Governing_discriminatory_content_in.md",
++        "source_sha256": "sha256:a092211fd9beab1be884402ee901a065ba9b595cc7cab9f47bb824921cef4c53"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Zeng_2025_Governing_discriminatory_content_in.md",
++          "sha256": "sha256:a092211fd9beab1be884402ee901a065ba9b595cc7cab9f47bb824921cef4c53",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "7WMD5JQ6": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Toward Agency‐Centered AI Literacy: A Scoping Review",
++        "doi": "10.1002/pra2.1472"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Maeda_2025_Toward_Agency‐Centered_span.md",
++        "retrieved_at": "2026-02-03T09:10:10+01:00",
++        "sha256": "sha256:02c08806c5c8c5aabf8a9d6d3440e7973753546cad90345bcc832b9f93076daa",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Maeda_2025_Toward_Agency‐Centered_span.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "not_registered"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:845ebb84-0c29-57eb-94b4-75f98801e7f6",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "7WMD5JQ6",
++        "work_id": "work:51355339-5dc0-51c8-ae65-4a6bbebe4dfd",
++        "bibliographic_version_id": "version:845ebb84-0c29-57eb-94b4-75f98801e7f6",
++        "source_version_id": "version:845ebb84-0c29-57eb-94b4-75f98801e7f6",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:845ebb84-0c29-57eb-94b4-75f98801e7f6",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Maeda_2025_Toward_Agency‐Centered_span.md",
++        "source_sha256": "sha256:02c08806c5c8c5aabf8a9d6d3440e7973753546cad90345bcc832b9f93076daa"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Maeda_2025_Toward_Agency‐Centered_span.md",
++          "sha256": "sha256:02c08806c5c8c5aabf8a9d6d3440e7973753546cad90345bcc832b9f93076daa",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "6QPLNNQK": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Challenging systematic prejudices: an investigation into gender bias in large language models"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
++        "retrieved_at": "2026-02-03T09:27:37+01:00",
++        "sha256": "sha256:c5adaa629c69ae639e8922126cb80312abd16d9c58b274777a0a1c5d7043d1c6",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF UNESCO_2024_Bias_against_women_and_girls_in_large_language.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "not_registered",
++        "doi": "not_registered",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:70aa2529-ec13-5fcc-bea0-d2d6be062d34",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "6QPLNNQK",
++        "work_id": "work:7e4bd8ed-99f9-52ee-b719-fa43b6fb139e",
++        "bibliographic_version_id": "version:70aa2529-ec13-5fcc-bea0-d2d6be062d34",
++        "source_version_id": "version:70aa2529-ec13-5fcc-bea0-d2d6be062d34",
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:70aa2529-ec13-5fcc-bea0-d2d6be062d34",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
++        "source_sha256": "sha256:c5adaa629c69ae639e8922126cb80312abd16d9c58b274777a0a1c5d7043d1c6"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
++          "sha256": "sha256:c5adaa629c69ae639e8922126cb80312abd16d9c58b274777a0a1c5d7043d1c6",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "7QQV7R9S": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Generative AI and Social Work: Initial Guidance for Practice and Ethics"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md",
++        "retrieved_at": "2026-02-03T08:43:53+01:00",
++        "sha256": "sha256:e65682722507a93955e4a04c2e3dbcbd46139562892883cd86758facad5e1f63",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "not_registered",
++        "doi": "not_registered",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:89e4e84f-7a62-5bc0-847d-d28b3a6a0d56",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "7QQV7R9S",
++        "work_id": "work:4407dc4b-a985-5596-9d5d-1ccd1d96cf7b",
++        "bibliographic_version_id": "version:89e4e84f-7a62-5bc0-847d-d28b3a6a0d56",
++        "source_version_id": "version:89e4e84f-7a62-5bc0-847d-d28b3a6a0d56",
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:89e4e84f-7a62-5bc0-847d-d28b3a6a0d56",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md",
++        "source_sha256": "sha256:e65682722507a93955e4a04c2e3dbcbd46139562892883cd86758facad5e1f63"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md",
++          "sha256": "sha256:e65682722507a93955e4a04c2e3dbcbd46139562892883cd86758facad5e1f63",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "NVZA58ML": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "A survey on fairness in large language models",
++        "doi": "10.48550/arxiv.2308.10149"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Wang_2024_A_survey_on_fairness_in_large_language_models.md",
++        "retrieved_at": "2026-02-03T09:30:27+01:00",
++        "sha256": "sha256:6ef9a4919f1754a4a9753bf9979a9f6eedf83d127eb1e60353729b9b75be222a",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Wang_2024_A_survey_on_fairness_in_large_language_models.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "not_printed"
++      },
++      "version_relation": {
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:ffdbfa4f-a3bc-505a-8a5f-4400cba2e39c",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "NVZA58ML",
++        "work_id": "work:4dfd4727-32f3-523e-8700-ad6fde9f4705",
++        "bibliographic_version_id": "version:ffdbfa4f-a3bc-505a-8a5f-4400cba2e39c",
++        "source_version_id": "version:ffdbfa4f-a3bc-505a-8a5f-4400cba2e39c",
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:ffdbfa4f-a3bc-505a-8a5f-4400cba2e39c",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Wang_2024_A_survey_on_fairness_in_large_language_models.md",
++        "source_sha256": "sha256:6ef9a4919f1754a4a9753bf9979a9f6eedf83d127eb1e60353729b9b75be222a"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Wang_2024_A_survey_on_fairness_in_large_language_models.md",
++          "sha256": "sha256:6ef9a4919f1754a4a9753bf9979a9f6eedf83d127eb1e60353729b9b75be222a",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "YUVR5YNQ": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Self-debiasing large language models: Zero-shot recognition and reduction of stereotypes",
++        "doi": "10.18653/v1/2025.naacl-short.74"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Parrish_2025_Self-debiasing_large_language_models_Zero-shot.md",
++        "retrieved_at": "2026-02-03T09:14:37+01:00",
++        "sha256": "sha256:0afa50f71f7df517359c9ef4007967f99e77212ea592809096e77b842cb52fce",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Parrish_2025_Self-debiasing_large_language_models_Zero-shot.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "not_printed"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:3156c17e-5cbf-5830-9a69-9c3c52dbb42d",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "YUVR5YNQ",
++        "work_id": "work:4d23d85d-04b4-5ebc-8858-36f933d7b885",
++        "bibliographic_version_id": "version:3156c17e-5cbf-5830-9a69-9c3c52dbb42d",
++        "source_version_id": "version:3156c17e-5cbf-5830-9a69-9c3c52dbb42d",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:3156c17e-5cbf-5830-9a69-9c3c52dbb42d",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Parrish_2025_Self-debiasing_large_language_models_Zero-shot.md",
++        "source_sha256": "sha256:0afa50f71f7df517359c9ef4007967f99e77212ea592809096e77b842cb52fce"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Parrish_2025_Self-debiasing_large_language_models_Zero-shot.md",
++          "sha256": "sha256:0afa50f71f7df517359c9ef4007967f99e77212ea592809096e77b842cb52fce",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "DWS4KXBW": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Towards Substantive Equality in Artificial Intelligence: Transformative AI Policy for Gender Equality and Diversity"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
++        "retrieved_at": "2026-02-03T18:48:39+01:00",
++        "sha256": "sha256:c0e9a4bacde81de9cd5748b301c66b3bcfa7e5d43430584e48b8621ddbe97ca1",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "not_registered",
++        "doi": "not_registered",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:90faf9e0-b434-58d6-b13f-fac33e8c09b3",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "DWS4KXBW",
++        "work_id": "work:1d6d18e8-3caa-5677-b0c0-b46ab20aab43",
++        "bibliographic_version_id": "version:90faf9e0-b434-58d6-b13f-fac33e8c09b3",
++        "source_version_id": "version:90faf9e0-b434-58d6-b13f-fac33e8c09b3",
++        "source_version_type": "unknown",
++        "preferred_version_id": "version:90faf9e0-b434-58d6-b13f-fac33e8c09b3",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
++        "source_sha256": "sha256:c0e9a4bacde81de9cd5748b301c66b3bcfa7e5d43430584e48b8621ddbe97ca1"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
++          "sha256": "sha256:c0e9a4bacde81de9cd5748b301c66b3bcfa7e5d43430584e48b8621ddbe97ca1",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "MPCZVZEW": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata was corrected from authoritative metadata in corpus/metadata_corrections.json; printed title, byline and masthead of the bound text then identify the record's registered version.",
++      "bibliographic_identity": {
++        "title": "Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room",
++        "doi": "10.48550/arxiv.2504.16148"
++      },
++      "acquisition_receipt": {
++        "repo_path": "generated/markdown_clean/Hooshyar et al._2025_Towards_responsible_AI_for_education_Hybrid.md",
++        "retrieved_at": "2026-02-03T09:00:15+01:00",
++        "sha256": "sha256:be5f051ac424cc28840195df1d490170cc7f4e1c18dc076fb5b43d9d546e578f",
++        "route": "repository: earlier Docling conversion of an acquired PDF",
++        "note": "Original PDF Hooshyar et al._2025_Towards_responsible_AI_for_education_Hybrid.pdf is not versioned; the receipt time is the conversion time."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_printed",
++        "year": "not_printed"
++      },
++      "version_relation": {
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:0089df60-d3b8-5cec-9f7f-6a9d34baaf89",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "MPCZVZEW",
++        "work_id": "work:8257578a-46c7-55de-bf6b-678114823576",
++        "bibliographic_version_id": "version:0089df60-d3b8-5cec-9f7f-6a9d34baaf89",
++        "source_version_id": "version:0089df60-d3b8-5cec-9f7f-6a9d34baaf89",
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:0089df60-d3b8-5cec-9f7f-6a9d34baaf89",
++        "is_preferred_version": true,
++        "source_path": "generated/markdown_clean/Hooshyar et al._2025_Towards_responsible_AI_for_education_Hybrid.md",
++        "source_sha256": "sha256:be5f051ac424cc28840195df1d490170cc7f4e1c18dc076fb5b43d9d546e578f"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/markdown_clean/Hooshyar et al._2025_Towards_responsible_AI_for_education_Hybrid.md",
++          "sha256": "sha256:be5f051ac424cc28840195df1d490170cc7f4e1c18dc076fb5b43d9d546e578f",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        }
++      ]
++    },
++    "6MJYP7ZX": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "Corrupt record metadata (authors of another paper, ResearchGate URL) was corrected to the Asseri et al. arXiv preprint; the exact v1 text bound to 5UAHQESQ is bound here. The Work stays under its recorded integrity hold.",
++      "bibliographic_identity": {
++        "title": "Prompt engineering techniques for mitigating cultural bias against Arabs and Muslims in large language models: A systematic review"
++      },
++      "acquisition_receipt": {
++        "source_url": "https://arxiv.org/html/2506.18199v1",
++        "repo_path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-v1.txt",
++        "retrieved_at": "2026-09-05T14:40:33.321863+00:00",
++        "sha256": "sha256:af3e41cf9b3475a6ad5b255942115a0928cb331afd40e72ddb126632304632eb",
++        "route": "historical resolution 2026-09-05",
++        "note": "Raw response hash sha256:d2ec027b0d00986be3d67590a8b1e61cc6546de6ae233dbb1980ea609da4c487 is retained in the acquisition record."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "pass",
++        "doi": "not_registered",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:fdf4d4e8-faf0-572f-8f75-1efddb963ed8",
++        "difference_to_preferred": "preprint bound while the preferred version is a preprint: arXiv v1 bound; the corrected record names the unversioned arXiv entry 2506.18199"
++      },
++      "binding": {
++        "record_id": "6MJYP7ZX",
++        "work_id": "work:8e01ec71-65ff-5273-b5b9-a582fec48008",
++        "bibliographic_version_id": "version:04fed931-77e4-551f-a65d-171b9355d611",
++        "source_version_id": "version:ab927bf4-8220-592a-a140-2f7bcaf1bcdf",
++        "source_version_type": "preprint",
++        "preferred_version_id": "version:fdf4d4e8-faf0-572f-8f75-1efddb963ed8",
++        "is_preferred_version": false,
++        "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-v1.txt",
++        "source_sha256": "sha256:af3e41cf9b3475a6ad5b255942115a0928cb331afd40e72ddb126632304632eb"
++      },
++      "evidence": [
++        {
++          "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/asseri-v1.txt",
++          "sha256": "sha256:af3e41cf9b3475a6ad5b255942115a0928cb331afd40e72ddb126632304632eb",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        },
++        {
++          "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/acquisition.json#/records/14",
++          "locator": "acquisition record",
++          "source_url": "https://arxiv.org/html/2506.18199v1",
++          "sha256": "sha256:16b8e7c92f543ecf4872a4d548cc90d07652ca5888032712c0a2f1debd2e5148"
++        }
++      ]
++    },
++    "EUTEI9EJ": {
++      "binding_mode": "acquisition_receipt",
++      "agent_id": "claude-code/source-binding-2026-10-01",
++      "model": "Claude Opus 5.5",
++      "reviewed_at": "2026-10-01T15:17:37+00:00",
++      "reason": "English full text of the article; Crossref registers the English and the Spanish title for the same DOI, and the record title was corrected to the English one the text prints.",
++      "bibliographic_identity": {
++        "title": "Analysis on disinformation and gender bias generated by artificial intelligence",
++        "doi": "10.25009/is.v11i21.3001"
++      },
++      "acquisition_receipt": {
++        "source_url": "https://is.uv.mx/index.php/IS/article/download/3001/4785",
++        "repo_path": "generated/pdfs/codex-websearch-2026/050d5f410967dd9371a0.pdf",
++        "retrieved_at": "2026-08-24T15:24:08.796534+00:00",
++        "sha256": "sha256:1198f99aae59799bf48419ac855abb4d2433bb418db52c75885b14ea824d1cd6",
++        "route": "codex-websearch-2026 acquisition",
++        "note": "Original PDF stays local; the acquisition manifest records its URL and digest."
++      },
++      "identity_check": {
++        "title": "pass",
++        "first_author": "not_registered",
++        "doi": "pass",
++        "year": "pass"
++      },
++      "version_relation": {
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:0a8a413f-8255-5966-beef-6ab490b8e9a7",
++        "difference_to_preferred": "none: the bound text is the preferred version"
++      },
++      "binding": {
++        "record_id": "EUTEI9EJ",
++        "work_id": "work:bfc73f5a-39eb-5331-bddb-b897f3bbe650",
++        "bibliographic_version_id": "version:0a8a413f-8255-5966-beef-6ab490b8e9a7",
++        "source_version_id": "version:0a8a413f-8255-5966-beef-6ab490b8e9a7",
++        "source_version_type": "version_of_record",
++        "preferred_version_id": "version:0a8a413f-8255-5966-beef-6ab490b8e9a7",
++        "is_preferred_version": true,
++        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/050d5f410967dd9371a0.md",
++        "source_sha256": "sha256:0eb69105eb0cc4ec80910ff7786a9557eeadfc9bf3e8b829d0d45330a32ecd4f"
++      },
++      "evidence": [
++        {
++          "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/050d5f410967dd9371a0.md",
++          "sha256": "sha256:0eb69105eb0cc4ec80910ff7786a9557eeadfc9bf3e8b829d0d45330a32ecd4f",
++          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
++        },
++        {
++          "source_path": "generated/source-acquisition/codex-websearch-2026/acquisition-manifest.json#/records/36",
++          "locator": "acquisition receipt of the PDF",
++          "source_url": "https://is.uv.mx/index.php/IS/article/download/3001/4785",
++          "sha256": "sha256:0130392cb8e7e5f765039869aabf6a557e1763171490cce27e54251e1cdfa8fb"
++        }
++      ]
+     }
+   }
+ }
