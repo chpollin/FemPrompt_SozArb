@@ -1,0 +1,3 @@
+# Gender category divergence, 1 October 2026
+
+Per-record classification of the round-one works where the experts coded Gender and the LLM track did not, plus a control sample. Classes G1 analytic focus, G2 variable or result, G3 mention only, G4 absent in the available text. Quotes are verbatim, at most 30 words, with line locators into the bound text. The classification was made by LLM subagents and checked in a sample by the orchestrating agent, so it is not deterministic and not human-verified. The scripts document selection, passage retrieval and merging; their paths point to the session scratchpad where they ran. Interpretation: knowledge/analysis-divergence.md#gender-category-divergence.
