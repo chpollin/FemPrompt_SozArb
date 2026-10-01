@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/fyDnUVRZt7o0sZ4HVEMGcW+CYN4</id>
+  <title>arXiv Query: search_query=&amp;id_list=2506.03923&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-01T14:29:28Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2506.03923" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2506.03923v1</id>
+    <title>More or Less Wrong: A Benchmark for Directional Bias in LLM Comparative Reasoning</title>
+    <updated>2025-06-04T13:15:01Z</updated>
+    <link href="https://arxiv.org/abs/2506.03923v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.03923v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) are known to be sensitive to input phrasing, but the mechanisms by which semantic cues shape reasoning remain poorly understood. We investigate this phenomenon in the context of comparative math problems with objective ground truth, revealing a consistent and directional framing bias: logically equivalent questions containing the words ``more'', ``less'', or ``equal'' systematically steer predictions in the direction of the framing term. To study this effect, we introduce MathComp, a controlled benchmark of 300 comparison scenarios, each evaluated under 14 prompt variants across three LLM families. We find that model errors frequently reflect linguistic steering, systematic shifts toward the comparative term present in the prompt. Chain-of-thought prompting reduces these biases, but its effectiveness varies: free-form reasoning is more robust, while structured formats may preserve or reintroduce directional drift. Finally, we show that including demographic identity terms (e.g., ``a woman'', ``a Black person'') in input scenarios amplifies directional drift, despite identical underlying quantities, highlighting the interplay between semantic framing and social referents. These findings expose critical blind spots in standard evaluation and motivate framing-aware benchmarks for diagnosing reasoning robustness and fairness in LLMs.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-04T13:15:01Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Mohammadamin Shafiei</name>
+    </author>
+    <author>
+      <name>Hamidreza Saffari</name>
+    </author>
+    <author>
+      <name>Nafise Sadat Moosavi</name>
+    </author>
+  </entry>
+</feed>

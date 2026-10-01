@@ -13,6 +13,7 @@ from src.analysis.build_work_version_registry import (
 from src.analysis.work_versions import (
     load_contract,
     normalise_arxiv,
+    receipt_identity_check,
     source_binding_for_record,
     validate_registry,
 )
@@ -949,3 +950,242 @@ def test_production_bindings_keep_vor_and_historical_source_holds():
         registry["record_index"][key]["work_id"] for key in ("CHJQ52DC", "Y4BMCI2J")
     } <= held_work_ids
     assert "work:8e01ec71-65ff-5273-b5b9-a582fec48008" in held_work_ids
+
+
+RECEIPT_TEXT = (
+    "Journal of Examples\n# Example work\nAda Lovelace and Grace Hopper\n"
+    "DOI: 10.1234/example\nPublished 2022\n## Abstract\nThe study reports findings.\n"
+)
+
+
+def receipt_fixture(tmp_path, text=RECEIPT_TEXT):
+    """A version-of-record text bound through an acquisition receipt."""
+    registry, _, binding = source_fixture(tmp_path)
+    version = registry["works"][0]["versions"][0]
+    version["identifiers"] = {"doi": ["10.1234/example"], "zotero_key": ["P1"]}
+    version["authors"] = ["Ada Lovelace", "Grace Hopper"]
+    registry["identifier_index"] = {
+        "doi:10.1234/example": deepcopy(registry["record_index"]["P1"])
+    }
+    (tmp_path / "source.md").write_text(text, encoding="utf-8")
+    digest = artifact_hash(tmp_path, "source.md")
+    binding.update(
+        source_version_id="version:vor",
+        source_version_type="version_of_record",
+        is_preferred_version=True,
+        source_sha256=digest,
+    )
+    entry = {
+        "binding_mode": "acquisition_receipt",
+        "binding": binding,
+        "bibliographic_identity": {"title": "Example work", "doi": "10.1234/example"},
+        "acquisition_receipt": {
+            "source_url": "https://publisher.test/example.pdf",
+            "retrieved_at": "2026-10-01T10:00:00+00:00",
+            "sha256": "sha256:" + "a" * 64,
+            "route": "publisher open access",
+        },
+        "identity_check": {
+            "title": "pass",
+            "first_author": "pass",
+            "doi": "pass",
+            "year": "pass",
+        },
+        "version_relation": {
+            "source_version_type": "version_of_record",
+            "preferred_version_id": "version:vor",
+            "difference_to_preferred": "none, the text is the preferred version",
+        },
+        "agent_id": "binding-agent",
+        "model": "test",
+        "reviewed_at": "2026-10-01T10:05:00Z",
+        "reason": "Receipt and opening text identify the registered version.",
+        "evidence": [
+            {
+                "source_path": "source.md",
+                "sha256": digest,
+                "locator": "opening text",
+            }
+        ],
+    }
+    manifest = {
+        "schema": "femprompt-source-version-bindings/0.2",
+        "records": {"P1": entry},
+    }
+    write_source_manifest(tmp_path, manifest)
+    return registry, manifest, binding
+
+
+def test_receipt_binding_changes_only_source_index(tmp_path):
+    registry, manifest, _binding = receipt_fixture(tmp_path)
+    before = deepcopy(registry)
+    apply_source_bindings(tmp_path, registry, load_contract())
+    validate_registry(registry, load_contract())
+    assert {k: v for k, v in registry.items() if k != "source_index"} == before
+    bound = source_binding_for_record(registry, "P1", tmp_path)
+    assert bound["binding_mode"] == "acquisition_receipt"
+    assert bound["source_path"] == "source.md"
+    assert bound["identity_check"] == manifest["records"]["P1"]["identity_check"]
+    (tmp_path / "source.md").write_text("Changed", encoding="utf-8")
+    with pytest.raises(ValueError):
+        source_binding_for_record(registry, "P1", tmp_path)
+
+
+@pytest.mark.parametrize(
+    ("text", "failure"),
+    [
+        # Another work's text: its own title and authors, no trace of this work.
+        ("# A different study\nJane Doe\nDOI: 10.9999/other\n", "title"),
+        # Same title, but the byline names other authors; the registered author
+        # occurs only as a citation far from the title.
+        (
+            "# Example work\nJane Doe and John Roe\n"
+            + "Body text. " * 600
+            + "\nReferences\nLovelace A (1843) Notes.\n",
+            "first_author",
+        ),
+        # Same title and author, but the text prints another work's DOI.
+        ("# Example work\nAda Lovelace\nDOI: 10.9999/other\n", "doi"),
+        # The title occurs only in converter front matter written from the record.
+        (
+            "---\ntitle: Example work\nauthors: Ada Lovelace\n---\n# Unrelated report\nJane Doe\n",
+            "title",
+        ),
+    ],
+)
+def test_receipt_binding_rejects_a_mismatching_work(tmp_path, text, failure):
+    registry, manifest, _ = receipt_fixture(tmp_path, text)
+    entry = manifest["records"]["P1"]
+    version = registry["works"][0]["versions"][0]
+    computed = receipt_identity_check(text, version, {"10.1234/example"})
+    assert computed[failure] == "fail"
+    # Neither a recorded passing check nor the honest failing one binds.
+    with pytest.raises(ValueError, match="identity check no longer holds"):
+        apply_source_bindings(tmp_path, deepcopy(registry), load_contract())
+    entry["identity_check"] = computed
+    write_source_manifest(tmp_path, manifest)
+    with pytest.raises(ValueError, match="lacks a passed identity check"):
+        apply_source_bindings(tmp_path, registry, load_contract())
+
+
+def test_receipt_check_tolerates_only_a_printed_acronym():
+    version = {"title": "Broadening artificial intelligence education", "authors": []}
+    printed = "# Broadening Artificial Intelligence (AI) Education\n"
+    assert receipt_identity_check(printed, version)["title"] == "pass"
+    other = "# Broadening Artificial Intelligence Literacy Education\n"
+    assert receipt_identity_check(other, version)["title"] == "fail"
+
+
+@pytest.mark.parametrize(
+    "problem",
+    [
+        "no_origin",
+        "naive_retrieval",
+        "bad_hash",
+        "no_difference",
+        "wrong_type",
+        "extra_field",
+    ],
+)
+def test_receipt_binding_requires_complete_receipt(tmp_path, problem):
+    registry, manifest, _ = receipt_fixture(tmp_path)
+    entry = manifest["records"]["P1"]
+    receipt = entry["acquisition_receipt"]
+    if problem == "no_origin":
+        del receipt["source_url"]
+    elif problem == "naive_retrieval":
+        receipt["retrieved_at"] = "2026-10-01T10:00:00"
+    elif problem == "bad_hash":
+        receipt["sha256"] = "abc"
+    elif problem == "no_difference":
+        entry["version_relation"]["difference_to_preferred"] = " "
+    elif problem == "wrong_type":
+        entry["version_relation"]["source_version_type"] = "preprint"
+    else:
+        entry["version_identity"] = {"title": "Example work"}
+    write_source_manifest(tmp_path, manifest)
+    with pytest.raises(ValueError):
+        apply_source_bindings(tmp_path, registry, load_contract())
+
+
+def test_receipt_repo_path_is_hash_checked_when_present(tmp_path):
+    registry, manifest, _ = receipt_fixture(tmp_path)
+    (tmp_path / "original.pdf").write_bytes(b"%PDF-1.7 original")
+    receipt = manifest["records"]["P1"]["acquisition_receipt"]
+    receipt.update(repo_path="original.pdf", sha256="sha256:" + "b" * 64)
+    write_source_manifest(tmp_path, manifest)
+    with pytest.raises(ValueError, match="hash differs"):
+        apply_source_bindings(tmp_path, deepcopy(registry), load_contract())
+    receipt["sha256"] = artifact_hash(tmp_path, "original.pdf")
+    write_source_manifest(tmp_path, manifest)
+    apply_source_bindings(tmp_path, registry, load_contract())
+
+
+def test_receipt_binding_adds_preprint_of_version_of_record(tmp_path):
+    text = "# Example work\nAda Lovelace\narXiv:2401.00001v2 [cs.CL]\nAbstract\n"
+    registry, manifest, binding = receipt_fixture(tmp_path, text)
+    entry = manifest["records"]["P1"]
+    vor = registry["works"][0]["versions"][0]
+    preprint = {
+        **deepcopy(vor),
+        "version_id": "version:pre",
+        "version_type": "preprint",
+        "version_date": "2021",
+        "identifiers": {"arxiv": ["2401.00001v2"]},
+        "relations": [{"type": "isVersionOf", "target_version_id": "version:vor"}],
+    }
+    binding.update(
+        source_version_id="version:pre",
+        source_version_type="preprint",
+        is_preferred_version=False,
+    )
+    entry["version"] = preprint
+    entry["version_relation"] = {
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:vor",
+        "difference_to_preferred": "arXiv preprint v2 before peer review",
+    }
+    entry["identity_check"] = receipt_identity_check(
+        text, preprint, {"10.1234/example", "10.48550/arxiv.2401.00001"}
+    )
+    write_source_manifest(tmp_path, manifest)
+    apply_source_bindings(tmp_path, registry, load_contract())
+    validate_registry(registry, load_contract())
+    assert registry["works"][0]["preferred_version_id"] == "version:vor"
+    assert registry["record_index"]["P1"]["version_id"] == "version:vor"
+    bound = source_binding_for_record(registry, "P1", tmp_path)
+    assert bound["source_version_type"] == "preprint"
+
+
+def test_receipt_binding_cannot_add_a_version_of_record(tmp_path):
+    text = "# Example work\nAda Lovelace\nAbstract\n"
+    registry, manifest, binding = receipt_fixture(tmp_path, text)
+    entry = manifest["records"]["P1"]
+    entry["version"] = {
+        **deepcopy(registry["works"][0]["versions"][0]),
+        "version_id": "version:second",
+        "identifiers": {"url": ["https://other.test/copy"]},
+        "relations": [{"type": "isVersionOf", "target_version_id": "version:vor"}],
+    }
+    binding.update(source_version_id="version:second", is_preferred_version=False)
+    write_source_manifest(tmp_path, manifest)
+    with pytest.raises(ValueError, match="invalid or duplicate manuscript version"):
+        apply_source_bindings(tmp_path, registry, load_contract())
+
+
+def test_fulltext_serves_receipt_bound_text(tmp_path, monkeypatch):
+    registry, _, _ = receipt_fixture(tmp_path)
+    apply_source_bindings(tmp_path, registry, load_contract())
+    (tmp_path / "corpus/work_version_registry.json").write_text(
+        json.dumps(registry), encoding="utf-8"
+    )
+    projection = generate_docs_data.work_version_projection("P1", registry)
+    paper = {
+        "id": "P1",
+        "title": "Example work",
+        "doi": "10.1234/example",
+        **projection,
+    }
+    monkeypatch.setattr(build_fulltext, "ROOT", tmp_path)
+    path, _ = build_fulltext.resolve_docling(paper, {}, {})
+    assert path == tmp_path / "source.md"

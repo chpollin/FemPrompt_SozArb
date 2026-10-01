@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/fTTzI09qbs4qCc9sIva5ltJHD1c</id>
+  <title>arXiv Query: search_query=&amp;id_list=2507.00088&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-01T14:29:37Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2507.00088" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2507.00088v1</id>
+    <title>How large language models judge and influence human cooperation</title>
+    <updated>2025-06-30T09:14:42Z</updated>
+    <link href="https://arxiv.org/abs/2507.00088v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.00088v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Humans increasingly rely on large language models (LLMs) to support decisions in social settings. Previous work suggests that such tools shape people's moral and political judgements. However, the long-term implications of LLM-based social decision-making remain unknown. How will human cooperation be affected when the assessment of social interactions relies on language models? This is a pressing question, as human cooperation is often driven by indirect reciprocity, reputations, and the capacity to judge interactions of others. Here, we assess how state-of-the-art LLMs judge cooperative actions. We provide 21 different LLMs with an extensive set of examples where individuals cooperate -- or refuse cooperating -- in a range of social contexts, and ask how these interactions should be judged. Furthermore, through an evolutionary game-theoretical model, we evaluate cooperation dynamics in populations where the extracted LLM-driven judgements prevail, assessing the long-term impact of LLMs on human prosociality. We observe a remarkable agreement in evaluating cooperation against good opponents. On the other hand, we notice within- and between-model variance when judging cooperation with ill-reputed individuals. We show that the differences revealed between models can significantly impact the prevalence of cooperation. Finally, we test prompts to steer LLM norms, showing that such interventions can shape LLM judgements, particularly through goal-oriented prompts. Our research connects LLM-based advices and long-term social dynamics, and highlights the need to carefully align LLM norms in order to preserve human cooperation.</summary>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-30T09:14:42Z</published>
+    <arxiv:primary_category term="physics.soc-ph"/>
+    <author>
+      <name>Alexandre S. Pires</name>
+    </author>
+    <author>
+      <name>Laurens Samson</name>
+    </author>
+    <author>
+      <name>Sennay Ghebreab</name>
+    </author>
+    <author>
+      <name>Fernando P. Santos</name>
+    </author>
+  </entry>
+</feed>

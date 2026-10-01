@@ -63,6 +63,7 @@ conversion_metadata.json
 # the reproducible representation and source checksum without publishing raw pages.
 generated/source-acquisition/**/*.official.html
 generated/source-acquisition/**/html-source/
+generated/source-acquisition/oa-batch-2026-10-01/html/
 
 # Benchmark test data
 assessment/test_*.csv

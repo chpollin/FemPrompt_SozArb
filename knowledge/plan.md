@@ -137,9 +137,10 @@ Bounded subagent assignments receive explicit record lists, permitted write path
 - Repair the source-identified formula and figure losses in *Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models* and *Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models*, as specified by the [conversion-QC receipts](../generated/source-acquisition/completion-20260921/conversion-qc/oa-review/conversion-qc.json).
 - Bind or convert any further Paper representation only after its work identity has passed the source audit.
 - Resolve the [registered-identifier gaps](../corpus/source-acquisition/completion-20260921/existing-version-contract-gaps.json) for the located reports before binding their reading copies.
-- Bind the prepared 2026 reading texts that fail the quoted-DOI rule once decision 1 permits the rule change, and rebuild the registry.
+- Apply the prepared metadata corrections with their receipt bindings. `generated/source-acquisition/oa-batch-2026-10-01/pending-metadata-corrections.patch` corrects corrupt Zotero metadata from authoritative evidence and binds the texts that then pass the identity check. Applied with `git apply` and rebuilt, it removes the published projections of the legacy knowledge documents whose bibliographic identity it corrects, so it waits for the operator's confirmation of those deletions.
+- Acquire the texts listed in `generated/source-acquisition/oa-batch-2026-10-01/remaining-for-acquisition.csv`. Several are open access but refused automated download and open in a browser; the others need licence or library access. The list also names the held texts that fail the identity check and what each needs.
+- Re-review *Defeating Nondeterminism in LLM Inference* (`FTJM5R8N`) on the newly captured page with its title before binding it, since its released AI review read the earlier conversion.
 - Rebuild the agent-screening queue after each source or corpus change.
-- Among the 2026 works without a usable full text, only the JSSWR paper on Chinese social work standards has an open-access author preprint, recorded in `generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22.json` and converted locally without source QC or binding. The others are publisher-restricted and stay on the manual acquisition list `fehlende-volltexte-2026.xlsx`, which the partners received.
 
 Canonical state carriers are `corpus/work_version_registry.json`, `generated/round2-intake-package.json`, `generated/round2-zotero-import.ris`, `generated/contextual-update-2026-08-24-intake-package.json`, `corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-package.json`, `corpus/deep-research/round2/Codex Websearch/bibliographic-audit.json`, `generated/source-acquisition/codex-websearch-2026/source-readiness.json`, `generated/agent-screening-queue.json`, `docs/data/knowledge_doc_bindings.json`, and the reviewed full-text manifest.
 
@@ -199,7 +200,7 @@ The numbers are referenced from the steps above. The status column states how fa
 
 | No. | Decision | Status | Required contribution |
 |---|---|---|---|
-| 1 | Source-binding rule for the prepared 2026 reading texts whose converted Markdown lost its DOI, by accepting acquisition receipts (publisher landing URL and PDF hash) as identity evidence | Decided in principle on 1 October 2026 that all texts are to be bound. The rule change waits for explicit permission | Operator permission for the change of the binding contract |
+| 1 | Source-binding rule for the prepared 2026 reading texts whose converted Markdown lost its DOI, by accepting acquisition receipts as identity evidence | Taken on 1 October 2026 and implemented. Pending are the metadata corrections patch, which deletes stale knowledge-document projections, and the merge of duplicate Works | Operator confirmation of the patch and of duplicate merges |
 | 2 | Remapping of the four Assertions with AI Agent Review that carry the earlier numbering or no sub-question field ([[research-vault#Assertions]]). An edit invalidates their review receipts | Open, proposals recorded | Editorial decision by the operator |
 | 3 | Switch of GitHub Pages from `docs/` to the result site in `build/site/` ([[#Deployment]]) | Open. The target was decided on 29 September 2026 | Operator authorisation |
 | 4 | PRISMA-ScR as reporting frame for the mapping layer ([[standards#Open reporting decision on PRISMA-ScR]]) | Recommended, not decided | Operator decision |
@@ -234,3 +235,4 @@ These decisions left the open list. Their content lives at the linked place.
 | 1 October 2026 | The working Companion and PRISM redesign were merged into `main` and pushed. The elevated sandbox permission of the earlier coding-run plan is replaced by a harness-agnostic run | [[journal]] |
 | 1 October 2026 | Full texts stay in the private repository, superseding the plan of 29 September 2026 to remove protected texts. The laptop branch `prepare-expert-verification`, which carried that removal, is not merged | [[governance#Publication boundary]] |
 | 1 October 2026 | All prepared reading texts are to be bound, in principle | Decision 1 above |
+| 1 October 2026 | Texts are bound on an acquisition receipt plus a re-run identity check (`binding_mode: acquisition_receipt`), without weakening the identity test | [[data]] |

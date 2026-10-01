@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/1FrsVXvAU7KcupzzD8N7CCbJ7GQ</id>
+  <title>arXiv Query: search_query=&amp;id_list=2308.10149&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-01T14:32:58Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2308.10149" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2308.10149v2</id>
+    <title>A Survey on Fairness in Large Language Models</title>
+    <updated>2024-02-21T13:52:11Z</updated>
+    <link href="https://arxiv.org/abs/2308.10149v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.10149v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have shown powerful performance and development prospects and are widely deployed in the real world. However, LLMs can capture social biases from unprocessed training data and propagate the biases to downstream tasks. Unfair LLM systems have undesirable social impacts and potential harms. In this paper, we provide a comprehensive review of related research on fairness in LLMs. Considering the influence of parameter magnitude and training paradigm on research strategy, we divide existing fairness research into oriented to medium-sized LLMs under pre-training and fine-tuning paradigms and oriented to large-sized LLMs under prompting paradigms. First, for medium-sized LLMs, we introduce evaluation metrics and debiasing methods from the perspectives of intrinsic bias and extrinsic bias, respectively. Then, for large-sized LLMs, we introduce recent fairness research, including fairness evaluation, reasons for bias, and debiasing methods. Finally, we discuss and provide insight on the challenges and future directions for the development of fairness in LLMs.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-20T03:30:22Z</published>
+    <arxiv:comment>28 pages, 5 figures, 2 tables, 175 references</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yingji Li</name>
+    </author>
+    <author>
+      <name>Mengnan Du</name>
+    </author>
+    <author>
+      <name>Rui Song</name>
+    </author>
+    <author>
+      <name>Xin Wang</name>
+    </author>
+    <author>
+      <name>Ying Wang</name>
+    </author>
+  </entry>
+</feed>

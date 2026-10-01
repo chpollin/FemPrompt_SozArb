@@ -30,6 +30,17 @@ def _real_paper(paper_id: str) -> dict[str, object]:
     return next(paper for paper in papers if paper["id"] == paper_id)
 
 
+def _without_governed_binding(paper_id: str) -> tuple[dict, dict]:
+    """Resolution context as the legacy cascade sees a record without its binding."""
+    registry, knowledge_bindings = bf.load_resolution_context()
+    source_index = {
+        key: value
+        for key, value in registry.get("source_index", {}).items()
+        if key != paper_id
+    }
+    return {**registry, "source_index": source_index}, knowledge_bindings
+
+
 @pytest.mark.skipif(os.name != "nt", reason="Windows extended path regression")
 def test_long_checkout_retains_embedded_identity_and_manifest_input(
     tmp_path, monkeypatch
@@ -81,10 +92,15 @@ def test_long_checkout_retains_embedded_identity_and_manifest_input(
 
 @pytest.mark.parametrize("paper_id", ["FTJM5R8N", "4KMMPA6A"])
 def test_legacy_match_cannot_borrow_another_registered_work_or_version(paper_id):
-    paper = _real_paper(paper_id)
+    # A governed receipt binding may later give the record its own text; the
+    # legacy cascade alone must still refuse the other Work's conversion.
+    paper = {**_real_paper(paper_id), "source_binding": None}
+    registry, knowledge_bindings = _without_governed_binding(paper_id)
     clean_idx = {bf.norm(path.stem): path.name for path in bf.CLEAN_DIR.glob("*.md")}
     raw_idx = {bf.norm(path.stem): path.name for path in bf.RAW_DIR.glob("*.md")}
-    assert bf.resolve_docling(paper, clean_idx, raw_idx) == (None, "mismatch")
+    assert bf.resolve_docling(
+        paper, clean_idx, raw_idx, registry, knowledge_bindings
+    ) == (None, "mismatch")
 
 
 def test_exact_governed_version_retains_its_reading_source():
@@ -126,12 +142,26 @@ def test_curated_source_binding_bootstraps_without_a_displayed_knowledge_documen
 
 @pytest.mark.parametrize("paper_id", ["3GB9B4IJ", "2YS85B49", "BCBWSU3Z"])
 def test_corrected_debnath_year_rejects_stale_candidate_version(paper_id):
-    paper = _real_paper(paper_id)
+    # The legacy cascade alone must refuse the stale candidate; a governed receipt
+    # binding is the separate path that binds the checked text.
+    paper = {
+        **_real_paper(paper_id),
+        "source_binding": None,
+        # The state before the binding: no linked document, only the legacy
+        # same-title candidate whose embedded metadata carries the stale year.
+        "knowledge_doc": None,
+        "knowledge_doc_candidate": {
+            "path": "vault/Papers/Can LLMs reason about trust- A pilot study.md"
+        },
+    }
     paper.update(year=2025, author_year="A. Debnath (2025)")
+    registry, knowledge_bindings = _without_governed_binding(paper_id)
     clean_idx = {bf.norm(path.stem): path.name for path in bf.CLEAN_DIR.glob("*.md")}
     raw_idx = {bf.norm(path.stem): path.name for path in bf.RAW_DIR.glob("*.md")}
 
-    assert bf.resolve_docling(paper, clean_idx, raw_idx) == (None, "mismatch")
+    assert bf.resolve_docling(
+        paper, clean_idx, raw_idx, registry, knowledge_bindings
+    ) == (None, "mismatch")
 
 
 def test_unique_fallback_resolves(
@@ -327,9 +357,29 @@ def test_generic_headings_are_not_title_candidates(tmp_path: Path) -> None:
 
 
 def test_identical_title_with_doi_author_and_year_conflicts_is_refused() -> None:
-    paper = _real_paper("JZ4P8V8S")
-    knowledge_doc = bf.DOCS / str(paper["knowledge_doc_candidate"]["path"])
-    metadata = bf.embedded_source_metadata(knowledge_doc)
+    # The record's raw Zotero metadata names another author, year and DOI than the
+    # same-title conversion; a later metadata correction must not hide this case.
+    raw = next(
+        item
+        for item in json.loads((ROOT / "corpus/zotero_export.json").read_text("utf-8"))
+        if item["key"] == "JZ4P8V8S"
+    )
+    paper = {
+        **_real_paper("JZ4P8V8S"),
+        "doi": raw["DOI"],
+        "year": int(raw["date"][:4]),
+        "authors": "; ".join(
+            f"{creator['lastName']}, {creator.get('firstName', '')}"
+            for creator in raw["creators"]
+        ),
+    }
+    # Source identity as embedded in the legacy distillate's Full Text section; the
+    # published projection disappears once a metadata correction invalidates it.
+    metadata = {
+        "source_file": "Jaakkola_2024_Operationalizing_positive-constructive_pedagogy.md",
+        "authors": ["Maarit Jaakkola"],
+        "year": 2025,
+    }
     source = bf.CLEAN_DIR / str(metadata["source_file"])
 
     assert set(bf.identity_conflicts(paper, source, metadata)) == {

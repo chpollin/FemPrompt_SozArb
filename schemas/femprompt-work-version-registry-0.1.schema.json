@@ -378,9 +378,12 @@
         "source_path": { "type": "string", "minLength": 1 },
         "source_sha256": { "$ref": "#/$defs/sha256Prefixed" },
         "source_url": { "type": "string" },
-        "binding_mode": { "enum": ["accepted_manuscript", "existing_version"] },
+        "binding_mode": { "enum": ["accepted_manuscript", "existing_version", "acquisition_receipt"] },
         "bibliographic_identity": { "type": "object" },
-        "version_identity": { "type": "object" }
+        "version_identity": { "type": "object" },
+        "acquisition_receipt": { "type": "object" },
+        "identity_check": { "type": "object" },
+        "version_relation": { "type": "object" }
       }
     }
   }

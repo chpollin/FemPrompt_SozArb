@@ -62,8 +62,8 @@ round2_deep_research,,outcome:expert_exclude,0
 round2_deep_research,,outcome:expert_unresolved,0
 round2_deep_research,,outcome:ai_review_include_pending_verification,0
 round2_deep_research,,outcome:ai_review_exclude_pending_verification,0
-round2_deep_research,,outcome:open_fulltext_ready,1
-round2_deep_research,,outcome:open_fulltext_not_retrieved,22
+round2_deep_research,,outcome:open_fulltext_ready,10
+round2_deep_research,,outcome:open_fulltext_not_retrieved,13
 round2_deep_research,,outcome:open_not_queued,0
 round2_deep_research,,outcome:not_in_library,0
 contextual_update_2026_08_24,CU-A,records_identified,29
@@ -95,8 +95,8 @@ contextual_update_2026_08_24,,outcome:expert_exclude,0
 contextual_update_2026_08_24,,outcome:expert_unresolved,0
 contextual_update_2026_08_24,,outcome:ai_review_include_pending_verification,0
 contextual_update_2026_08_24,,outcome:ai_review_exclude_pending_verification,0
-contextual_update_2026_08_24,,outcome:open_fulltext_ready,8
-contextual_update_2026_08_24,,outcome:open_fulltext_not_retrieved,14
+contextual_update_2026_08_24,,outcome:open_fulltext_ready,16
+contextual_update_2026_08_24,,outcome:open_fulltext_not_retrieved,6
 contextual_update_2026_08_24,,outcome:open_not_queued,0
 contextual_update_2026_08_24,,outcome:not_in_library,0
 codex_websearch_2026,CW-A,records_identified,51
@@ -128,8 +128,8 @@ codex_websearch_2026,,outcome:expert_exclude,0
 codex_websearch_2026,,outcome:expert_unresolved,0
 codex_websearch_2026,,outcome:ai_review_include_pending_verification,0
 codex_websearch_2026,,outcome:ai_review_exclude_pending_verification,0
-codex_websearch_2026,,outcome:open_fulltext_ready,13
-codex_websearch_2026,,outcome:open_fulltext_not_retrieved,31
+codex_websearch_2026,,outcome:open_fulltext_ready,25
+codex_websearch_2026,,outcome:open_fulltext_not_retrieved,19
 codex_websearch_2026,,outcome:open_not_queued,0
 codex_websearch_2026,,outcome:not_in_library,0
 targeted_followup_2026_09_05,TF,records_identified,3
@@ -173,6 +173,6 @@ current_state,,works:expert_exclude,90
 current_state,,works:expert_unresolved,1
 current_state,,works:ai_review_include_pending_verification,16
 current_state,,works:ai_review_exclude_pending_verification,8
-current_state,,works:open_fulltext_ready,25
-current_state,,works:open_fulltext_not_retrieved,76
+current_state,,works:open_fulltext_ready,57
+current_state,,works:open_fulltext_not_retrieved,44
 current_state,,works:open_not_queued,7

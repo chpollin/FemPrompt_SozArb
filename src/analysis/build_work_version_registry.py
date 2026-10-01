@@ -32,6 +32,8 @@ from src.analysis.metadata_corrections import (
     apply_metadata_corrections,
 )
 from src.analysis.work_versions import (
+    ADDED_SOURCE_VERSION_TYPES,
+    RECEIPT_MODE,
     REGISTRY_PATH,
     REGISTRY_SCHEMA,
     SOURCE_BINDINGS_PATH,
@@ -719,7 +721,15 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
         for work in registry["works"]
         for version in work["versions"]
     }
-    for record_id, entry in sorted(manifest["records"].items()):
+    # Version-adding entries go first, so a duplicate record of the same Work can
+    # bind the manuscript Version another record registered.
+    for record_id, entry in sorted(
+        manifest["records"].items(),
+        key=lambda item: (
+            not (isinstance(item[1], dict) and "version" in item[1]),
+            item[0],
+        ),
+    ):
         if not isinstance(entry, dict):
             raise ValueError(f"{record_id}: source binding entry must be an object")
         for field in ("agent_id", "model", "reviewed_at", "reason"):
@@ -754,7 +764,7 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
             if item["version_id"] == canonical["version_id"]
         )
         mode = entry.get("binding_mode", "accepted_manuscript")
-        if mode not in {"accepted_manuscript", "existing_version"}:
+        if mode not in {"accepted_manuscript", "existing_version", RECEIPT_MODE}:
             raise ValueError(f"{record_id}: unsupported source binding mode")
         evidence = entry.get("evidence")
         if not isinstance(evidence, list) or not evidence:
@@ -895,28 +905,105 @@ def apply_source_bindings(repo: Path, registry: dict, contract: dict) -> list[Pa
             inputs.append(repo / binding["source_path"])
             continue
 
+        receipt_mode = mode == RECEIPT_MODE
+        if receipt_mode:
+            # Operator decision of 1 October 2026: an acquisition receipt plus a
+            # passed identity check of the text binds it. The receipt proves origin,
+            # the deterministic check in work_versions proves the work.
+            if manifest["schema"] != "femprompt-source-version-bindings/0.2":
+                raise ValueError(f"{record_id}: receipt bindings require manifest 0.2")
+            allowed_entry = {
+                "binding_mode",
+                "binding",
+                "bibliographic_identity",
+                "acquisition_receipt",
+                "identity_check",
+                "version_relation",
+                "version",
+                "agent_id",
+                "model",
+                "model_id_status",
+                "reviewed_at",
+                "reason",
+                "evidence",
+            }
+            allowed_binding = {
+                "record_id",
+                "work_id",
+                "bibliographic_version_id",
+                "source_version_id",
+                "source_version_type",
+                "preferred_version_id",
+                "is_preferred_version",
+                "source_path",
+                "source_sha256",
+            }
+            if set(entry) - allowed_entry or set(binding) != allowed_binding:
+                raise ValueError(
+                    f"{record_id}: receipt binding has unsupported fields"
+                )
+            if not any(
+                source.get("source_path") == binding.get("source_path")
+                and source.get("sha256") == binding.get("source_sha256")
+                for source in evidence
+            ):
+                raise ValueError(
+                    f"{record_id}: receipt binding evidence must hash the bound text"
+                )
+            binding.update(
+                binding_mode=mode,
+                bibliographic_identity=deepcopy(entry.get("bibliographic_identity")),
+                acquisition_receipt=deepcopy(entry.get("acquisition_receipt")),
+                identity_check=deepcopy(entry.get("identity_check")),
+                version_relation=deepcopy(entry.get("version_relation")),
+            )
+            if "version" not in entry:
+                staged = {
+                    **registry,
+                    "source_index": {**registry["source_index"], record_id: binding},
+                }
+                source_binding_for_record(staged, record_id, repo)
+                registry["source_index"][record_id] = binding
+                inputs.append(repo / binding["source_path"])
+                continue
+
         expected = entry.get("bibliographic_identity", {})
+        registered_dois = bibliographic.get("identifiers", {}).get("doi", [])
+        # A receipt binding may add a manuscript to a DOI-less record; when the
+        # record has a DOI, the reviewed identity must name it as before.
+        doi_matches = normalise_doi(expected.get("doi")) in registered_dois or (
+            receipt_mode and not expected.get("doi") and not registered_dois
+        )
         if (
             not expected.get("title")
             or normalise_title(expected["title"])
             != normalise_title(bibliographic.get("title"))
-            or normalise_doi(expected.get("doi"))
-            not in bibliographic.get("identifiers", {}).get("doi", [])
+            or not doi_matches
         ):
             raise ValueError(
                 f"{record_id}: source manifest bibliographic metadata is stale or uncorrected"
             )
         version = deepcopy(entry.get("version", {}))
+        allowed_types = (
+            ADDED_SOURCE_VERSION_TYPES if receipt_mode else {"accepted_manuscript"}
+        )
         if (
-            version.get("version_type") != "accepted_manuscript"
+            version.get("version_type") not in allowed_types
             or version.get("version_id") != binding.get("source_version_id")
             or version["version_id"] in all_versions
         ):
             raise ValueError(f"{record_id}: invalid or duplicate manuscript version")
         identifiers = version.get("identifiers", {})
+        allowed_identifiers = (
+            ({"url"}, {"arxiv"}, {"url", "arxiv"}) if receipt_mode else ({"url"},)
+        )
         if (
-            set(identifiers) != {"url"}
-            or not identifiers["url"]
+            set(identifiers) not in allowed_identifiers
+            or not all(identifiers.values())
+            or any(
+                not normalise_arxiv(value)
+                for value in values(identifiers.get("arxiv"))
+            )
             or normalise_title(version.get("title"))
             != normalise_title(bibliographic.get("title"))
         ):
