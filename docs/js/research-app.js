@@ -85,6 +85,8 @@ const PAGE_SIZE = 50;
 let currentDetailPaper = null;
 let currentDetailList = null;
 let renderedPapers = []; // the list currently shown in the table (for delegated clicks)
+let korpusResult = []; // the fully filtered corpus selection, which the exports write
+let stageSel = 'all'; // a review stage or work list of EC.korpusStages, 'all' for none
 let currentView = 'start';
 let applyingFromUrl = false; // suppresses UI->store sync while a URL is being applied
 
@@ -106,7 +108,7 @@ const lastReleaseParams = {}; // per navigation tab, restored when the tab is ch
 // framework-free views. This store is the only router of the page: the release
 // modules navigate through EC.host and never listen to the hash themselves.
 const DEFAULT_STATE = {
-    view: 'start', q: '', dec: 'all', hum: 'all', year: 'all', sort: 'relevance', cat: [], paper: null, rp: {},
+    view: 'start', q: '', dec: 'all', hum: 'all', year: 'all', stage: 'all', sort: 'relevance', cat: [], paper: null, rp: {},
 };
 
 function createStore(initial) {
@@ -196,7 +198,9 @@ document.addEventListener('DOMContentLoaded', function() {
             releaseState = error.message;
         })
         : Promise.resolve().then(function() { releaseState = 'Diese Ansicht ist auf dieser Seite nicht geladen.'; });
-    Promise.all([loadData(), release]).then(function() {
+    // The stage data are optional files; a missing one leaves its stage out, never the view.
+    const stages = loadData().then(function() { return window.EC.korpusStages.load(allPapers); });
+    Promise.all([stages, release]).then(function() {
         initializeUI();
         renderCategoryChips();
         logInit();
@@ -370,6 +374,16 @@ function initializeUI() {
 
     initYearHistogram();
 
+    // Stage bar and work lists share one filter value; pressing the active one clears it.
+    ['stage-bar', 'gap-list'].forEach(function(id) {
+        document.getElementById(id).addEventListener('click', function(e) {
+            const btn = e.target.closest('button[data-stage]');
+            if (!btn) return;
+            stageSel = btn.dataset.stage === stageSel ? 'all' : btn.dataset.stage;
+            applyFilters();
+        });
+    });
+
     // Dropdown navigation
     setupDropdownNav();
 
@@ -484,6 +498,11 @@ function sortPapers(papers, sortBy) {
         case 'title':
             sorted.sort(function(a, b) { return (a.title || '').localeCompare(b.title || ''); });
             break;
+        case 'stage':
+            sorted.sort(function(a, b) {
+                return window.EC.korpusStages.depth(b) - window.EC.korpusStages.depth(a) || (b.year || 0) - (a.year || 0);
+            });
+            break;
         case 'llm':
             sorted.sort(function(a, b) {
                 let aInc = a.llm.decision === 'Include' ? 0 : 1;
@@ -539,17 +558,37 @@ function applyFilters() {
         });
     }
 
-    // The histogram counts the selection before its own year filter, so it shows how the
-    // current selection spreads over the years and every other year stays choosable.
-    renderYearHistogram(filtered);
-    if (yearSel !== 'all') {
-        filtered = filtered.filter(function(p) { return yearSelected(yearKey(p)); });
-    }
+    // Year histogram and stage bar each count the selection of every other filter but
+    // their own, so they show how the selection spreads and every value stays choosable.
+    const stages = window.EC.korpusStages;
+    const byYear = yearSel === 'all' ? filtered : filtered.filter(function(p) { return yearSelected(yearKey(p)); });
+    const byStage = stageSel === 'all' ? filtered : filtered.filter(function(p) { return stages.match(stageSel, p); });
+    renderYearHistogram(byStage);
+    renderStages(byYear);
+    filtered = byYear.filter(function(p) { return stageSel === 'all' || stages.match(stageSel, p); });
 
     filtered = sortPapers(filtered, currentSort);
+    korpusResult = filtered;
     currentPage = 1;
     renderPapers(filtered);
     syncUrl();
+}
+
+function renderStages(papers) {
+    const stages = window.EC.korpusStages;
+    const counts = stages.counts(papers);
+    // The buttons are rebuilt, so a keyboard user keeps focus on the stage just chosen.
+    const active = document.activeElement;
+    const focused = active && active.closest && active.closest('#view-korpus button[data-stage]');
+    const bar = document.getElementById('stage-bar');
+    const gaps = document.getElementById('gap-list');
+    const home = focused && (bar.contains(focused) ? bar : gaps);
+    bar.innerHTML = stages.barHtml(counts, stageSel);
+    gaps.innerHTML = stages.gapsHtml(counts, stageSel);
+    if (home) {
+        const again = home.querySelector('button[data-stage="' + focused.dataset.stage + '"]');
+        if (again) again.focus();
+    }
 }
 
 // Publication-year histogram, the year filter of the corpus
@@ -581,12 +620,9 @@ function workCount(n) {
     return n === 1 ? '1 Werk' : n + ' Werke';
 }
 
-// The expert decision as the Human column of the table shows it; no decision is open.
+// The expert decision, the screening mark of the stage track; no decision is open.
 function yearStatus(paper) {
-    if (!paper.benchmark.has_human || !paper.human) return 'open';
-    if (paper.human.decision === 'Include') return 'include';
-    if (paper.human.decision === 'Exclude') return 'exclude';
-    return 'open';
+    return window.EC.korpusStages.decision(paper);
 }
 
 // Normalizes a year selection from the URL, a trust boundary; anything else is no filter.
@@ -758,12 +794,12 @@ function renderPapers(papers) {
     renderedPapers = papers;
     let container = document.getElementById('papers-grid');
     const resultsCount = document.getElementById('results-count');
-    const totalCount = document.getElementById('total-count');
+    const resultsLabel = document.getElementById('results-label');
     if (resultsCount) resultsCount.textContent = papers.length;
-    if (totalCount) totalCount.textContent = allPapers.length;
+    if (resultsLabel) resultsLabel.textContent = papers.length === 1 ? 'Werk' : 'Werke';
 
     if (papers.length === 0) {
-        container.innerHTML = '<p class="empty-state">Keine Papers gefunden.</p>';
+        container.innerHTML = '<p class="empty-state">Keine Werke in dieser Auswahl.</p>';
         return;
     }
 
@@ -776,15 +812,13 @@ function renderPapers(papers) {
         let idx = start + i;
         const titleShort = p.title.length > 80 ? p.title.substring(0, 77) + '...' : p.title;
         const authorShort = (p.author_year || '').length > 22 ? (p.author_year || '').substring(0, 20) + '...' : (p.author_year || '');
-        const divergeClass = p.benchmark.agreement === false ? ' row--diverge' : '';
 
-        return '<tr class="paper-row' + divergeClass + '" data-idx="' + idx + '">' +
-            '<td class="col-title" title="' + escapeHtml(p.title) + '">' + escapeHtml(titleShort) + '</td>' +
+        // The title is a button so that the row detail opens by keyboard as well.
+        return '<tr class="paper-row" data-idx="' + idx + '" data-id="' + escapeHtml(p.id) + '">' +
+            '<td class="col-title" title="' + escapeHtml(p.title) + '"><button type="button" class="row-open">' + escapeHtml(titleShort) + '</button></td>' +
             '<td class="col-author">' + escapeHtml(authorShort) + '</td>' +
-            '<td class="col-year">' + (p.year || '') + '</td>' +
-            '<td class="col-dec">' + decBadge(p.llm.decision) + '</td>' +
-            '<td class="col-dec">' + decBadge(p.human ? p.human.decision : null) + '</td>' +
-            '<td class="col-status">' + statusBadge(p) + '</td>' +
+            '<td class="col-year">' + escapeHtml(p.year || '') + '</td>' +
+            '<td class="col-stage">' + window.EC.korpusStages.trackHtml(p) + '</td>' +
             '<td class="col-cats"><div class="cat-labels">' + catLabels(p) + '</div></td>' +
         '</tr>';
     }).join('');
@@ -798,9 +832,7 @@ function renderPapers(papers) {
             '<th class="col-title sortable" data-sort="title">Titel' + sortArrow('title') + '</th>' +
             '<th class="col-author sortable" data-sort="author">Autor' + sortArrow('author') + '</th>' +
             '<th class="col-year sortable" data-sort="year">Jahr' + sortArrow('year') + '</th>' +
-            '<th class="col-dec sortable" data-sort="llm">LLM' + sortArrow('llm') + '</th>' +
-            '<th class="col-dec sortable" data-sort="human">Human' + sortArrow('human') + '</th>' +
-            '<th class="col-status sortable" data-sort="status">Status' + sortArrow('status') + '</th>' +
+            '<th class="col-stage sortable" data-sort="stage" title="Volltext, Screening, Kodierung, Aussagen">Stand' + sortArrow('stage') + '</th>' +
             '<th class="col-cats">Kategorien</th>' +
         '</tr></thead>' +
         '<tbody>' + rows + '</tbody></table>';
@@ -825,17 +857,6 @@ function renderPapers(papers) {
 }
 
 // Table cell helpers
-function decBadge(decision) {
-    if (!decision) return '<span class="dec-cell dec-cell--none">&mdash;</span>';
-    if (decision === 'Include') return '<span class="dec-cell dec-cell--include">Incl</span>';
-    return '<span class="dec-cell dec-cell--exclude">Excl</span>';
-}
-
-function statusBadge(paper) {
-    const s = paperStatus(paper);
-    return '<span class="status-pill status-pill--' + s.cls + '">' + s.label + '</span>';
-}
-
 function catLabels(paper) {
     let html = '';
     CATEGORIES.forEach(function(cat, i) {
@@ -1047,6 +1068,7 @@ function stateFromUI() {
         dec: document.getElementById('filter-decision').value,
         hum: document.getElementById('filter-human').value,
         year: yearSel,
+        stage: stageSel,
         sort: currentSort,
         cat: Array.from(activeCategories),
         paper: currentDetailPaper ? currentDetailPaper.id : null,
@@ -1075,6 +1097,7 @@ function applyStateToUI(s, ctx) {
             yearSel = parseYearSel(s.year);
             const anchor = /^\d{4}/.exec(yearSel);
             yearAnchor = anchor ? anchor[0] : null;
+            stageSel = window.EC.korpusStages.parse(s.stage);
             currentSort = s.sort || 'relevance';
             // A select silently ignores an unknown value, so assign directly rather than
             // probe with querySelector (a crafted sort= would otherwise be an invalid selector).
@@ -1128,6 +1151,7 @@ function serializeState(s) {
     if (s.dec && s.dec !== 'all') p.set('dec', s.dec);
     if (s.hum && s.hum !== 'all') p.set('hum', s.hum);
     if (s.year && s.year !== 'all') p.set('year', s.year);
+    if (s.stage && s.stage !== 'all') p.set('stage', s.stage);
     if (s.sort && s.sort !== 'relevance') p.set('sort', s.sort);
     if (s.cat && s.cat.length) p.set('cat', s.cat.join(','));
     if (s.paper) p.set('paper', s.paper);
@@ -1155,6 +1179,7 @@ function deserializeState(hashStr) {
         dec: p.get('dec') || 'all',
         hum: p.get('hum') || 'all',
         year: parseYearSel(p.get('year')),
+        stage: window.EC.korpusStages.parse(p.get('stage')),
         sort: p.get('sort') || 'relevance',
         // Drop unknown category keys at this trust boundary; otherwise an every()
         // over a non-existent column would silently empty the corpus.
@@ -1361,21 +1386,28 @@ function catGridColored(allCategories) {
 
 // Export & Download
 
+// The exports write the selection on screen, so a stage or work list yields a work
+// package; the file name carries the stage.
+function exportName(ext) {
+    return 'fem_prompt_korpus' + (stageSel === 'all' ? '' : '_' + stageSel) + '.' + ext;
+}
+
+const STAGE_COLUMNS = ['Fulltext', 'Expert_Decision', 'Coded', 'Assertions', 'Assignee'];
+
 function exportFilteredPapers() {
-    let papers = filteredPapers.length > 0 ? filteredPapers : allPapers;
-    const headers = ['ID', 'Title', 'Author_Year', 'Year', 'Item_Type', 'DOI',
-        'LLM_Decision', 'LLM_Categories',
-        'Human_Decision', 'Has_Human', 'Agreement'];
-    let rows = papers.map(function(p) {
-        return [p.id, p.title, p.author_year, p.year, p.item_type, p.doi,
-            p.llm.decision, p.llm.categories.join(';'),
-            p.human ? p.human.decision : '', p.benchmark.has_human,
-            p.benchmark.agreement === null ? '' : p.benchmark.agreement];
+    const papers = korpusResult;
+    const headers = ['ID', 'Work_ID', 'Title', 'Author_Year', 'Year', 'Item_Type', 'DOI', 'URL']
+        .concat(STAGE_COLUMNS, ['LLM_Decision', 'LLM_Categories', 'Agreement']);
+    const rows = papers.map(function(p) {
+        const stage = window.EC.korpusStages.csvFields(p);
+        return [p.id, p.work_id, p.title, p.author_year, p.year, p.item_type, p.doi, p.url]
+            .concat(STAGE_COLUMNS.map(function(key) { return stage[key]; }),
+                [p.llm.decision, p.llm.categories.join(';'), p.benchmark.agreement === null ? '' : p.benchmark.agreement]);
     });
     const csv = [headers].concat(rows).map(function(r) {
-        return r.map(function(v) { return '"' + String(v || '').replace(/"/g, '""') + '"'; }).join(',');
+        return r.map(function(v) { return '"' + String(v == null || v === 'nan' ? '' : v).replace(/"/g, '""') + '"'; }).join(',');
     }).join('\n');
-    download('fem_prompt_papers.csv', csv, 'text/csv;charset=utf-8;');
+    download(exportName('csv'), csv, 'text/csv;charset=utf-8;');
 }
 
 function downloadKnowledgeDoc(docPath, title) {
@@ -1390,13 +1422,86 @@ function downloadKnowledgeDoc(docPath, title) {
     });
 }
 
+// The whole corpus downloads the prebuilt archive; a selection is packed here from the
+// same knowledge documents, with the record index restricted to it.
 function downloadVaultZip() {
-    download('FemPrompt_Paper_Wissenssammlung.zip', 'downloads/vault.zip');
+    if (korpusResult.length === allPapers.length) {
+        download('FemPrompt_Paper_Wissenssammlung.zip', 'downloads/vault.zip');
+        return;
+    }
+    const withDocs = korpusResult.filter(function(p) { return p.knowledge_doc; });
+    if (withDocs.length === 0) {
+        alert('Keine Wissensdokumente für die aktuelle Auswahl verfügbar.');
+        return;
+    }
+    const docs = {};
+    withDocs.forEach(function(p) { docs[p.knowledge_doc] = true; });
+    Promise.all(Object.keys(docs).map(function(path) {
+        return fetch(path).then(function(response) {
+            if (!response.ok) throw new Error(path + ': HTTP ' + response.status);
+            return response.arrayBuffer();
+        }).then(function(body) { return { name: 'Papers/' + path.split('/').pop(), body: new Uint8Array(body) }; });
+    })).then(function(files) {
+        const index = withDocs.map(function(p) {
+            return { record_id: p.id, work_id: p.work_id, version_id: p.version_id, knowledge_doc: 'Papers/' + p.knowledge_doc.split('/').pop() };
+        });
+        const encoder = new TextEncoder();
+        files.push({ name: 'record-index.json', body: encoder.encode(JSON.stringify(index, null, 2) + '\n') });
+        download(exportName('zip'), zipStored(files));
+    }).catch(function(error) {
+        console.error('[Vault export]', error);
+        alert('Das Archiv der Auswahl konnte nicht vollständig erstellt werden.');
+    });
+}
+
+// A ZIP archive without compression; a few lines spare a vendored library for text files.
+let crcTable = null;
+function crc32(bytes) {
+    if (!crcTable) {
+        crcTable = new Uint32Array(256);
+        for (let n = 0; n < 256; n++) {
+            let c = n;
+            for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1;
+            crcTable[n] = c >>> 0;
+        }
+    }
+    let crc = 0xFFFFFFFF;
+    for (let i = 0; i < bytes.length; i++) crc = crcTable[(crc ^ bytes[i]) & 0xFF] ^ (crc >>> 8);
+    return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+
+function zipStored(files) {
+    const encoder = new TextEncoder();
+    const parts = [];
+    const central = [];
+    let offset = 0;
+    files.forEach(function(file) {
+        const name = encoder.encode(file.name);
+        const crc = crc32(file.body);
+        const local = new DataView(new ArrayBuffer(30));
+        // Signature, version 2.0, UTF-8 name flag, stored, DOS date 1980-01-01 as the prebuilt archive.
+        local.setUint32(0, 0x04034b50, true); local.setUint16(4, 20, true); local.setUint16(6, 0x0800, true);
+        local.setUint16(12, 0x21, true); local.setUint32(14, crc, true);
+        local.setUint32(18, file.body.length, true); local.setUint32(22, file.body.length, true);
+        local.setUint16(26, name.length, true);
+        const entry = new DataView(new ArrayBuffer(46));
+        entry.setUint32(0, 0x02014b50, true); entry.setUint16(4, 20, true); entry.setUint16(6, 20, true);
+        entry.setUint16(8, 0x0800, true); entry.setUint16(14, 0x21, true); entry.setUint32(16, crc, true);
+        entry.setUint32(20, file.body.length, true); entry.setUint32(24, file.body.length, true);
+        entry.setUint16(28, name.length, true); entry.setUint32(42, offset, true);
+        parts.push(local, name, file.body);
+        central.push(entry, name);
+        offset += 30 + name.length + file.body.length;
+    });
+    const size = central.reduce(function(sum, part) { return sum + part.byteLength; }, 0);
+    const end = new DataView(new ArrayBuffer(22));
+    end.setUint32(0, 0x06054b50, true); end.setUint16(8, files.length, true); end.setUint16(10, files.length, true);
+    end.setUint32(12, size, true); end.setUint32(16, offset, true);
+    return new Blob(parts.concat(central, [end]), { type: 'application/zip' });
 }
 
 function exportFilteredMarkdown() {
-    let papers = filteredPapers.length ? filteredPapers : allPapers;
-    const withDocs = papers.filter(function(p) { return p.knowledge_doc; });
+    const withDocs = korpusResult.filter(function(p) { return p.knowledge_doc; });
 
     if (withDocs.length === 0) {
         alert('Keine Wissensdokumente fuer die aktuelle Auswahl verfuegbar.');
@@ -1417,7 +1522,7 @@ function exportFilteredMarkdown() {
             withDocs.length + ' Wissensdokumente aus dem Evidence Companion.\n\n';
         const body = header + documents.join('\n\n---\n\n') + '\n';
         download(
-            'fem_prompt_auswahl_' + withDocs.length + '_wissensdokumente.md',
+            exportName('md'),
             body,
             'text/markdown;charset=utf-8;'
         );

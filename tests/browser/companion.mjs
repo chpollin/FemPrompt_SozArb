@@ -1,6 +1,7 @@
 // Chromium acceptance run for the working Companion docs/index.html: start view, answer
 // pages, Argumentkarte, Literaturbild matrix, Wissensnetz, work view, Landkarte, legacy hashes, nav
-// tooltips, the corpus year histogram and reflow.
+// tooltips, the Korpus workbench (sidebar, year histogram, review stages, work lists,
+// exports, stage track) and reflow.
 import { chromium } from 'playwright';
 import { createServer } from 'node:http';
 import { existsSync, readFileSync, statSync } from 'node:fs';
@@ -365,6 +366,158 @@ try {
   check('an invalid year parameter is no filter',
     await page.locator('#year-hist .year-col[aria-pressed="true"]').count() === 0 && await resultCount() === corpus.length);
 
+  // Review stages, recomputed here from the files the view reads: the reading-layer
+  // manifest, the agent track's analysis blocks, the Assertions and the assignment.
+  const readOptional = (rel) => (existsSync(resolve(docs, 'data', rel)) ? JSON.parse(readFileSync(resolve(docs, 'data', rel))) : null);
+  const manifest = readOptional('fulltext_manifest.json');
+  const assignment = readOptional('screening/assignment.json');
+  const workOfRecord = Object.fromEntries(corpus.map((p) => [p.id, p.work_id]));
+  const codedWorks = new Set(Object.entries(readOptional('screening/ar2.json').decisions)
+    .filter(([, d]) => d.analysis && d.analysis.fields && Object.keys(d.analysis.fields).length)
+    .map(([id, d]) => workOfRecord[id] || d.work_id));
+  const claimWorks = {};
+  const claimItems = hasWorking
+    ? JSON.parse(readFileSync(workingPath)).assertions.map((a) => [a.id, a.works])
+    : released.map((a) => [a.id, a.evidence]);
+  for (const [id, refs] of claimItems) for (const ref of refs) {
+    const work = workOfRecord[ref.record_id] || ref.work_id;
+    (claimWorks[work] = claimWorks[work] || new Set()).add(id);
+  }
+  const decisionOf = (p) => (p.benchmark.has_human && p.human && ['Include', 'Exclude'].includes(p.human.decision) ? p.human.decision : null);
+  const textOf = (p) => (manifest ? Boolean(manifest[p.id] && manifest[p.id].src !== 'none') : null);
+  const claimsOf = (p) => (claimWorks[p.work_id] ? claimWorks[p.work_id].size : 0);
+  const stageRules = {
+    all: () => true,
+    text: (p) => textOf(p) === true,
+    bewertet: (p) => decisionOf(p) !== null,
+    eingeschlossen: (p) => decisionOf(p) === 'Include',
+    kodiert: (p) => codedWorks.has(p.work_id),
+    aussagen: (p) => claimsOf(p) > 0,
+    'ohne-text': (p) => textOf(p) === false,
+    offen: (p) => decisionOf(p) === null,
+    'nicht-kodiert': (p) => decisionOf(p) === 'Include' && !codedWorks.has(p.work_id),
+    'ohne-aussage': (p) => decisionOf(p) === 'Include' && claimsOf(p) === 0,
+  };
+  if (!manifest) { delete stageRules.text; delete stageRules['ohne-text']; }
+  for (const r of assignment.reviewers) {
+    stageRules['offen-' + r.key] = (p) => decisionOf(p) === null && assignment.assignments[p.id] === r.key;
+  }
+  const expectedCounts = (papers) => Object.fromEntries(Object.entries(stageRules).map(([key, rule]) => [key, papers.filter(rule).length]));
+  const shownCounts = () => page.$$eval('#view-korpus button[data-stage]', (buttons) =>
+    Object.fromEntries(buttons.map((b) => [b.dataset.stage, Number(b.querySelector('.stage-n').textContent)])));
+  const sameCounts = (a, b) => JSON.stringify(Object.keys(a).sort().map((k) => [k, a[k]])) === JSON.stringify(Object.keys(b).sort().map((k) => [k, b[k]]));
+
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto(`${base}/index.html#view=korpus`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#papers-grid tr[data-idx]');
+  const workbench = await page.evaluate(() => {
+    const rect = (sel) => document.querySelector(sel).getBoundingClientRect();
+    return {
+      side: rect('.korpus-side'), main: rect('.korpus-main'), head: rect('.papers-table thead'),
+      row: rect('#papers-grid tr[data-idx]'), sticky: getComputedStyle(document.querySelector('.korpus-side')).position,
+      sideHolds: ['#search-box', '#gap-list', '#year-hist', '#category-chips', '#filter-decision', '#filter-human', '#sort-by']
+        .every((sel) => document.querySelector('.korpus-side').contains(document.querySelector(sel))),
+      bar: document.querySelector('.korpus-main').firstElementChild.id,
+      labels: [...document.querySelectorAll('.korpus-side .filter-label, .korpus-side-h')].map((n) => getComputedStyle(n).textTransform),
+    };
+  });
+  check('at 1280x800 the filters stand in a sticky sidebar beside the table',
+    workbench.sideHolds && workbench.sticky === 'sticky' && workbench.side.right <= workbench.main.left && workbench.bar === 'stage-bar', JSON.stringify(workbench));
+  check('at 1280x800 the table header and first row lie within the first viewport',
+    workbench.head.top < 800 && workbench.row.bottom <= 800, JSON.stringify({ head: workbench.head.top, row: workbench.row.bottom }));
+  check('sidebar labels are set in normal case', workbench.labels.length >= 5 && workbench.labels.every((t) => t === 'none'), workbench.labels.join());
+  check('the stage bar and work lists count the stages recomputed from the data',
+    sameCounts(await shownCounts(), expectedCounts(corpus)), JSON.stringify({ shown: await shownCounts(), expected: expectedCounts(corpus) }));
+  check('the stage bar runs from Identifiziert to in Aussagen', (await page.$$eval('#stage-bar button', (b) => b.map((x) => x.dataset.stage))).join() ===
+    ['all', ...(manifest ? ['text'] : []), 'bewertet', 'eingeschlossen', 'kodiert', 'aussagen'].join());
+  await page.locator('#filter-decision').selectOption('Include');
+  const llmIncluded = corpus.filter((p) => p.llm.decision === 'Include');
+  check('the stage counts follow the other filters', sameCounts(await shownCounts(), expectedCounts(llmIncluded)));
+  await page.locator('#filter-decision').selectOption('all');
+
+  const gapKeys = Object.keys(stageRules).filter((key) => !['all', 'text', 'bewertet', 'eingeschlossen', 'kodiert', 'aussagen'].includes(key));
+  check('the work lists offer every gap and the open split by reviewer',
+    (await page.$$eval('#gap-list button', (b) => b.map((x) => x.dataset.stage))).sort().join() === gapKeys.sort().join());
+  for (const key of [...gapKeys, 'kodiert', 'aussagen']) {
+    await page.locator(`#view-korpus button[data-stage="${key}"]`).click();
+    const ids = await page.$$eval('#papers-grid tr[data-id]', (rows) => rows.map((row) => row.dataset.id));
+    const expectedIds = corpus.filter(stageRules[key]);
+    check(`the filter ${key} lists exactly its works`,
+      await resultCount() === expectedIds.length && hashParams().get('stage') === key &&
+      await page.locator(`#view-korpus button[data-stage="${key}"]`).getAttribute('aria-pressed') === 'true' &&
+      ids.every((id) => stageRules[key](corpus.find((p) => p.id === id))),
+      `${await resultCount()}/${expectedIds.length}`);
+    await page.locator(`#view-korpus button[data-stage="${key}"]`).click();
+  }
+  check('pressing the active stage again clears it', await resultCount() === corpus.length && !hashParams().has('stage'));
+
+  const exportKey = 'ohne-aussage';
+  await page.locator(`#gap-list button[data-stage="${exportKey}"]`).click();
+  const exportN = corpus.filter(stageRules[exportKey]).length;
+  const [csvDownload] = await Promise.all([page.waitForEvent('download'), page.locator('.export-button', { hasText: 'CSV' }).click()]);
+  const csvText = readFileSync(await csvDownload.path(), 'utf8');
+  const csvRows = csvText.split('\n').filter(Boolean);
+  check('the CSV export writes the filtered work list with its stage columns',
+    csvDownload.suggestedFilename() === `fem_prompt_korpus_${exportKey}.csv` && csvRows.length === exportN + 1 &&
+    csvRows[0].includes('"Coded"') && csvRows[0].includes('"Assertions"'), `${csvRows.length - 1}/${exportN}`);
+  const docsOf = new Set(corpus.filter(stageRules[exportKey]).filter((p) => p.knowledge_doc).map((p) => p.knowledge_doc));
+  const [zipDownload] = await Promise.all([page.waitForEvent('download'), page.locator('.export-button', { hasText: 'Vault' }).click()]);
+  const zip = readFileSync(await zipDownload.path());
+  let entries = 0;
+  for (let i = 0; i + 4 <= zip.length; i++) if (zip.readUInt32LE(i) === 0x02014b50) entries++;
+  check('the Vault export packs the knowledge documents of the filtered set',
+    zip.readUInt32LE(0) === 0x04034b50 && entries === docsOf.size + 1, `${entries}/${docsOf.size + 1}`);
+
+  const firstId = await page.locator('#papers-grid tr[data-id]').first().getAttribute('data-id');
+  const firstPaper = corpus.find((p) => p.id === firstId);
+  const marks = await page.locator('#papers-grid tr[data-id]').first().locator('.st-mark').evaluateAll((nodes) =>
+    nodes.map((n) => [n.getAttribute('role'), n.getAttribute('aria-label')]));
+  const n = claimsOf(firstPaper);
+  const expectedMarks = [
+    textOf(firstPaper) === null ? 'Volltext unbekannt' : textOf(firstPaper) ? 'Volltext vorhanden' : 'kein Volltext',
+    'Screening: ' + ({ Include: 'eingeschlossen', Exclude: 'ausgeschlossen' }[decisionOf(firstPaper)] || 'nicht bewertet'),
+    codedWorks.has(firstPaper.work_id) ? 'kodiert' : 'nicht kodiert',
+    n ? `in ${n === 1 ? '1 Aussage' : n + ' Aussagen'}` : 'in keiner Aussage',
+  ];
+  check('each row carries four stage marks with accessible names',
+    marks.length === 4 && marks.every(([role], i) => role === 'img' && marks[i][1] === expectedMarks[i]), JSON.stringify(marks));
+  await page.locator(`#gap-list button[data-stage="${exportKey}"]`).click();
+  const forms = await page.evaluate(() => Object.fromEntries(['is-include', 'is-exclude', 'is-open'].map((cls) => {
+    const node = document.querySelector('.st-mark--dec.' + cls);
+    return [cls, node ? getComputedStyle(node, '::before').content + ' ' + getComputedStyle(node).borderTopStyle : null];
+  })));
+  check('the decision mark differs in form, not only in colour',
+    forms['is-include'] === '"+" solid' && forms['is-exclude'] === '"−" solid' && forms['is-open'] === 'none dashed', JSON.stringify(forms));
+
+  const reviewer = assignment.reviewers[0].key;
+  const stageHash = `#view=korpus&stage=offen-${reviewer}&year=2025`;
+  await page.goto(`${base}/index.html${stageHash}`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#gap-list button');
+  const roundTrip = corpus.filter((p) => stageRules['offen-' + reviewer](p) && yearOf(p) === '2025').length;
+  check('a stage in the hash restores the work list',
+    await page.locator(`#gap-list button[data-stage="offen-${reviewer}"]`).getAttribute('aria-pressed') === 'true' &&
+    await resultCount() === roundTrip && hashParams().get('stage') === `offen-${reviewer}`);
+  await page.locator('#view-korpus button[data-stage="eingeschlossen"]').click();
+  const included2025 = corpus.filter((p) => stageRules.eingeschlossen(p) && yearOf(p) === '2025').length;
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForSelector('#stage-bar button');
+  check('a chosen stage writes the hash and survives reload', hashParams().get('stage') === 'eingeschlossen' &&
+    hashParams().get('year') === '2025' && await resultCount() === included2025);
+  await page.goto(`${base}/index.html#view=korpus&stage=bogus`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#stage-bar button');
+  check('an invalid stage parameter is no filter', await resultCount() === corpus.length &&
+    await page.locator('#stage-bar button[data-stage="all"]').getAttribute('aria-pressed') === 'true');
+
+  await page.locator('#stage-bar button[data-stage="eingeschlossen"]').focus();
+  await page.keyboard.press('Enter');
+  check('a stage is selectable by keyboard with a visible focus', await resultCount() === expectedCounts(corpus).eingeschlossen &&
+    await page.evaluate(() => document.activeElement.dataset.stage === 'eingeschlossen' && getComputedStyle(document.activeElement).outlineStyle !== 'none'));
+  await page.locator('#papers-grid .row-open').first().focus();
+  await page.keyboard.press('Enter');
+  await page.waitForSelector('#paper-modal.active');
+  check('a row opens its detail by keyboard and keeps the paper link in the hash', hashParams().get('paper') !== null);
+  await page.keyboard.press('Escape');
+
   await page.locator('#tab-korpus').focus();
   const tipId = await page.locator('#tab-korpus').getAttribute('aria-describedby');
   check('a nav tooltip shows on keyboard focus', Boolean(tipId) && await page.locator('#' + tipId).isVisible());
@@ -377,11 +530,11 @@ try {
   check('desktop document has no horizontal overflow', await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1));
   await page.setViewportSize({ width: 390, height: 844 });
   for (const hash of ['#view=start', '#view=frage&sq=1', '#view=frage&sq=3', '#view=frage&sq=4', '#view=frage&sq=5', '#view=literaturbild', '#view=wissensnetz', workHref,
-    '#view=korpus', '#view=chat', '#view=vergleich']) {
+    '#view=korpus', '#view=korpus&stage=offen', '#view=chat', '#view=vergleich']) {
     await page.goto(`${base}/about.html`, { waitUntil: 'networkidle' });
     await page.goto(`${base}/index.html${hash}`, { waitUntil: 'networkidle' });
     await page.waitForTimeout(150);
-    check(`390 px without horizontal scrolling: ${hash.split('&')[0]}`, await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1));
+    check(`390 px without horizontal scrolling: ${hash.split('&').slice(0, hash.includes('stage') ? 2 : 1).join('&')}`, await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1));
   }
   // CI renders with wider Linux fonts than Windows; a wide font with extra tracking stands in for them locally.
   const wideFont = '*{font-family:Verdana,"DejaVu Sans",sans-serif !important; letter-spacing:.02em}';

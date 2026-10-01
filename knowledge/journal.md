@@ -24,6 +24,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: Korpus view as a review workbench
+
+After the operator found that the filters pushed the entries far down, the Korpus view received a sticky filter sidebar and a stage bar over the table, so that it supports conducting the review instead of showing the round-one comparison. The LLM, Human and Status columns gave way to a four-mark stage track, and the comparison stays reachable through the LLM and Expert:innen filters. Work lists for missing texts, open papers per reviewer and included works without coding or Assertion turn the exports into work packages. Coding and Assertions count per Work, because several corpus records share a Work. Two questions stay open, whether saved records of the human reviewer files should count as bewertet, as PRISM's `isDone` does for the active reviewer, and whether the default sort should stay LLM-Include first.
+
 ### 2026-10-01: Argumentkarte on the start view
 
 After the operator found the prototype too full and too text-driven, the start view of the working Companion received an Argumentkarte whose tiles carry no text. Fill shows the release state, unit marks the number of source Works, and selection highlights shared Works and marks contested Assertions. Draft Assertions reach the browser only through the git-ignored working file `docs/data/assertions_working.json`, which the build writes beside the reading layer, so the Pages site keeps showing released Assertions alone. Two questions stay open, the column placement of the reviewed Assertions, whose `research-questions` still awaits the remapping in [[research-vault#Assertions]], and whether the result site should show the map over the released index.

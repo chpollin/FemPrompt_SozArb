@@ -55,73 +55,84 @@
     <main>
         <!-- View: Korpus -->
         <section class="content-section view-content" id="view-korpus" aria-labelledby="tab-korpus" style="display:none;">
-            <div class="search-filters">
-                <input type="text" class="search-box" id="search-box" placeholder="Paper suchen (Titel, Autor, Abstract)..." aria-label="Paper durchsuchen">
+            <div class="korpus-layout">
+                <aside class="korpus-side" aria-label="Korpus filtern">
+                    <input type="search" class="search-box" id="search-box" placeholder="Titel, Autor, Abstract" aria-label="Korpus durchsuchen">
 
-                <div class="filters-grid">
-                    <div class="filter-group">
-                        <label class="filter-label">LLM</label>
-                        <select class="filter-select" id="filter-decision">
-                            <option value="all">Alle</option>
-                            <option value="Include">Include</option>
-                            <option value="Exclude">Exclude</option>
-                        </select>
+                    <div class="korpus-side-group">
+                        <h3 class="korpus-side-h" id="gap-heading">Arbeitslisten</h3>
+                        <ul class="gap-list" id="gap-list" aria-labelledby="gap-heading"></ul>
                     </div>
 
-                    <div class="filter-group">
-                        <label class="filter-label">Expert:innen</label>
-                        <select class="filter-select" id="filter-human">
-                            <option value="all">Alle</option>
-                            <option value="has_human">Bewertet</option>
-                            <option value="agreement">Konsens</option>
-                            <option value="disagreement">Divergenz</option>
-                            <option value="no_human">Nicht bewertet</option>
-                        </select>
+                    <div class="korpus-side-group">
+                        <h3 class="korpus-side-h" id="year-heading">Erscheinungsjahr</h3>
+                        <!-- Publication-year histogram, the year filter of the corpus (research-app.js) -->
+                        <div class="year-hist" id="year-hist" role="group" aria-labelledby="year-heading"></div>
                     </div>
 
-                    <div class="filter-group">
-                        <label class="filter-label">Sortierung</label>
-                        <select class="filter-select" id="sort-by">
-                            <option value="relevance">Include zuerst</option>
-                            <option value="year">Jahr (neueste)</option>
-                            <option value="author">Autor (A-Z)</option>
-                            <option value="title">Titel (A-Z)</option>
-                            <option value="status">Divergenz zuerst</option>
-                        </select>
+                    <div class="korpus-side-group">
+                        <div class="category-chips" id="category-chips" role="group" aria-label="Kategorien"></div>
                     </div>
-                </div>
 
-                <!-- Category chips -->
-                <div class="category-filter-row">
-                    <div class="category-chips" id="category-chips"></div>
-                </div>
-            </div>
+                    <div class="korpus-side-group korpus-selects">
+                        <div class="filter-group">
+                            <label class="filter-label" for="filter-decision">LLM</label>
+                            <select class="filter-select" id="filter-decision">
+                                <option value="all">Alle</option>
+                                <option value="Include">Include</option>
+                                <option value="Exclude">Exclude</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label" for="filter-human">Expert:innen</label>
+                            <select class="filter-select" id="filter-human">
+                                <option value="all">Alle</option>
+                                <option value="has_human">Bewertet</option>
+                                <option value="agreement">Konsens mit LLM</option>
+                                <option value="disagreement">Divergenz zum LLM</option>
+                                <option value="no_human">Nicht bewertet</option>
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label" for="sort-by">Sortierung</label>
+                            <select class="filter-select" id="sort-by">
+                                <option value="relevance">LLM-Include zuerst</option>
+                                <option value="stage">Stand (am weitesten zuerst)</option>
+                                <option value="year">Jahr (neueste)</option>
+                                <option value="author">Autor (A-Z)</option>
+                                <option value="title">Titel (A-Z)</option>
+                                <option value="status">Divergenz zuerst</option>
+                            </select>
+                        </div>
+                    </div>
+                </aside>
 
-            <!-- Publication-year histogram, the year filter of the corpus (research-app.js) -->
-            <div class="year-hist" id="year-hist" role="group" aria-label="Erscheinungsjahr"></div>
+                <div class="korpus-main">
+                    <ol class="stage-bar" id="stage-bar" aria-label="Review-Stand"></ol>
 
-            <!-- Results Counter + Exports -->
-            <div class="results-row">
-                <div class="results-counter" id="results-counter">
-                    <strong id="results-count">0</strong> von <strong id="total-count">0</strong> Papers
-                </div>
-                <div class="export-buttons">
-                    <button class="export-button" onclick="exportFilteredPapers()" title="Aktuelle Auswahl als CSV-Tabelle (Titel, Autor, Jahr, LLM/Human-Entscheidung, Kategorien)">
-                        <i class="fas fa-download"></i> CSV
-                    </button>
-                    <button class="export-button" onclick="exportFilteredMarkdown()" title="Wissensdokumente der Auswahl in einer Markdown-Datei">
-                        <i class="fas fa-file-export"></i> Markdown
-                    </button>
-                    <button class="export-button" onclick="downloadVaultZip()" title="Paper-Wissenssammlung herunterladen">
-                        <i class="fas fa-box-archive"></i> Vault
-                    </button>
-                </div>
-            </div>
+                    <div class="results-row">
+                        <p class="results-counter" id="results-counter" aria-live="polite">
+                            <strong id="results-count">0</strong> <span id="results-label">Werke</span>
+                        </p>
+                        <div class="export-buttons">
+                            <button type="button" class="export-button" onclick="exportFilteredPapers()" title="Aktuelle Auswahl als CSV-Tabelle mit Stand je Werk">
+                                <i class="fas fa-download" aria-hidden="true"></i> CSV
+                            </button>
+                            <button type="button" class="export-button" onclick="exportFilteredMarkdown()" title="Wissensdokumente der Auswahl in einer Markdown-Datei">
+                                <i class="fas fa-file-export" aria-hidden="true"></i> Markdown
+                            </button>
+                            <button type="button" class="export-button" onclick="downloadVaultZip()" title="Wissensdokumente der Auswahl als ZIP-Archiv">
+                                <i class="fas fa-box-archive" aria-hidden="true"></i> Vault
+                            </button>
+                        </div>
+                    </div>
 
-            <div id="papers-grid">
-                <div class="loading">
-                    <div class="loading-spinner"></div>
-                    <p>Lade Papers...</p>
+                    <div id="papers-grid">
+                        <div class="loading">
+                            <div class="loading-spinner"></div>
+                            <p>Lade Papers...</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -233,6 +244,7 @@
 
     <!-- Scripts -->
     <script src="js/research-app.js"></script>
+    <script src="js/korpus-stages.js"></script>
     <script src="js/kategorien.js"></script>
     <script src="js/public-release.js"></script>
     <script src="js/release-model.js"></script>
