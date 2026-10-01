@@ -169,6 +169,9 @@ HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
 # the served docs carry the HTML-escaped form GLYPH&lt;..&gt;, and math-symbol pages
 # leak the GLYPH(cmap:XXXX) parenthesis form (e.g. a formula-heavy algorithm block).
 GLYPH_RE = re.compile(r"GLYPH&lt;[^&]*&gt;|GLYPH<[^>]*>|GLYPH\([^)]*\)")
+# Docling writes glyphs without a Unicode mapping as /uniXXXX. Exactly four hex digits
+# are read, since a longer match would swallow following letters ("/uniFB01eld").
+GLYPH_NAME_RE = re.compile(r"/uni([0-9A-Fa-f]{4})")
 HSPACE_RE = re.compile(r"[ \t]{2,}")
 BLANKS_RE = re.compile(r"\n{3,}")
 
@@ -608,10 +611,24 @@ def curated_source(
     return path, label
 
 
+def replace_glyph_names(text: str) -> str:
+    """Resolve /uniXXXX glyph names; ligatures become their letters."""
+
+    def resolve(match: re.Match[str]) -> str:
+        code = int(match.group(1), 16)
+        if 0xD800 <= code <= 0xDFFF:
+            return match.group(0)
+        char = chr(code)
+        return unicodedata.normalize("NFKC", char) if 0xFB00 <= code <= 0xFB06 else char
+
+    return GLYPH_NAME_RE.sub(resolve, text)
+
+
 def clean(text: str) -> str:
     text = FRONTMATTER_RE.sub("", text, count=1)
     text = HTML_COMMENT_RE.sub("", text)
     text = GLYPH_RE.sub("", text)
+    text = replace_glyph_names(text)
     text = HSPACE_RE.sub(
         " ", text
     )  # collapse the whitespace runs a stripped GLYPH leaves behind

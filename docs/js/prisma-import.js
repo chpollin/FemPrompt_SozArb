@@ -6,8 +6,8 @@
 // per-reviewer JSON file (version-aware schema 0.4 when the corpus mapping is
 // loaded; historical schema 0.3 in an offline migration) and produces a
 // validation report: out-of-vocabulary category and decision values, empty or
-// out-of-vocabulary exclusion reasons on Exclude (the data-hygiene lesson from
-// the conformance audit, knowledge/conformance-audit.md), duplicate paper ids,
+// out-of-vocabulary exclusion reasons on Exclude (a data-hygiene lesson of the
+// round-one sheet), duplicate paper ids,
 // ids not present in the loaded corpus, and collisions with already recorded
 // decisions. Its output is staging data: positive categories still require Paper
 // evidence and Include records require analysis in PRISM before they are complete.
@@ -152,8 +152,9 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
     const corpusLoaded = papers.length > 0;
 
     const report = [];          // { row, id, kind, level, detail }
-    const decisions = {};       // the generated payload's decision map
-    Object.keys(existing || {}).forEach(function(k) { decisions[k] = existing[k]; });
+    // the generated payload's decision map; a deep copy, so the caller's records are
+    // never changed by the conversion
+    const decisions = JSON.parse(JSON.stringify(existing || {}));
 
     const seen = {};
     const stats = { rows: 0, added: 0, unchanged: 0, collisionsKept: 0, collisionsOverwritten: 0,
@@ -286,9 +287,14 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
              'Korpus-Pruefung uebersprungen, da keine Paper geladen sind.');
     }
 
+    // Binding happens for all records or for none: a partly bound file would mix the
+    // version-aware and the historical schema.
     const versionAware = corpusLoaded && Object.keys(decisions).every(function(id) {
         const paper = corpus[id];
-        if (!paper || !paper.work_id || !paper.version_id) return false;
+        return !!(paper && paper.work_id && paper.version_id);
+    });
+    if (versionAware) Object.keys(decisions).forEach(function(id) {
+        const paper = corpus[id];
         Object.assign(decisions[id], {
             work_id: paper.work_id,
             version_id: paper.version_id,
@@ -296,7 +302,6 @@ function convert(rows, header, rid, existing, overwrite, fileName) {
             preferred_version_id: paper.preferred_version_id || paper.version_id,
             selected_version_is_preferred: !!paper.is_preferred_version
         });
-        return true;
     });
     const payload = { schema: versionAware ? REVIEWER_SCHEMA : HISTORICAL_REVIEWER_SCHEMA,
         reviewer: rid, actor: 'human', updated: nowIso, decisions: decisions };

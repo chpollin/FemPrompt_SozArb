@@ -845,6 +845,15 @@ test('import: a loaded corpus binds historical rows to the exact Work and Versio
         window.EC.getAllPapers = getAllPapers;
     }
 });
+test('import: the conversion never changes the caller records and binds all or none', function() {
+    var existing = { KEEP1: { decision: 'Exclude', reason: 'Duplicate', categories: {} } };
+    var snapshot = JSON.stringify(existing);
+    var res = runImport('P1,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,', existing, false);
+    assertEqual(JSON.stringify(existing), snapshot, 'the existing records are untouched');
+    assert(res.payload.decisions.KEEP1 !== existing.KEEP1, 'the payload holds copies');
+    var bound = Object.keys(res.payload.decisions).filter(function(id) { return !!res.payload.decisions[id].work_id; });
+    assert(bound.length === 0 || bound.length === Object.keys(res.payload.decisions).length, 'no partly bound payload');
+});
 test('import: re-importing the same row is idempotent (unchanged, not re-added)', function() {
     var first = runImport('P6,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,');
     var second = runImport('P6,Nein,Ja,Nein,Nein,Ja,Nein,Nein,Nein,Nein,Nein,Include,', first.payload.decisions);
