@@ -24,6 +24,14 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: PRISM checks and corrects the existing annotation
+
+The operator asked for two modes instead of three, no rounds in the interface, prefilled categories as colour toggles, a list that shows what is already captured and a panel without scrolling. PRISM now shows every document with its current annotation, the own record, the productive agent record or the consolidated expert decision as prefill, and one save writes either an own record or a verification entry into the reviewer's file ([[specification#ADR-042 One assessment over the current annotation, two modes, editing only in a local copy]]). The expert decision is taken over as it stands, with an override where the derivation rule disagrees and a new controlled exclusion reason for confirming an expert Exclude. Unchanged expert levels need no Paper Beleg, every change does. Editing exists only in a local project copy.
+
+Decided with the redesign. A confirmed expert prefill is a human record with a `legacy_import` baseline and never a verification. Anchoring on the expert decision is accepted by design, and the resulting reviewer files are no second independent human track. Human records are written in the schema 0.5 shape. The audits of the same day were folded in, among them a re-read before every write, drafts kept per document, refused agent keys, quarantined records instead of locked files, tables, glossaries and glyph names in the reader, and the shared category chip for all views. Onboarding moved into the help page.
+
+Open. The deletion of the redirect page `docs/onboarding.html` and the adoption of the shared chip in the other views lie with the operator and the companion integration.
+
 ### 2026-10-01: Substantive questions first, corrected projections and a question-led public companion
 
 The operator made the substantive question primary. The review now asks how social work professionals can use LLMs for their tasks responsibly, constructively and productively, with four sub-questions on use, risks, practices and competences, and the methodological question became the second question of the paper ([[project#Research questions]]). A critical review of the earlier questions found them sound as coding instructions but without a substantive frame, and found that per-work field lists support a map of joint coding but not a mapping of techniques to evidence status. The proposed codebook amendment v1.4 follows from that finding and awaits the operator ([[update-protocol]], [[plan#Open decisions]]).

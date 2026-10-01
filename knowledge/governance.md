@@ -29,6 +29,7 @@ FemPrompt assigns each research operation a defined actor, evidence basis, autho
 | Source coding | AI agent or person | Annotation with evidence and provenance | `agent-annotated` for the governed agent path |
 | Deterministic validation | Software agent | Hash-bound check receipt | Structural or rule conformance stated by the check |
 | Source-grounded AI Agent Review | AI agent with reviewer role | Review report and lifecycle event | `ai-agent-reviewed` |
+| Confirmation or correction of the consolidated expert decision | Domain expert in PRISM | Own screening record derived from the expert assessment, with a curated baseline of basis `legacy_import` | None beyond the expert's own screening record, never `verified` |
 | Scholarly verification | Domain expert | Accepted, corrected and accepted, changes requested, or rejected | `verified` for accepted outcomes |
 | Publication approval | Authorised person | Approval event over a verified artifact | `publication-approved` |
 
@@ -38,7 +39,9 @@ Deterministic validation evaluates explicit machine-readable requirements. AI Ag
 
 The canonical order is `identified → curated → agent-annotated → ai-agent-reviewed → verified → publication-approved`. Every transition records a timestamp, an activity, and an actor reference. The state describes achieved authority for one artifact. It does not propagate automatically to a derived Assertion, report passage, figure, or paper claim.
 
-Round one retains its conducted comparative design. Its consolidated expert annotation governs the round-one corpus decision, while the separately recorded LLM assessment supports the divergence analysis. Round two uses operationally isolated AI-agent tracks, deterministic PRISM transfer, separate source-grounded AI Agent Review, deferred domain-expert verification, and a separate publication decision.
+Round one retains its conducted comparative design. Its consolidated expert annotation governs the round-one corpus decision, while the separately recorded LLM assessment supports the divergence analysis. Round two uses operationally isolated AI-agent tracks, deterministic PRISM transfer, separate source-grounded AI Agent Review, deferred domain-expert verification, and a separate publication decision. The PRISM interface no longer distinguishes rounds, while every record keeps the provenance that tells them apart.
+
+PRISM prefills a document without own or agent record with the consolidated expert decision (ADR-042). A domain expert who saves it writes a human-authored screening record whose provenance names the expert assessment it derives from and whose lifecycle starts from a curated baseline with the basis `legacy_import`. Such a record is not a verification and never reaches `verified`, because verification applies to agent records. Anchoring on the expert decision is part of this design. These reviewer files confirm or correct the consolidated expert decision and are never a second independent human track, so no analysis may treat them as one or measure agreement with the expert decision on them.
 
 ## Verification scope decision, 22 September 2026
 
