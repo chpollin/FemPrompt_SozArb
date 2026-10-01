@@ -34,5 +34,6 @@ def test_public_pages_use_local_runtime_assets() -> None:
         assert 'href="vendor/fontawesome/css/all.min.css"' in html, filename
         assert all(marker not in html for marker in external_runtime_markers), filename
 
-    assert 'src="vendor/d3/d3.min.js"' in rendered["index.html"]
-    assert 'href="css/literaturbild.css"' in rendered["index.html"]
+    assert 'src="vendor/d3/d3.min.js"' not in rendered["index.html"]
+    assert 'href="css/release.css"' in rendered["index.html"]
+    assert 'href="css/release-netz.css"' in rendered["index.html"]

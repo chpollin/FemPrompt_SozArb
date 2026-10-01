@@ -1,10 +1,15 @@
 // Public Evidence Companion: hash router, shared rendering helpers, Aussagen view.
 // View modules (release-*.js) register through EC.registerView before boot.
+// The working application docs/index.html loads research-app.js first, which owns the
+// URL hash there and registers itself as EC.host. In that case this module runs no
+// router of its own: go, href and parseHash delegate to the host, and the host loads
+// the model and renders views through EC.release.
 (function () {
 'use strict';
 
 const SITE_TITLE = 'Feministische AI Literacies';
 const EC = window.EC = window.EC || {};
+const host = EC.host || null;
 const views = {};
 const lastParams = {};
 const NAV_OF_VIEW = { frage: 'fragen' };
@@ -26,6 +31,7 @@ function safeUrl(value) {
 }
 
 function parseHash() {
+    if (host) return host.parseHash();
     const params = {};
     new URLSearchParams(location.hash.replace(/^#/, '')).forEach(function (value, key) { params[key] = value; });
     if (!params.view || !views[params.view]) params.view = 'fragen';
@@ -44,6 +50,7 @@ function hashOf(params) {
 // Every view state lives in the hash. Control changes push a history entry so
 // browser back restores the previous state; typing in a search box replaces it.
 function go(params, options) {
+    if (host) { host.go(params, options); return; }
     const hash = hashOf(params);
     internalNavigation = true;
     if (options && options.replace) {
@@ -56,7 +63,7 @@ function go(params, options) {
     }
 }
 
-function href(params) { return hashOf(params); }
+function href(params) { return host ? host.href(params) : hashOf(params); }
 
 function statusMark(status, options) {
     const verified = status === 'verified';
@@ -165,13 +172,21 @@ function render() {
     // The tab title repeats the page heading.
     const headingText = heading ? heading.textContent.trim() : '';
     document.title = (headingText ? headingText + ' · ' : '') + SITE_TITLE;
-    // A deep link, Back or Forward into an open work list lands on that list.
-    const list = external ? document.querySelector('[data-view-root="' + params.view + '"] .worklist-section:not([hidden]) h2') : null;
+    settleFocus(document.querySelector('[data-view-root="' + params.view + '"]'),
+        { changed: changed, external: external, focusHeading: booted });
+}
+
+// A deep link, Back or Forward into an open work list lands on that list; any other
+// change of view moves focus to the view's heading when ctx.focusHeading allows it.
+function settleFocus(root, ctx) {
+    if (!root) return;
+    const list = ctx.external ? root.querySelector('.worklist-section:not([hidden]) h2') : null;
+    const heading = root.querySelector('h1');
     if (list) {
         list.setAttribute('tabindex', '-1');
         list.focus({ preventScroll: true });
         list.scrollIntoView({ block: 'start' });
-    } else if (changed && booted && heading) {
+    } else if (ctx.changed && ctx.focusHeading && heading) {
         focusHeading(heading);
     }
 }
@@ -185,7 +200,7 @@ function focusHeading(heading) {
     heading.focus({ preventScroll: false });
 }
 
-registerView('aussagen', {
+if (!host) registerView('aussagen', {
     title: function () { return 'Aussagen'; },
     init: function () {
         document.getElementById('evidence-search').addEventListener('input', function (event) {
@@ -211,7 +226,7 @@ registerView('aussagen', {
     },
 });
 
-registerView('chat', {
+if (!host) registerView('chat', {
     title: function () { return 'Chat'; },
     render: function () {
         const container = document.getElementById('chat-container');
@@ -224,7 +239,7 @@ registerView('chat', {
 
 // The skip link moves focus to the visible view's heading without touching the hash,
 // which holds the view state.
-document.addEventListener('click', function (event) {
+if (!host) document.addEventListener('click', function (event) {
     const link = event.target.closest && event.target.closest('.skip-link');
     if (!link) return;
     event.preventDefault();
@@ -233,42 +248,71 @@ document.addEventListener('click', function (event) {
 });
 
 Object.assign(EC, {
-    escapeHtml: esc, esc: esc, safeUrl: safeUrl, go: go, href: href, parseHash: parseHash,
+    esc: esc, safeUrl: safeUrl, go: go, href: href, parseHash: parseHash,
     statusMark: statusMark, workCount: workCount, versionLabel: versionLabel, highlight: highlight,
     germanDate: germanDate, agentRole: agentRole, screeningLabel: screeningLabel,
     renderAssertion: renderAssertion, registerView: registerView,
-    // The grounded chat links a cited record to its Work.
-    navigateToPaper: function (recordId) {
-        const work = model && model.workById(recordId);
-        if (!work) return false;
-        go({ view: 'werk', id: work.id });
-        return true;
-    },
 });
+// A host keeps its own escaping helper and lets the grounded chat open its own paper view.
+if (!host) {
+    Object.assign(EC, {
+        escapeHtml: esc,
+        // The grounded chat links a cited record to its Work.
+        navigateToPaper: function (recordId) {
+            const work = model && model.workById(recordId);
+            if (!work) return false;
+            go({ view: 'werk', id: work.id });
+            return true;
+        },
+    });
+}
 
-document.addEventListener('DOMContentLoaded', async function () {
+async function loadModel() {
     async function read(path) {
         const response = await fetch(path);
         if (!response.ok) throw new Error('Der geprüfte Datenstand ist nicht verfügbar (' + path + ').');
         return response.json();
     }
-    try {
-        const payload = await Promise.all([
-            read('data/public_release.json'), read('data/assertion_index.json'), read('data/category_schema.json'),
-            read('data/analysis_fields.json'), read('data/literature_landscape.json'),
-        ]);
-        model = EC.createModel({
-            release: payload[0], assertions: payload[1], schema: payload[2], fields: payload[3], landscape: payload[4],
-        });
-        EC.model = model;
-        Object.keys(views).forEach(function (name) { if (views[name].init) views[name].init(model); });
-        window.addEventListener('hashchange', render);
-        render();
-        booted = true;
-    } catch (error) {
-        const node = document.getElementById('release-error');
-        node.textContent = error.message;
-        node.hidden = false;
-    }
-});
+    const payload = await Promise.all([
+        // The working application has no release projection; its works come from the
+        // landscape records and the Assertion evidence.
+        host ? null : read('data/public_release.json'), read('data/assertion_index.json'), read('data/category_schema.json'),
+        read('data/analysis_fields.json'), read('data/literature_landscape.json'),
+    ]);
+    model = EC.createModel({
+        release: payload[0], assertions: payload[1], schema: payload[2], fields: payload[3], landscape: payload[4],
+    });
+    EC.model = model;
+    return model;
+}
+
+function initViews(names) {
+    names.forEach(function (name) { if (views[name] && views[name].init) views[name].init(model); });
+}
+
+if (host) {
+    EC.release = {
+        // Loads the model and initialises only the named views, whose containers the host provides.
+        start: function (names) { return loadModel().then(function () { initViews(names); }); },
+        // ctx carries root (the view container), changed, external and focusHeading.
+        render: function (name, params, ctx) {
+            views[name].render(params, ctx);
+            settleFocus(ctx.root, ctx);
+        },
+    };
+} else {
+    document.addEventListener('DOMContentLoaded', async function () {
+        try {
+            await loadModel();
+            initViews(Object.keys(views));
+            window.addEventListener('hashchange', render);
+            render();
+            booted = true;
+        } catch (error) {
+            const node = document.getElementById('release-error');
+            node.textContent = error.message;
+            node.hidden = false;
+        }
+    });
+}
 })();

@@ -2135,8 +2135,7 @@ main {
     .graph-wrapper {
         grid-template-columns: 1fr !important;
     }
-    #view-wissensnetz,
-    #view-wissensnetz .graph-wrapper {
+    .graph-wrapper {
         margin-left: 0;
         margin-right: 0;
     }
@@ -2158,17 +2157,12 @@ main {
    WISSENS-CHAT TAB
    ========================================================================== */
 
-/* Wissensnetz: full-width, break out of main constraint */
+/* Literaturbild and Wissensnetz keep the wider frame their tabs had; the matrix and the
+   network figure scroll inside it, never the document. */
+#view-literaturbild,
 #view-wissensnetz {
-    max-width: none;
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0 1rem;
+    margin-inline: calc((100% - min(1400px, 100vw - 2rem)) / 2);
 }
-
-/* Wissensnetz has no section heading -- content starts at toolbar */
 
 /* Chat view gets more horizontal space */
 #view-chat {

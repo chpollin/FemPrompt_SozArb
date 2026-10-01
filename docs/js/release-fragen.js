@@ -250,6 +250,8 @@ EC.registerView('fragen', {
 
 EC.registerView('frage', {
     title: function (params) { return question(params.sq) ? question(params.sq).name : 'Fragen'; },
+    // A host can initialise the answer pages without the Fragen start page.
+    init: function (instance) { model = instance; },
     render: renderAnswer,
 });
 

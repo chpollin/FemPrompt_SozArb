@@ -43,8 +43,6 @@ INDEX_META = """<meta name="keywords" content="AI literacy, social work, systema
     <meta property="og:title" content="Feministische AI Literacies -- Systematischer Review">
     <meta property="og:description" content="Interaktive Evidenz zum systematischen Literature Review zu feministischen AI Literacies im Feld der Sozialen Arbeit.">"""
 
-INDEX_SCRIPTS = '<script defer src="vendor/d3/d3.min.js"></script>'
-
 
 def head(
     title: str,
@@ -154,8 +152,11 @@ PAGES = {
         "head": head(
             "Feministische AI Literacies -- Systematischer Review",
             "Interaktive Evidenz zum systematischen Literature Review zu feministischen AI Literacies im Feld der Sozialen Arbeit. Duale Bewertung durch Expert:innen und LLM.",
-            fav=favicon("F", 60), fonts=FONTS_COMPANION, meta=INDEX_META, scripts=INDEX_SCRIPTS,
-            extra_css='<link rel="stylesheet" href="css/literaturbild.css">',
+            fav=favicon("F", 60), fonts=FONTS_COMPANION, meta=INDEX_META,
+            # The Literaturbild, Wissensnetz, answer and work views reuse the result-site
+            # modules, whose stylesheets are scoped to their view containers.
+            extra_css='<link rel="stylesheet" href="css/release.css">\n    '
+                      '<link rel="stylesheet" href="css/release-netz.css">',
         ),
         "header": None,
     },

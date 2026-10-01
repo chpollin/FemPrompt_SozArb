@@ -323,7 +323,9 @@ EC.registerView('matrix', {
     title: function () { return 'Matrix'; },
     init: function (instance) {
         model = instance;
-        const root = document.getElementById('view-matrix');
+        // The view container holding the matrix controls: #view-matrix in release.html,
+        // the Literaturbild section in index.html.
+        const root = document.getElementById('matrix-controls').closest('section');
         root.addEventListener('change', function (event) {
             const target = event.target;
             const params = Object.assign({ view: 'matrix' }, matrixParams(EC.parseHash()), { cell: EC.parseHash().cell });
