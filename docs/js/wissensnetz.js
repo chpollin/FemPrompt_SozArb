@@ -48,10 +48,11 @@ function workCount(n) { return n + (n === 1 ? ' Werk' : ' Werke'); }
 function inWorks(n) { return n + (n === 1 ? ' Werk' : ' Werken'); }
 function pct(value) { return Math.round(value * 100) + ' %'; }
 
+// The current human decision of the Korpus stage table: the newest saved reviewer
+// record, else the consolidated expert decision.
 function decisionKey(paper) {
-    const d = paper.human && paper.human.decision;
-    if (!d) return 'none';
-    return d === 'Include' ? 'include' : d === 'Exclude' ? 'exclude' : 'unclear';
+    const d = EC.korpusStages.decision(paper);
+    return d === 'open' ? 'none' : d;
 }
 
 function coded(value) { return value === 0 || value === 1; }
@@ -59,13 +60,14 @@ function humanCats(p) { return (p.human && p.human.all_categories) || {}; }
 function llmAssessed(p) { return Boolean(p.llm && p.llm.assessment_status === 'assessed' && p.llm.all_categories); }
 
 // The works a basis reads: Expert:innen every work with a consolidated expert decision (as
-// in Kategorien), LLM every work the LLM assessed, Übereinstimmung the works with both.
+// in Kategorien), LLM and Übereinstimmung only works with a human decision, since the
+// reviewers may open this view and an open work shows no AI assessment (ADR-044).
 function basisWorks(basis) {
     return EC.getAllPapers().filter(function (p) {
         const expert = Boolean(p.human && p.human.decision);
         if (basis === 'expert') return expert;
-        if (basis === 'llm') return llmAssessed(p);
-        return expert && llmAssessed(p);
+        if (!llmAssessed(p) || decisionKey(p) === 'none') return false;
+        return basis === 'llm' || expert;
     });
 }
 
@@ -396,9 +398,9 @@ function captionText() {
     const n = net.base.length;
     let text = 'Gemeinsam codiert in denselben Werken, ' + BASES[state.basis].caption + ', ' + n + ' von ' + total + ' Werken ' +
         (state.basis === 'agree' ? 'von beiden eingeschätzt' : 'eingeschätzt');
-    // The decision filter always reads the expert screening decision, also under the LLM basis.
-    if (state.scope === 'none') text += ', davon ' + workCount(net.works.length) + ' ohne Entscheidung der Expert:innen';
-    else if (state.scope !== 'all') text += ', davon ' + workCount(net.works.length) + ' mit Expert:innen-Entscheidung ' + DECISIONS[state.scope].label;
+    // The decision filter reads the human decision, a saved reviewer record before the expert decision.
+    if (state.scope === 'none') text += ', davon ' + workCount(net.works.length) + ' ohne Entscheidung';
+    else if (state.scope !== 'all') text += ', davon ' + workCount(net.works.length) + ' mit Entscheidung ' + DECISIONS[state.scope].label;
     return text;
 }
 
@@ -548,8 +550,7 @@ window.initializeWissensnetz = function () {
     // A basis without data offers no switch position.
     available = Object.keys(BASES).filter(function (key) {
         if (key === 'expert') return papers.some(function (p) { return p.human && p.human.decision && p.human.all_categories; });
-        if (key === 'llm') return papers.some(llmAssessed);
-        return papers.some(function (p) { return p.human && p.human.decision && p.human.all_categories && llmAssessed(p); });
+        return basisWorks(key).length > 0;
     });
     if (!available.length || !cats.length) {
         root.innerHTML = '<p class="empty-state">Keine codierten Werke vorhanden.</p>';

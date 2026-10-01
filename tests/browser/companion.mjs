@@ -370,9 +370,39 @@ try {
 
   // Wissensnetz: the screening categories as a network of joint coding, recomputed here
   // from the working data independently of wissensnetz.js.
+  const readOptional = (rel) => (existsSync(resolve(docs, 'data', rel)) ? JSON.parse(readFileSync(resolve(docs, 'data', rel))) : null);
+  const assignment = readOptional('screening/assignment.json');
+  const corpusById = Object.fromEntries(vault.papers.map((p) => [p.id, p]));
+  // Saved human reviewer records of the assigned reviewers: the newest valid record of a
+  // known paper replaces the round-one expert decision, as PRISM's paperSubject orders it.
+  const reviewerRecords = (files) => {
+    const out = {};
+    for (const [key, file] of Object.entries(files)) {
+      if (!file || !/^femprompt-prisma-reviewer\/0\.[1-5]$/.test(file.schema || '') || file.actor === 'agent') continue;
+      for (const [pid, rec] of Object.entries(file.decisions || {})) {
+        const paper = corpusById[pid];
+        if (!paper || !rec || !['Include', 'Exclude', 'Unclear'].includes(rec.decision)) continue;
+        if (rec.work_id && rec.version_id && paper.work_id && paper.version_id &&
+          (rec.work_id !== paper.work_id || rec.version_id !== paper.version_id)) continue;
+        const ts = String(rec.ts || file.updated || '');
+        if (out[pid] && out[pid].ts >= ts) continue;
+        const cats = rec.categories && typeof rec.categories === 'object' ? rec.categories : {};
+        const categories = Object.keys(cats).filter((c) => [true, 1, 2, '1', '2'].includes(cats[c]));
+        out[pid] = { decision: rec.decision, categories, ts, reviewer: key };
+      }
+    }
+    return out;
+  };
+  const diskRecords = reviewerRecords(Object.fromEntries(assignment.reviewers.map((r) => [r.key, readOptional(`screening/${r.key}.json`)])));
+  // The human decision of the Korpus stage table, recomputed independently of korpus-stages.js.
+  const humanDecisionOf = (records, p) => (records[p.id] ? records[p.id].decision
+    : p.benchmark.has_human && p.human && ['Include', 'Exclude'].includes(p.human.decision) ? p.human.decision : null);
+
   const catKeys = schema.categories.map((c) => c.key);
   const withDecision = vault.papers.filter((p) => p.human && p.human.decision);
-  const llmDone = vault.papers.filter((p) => p.llm && p.llm.assessment_status === 'assessed' && p.llm.all_categories);
+  // The LLM and Übereinstimmung bases read only works with a human decision (ADR-044).
+  const llmDone = vault.papers.filter((p) => p.llm && p.llm.assessment_status === 'assessed' && p.llm.all_categories &&
+    humanDecisionOf(diskRecords, p) !== null);
   const netCount = (works, side, set) => works.filter((p) => set.every((c) => (side === 'h' ? (p.human.all_categories || {}) : p.llm.all_categories)[c] === 1)).length;
   const pairs = catKeys.flatMap((a, i) => catKeys.slice(i + 1).map((b) => [a, b]));
   const expertPairs = pairs.map((set) => ({ set, n: netCount(withDecision, 'h', set) })).filter((e) => e.n > 0).sort((x, y) => y.n - x.n);
@@ -472,7 +502,7 @@ try {
   await page.locator('#wn-scope').selectOption('include');
   await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('scope') === 'include');
   check('the decision filter narrows the network to included works',
-    await page.locator('#wn-detail .lk-item').count() === withDecision.filter((p) => p.human.decision === 'Include' && (p.human.all_categories || {})[nodeCat] === 1).length &&
+    await page.locator('#wn-detail .lk-item').count() === withDecision.filter((p) => humanDecisionOf(diskRecords, p) === 'Include' && (p.human.all_categories || {})[nodeCat] === 1).length &&
     await page.locator('#wn-detail .lk-dec').evaluateAll((d) => d.every((n) => n.textContent === 'Include')));
   await page.locator('#wn-scope').selectOption('all');
   await page.locator('#wn-min').selectOption('50');
@@ -511,6 +541,60 @@ try {
   await page.waitForSelector('#view-begriffsnetz #netz-list');
   check('the Begriffsnetz of the analysis fields opens from the Wissensnetz',
     await visibleView() === 'view-begriffsnetz' && await page.locator('#netz-graph').count() === 1);
+
+  // Open works under the LLM and Übereinstimmung bases (ADR-044): a real open work with a
+  // round-one LLM assessment counts in no node and is listed under no selection, until a
+  // saved reviewer record decides it. The Entscheidung filter reads that record first.
+  {
+    const openLlmCats = (p) => (p.llm && p.llm.assessment_status === 'assessed' && p.llm.all_categories && humanDecisionOf(diskRecords, p) === null
+      ? catKeys.filter((c) => p.llm.all_categories[c] === 1) : []);
+    const openNet = openLlmCats(corpusById.BHXDU7VM || {}).length ? corpusById.BHXDU7VM : vault.papers.find((p) => openLlmCats(p).length);
+    check('the corpus holds an open work with LLM categories for the Wissensnetz check', Boolean(openNet));
+    console.log('open work checked in the Wissensnetz', openNet.id, openLlmCats(openNet).join(';'));
+    const netCat = openLlmCats(openNet)[0];
+    const listedIn = async (pg, hash) => {
+      await pg.goto('about:blank');
+      await pg.goto(`${base}/index.html${hash}`, { waitUntil: 'networkidle' });
+      await pg.waitForSelector('#wn-detail:not([hidden])');
+      return {
+        works: await pg.locator('#wn-detail .lk-item').evaluateAll((items) => items.map((item) => [
+          decodeURIComponent(item.querySelector('.lk-item-title').getAttribute('href').split('paper=')[1]), item.querySelector('.lk-dec').textContent])),
+        scopes: await pg.locator('#wn-scope option').evaluateAll((o) => o.map((n) => n.value)),
+        node: Number(await pg.locator(`#wn-graph .wn-node[data-sel="${netCat}"] .wn-count`).textContent()),
+      };
+    };
+    const own = await browser.newPage({ viewport: { width: 1440, height: 900 }, locale: 'de-AT' });
+    const llmView = await listedIn(own, `#view=wissensnetz&basis=llm&sel=${netCat}`);
+    check('under the LLM basis an open work is neither counted nor listed and no decision is missing',
+      !llmView.works.some(([id]) => id === openNet.id) && llmView.works.length === netCount(llmDone, 'l', [netCat]) &&
+      llmView.node === netCount(llmDone, 'l', [netCat]) && !llmView.scopes.includes('none'), JSON.stringify(llmView.scopes));
+    const agreeView = await listedIn(own, `#view=wissensnetz&basis=agree&sel=${netCat}`);
+    check('under Übereinstimmung an open work is not listed', !agreeView.works.some(([id]) => id === openNet.id) &&
+      agreeView.works.length > 0 && !agreeView.scopes.includes('none'));
+    await own.close();
+
+    // A reviewer record decides the open work and reverses an expert Include of a work
+    // coded with the same category; the decision filter and the lists follow the record.
+    const flip = withDecision.find((p) => p.id !== openNet.id && humanDecisionOf(diskRecords, p) === 'Include' && (p.human.all_categories || {})[netCat] === 1);
+    const reviewerKey = assignment.reviewers[0].key;
+    const bind = (p) => ({ work_id: p.work_id, version_id: p.version_id });
+    const fixture = { schema: 'femprompt-prisma-reviewer/0.5', reviewer: reviewerKey, actor: 'human', updated: '2026-10-02T12:00:00.000Z', decisions: {
+      [openNet.id]: { ...bind(openNet), decision: 'Include', categories: { [netCat]: 2 }, ts: '2026-10-02T10:00:00.000Z', actor: 'human' },
+      [flip.id]: { ...bind(flip), decision: 'Exclude', ts: '2026-10-02T10:01:00.000Z', actor: 'human' },
+    } };
+    const decidedPage = await browser.newPage({ viewport: { width: 1440, height: 900 }, locale: 'de-AT' });
+    await decidedPage.route(/\/data\/screening\/[a-z0-9_-]+\.json$/, (route) => (route.request().url().endsWith(`/${reviewerKey}.json`)
+      ? route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(fixture) }) : route.fallback()));
+    const decidedView = await listedIn(decidedPage, `#view=wissensnetz&basis=llm&sel=${netCat}`);
+    check('a reviewer record brings the open work into the LLM basis with its decision',
+      decidedView.works.some(([id, dec]) => id === openNet.id && dec === 'Include'), JSON.stringify(decidedView.works.find(([id]) => id === openNet.id)));
+    const excluded = await listedIn(decidedPage, `#view=wissensnetz&scope=exclude&sel=${netCat}`);
+    const included = await listedIn(decidedPage, `#view=wissensnetz&scope=include&sel=${netCat}`);
+    check('the Entscheidung filter reads the reviewer record before the expert decision',
+      excluded.works.some(([id, dec]) => id === flip.id && dec === 'Exclude') && !included.works.some(([id]) => id === flip.id) &&
+      excluded.works.every(([, dec]) => dec === 'Exclude'), flip.id);
+    await decidedPage.close();
+  }
 
   // Landkarte of the Kategorien view: every lens value of every cell and header is
   // recomputed here from the working data, independently of kategorien.js.
@@ -762,11 +846,8 @@ try {
 
   // Review stages, recomputed here from the files the view reads: the reading-layer
   // manifest, the agent track's analysis blocks, the Assertions and the assignment.
-  const readOptional = (rel) => (existsSync(resolve(docs, 'data', rel)) ? JSON.parse(readFileSync(resolve(docs, 'data', rel))) : null);
   const manifest = readOptional('fulltext_manifest.json');
-  const assignment = readOptional('screening/assignment.json');
   const workOfRecord = Object.fromEntries(corpus.map((p) => [p.id, p.work_id]));
-  const corpusById = Object.fromEntries(corpus.map((p) => [p.id, p]));
   const codedWorks = new Set(Object.entries(readOptional('screening/ar2.json').decisions)
     .filter(([, d]) => d.analysis && d.analysis.fields && Object.keys(d.analysis.fields).length)
     .map(([id, d]) => workOfRecord[id] || d.work_id));
@@ -778,35 +859,13 @@ try {
     const work = workOfRecord[ref.record_id] || ref.work_id;
     (claimWorks[work] = claimWorks[work] || new Set()).add(id);
   }
-  // Saved human reviewer records of the assigned reviewers: the newest valid record of a
-  // known paper replaces the round-one expert decision, as PRISM's paperSubject orders it.
-  const reviewerRecords = (files) => {
-    const out = {};
-    for (const [key, file] of Object.entries(files)) {
-      if (!file || !/^femprompt-prisma-reviewer\/0\.[1-5]$/.test(file.schema || '') || file.actor === 'agent') continue;
-      for (const [pid, rec] of Object.entries(file.decisions || {})) {
-        const paper = corpusById[pid];
-        if (!paper || !rec || !['Include', 'Exclude', 'Unclear'].includes(rec.decision)) continue;
-        if (rec.work_id && rec.version_id && paper.work_id && paper.version_id &&
-          (rec.work_id !== paper.work_id || rec.version_id !== paper.version_id)) continue;
-        const ts = String(rec.ts || file.updated || '');
-        if (out[pid] && out[pid].ts >= ts) continue;
-        const cats = rec.categories && typeof rec.categories === 'object' ? rec.categories : {};
-        const categories = Object.keys(cats).filter((c) => [true, 1, 2, '1', '2'].includes(cats[c]));
-        out[pid] = { decision: rec.decision, categories, ts, reviewer: key };
-      }
-    }
-    return out;
-  };
-  const diskRecords = reviewerRecords(Object.fromEntries(assignment.reviewers.map((r) => [r.key, readOptional(`screening/${r.key}.json`)])));
   const textOf = (p) => (manifest ? Boolean(manifest[p.id] && manifest[p.id].src !== 'none') : null);
   const claimsOf = (p) => (claimWorks[p.work_id] ? claimWorks[p.work_id].size : 0);
   const SCREENING_KEYS = ['all', ...(manifest ? ['text'] : []), 'bewertet', 'eingeschlossen'];
   const AUSWERTUNG_KEYS = ['kodiert', 'aussagen'];
   const SUB_KEYS = ['kodiert-eingeschlossen', 'aussagen-eingeschlossen'];
   const rulesFor = (records) => {
-    const decisionOf = (p) => (records[p.id] ? records[p.id].decision
-      : p.benchmark.has_human && p.human && ['Include', 'Exclude'].includes(p.human.decision) ? p.human.decision : null);
+    const decisionOf = (p) => humanDecisionOf(records, p);
     const rules = {
       all: () => true,
       text: (p) => textOf(p) === true,
@@ -959,13 +1018,6 @@ try {
     check('the CSV export leaves the LLM columns of an open work empty',
       Boolean(csvOpen) && csvOpen.LLM_Decision === '' && csvOpen.LLM_Categories === '' && csvOpen.Agreement === '' && csvOpen.Screening_Decision === '',
       JSON.stringify(csvOpen));
-    if (openLlm.knowledge_doc) {
-      const [mdDownload] = await Promise.all([page.waitForEvent('download'), page.locator('.export-button', { hasText: 'Markdown' }).click()]);
-      const md = readFileSync(await mdDownload.path(), 'utf8');
-      const part = md.split('\n---\n\n').find((section) => section.includes(`**Record:** ${openLlm.id}`)) || '';
-      check('the Markdown export carries no round-one LLM decision or categories of an open work',
-        part !== '' && !/llm_decision|llm_categories|\*\*LLM:\*\*/.test(part));
-    }
     for (const value of ['Include', 'Exclude']) {
       await page.locator('#filter-decision').selectOption(value);
       const listed = await page.$$eval('#papers-grid tr[data-id]', (rows) => rows.map((tr) => tr.dataset.id));
@@ -1001,6 +1053,54 @@ try {
     await page.locator('#gap-list button[data-stage="offen"]').click();
   }
 
+  // A knowledge document carries the round-one LLM decision and categories in its
+  // frontmatter and assessment sections, so the Korpus offers none for an open work: no
+  // panel download, and the Markdown and Vault exports leave its document out, also where
+  // a decided record of the same Work shares it.
+  const openDocs = new Set(corpus.filter((p) => p.knowledge_doc && decisionOf(p) === null).map((p) => p.knowledge_doc));
+  const docShown = (p) => Boolean(p.knowledge_doc) && !openDocs.has(p.knowledge_doc);
+  {
+    const openDoc = ['UKKQKL7I', '8MRNK6FX', 'SSF5Q33W'].map((id) => corpusById[id]).find((p) => p && p.knowledge_doc && decisionOf(p) === null) ||
+      corpus.find((p) => p.knowledge_doc && decisionOf(p) === null);
+    const decidedDoc = corpus.find(docShown);
+    check('the corpus holds an open and a decided work with a knowledge document for the check', Boolean(openDoc && decidedDoc));
+    console.log('open work checked for its knowledge document', openDoc.id, openDoc.knowledge_doc);
+    const docLinks = async (p) => {
+      await page.goto(`${base}/index.html#view=korpus&paper=${encodeURIComponent(p.id)}`, { waitUntil: 'networkidle' });
+      await page.waitForSelector('#paper-modal.active');
+      return page.locator('#modal-body [data-action="download-doc"]').count();
+    };
+    check('the panel of an open work offers no knowledge-document download', await docLinks(openDoc) === 0);
+    check('the panel of a decided work offers its knowledge document', await docLinks(decidedDoc) > 0);
+    await page.goto(`${base}/index.html#view=korpus`, { waitUntil: 'networkidle' });
+    await page.waitForSelector('#papers-grid tr[data-id]');
+    const shown = corpus.filter(docShown);
+    const shownIds = shown.map((p) => p.id).sort().join();
+    const [mdDownload] = await Promise.all([page.waitForEvent('download'), page.locator('.export-button', { hasText: 'Markdown' }).click()]);
+    const mdRecords = [...readFileSync(await mdDownload.path(), 'utf8').matchAll(/\*\*Record:\*\* (\S+)/g)].map((m) => m[1]);
+    check('the Markdown export of the corpus leaves out the knowledge documents of open works',
+      mdRecords.slice().sort().join() === shownIds && !mdRecords.includes(openDoc.id), `${mdRecords.length}/${shown.length}`);
+    // The archive is written without compression, so its entries are read in sequence.
+    const unzipStored = (buf) => {
+      const out = {};
+      for (let o = 0; buf.readUInt32LE(o) === 0x04034b50;) {
+        const size = buf.readUInt32LE(o + 18); const n = buf.readUInt16LE(o + 26); const extra = buf.readUInt16LE(o + 28);
+        out[buf.toString('utf8', o + 30, o + 30 + n)] = buf.subarray(o + 30 + n + extra, o + 30 + n + extra + size);
+        o += 30 + n + extra + size;
+      }
+      return out;
+    };
+    const [zipDownload] = await Promise.all([page.waitForEvent('download'), page.locator('.export-button', { hasText: 'Vault' }).click()]);
+    const zip = unzipStored(readFileSync(await zipDownload.path()));
+    const zipIndex = JSON.parse(zip['record-index.json'] || '[]');
+    const notes = Object.keys(zip).filter((name) => name.startsWith('Papers/'));
+    check('the Vault export of the corpus leaves out the knowledge documents of open works',
+      zipIndex.map((e) => e.record_id).sort().join() === shownIds && notes.length === new Set(shown.map((p) => p.knowledge_doc)).size &&
+      !notes.includes('Papers/' + openDoc.knowledge_doc.split('/').pop()), `${zipIndex.length}/${shown.length}, ${notes.length} notes`);
+    await page.goto(`${base}/index.html#view=korpus`, { waitUntil: 'networkidle' });
+    await page.waitForSelector('#papers-grid tr[data-id]');
+  }
+
   const gapKeys = Object.keys(stageRules).filter((key) => ![...SCREENING_KEYS, 'text', ...AUSWERTUNG_KEYS, ...SUB_KEYS].includes(key));
   check('the work lists offer every gap and the open split by reviewer',
     (await page.$$eval('#gap-list button', (b) => b.map((x) => x.dataset.stage))).sort().join() === gapKeys.sort().join());
@@ -1026,7 +1126,7 @@ try {
   check('the CSV export writes the filtered work list with its stage columns',
     csvDownload.suggestedFilename() === `fem_prompt_korpus_${exportKey}.csv` && csvRows.length === exportN + 1 &&
     csvRows[0].includes('"Coded"') && csvRows[0].includes('"Assertions"') && csvRows[0].includes('"Screening_Source"'), `${csvRows.length - 1}/${exportN}`);
-  const docsOf = new Set(corpus.filter(stageRules[exportKey]).filter((p) => p.knowledge_doc).map((p) => p.knowledge_doc));
+  const docsOf = new Set(corpus.filter(stageRules[exportKey]).filter(docShown).map((p) => p.knowledge_doc));
   const [zipDownload] = await Promise.all([page.waitForEvent('download'), page.locator('.export-button', { hasText: 'Vault' }).click()]);
   const zip = readFileSync(await zipDownload.path());
   let entries = 0;

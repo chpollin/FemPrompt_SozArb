@@ -28,10 +28,36 @@ def _read_document_bytes(path: Path, reference: str) -> bytes:
         raise ValueError(f"Missing linked knowledge document: {reference}") from exc
 
 
+def has_expert_decision(paper: dict) -> bool:
+    """Whether the consolidated expert decision of round one decides the record."""
+    human = paper.get("human") or {}
+    has_human = bool((paper.get("benchmark") or {}).get("has_human"))
+    return has_human and human.get("decision") in ("Include", "Exclude")
+
+
+def withheld_documents(papers: list[dict]) -> set[str]:
+    """Knowledge documents linked by at least one record without a human decision.
+
+    A document carries the round-one LLM decision and categories in its frontmatter
+    and assessment sections, and the archive is linked from every page, PRISM
+    included, so it must never precede the human decision of an open work (ADR-044).
+    A document shared with an open record is withheld as a whole. Saved reviewer
+    records are deliberately not read: reading them would need PRISM's record
+    validation in Python, withholding errs on the safe side, and the Korpus view
+    packs its exports in the browser with them.
+    """
+    return {
+        paper["knowledge_doc"]
+        for paper in papers
+        if paper.get("knowledge_doc") and not has_expert_decision(paper)
+    }
+
+
 def build(repo: Path = ROOT) -> bytes:
     payload = json.loads(
         (repo / "docs/data/research_vault_v2.json").read_text(encoding="utf-8")
     )
+    withheld = withheld_documents(payload["papers"])
     documents = {}
     links = []
     seen_ids = set()
@@ -41,7 +67,7 @@ def build(repo: Path = ROOT) -> bytes:
             raise ValueError(f"Duplicate corpus record ID: {paper['id']}")
         seen_ids.add(paper["id"])
         reference = paper.get("knowledge_doc")
-        if not reference:
+        if not reference or reference in withheld:
             continue
         path = safe_path(repo / "docs", reference)
         if (
@@ -72,6 +98,8 @@ def build(repo: Path = ROOT) -> bytes:
         b"The source-reviewed public release is built separately with agent/model/date attribution.\n"
         b"record-index.json retains aliases and exact bibliographic Versions. Document reuse across records "
         b"does not establish that the source was read in each of those Versions.\n"
+        b"Knowledge documents of records without a consolidated expert decision are left out, "
+        b"since they carry the round-one LLM assessment.\n"
     )
     files["record-index.json"] = (
         json.dumps(links, ensure_ascii=False, indent=2) + "\n"
