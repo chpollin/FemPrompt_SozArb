@@ -561,8 +561,12 @@ def verified_source(
 
 
 def author_year_key(paper: dict[str, object]) -> str:
-    """First-author lastname plus year, e.g. 'chatterji2025', for the fallback join."""
-    ay = (paper.get("author_year") or "").strip()
+    """First-author lastname plus year, e.g. 'chatterji2025', for the fallback join.
+
+    Reads the assessment-sheet label the cascade was calibrated on; switching to
+    the creator-derived author_year would bind further sources.
+    """
+    ay = (paper.get("legacy_author_year", paper.get("author_year")) or "").strip()
     if not ay:
         return ""
     year = re.search(r"(?:19|20)\d{2}", ay)

@@ -115,14 +115,14 @@ def project_canonical_journeys(corpus: dict, journeys: list) -> list:
     for paper in corpus["papers"]:
         journey = deepcopy(by_id.get(paper["id"], by_doc.get(paper.get("knowledge_doc"), {})))
         # Keep this enrichment projection compact: assessments occur once under
-        # stages, and complete abstracts/version registries stay in the corpus.
+        # stages, and version registries stay in the corpus.
         metadata = (
             "id", "title", "authors", "author_year", "year", "doi", "url", "item_type", "journal",
             "work_id", "version_id", "version_type", "version_date", "peer_review_status", "peer_review_basis",
             "preferred_version_id", "latest_version_id", "is_preferred_version", "knowledge_doc", "knowledge_coverage",
         )
         journey.update({key: deepcopy(paper[key]) for key in metadata if key in paper})
-        journey["abstract"] = str(paper.get("abstract") or "")[:500]
+        journey["abstract"] = str(paper.get("abstract") or "")
         journey.setdefault("stem", f"_thin_{paper['id']}")
         journey.setdefault("concepts", [])
         journey.setdefault("knowledge_summary", None)
@@ -276,11 +276,12 @@ def load_verification_scores(verification_dir: Path) -> dict:
     for json_path in sorted(verification_dir.glob("*.json")):
         try:
             data = json.loads(json_path.read_text(encoding="utf-8"))
+            # An absent score was never measured; 0 would publish it as a failed check.
             scores[json_path.stem] = {
-                "completeness": data.get("verification", {}).get("completeness", {}).get("score", 0),
-                "correctness": data.get("verification", {}).get("correctness", {}).get("score", 0),
-                "categories": data.get("verification", {}).get("category_validation", {}).get("score", 0),
-                "overall": data.get("overall_confidence", 0),
+                "completeness": data.get("verification", {}).get("completeness", {}).get("score"),
+                "correctness": data.get("verification", {}).get("correctness", {}).get("score"),
+                "categories": data.get("verification", {}).get("category_validation", {}).get("score"),
+                "overall": data.get("overall_confidence"),
                 "needs_correction": data.get("needs_correction", False),
             }
         except (json.JSONDecodeError, KeyError):
@@ -501,12 +502,8 @@ def parse_knowledge_sections(md_content: str) -> dict:
     for key, pattern in section_patterns.items():
         match = re.search(pattern, md_content, re.DOTALL)
         if match:
-            text = match.group(1).strip()
-            # Truncate to reasonable length
-            if key == "hauptargumente":
-                sections[key] = text[:1500]  # arguments can be longer
-            else:
-                sections[key] = text[:500]
+            # Full section text; any display cap belongs to the interface.
+            sections[key] = match.group(1).strip()
     return sections
 
 
@@ -583,7 +580,7 @@ def build_paper_journeys(
         # DOI, URL, Abstract from Zotero
         doi = (zotero_item.get("DOI", "") or "").strip()
         url = (zotero_item.get("url", "") or "").strip()
-        abstract = (zotero_item.get("abstractNote", "") or "").strip()[:500]
+        abstract = (zotero_item.get("abstractNote", "") or "").strip()
 
         paper = {
             "id": zotero_key or stem,
@@ -606,9 +603,9 @@ def build_paper_journeys(
                     "stage1_categories": stage1.get("categories", {}),
                     "stage1_arguments_count": stage1.get("arguments_count", 0),
                     "stage1_key_finding": stage1.get("key_finding", ""),
-                    "stage3_completeness": verif.get("completeness", 0),
-                    "stage3_correctness": verif.get("correctness", 0),
-                    "stage3_overall": verif.get("overall", 0),
+                    "stage3_completeness": verif.get("completeness"),
+                    "stage3_correctness": verif.get("correctness"),
+                    "stage3_overall": verif.get("overall"),
                 },
                 "assessment": {},
             },
@@ -646,7 +643,7 @@ def build_paper_journeys(
         # DOI, URL, Abstract
         doi = (zitem.get("DOI", "") or "").strip()
         url = (zitem.get("url", "") or "").strip()
-        abstract = (zitem.get("abstractNote", "") or "").strip()[:500]
+        abstract = (zitem.get("abstractNote", "") or "").strip()
 
         # Determine conversion status -- we know these papers have no knowledge doc
         # Some may have had PDFs but failed conversion, others had no PDF at all

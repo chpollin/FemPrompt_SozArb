@@ -181,7 +181,7 @@ def test_missing_and_explicit_none_are_different():
 
 def test_undecidable_coding_is_excluded_from_field_denominator():
     record = agent("A", ["ICL"])
-    record["undecidable"] = {"AN_Prompt_Techniques": {"reason": "source ambiguity"}}
+    record["undecidable"] = {"AN_Prompt_Techniques": True}
     rows, _ = completion._work_rows(registry(), [], {"A": [record]}, {})
     tables = completion._analysis(rows, schema())
     assert all(
@@ -189,6 +189,13 @@ def test_undecidable_coding_is_excluded_from_field_denominator():
         for row in tables
         if row["field"] == "AN_Prompt_Techniques"
     )
+
+
+def test_withdrawn_undecidable_flag_keeps_the_field_coded():
+    record = agent("A", ["ICL"])
+    record["undecidable"] = {"AN_Prompt_Techniques": False}
+    rows, _ = completion._work_rows(registry(), [], {"A": [record]}, {})
+    assert "AN_Prompt_Techniques" not in rows[0]["analysis_undecidable"]
 
 
 def test_accepted_correction_resolves_review_without_mutating_history(tmp_path):
@@ -899,7 +906,7 @@ def mapping_works():
     """One Include work per field state, with an alias and multi-codes."""
     multi = {"AN_Bias_Axes": ["Age", "Gender"], "AN_Harm_Types": ["Stereotyping"]}
     undecidable = coded("C", AN_Bias_Axes=["Gender"])
-    undecidable["undecidable"] = {"AN_Bias_Axes": "nicht entscheidbar aus Fulltext"}
+    undecidable["undecidable"] = {"AN_Bias_Axes": True}
     open_review = coded("G", AN_Bias_Axes=["Gender"])
     open_review["current_ai_review_result"] = "changes_requested"
     agents = {

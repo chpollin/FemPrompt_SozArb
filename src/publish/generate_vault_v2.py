@@ -20,6 +20,8 @@ from typing import Dict, List, Optional, Set, Tuple
 from collections import defaultdict, Counter
 from difflib import SequenceMatcher
 
+from src.publish.generate_docs_data import human_category_cell, ja_nein_to_bool
+
 # Fix encoding for Windows console
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
@@ -564,7 +566,7 @@ class VaultV2Generator:
                         continue
                     cats = {}
                     for cat in self.ASSESSMENT_CATEGORIES:
-                        cats[cat] = row.get(cat, '').strip() == 'Ja'
+                        cats[cat] = ja_nein_to_bool(row.get(cat)) is True
                     try:
                         confidence = float(row.get('LLM_Confidence', 0) or 0)
                     except (ValueError, TypeError):
@@ -591,7 +593,8 @@ class VaultV2Generator:
                         continue
                     cats = {}
                     for cat in self.ASSESSMENT_CATEGORIES:
-                        cats[cat] = row.get(cat, '').strip() == 'Ja'
+                        # The expert sheet spells the diversity column differently.
+                        cats[cat] = ja_nein_to_bool(human_category_cell(row, cat)) is True
                     self.human_assessments[key] = {
                         'decision': decision,
                         'categories': cats,

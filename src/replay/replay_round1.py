@@ -10,7 +10,8 @@ subset). A self-test asserts the decision matrix, decision kappa, and the ten
 per-category kappas reproduce the canonical generated/benchmark-results/
 agreement_metrics.json exactly; on mismatch it prints deltas and exits non-zero.
 
-Normalization mirrors src/assess/merge_assessments.py and the kappa mirrors
+Normalization mirrors src/assess/merge_assessments.py, except that a category
+value other than Ja or Nein counts as missing, and the kappa mirrors
 src/assess/calculate_agreement.py (round-4), so the replay reproduces the
 canonical numbers by a human-checked path instead of trusting the merged CSV.
 
@@ -79,7 +80,13 @@ def _force_utf8_stdout():
 
 
 def normalize_value(value):
-    """Ja/Nein normalization, byte-for-byte from merge_assessments.py."""
+    """Ja/Nein normalization from merge_assessments.py, except for uncoded cells.
+
+    merge_assessments.py passes any other value through, so the expert's '?'
+    entered the per-category kappa as a third label and raised n. A value that
+    is neither Ja nor Nein is not a code and counts as missing, as in the
+    Companion projection (generate_docs_data.ja_nein_to_bool).
+    """
     if not value:
         return ""
     v = str(value).strip().lower()
@@ -87,7 +94,7 @@ def normalize_value(value):
         return "Ja"
     if v in ["nein", "no", "0", "false", ""]:
         return "Nein"
-    return value
+    return ""
 
 
 def normalize_decision(value):

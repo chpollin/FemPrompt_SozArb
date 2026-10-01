@@ -449,6 +449,44 @@ def test_human_assessment_keeps_uncoded_cells_null_and_reads_case_variants(
     assert human["Feministisch"] == 0
 
 
+def test_author_year_label_has_one_form_built_from_creators() -> None:
+    def author(last: str) -> dict:
+        return {"creatorType": "author", "firstName": "A.", "lastName": last}
+
+    label = docs_data.author_year_label
+    assert label([author("Victor")], 2023) == "Victor (2023)"
+    assert label([author("Perron"), author("Victor")], 2023) == "Perron et al. (2023)"
+    assert label([{"creatorType": "author", "name": "Friedrich-Ebert-Stiftung"}], 2025) == (
+        "Friedrich-Ebert-Stiftung (2025)"
+    )
+    assert label([{"creatorType": "editor", "lastName": "Arnold"}], 2023) == "Arnold (2023)"
+    assert label([author("Franken")], None) == "Franken"
+    assert label([], None) == ""
+
+
+def test_published_record_keeps_full_abstract_and_zotero_item_type() -> None:
+    metadata = docs_data.corpus_metadata()
+    key, meta = next(
+        (key, meta)
+        for key, meta in sorted(metadata.items())
+        if len(meta.get("Abstract") or "") > 500
+        and (meta.get("Item_Type") or "") != (meta.get("Item_Type") or "").lower()
+    )
+
+    paper = docs_data.parse_llm_row({"Zotero_Key": key}, metadata)
+
+    assert paper["abstract"] == meta["Abstract"]
+    assert paper["item_type"] == meta["Item_Type"]
+
+
+def test_unmapped_human_records_are_listed_in_meta() -> None:
+    published = json.loads(docs_data.OUTPUT_VAULT.read_text(encoding="utf-8"))
+    human = docs_data.load_human_assessment(docs_data.INPUT_HUMAN)
+    ids = {paper["id"] for paper in published["papers"]}
+
+    assert published["meta"]["unmapped_human_records"] == sorted(set(human) - ids)
+
+
 def test_every_recorded_disagreement_reaches_its_published_record() -> None:
     disagreements = docs_data.load_disagreements(docs_data.INPUT_DISAGREEMENTS)
     published = json.loads(docs_data.OUTPUT_VAULT.read_text(encoding="utf-8"))

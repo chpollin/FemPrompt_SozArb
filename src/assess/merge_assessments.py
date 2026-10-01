@@ -33,7 +33,9 @@ def normalize_value(value: str) -> str:
         return 'Ja'
     if v in ['nein', 'no', '0', 'false', '']:
         return 'Nein'
-    return value
+    # Any other mark, such as the expert's '?', is not a code and counts as missing,
+    # matching src/replay/replay_round1.normalize_value.
+    return ''
 
 
 def normalize_decision(value: str) -> str:

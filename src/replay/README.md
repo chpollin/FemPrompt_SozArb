@@ -48,9 +48,10 @@ them. The script uses only the Python standard library.
 
 ## Normalization provenance
 
-`normalize_value` and `normalize_decision` are byte-for-byte from
-`src/assess/merge_assessments.py`; `cohens_kappa` (round-4) is byte-for-byte
-from `src/assess/calculate_agreement.py`; `normalize_reason` mirrors the
+`normalize_decision` is byte-for-byte from `src/assess/merge_assessments.py`.
+`normalize_value` follows it except that a mark other than Ja or Nein, such as
+the expert's '?', counts as missing in both modules. `cohens_kappa` (round-4) is
+byte-for-byte from `src/assess/calculate_agreement.py`; `normalize_reason` mirrors the
 controlled-vocabulary logic in `docs/js/prisma-import.js`. That is why the
 replay reproduces the canonical numbers without reading the merged CSV.
 

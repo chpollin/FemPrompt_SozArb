@@ -13,10 +13,10 @@
           "agent_yes_rate": 0.4328
         },
         "Generative_KI": {
-          "kappa": 0.5376,
-          "agreement": 0.7585,
-          "human_yes_rate": 0.572,
-          "agent_yes_rate": 0.3814
+          "kappa": 0.546,
+          "agreement": 0.765,
+          "human_yes_rate": 0.5769,
+          "agent_yes_rate": 0.3846
         },
         "Prompting": {
           "kappa": 0.5331,
@@ -31,10 +31,10 @@
           "agent_yes_rate": 0.5191
         },
         "Soziale_Arbeit": {
-          "kappa": 0.8163,
-          "agreement": 0.9319,
-          "human_yes_rate": 0.2383,
-          "agent_yes_rate": 0.2468
+          "kappa": 0.825,
+          "agreement": 0.9359,
+          "human_yes_rate": 0.2393,
+          "agent_yes_rate": 0.2436
         },
         "Bias_Ungleichheit": {
           "kappa": 0.4386,
@@ -67,7 +67,7 @@
           "agent_yes_rate": 0.6368
         }
       },
-      "mean_category_kappa": 0.5329
+      "mean_category_kappa": 0.5346
     },
     "Haiku + KD": {
       "decision_kappa": 0.0544,
@@ -82,10 +82,10 @@
           "agent_yes_rate": 0.6008
         },
         "Generative_KI": {
-          "kappa": 0.6335,
-          "agreement": 0.8136,
-          "human_yes_rate": 0.572,
-          "agent_yes_rate": 0.4703
+          "kappa": 0.6438,
+          "agreement": 0.8205,
+          "human_yes_rate": 0.5769,
+          "agent_yes_rate": 0.4744
         },
         "Prompting": {
           "kappa": 0.6766,
@@ -100,10 +100,10 @@
           "agent_yes_rate": 0.7447
         },
         "Soziale_Arbeit": {
-          "kappa": 0.689,
-          "agreement": 0.8723,
-          "human_yes_rate": 0.2383,
-          "agent_yes_rate": 0.3234
+          "kappa": 0.6951,
+          "agreement": 0.8761,
+          "human_yes_rate": 0.2393,
+          "agent_yes_rate": 0.3205
         },
         "Bias_Ungleichheit": {
           "kappa": 0.3067,
@@ -136,7 +136,7 @@
           "agent_yes_rate": 0.8846
         }
       },
-      "mean_category_kappa": 0.4727
+      "mean_category_kappa": 0.4743
     },
     "Sonnet + Abstract": {
       "decision_kappa": 0.0979,
@@ -151,10 +151,10 @@
           "agent_yes_rate": 0.3151
         },
         "Generative_KI": {
-          "kappa": 0.556,
-          "agreement": 0.7669,
-          "human_yes_rate": 0.572,
-          "agent_yes_rate": 0.3644
+          "kappa": 0.5648,
+          "agreement": 0.7735,
+          "human_yes_rate": 0.5769,
+          "agent_yes_rate": 0.3675
         },
         "Prompting": {
           "kappa": 0.5548,
@@ -169,10 +169,10 @@
           "agent_yes_rate": 0.5277
         },
         "Soziale_Arbeit": {
-          "kappa": 0.8214,
-          "agreement": 0.9362,
-          "human_yes_rate": 0.2383,
-          "agent_yes_rate": 0.2213
+          "kappa": 0.8316,
+          "agreement": 0.9402,
+          "human_yes_rate": 0.2393,
+          "agent_yes_rate": 0.2222
         },
         "Bias_Ungleichheit": {
           "kappa": 0.4595,
@@ -205,7 +205,7 @@
           "agent_yes_rate": 0.5726
         }
       },
-      "mean_category_kappa": 0.5327
+      "mean_category_kappa": 0.5346
     },
     "Sonnet + KD": {
       "decision_kappa": 0.1098,
@@ -220,10 +220,10 @@
           "agent_yes_rate": 0.3992
         },
         "Generative_KI": {
-          "kappa": 0.6598,
-          "agreement": 0.8263,
-          "human_yes_rate": 0.572,
-          "agent_yes_rate": 0.4576
+          "kappa": 0.6706,
+          "agreement": 0.8333,
+          "human_yes_rate": 0.5769,
+          "agent_yes_rate": 0.4615
         },
         "Prompting": {
           "kappa": 0.6506,
@@ -238,10 +238,10 @@
           "agent_yes_rate": 0.6426
         },
         "Soziale_Arbeit": {
-          "kappa": 0.7946,
-          "agreement": 0.9234,
-          "human_yes_rate": 0.2383,
-          "agent_yes_rate": 0.2511
+          "kappa": 0.8041,
+          "agreement": 0.9274,
+          "human_yes_rate": 0.2393,
+          "agent_yes_rate": 0.2521
         },
         "Bias_Ungleichheit": {
           "kappa": 0.4438,
@@ -274,20 +274,20 @@
           "agent_yes_rate": 0.7521
         }
       },
-      "mean_category_kappa": 0.559
+      "mean_category_kappa": 0.5611
     }
   },
   "deltas": {
     "Haiku: KD vs Abstract": {
       "decision_kappa": -0.0017,
       "include_rate": 17.2,
-      "mean_category_kappa": -0.0602,
+      "mean_category_kappa": -0.0603,
       "categories": {
         "AI_Literacies": -0.2007,
-        "Generative_KI": 0.0959,
+        "Generative_KI": 0.0978,
         "Prompting": 0.1435,
         "KI_Sonstige": -0.0965,
-        "Soziale_Arbeit": -0.1273,
+        "Soziale_Arbeit": -0.1299,
         "Bias_Ungleichheit": -0.1319,
         "Gender": 0.1221,
         "Diversitaet": -0.1755,
@@ -298,13 +298,13 @@
     "Sonnet: KD vs Abstract": {
       "decision_kappa": 0.0119,
       "include_rate": 8.9,
-      "mean_category_kappa": 0.0263,
+      "mean_category_kappa": 0.0265,
       "categories": {
         "AI_Literacies": -0.028,
-        "Generative_KI": 0.1038,
+        "Generative_KI": 0.1058,
         "Prompting": 0.0958,
         "KI_Sonstige": 0.0521,
-        "Soziale_Arbeit": -0.0268,
+        "Soziale_Arbeit": -0.0275,
         "Bias_Ungleichheit": -0.0157,
         "Gender": 0.1656,
         "Diversitaet": 0.0271,

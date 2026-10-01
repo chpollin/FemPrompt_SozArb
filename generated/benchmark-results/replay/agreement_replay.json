@@ -1,7 +1,7 @@
 {
   "provenance": {
     "script": "src/replay/replay_round1.py",
-    "generated_at": "2026-08-22T19:46:02.236064+00:00",
+    "generated_at": "2026-10-01T08:08:24.428919+00:00",
     "pairing_key": "Zotero_Key",
     "input_files": {
       "human": "assessment/human_assessment.csv",
@@ -59,9 +59,9 @@
         "llm_yes_count": 103
       },
       "Generative_KI": {
-        "n": 236,
-        "kappa": 0.5376,
-        "agreement": 0.758475,
+        "n": 234,
+        "kappa": 0.546,
+        "agreement": 0.764957,
         "human_yes_count": 135,
         "llm_yes_count": 90
       },
@@ -80,11 +80,11 @@
         "llm_yes_count": 122
       },
       "Soziale_Arbeit": {
-        "n": 235,
-        "kappa": 0.8163,
-        "agreement": 0.931915,
+        "n": 234,
+        "kappa": 0.825,
+        "agreement": 0.935897,
         "human_yes_count": 56,
-        "llm_yes_count": 58
+        "llm_yes_count": 57
       },
       "Bias_Ungleichheit": {
         "n": 234,
@@ -198,11 +198,11 @@
         "llm_yes_count": 93
       },
       "Soziale_Arbeit": {
-        "n": 193,
-        "kappa": 0.7867,
-        "agreement": 0.92228,
+        "n": 192,
+        "kappa": 0.7968,
+        "agreement": 0.927083,
         "human_yes_count": 45,
-        "llm_yes_count": 46
+        "llm_yes_count": 45
       },
       "Bias_Ungleichheit": {
         "n": 192,
@@ -244,7 +244,7 @@
   "condition_contrast": {
     "provenance": {
       "script": "src/replay/replay_round1.py",
-      "generated_at": "2026-08-22T19:46:02.236064+00:00",
+      "generated_at": "2026-10-01T08:08:24.428919+00:00",
       "pairing_key": "Zotero_Key",
       "input_files": {
         "human": "assessment/human_assessment.csv",

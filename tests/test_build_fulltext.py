@@ -772,3 +772,12 @@ def test_publish_rollback_restores_previous_complete_build(
     assert (out_dir / "OLD.md").read_text(encoding="utf-8") == "old\n"
     assert not (out_dir / "NEW.md").exists()
     assert manifest.read_text(encoding="utf-8") == '{"OLD":{"src":"clean"}}'
+
+
+def test_fallback_key_keeps_the_assessment_sheet_label_it_was_calibrated_on() -> None:
+    paper = {
+        "author_year": "Kamruzzaman et al. (2024)",
+        "legacy_author_year": "Mahammed Kamruzzaman (2024)",
+    }
+
+    assert bf.author_year_key(paper) == "mahammed2024"

@@ -77,9 +77,24 @@ def test_journey_does_not_duplicate_complete_corpus_payloads():
     corpus = corpus_fixture()
     corpus["papers"][0].update(abstract="A" * 900, work_versions=[{"large": "registry payload"}])
     result = publisher.project_canonical_journeys(corpus, [])
-    assert len(result[0]["abstract"]) == 500
+    assert result[0]["abstract"] == "A" * 900
     assert "work_versions" not in result[0] and "llm" not in result[0] and "human" not in result[0]
     assert result[0]["stages"]["assessment"]["human"]["decision"] == "Exclude"
+
+
+def test_knowledge_sections_publish_the_full_section_text():
+    methodik, arguments = "M" * 700, "- " + "H" * 2000
+    sections = publisher.parse_knowledge_sections(
+        f"## Methodik\n\n{methodik}\n\n## Hauptargumente\n\n{arguments}\n")
+    assert sections["methodik"] == methodik
+    assert sections["hauptargumente"] == arguments
+
+
+def test_absent_verification_scores_stay_null(tmp_path):
+    (tmp_path / "paper.json").write_text('{"verification": {}}', encoding="utf-8")
+    scores = publisher.load_verification_scores(tmp_path)["paper"]
+    keys = ("completeness", "correctness", "categories", "overall")
+    assert [scores[key] for key in keys] == [None] * 4
 
 
 def test_flow_conserves_records_without_inventing_serial_pdf_losses():
