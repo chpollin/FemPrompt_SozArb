@@ -290,6 +290,25 @@ def _historical_receipt_matches_existing_version_source(
     )
 
 
+def stale_source_review(
+    paper_id: str, paper: dict[str, Any], receipt: dict[str, Any] | None
+) -> bool:
+    """Whether the review targets another source than the record's current binding.
+
+    The one rule for the reason stale_source_review. The landscape withholds such a
+    record, and the completion package keeps its coding out of the analysis tables.
+    """
+    current = paper.get("source_binding")
+    if not current:
+        return False
+    reviewed = (receipt or {}).get("source_binding")
+    if reviewed:
+        return reviewed != current
+    return not _historical_receipt_matches_existing_version_source(
+        paper_id, paper, receipt or {}
+    )
+
+
 def _validate_and_transform_record(
     paper_id: str,
     decision: dict[str, Any],
@@ -313,15 +332,17 @@ def _validate_and_transform_record(
         raise ValueError(
             f"{paper_id}: AI verification receipt canonical binding differs from corpus"
         )
+    if stale_source_review(paper_id, paper, ai_verification):
+        raise StaleSourceVerificationError(
+            f"{paper_id}: reviewed source binding differs from corpus"
+            if (ai_verification or {}).get("source_binding")
+            else f"{paper_id}: governed manuscript requires explicit source-bound verification"
+        )
     source_binding = (ai_verification or {}).get("source_binding")
     source_body = None
     if source_binding:
         from src.assess.artifact_verification import review_source_binding, safe_path
 
-        if paper.get("source_binding") and source_binding != paper["source_binding"]:
-            raise StaleSourceVerificationError(
-                f"{paper_id}: reviewed source binding differs from corpus"
-            )
         registry = _read_json(repo / "corpus/work_version_registry.json")
         source_binding = review_source_binding(repo, registry, ai_verification)
         if source_binding != paper.get("source_binding"):
@@ -619,12 +640,15 @@ def analysis_coverage(
     records: list[dict[str, Any]],
     withheld_reasons: dict[str, str],
     analysis_schema: dict[str, Any],
+    category_groups: dict[str, list[str]] | None = None,
 ) -> dict[str, Any]:
-    """Count per analysis field how the intended Include scope is covered.
+    """Count per analysis field and category group how the Include scope is covered.
 
     The scope joins the recorded Include Works of the completion package (human
     decision priority) with the released Include Works, so an empty matrix cell
-    can be read against its denominator instead of as a research gap. Only
+    can be read against its denominator instead of as a research gap. A category
+    group of a released Work is `value` when the Work carries at least one of its
+    categories (released levels are teilweise or ja) and `none` otherwise. Only
     counts leave this function; unreleased content stays internal.
     """
     from src.analysis.build_completion_package import canonical_work_rows
@@ -648,22 +672,26 @@ def analysis_coverage(
         for definition in analysis_schema.get("fields", [])
         if not definition.get("free_text")
     ] + ["Studientyp"]
+    groups = category_groups or {}
     fields = {
         name: {
             **{state: 0 for state in COVERAGE_STATES},
             "withheld_by_reason": {reason: 0 for reason in WITHHELD_REASONS},
         }
-        for name in names
+        for name in [*names, *groups]
     }
     for work_id in sorted(recorded | set(released)):
         record = released.get(work_id)
         if record is not None:
             for name in names:
                 fields[name][record["analysis"]["field_states"][name]] += 1
+            for group, members in groups.items():
+                coded = any(item["key"] in members for item in record["categories"])
+                fields[group]["value" if coded else "none"] += 1
             continue
         row = rows[work_id]
         reason = _work_withheld_reason(row, withheld_reasons, released_other_decision)
-        for name in names:
+        for name in [*names, *groups]:
             field_reason = reason or (
                 "field_conflict" if name in row["analysis_conflicts"] else None
             )
@@ -835,7 +863,11 @@ def build(
     coverage = (
         {
             "analysis_coverage": analysis_coverage(
-                repo, records, withheld_reasons, analysis_schema
+                repo,
+                records,
+                withheld_reasons,
+                analysis_schema,
+                {"object": object_categories, "perspective": perspective_categories},
             )
         }
         if with_analysis_coverage

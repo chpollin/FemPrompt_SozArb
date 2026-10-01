@@ -142,7 +142,8 @@ try {
     await answer.locator('p.matrix-caption:visible').count());
   check('answer work lists show no leading separator', (await answer.locator('.work-meta').allInnerTexts()).every(t => !/^\s*·/.test(t)));
   check('answer map cells link to the matrix', (await answer.locator('a.matrix-cell').first().getAttribute('href')).includes('view=matrix'));
-  check('work-level status is named as the work\'s status', (await answer.locator('.answer-map h3').allInnerTexts()).some(text => text.includes('Status des Werks')));
+  const statusLabel = fields.fields.find(field => field.name === 'AN_Mitigation_Status').label;
+  check('work-level status is named as the work\'s status', (await answer.locator('.answer-map h3').allInnerTexts()).some(text => text.includes(statusLabel + ' des Werks')));
   check('answer page never claims an answered question', !/beantwortet/i.test(await answer.innerText()));
   if (json('data/assertion_index.json').assertions.length) {
     check('assertion evidence names the screening state of its work', await answer.locator('.evidence-item').count() ===

@@ -296,11 +296,94 @@ def test_accepted_correction_resolves_review_without_mutating_history(tmp_path):
     table = next(
         row
         for row in completion._analysis(rows, schema())
-        if row["question"] == "SQ1"
+        if row["question"] == "SQ3"
         and row["field"] == "AN_Mitigation_Status"
         and row["value"] == "None"
     )
     assert table["work_count"] == 1
+
+
+def test_sub_question_grouping_follows_the_current_numbering():
+    """The tables follow `serves` in the codebook; SQ4 reads two values only."""
+    serves = {}
+    for field in schema()["analysis_fields"]:
+        values = field.get("serves", [])
+        for question in [values] if isinstance(values, str) else values:
+            if question.startswith("SQ"):
+                serves.setdefault(question, set()).add(field["name"])
+    assert {q: set(names) for q, names in completion.FIELDS.items()} == serves
+    assert set(completion.QUESTION_TOPICS) == set(completion.FIELDS)
+
+    record = coded(
+        "A",
+        AN_Population=["Mental_Health"],
+        AN_Mitigation_Stage=["Organisational_Process", "Prompt_Practice"],
+        AN_Prompting_Role=["Learning_Content"],
+    )
+    rows, _ = completion._work_rows(registry(), [], {"A": [record]}, {})
+    tables = completion._analysis(rows, schema())
+    stage = {
+        (row["question"], row["value"]): row["work_count"]
+        for row in tables
+        if row["field"] == "AN_Mitigation_Stage"
+    }
+    assert stage[("SQ3", "Prompt_Practice")] == stage[("SQ4", "Organisational_Process")] == 1
+    assert ("SQ4", "Prompt_Practice") not in stage
+    assert {row["question"] for row in tables if row["field"] == "AN_Population"} == {"SQ1"}
+    labels = {
+        m["matrix"]: m["question"] for m in completion._associations(rows, schema())
+    }
+    assert labels["AN_Bias_Axes x AN_Harm_Types"] == "SQ2"
+    assert labels["AN_Prompt_Techniques x AN_Population"] == "SQ1, SQ3"
+    assert labels["AN_Mitigation_Stage x AN_Mitigation_Status"] == "SQ3, SQ4"
+
+
+def test_stale_source_review_keeps_coding_out_like_the_result_site():
+    stale = coded("A", AN_Bias_Axes=["Gender"])
+    stale["stale_source_review"] = True
+    rows, _ = completion._work_rows(registry(), [], {"A": [stale]}, {})
+    assert rows[0]["stale_source_review_record_ids"] == ["A"]
+    assert not rows[0]["analysis_eligible"]
+    assert completion._field_state(rows[0], "AN_Bias_Axes", ["Gender"]) == (
+        "stale_source_review"
+    )
+    assert all(row["work_count"] == 0 for row in completion._analysis(rows, schema()))
+    # A current alias of the same Work still carries the coding, as on the site.
+    rows, _ = completion._work_rows(
+        registry(), [], {"A": [stale], "B": [coded("B", AN_Bias_Axes=["Gender"])]}, {}
+    )
+    assert rows[0]["analysis_eligible"]
+    assert rows[0]["analysis_fields"]["AN_Bias_Axes"] == ["Gender"]
+
+
+def test_agent_records_use_the_landscape_stale_rule(tmp_path, monkeypatch):
+    from src.publish import generate_literature_landscape as landscape
+
+    calls = []
+    monkeypatch.setattr(
+        landscape,
+        "stale_source_review",
+        lambda paper_id, paper, receipt: calls.append(paper_id) or True,
+    )
+    path = tmp_path / "docs/data/screening/ar2.json"
+    path.parent.mkdir(parents=True)
+    record = {"decision": "Include", "lifecycle": {"state": "ai-agent-reviewed"}}
+    path.write_text(
+        json.dumps({"schema": "femprompt-prisma-reviewer/0.5", "decisions": {"A": record}}),
+        encoding="utf-8",
+    )
+    artifact = "docs/data/screening/ar2.json#/decisions/A"
+    accepted = {
+        "artifact": artifact,
+        "sha256": record_hash(record),
+        "result": "accepted",
+        "agent_id": "/test/reviewer",
+        "model": "test-model",
+        "reviewed_at": "2026-09-05T12:51:00Z",
+        "findings": "Fixture review.",
+    }
+    agents, _ = completion._agent_records(tmp_path, set(), {artifact: accepted})
+    assert calls == ["A"] and agents["A"][0]["stale_source_review"] is True
 
 
 def test_unresolved_negative_source_review_stays_open_and_out_of_analysis():

@@ -223,6 +223,38 @@
             "review_pending": 0,
             "field_conflict": 0
           }
+        },
+        "object": {
+          "value": 20,
+          "none": 0,
+          "undecidable": 0,
+          "absent": 0,
+          "not_coded": 132,
+          "withheld": 3,
+          "withheld_by_reason": {
+            "source_hold": 1,
+            "decision_conflict": 0,
+            "open_negative_review": 0,
+            "stale_source_review": 2,
+            "review_pending": 0,
+            "field_conflict": 0
+          }
+        },
+        "perspective": {
+          "value": 20,
+          "none": 0,
+          "undecidable": 0,
+          "absent": 0,
+          "not_coded": 132,
+          "withheld": 3,
+          "withheld_by_reason": {
+            "source_hold": 1,
+            "decision_conflict": 0,
+            "open_negative_review": 0,
+            "stale_source_review": 2,
+            "review_pending": 0,
+            "field_conflict": 0
+          }
         }
       }
     }

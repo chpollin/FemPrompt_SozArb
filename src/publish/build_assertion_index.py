@@ -289,6 +289,8 @@ def build_index(
             "id": _stable_id("A-", doc.key), "assertion_ref": doc.key,
             "title": title.group(1).strip() if title else statement,
             "statement": statement, "topics": [topic.strip("[]") for topic in topics],
+            # Validated by _check_publishable; an Assertion without the field has none.
+            "research_questions": sorted(doc.metadata.get("research-questions") or []),
             "status": doc.metadata["status"], "review": review,
             "evidence": sorted({item["id"]: item for item in evidence}.values(), key=lambda item: item["id"]),
         })

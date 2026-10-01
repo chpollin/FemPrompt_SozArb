@@ -1,166 +1,161 @@
 #!/usr/bin/env python3
-"""Emit the analysis-field vocabulary for the PRISM analysis panel (FR-14, ADR-026).
+"""Emit the analysis-field vocabulary for PRISM and the Evidence Companion (FR-14, ADR-026).
 
-The static PRISM app cannot read assessment/categories.yaml directly, and a
-hand-kept second vocabulary list in the JS would be a second source of truth that
-drifts from the frozen schema. This script is the one seam: it reads the frozen
+The static apps cannot read assessment/categories.yaml directly, and a hand-kept
+second vocabulary list in the JS would be a second source of truth that drifts
+from the frozen schema. This script is the one seam: it reads the frozen
 analysis_fields block from assessment/categories.yaml (v1.3) and writes it to
-docs/data/analysis_fields.json, which prisma.js loads the way it loads the
-full-text manifest. The panel's closed selections are fed only from this file, so
-no code path can produce a value outside the frozen vocabulary.
+docs/data/analysis_fields.json. The panel's closed selections are fed only from
+this file, so no code path can produce a value outside the frozen vocabulary.
 
 The Studientyp vocabulary (existing study_types) travels along, because
 update-protocol D makes Studientyp required for Include and the analysis export
 carries it; it is not an AN_ field but is read from the same source here.
 
+German display labels and definitions come from the separate
+analysis_presentation block. They are presentation only and fail closed: every
+field and value needs an entry, and an entry outside the vocabulary is an error,
+so a label can neither go missing nor describe a code that does not exist.
+
 Output: docs/data/analysis_fields.json
   { "meta": {...}, "version": "1.3",
-    "fields": [ { "name", "multi", "values"[, "optional", "free_text", ...] } ],
-    "study_types": [...] }
+    "fields": [ { "name", "label", "definition", "multi", "values",
+                  "value_labels", "value_definitions"[, "optional", "free_text", ...] } ],
+    "study_types": [...],
+    "study_type": { "name": "Studientyp", "label", "definition", "multi": false,
+                    "values", "value_labels", "value_definitions" } }
 
 Run: python src/publish/build_analysis_fields.py
-
-No third-party YAML dependency: the analysis_fields block is a small, regular
-subset of YAML (a list of mappings with scalar and inline-list values plus folded
-notes), parsed here directly to keep the build dependency-free like the rest of
-src/publish.
 """
 
 import json
 import re
 import sys
 from pathlib import Path
+from typing import Any
+
+import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 YAML_IN = ROOT / "assessment" / "categories.yaml"
 JSON_OUT = ROOT / "docs" / "data" / "analysis_fields.json"
+STUDY_FIELD = "Studientyp"
 
 VERSION_RE = re.compile(r"^#\s*Version:\s*([0-9.]+)")
-INLINE_LIST_RE = re.compile(r"^\[(.*)\]$")
 
 
-def parse_scalar(v: str):
-    """A YAML scalar as written in this file: an inline [a, b] list, a bare bool,
-    or a quoted / bare string. Notes and multi-line folded values are ignored by
-    the caller; only the fields the panel needs are read."""
-    v = v.strip()
-    m = INLINE_LIST_RE.match(v)
-    if m:
-        inner = m.group(1).strip()
-        if not inner:
-            return []
-        return [x.strip() for x in inner.split(",") if x.strip()]
-    if v in ("true", "false"):
-        return v == "true"
-    if len(v) >= 2 and v[0] in "\"'" and v[-1] == v[0]:
-        return v[1:-1]
-    return v
+def _text(value: Any, where: str) -> str:
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(f"analysis_presentation: {where} needs a nonempty text")
+    return value.strip()
 
 
-def parse_block(lines, start, end):
-    """Parse the list of `- name: ...` field mappings between line indices
-    [start, end). Each field is a dict of the scalar keys the panel reads."""
-    fields = []
-    cur = None
-    for i in range(start, end):
-        raw = lines[i]
-        if not raw.strip() or raw.lstrip().startswith("#"):
-            continue
-        # a new list item starts at "  - key: value"
-        item = re.match(r"^\s*-\s+(\w+):\s*(.*)$", raw)
-        if item:
-            if cur is not None:
-                fields.append(cur)
-            cur = {}
-            cur[item.group(1)] = parse_scalar(item.group(2))
-            continue
-        # a continuation key of the current item: "    key: value"
-        kv = re.match(r"^\s+(\w+):\s*(.*)$", raw)
-        if kv and cur is not None:
-            cur[kv.group(1)] = parse_scalar(kv.group(2))
-    if cur is not None:
-        fields.append(cur)
-    return fields
+def _presented(name: str, values: list[str] | None, presentation: dict) -> dict:
+    """Label and definition of one field and, unless free text, of each value."""
+    entry = presentation.get(name)
+    if not isinstance(entry, dict):
+        raise ValueError(f"analysis_presentation: missing entry for {name}")
+    out = {
+        "label": _text(entry.get("label"), f"{name}.label"),
+        "definition": _text(entry.get("definition"), f"{name}.definition"),
+    }
+    if values is None:
+        if entry.get("values"):
+            raise ValueError(f"analysis_presentation: free-text {name} takes no values")
+        return out
+    shown = entry.get("values") or {}
+    unknown = sorted(set(map(str, shown)) - set(values))
+    if unknown:
+        raise ValueError(f"analysis_presentation: {name} names unknown values {unknown}")
+    labels, definitions = {}, {}
+    for value in values:
+        item = shown.get(value)
+        if not isinstance(item, dict):
+            raise ValueError(f"analysis_presentation: missing entry for {name}.{value}")
+        labels[value] = _text(item.get("label"), f"{name}.{value}.label")
+        definitions[value] = _text(item.get("definition"), f"{name}.{value}.definition")
+    out["value_labels"] = labels
+    out["value_definitions"] = definitions
+    return out
 
 
-def section_bounds(lines, key):
-    """Line index of a top-level `key:` and the index where its block ends
-    (the next top-level key or EOF). Top-level keys start at column 0."""
-    start = None
-    for i, ln in enumerate(lines):
-        if re.match(r"^" + re.escape(key) + r":\s*$", ln):
-            start = i + 1
-            break
-    if start is None:
-        return None, None
-    end = len(lines)
-    for i in range(start, len(lines)):
-        if re.match(r"^\S", lines[i]) and not lines[i].startswith("#"):
-            end = i
-            break
-    return start, end
-
-
-def main() -> int:
-    if not YAML_IN.exists():
-        print(f"ERROR: {YAML_IN} not found", file=sys.stderr)
-        return 1
-    text = YAML_IN.read_text(encoding="utf-8")
-    lines = text.split("\n")
-
+def build_payload(text: str) -> dict:
+    """Project the frozen vocabulary and its presentation metadata."""
     version = ""
-    for ln in lines[:5]:
+    for ln in text.split("\n")[:5]:
         m = VERSION_RE.match(ln)
         if m:
             version = m.group(1)
             break
+    data = yaml.safe_load(text) or {}
+    raw_fields = data.get("analysis_fields")
+    if not raw_fields:
+        raise ValueError("analysis_fields block not found in categories.yaml")
+    presentation = data.get("analysis_presentation") or {}
+    # YAML 1.1 keeps a code such as None as a string; stringify explicitly anyway.
+    study_types = [str(value) for value in data.get("study_types") or []]
+    names = {f["name"] for f in raw_fields} | {STUDY_FIELD}
+    stray = sorted(set(presentation) - names)
+    if stray:
+        raise ValueError(f"analysis_presentation: unknown fields {stray}")
 
-    af_start, af_end = section_bounds(lines, "analysis_fields")
-    if af_start is None:
-        print("ERROR: analysis_fields block not found in categories.yaml", file=sys.stderr)
-        return 1
-    raw_fields = parse_block(lines, af_start, af_end)
-
-    # Keep only the keys the panel consumes; drop notes/serves/binding_when, which
-    # are coding guidance, not vocabulary. A single-select field is `multi: false`.
+    # Keep only the keys the apps consume; drop notes/serves, which are coding
+    # guidance, not vocabulary. A single-select field is `multi: false`.
     fields = []
     for f in raw_fields:
         out = {"name": f["name"]}
         if f.get("free_text"):
+            out.update(_presented(f["name"], None, presentation))
             out["free_text"] = True
             fields.append(out)
             continue
+        values = [str(value) for value in f.get("values", [])]
+        shown = _presented(f["name"], values, presentation)
+        out["label"], out["definition"] = shown["label"], shown["definition"]
         out["multi"] = bool(f.get("multi", False))
-        out["values"] = f.get("values", [])
+        out["values"] = values
+        out["value_labels"] = shown["value_labels"]
+        out["value_definitions"] = shown["value_definitions"]
         if f.get("optional"):
             out["optional"] = True
         if f.get("binding_when"):
             out["binding_when"] = f["binding_when"]
         fields.append(out)
 
-    st_start, st_end = section_bounds(lines, "study_types")
-    study_types = []
-    if st_start is not None:
-        for i in range(st_start, st_end):
-            m = re.match(r"^\s*-\s+(\S+)\s*$", lines[i])
-            if m:
-                study_types.append(m.group(1))
-
-    payload = {
+    study_type = {
+        "name": STUDY_FIELD,
+        "multi": False,
+        "values": study_types,
+        **_presented(STUDY_FIELD, study_types, presentation),
+    }
+    return {
         "meta": {
             "generated_by": "src/publish/build_analysis_fields.py",
             "source": "assessment/categories.yaml",
-            "note": "Closed vocabulary for the PRISM analysis panel (FR-14/ADR-026); the one source, do not hand-edit.",
+            "note": "Closed vocabulary for the PRISM analysis panel (FR-14/ADR-026); the one source, do not hand-edit. Labels and definitions are presentation only.",
         },
         "version": version,
         "fields": fields,
         "study_types": study_types,
+        "study_type": study_type,
     }
+
+
+def main() -> int:
+    if not YAML_IN.exists():
+        print(f"ERROR: {YAML_IN} not found", file=sys.stderr)
+        return 1
+    try:
+        payload = build_payload(YAML_IN.read_text(encoding="utf-8"))
+    except ValueError as error:
+        print(f"ERROR: {error}", file=sys.stderr)
+        return 1
     JSON_OUT.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
+    fields = payload["fields"]
     print(f"Wrote {JSON_OUT.relative_to(ROOT)}")
-    print(f"  version: {version}  fields: {len(fields)}  study_types: {len(study_types)}")
+    print(f"  version: {payload['version']}  fields: {len(fields)}  study_types: {len(payload['study_types'])}")
     for f in fields:
         kind = "free" if f.get("free_text") else ("multi" if f.get("multi") else "single")
         n = len(f.get("values", []))
