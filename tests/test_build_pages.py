@@ -11,7 +11,6 @@ def test_rendered_pages_match_committed_outputs() -> None:
         "about.html",
         "help.html",
         "methoden.html",
-        "onboarding.html",
         "prisma.html",
     }
     for filename, html in rendered.items():

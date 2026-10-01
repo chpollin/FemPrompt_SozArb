@@ -10,6 +10,7 @@ re-running `python src/publish/build_pages.py`. index.html keeps its bespoke in-
 header (the view-tab buttons and the stats bar); its head and footer are shared.
 """
 
+import hashlib
 import os
 import re
 import tempfile
@@ -23,6 +24,12 @@ FONTS_COMPANION = ""
 FONTS_PRISMA = ""
 
 FONT_AWESOME = '<link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">'
+
+
+def asset_version(relative: str) -> str:
+    """Cache-busting token derived from the file content, so a changed asset
+    always gets a new query string."""
+    return hashlib.sha256((DOCS / relative).read_bytes()).hexdigest()[:10]
 
 
 def favicon(letter: str, size: int) -> str:
@@ -106,12 +113,6 @@ def subpage_header(active: str, extra: str = "") -> str:
     for href, label, key in NAV_LINKS:
         cls = "nav-link nav-link-active" if key == active else "nav-link"
         links += f'\n                    <a href="{href}" class="{cls}">{label}</a>'
-        if key == "prisma":
-            onboarding_cls = "nav-link nav-link-active" if active == "onboarding" else "nav-link"
-            links += (
-                f'\n                    <a href="onboarding.html" '
-                f'class="{onboarding_cls}">Onboarding</a>'
-            )
     extra_block = f"\n            {extra}" if extra else ""
     brand = """<a href="index.html" class="brand-link">
                         <h1>Feministische AI Literacies</h1>
@@ -176,25 +177,22 @@ PAGES = {
         ),
         "header": "methoden",
     },
-    "onboarding.html": {
-        "head": head(
-            "Onboarding -- Feministische AI Literacies",
-            "Anleitung für die fachliche Prüfung vorbereiteter Records in PRISM.",
-            fav=favicon("F", 60), fonts=FONTS_COMPANION,
-        ),
-        "header": "onboarding",
-    },
     "prisma.html": {
         "head": head(
             "PRISMA Screening Tool &middot; Feministische AI Literacies",
             "PRISMA-Screening-Werkzeug für den systematischen Review zu feministischen AI Literacies. PRISMA 2020 / PRISMA-trAIce, duale Mensch-KI-Bewertung.",
             fav=favicon("P", 52), fonts=FONTS_PRISMA,
             meta='<meta name="robots" content="noindex">',
-            extra_css='<link rel="stylesheet" href="css/prisma.css?v=20260822-20">',
+            extra_css=f'<link rel="stylesheet" href="css/prisma.css?v={asset_version("css/prisma.css")}">',
         ),
         "header": "prisma",
         "footer": False,  # the working tool keeps its full height for the three-pane workspace (ADR-039)
     },
+}
+
+SCRIPT_SRC_RES = {
+    name: re.compile(rf'(<script src="js/{re.escape(name)}\?v=)[^"]*(")')
+    for name in ("prisma.js", "prisma-data.js")
 }
 
 HEAD_RE = re.compile(r"<head>.*?</head>", re.S)
@@ -222,6 +220,12 @@ def render_pages() -> dict[str, str]:
                 raise SystemExit(f"{fname}: no <header> found")
             block = subpage_header(cfg["header"], HEADER_EXTRA.get(cfg["header"], ""))
             html = HEADER_RE.sub(lambda m: block, html, count=1)
+        if fname == "prisma.html":
+            for name, pattern in SCRIPT_SRC_RES.items():
+                if not pattern.search(html):
+                    raise SystemExit(f"{fname}: no script tag for js/{name}")
+                token = asset_version(f"js/{name}")
+                html = pattern.sub(lambda m, t=token: m.group(1) + t + m.group(2), html, count=1)
         rendered[fname] = html
     return rendered
 

@@ -1820,13 +1820,16 @@ function expertAssessment(paper) {
     });
     const override = finalDecisionOf(cats, false) !== h.decision;
     if (finalDecisionOf(cats, override) !== h.decision) return null;
+    const basis = {};
+    Object.keys(cats).forEach(function(c) { basis[c] = 'expert_assessment'; });
     return {
         categories: cats,
         decision: h.decision,
         override: override,
         reason: h.decision === 'Exclude' ? EXPERT_EXCLUSION_REASON : null,
         override_reason: override && h.decision === 'Include' ? EXPERT_OVERRIDE_REASON : null,
-        evidence: {}
+        evidence: {},
+        evidence_basis: basis
     };
 }
 

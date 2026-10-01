@@ -30,7 +30,6 @@
                     <a href="index.html#korpus" class="nav-link">Korpus</a>
                     <span class="nav-sep"></span>
                     <a href="prisma.html" class="nav-link">PRISM</a>
-                    <a href="onboarding.html" class="nav-link">Onboarding</a>
                     <a href="about.html" class="nav-link">About</a>
                     <a href="methoden.html" class="nav-link">Methoden</a>
                     <a href="help.html" class="nav-link nav-link-active">Hilfe</a>
@@ -88,6 +87,69 @@
                 <tr><td><kbd>Esc</kbd></td><td>Panel schliessen</td></tr>
                 <tr><td><kbd>&larr;</kbd> <kbd>&rarr;</kbd></td><td>Vorheriges / Naechstes Paper (bei offenem Detail-Panel)</td></tr>
             </table>
+
+            <h3 id="prism"><i class="fas fa-list-check"></i> Prüfen in PRISM</h3>
+            <p>PRISM öffnet im Modus &bdquo;Lesen&ldquo;. Der Umschalter &bdquo;Lesen | Bearbeiten&ldquo; steht oben
+            in der linken Spalte, ältere Links mit <code>?verify=1</code> öffnen &bdquo;Bearbeiten&ldquo;. Bearbeiten
+            setzt eine lokale Projektkopie voraus, die veröffentlichte Seite zeigt PRISM nur zum Lesen.</p>
+
+            <h4>Einrichtung</h4>
+            <ol>
+                <li>Klone das Repositorium mit GitHub Desktop und wähle dessen Wurzelordner als Arbeitsordner. Die
+                    Volltexte legt die Projektleitung beim gemeinsamen Einrichten in den Klon.</li>
+                <li>Öffne PRISM in einem Chromium-Browser, denn das Speichern nutzt die File System Access API, und
+                    wähle &bdquo;Bearbeiten&ldquo;.</li>
+                <li>Lege einmal dein Kürzel fest, zwei bis zwölf Zeichen aus Buchstaben, Ziffern, Unterstrich und
+                    Bindestrich, beginnend mit einem Buchstaben. PRISM speichert es klein geschrieben und weist
+                    Kürzel von Agentenspuren wie <code>ar2</code> ab. &bdquo;Kürzel ändern&ldquo; ersetzt es.</li>
+                <li>Wähle einmal den Wurzelordner des lokalen Klons. PRISM schreibt ausschließlich
+                    <code>docs/data/screening/&lt;kürzel&gt;.json</code>.</li>
+            </ol>
+
+            <h4>Arbeiten</h4>
+            <p>Die linke Spalte listet alle Dokumente. Der Statusfilter &bdquo;Alle | Offen | Erfasst&ldquo; und
+            die Kategorie-Chips in den Kategoriefarben grenzen die Liste ein. Die Chips wirken auf die Kategorien
+            der aktuellen Annotation, mehrere Chips kombinieren sich. &bdquo;Erfasst&ldquo; bedeutet, dass deine
+            eigene gespeicherte Bewertung oder deine eigene Bestätigung vorliegt. Filter und geöffnetes Dokument
+            stehen in der URL. Im Modus &bdquo;Bearbeiten&ldquo; zählt &bdquo;n von N erfasst&ldquo; deine eigenen
+            Records und Bestätigungen. Farbige Punkte am Listeneintrag zeigen die Kategorien der aktuellen
+            Annotation, eine kleine Marke den Stand.</p>
+            <ul>
+                <li>Keine Marke heißt offen und ohne Annotation.</li>
+                <li>Ein hohler Ring heißt aus der Expert:innen-Entscheidung vorbelegt und noch nicht bestätigt.</li>
+                <li>Ein gestrichelter Ring heißt Agentenkodierung, die auf Prüfung wartet.</li>
+                <li>Ein Haken heißt erfasst.</li>
+            </ul>
+            <p>Das Panel &bdquo;Bewertung&ldquo; zeigt die aktuelle Annotation mit einer Herkunftszeile, etwa
+            &bdquo;Vorbelegt: Expert:innen-Entscheidung&ldquo;, &bdquo;Agentenkodierung ar2&ldquo; oder
+            &bdquo;Deine Bewertung, gespeichert &lt;Datum&gt;&ldquo;. Die Entscheidung (Include, Exclude,
+            Unclear) steht im Kopf des Panels. Die zehn Kategorien sind farbige Schalter in den Gruppen Gegenstand
+            und Perspektive, ihre Definition steht im Tooltip. Ein Klick setzt eine Kategorie auf ja oder schaltet
+            sie ab. Die Stufe teilweise erscheint als hellerer Schalter, sobald ein Paper-Beleg an eine leere
+            Kategorie geheftet ist, ein Klick hebt sie auf ja. Für die Bewertung gilt:</p>
+            <ul>
+                <li>Eine unverändert übernommene Kategorie der Expert:innen-Entscheidung zählt ohne Textstelle und
+                    ist als &bdquo;Expert:innen-Urteil, ohne Textbeleg&ldquo; markiert.</li>
+                <li>Jede Kategorie, die du ergänzt oder anhebst, braucht einen Paper-Beleg. Du markierst eine
+                    Textstelle oder heftest den aktuellen Treffer der Suche im Text mit &bdquo;Treffer
+                    anheften&ldquo; an. Belege aus dem LLM-Wissensdestillat zählen nicht.</li>
+                <li>Exclude braucht einen Ausschlussgrund. Für eine bestätigte Expert:innen-Exclude-Entscheidung
+                    steht &bdquo;Expert:innen-Entscheidung übernommen&ldquo; bereit. &bdquo;Abweichend
+                    einschließen&ldquo; braucht eine kurze Begründung. Include verlangt zusätzlich die
+                    Analysekodierung, die sich als eigener Schritt öffnet.</li>
+            </ul>
+            <p>Der LLM-Vorschlag bleibt als kompakte Referenz sichtbar, mit Entscheidung, Kategoriefarben und dem
+            ersten Satz seiner Begründung. Er belegt die Bewertung nie vor. &bdquo;Vorschlag übernehmen&ldquo; setzt nur
+            die vorgeschlagenen Kategorien auf teilweise.</p>
+            <p>Gespeichert wird mit dem Diskettensymbol neben der Dokumentposition. Bei einer vorbelegten oder leeren
+            Bewertung schreibt es deine eigene Bewertung. Bei einer Agentenkodierung schreibt es eine Bestätigung in
+            deine Datei und lässt die Agentendatei unverändert. Ungeändert gespeichert gilt sie als bestätigt, mit
+            Änderungen als korrigiert und bestätigt. &bdquo;Änderungen anfordern&ldquo; und &bdquo;Ablehnen&ldquo;
+            wählst du ausdrücklich im Panel und begründest sie kurz. Eine bestätigte Agentenkodierung erhält danach
+            separat die &bdquo;Freigabe erteilen&ldquo; für die Veröffentlichung. Nicht gespeicherte Änderungen
+            behält der Browser je Dokument.</p>
+            <p>Nach der Arbeit committest du in GitHub Desktop deine Datei
+            <code>docs/data/screening/&lt;kürzel&gt;.json</code> und pushst sie. PRISM führt keine Git-Aktion aus.</p>
         </article>
     </main>
 

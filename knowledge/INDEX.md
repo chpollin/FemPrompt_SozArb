@@ -64,7 +64,7 @@ In function order, not alphabetical.
 - Prepare the literature update and source readiness through [[plan#Controlled corpus completion]], [[update-protocol]] and [[standards]]. `generated/literature-readiness.json` and its CSV projection, rebuilt by `npm run build`, distinguish live Zotero membership, reading material, knowledge-document authority and remaining preparation.
 - Inspect retained local sources through [[data#Local source preservation]] and reproduce technical guarantees through [[testing]].
 - Add missing prepared references to Zotero through [[governance#Authorised additive Zotero import]] for the write scope and [[methods#Zotero reconciliation and import]] for commands and receipts.
-- Onboard a new collaborator through [[project]], [[methods]] and [[specification]]. The reviewing colleagues use `docs/onboarding.html`, and nothing on their path requires this knowledge base.
+- Onboard a new collaborator through [[project]], [[methods]] and [[specification]]. The reviewing colleagues use `docs/help.html#prism`, and nothing on their path requires this knowledge base.
 
 ## Convention
 
