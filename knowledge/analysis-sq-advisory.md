@@ -10,10 +10,10 @@ status: draft
 language: en
 version: "0.6"
 created: 2026-07-21
-updated: 2026-09-05
+updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-5.6), Codex (GPT-6)
-related: [update-protocol, plan, methods, verification, research-vault, analysis-divergence]
+related: [update-protocol, plan, methods, verification, research-vault, analysis-divergence, analysis-methods, project]
 ---
 
 # SQ Analysis, Advisory LLM Track
@@ -24,7 +24,7 @@ For current descriptive coding, use the [completion package and SQ tables](../ge
 
 ## Method chain
 
-The advisory workflow mapped round-one Includes to available distilled knowledge documents, coded the frozen analysis fields, aggregated the structured values, generated candidate syntheses for SQ1 to SQ3, and ran an adversarial review against the coded records. The chain is documented in the following artifacts.
+The advisory workflow mapped round-one Includes to available distilled knowledge documents, coded the frozen analysis fields, aggregated the structured values, generated candidate syntheses for the three sub-questions of 2026, and ran an adversarial review against the coded records. The headings below keep that numbering and name where its content belongs among the current SQ1 to SQ4 of [[project#Research questions]]. The chain is documented in the following artifacts.
 
 | Artifact | Function |
 |---|---|
@@ -37,19 +37,19 @@ The coding basis was the generated distillate. Each record therefore inherits th
 
 ## Advisory findings
 
-### SQ1, prompting techniques and evidence
+### Earlier SQ1, prompting techniques and evidence (now SQ3)
 
 The candidate pattern suggests that much of the corpus discusses AI literacy, governance, or bias without specifying a concrete prompting technique. Where named techniques occur, they cluster in experimental or benchmark-oriented studies. General guidance covers both broad prompting literacy and concrete interventions that lack a stable taxonomy label. The later analysis should separate these two uses.
 
 Evaluated prompting interventions appear concentrated on narrow representational-bias tasks outside social-work practice. Self-critique and self-debiasing form the most coherent candidate technique family in the advisory coding. Their transfer to professional social-work settings remains an empirical question.
 
-### SQ2, bias axes and mitigation
+### Earlier SQ2, bias axes and mitigation (now SQ2 and SQ3)
 
 Gender and race or ethnicity form the most visible axes in the advisory coding. Intersectional, socioeconomic, disability, sexuality, age, and language-related analyses appear less consistently connected to evaluated mitigation. Organisational guidance and AI-literacy measures dominate the proposed responses, while evaluated technical work concentrates on narrower prompt or model interventions.
 
 The candidate pattern distinguishes representational harms from allocative and performance harms. Technical prompting studies focus mainly on stereotyping. Social-work literature more often raises proxy discrimination, unequal service outcomes, and governance duties. The final analysis must test this mismatch against the verified Paper sources.
 
-### SQ3, social-work-specific constraints
+### Earlier SQ3, social-work-specific constraints (now SQ1 and SQ4)
 
 The advisory coding found little evidence that concrete prompting techniques have been evaluated in genuine social-work practice settings. Social-work sources instead emphasise professional judgement, vulnerable or involuntary clients, structural disadvantage, participatory design, data sovereignty, and accountability for consequential decisions.
 
@@ -62,7 +62,7 @@ These themes suggest that general prompt-engineering guidance requires domain ad
 | Technique transfer | Evaluated prompt interventions occur outside social-work practice | Recompute technique by practice-field relations from verified records |
 | Harm mismatch | Prompt studies and social-work studies focus on different harm mechanisms | Verify harm and mitigation coding against Paper sources |
 | Socioeconomic and intersectional coverage | Central social-work axes have little evaluated prompting evidence | Check full corpus and absent-source cases |
-| Evidence status | Organisational recommendations exceed evaluated domain interventions | Recompute mitigation stage by evidence status |
+| Evidence status | Organisational recommendations exceed evaluated domain interventions | Recompute mitigation stage against the evidence status of the coded Works |
 | Practice-field coverage | Several social-work fields are thin or absent in the closed vocabulary | Review population and practice-field coding with domain experts |
 | Benchmark substrate | Generative stereotyping benchmarks capture only part of the harms raised in social work | Translate verified gaps into later benchmark requirements |
 

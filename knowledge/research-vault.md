@@ -10,11 +10,11 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-07-18
-updated: 2026-09-22
+updated: 2026-10-01
 authors: [Christopher Pollin]
-generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code
+generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 topics: ["[[Grounded Vault]]", "[[Systematic Review]]", "[[Context Engineering]]"]
-related: [methods, data, governance, verification, testing, plan, standards]
+related: [project, methods, analysis-methods, data, governance, verification, testing, plan, standards]
 ---
 
 # Research Vault
@@ -74,10 +74,12 @@ An Assertion carries at least the following information.
 
 - stable Assertion ID and precise wording of the statement
 - references to the supporting distillate statements
-- thematic assignment and relation to the research questions
+- thematic assignment and relation to the research questions SQ1 to SQ4 of [[project#Research questions]]
 - marking of contradicting or qualifying evidence
 - review status with dated activity and responsible actor
 - intended output, for instance literature report, paper or both
+
+Assertions record the relation in the optional frontmatter field `research-questions`, which the validator does not check against a vocabulary. The Assertions prepared on 1 October 2026 use the current numbering. Of the earlier Assertions, one carries values of the earlier sub-question numbering, which [[project#Research questions]] maps to the current questions, and the others carry no such field. The Assertion index and the result site do not yet read this field.
 
 Report Assertions and paper Assertions form one body of knowledge. The field for the intended output controls which Assertions are used in which text. Methodological statements of the paper can additionally point to project artifacts such as ADRs, run manifests, tests and replay outputs.
 
@@ -91,7 +93,7 @@ Report Assertions and paper Assertions form one body of knowledge. The field for
 | `verified` | A domain expert has confirmed evidence and scholarly interpretation | person-attributed verification |
 | `publication-approved` | The verified artifact is released for a specific public projection | person-attributed publication approval |
 
-Deterministic validation appears under `checked.validation`. It checks schema, anchors, references and status rules. The status of a source does not propagate automatically. An output chapter can be verified only after the Assertions it uses have been verified and the interpretation of the chapter has received its own scholarly check.
+The same five values form the `researchVaultState` vocabulary of the completion-package schema. Deterministic validation appears under `checked.validation`. It checks schema, anchors, references and status rules. The status of a source does not propagate automatically. An output chapter can be verified only after the Assertions it uses have been verified and the interpretation of the chapter has received its own scholarly check.
 
 ## Literature report and paper
 
@@ -103,7 +105,7 @@ Deterministic validation appears under `checked.validation`. It checks schema, a
 
 The quantitative analysis uses structured annotations and Assertion metadata. These include categories, co-occurrences, evidence types, populations, practice fields, methods and gaps. Every number is produced by an executable script over the canonical data.
 
-The qualitative analysis synthesises Assertions along the research questions on prompting techniques, bias axes and mitigation approaches, and domain-specific requirements. Topic modelling can serve as exploratory orientation over full texts, distillates, annotations, keywords and Vault relations. The scholarly interpretation of the topics takes place against the evidence-bound knowledge structure.
+The qualitative analysis synthesises Assertions along the sub-questions SQ1 Use, SQ2 Risks, SQ3 Practices and SQ4 Competences. [[analysis-methods#Answering the research questions]] states for each question its data, method and current limits. Topic modelling can serve as exploratory orientation over full texts, distillates, annotations, keywords and Vault relations. The scholarly interpretation of the topics takes place against the evidence-bound knowledge structure.
 
 ### Comparative synthesis scope
 
@@ -117,7 +119,7 @@ The comparison records insufficient study reporting and conflicting findings exp
 
 ## Current implementation state
 
-The active folder structure, a reviewed partial holding and the project-specific validator are in place. The following table opens up the active evidence chain, and the generated completion package holds current quantities and review states. A distillate can support several Assertions, and an Assertion can rest on several distillates.
+The active folder structure, a reviewed partial holding and the project-specific validator are in place. The following table opens up the AI-reviewed part of the active evidence chain, and the generated completion package holds current quantities and review states. A distillate can support several Assertions, and an Assertion can rest on several distillates.
 
 | Active distillate | Supported Assertion |
 |---|---|
@@ -127,6 +129,8 @@ The active folder structure, a reviewed partial holding and the project-specific
 | [Kabra et al. (2025), reasoning-guided fine-tuning](../research-vault/20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning.md) | [Transfer of reasoning traces through training](../research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md), which describes the method and makes no general efficacy claim |
 
 These statements carry attributed AI source reviews and no domain verification. The chat reads the [released Assertion index](../docs/data/assertion_index.json). Connections in the historical Knowledge Graph rest on category co-occurrence and do not replace an evidenced scholarly relation between statements.
+
+The draft chapter [SQ1 Use](../research-vault/40_output/literature-report/sq1-use.md) of the literature report was prepared on 1 October 2026 from the active distillates. It rests on the Assertions listed in its frontmatter, which an LLM agent prepared with recorded agent and model identity. Chapter and Assertions have the status `grounded`, so their references resolve while AI Agent Review and domain-expert verification are outstanding, and they stay outside the released Assertion index. The draft finds that no Assertion over the active distillates reports an evaluated benefit of LLM use in a social-work setting, and it lists included Works without an active distillate whose titles suggest direct SQ1 content. Both statements describe the distillate set and say nothing yet about the included corpus. The operator cancelled the drafts for SQ2 to SQ4 in the same session.
 
 Part of the intended Papers is neither actively distilled nor connected to Assertions nor ready for analysis. Separate measures apply to the working state.
 

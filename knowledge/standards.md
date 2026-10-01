@@ -10,11 +10,11 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-09-20
+updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code, deep-research web synthesis and full-text extraction of the primary sources
 topics: ["[[PRISMA]]", "[[Reporting Standards]]", "[[AI in Evidence Synthesis]]"]
-related: [specification, methods]
+related: [specification, methods, analysis-methods]
 ---
 
 This note is the reporting-standards reference for the project. It covers PRISMA 2020 as the reporting backbone and the two 2025 frameworks that govern AI-assisted reviews, PRISMA-trAIce (how to document AI use) and RAISE (under what conditions AI use is permissible). It is the criterion the conducted review and the PRISM tool report against, and the canonical home for the standards' item counts and citations. All claims are sourced in the Sources section below.
@@ -60,7 +60,7 @@ An AI-focused extension, PRISMA-AI, is registered with EQUATOR as "under develop
 
 ## PRISMA vs conduct standards (Cochrane, JBI)
 
-PRISMA answers whether the report is complete and transparent. It does not answer whether the review was conducted rigorously. For conduct, the field uses comprehensive method resources (the Cochrane Handbook, the JBI Manual); for methodological quality and bias, separate instruments (AMSTAR 2, ROBIS, RoB 2, ROBINS-I). The project references these alternatives in [[methods]] (JBI, Cochrane 6.5, ENTREQ, MMAT). The screening tool is therefore a reporting instrument; it makes the selection process auditable but does not replace expert methodological judgement.
+PRISMA answers whether the report is complete and transparent. It does not answer whether the review was conducted rigorously. For conduct, the field uses comprehensive method resources (the Cochrane Handbook, the JBI Manual), and for methodological quality and bias it uses separate instruments (AMSTAR 2, ROBIS, RoB 2, ROBINS-I). The project references these alternatives in [[methods#Quality assessment]] (JBI, Cochrane 6.5, ENTREQ, MMAT), and [[analysis-methods#Appraisal for practice recommendations]] assigns appraisal tools by source type. The screening tool is therefore a reporting instrument. It makes the selection process auditable and leaves methodological judgement to the experts.
 
 ## PRISMA-trAIce (Holst et al. 2025, JMIR AI)
 
@@ -151,6 +151,10 @@ Three further named gaps attach to the corpus instead of a checklist item and th
 3. Records without full text as a consequence of these losses. The failed conversions are listed by file name in [[methods]].
 
 Applicability is justified per sub-item. The absence of a meta-analysis does not exempt items 13a–d and 20a in particular, since a qualitative synthesis also has to disclose its study assignment, data preparation, tables, summary method and contributing studies. Items 13e–f and 20c–d stay `partial` until the consolidated presentation of methods and results exists. Qualitative variation is relevant, while no sensitivity analysis of the synthesis is documented so far. An analysis that was not carried out has to be named explicitly and cannot be filed as not applicable merely because there is no meta-analysis. The map marks the effect-measure, statistical-synthesis, per-study risk-of-bias and certainty procedures that are not planned separately. Their absence remains a possible methodological limitation and implies no quality assessment of the studies. The basis is the official expanded PRISMA 2020 checklist.
+
+## Open reporting decision on PRISMA-ScR
+
+[[analysis-methods#Mapping layer]] proposes to report the descriptive mapping layer of the literature analysis by PRISMA-ScR (Tricco et al. 2018) in addition to PRISMA 2020 and PRISMA-trAIce. The proposal follows from the mapping layer's grounding in the JBI scoping-review methodology. PRISMA-trAIce is formulated as an extension of PRISMA 2020, while its AI disclosure items describe tool use independently of the review type, so the combination would keep the recorded conformance work. The operator has not decided on the proposal. PRISMA-ScR is therefore not an applied standard of this review. The conformance map carries no PRISMA-ScR items, and the mapping table above stays limited to PRISMA 2020, PRISMA-trAIce and RAISE. An adoption would add the PRISMA-ScR items to `generated/conformance/conformance_map.yaml` and require a decision on how the scoping-review and the systematic-review reporting of the two rounds relate.
 
 ## Interpretation for this review
 
