@@ -24,6 +24,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: Analysis fields only for agents, PRISM review
+
+The operator decided that only AI agents code the analysis fields. A human Include in PRISM no longer opens or requires the analysis step, an existing analysis part of a human record is written back unchanged, and agent records keep the full FR-14 contract (ADR-045). A critical review in Chromium at desktop, narrow and zoomed widths in both modes, followed by an independent exploratory pass, led to calm corrections of the existing interface. The corpus list was 463 tab stops long and became one stop with arrow-key movement, Ctrl+S saves, each opened paper is a history entry, `Lesen` no longer renders controls that cannot act, an untouched empty draft shows no decision, unsaved drafts are named in the list and in `Lesen`, and the category chips are not offered under `Offen`, where they could only empty the list. Two persistence gaps were closed. A conflict choice now writes at once and names its paper and the decision it keeps, and records that only the browser holds after a failed write stay writable through the disk action, which before could be disabled. The save status line now appears when it is set.
+
+Open. The counter "n von N erfasst" repeats the `Erfasst` facet when no assignee is chosen, which the interface yardstick counts as a doubled figure. It stays because ADR-042 decided it, and removing it is the operator's choice.
+
 ### 2026-10-01: PRISMA flow per identification source
 
 The paper promises PRISMA reporting, but only round one had a reproducible flow. `src/replay/prisma_flow.py` now derives the flow for every source and lane from the committed lane records and writes `generated/prisma-flow/` in the project build. Round one is taken from the replay itself, so the two cannot diverge. The later sources are deduplicated in execution order by DOI, arXiv identifier and normalised title, and each transferred find is followed to its current Work-level decision. Multiple-finds matrices across the deep-research systems replace the meeting's "duplicates across databases". A separately written verification script, run by an independent agent without access to the generator, produced the same counts in every compared box after one correction in the generator, which had read semicolon-separated and listed DOIs of exclusion entries as a single invalid DOI.
