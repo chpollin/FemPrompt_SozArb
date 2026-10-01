@@ -14,10 +14,10 @@ updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 topics: ["[[Epistemic Infrastructure]]", "[[Feminist AI]]"]
-related: [INDEX, methods, analysis-methods, standards, governance, verification, plan, journal]
+related: [INDEX, methods, analysis-methods, specification, research-vault, standards, governance, verification, plan, journal]
 ---
 
-FemPrompt SozArb is a qualitative literature review on generative AI, gender, bias, and social work, together with the epistemic infrastructure that makes its AI-assisted research operations traceable. It forms part of the Elisabeth List Fellowship project "Diversity-Sensitive Engagement with Artificial Intelligence" at the University of Graz. The round-one expert and LLM divergence motivates the record design. The round-two workflow demonstrates how AI agents can prepare a corpus for later domain-expert verification.
+FemPrompt SozArb is a qualitative literature review on how social work professionals can use large language models responsibly, with attention to bias, gender and the groups affected, together with the epistemic infrastructure that makes its AI-assisted research operations traceable. It forms part of the Elisabeth List Fellowship project "Diversity-Sensitive Engagement with Artificial Intelligence" at the University of Graz. The round-one expert and LLM divergence motivates the record design. The round-two workflow demonstrates how AI agents can prepare a corpus for later domain-expert verification.
 
 ## Project goal
 
@@ -29,7 +29,7 @@ The methodological goal is to describe and operationalise the epistemic infrastr
 
 A further goal is a conceptual basis for a social-work bias benchmark. The review identifies relevant terms, bias axes, mitigation approaches, population contexts, and domain-specific constraints that can inform later test scenarios.
 
-Working definition of feminist AI literacies: diversity-sensitive, intersectional, and bias-aware competencies that social work professionals need when engaging with generative AI, with a focus on prompting, critical output evaluation, and context and application sensitivity.
+The working definition of feminist AI literacies names the diversity-sensitive, intersectional, and bias-aware competencies that social work professionals need when engaging with generative AI, with a focus on prompting, critical output evaluation, and context and application sensitivity.
 
 ## Research questions
 
@@ -60,19 +60,27 @@ The previous sub-questions of 2026 are absorbed as follows. The former question 
 
 | Audience | Benefit |
 |---|---|
-| Researchers (social work and AI) | Structured literature overview, research gaps |
-| Practitioners (social work) | Evidence base for LLM use in practice |
-| Educators (AI literacy) | Course material, concepts, case studies |
+| Researchers in social work and AI | A map of the evidence and its gaps for each sub-question, with source-linked findings and the coding coverage behind every statement |
+| Educators in social work and AI literacy | Reported competences, organisational conditions and teaching uses as material for courses and for the orientation guide of the fellowship |
+| Practitioners in social work | An evidence base on tasks, risks and practices of LLM use, with the recommendations of the literature attributed to their sources |
+| Researchers in review methodology | A documented workflow for traceable LLM and agent contributions to a literature review, which answers the second question of the paper |
 
-Primary audience: researchers with limited AI expertise.
+The primary audience remains researchers with limited AI expertise.
 
 ## Success criteria
+
+The substantive criteria follow the main question.
+
+- Each sub-question receives an answer that separates what the reviewed literature shows from what remains not determinable. Every map and every answer text states how many included Works are coded for the fields it uses, and an empty cell with uncoded Works never counts as a gap in the literature.
+- SQ1 to SQ3 combine evidence-and-gap maps from coded fields with source-linked Assertions on benefits, effects, conditions and limitations, retaining study conditions and contradictory evidence. SQ4 rests on framework synthesis over Assertions against the working definition above and a named external framework of general prompt guidance.
+- Recommendations found in the literature appear as recommendations of their sources, each with its evidence status.
+- The literature report and paper receive domain-expert verification of their substantive claims and interpretations. Publication follows the policy applicable to each output, and submission requires a decision over the final manuscript.
+
+The methodological criteria follow the second question.
 
 - The intended corpus has explicit Work and Version identities, source-linked reading material and documented preparation gaps.
 - Research contributions identify their producer, inputs and actual checks. Historical round-one assessments remain reconstructable.
 - PRISM supports reading, evidence inspection, correction and reliable saving. Scholarly verification identifies the exact statement, field or whole artifact checked and its evidence basis.
-- Comparative findings answer SQ1 to SQ3 through reproducible descriptive analysis and source-linked Assertions, retaining study conditions, contradictory evidence and limitations.
-- The literature report and paper receive domain-expert verification of their substantive claims and interpretations. Publication follows the policy applicable to each output, and submission requires a decision over the final manuscript.
 
 [[verification]] records the available evidence, [[specification]] the implemented tool contract, and [[plan]] the remaining work. These criteria state the target rather than a software or scholarly completion claim.
 
@@ -80,8 +88,10 @@ Primary audience: researchers with limited AI expertise.
 
 | Boundary | Consequence |
 |---|---|
+| Recommendations | The review delivers the evidence base, and its first analytical output is comparative literature synthesis. It reports what the literature shows and which recommendations its sources make, attributed to those sources. Recommendations of the project require a separate appraisal of study quality and transfer conditions under [[research-vault#Comparative synthesis scope]] and [[analysis-methods#Appraisal for practice recommendations]] |
+| Corpus focus | The possible underrepresentation of task literature without a bias focus, described under [[#Corpus]], limits SQ1 in particular. Whether a supplementary search widens the corpus is an open decision in [[plan#Open decisions]] |
+| Coding coverage | Answers are bounded by the coverage of governed coding. A statement about an uncoded field is not determinable and is never reported as absence in the literature |
 | Empirical claims | The project reports descriptive findings from the recorded assessments and the reviewed literature. The round-one comparison measures divergence between documented products. Its missing independent inter-human baseline prevents treating that divergence as an LLM error rate or a general accuracy claim. [[analysis-divergence]] defines the interpretation limits |
-| Prompting guidance | The first analytical output is comparative literature synthesis. Practice recommendations require a separate appraisal of study quality and transfer conditions under [[research-vault#Comparative synthesis scope]] |
 | Experimental efficacy testing | The project reports experiments found in the literature and conducts no new prompting experiment |
 | Tool audience | PRISM serves research teams and domain experts working on a review |
 | Scholarly authority | Domain experts verify interpretations and approve publication |
@@ -89,13 +99,13 @@ Primary audience: researchers with limited AI expertise.
 
 ## Two strands of the project
 
-The methodological strand develops the implemented workflow and its authority model. Its outputs are PRISM, the lifecycle and provenance schema, the governed agent-run contract, the round-one replay, and the documented Grounded Vault chain.
+The substantive strand answers the main question through SQ1 to SQ4. Its outputs are the evidence-and-gap maps and descriptive tables, the source-linked Assertions, the literature report with its answers to the sub-questions, the paper synthesis and the public Evidence Companion, which presents the released subset along the sub-questions ([[specification#Public Evidence Companion]]). [[analysis-methods]] defines the mapping and synthesis frame. The same knowledge structure supplies a conceptual foundation for a later social-work bias benchmark.
 
-The substantive strand answers SQ1 to SQ3 from the completed corpus. Its outputs are the quantitative literature landscape, the source-linked Assertions, the literature report, and the paper synthesis. The same knowledge structure supplies a conceptual foundation for a later social-work bias benchmark.
+The methodological strand answers the second question of the paper. It develops the implemented workflow and its authority model. Its outputs are PRISM, the lifecycle and provenance schema, the governed agent-run contract, the round-one replay, the agent-track process diagnostics and the documented Grounded Vault chain.
 
 ## Corpus
 
-The initial corpus was identified via four proprietary Deep Research systems (ChatGPT, Claude, Gemini, Perplexity) plus a limited manual search and curated in a Zotero group. It covers English and German literature on feminist AI literacies, generative AI, prompting and social work. The completion target also includes the prepared 2026 intake and separately dated gap-filling candidates; their identification does not imply a curated identity or screening inclusion. The [completion package](../generated/completion/README.md) distinguishes these populations and their current denominators. The historical benchmark, linked knowledge archive and active source-reviewed synthesis remain separate subsets.
+The initial corpus was identified via four proprietary Deep Research systems (ChatGPT, Claude, Gemini, Perplexity) plus a limited manual search and curated in a Zotero group. It covers English and German literature on feminist AI literacies, generative AI, prompting and social work. Because the identification centred on bias and gender, literature on LLM use for social-work tasks without that focus may be underrepresented. The completion target also includes the prepared 2026 intake and separately dated gap-filling candidates. Their identification does not imply a curated identity or screening inclusion. The [completion package](../generated/completion/README.md) distinguishes these populations and their current denominators. The historical benchmark, linked knowledge archive and active source-reviewed synthesis remain separate subsets.
 
 ## Team
 
