@@ -80,7 +80,9 @@ let conceptData = null;
 let divergencePatterns = null;
 const divergencesList = [];
 let currentPage = 1;
-let currentSort = 'relevance';
+// The workbench opens on the works that have come furthest; a hash without sort means this.
+const DEFAULT_SORT = 'stage';
+let currentSort = DEFAULT_SORT;
 const PAGE_SIZE = 50;
 let currentDetailPaper = null;
 let currentDetailList = null;
@@ -108,7 +110,7 @@ const lastReleaseParams = {}; // per navigation tab, restored when the tab is ch
 // framework-free views. This store is the only router of the page: the release
 // modules navigate through EC.host and never listen to the hash themselves.
 const DEFAULT_STATE = {
-    view: 'start', q: '', dec: 'all', hum: 'all', year: 'all', stage: 'all', sort: 'relevance', cat: [], paper: null, rp: {}, vp: {},
+    view: 'start', q: '', dec: 'all', hum: 'all', year: 'all', stage: 'all', sort: DEFAULT_SORT, cat: [], paper: null, rp: {}, vp: {},
 };
 
 // A working view with parameters of its own (kategorien.js) registers a codec
@@ -609,11 +611,14 @@ function renderStages(papers) {
 const NO_YEAR = 'oj'; // the URL value of the column for works without a year
 // Top-down order of the stacked segments; the legend and the tooltip list them alike,
 // so a status is identified by position as well as by colour.
-const YEAR_STATUS = [
+// Unklar exists only through a saved reviewer record, so it is listed only when one exists.
+const YEAR_STATUS_ALL = [
     { key: 'open', label: 'offen' },
+    { key: 'unclear', label: 'unklar' },
     { key: 'exclude', label: 'ausgeschlossen' },
     { key: 'include', label: 'eingeschlossen' },
 ];
+let YEAR_STATUS = YEAR_STATUS_ALL;
 const YEAR_LABEL_MIN_PX = 36; // the width an axis label needs before neighbours collide
 let yearColumns = [];
 let yearCounts = {};
@@ -633,7 +638,7 @@ function workCount(n) {
     return n === 1 ? '1 Werk' : n + ' Werke';
 }
 
-// The expert decision, the screening mark of the stage track; no decision is open.
+// The human screening decision, the screening mark of the stage track; no decision is open.
 function yearStatus(paper) {
     return window.EC.korpusStages.decision(paper);
 }
@@ -680,6 +685,8 @@ function yearSwatch(key) {
 function initYearHistogram() {
     const box = document.getElementById('year-hist');
     if (!box) return;
+    const unclear = window.EC.korpusStages.hasUnclear();
+    YEAR_STATUS = YEAR_STATUS_ALL.filter(function(s) { return s.key !== 'unclear' || unclear; });
     const years = allPapers.map(yearKey).filter(function(k) { return k !== NO_YEAR; }).map(Number);
     yearColumns = [];
     if (years.length) {
@@ -762,7 +769,7 @@ function renderYearHistogram(papers) {
     const box = document.getElementById('year-hist');
     if (!box || !yearColumns.length) return;
     yearCounts = {};
-    yearColumns.forEach(function(key) { yearCounts[key] = { include: 0, exclude: 0, open: 0, total: 0 }; });
+    yearColumns.forEach(function(key) { yearCounts[key] = { include: 0, exclude: 0, unclear: 0, open: 0, total: 0 }; });
     papers.forEach(function(p) {
         const c = yearCounts[yearKey(p)];
         c[yearStatus(p)]++;
@@ -1112,7 +1119,7 @@ function applyStateToUI(s, ctx) {
             const anchor = /^\d{4}/.exec(yearSel);
             yearAnchor = anchor ? anchor[0] : null;
             stageSel = window.EC.korpusStages.parse(s.stage);
-            currentSort = s.sort || 'relevance';
+            currentSort = s.sort || DEFAULT_SORT;
             // A select silently ignores an unknown value, so assign directly rather than
             // probe with querySelector (a crafted sort= would otherwise be an invalid selector).
             const sortSel = document.getElementById('sort-by');
@@ -1167,7 +1174,7 @@ function serializeState(s) {
     if (s.hum && s.hum !== 'all') p.set('hum', s.hum);
     if (s.year && s.year !== 'all') p.set('year', s.year);
     if (s.stage && s.stage !== 'all') p.set('stage', s.stage);
-    if (s.sort && s.sort !== 'relevance') p.set('sort', s.sort);
+    if (s.sort && s.sort !== DEFAULT_SORT) p.set('sort', s.sort);
     if (s.cat && s.cat.length) p.set('cat', s.cat.join(','));
     if (VIEW_PARAMS[s.view]) VIEW_PARAMS[s.view].keys.forEach(function(key) { if (s.vp && s.vp[key]) p.set(key, s.vp[key]); });
     if (s.paper) p.set('paper', s.paper);
@@ -1196,7 +1203,7 @@ function deserializeState(hashStr) {
         hum: p.get('hum') || 'all',
         year: parseYearSel(p.get('year')),
         stage: window.EC.korpusStages.parse(p.get('stage')),
-        sort: p.get('sort') || 'relevance',
+        sort: p.get('sort') || DEFAULT_SORT,
         // Drop unknown category keys at this trust boundary; otherwise an every()
         // over a non-existent column would silently empty the corpus.
         cat: p.get('cat') ? p.get('cat').split(',').filter(function(c) { return CATEGORIES.indexOf(c) >= 0; }) : [],
@@ -1410,7 +1417,7 @@ function exportName(ext) {
     return 'fem_prompt_korpus' + (stageSel === 'all' ? '' : '_' + stageSel) + '.' + ext;
 }
 
-const STAGE_COLUMNS = ['Fulltext', 'Expert_Decision', 'Coded', 'Assertions', 'Assignee'];
+const STAGE_COLUMNS = ['Fulltext', 'Screening_Decision', 'Screening_Source', 'Coded', 'Assertions', 'Assignee'];
 
 function exportFilteredPapers() {
     const papers = korpusResult;

@@ -604,26 +604,86 @@ main {
     font-weight: 600;
 }
 
-/* The stage bar heads the table: Identifiziert to in Aussagen, left to right. */
+/* Two stage bars head the table, Screening and Auswertung. They carry no arrows, since
+   the stages are not nested and an arrow would read as a funnel. */
 .stage-bar {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: var(--space-xs) 0;
+    gap: var(--space-xs) var(--space-xl);
     padding-block-end: var(--space-sm);
     border-bottom: 1px solid var(--gray-200);
 }
 
-.stage-bar li {
+.stage-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs) var(--space-sm);
+    min-inline-size: 0;
+}
+
+.stage-group-h {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--gray-700);
+}
+
+.stage-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs);
+    min-inline-size: 0;
+}
+
+.stage-list li {
     display: flex;
     align-items: center;
 }
 
-.stage-bar li + li::before {
-    content: "\2192" / "";
-    padding-inline: 0.3rem;
+/* An Auswertung stage and its included subset form one unit; the subset is smaller and
+   unframed, so it reads as part of the stage rather than as a stage of its own. */
+.stage-item {
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    min-inline-size: 0;
+}
+
+.stage-sub {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.25rem;
+    padding: 0.15rem 0.35rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    background: none;
+    font: inherit;
+    font-size: var(--text-xs);
+    color: var(--gray-600);
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.stage-sub:hover:not(:disabled) {
+    border-color: var(--gray-300);
+}
+
+.stage-sub[aria-pressed="true"] {
+    border-color: var(--gray-800);
+    background: var(--gray-800);
+    color: white;
+}
+
+.stage-sub:disabled {
     color: var(--gray-400);
+    cursor: default;
+}
+
+.stage-sub:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
 }
 
 .stage-btn {
@@ -695,6 +755,13 @@ main {
 }
 
 .st-mark--dec.is-exclude::before { content: "\2212"; }
+
+.st-mark--dec.is-unclear {
+    border-color: var(--decision-unclear);
+    color: var(--gray-700);
+}
+
+.st-mark--dec.is-unclear::before { content: "?"; }
 
 .st-mark--dec.is-open {
     border-style: dashed;
@@ -974,6 +1041,7 @@ main {
 .year-seg--exclude { background: var(--decision-exclude); }
 /* Open matches the dashed screening mark of the stage track. */
 .year-seg--open { background: var(--gray-300); }
+.year-seg--unclear { background: var(--decision-unclear); }
 
 .year-col:hover:not(:disabled) .year-bar {
     border-bottom-color: var(--gray-500);

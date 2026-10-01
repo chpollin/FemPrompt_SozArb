@@ -4,7 +4,7 @@
 // exports, stage track) and reflow.
 import { chromium } from 'playwright';
 import { createServer } from 'node:http';
-import { existsSync, readFileSync, statSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, statSync } from 'node:fs';
 import { dirname, extname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -54,8 +54,12 @@ try {
   const external = [];
   page.on('pageerror', (error) => errors.push(String(error)));
   page.on('console', (message) => {
-    // A missing working file is the expected public state, not an error of the page.
-    if (message.type() === 'error' && !String(message.location().url).endsWith('/data/assertions_working.json')) errors.push(message.text());
+    // A missing working file, and a reviewer file nobody has saved yet, are expected
+    // states, not errors of the page.
+    const url = String(message.location().url);
+    const expectedAbsent = url.endsWith('/data/assertions_working.json') ||
+      (/\/data\/screening\/[a-z0-9_-]+\.json$/.test(url) && message.text().includes('404'));
+    if (message.type() === 'error' && !expectedAbsent) errors.push(message.text());
   });
   page.on('request', (request) => {
     const url = new URL(request.url());
@@ -488,6 +492,7 @@ try {
   const manifest = readOptional('fulltext_manifest.json');
   const assignment = readOptional('screening/assignment.json');
   const workOfRecord = Object.fromEntries(corpus.map((p) => [p.id, p.work_id]));
+  const corpusById = Object.fromEntries(corpus.map((p) => [p.id, p]));
   const codedWorks = new Set(Object.entries(readOptional('screening/ar2.json').decisions)
     .filter(([, d]) => d.analysis && d.analysis.fields && Object.keys(d.analysis.fields).length)
     .map(([id, d]) => workOfRecord[id] || d.work_id));
@@ -499,26 +504,58 @@ try {
     const work = workOfRecord[ref.record_id] || ref.work_id;
     (claimWorks[work] = claimWorks[work] || new Set()).add(id);
   }
-  const decisionOf = (p) => (p.benchmark.has_human && p.human && ['Include', 'Exclude'].includes(p.human.decision) ? p.human.decision : null);
+  // Saved human reviewer records of the assigned reviewers: the newest valid record of a
+  // known paper replaces the round-one expert decision, as PRISM's paperSubject orders it.
+  const reviewerRecords = (files) => {
+    const out = {};
+    for (const [key, file] of Object.entries(files)) {
+      if (!file || !/^femprompt-prisma-reviewer\/0\.[1-5]$/.test(file.schema || '') || file.actor === 'agent') continue;
+      for (const [pid, rec] of Object.entries(file.decisions || {})) {
+        const paper = corpusById[pid];
+        if (!paper || !rec || !['Include', 'Exclude', 'Unclear'].includes(rec.decision)) continue;
+        if (rec.work_id && rec.version_id && paper.work_id && paper.version_id &&
+          (rec.work_id !== paper.work_id || rec.version_id !== paper.version_id)) continue;
+        const ts = String(rec.ts || file.updated || '');
+        if (out[pid] && out[pid].ts >= ts) continue;
+        out[pid] = { decision: rec.decision, ts, reviewer: key };
+      }
+    }
+    return out;
+  };
+  const diskRecords = reviewerRecords(Object.fromEntries(assignment.reviewers.map((r) => [r.key, readOptional(`screening/${r.key}.json`)])));
   const textOf = (p) => (manifest ? Boolean(manifest[p.id] && manifest[p.id].src !== 'none') : null);
   const claimsOf = (p) => (claimWorks[p.work_id] ? claimWorks[p.work_id].size : 0);
-  const stageRules = {
-    all: () => true,
-    text: (p) => textOf(p) === true,
-    bewertet: (p) => decisionOf(p) !== null,
-    eingeschlossen: (p) => decisionOf(p) === 'Include',
-    kodiert: (p) => codedWorks.has(p.work_id),
-    aussagen: (p) => claimsOf(p) > 0,
-    'ohne-text': (p) => textOf(p) === false,
-    offen: (p) => decisionOf(p) === null,
-    'nicht-kodiert': (p) => decisionOf(p) === 'Include' && !codedWorks.has(p.work_id),
-    'ohne-aussage': (p) => decisionOf(p) === 'Include' && claimsOf(p) === 0,
+  const SCREENING_KEYS = ['all', ...(manifest ? ['text'] : []), 'bewertet', 'eingeschlossen'];
+  const AUSWERTUNG_KEYS = ['kodiert', 'aussagen'];
+  const SUB_KEYS = ['kodiert-eingeschlossen', 'aussagen-eingeschlossen'];
+  const rulesFor = (records) => {
+    const decisionOf = (p) => (records[p.id] ? records[p.id].decision
+      : p.benchmark.has_human && p.human && ['Include', 'Exclude'].includes(p.human.decision) ? p.human.decision : null);
+    const rules = {
+      all: () => true,
+      text: (p) => textOf(p) === true,
+      bewertet: (p) => decisionOf(p) !== null,
+      eingeschlossen: (p) => decisionOf(p) === 'Include',
+      kodiert: (p) => codedWorks.has(p.work_id),
+      aussagen: (p) => claimsOf(p) > 0,
+      'kodiert-eingeschlossen': (p) => codedWorks.has(p.work_id) && decisionOf(p) === 'Include',
+      'aussagen-eingeschlossen': (p) => claimsOf(p) > 0 && decisionOf(p) === 'Include',
+      'ohne-text': (p) => textOf(p) === false,
+      offen: (p) => decisionOf(p) === null,
+      'nicht-kodiert': (p) => decisionOf(p) === 'Include' && !codedWorks.has(p.work_id),
+      'ohne-aussage': (p) => decisionOf(p) === 'Include' && claimsOf(p) === 0,
+    };
+    if (!manifest) { delete rules.text; delete rules['ohne-text']; }
+    for (const r of assignment.reviewers) {
+      rules['offen-' + r.key] = (p) => decisionOf(p) === null && assignment.assignments[p.id] === r.key;
+    }
+    return { rules, decisionOf };
   };
-  if (!manifest) { delete stageRules.text; delete stageRules['ohne-text']; }
-  for (const r of assignment.reviewers) {
-    stageRules['offen-' + r.key] = (p) => decisionOf(p) === null && assignment.assignments[p.id] === r.key;
-  }
-  const expectedCounts = (papers) => Object.fromEntries(Object.entries(stageRules).map(([key, rule]) => [key, papers.filter(rule).length]));
+  const { rules: stageRules, decisionOf } = rulesFor(diskRecords);
+  const countsBy = (rules, papers) => Object.fromEntries(Object.entries(rules).map(([key, rule]) => [key, papers.filter(rule).length]));
+  const expectedCounts = (papers) => countsBy(stageRules, papers);
+  // The figures of this run, for the report.
+  console.log('stage counts', JSON.stringify(expectedCounts(corpus)));
   const shownCounts = () => page.$$eval('#view-korpus button[data-stage]', (buttons) =>
     Object.fromEntries(buttons.map((b) => [b.dataset.stage, Number(b.querySelector('.stage-n').textContent)])));
   const sameCounts = (a, b) => JSON.stringify(Object.keys(a).sort().map((k) => [k, a[k]])) === JSON.stringify(Object.keys(b).sort().map((k) => [k, b[k]]));
@@ -541,20 +578,68 @@ try {
     workbench.sideHolds && workbench.sticky === 'sticky' && workbench.side.right <= workbench.main.left && workbench.bar === 'stage-bar', JSON.stringify(workbench));
   check('at 1280x800 the table header and first row lie within the first viewport',
     workbench.head.top < 800 && workbench.row.bottom <= 800, JSON.stringify({ head: workbench.head.top, row: workbench.row.bottom }));
+  mkdirSync(resolve(here, 'out', 'companion'), { recursive: true });
+  // The hash navigation keeps the document, so focus and year tooltip of the earlier steps remain.
+  await page.mouse.move(1270, 790);
+  await page.evaluate(() => document.activeElement && document.activeElement.blur());
+  await page.keyboard.press('Escape');
+  await page.screenshot({ path: resolve(here, 'out', 'companion', 'korpus-1280x800.png') });
   check('sidebar labels are set in normal case', workbench.labels.length >= 5 && workbench.labels.every((t) => t === 'none'), workbench.labels.join());
   check('the stage bar and work lists count the stages recomputed from the data',
     sameCounts(await shownCounts(), expectedCounts(corpus)), JSON.stringify({ shown: await shownCounts(), expected: expectedCounts(corpus) }));
-  check('the stage bar runs from Identifiziert to in Aussagen', (await page.$$eval('#stage-bar button', (b) => b.map((x) => x.dataset.stage))).join() ===
-    ['all', ...(manifest ? ['text'] : []), 'bewertet', 'eingeschlossen', 'kodiert', 'aussagen'].join());
+  const bars = await page.$$eval('#stage-bar .stage-group', (groups) => groups.map((g) => ({
+    label: document.getElementById(g.getAttribute('aria-labelledby')).textContent,
+    main: [...g.querySelectorAll('.stage-btn')].map((b) => b.dataset.stage),
+    sub: [...g.querySelectorAll('.stage-sub')].map((b) => b.dataset.stage),
+    arrows: [...g.querySelectorAll('li')].some((li) => getComputedStyle(li, '::before').content !== 'none'),
+  })));
+  check('two stage bars, Screening and Auswertung, without funnel arrows',
+    bars.length === 2 && bars[0].label === 'Screening' && bars[0].main.join() === SCREENING_KEYS.join() && bars[0].sub.length === 0 &&
+    bars[1].label === 'Auswertung' && bars[1].main.join() === AUSWERTUNG_KEYS.join() && bars[1].sub.join() === SUB_KEYS.join() &&
+    bars.every((b) => !b.arrows), JSON.stringify(bars));
+  const subForm = await page.evaluate(() => {
+    const main = document.querySelector('#stage-bar .stage-btn[data-stage="kodiert"]');
+    const sub = document.querySelector('#stage-bar .stage-sub[data-stage="kodiert-eingeschlossen"]');
+    return { text: sub.textContent.trim(), label: sub.getAttribute('aria-label'),
+      mainSize: parseFloat(getComputedStyle(main).fontSize), subSize: parseFloat(getComputedStyle(sub).fontSize),
+      subBorder: getComputedStyle(sub).borderTopColor, mainBorder: getComputedStyle(main).borderTopColor,
+      sameItem: main.parentElement === sub.parentElement };
+  });
+  const kodEin = expectedCounts(corpus)['kodiert-eingeschlossen'];
+  check('the included subset of an Auswertung stage is subordinate in size and wording',
+    subForm.sameItem && subForm.text === `davon ${kodEin} eingeschlossen` && subForm.subSize < subForm.mainSize &&
+    subForm.label === `kodiert, davon eingeschlossen, ${werke(kodEin)}`, JSON.stringify(subForm));
+
+  // Default sort "nach Stand": the furthest work first, then the newer year.
+  const depthOf = (p) => (textOf(p) ? 1 : 0) + (decisionOf(p) ? 1 : 0) + (decisionOf(p) === 'Include' ? 1 : 0) +
+    (codedWorks.has(p.work_id) ? 1 : 0) + (claimsOf(p) ? 1 : 0);
+  const shownOrder = await page.$$eval('#papers-grid tr[data-id]', (rows) => rows.map((row) => row.dataset.id));
+  const keyOf = (p) => [depthOf(p), parseInt(p.year, 10) || 0];
+  const ordered = shownOrder.every((id, i) => {
+    if (!i) return true;
+    const [d0, y0] = keyOf(corpusById[shownOrder[i - 1]]);
+    const [d1, y1] = keyOf(corpusById[id]);
+    return d0 > d1 || (d0 === d1 && y0 >= y1);
+  });
+  const maxDepth = Math.max(...corpus.map(depthOf));
+  check('the table opens sorted nach Stand, the furthest works first',
+    await page.locator('#sort-by').inputValue() === 'stage' && !hashParams().has('sort') && ordered &&
+    depthOf(corpusById[shownOrder[0]]) === maxDepth &&
+    (await page.locator('#sort-by option').first().textContent()) === 'nach Stand', shownOrder.slice(0, 5).join());
+  await page.locator('#sort-by').selectOption('relevance');
+  check('another sort is written to the hash', hashParams().get('sort') === 'relevance');
+  await page.locator('#sort-by').selectOption('stage');
+  check('the default sort leaves the hash clean', !hashParams().has('sort'));
+
   await page.locator('#filter-decision').selectOption('Include');
   const llmIncluded = corpus.filter((p) => p.llm.decision === 'Include');
   check('the stage counts follow the other filters', sameCounts(await shownCounts(), expectedCounts(llmIncluded)));
   await page.locator('#filter-decision').selectOption('all');
 
-  const gapKeys = Object.keys(stageRules).filter((key) => !['all', 'text', 'bewertet', 'eingeschlossen', 'kodiert', 'aussagen'].includes(key));
+  const gapKeys = Object.keys(stageRules).filter((key) => ![...SCREENING_KEYS, 'text', ...AUSWERTUNG_KEYS, ...SUB_KEYS].includes(key));
   check('the work lists offer every gap and the open split by reviewer',
     (await page.$$eval('#gap-list button', (b) => b.map((x) => x.dataset.stage))).sort().join() === gapKeys.sort().join());
-  for (const key of [...gapKeys, 'kodiert', 'aussagen']) {
+  for (const key of [...gapKeys, ...AUSWERTUNG_KEYS, ...SUB_KEYS]) {
     await page.locator(`#view-korpus button[data-stage="${key}"]`).click();
     const ids = await page.$$eval('#papers-grid tr[data-id]', (rows) => rows.map((row) => row.dataset.id));
     const expectedIds = corpus.filter(stageRules[key]);
@@ -575,7 +660,7 @@ try {
   const csvRows = csvText.split('\n').filter(Boolean);
   check('the CSV export writes the filtered work list with its stage columns',
     csvDownload.suggestedFilename() === `fem_prompt_korpus_${exportKey}.csv` && csvRows.length === exportN + 1 &&
-    csvRows[0].includes('"Coded"') && csvRows[0].includes('"Assertions"'), `${csvRows.length - 1}/${exportN}`);
+    csvRows[0].includes('"Coded"') && csvRows[0].includes('"Assertions"') && csvRows[0].includes('"Screening_Source"'), `${csvRows.length - 1}/${exportN}`);
   const docsOf = new Set(corpus.filter(stageRules[exportKey]).filter((p) => p.knowledge_doc).map((p) => p.knowledge_doc));
   const [zipDownload] = await Promise.all([page.waitForEvent('download'), page.locator('.export-button', { hasText: 'Vault' }).click()]);
   const zip = readFileSync(await zipDownload.path());
@@ -604,6 +689,74 @@ try {
   })));
   check('the decision mark differs in form, not only in colour',
     forms['is-include'] === '"+" solid' && forms['is-exclude'] === '"−" solid' && forms['is-open'] === 'none dashed', JSON.stringify(forms));
+
+  // Saved reviewer records count as bewertet and replace the round-one decision, the
+  // newest record winning. The fixture files are served by route interception, so
+  // docs/data stays untouched; invalid records must be skipped.
+  {
+    const [revA, revB] = assignment.reviewers.map((r) => r.key);
+    const used = new Set();
+    const pick = (rule) => { const p = corpus.find((x) => !used.has(x.id) && rule(x)); if (p) used.add(p.id); return p; };
+    const codedOpen = pick((p) => codedWorks.has(p.work_id) && decisionOf(p) === null);
+    const openA = pick((p) => decisionOf(p) === null && assignment.assignments[p.id] === revA);
+    const unclearA = pick((p) => decisionOf(p) === null && assignment.assignments[p.id] === revA);
+    const badDecision = pick((p) => decisionOf(p) === null && assignment.assignments[p.id] === revA);
+    const badVersion = pick((p) => decisionOf(p) === null && assignment.assignments[p.id] === revA && p.version_id);
+    const expertExclude = pick((p) => decisionOf(p) === 'Exclude' && !codedWorks.has(p.work_id));
+    const contested = pick((p) => decisionOf(p) === 'Include');
+    const bind = (p) => ({ work_id: p.work_id, version_id: p.version_id });
+    const fileA = { schema: 'femprompt-prisma-reviewer/0.5', reviewer: revA, actor: 'human', updated: '2026-10-02T12:00:00.000Z', decisions: {
+      [codedOpen.id]: { ...bind(codedOpen), decision: 'Include', ts: '2026-10-02T10:00:00.000Z', actor: 'human' },
+      [openA.id]: { ...bind(openA), decision: 'Include', ts: '2026-10-02T10:01:00.000Z', actor: 'human' },
+      [unclearA.id]: { ...bind(unclearA), decision: 'Unclear', ts: '2026-10-02T10:02:00.000Z', actor: 'human' },
+      [badDecision.id]: { ...bind(badDecision), decision: 'Maybe', ts: '2026-10-02T10:03:00.000Z', actor: 'human' },
+      [badVersion.id]: { work_id: badVersion.work_id, version_id: 'version:not-this-one', decision: 'Include', ts: '2026-10-02T10:04:00.000Z', actor: 'human' },
+      [expertExclude.id]: { ...bind(expertExclude), decision: 'Include', ts: '2026-10-02T10:05:00.000Z', actor: 'human' },
+      [contested.id]: { ...bind(contested), decision: 'Exclude', ts: '2026-10-02T10:06:00.000Z', actor: 'human' },
+      'no-such-paper': { decision: 'Include', ts: '2026-10-02T10:07:00.000Z', actor: 'human' },
+    } };
+    const fileB = { schema: 'femprompt-prisma-reviewer/0.5', reviewer: revB, actor: 'human', updated: '2026-10-03T12:00:00.000Z', decisions: {
+      [contested.id]: { ...bind(contested), decision: 'Include', ts: '2026-10-03T09:00:00.000Z', actor: 'human' },
+      [openA.id]: { ...bind(openA), decision: 'Exclude', ts: '2026-10-01T09:00:00.000Z', actor: 'human' },
+    } };
+    const fixture = { [revA]: fileA, [revB]: fileB };
+    const fixtureRecords = reviewerRecords(fixture);
+    const { rules: fixtureRules } = rulesFor(fixtureRecords);
+    const fixtureCounts = countsBy(fixtureRules, corpus);
+    console.log('stage counts with reviewer fixture', JSON.stringify(fixtureCounts));
+    const reviewed = await browser.newPage({ viewport: { width: 1280, height: 800 }, locale: 'de-AT' });
+    await reviewed.route(/\/data\/screening\/[a-z0-9_-]+\.json$/, (route) => {
+      const key = new URL(route.request().url()).pathname.split('/').pop().replace(/\.json$/, '');
+      return fixture[key] ? route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(fixture[key]) }) : route.fallback();
+    });
+    await reviewed.goto(`${base}/index.html#view=korpus`, { waitUntil: 'networkidle' });
+    await reviewed.waitForSelector('#stage-bar button');
+    const shown = await reviewed.$$eval('#view-korpus button[data-stage]', (buttons) =>
+      Object.fromEntries(buttons.map((b) => [b.dataset.stage, Number(b.querySelector('.stage-n').textContent)])));
+    check('saved reviewer records count as bewertet, recomputed with the fixture',
+      sameCounts(shown, fixtureCounts) && fixtureCounts.bewertet === expectedCounts(corpus).bewertet + 3 &&
+      fixtureCounts['kodiert-eingeschlossen'] === expectedCounts(corpus)['kodiert-eingeschlossen'] + 1,
+      JSON.stringify({ shown, fixtureCounts }));
+    const decided = await reviewed.evaluate((ids) => ids.map((id) => window.EC.korpusStages.decision({ id, benchmark: {} })),
+      [codedOpen.id, openA.id, unclearA.id, badDecision.id, badVersion.id, expertExclude.id, contested.id]);
+    check('a reviewer record overrides the expert decision, the newer record wins, invalid records are skipped',
+      decided.join() === 'include,include,unclear,open,open,include,include', decided.join());
+    const unclearForm = await reviewed.evaluate((paper) => {
+      const box = document.createElement('div');
+      box.innerHTML = window.EC.korpusStages.trackHtml(paper);
+      document.body.appendChild(box);
+      const node = box.querySelector('.st-mark--dec');
+      const out = [node.className, node.getAttribute('aria-label'), getComputedStyle(node, '::before').content];
+      box.remove();
+      return out;
+    }, unclearA);
+    check('an Unclear record shows as ? with its accessible name',
+      unclearForm[0].includes('is-unclear') && unclearForm[1] === 'Screening: unklar' && unclearForm[2] === '"?"', JSON.stringify(unclearForm));
+    await reviewed.locator('#year-hist .year-col:not([disabled])').first().hover();
+    check('with an Unclear record the year tooltip lists unklar as a status',
+      (await reviewed.locator('#year-tip li').allTextContents()).some((t) => t.startsWith('unklar')));
+    await reviewed.close();
+  }
 
   const reviewer = assignment.reviewers[0].key;
   const stageHash = `#view=korpus&stage=offen-${reviewer}&year=2025`;
