@@ -230,8 +230,10 @@ export function validateManifest(run, { path = '<memory>', allowLegacy = true } 
       errors.push(`record_ids for ${paper?.paper_id || '<paper>'} must be non-empty and unique`);
     if (!recordIds.includes(paper?.paper_id))
       errors.push(`record_ids for ${paper?.paper_id || '<paper>'} must include the representative paper_id`);
-    if (paper?.human_coverage !== false)
-      errors.push(`human_coverage for ${paper?.paper_id || '<paper>'} must be false`);
+    // From schema 1.4 the analysis fields are coded by agent tracks only, so a run may
+    // code works that human screening already covers and records that coverage.
+    if (harnessRun ? typeof paper?.human_coverage !== 'boolean' : paper?.human_coverage !== false)
+      errors.push(`human_coverage for ${paper?.paper_id || '<paper>'} must be ${harnessRun ? 'recorded' : 'false'}`);
     if (paper?.ai_agent_review_coverage !== false)
       errors.push(`ai_agent_review_coverage for ${paper?.paper_id || '<paper>'} must be false`);
     requireString(paper?.source?.path, `source path for ${paper?.paper_id || '<paper>'}`, errors);

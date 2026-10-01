@@ -190,8 +190,17 @@ incompleteSource.tracks[1].source_assignments = [];
 assert(!validateManifest(incompleteSource).ok, 'incomplete source assignment was accepted');
 
 const previouslyCoveredWork = validManifest();
+previouslyCoveredWork.schema = 'femprompt-prisma-agent-run/1.3';
+delete previouslyCoveredWork.codebook;
+previouslyCoveredWork.model = { provider: 'OpenAI', model: 'gpt-example', model_version: '2026-08-23' };
 previouslyCoveredWork.assignment.papers[0].human_coverage = true;
-assert(!validateManifest(previouslyCoveredWork).ok, 'work with human coverage was accepted');
+assert(!validateManifest(previouslyCoveredWork).ok, 'historical run with human coverage was accepted');
+
+const analysisOfScreenedWork = validManifest();
+analysisOfScreenedWork.assignment.papers[0].human_coverage = true;
+assert(validateManifest(analysisOfScreenedWork).ok, 'analysis coding of a human-screened work was rejected');
+delete analysisOfScreenedWork.assignment.papers[0].human_coverage;
+assert(!validateManifest(analysisOfScreenedWork).ok, 'unrecorded human coverage was accepted');
 
 const missingRepresentativeAlias = validManifest();
 missingRepresentativeAlias.assignment.papers[0].record_ids = ['ALIAS-1'];
