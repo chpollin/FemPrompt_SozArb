@@ -117,7 +117,7 @@ Execute newly source-ready works under [[update-protocol#Agent-assisted completi
 - Convert source-linked findings into atomic Assertions.
 - Build the literature report and the paper synthesis over the shared Assertion layer.
 
-Exploratory topics become scholarly findings only through interpretation against the source-linked knowledge structure. The coding vocabularies and research sub-questions remain governed by [[update-protocol]].
+Exploratory topics become scholarly findings only through interpretation against the source-linked knowledge structure. The coding vocabularies and research sub-questions remain governed by [[update-protocol]]. The methodological frame, analysis tiers and validation design are defined in [[analysis-methods]].
 
 ### Domain-expert verification
 
