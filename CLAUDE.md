@@ -1,6 +1,6 @@
 # Working rules for FemPrompt SozArb
 
-FemPrompt is a literature review on feminist AI literacies in social work. Project identity and research questions live in [knowledge/project.md](knowledge/project.md), and [knowledge/INDEX.md](knowledge/INDEX.md) owns the glossary and knowledge navigation.
+FemPrompt is a literature review on how social work professionals can use large language models responsibly for their tasks, framed by feminist AI literacies. Project identity and research questions live in [knowledge/project.md](knowledge/project.md), and [knowledge/INDEX.md](knowledge/INDEX.md) owns the glossary and knowledge navigation.
 
 ## Session entry
 
@@ -13,7 +13,8 @@ In this project, `knowledge/handoff.md` is the rolling current-state and continu
 | Work | Canonical entry |
 |---|---|
 | Review method, pipeline and script usage | [methods](knowledge/methods.md) |
-| PRISM requirements, architecture decisions and design system | [specification](knowledge/specification.md) |
+| Analysis frame and the answer path per research question | [analysis methods](knowledge/analysis-methods.md) |
+| PRISM, public result site, architecture decisions and design system | [specification](knowledge/specification.md) |
 | Corpus, Work-Version identity, schemas and local source storage | [data](knowledge/data.md) |
 | Authority, corrections, rights and publication | [governance](knowledge/governance.md) |
 | Setup, local preview, build and technical checks | [testing](knowledge/testing.md) |
@@ -36,8 +37,9 @@ In this project, `knowledge/handoff.md` is the rolling current-state and continu
 
 - Read the actual callers and data flow before changing shared behavior. Preserve existing files and modules where they serve the task.
 - Keep the frontend as vanilla JavaScript without a frontend bundler or runtime framework. The Python build produces data projections and the result site. These are separate parts of the architecture.
-- Use IIFE modules through `window.EC`, the existing `pt-*` design tokens and pinned local assets under `docs/vendor/`. System fonts avoid remote font requests. Apply the detailed [interface requirements](knowledge/specification.md).
-- Head, header, navigation and footer of every page in `docs/` are propagated by `src/publish/build_pages.py`. Edit the generator, never the markup. PRISM carries the slim header and no footer (ADR-039).
+- Use IIFE modules through `window.EC`, the existing design tokens (`pt-*` in PRISM, `docs/css/tokens.css` for the result site and the working application) and pinned local assets under `docs/vendor/`. System fonts avoid remote font requests. Apply the detailed [interface requirements](knowledge/specification.md).
+- Head, header, navigation and footer of the pages listed in `src/publish/build_pages.py` are propagated by that generator. Edit the generator, never the markup. PRISM carries the slim header and no footer (ADR-039). `docs/release.html`, the source of the public result site, carries its own chrome.
+- The public result site follows the display rules in [specification](knowledge/specification.md#public-evidence-companion). A cell or edge states joint coding in the same Work, never a relation, the coded-Works denominator stands above every result, a work-level status is never attributed to one technique or stage, and recommendations are reported as those of their source.
 - PRISM shows the round-one expert decision and the round-one LLM proposal as labelled references in human sessions. The takeover sets category levels only, never evidence, and agent runs stay reference-blind (ADR-038).
 - The optional Knowledge Chat retains its explicit-request and tab-scoped key contract in [specification](knowledge/specification.md). Never commit credentials or contact the provider before the user requests a response.
 - Use `pathlib.Path` and UTF-8 for Python. Preserve the existing script-pipeline layout for bounded edits. Use the established long-path and canonical-text-hash helpers where required. Truncate generated title components to 100 characters for Windows path compatibility.
