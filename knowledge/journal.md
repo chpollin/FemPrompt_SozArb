@@ -24,6 +24,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: SQ tables follow the current sub-questions
+
+The earlier regrouping had moved the SQ tables to the new numbering but left two assignments of [[analysis-methods#Answering the research questions]] out. Populations now serve SQ2 as well as SQ1, and the prompting role serves SQ1 through the value Recommended_Practice besides SQ3 and SQ4. A matrix of populations by prompting role joins the evidence-and-gap tables, as the Tier 1 plan names it. No count changed, and the answer pages of the result site already used this assignment. The reviewed Assertion on reasoning-guided fine-tuning for bias mitigation still carries the earlier numbering, and its remapping stays an editorial decision because a change would invalidate its review receipt ([[research-vault#Assertions]]). The reviewed Assertions on chain-of-thought prompting, on prompting effects across models and on AI literacy across core competencies carry no sub-question field and therefore appear on no answer page.
+
 ### 2026-10-01: Substantive questions first, corrected projections and a question-led public companion
 
 The operator made the substantive question primary. The review now asks how social work professionals can use LLMs for their tasks responsibly, constructively and productively, with four sub-questions on use, risks, practices and competences, and the methodological question became the second question of the paper ([[project#Research questions]]). A critical review of the earlier questions found them sound as coding instructions but without a substantive frame, and found that per-work field lists support a map of joint coding but not a mapping of techniques to evidence status. The proposed codebook amendment v1.4 follows from that finding and awaits the operator ([[update-protocol]], [[plan#Open decisions]]).

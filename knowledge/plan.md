@@ -61,7 +61,6 @@ The sub-questions are answered in the following order. Steps that depend on an o
 
 ### Analysis tool follow-ups
 
-- Relabel the SQ tables to the current sub-questions in `src/analysis/build_completion_package.py`. `sq-analysis-tables.csv` still assigns `AN_Population` to SQ3 and the prompt techniques and mitigation status to SQ1, and `sq-association-tables.csv` labels its matrices by the same earlier numbering. The `serves` entries of the analysis fields in `assessment/categories.yaml` use the earlier numbering as well and change together with the generators. The assignment of fields follows the table in [[analysis-methods#Answering the research questions]]. After regeneration, the SQ1 chapter drops its note on the old labels.
 - Name the new completion-package blocks for field states, SQ associations, the round-one selection check and the agent-track diagnostics in the completion-package schema.
 - Build the Tier 1 analyses that [[analysis-methods#Implementation state]] names as not yet implemented.
 - Record PRISMA-ScR in [[standards]] as an applied reporting standard if decision 5 adds it for the mapping layer ([[standards#Open reporting decision on PRISMA-ScR]]).
