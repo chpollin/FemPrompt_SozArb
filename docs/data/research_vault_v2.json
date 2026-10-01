@@ -1,7 +1,7 @@
 {
   "meta": {
     "fulltext_projection_state": "complete",
-    "source_fingerprint": "sha256:4c85343a2285f625dc953712f6ec1ce2bc333490c609580be52e0d3f9752eee8",
+    "source_fingerprint": "sha256:43621a9de66b94fe6c623d01941880c137384b9518d49592636db6704585b135",
     "total_papers": 463,
     "unique_works": 361,
     "knowledge_linked_records": 269,
@@ -41,11 +41,11 @@
       "agent_yes_rate": 43.3
     },
     "Generative_KI": {
-      "kappa": 0.5376,
-      "agreement_pct": 75.8,
-      "n": 236,
-      "human_yes_rate": 57.2,
-      "agent_yes_rate": 38.1
+      "kappa": 0.546,
+      "agreement_pct": 76.5,
+      "n": 234,
+      "human_yes_rate": 57.7,
+      "agent_yes_rate": 38.5
     },
     "Prompting": {
       "kappa": 0.5331,
@@ -62,11 +62,11 @@
       "agent_yes_rate": 51.9
     },
     "Soziale_Arbeit": {
-      "kappa": 0.8163,
-      "agreement_pct": 93.2,
-      "n": 235,
-      "human_yes_rate": 23.8,
-      "agent_yes_rate": 24.7
+      "kappa": 0.825,
+      "agreement_pct": 93.6,
+      "n": 234,
+      "human_yes_rate": 23.9,
+      "agent_yes_rate": 24.4
     },
     "Bias_Ungleichheit": {
       "kappa": 0.4386,
@@ -7030,8 +7030,7 @@
         "severity": "medium",
         "affected_categories": [
           "AI_Literacies",
-          "Prompting",
-          "Soziale_Arbeit"
+          "Prompting"
         ]
       },
       "zotero_library": {

@@ -34,14 +34,14 @@
       "agent_yes_rate": 0.4328
     },
     "Generative_KI": {
-      "n": 236,
-      "agreement": 0.7585,
-      "kappa": 0.5376,
+      "n": 234,
+      "agreement": 0.765,
+      "kappa": 0.546,
       "kappa_interpretation": "moderate",
       "human_yes_count": 135,
-      "human_yes_rate": 0.572,
+      "human_yes_rate": 0.5769,
       "agent_yes_count": 90,
-      "agent_yes_rate": 0.3814
+      "agent_yes_rate": 0.3846
     },
     "Prompting": {
       "n": 236,
@@ -64,14 +64,14 @@
       "agent_yes_rate": 0.5191
     },
     "Soziale_Arbeit": {
-      "n": 235,
-      "agreement": 0.9319,
-      "kappa": 0.8163,
+      "n": 234,
+      "agreement": 0.9359,
+      "kappa": 0.825,
       "kappa_interpretation": "almost perfect",
       "human_yes_count": 56,
-      "human_yes_rate": 0.2383,
-      "agent_yes_count": 58,
-      "agent_yes_rate": 0.2468
+      "human_yes_rate": 0.2393,
+      "agent_yes_count": 57,
+      "agent_yes_rate": 0.2436
     },
     "Bias_Ungleichheit": {
       "n": 234,
@@ -125,7 +125,7 @@
     }
   },
   "summary": {
-    "mean_category_agreement": 0.78,
+    "mean_category_agreement": 0.781,
     "best_agreement_category": "Soziale_Arbeit",
     "worst_agreement_category": "Gender"
   }

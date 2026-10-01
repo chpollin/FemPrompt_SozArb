@@ -46282,72 +46282,6 @@
       }
     },
     {
-      "paper_id": "TNLGELEQ",
-      "title": "ReflectAI: Design and evaluation of an AI coach to support public servants' self-reflection",
-      "author_year": "Näscher (2025)",
-      "human_decision": "Exclude",
-      "llm_decision": "Include",
-      "disagreement_type": "Human_Exclude_Agent_Include",
-      "severity": 2,
-      "affected_categories": "AI_Literacies, Prompting, Soziale_Arbeit",
-      "n_affected": 3,
-      "llm_reasoning": "Paper erfüllt TECHNIK- und SOZIAL-Kriterien: (1) Generative_KI (LLM-basierter AI Coach), Prompting (strukturiertes Prompting für reflektive Praxis), AI_Literacies (Entwicklung von Self-Reflection-Kompetenzen). (2) Soziale_Arbeit (öffentliche Verwaltung, human services context, Kompetenzentwicklung). Empirische User Study mit klarem Fokus auf KI-gestützte Professionalisierung im sozialen Sektor.",
-      "pattern": null,
-      "justification": null,
-      "category_comparison": {
-        "AI_Literacies": {
-          "human": "Nein",
-          "llm": "Ja",
-          "divergent": true
-        },
-        "Generative_KI": {
-          "human": "Ja",
-          "llm": "Ja",
-          "divergent": false
-        },
-        "Prompting": {
-          "human": "Nein",
-          "llm": "Ja",
-          "divergent": true
-        },
-        "KI_Sonstige": {
-          "human": "Nein",
-          "llm": "Nein",
-          "divergent": false
-        },
-        "Soziale_Arbeit": {
-          "human": null,
-          "llm": "Ja",
-          "divergent": false
-        },
-        "Bias_Ungleichheit": {
-          "human": "Nein",
-          "llm": "Nein",
-          "divergent": false
-        },
-        "Gender": {
-          "human": "Nein",
-          "llm": "Nein",
-          "divergent": false
-        },
-        "Diversitaet": {
-          "human": "Nein",
-          "llm": "Nein",
-          "divergent": false
-        },
-        "Feministisch": {
-          "human": "Nein",
-          "llm": "Nein",
-          "divergent": false
-        },
-        "Fairness": {
-          "human": "Nein",
-          "llm": "Nein",
-          "divergent": false
-        }
-      }
-    },
-    {
       "paper_id": "VICS443I",
       "title": "AI Creates the Message: Integrating AI Language Learning Models into Social Work Education and Practice",
       "author_year": "Singer (2023)",
@@ -47796,6 +47730,72 @@
           "human": "Ja",
           "llm": "Nein",
           "divergent": true
+        }
+      }
+    },
+    {
+      "paper_id": "TNLGELEQ",
+      "title": "ReflectAI: Design and evaluation of an AI coach to support public servants' self-reflection",
+      "author_year": "Näscher (2025)",
+      "human_decision": "Exclude",
+      "llm_decision": "Include",
+      "disagreement_type": "Human_Exclude_Agent_Include",
+      "severity": 2,
+      "affected_categories": "AI_Literacies, Prompting",
+      "n_affected": 2,
+      "llm_reasoning": "Paper erfüllt TECHNIK- und SOZIAL-Kriterien: (1) Generative_KI (LLM-basierter AI Coach), Prompting (strukturiertes Prompting für reflektive Praxis), AI_Literacies (Entwicklung von Self-Reflection-Kompetenzen). (2) Soziale_Arbeit (öffentliche Verwaltung, human services context, Kompetenzentwicklung). Empirische User Study mit klarem Fokus auf KI-gestützte Professionalisierung im sozialen Sektor.",
+      "pattern": null,
+      "justification": null,
+      "category_comparison": {
+        "AI_Literacies": {
+          "human": "Nein",
+          "llm": "Ja",
+          "divergent": true
+        },
+        "Generative_KI": {
+          "human": "Ja",
+          "llm": "Ja",
+          "divergent": false
+        },
+        "Prompting": {
+          "human": "Nein",
+          "llm": "Ja",
+          "divergent": true
+        },
+        "KI_Sonstige": {
+          "human": "Nein",
+          "llm": "Nein",
+          "divergent": false
+        },
+        "Soziale_Arbeit": {
+          "human": null,
+          "llm": "Ja",
+          "divergent": false
+        },
+        "Bias_Ungleichheit": {
+          "human": "Nein",
+          "llm": "Nein",
+          "divergent": false
+        },
+        "Gender": {
+          "human": "Nein",
+          "llm": "Nein",
+          "divergent": false
+        },
+        "Diversitaet": {
+          "human": "Nein",
+          "llm": "Nein",
+          "divergent": false
+        },
+        "Feministisch": {
+          "human": "Nein",
+          "llm": "Nein",
+          "divergent": false
+        },
+        "Fairness": {
+          "human": "Nein",
+          "llm": "Nein",
+          "divergent": false
         }
       }
     },
@@ -52373,7 +52373,7 @@
     }
   ],
   "meta": {
-    "source_fingerprint": "sha256:4c85343a2285f625dc953712f6ec1ce2bc333490c609580be52e0d3f9752eee8",
+    "source_fingerprint": "sha256:43621a9de66b94fe6c623d01941880c137384b9518d49592636db6704585b135",
     "total_papers": 463,
     "corpus_record_total": 463,
     "corpus_work_total": 361,
@@ -52450,10 +52450,10 @@
         "rate_unit": "percent"
       },
       "Generative_KI": {
-        "human_yes_rate": 57.2,
-        "agent_yes_rate": 38.1,
-        "kappa": 0.538,
-        "n": 236,
+        "human_yes_rate": 57.7,
+        "agent_yes_rate": 38.5,
+        "kappa": 0.546,
+        "n": 234,
         "denominator_name": "benchmark_category_paired_records",
         "rate_unit": "percent"
       },
@@ -52474,10 +52474,10 @@
         "rate_unit": "percent"
       },
       "Soziale_Arbeit": {
-        "human_yes_rate": 23.8,
-        "agent_yes_rate": 24.7,
-        "kappa": 0.816,
-        "n": 235,
+        "human_yes_rate": 23.9,
+        "agent_yes_rate": 24.4,
+        "kappa": 0.825,
+        "n": 234,
         "denominator_name": "benchmark_category_paired_records",
         "rate_unit": "percent"
       },

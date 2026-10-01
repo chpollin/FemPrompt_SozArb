@@ -34,14 +34,14 @@
       "agent_yes_rate": 0.3992
     },
     "Generative_KI": {
-      "n": 236,
-      "agreement": 0.8263,
-      "kappa": 0.6598,
+      "n": 234,
+      "agreement": 0.8333,
+      "kappa": 0.6706,
       "kappa_interpretation": "substantial",
       "human_yes_count": 135,
-      "human_yes_rate": 0.572,
+      "human_yes_rate": 0.5769,
       "agent_yes_count": 108,
-      "agent_yes_rate": 0.4576
+      "agent_yes_rate": 0.4615
     },
     "Prompting": {
       "n": 236,
@@ -64,14 +64,14 @@
       "agent_yes_rate": 0.6426
     },
     "Soziale_Arbeit": {
-      "n": 235,
-      "agreement": 0.9234,
-      "kappa": 0.7946,
-      "kappa_interpretation": "substantial",
+      "n": 234,
+      "agreement": 0.9274,
+      "kappa": 0.8041,
+      "kappa_interpretation": "almost perfect",
       "human_yes_count": 56,
-      "human_yes_rate": 0.2383,
+      "human_yes_rate": 0.2393,
       "agent_yes_count": 59,
-      "agent_yes_rate": 0.2511
+      "agent_yes_rate": 0.2521
     },
     "Bias_Ungleichheit": {
       "n": 234,
@@ -125,7 +125,7 @@
     }
   },
   "summary": {
-    "mean_category_agreement": 0.8034,
+    "mean_category_agreement": 0.8045,
     "best_agreement_category": "Feministisch",
     "worst_agreement_category": "Fairness"
   }

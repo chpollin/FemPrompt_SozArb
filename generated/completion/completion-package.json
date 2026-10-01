@@ -25145,7 +25145,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:f93b5573926f0a696ddcd7a29bd13e237d3fe38f6345e70f6b69fbfafc35f6ef",
+  "source_fingerprint": "sha256:507be2d3b8a89224c1f345cfd1ba44afaf76a7f8f9c7c6ed7dc061aed381d0d1",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -25369,7 +25369,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "2e0d1f1b757dee75ffee6be1693bbb2bc0af9774112490747ee06267cc29889c"
+      "sha256": "7c0d00cf927c072f91b3b7142486f431736a460c2a251c6d26d85cdaf47f39c3"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -26173,7 +26173,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "3bd1d8de5cf11d81da0c330c511325109f30e94f1bd9d50778a6d3c65e4e57f9"
+      "sha256": "a1d2963ccd70810695a463d4e7cde0792f4dfd2e70e5831542304cc0572213af"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -28089,7 +28089,7 @@
     },
     {
       "path": "src/replay/replay_round1.py",
-      "sha256": "2a153bdb2a62e32e3991c26a4577798c488fdc16fbc035b367b53a04f9f02bf9"
+      "sha256": "858003f561176884e6c90b814c8e4d18e9f22f51e6cbd649fa2efeacd5e2be82"
     },
     {
       "path": "tests/review-cases/agent-runs/agent-v03-10-20260822/run.json",
