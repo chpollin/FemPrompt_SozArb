@@ -118,7 +118,7 @@ def subpage_header(active: str, extra: str = "") -> str:
     extra_block = f"\n            {extra}" if extra else ""
     brand = """<a href="index.html" class="brand-link">
                         <h1>Feministische AI Literacies</h1>
-                        <p class="subtitle">Systematischer Review &middot; Interaktive Evidenz</p>
+                        <p class="subtitle">Systematischer Review mit interaktiver Evidenz</p>
                     </a>
                     <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>"""
     return f"""<header>
@@ -184,7 +184,7 @@ PAGES = {
     },
     "prisma.html": {
         "head": head(
-            "PRISMA Screening Tool &middot; Feministische AI Literacies",
+            "PRISM -- Feministische AI Literacies",
             "PRISMA-Screening-Werkzeug für den systematischen Review zu feministischen AI Literacies. PRISMA 2020 / PRISMA-trAIce, duale Mensch-KI-Bewertung.",
             fav=favicon("P", 52), fonts=FONTS_PRISMA,
             meta='<meta name="robots" content="noindex">',

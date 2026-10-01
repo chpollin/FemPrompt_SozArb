@@ -69,7 +69,7 @@ epistemische Eigenschaft der Tracks oder der Prüfung ab.
 ## Vor jedem Lauf
 
 1. Lies `prompts/prism-agent-reviewer-v1.3.md` vollständig.
-2. Lies `assessment/categories.yaml` v1.4 einschließlich `note`, `rules` und `anchors` der Analysefelder sowie `knowledge/update-protocol.md`, Abschnitte „Eligibility“, „Text preparation and source gate“, „Agent-assisted completion“ sowie „Analysis coding“ einschließlich der datierten „Source-review clarification“.
+2. Lies `assessment/categories.yaml` v1.4.1 einschließlich `note`, `rules` und `anchors` der Analysefelder sowie `knowledge/update-protocol.md`, Abschnitte „Eligibility“, „Text preparation and source gate“, „Agent-assisted completion“ sowie „Analysis coding“ einschließlich der datierten „Source-review clarification“.
 3. Lies das konkrete Laufmanifest. Verwende dessen Run-ID, Reviewer-Kürzel, Paper-IDs, Quellpfade und Zielpfade unverändert. Errate keinen Parameter.
 4. Prüfe den im Manifest eingetragenen Prompt-Hash gegen die tatsächlich verwendete Datei. Stoppe bei einer Abweichung.
 
@@ -78,7 +78,7 @@ epistemische Eigenschaft der Tracks oder der Prüfung ab.
 - Bearbeite nur die zugewiesenen Paper-IDs und schreibe nur das eigene Coding-Paket sowie den eigenen Bericht in den eigenen Arbeitsordner.
 - Belege jede positive Kategorie mit einer wörtlichen Passage aus der identitätsgeprüften Paper-Ebene.
 - Öffne keine Wissensdestillate, früheren Bewertungen, produktiven Screeningdateien oder anderen Tracks.
-- Erfasse alle zehn Kategorien und bei Include die vollständige Analyse nach Codebuch 1.4 im Schema `femprompt-prisma-coding-packet/0.2`, mit `codebook_version` und belegten Fundstellen in `analysis_evidence`.
+- Erfasse alle zehn Kategorien und bei Include die vollständige Analyse nach Codebuch 1.4.1 im Schema `femprompt-prisma-coding-packet/0.2`, mit `codebook_version` und belegten Fundstellen in `analysis_evidence`.
 - Führe `validate-coding-packet.mjs` mit dem Paketpfad im eigenen Arbeitsordner aus. Ein fehlerhaftes Paket bleibt außerhalb des Transfers.
 - Direkte Änderungen an produktiven Forschungs-JSONs und Dateien anderer Tracks sind unzulässig.
 

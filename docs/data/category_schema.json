@@ -28,6 +28,9 @@
       "key": "AI_Literacies",
       "definition": "Das Paper behandelt Kompetenzen, Fähigkeiten oder Wissen im Umgang mit KI-Systemen. Umfasst kritische Reflexion, technisches Verständnis oder praktische Anwendungskompetenz.",
       "group": "technik",
+      "examples_negative": [
+        "Rein technische KI-Implementierung ohne Bildungsbezug"
+      ],
       "label": "AI Literacies",
       "color": "#5b8c5a"
     },
@@ -35,6 +38,9 @@
       "key": "Generative_KI",
       "definition": "Fokus auf generative KI-Modelle wie Large Language Models, Bildgeneratoren oder andere generative Systeme.",
       "group": "technik",
+      "examples_negative": [
+        "Klassische ML-Klassifikation ohne generativen Aspekt"
+      ],
       "label": "Generative KI",
       "color": "#3a7d7e"
     },
@@ -42,6 +48,9 @@
       "key": "Prompting",
       "definition": "Behandelt Prompt-Engineering, Prompt-Strategien oder die Gestaltung von Eingaben für KI-Systeme.",
       "group": "technik",
+      "examples_negative": [
+        "KI-Nutzung ohne Fokus auf Eingabegestaltung"
+      ],
       "label": "Prompting",
       "color": "#4b7bab"
     },
@@ -49,6 +58,9 @@
       "key": "KI_Sonstige",
       "definition": "Andere KI/ML-Themen: klassisches Machine Learning, algorithmische Entscheidungssysteme, Predictive Analytics, Robotik, Computer Vision. WICHTIG: Algorithmische Systeme im Sozialbereich (z.B. Risikobewertung in der Jugendhilfe) zählen hierzu und sind relevant!",
       "group": "technik",
+      "examples_negative": [
+        "Reine Robotik ohne sozialen Bezug"
+      ],
       "label": "KI Sonstige",
       "color": "#7c6fae"
     },
@@ -56,6 +68,9 @@
       "key": "Soziale_Arbeit",
       "definition": "Direkter Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung oder den Zielgruppen Sozialer Arbeit.",
       "group": "sozial",
+      "examples_negative": [
+        "Allgemeine KI-Ethik ohne Sozialarbeitsbezug"
+      ],
       "label": "Soziale Arbeit",
       "color": "#b0546e"
     },
@@ -63,6 +78,9 @@
       "key": "Bias_Ungleichheit",
       "definition": "Thematisiert Diskriminierung, algorithmischen Bias, soziale Ungleichheit oder strukturelle Benachteiligung im KI-Kontext.",
       "group": "sozial",
+      "examples_negative": [
+        "Allgemeine KI-Performance-Studie ohne Bias-Fokus"
+      ],
       "label": "Bias & Ungleichheit",
       "color": "#c2694e"
     },
@@ -70,6 +88,9 @@
       "key": "Gender",
       "definition": "Expliziter Gender-Fokus, Geschlechterperspektive oder Analyse von Gender-Bias.",
       "group": "sozial",
+      "examples_negative": [
+        "Demografische Daten enthalten Geschlecht, aber kein Gender-Fokus"
+      ],
       "label": "Gender",
       "color": "#d4943a"
     },
@@ -77,6 +98,9 @@
       "key": "Diversitaet",
       "definition": "Thematisiert Diversität, Inklusion oder Repräsentation verschiedener Gruppen.",
       "group": "sozial",
+      "examples_negative": [
+        "Diverse Methoden verwendet (methodische Diversitaet, nicht sozial)"
+      ],
       "label": "Diversität",
       "color": "#8a7542"
     },
@@ -84,6 +108,9 @@
       "key": "Feministisch",
       "definition": "Verwendet feministische Theorie, Methodik oder Perspektive. Auch implizit feministische Ansätze zählen: intersektionale Analysen, kritische Betrachtung von Machtstrukturen, Fokus auf marginalisierte Gruppen aus Geschlechterperspektive.",
       "group": "sozial",
+      "examples_negative": [
+        "Gender nur als Variable erwähnt ohne kritische Perspektive"
+      ],
       "label": "Feministisch",
       "color": "#a24b7a"
     },
@@ -91,6 +118,9 @@
       "key": "Fairness",
       "definition": "Thematisiert algorithmische Fairness, faire ML-Systeme oder Fairness-Metriken.",
       "group": "sozial",
+      "examples_negative": [
+        "Allgemeine Ethik-Diskussion ohne spezifischen Fairness-Bezug"
+      ],
       "label": "Fairness",
       "color": "#6a8e4e"
     }

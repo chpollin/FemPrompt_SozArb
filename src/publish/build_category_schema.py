@@ -71,6 +71,18 @@ def _folded_value(lines: list[str], start: int) -> str:
     return " ".join(values)
 
 
+def _quoted_items(lines: list[str], start: int) -> list[str]:
+    values = []
+    for line in lines[start + 1 :]:
+        match = re.match(r'^\s{6}-\s+"(.*)"\s*$', line)
+        if not match:
+            break
+        values.append(match.group(1))
+    if not values:
+        raise ValueError(f"Empty example list after line: {lines[start].strip()}")
+    return values
+
+
 def _nested_options(lines: list[str], key: str) -> list[str]:
     start = next(
         (index + 1 for index, line in enumerate(lines) if line == f"  {key}:"),
@@ -114,8 +126,8 @@ def build(source: Path = YAML_IN) -> dict[str, Any]:
     unlabelled = [code for code in exclusion_reasons if code not in reason_labels]
     if unlabelled:
         raise ValueError(f"Exclusion reasons without a display label: {unlabelled}")
-    categories: list[dict[str, str]] = []
-    current: dict[str, str] | None = None
+    categories: list[dict[str, Any]] = []
+    current: dict[str, Any] | None = None
     for index, line in enumerate(section):
         category_match = CATEGORY_RE.match(line)
         if category_match:
@@ -130,6 +142,9 @@ def build(source: Path = YAML_IN) -> dict[str, Any]:
             current["group"] = group_match.group(1)
         elif re.match(r"^\s{4}definition:\s*>\s*$", line):
             current["definition"] = _folded_value(section, index)
+        elif re.match(r"^\s{4}examples_negative:\s*$", line):
+            # PRISM shows these verbatim beside the toggle, so they are carried as written
+            current["examples_negative"] = _quoted_items(section, index)
     if current:
         categories.append(current)
 
