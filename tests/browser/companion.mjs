@@ -155,6 +155,22 @@ try {
     await page.waitForTimeout(150);
     check(`390 px without horizontal scrolling: ${hash.split('&')[0]}`, await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1));
   }
+  // CI renders with wider Linux fonts than Windows; a wide font with extra tracking stands in for them locally.
+  const wideFont = '*{font-family:Verdana,"DejaVu Sans",sans-serif !important; letter-spacing:.02em}';
+  for (const width of [390, 320]) {
+    await page.setViewportSize({ width, height: 844 });
+    const paths = ['about.html', 'methoden.html', 'help.html', ...(width === 320 ? ['index.html#view=korpus'] : [])];
+    for (const path of paths) {
+      await page.goto(`${base}/about.html`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/${path}`, { waitUntil: 'networkidle' });
+      await page.addStyleTag({ content: wideFont });
+      await page.waitForTimeout(150);
+      const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+      check(`${width} px with a wide font without horizontal scrolling: ${path}`, overflow <= 1, `overflow ${overflow}px`);
+    }
+  }
+  await page.setViewportSize({ width: 390, height: 844 });
+
   await page.goto(`${base}/index.html#view=wissensnetz`, { waitUntil: 'networkidle' });
   await page.waitForSelector('#netz-graph');
   check('at 390 px the network figure and its table fit their column', await page.evaluate(() => {
