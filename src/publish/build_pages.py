@@ -113,18 +113,11 @@ def subpage_header(active: str, extra: str = "") -> str:
                 f'class="{onboarding_cls}">Onboarding</a>'
             )
     extra_block = f"\n            {extra}" if extra else ""
-    # The working tool keeps only the brand line so the workspace gets the height (ADR-039).
-    brand = (
-        """<a href="index.html" class="brand-link">
-                        <h1>Feministische AI Literacies</h1>
-                    </a>"""
-        if active == "prisma"
-        else """<a href="index.html" class="brand-link">
+    brand = """<a href="index.html" class="brand-link">
                         <h1>Feministische AI Literacies</h1>
                         <p class="subtitle">Systematischer Review &middot; Interaktive Evidenz</p>
                     </a>
                     <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>"""
-    )
     return f"""<header>
         <div class="header-content">
             <div class="header-top">
