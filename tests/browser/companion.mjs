@@ -734,17 +734,19 @@ try {
     `${hashParams().get('year')} ${await resultCount()}/${n2023to2024}`);
   await page.locator('#year-hist .year-col[data-year="2023"]').click();
   await page.locator('#year-hist .year-col[data-year="2023"]').click();
-  await page.locator('#filter-decision').selectOption('Include');
-  const included2024 = corpus.filter((paper) => paper.llm.decision === 'Include' && yearOf(paper) === '2024').length;
+  // The Expert:innen filter reads the data alone; the LLM filter depends on the human
+  // decision of the stage table and is checked with it below.
+  await page.locator('#filter-human').selectOption('has_human');
+  const included2024 = corpus.filter((paper) => paper.benchmark.has_human && yearOf(paper) === '2024').length;
   check('the histogram counts the selection of the other filters', await col2024.getAttribute('aria-label') === `2024, ${werke(included2024)}`);
   await col2024.click();
   check('the year filter combines with the other filters',
-    await resultCount() === included2024 && hashParams().get('dec') === 'Include' && hashParams().get('year') === '2024');
+    await resultCount() === included2024 && hashParams().get('hum') === 'has_human' && hashParams().get('year') === '2024');
   await page.reload({ waitUntil: 'networkidle' });
   await page.waitForSelector('#year-hist .year-col');
   check('a year selection survives reload', await col2024.getAttribute('aria-pressed') === 'true' && await resultCount() === included2024);
   await col2024.click();
-  await page.locator('#filter-decision').selectOption('all');
+  await page.locator('#filter-human').selectOption('all');
   const n2025 = corpus.filter((paper) => yearOf(paper) === '2025').length;
   await page.locator('#year-hist .year-col[data-year="2025"]').focus();
   check('keyboard focus shows the year tooltip', await page.locator('#year-tip').isVisible());
@@ -789,7 +791,9 @@ try {
           (rec.work_id !== paper.work_id || rec.version_id !== paper.version_id)) continue;
         const ts = String(rec.ts || file.updated || '');
         if (out[pid] && out[pid].ts >= ts) continue;
-        out[pid] = { decision: rec.decision, ts, reviewer: key };
+        const cats = rec.categories && typeof rec.categories === 'object' ? rec.categories : {};
+        const categories = Object.keys(cats).filter((c) => [true, 1, 2, '1', '2'].includes(cats[c]));
+        out[pid] = { decision: rec.decision, categories, ts, reviewer: key };
       }
     }
     return out;
@@ -821,9 +825,12 @@ try {
     for (const r of assignment.reviewers) {
       rules['offen-' + r.key] = (p) => decisionOf(p) === null && assignment.assignments[p.id] === r.key;
     }
-    return { rules, decisionOf };
+    // The categories of that human decision; an open work has none (ADR-044).
+    const catsOf = (p) => (records[p.id] ? records[p.id].categories
+      : decisionOf(p) ? Object.keys(p.human.all_categories || {}).filter((c) => p.human.all_categories[c] === 1) : []);
+    return { rules, decisionOf, catsOf };
   };
-  const { rules: stageRules, decisionOf } = rulesFor(diskRecords);
+  const { rules: stageRules, decisionOf, catsOf } = rulesFor(diskRecords);
   const countsBy = (rules, papers) => Object.fromEntries(Object.entries(rules).map(([key, rule]) => [key, papers.filter(rule).length]));
   const expectedCounts = (papers) => countsBy(stageRules, papers);
   // The figures of this run, for the report.
@@ -904,9 +911,95 @@ try {
   check('the default sort leaves the hash clean', !hashParams().has('sort'));
 
   await page.locator('#filter-decision').selectOption('Include');
-  const llmIncluded = corpus.filter((p) => p.llm.decision === 'Include');
+  const llmIncluded = corpus.filter((p) => decisionOf(p) !== null && p.llm.decision === 'Include');
   check('the stage counts follow the other filters', sameCounts(await shownCounts(), expectedCounts(llmIncluded)));
   await page.locator('#filter-decision').selectOption('all');
+
+  // No AI pre-assessment for open works (ADR-044): the reviewers may open the Korpus, so a
+  // real open work with a round-one LLM assessment shows none of it in its row, panel,
+  // filters, sort or exports, while decided works keep the LLM side for the comparison.
+  {
+    const parseCsv = (text) => {
+      const rows = []; let row = []; let field = ''; let quoted = false;
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (quoted) {
+          if (ch === '"' && text[i + 1] === '"') { field += '"'; i++; } else if (ch === '"') quoted = false; else field += ch;
+        } else if (ch === '"') quoted = true;
+        else if (ch === ',') { row.push(field); field = ''; } else if (ch === '\n') { row.push(field); rows.push(row); row = []; field = ''; } else field += ch;
+      }
+      if (field || row.length) { row.push(field); rows.push(row); }
+      const [head, ...body] = rows;
+      return body.map((r) => Object.fromEntries(head.map((h, i) => [h, r[i]])));
+    };
+    const exportCsv = async () => {
+      const [download] = await Promise.all([page.waitForEvent('download'), page.locator('.export-button', { hasText: 'CSV' }).click()]);
+      return parseCsv(readFileSync(await download.path(), 'utf8'));
+    };
+    const openLlm = corpus.find((p) => decisionOf(p) === null && p.llm.decision && p.llm.categories.length);
+    check('the corpus holds an open work with a round-one LLM assessment for the check', Boolean(openLlm));
+    console.log('open work checked for LLM output', openLlm.id, openLlm.llm.decision, openLlm.llm.categories.join(';'));
+
+    await page.goto(`${base}/index.html#view=korpus&paper=${encodeURIComponent(openLlm.id)}`, { waitUntil: 'networkidle' });
+    await page.waitForSelector('#paper-modal.active');
+    const panel = await page.evaluate(() => ({
+      headers: [...document.querySelectorAll('#modal-body .panel-header')].map((n) => n.textContent),
+      chips: [...document.querySelectorAll('#modal-body .assessment-categories .category-chip')].map((n) => n.dataset.cat),
+      text: document.getElementById('modal-body').textContent,
+    }));
+    check('the panel of an open work shows no LLM decision, category or reasoning',
+      !panel.headers.some((h) => h.startsWith('LLM')) && panel.chips.length === 0 &&
+      !(openLlm.llm.reasoning && panel.text.includes(openLlm.llm.reasoning.slice(0, 60))), JSON.stringify(panel.headers));
+
+    await page.locator('#search-box').fill(openLlm.title);
+    const row = page.locator(`#papers-grid tr[data-id="${openLlm.id}"]`);
+    await row.waitFor();
+    check('the row of an open work shows no category dots', await row.locator('.cat-dot-color').count() === 0);
+    const csvOpen = (await exportCsv()).find((r) => r.ID === openLlm.id);
+    check('the CSV export leaves the LLM columns of an open work empty',
+      Boolean(csvOpen) && csvOpen.LLM_Decision === '' && csvOpen.LLM_Categories === '' && csvOpen.Agreement === '' && csvOpen.Screening_Decision === '',
+      JSON.stringify(csvOpen));
+    if (openLlm.knowledge_doc) {
+      const [mdDownload] = await Promise.all([page.waitForEvent('download'), page.locator('.export-button', { hasText: 'Markdown' }).click()]);
+      const md = readFileSync(await mdDownload.path(), 'utf8');
+      const part = md.split('\n---\n\n').find((section) => section.includes(`**Record:** ${openLlm.id}`)) || '';
+      check('the Markdown export carries no round-one LLM decision or categories of an open work',
+        part !== '' && !/llm_decision|llm_categories|\*\*LLM:\*\*/.test(part));
+    }
+    for (const value of ['Include', 'Exclude']) {
+      await page.locator('#filter-decision').selectOption(value);
+      const listed = await page.$$eval('#papers-grid tr[data-id]', (rows) => rows.map((tr) => tr.dataset.id));
+      check(`the LLM filter ${value} never lists the open work`, !listed.includes(openLlm.id), listed.join());
+    }
+    await page.locator('#filter-decision').selectOption('all');
+    await page.locator('#search-box').fill('');
+
+    for (const value of ['Include', 'Exclude']) {
+      await page.locator('#filter-decision').selectOption(value);
+      const ids = (await exportCsv()).map((r) => r.ID);
+      const want = corpus.filter((p) => decisionOf(p) !== null && p.llm.decision === value);
+      check(`the LLM filter ${value} lists exactly the decided works with that LLM decision`,
+        ids.length === want.length && ids.every((id) => decisionOf(corpusById[id]) !== null && corpusById[id].llm.decision === value),
+        `${ids.length}/${want.length}`);
+    }
+    await page.locator('#filter-decision').selectOption('all');
+    await page.locator('#sort-by').selectOption('relevance');
+    const sorted = (await exportCsv()).map((r) => corpusById[r.ID]);
+    const rank = (p) => (decisionOf(p) !== null && p.llm.decision === 'Include' ? 0 : 1);
+    check('LLM-Include zuerst ranks only decided works by their LLM decision, an open work as without one',
+      sorted.length === corpus.length && sorted.every((p, i) => !i || rank(sorted[i - 1]) <= rank(p)) &&
+      sorted.findIndex((p) => p.id === openLlm.id) >= sorted.filter((p) => rank(p) === 0).length);
+    await page.locator('#sort-by').selectOption('stage');
+
+    const dots = await page.$$eval('#papers-grid tr[data-id]', (rows) => rows.map((tr) => [tr.dataset.id,
+      tr.querySelectorAll('.cat-dot-color').length, [...tr.querySelectorAll('.cat-dot-color')].filter((d) => d.title.endsWith(': Ja')).length]));
+    const badDots = dots.filter(([id, all, on]) => (decisionOf(corpusById[id]) === null ? all !== 0
+      : all !== schema.categories.length || on !== catsOf(corpusById[id]).length));
+    check('the category dots show the human categories and none for an open work', dots.length > 0 && badDots.length === 0, JSON.stringify(badDots.slice(0, 3)));
+    await page.locator('#gap-list button[data-stage="offen"]').click();
+    check('the open work list offers no category chips', await page.locator('#category-chips .category-chip').count() === 0);
+    await page.locator('#gap-list button[data-stage="offen"]').click();
+  }
 
   const gapKeys = Object.keys(stageRules).filter((key) => ![...SCREENING_KEYS, 'text', ...AUSWERTUNG_KEYS, ...SUB_KEYS].includes(key));
   check('the work lists offer every gap and the open split by reviewer',
@@ -978,7 +1071,7 @@ try {
     const contested = pick((p) => decisionOf(p) === 'Include');
     const bind = (p) => ({ work_id: p.work_id, version_id: p.version_id });
     const fileA = { schema: 'femprompt-prisma-reviewer/0.5', reviewer: revA, actor: 'human', updated: '2026-10-02T12:00:00.000Z', decisions: {
-      [codedOpen.id]: { ...bind(codedOpen), decision: 'Include', ts: '2026-10-02T10:00:00.000Z', actor: 'human' },
+      [codedOpen.id]: { ...bind(codedOpen), decision: 'Include', categories: { Gender: 2, Soziale_Arbeit: 1, Prompting: 0 }, ts: '2026-10-02T10:00:00.000Z', actor: 'human' },
       [openA.id]: { ...bind(openA), decision: 'Include', ts: '2026-10-02T10:01:00.000Z', actor: 'human' },
       [unclearA.id]: { ...bind(unclearA), decision: 'Unclear', ts: '2026-10-02T10:02:00.000Z', actor: 'human' },
       [badDecision.id]: { ...bind(badDecision), decision: 'Maybe', ts: '2026-10-02T10:03:00.000Z', actor: 'human' },
@@ -1013,6 +1106,9 @@ try {
       [codedOpen.id, openA.id, unclearA.id, badDecision.id, badVersion.id, expertExclude.id, contested.id]);
     check('a reviewer record overrides the expert decision, the newer record wins, invalid records are skipped',
       decided.join() === 'include,include,unclear,open,open,include,include', decided.join());
+    const recordCats = await reviewed.evaluate((id) => window.EC.korpusStages.humanCategories({ id, benchmark: {} }), codedOpen.id);
+    check('a reviewer record supplies the categories of its work at teilweise and ja',
+      JSON.stringify((recordCats || []).sort()) === JSON.stringify(['Gender', 'Soziale_Arbeit']), JSON.stringify(recordCats));
     const unclearForm = await reviewed.evaluate((paper) => {
       const box = document.createElement('div');
       box.innerHTML = window.EC.korpusStages.trackHtml(paper);
@@ -1105,27 +1201,28 @@ try {
       rows.every((r) => !/\(\d{4}\)$/.test(r.author)), JSON.stringify(rows.slice(0, 2)));
 
     // Filter chips: stage, year and category; each removable, then all at once.
-    const chipCat = schema.categories.map((c) => c.key)
-      .find((key) => corpus.some((p) => stageRules.offen(p) && yearOf(p) === '2025' && p.llm.all_categories[key] === 1));
-    await page.locator('#gap-list button[data-stage="offen"]').click();
+    // Open works carry no human categories, so the chips are tested on the included ones.
+    const inSel = (p) => stageRules.eingeschlossen(p) && yearOf(p) === '2025';
+    const chipCat = schema.categories.map((c) => c.key).find((key) => corpus.some((p) => inSel(p) && catsOf(p).includes(key)));
+    await page.locator('#stage-bar button[data-stage="eingeschlossen"]').click();
     await page.locator('#year-hist .year-col[data-year="2025"]').click();
     await page.locator(`#category-chips .category-chip[data-cat="${chipCat}"]`).click();
     const chipLabels = await page.locator('#active-filters .filter-chip').allInnerTexts();
-    const wantN = corpus.filter((p) => stageRules.offen(p) && yearOf(p) === '2025' && p.llm.all_categories[chipCat] === 1).length;
+    const wantN = corpus.filter((p) => inSel(p) && catsOf(p).includes(chipCat)).length;
     check('active filters appear as removable chips with one alle aufheben control',
-      chipLabels.length === 3 && chipLabels[0].startsWith('offen') && chipLabels[1].startsWith('Jahr 2025') &&
+      chipLabels.length === 3 && chipLabels[0].startsWith('eingeschlossen') && chipLabels[1].startsWith('Jahr 2025') &&
       await page.locator('#active-filters .filter-clear-all').count() === 1 &&
       (await page.locator('#active-filters .filter-clear-all').innerText()).trim() === 'alle aufheben' && await resultCount() === wantN,
       JSON.stringify(chipLabels));
     const resultIds = await page.$$eval('#papers-grid tr[data-id]', (trs) => trs.map((tr) => tr.dataset.id));
     const presentCats = schema.categories.map((c) => c.key).filter((key) => key === chipCat ||
-      corpus.filter((p) => stageRules.offen(p) && yearOf(p) === '2025' && p.llm.all_categories[chipCat] === 1).some((p) => p.llm.all_categories[key] === 1));
+      corpus.filter((p) => inSel(p) && catsOf(p).includes(chipCat)).some((p) => catsOf(p).includes(key)));
     const shownCats = await page.$$eval('#category-chips .category-chip', (chips) => chips.map((c) => c.dataset.cat));
     check('the sidebar offers only the categories that occur in the selection',
       resultIds.length === wantN && shownCats.sort().join() === presentCats.sort().join(), `${shownCats.join()} / ${presentCats.join()}`);
     await page.locator('#active-filters .filter-chip[data-clear="year"]').click();
     check('removing one chip clears only its filter and keeps the focus among the chips',
-      !hashParams().has('year') && hashParams().get('stage') === 'offen' && hashParams().get('cat') === chipCat &&
+      !hashParams().has('year') && hashParams().get('stage') === 'eingeschlossen' && hashParams().get('cat') === chipCat &&
       await page.locator('#active-filters .filter-chip').count() === 2 &&
       await page.evaluate(() => document.activeElement.closest('#active-filters') !== null));
     await page.locator('#active-filters .filter-clear-all').click();
