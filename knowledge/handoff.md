@@ -40,9 +40,8 @@ A parallel change adopts codebook v1.4 and makes the coding run harness-agnostic
 1. The two reviewers screen their assigned open papers in PRISM, in a local clone with Chrome or Edge, following the setup in the README and `docs/help.html#prism`.
 2. Integrate the codebook v1.4 adoption and run the analysis-coding agents with the separate AI Agent Review once the run model is chosen (decision 10).
 3. Obtain the binding-rule permission (decision 1) and bind the prepared 2026 reading texts.
-4. Decide the remapping of the four reviewed Assertions (decision 2), then continue the SQ1 answer under step 4 of [[plan#Answering the research questions]].
-5. Resolve the contradiction between the division of labour and PRISM, which still asks a human reviewer for analysis coding on an Include (decision 20).
-6. Start the independent acceptance review of the Evidence Companion under [[plan#UI development]].
+4. Continue the SQ1 answer under step 4 of [[plan#Answering the research questions]].
+5. Start the independent acceptance review of the Evidence Companion under [[plan#UI development]].
 
 ## Decisions to preserve
 

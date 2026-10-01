@@ -177,7 +177,7 @@ PAGES = {
     "methoden.html": {
         "head": head(
             "Methoden -- Feministische AI Literacies",
-            "Methodik des systematischen Reviews: Pipeline, Kategorie-System, duale Bewertung, Divergenz-Analyse.",
+            "Methodik des systematischen Reviews: Forschungsfragen, Identifikation, Screening, Analyse, Synthese, Prüfstufen und Grenzen.",
             fav=favicon("F", 60), fonts=FONTS_COMPANION,
         ),
         "header": "methoden",
