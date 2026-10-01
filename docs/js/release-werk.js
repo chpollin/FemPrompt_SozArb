@@ -42,15 +42,21 @@ function categorySection(work) {
             model.schema.categories.findIndex(function (c) { return c.key === b.key; });
     });
     if (!categories.length) return '';
-    return '<h3>Kategorien</h3><dl class="code-list">' + categories.map(function (category) {
-        const label = (model.schema.categories.find(function (c) { return c.key === category.key; }) || {}).label || category.key;
-        const quotes = model.categoryEvidence(work, category.key).map(function (item) {
-            return '<blockquote class="evidence-quote">' + EC.highlight(item.text, item.term) + '</blockquote>' +
-                '<p class="evidence-locator">' + EC.esc(TEXT_SOURCE_LABELS[item.textSource] || 'Textgrundlage offen') + '</p>';
+    const info = function (key) { return model.category(key) || { key: key, label: key }; };
+    // The chip row names every category of the work; each quotation is captioned with its category and level.
+    const row = EC.categoryChipRow(categories.map(function (category) {
+        return { category: info(category.key), options: { level: category.level } };
+    }), model.schema.groups);
+    const quotes = categories.map(function (category) {
+        return model.categoryEvidence(work, category.key).map(function (item) {
+            return '<figure class="evidence" data-code="' + EC.esc(category.key) + '"><figcaption class="evidence-code">' +
+                EC.categoryChip(info(category.key), { small: true, level: category.level }) + ' · ' +
+                EC.esc(LEVEL_LABELS[category.level] || ('Stufe ' + category.level)) + '</figcaption>' +
+                '<blockquote class="evidence-quote">' + EC.highlight(item.text, item.term) + '</blockquote>' +
+                '<p class="evidence-locator">' + EC.esc(TEXT_SOURCE_LABELS[item.textSource] || 'Textgrundlage offen') + '</p></figure>';
         }).join('');
-        return '<div class="code-row" data-code="' + EC.esc(category.key) + '"><dt>' + EC.esc(label) + '</dt><dd>' +
-            '<p class="code-values">' + EC.esc(LEVEL_LABELS[category.level] || ('Stufe ' + category.level)) + '</p>' + quotes + '</dd></div>';
-    }).join('') + '</dl>';
+    }).join('');
+    return '<h3>Kategorien</h3><p class="category-chips werk-categories">' + row + '</p>' + (quotes ? '<div class="work-evidence">' + quotes + '</div>' : '');
 }
 
 function analysisSection(work) {

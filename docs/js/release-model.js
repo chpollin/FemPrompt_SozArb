@@ -367,6 +367,7 @@ function createModel(input) {
         coverage: coverage, pipelineCoverage: pipelineCoverage, codedSummary: codedSummary, filterWorks: filterWorks,
         codingComplete: codingComplete,
         evidenceFor: evidenceFor, categoryEvidence: categoryEvidence,
+        category: function (key) { return categoryByKey[key] || null; },
         token: token, parseToken: parseToken, termLabel: termLabel, worksWith: worksWith,
         neighbours: neighbours, terms: terms, fold: fold, humanise: humanise,
     };

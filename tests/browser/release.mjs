@@ -227,8 +227,15 @@ try {
   check('coding note is collapsed rationale, not a quotation', await page.locator('.werk .evidence-note').count() === 0 &&
     (await page.locator('.werk details.rationale-record').count() === 0 ||
      (await page.locator('.werk details.rationale-record:not([open]) summary').innerText()).includes('kein Beleg')));
-  const quoteRows = await page.locator('.werk .code-row').evaluateAll(rows => rows.map(row =>
-    Array.from(row.querySelectorAll('.evidence-quote')).map(q => q.textContent.replace(/\s+/g, ' ').trim())));
+  const quoteRows = await page.locator('.werk').evaluate(node => {
+    const byCode = {};
+    node.querySelectorAll('.evidence[data-code]').forEach(fig => {
+      (byCode[fig.dataset.code] = byCode[fig.dataset.code] || []).push(fig.querySelector('.evidence-quote').textContent.replace(/\s+/g, ' ').trim());
+    });
+    return Object.values(byCode);
+  });
+  check('categories appear as grouped category chips', await page.locator('.werk .werk-categories .category-chip[data-cat][style*="--chip-color"]').count() > 0 &&
+    await page.locator('.werk .werk-categories .chip-group-label').count() > 0);
   check('no category quotation is shown twice', quoteRows.every(q => new Set(q).size === q.length));
   check('highlights end on word boundaries', (await page.locator('.werk .evidence-quote').evaluateAll(quotes => quotes.every(q => {
     const mark = q.querySelector('mark');
