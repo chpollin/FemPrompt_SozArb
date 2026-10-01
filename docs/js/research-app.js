@@ -93,10 +93,11 @@ let currentView = 'start';
 let applyingFromUrl = false; // suppresses UI->store sync while a URL is being applied
 
 // Views rendered by the release modules (release-*.js), mapped to the names those
-// modules use. Literaturbild hosts the matrix and Wissensnetz the network; Frage and
-// Werk have no navigation button and are reached through links.
-const RELEASE_VIEWS = { literaturbild: 'matrix', wissensnetz: 'netz', frage: 'frage', werk: 'werk' };
-const VIEW_OF_RELEASE = { matrix: 'literaturbild', netz: 'wissensnetz', frage: 'frage', werk: 'werk' };
+// modules use. Literaturbild hosts the matrix and Begriffsnetz the term network; Frage,
+// Werk and Begriffsnetz have no navigation button and are reached through links. The
+// Wissensnetz tab is the internal category network of wissensnetz.js.
+const RELEASE_VIEWS = { literaturbild: 'matrix', begriffsnetz: 'netz', frage: 'frage', werk: 'werk' };
+const VIEW_OF_RELEASE = { matrix: 'literaturbild', netz: 'begriffsnetz', frage: 'frage', werk: 'werk' };
 // 'loading', 'ready', or the message of a failed model load.
 let releaseState = 'loading';
 let releaseParams = {}; // parameters of the release view on screen
@@ -113,7 +114,7 @@ const DEFAULT_STATE = {
     view: 'start', q: '', dec: 'all', hum: 'all', year: 'all', stage: 'all', sort: DEFAULT_SORT, cat: [], paper: null, rp: {}, vp: {},
 };
 
-// A working view with parameters of its own (kategorien.js) registers a codec
+// A working view with parameters of its own (kategorien.js, wissensnetz.js) registers a codec
 // { keys, get, apply } here; the router serializes them as vp and stays the only writer
 // of the hash.
 const VIEW_PARAMS = {};
@@ -1105,6 +1106,7 @@ function switchView(viewId, params, ctx) {
         if (window.initializeKategorien) window.initializeKategorien();
         benchmarkInitialized = true;
     }
+    if (viewId === 'wissensnetz' && window.initializeWissensnetz) window.initializeWissensnetz();
     // A hidden histogram has no width, so its labels are thinned once it shows.
     if (viewId === 'korpus') thinYearLabels();
     if (viewId === 'chat' && !chatInitialized) {
@@ -1216,7 +1218,7 @@ function highlightActiveRow(paper) {
 
 // URL State (shareable, citable views)
 
-const URL_VIEWS = ['start', 'chat', 'wissensnetz', 'literaturbild', 'vergleich', 'korpus', 'frage', 'werk'];
+const URL_VIEWS = ['start', 'chat', 'wissensnetz', 'begriffsnetz', 'literaturbild', 'vergleich', 'korpus', 'frage', 'werk'];
 
 // The navigational state read from the current DOM, categories, view, modal and release view.
 function stateFromUI() {

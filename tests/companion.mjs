@@ -2,7 +2,7 @@
 // kategorien, wissenschat, and the release modules hosted by research-app). It loads
 // the real docs/index.html into jsdom so every element id exists, mocks fetch with the
 // on-disk data JSONs, and drives the render paths: data load, corpus table, delegated
-// row click, Landkarte lenses, the integrated Literaturbild matrix, Wissensnetz,
+// row click, Landkarte lenses, the integrated Literaturbild matrix, Wissensnetz, Begriffsnetz,
 // answer and work views under the one router, chat UI, and the EC helpers.
 import { JSDOM } from 'jsdom';
 import { readFileSync } from 'node:fs';
@@ -255,9 +255,18 @@ await check('a matrix deep link restores axes and cell', async () => {
   if (!doc.getElementById('worklist').hidden) throw new Error('a work list is open without a cell');
 });
 
-await check('Wissensnetz shows the ego network with its table and denominator', async () => {
+await check('Wissensnetz shows the category network and selects an edge into the hash', async () => {
   setHash('#view=wissensnetz');
-  await waitFor(() => doc.querySelector('#view-wissensnetz #netz-list') !== null, 'network table');
+  await waitFor(() => doc.querySelector('#wn-graph .wn-node') !== null, 'category network');
+  const pick = doc.querySelector('#wn-table .wn-pick');
+  pick.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
+  await waitFor(() => !doc.getElementById('wn-detail').hidden, 'connection work list');
+  if (new URLSearchParams(window.location.hash.slice(1)).get('sel') !== pick.dataset.sel) throw new Error('selection not in hash');
+});
+
+await check('Begriffsnetz shows the ego network with its table and denominator', async () => {
+  setHash('#view=begriffsnetz');
+  await waitFor(() => doc.querySelector('#view-begriffsnetz #netz-list') !== null, 'network table');
   if (!doc.querySelector('#netz-graph')) throw new Error('no network figure');
   if (!/eingeschlossenen Werken codiert/.test(doc.querySelector('#netz-summary .denominator--summary').textContent)) throw new Error('no denominator');
   const edge = doc.querySelector('#netz-list button.netz-show-works');
