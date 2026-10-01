@@ -29,7 +29,7 @@ The mapping layer follows the JBI methodology for scoping reviews (Peters et al.
 
 The fit of this layer with the research questions is an inference from their wording. SQ1 to SQ3 ask for which tasks and settings, with which bias forms, harm types and groups, and with which handling at which stage, technique and evidence status the literature addresses LLM use in social work. These are mapping questions before they become synthesis questions. SQ4 asks how the literature defines gender and bias and on which theories it rests, which requires full-text coding. SQ5 asks for competences and organisational conditions and is answered mainly in the synthesis layer ([[#Answering the research questions]]).
 
-PRISMA 2020 and PRISMA-trAIce remain the reporting basis recorded in [[standards]]. PRISMA-trAIce is formulated as an extension of PRISMA 2020, and its AI disclosure items describe tool use independently of the review type. Reporting the mapping layer by PRISMA-ScR would therefore add a checklist and keep the recorded conformance work. [[standards]] records the combination as an open reporting decision and lists PRISMA-ScR as applied only once the operator adopts it.
+PRISMA 2020 and PRISMA-trAIce remain the reporting basis recorded in [[standards]]. PRISMA-trAIce is formulated as an extension of PRISMA 2020, and its AI disclosure items describe tool use independently of the review type. Reporting the mapping layer by PRISMA-ScR therefore adds a checklist and keeps the recorded conformance work. [[standards#PRISMA-ScR items]] maps the checklist items to the places that address them.
 
 ### Synthesis layer
 

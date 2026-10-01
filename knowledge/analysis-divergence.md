@@ -67,23 +67,23 @@ The case identified by `CF6T2RD7` illustrates a workflow exclusion. The expert r
 
 ## Gender category divergence
 
-On 1 October 2026 the Gender category was examined because the experts coded it far more often than the LLM track. Among the 234 works with both codings, the experts coded Gender in 143 and the LLM in 74; 72 works carry Gender only on the expert side and 3 only on the LLM side. The round-one definition read "Expliziter Gender-Fokus, Geschlechterperspektive oder Analyse von Gender-Bias", with the negative example that demographic data containing sex without a gender focus does not count.
+On 1 October 2026 the Gender category was examined because the experts coded it far more often than the LLM track. The unit of the counts is the Zotero record, the unit of the round-one assessment, so a work held in several records counts once per record, and distinct texts are named as such where the difference matters. Among the 234 records with both codings, the experts coded Gender in 143 and the LLM in 74. 72 records carry Gender only on the expert side and 3 only on the LLM side. The round-one definition read "Expliziter Gender-Fokus, Geschlechterperspektive oder Analyse von Gender-Bias", with the negative example that demographic data containing sex without a gender focus does not count.
 
-Each of the 72 divergent records and a control sample of 15 works coded Gender by both sides (seed 20261001) was classified against its available text by the strongest role of gender: G1 analytic focus, G2 variable or reported difference, G3 mention only (enumeration of protected attributes, related work, outlook), G4 absent in the available text. Sonnet subagents classified the full texts with a verbatim quote and line locator per record. The orchestrating agent checked 22 classifications at the text and corrected three. The per-record table and the selection scripts are in `generated/benchmark-results/gender-divergence-2026-10-01/`.
+Each of the 72 divergent records and a control sample of 15 records coded Gender by both sides (seed 20261001) was classified against its available text by the strongest role of gender: G1 analytic focus, G2 variable or reported difference, G3 mention only (enumeration of protected attributes, related work, outlook), G4 absent in the available text. Sonnet subagents classified the full texts with a verbatim quote and line locator per record. The orchestrating agent checked 22 classifications at the text and corrected three. The per-record table and the selection scripts are in `generated/benchmark-results/gender-divergence-2026-10-01/`.
 
 | Group | Records | G1 | G2 | G3 | G4 |
 |---|---|---|---|---|---|
 | Divergent, expert 1 and LLM 0 | 72 | 17 | 6 | 37 | 12 |
 | Control, both 1 | 15 | 13 | 0 | 1 | 1 |
 
-The 72 divergent records contain duplicates of the same work and resolve to 59 distinct texts (12 G1, 6 G2, 29 G3, 12 G4). Eleven divergent records had only an abstract, six of them an empty one, so ten of the twelve G4 cases cannot be interpreted.
+The 72 divergent records contain duplicate records of the same work and resolve to 59 distinct texts (12 G1, 6 G2, 29 G3, 12 G4). Eleven divergent records had only an abstract, six of them an empty one, so ten of the twelve G4 cases cannot be interpreted.
 
 - Most of the divergence comes from an expert reading broader than the definition. 55 of 72 divergent records do not meet it, and the recurring trigger is the enumeration formula "race, gender, …" common in this literature.
 - A smaller genuine LLM blind spot concerns works that measure gender as one of several bias dimensions, mostly multi-bias benchmarks and surveys. The definition leaves open whether these count as an analysis of gender bias.
-- A theory-informed gender perspective occurs in only three divergent works. Five divergent works (six records) define gender or cite gender theory, against nine of fifteen in the control group. This bears on SQ4.
+- A theory-informed gender perspective occurs in only three distinct divergent texts. Five distinct divergent texts (six records) define gender or cite gender theory, against nine of fifteen records in the control group. This bears on SQ4.
 - The same work received different expert decisions across duplicate records, for example two Include and four Exclude for one prompting study.
 
-The Gender counts of the Kategorien view therefore follow the broad expert reading. Codebook 1.4 codes bias axes only when a work analyses bias along them and excludes axes named only in enumerations, which matches the narrow reading. Two record bindings surfaced as inconsistent, where the bound file names another work than the record (`YPYQ2TCL`, `ACDF4FL9`), and await a source-binding check.
+The Gender counts of the Kategorien view therefore follow the broad expert reading. Codebook 1.4 codes bias axes only when a work analyses bias along them and excludes axes named only in enumerations, which matches the narrow reading. Two record bindings looked inconsistent because the file name of the bound text names other authors than the record (`YPYQ2TCL`, `ACDF4FL9`). The source-binding check of 1 October 2026 found both bindings correct, since each bound text prints the record's title and its true authors. The file names derive from wrong creators in the Zotero records. For `ACDF4FL9` a hash-bound metadata correction already supplies the true authors. `YPYQ2TCL` and its duplicate record `7IVS7X63` still carry the creators and years of two works the paper cites, and need a bibliographic correction.
 
 ## Interpretation limits
 

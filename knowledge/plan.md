@@ -65,7 +65,7 @@ The sub-questions are answered in the following order. Steps that depend on an o
 
 - Name the new completion-package blocks for field states, SQ associations, the round-one selection check and the agent-track diagnostics in the completion-package schema.
 - Build the Tier 1 analyses that [[analysis-methods#Implementation state]] names as not yet implemented.
-- Record PRISMA-ScR in [[standards]] as an applied reporting standard if decision 4 adopts it for the mapping layer.
+- Transfer the PRISMA-ScR items of [[standards#PRISMA-ScR items]] into `generated/conformance/conformance_map.yaml` and rebuild its dependent projections.
 - Fill the open fields of the round-two run record listed in [[standards#Identification and selection reporting]].
 
 ## UI development
@@ -139,6 +139,7 @@ Bounded subagent assignments receive explicit record lists, permitted write path
 - Resolve the [registered-identifier gaps](../corpus/source-acquisition/completion-20260921/existing-version-contract-gaps.json) for the located reports before binding their reading copies.
 - Apply the prepared metadata corrections with their receipt bindings. `generated/source-acquisition/oa-batch-2026-10-01/pending-metadata-corrections.patch` corrects corrupt Zotero metadata from authoritative evidence and binds the texts that then pass the identity check. Applied with `git apply` and rebuilt, it removes the published projections of the legacy knowledge documents whose bibliographic identity it corrects, so it waits for the operator's confirmation of those deletions.
 - Acquire the texts listed in `generated/source-acquisition/oa-batch-2026-10-01/remaining-for-acquisition.csv`. Several are open access but refused automated download and open in a browser; the others need licence or library access. The list also names the held texts that fail the identity check and what each needs.
+- Correct the creators and year of the duplicate records `YPYQ2TCL` and `7IVS7X63` of *Assessing GPT's bias towards stigmatized social groups*, which carry those of two works the paper cites. The bound text is the right work ([[analysis-divergence#Gender category divergence]]).
 - Re-review *Defeating Nondeterminism in LLM Inference* (`FTJM5R8N`) on the newly captured page with its title before binding it, since its released AI review read the earlier conversion.
 - Rebuild the agent-screening queue after each source or corpus change.
 
@@ -161,7 +162,7 @@ The accepted scope is defined in [[governance#Verification scope decision, 22 Se
 
 ### Publication
 
-- Generate the final PRISMA 2020 and PRISMA-trAIce reporting artifacts from the governed records, and PRISMA-ScR artifacts if decision 4 adopts that standard.
+- Generate the final PRISMA 2020 and PRISMA-trAIce reporting artifacts from the governed records, and the PRISMA-ScR checklist for the mapping layer.
 - Report the identification through AI-assisted deep research without database search with the declared deviation for items 6 and 7 and the wording recorded in [[standards#Identification and selection reporting]].
 - Insert the verified quantitative and qualitative findings into the canonical manuscript.
 - Check the current author instructions of Adult Literacy Education before submission, send the optional draft for editorial feedback by 1 December 2026 and submit by 15 February 2027 ([[project#Publication context]]).
@@ -203,7 +204,7 @@ The numbers are referenced from the steps above. The status column states how fa
 | 1 | Source-binding rule for the prepared 2026 reading texts whose converted Markdown lost its DOI, by accepting acquisition receipts as identity evidence | Taken on 1 October 2026 and implemented. Pending are the metadata corrections patch, which deletes stale knowledge-document projections, and the merge of duplicate Works | Operator confirmation of the patch and of duplicate merges |
 | 2 | Remapping of the four Assertions with AI Agent Review that carry the earlier numbering or no sub-question field ([[research-vault#Assertions]]). An edit invalidates their review receipts | Taken on 1 October 2026 and carried out as proposed, see [[#Decisions taken]] | None |
 | 3 | Switch of GitHub Pages from `docs/` to the result site in `build/site/` ([[#Deployment]]) | Open. The target was decided on 29 September 2026 | Operator authorisation |
-| 4 | PRISMA-ScR as reporting frame for the mapping layer ([[standards#Reporting decision on PRISMA-ScR]]) | Taken on 1 October 2026, adopted. The PRISMA-ScR items still have to enter the conformance map | None |
+| 4 | PRISMA-ScR as reporting frame for the mapping layer ([[standards#Reporting decision on PRISMA-ScR]]) | Taken on 1 October 2026, adopted. The PRISMA-ScR items are mapped in [[standards#PRISMA-ScR items]] and still have to enter the machine-readable conformance map | None |
 | 5 | Publication of the round-one matrix | Open | Operator decision on scope and form |
 | 6 | Article type, paper architecture and author order of the result paper for Adult Literacy Education. The Paper-Pipeline document in the personal vault still describes the methodological workflow as the main part, and the division of literature report, paper and Companion is open | Open. Venue decided | Decision by the co-author group |
 | 7 | Supplementary search for literature on LLM use in social-work tasks without a bias focus, as a dated, separately documented search layer with its own denominators, or an answer limited to the existing bias-focused corpus | Taken on 1 October 2026. No supplementary search; the answer stays limited to the existing corpus and the limit is named | None |
