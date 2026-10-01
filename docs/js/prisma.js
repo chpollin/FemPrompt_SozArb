@@ -239,7 +239,7 @@ let corpusQuery = '';          // current corpus-wide search (left pane)
 const textCache = {};            // paperId -> raw knowledge-doc markdown (or null)
 const fullTextCache = {};        // paperId -> cleaned Docling full text (or null)
 let fulltextManifest = null;     // id -> { src, chars, work_id, version_id }; null until loaded, {} if absent
-// Analysis coding vocabulary (FR-14, ADR-026): the frozen categories.yaml v1.3
+// Analysis coding vocabulary (FR-14, ADR-026): the categories.yaml
 // analysis_fields block, served as docs/data/analysis_fields.json (built by
 // src/publish/build_analysis_fields.py). anFields is the single source the panel's
 // closed selections read from; there is no hand-kept second list in this file.
@@ -1279,7 +1279,7 @@ function readAnalysis(dec) {
 
 // Keep only values in the frozen vocabulary; a multi field becomes a sorted,
 // de-duplicated array, a single field a single valid string, free text verbatim.
-// This is the enforcement point: no value outside categories.yaml v1.3 survives,
+// This is the enforcement point: no value outside categories.yaml survives,
 // on capture, import, or export. Unknown fields and undecidable toggles on
 // unknown fields are dropped.
 function expectedCodingBasis(textSource) {
@@ -1327,7 +1327,12 @@ function sanitizeAnalysis(raw, textSource) {
         outF.AN_Coding_Basis = expected;
         delete outU.AN_Coding_Basis;
     }
-    return { fields: outF, undecidable: outU };
+    const out = { fields: outF, undecidable: outU };
+    // The codebook version of the annotation survives every sanitize, so a field
+    // introduced later reads as not collected rather than as missing. A record
+    // without it counts as v1.3.
+    if (/^[0-9]+[.][0-9]+$/.test(String(raw.codebook_version || ''))) out.codebook_version = String(raw.codebook_version);
+    return out;
 }
 
 // Store the coder's analysis on the committed Include record, sanitized. This is
@@ -3544,7 +3549,13 @@ function attachAnalysisStep(col) {
         const a = readAnalysis({ analysis: work.analysis });
         return { fields: JSON.parse(JSON.stringify(a.fields)), undecidable: JSON.parse(JSON.stringify(a.undecidable)) };
     }
-    function persist(next) { work.analysis = sanitizeAnalysis(next, workingTextSource()); markDirty(); }
+    function persist(next) {
+        const coded = sanitizeAnalysis(next, workingTextSource());
+        // A coding edit in the panel is coded under the loaded vocabulary.
+        if (anVocabVersion) coded.codebook_version = anVocabVersion;
+        work.analysis = coded;
+        markDirty();
+    }
     panel.querySelectorAll('.pt-an-opt[data-an-value]').forEach(function(btn) {
         btn.addEventListener('click', function() {
             const name = btn.dataset.anField, val = btn.dataset.anValue, multi = btn.dataset.anMulti === '1';

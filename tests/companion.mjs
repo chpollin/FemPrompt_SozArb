@@ -162,12 +162,16 @@ await check('start cards open the answer pages', async () => {
 await check('start view states coverage and each question card its findings', async () => {
   await waitFor(() => doc.getElementById('start-status').textContent !== '', 'status sentence');
   const cov = literatureLandscape.meta.analysis_coverage;
-  const coded = Math.min(...Object.entries(cov.fields).filter(([k]) => k.startsWith('AN_')).map(([, f]) => f.value + f.none + f.undecidable));
+  // Fields added by a later codebook version are not collected for earlier annotations
+  // and stay out of the coded count; the baseline fields decide it.
+  const later = new Set(JSON.parse(readFileSync(join(root, dataFiles['data/analysis_fields.json']), 'utf8')).fields
+    .filter((field) => field.introduced_in).map((field) => field.name));
+  const coded = Math.min(...Object.entries(cov.fields).filter(([k]) => k.startsWith('AN_') && !later.has(k)).map(([, f]) => f.value + f.none + f.undecidable));
   const expected = `Vorläufig: ${coded} von ${cov.scope.work_total} eingeschlossenen Werken codiert, `;
   if (!doc.getElementById('start-status').textContent.startsWith(expected)) throw new Error(doc.getElementById('start-status').textContent);
   if (doc.querySelector('#view-start .start-btn, #view-start .start-actions')) throw new Error('duplicate nav buttons remain');
   const lines = [...doc.querySelectorAll('#view-start .start-card-status')].map((n) => n.textContent);
-  // SQ4 Conceptual grounding has no coded field yet and says so until a finding is assigned.
+  // SQ4 Conceptual grounding has no coded work yet and says so until a finding is assigned.
   if (lines.length !== 5 || lines.some((t) => !/^(\d+ KI-geprüfte?r? Befunde?|noch kein geprüfter Befund|noch nicht codiert$)/.test(t))) throw new Error(lines.join(' | '));
   const assertions = JSON.parse(readFileSync(join(root, dataFiles['data/assertion_index.json']), 'utf8')).assertions;
   const forSq4 = assertions.filter((a) => (a.research_questions || []).includes('SQ4')).length;

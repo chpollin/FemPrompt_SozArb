@@ -45,6 +45,8 @@ function fieldDimension(field) {
     const workLevel = field.multi === false;
     return {
         id: field.name, kind: 'field', workLevel: workLevel,
+        // Codebook version that added the field; empty for the v1.3 baseline fields.
+        introducedIn: field.introduced_in ? String(field.introduced_in) : '',
         label: (field.label || humanise(field.name)) + (workLevel ? ' des Werks' : ''),
         definition: typeof field.definition === 'string' ? field.definition : '',
         // The coding basis records how a work was coded, not what it addresses.

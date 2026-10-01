@@ -4,7 +4,7 @@
     "source": "assessment/categories.yaml",
     "note": "Closed vocabulary for the PRISM analysis panel (FR-14/ADR-026); the one source, do not hand-edit. Labels and definitions are presentation only."
   },
-  "version": "1.3",
+  "version": "1.4",
   "fields": [
     {
       "name": "AN_Prompting_Role",
@@ -72,7 +72,7 @@
     {
       "name": "AN_Bias_Axes",
       "label": "Bias-Achsen",
-      "definition": "Soziale Achsen, entlang derer das Werk Bias ausdrücklich analysiert, nicht bloß als demografisches Merkmal nennt.",
+      "definition": "Soziale Achsen, entlang derer das Werk Bias analysiert, misst, Gruppen vergleicht oder ein eigenes Beispiel ausführt. Eine Achse, die nur in einer Aufzählung geschützter Merkmale, in Stichprobenangaben, im Forschungsstand oder im Ausblick steht, wird nicht codiert.",
       "multi": true,
       "values": [
         "Gender",
@@ -107,7 +107,7 @@
       "value_definitions": {
         "Gender": "Das Werk analysiert Bias entlang des Geschlechts.",
         "Race_Ethnicity": "Das Werk analysiert Bias entlang rassistischer Zuschreibung oder ethnischer Zugehörigkeit.",
-        "Intersectional": "Das Werk behandelt mindestens zwei Achsen in ihrer Wechselwirkung, nicht bloß nebeneinander.",
+        "Intersectional": "Das Werk behandelt mindestens zwei Achsen in ihrer Wechselwirkung, und eine Textstelle zeigt ein Ergebnis oder Argument, das von der Kombination abhängt.",
         "Disability": "Das Werk analysiert Bias entlang von Behinderung.",
         "Age": "Das Werk analysiert Bias entlang des Alters.",
         "Socioeconomic": "Das Werk analysiert Bias entlang von Einkommen, Bildung oder sozialer Lage.",
@@ -116,14 +116,14 @@
         "Religion": "Das Werk analysiert Bias entlang religiöser Zugehörigkeit.",
         "Physical_Appearance": "Das Werk analysiert Bias entlang des äußeren Erscheinungsbilds.",
         "Nationality_Migration": "Das Werk analysiert Bias entlang von Staatsangehörigkeit, Herkunft oder Migration.",
-        "Other_Axis": "Das Werk analysiert Bias entlang einer Achse, die diese Liste nicht enthält.",
-        "None": "Das Werk analysiert Bias entlang keiner sozialen Achse."
+        "Other_Axis": "Das Werk analysiert Bias entlang einer sozialen Achse, die diese Liste nicht enthält, etwa Kaste oder Wohnort. Die Achse steht in den Notizen.",
+        "None": "Das Werk behandelt Bias, analysiert ihn aber entlang keiner bestimmten sozialen Achse."
       }
     },
     {
       "name": "AN_Harm_Types",
       "label": "Schadensarten",
-      "definition": "Im Werk ausdrücklich benannte oder nachgewiesene Schadensmechanismen nach der Taxonomie von Gallegos et al. (2024), verbindlich bei Volltext als Codierbasis.",
+      "definition": "Schadensmechanismen nach der Taxonomie von Gallegos et al. (2024), die das Werk für seinen eigenen Gegenstand nachweist, misst oder argumentiert, jeder Wert mit eigener Textstelle. Verbindlich bei Volltext als Codierbasis.",
       "multi": true,
       "values": [
         "Derogatory_Language",
@@ -151,14 +151,14 @@
       },
       "value_definitions": {
         "Derogatory_Language": "Beleidigungen, Schimpfwörter oder andere Ausdrücke, die eine soziale Gruppe herabsetzen.",
-        "Disparate_Performance": "Das System verarbeitet oder erzeugt Sprache für verschiedene soziale Gruppen oder Sprachvarietäten unterschiedlich gut.",
+        "Disparate_Performance": "Die Qualität des Systems, etwa Genauigkeit, Fehlerrate oder Erkennung, unterscheidet sich zwischen sozialen Gruppen oder Sprachvarietäten.",
         "Erasure": "Sprache und Erfahrungen einer sozialen Gruppe werden ausgelassen oder unsichtbar gemacht.",
-        "Exclusionary_Norms": "Normen der dominanten Gruppe werden verstärkt und andere Gruppen implizit ausgeschlossen oder abgewertet.",
+        "Exclusionary_Norms": "Die Norm einer dominanten Gruppe wirkt als Standard, andere Gruppen werden ausgelassen oder abgewertet, etwa männlicher Standard oder die Annahme digital versierter Klient:innen.",
         "Misrepresentation": "Eine unvollständige oder nicht repräsentative Darstellung wird auf eine soziale Gruppe verallgemeinert.",
         "Stereotyping": "Negative, als unveränderlich dargestellte Zuschreibungen an eine soziale Gruppe.",
         "Toxicity": "Anstößige Sprache, die eine soziale Gruppe angreift, bedroht oder zu Hass oder Gewalt aufruft.",
-        "Direct_Discrimination": "Ungleichbehandlung ausdrücklich wegen der Zugehörigkeit zu einer sozialen Gruppe.",
-        "Indirect_Discrimination": "Ungleichbehandlung trotz scheinbar neutraler Kriterien, etwa über stellvertretende Merkmale.",
+        "Direct_Discrimination": "Eine Entscheidung über Personen oder Gruppen, etwa Einstellung, Leistung oder Risikowert, ändert sich mit dem Gruppenmerkmal selbst.",
+        "Indirect_Discrimination": "Eine Entscheidung über Personen oder Gruppen benachteiligt über ein scheinbar neutrales Kriterium oder stellvertretendes Merkmal, etwa Name, Postleitzahl oder digitalen Zugang.",
         "None": "Das Werk benennt keinen Schadensmechanismus."
       },
       "optional": true,
@@ -258,6 +258,153 @@
       }
     },
     {
+      "name": "AN_Task",
+      "label": "Aufgabe",
+      "definition": "Aufgabe der beruflichen Praxis, für die das Werk den Einsatz von KI beschreibt, erprobt oder vorschlägt. Die Werte werden pilotiert.",
+      "multi": true,
+      "values": [
+        "Documentation_Recording",
+        "Case_Assessment_Decision_Support",
+        "Counselling_Client_Communication",
+        "Administration",
+        "Research",
+        "Teaching_Further_Education",
+        "Other_Task",
+        "None"
+      ],
+      "value_labels": {
+        "Documentation_Recording": "Dokumentation",
+        "Case_Assessment_Decision_Support": "Fallbeurteilung und Entscheidungsunterstützung",
+        "Counselling_Client_Communication": "Beratung und Kommunikation mit Klient:innen",
+        "Administration": "Verwaltung",
+        "Research": "Forschung",
+        "Teaching_Further_Education": "Lehre und Weiterbildung",
+        "Other_Task": "Andere Aufgabe",
+        "None": "Keine Aufgabe"
+      },
+      "value_definitions": {
+        "Documentation_Recording": "Fallbezogene Dokumentation, etwa Fall-, Gesprächs- und Verlaufsnotizen, Berichte und Hilfepläne.",
+        "Case_Assessment_Decision_Support": "Einschätzung von Situationen, Risiken und Bedarfen sowie Unterstützung von Entscheidungen über Hilfen.",
+        "Counselling_Client_Communication": "Beratung, Gesprächsführung und schriftliche oder digitale Kommunikation mit Adressat:innen.",
+        "Administration": "Organisatorische Aufgaben ohne Fallbezug, etwa Terminplanung, Anträge der Einrichtung, interne Korrespondenz und Abrechnung.",
+        "Research": "Forschungstätigkeit in der Sozialen Arbeit, etwa Literaturarbeit, Datenanalyse und Schreiben.",
+        "Teaching_Further_Education": "Studium, Lehre, Fort- und Weiterbildung von Fachkräften.",
+        "Other_Task": "Eine Aufgabe, die diese Liste nicht enthält. Die Aufgabe steht in den Notizen.",
+        "None": "Das Werk beschreibt keine Aufgabe, für die KI genutzt wird."
+      },
+      "optional": true,
+      "introduced_in": "1.4",
+      "pilot": true
+    },
+    {
+      "name": "AN_Gender_Definition",
+      "label": "Definition von Geschlecht",
+      "definition": "Ob das Werk sagt, was es unter Geschlecht versteht, codiert aus dem Volltext.",
+      "multi": false,
+      "values": [
+        "Explicit",
+        "Implicit_Only",
+        "Absent",
+        "Not_Applicable"
+      ],
+      "value_labels": {
+        "Explicit": "Ausdrücklich",
+        "Implicit_Only": "Nur implizit",
+        "Absent": "Fehlt",
+        "Not_Applicable": "Nicht anwendbar"
+      },
+      "value_definitions": {
+        "Explicit": "Das Werk bestimmt Geschlecht in einem eigenen Satz oder übernimmt ausdrücklich eine zitierte Bestimmung.",
+        "Implicit_Only": "Das Werk bestimmt Geschlecht nicht, sein Verständnis ist aber aus Kategorien, Messung oder Theorierahmen erkennbar.",
+        "Absent": "Das Werk behandelt Geschlecht, ohne es zu bestimmen oder ein Verständnis erkennen zu lassen.",
+        "Not_Applicable": "Das Werk behandelt Geschlecht nicht als Gegenstand, Stichprobenangaben genügen nicht."
+      },
+      "optional": true,
+      "binding_when": "AN_Coding_Basis = Fulltext",
+      "introduced_in": "1.4"
+    },
+    {
+      "name": "AN_Bias_Definition",
+      "label": "Definition von Bias",
+      "definition": "Ob das Werk sagt, was es unter Bias versteht, codiert aus dem Volltext.",
+      "multi": false,
+      "values": [
+        "Explicit",
+        "Implicit_Only",
+        "Absent",
+        "Not_Applicable"
+      ],
+      "value_labels": {
+        "Explicit": "Ausdrücklich",
+        "Implicit_Only": "Nur implizit",
+        "Absent": "Fehlt",
+        "Not_Applicable": "Nicht anwendbar"
+      },
+      "value_definitions": {
+        "Explicit": "Das Werk bestimmt Bias, Diskriminierung oder Unfairness in einem eigenen Satz oder übernimmt ausdrücklich eine zitierte oder technische Bestimmung, etwa ein Fairnesskriterium.",
+        "Implicit_Only": "Das Werk bestimmt Bias nicht, sein Verständnis ist aber aus Messung oder Rahmung erkennbar.",
+        "Absent": "Das Werk behandelt Bias, ohne ihn zu bestimmen oder ein Verständnis erkennen zu lassen.",
+        "Not_Applicable": "Das Werk behandelt Bias nicht als Gegenstand."
+      },
+      "optional": true,
+      "binding_when": "AN_Coding_Basis = Fulltext",
+      "introduced_in": "1.4"
+    },
+    {
+      "name": "AN_Gender_Understanding",
+      "label": "Verständnis von Geschlecht",
+      "definition": "Verständnis von Geschlecht, das der eigenen Analyse des Werks zugrunde liegt.",
+      "multi": true,
+      "values": [
+        "Binary_Categorical",
+        "Social_Construct",
+        "Non_Binary_Inclusive",
+        "Intersectional",
+        "Unclear",
+        "Not_Applicable"
+      ],
+      "value_labels": {
+        "Binary_Categorical": "Binär und kategorial",
+        "Social_Construct": "Soziale Konstruktion",
+        "Non_Binary_Inclusive": "Nicht-binär einschließend",
+        "Intersectional": "Intersektional",
+        "Unclear": "Unklar",
+        "Not_Applicable": "Nicht anwendbar"
+      },
+      "value_definitions": {
+        "Binary_Categorical": "Geschlecht erscheint als zwei feste Kategorien, etwa Frau und Mann, ohne dass das Werk diese Setzung prüft.",
+        "Social_Construct": "Geschlecht gilt als sozial hergestellt, als Verhältnis oder als Machtstruktur.",
+        "Non_Binary_Inclusive": "Die Analyse führt Geschlechter jenseits der Binarität, etwa nicht-binäre oder trans Personen, als eigene Kategorien.",
+        "Intersectional": "Geschlecht wird in Wechselwirkung mit mindestens einer weiteren Achse analysiert.",
+        "Unclear": "Das Werk behandelt Geschlecht, sein Verständnis ist aber nicht bestimmbar.",
+        "Not_Applicable": "Das Werk behandelt Geschlecht nicht als Gegenstand."
+      },
+      "optional": true,
+      "binding_when": "AN_Coding_Basis = Fulltext",
+      "introduced_in": "1.4"
+    },
+    {
+      "name": "AN_Theory_Reference",
+      "label": "Theoriebezug",
+      "definition": "Ob das Werk eine Theorie, Theorietradition oder ein theoretisches Konzept benennt und damit seine Behandlung von Geschlecht oder Bias rahmt. Die Theorien selbst stehen als belegte Bezüge mit Fundstelle.",
+      "multi": false,
+      "values": [
+        "Yes",
+        "No"
+      ],
+      "value_labels": {
+        "Yes": "Ja",
+        "No": "Nein"
+      },
+      "value_definitions": {
+        "Yes": "Das Werk rahmt seine Behandlung von Geschlecht oder Bias ausdrücklich theoretisch.",
+        "No": "Das Werk nennt keinen solchen Theoriebezug."
+      },
+      "optional": true,
+      "binding_when": "AN_Coding_Basis = Fulltext",
+      "introduced_in": "1.4"
+    },
+    {
       "name": "AN_Coding_Basis",
       "label": "Codierbasis",
       "definition": "Text des Werks, auf dem die Codierung beruht.",
@@ -285,6 +432,12 @@
       "free_text": true
     }
   ],
+  "field_states": {
+    "not_collected": {
+      "label": "Nicht erhoben",
+      "definition": "Das Feld wurde erst nach der Codebuchversion eingeführt, unter der der Datensatz codiert wurde. Der Zustand sagt nichts über das Werk aus."
+    }
+  },
   "study_types": [
     "Empirisch",
     "Experimentell",

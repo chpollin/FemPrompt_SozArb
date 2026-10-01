@@ -1,11 +1,12 @@
 # Provisional source-bound synthesis outline
 
-Source fingerprint: `sha256:f9e98e61ee04748c32084dfddb2b5250cad7eb9d6d4edea5aed6e3c3b09ab14b`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:3cbbd82a523022bb3b847ca363213de18acc7ccb2a5d73f0680eb9e51d06b834`. Deterministic internal preparation; no approval is created.
 
 This is a writing and verification plan, not a finished synthesis. The canonical manuscript remains `research-vault/40_output/paper/paper.md`. Tables count recorded coding; the statements below are existing assertion texts with their recorded authority, not new findings.
 
 ## SQ1 Use
 
+- `AN_Task`: 0 coded works out of 154 works with recorded Include; 154 missing or unresolved. See the CSV for codes and contributing work IDs.
 - `AN_Population`: 19 coded works out of 154 works with recorded Include; 135 missing or unresolved. See the CSV for codes and contributing work IDs.
 - `AN_Prompting_Role` (Recommended_Practice only): 19 coded works out of 154 works with recorded Include; 135 missing or unresolved. See the CSV for codes and contributing work IDs.
 
@@ -30,7 +31,10 @@ Before final prose, complete missing codes, reconcile conflicts, distinguish obs
 
 ## SQ4 Conceptual grounding
 
-- No coded field yet. The fields for this question are proposed in codebook amendment v1.4 and are answerable from full texts only.
+- `AN_Gender_Definition`: 0 coded works out of 154 works with recorded Include; 154 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Bias_Definition`: 0 coded works out of 154 works with recorded Include; 154 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Gender_Understanding`: 0 coded works out of 154 works with recorded Include; 154 missing or unresolved. See the CSV for codes and contributing work IDs.
+- `AN_Theory_Reference`: 0 coded works out of 154 works with recorded Include; 154 missing or unresolved. See the CSV for codes and contributing work IDs.
 
 Before final prose, complete missing codes, reconcile conflicts, distinguish observed study findings from proposals, and assess design limitations. Do not infer that absent coding demonstrates a literature gap.
 

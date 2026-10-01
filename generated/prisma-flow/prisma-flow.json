@@ -25,8 +25,8 @@
     "corpus/source_tool_mapping.json": "sha256:9feb96ce613a778cf76ac43f0b5dcd302170e0a8e5d8331bf3052cd0d5737c76",
     "corpus/zotero_export.json": "sha256:a6bddc7f5da07b5d4b6a9c67ccc861658cec4eeff317c32b075068117a551b68",
     "corpus/zotero_sync.json": "sha256:a68c1242fa39cb279c830e374d5ec07d174dad2763e8773cbc2db6b8e07d272b",
-    "docs/data/research_vault_v2.json": "sha256:54cd3455775c905c78a6314a0c067a0b4737dfc2d437070f0f4bb7ceac5e78e0",
-    "generated/completion/completion-package.json": "sha256:ae006060fd51542f4789ac2203cabe61e16817d243f2366f9a5a660370412ea5",
+    "docs/data/research_vault_v2.json": "sha256:2edd534175136a05ba6b25f9f062ff89a275042c5aeacc815e5164c51ffa48b4",
+    "generated/completion/completion-package.json": "sha256:d80c1dc2ccf40a6961dde8120d022e26d17d8fb9bfec8391a4f085f2d90db29c",
     "generated/contextual-update-2026-08-24-intake-package.json": "sha256:b7266d89cd632346c67d0e4f7b09a574edfd11888a61c29731785c2c05e31a48",
     "generated/round2-intake-package.json": "sha256:b83bb42daff38d23ce3d7981797d92aabc15caf415e600c5558f03e4ef465d1a"
   },

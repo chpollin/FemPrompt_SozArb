@@ -1,6 +1,6 @@
 # Data dictionary
 
-Source fingerprint: `sha256:f9e98e61ee04748c32084dfddb2b5250cad7eb9d6d4edea5aed6e3c3b09ab14b`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:3cbbd82a523022bb3b847ca363213de18acc7ccb2a5d73f0680eb9e51d06b834`. Deterministic internal preparation; no approval is created.
 
 | Field / artifact | Meaning |
 |---|---|
@@ -37,7 +37,7 @@ Source fingerprint: `sha256:f9e98e61ee04748c32084dfddb2b5250cad7eb9d6d4edea5aed6
 | denominator_recorded_include_works | All works with a consistent Include decision in the selected authority track. |
 | missing_or_unresolved_included_works | Included works not represented in this field; not coded as None. |
 | authority / authority_breakdown | Derived from the works counted in the row or cell. `authority` names the weakest governed lifecycle state among them, or `no_contributing_works`. The breakdown counts coding lifecycle states, decision authority tracks and works with an accepted AI correction. |
-| analysis_field_states | Per track and field, the Include denominator and the work IDs in each of the states coded, explicit_none, undecidable, conflict_coding, conflict_decision, hold, open_negative_review, stale_source_review, invalid_code and missing. Each work has exactly one state per field. |
+| analysis_field_states | Per track and field, the Include denominator and the work IDs in each of the states coded, explicit_none, undecidable, conflict_coding, conflict_decision, hold, open_negative_review, stale_source_review, not_collected, invalid_code and missing. Each work has exactly one state per field. |
 | analysis_associations | Cross-tabulations with population, determinable and open work IDs. Cell `status` is observed, not_determinable or zero_in_complete_coding. The category matrices cover all governed screened works at level ja and at level teilweise or ja. |
 | round1_selection_check | Round-one category marginals, include-rule counts and pairwise co-occurrence with Jaccard index per track and population, counted per record as in the canonical replay. |
 | agent_track_diagnostics | Workflow diagnostics over committed agent-run packages with run scope, track differences with Cohen's kappa for decision and categories, code-level disagreements for analysis fields, AI Agent Review outcomes, accepted correction fields and blockers. Labelled `workflow_diagnostic_not_accuracy`. |
@@ -54,5 +54,10 @@ Controlled descriptive fields below come from `assessment/categories.yaml`. They
 - `AN_Mitigation_Stage`: Pre_Processing, In_Training, Intra_Processing, Post_Processing, Prompt_Practice, Organisational_Process, None; multiple codes allowed.
 - `AN_Mitigation_Status`: Evaluated, Demonstrated, Proposed, None.
 - `AN_Population`: Child_Family_Welfare, Mental_Health, Health_Care, Homelessness_Youth, Social_Assistance_Admin, Education_Professional, General_Social_Work, Not_SW_Specific; multiple codes allowed.
+- `AN_Task`: Documentation_Recording, Case_Assessment_Decision_Support, Counselling_Client_Communication, Administration, Research, Teaching_Further_Education, Other_Task, None; multiple codes allowed.
+- `AN_Gender_Definition`: Explicit, Implicit_Only, Absent, Not_Applicable.
+- `AN_Bias_Definition`: Explicit, Implicit_Only, Absent, Not_Applicable.
+- `AN_Gender_Understanding`: Binary_Categorical, Social_Construct, Non_Binary_Inclusive, Intersectional, Unclear, Not_Applicable; multiple codes allowed.
+- `AN_Theory_Reference`: Yes, No.
 - `AN_Coding_Basis`: Fulltext, Knowledge_Doc, Abstract.
 - `AN_Notes`: free text.

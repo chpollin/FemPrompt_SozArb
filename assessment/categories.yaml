@@ -1,12 +1,12 @@
 # Assessment Categories
-# Version: 1.3 (analysis_fields block frozen for round 2; eligibility content unchanged from v1.2)
+# Version: 1.4 (analysis fields amended for the five sub-questions SQ1 to SQ5; eligibility content unchanged from v1.2)
 # Synchronized with Human-Assessment Google Sheets schema
 # The analysis_presentation block at the end holds German display labels and short
 # definitions. It is presentation only and changes no coding value, key or rule.
 
 metadata:
   project: Literature Review (AI Literacy & Bias in Social Work)
-  last_updated: 2026-07-17
+  last_updated: 2026-10-01
   status: active
   # The category "type: binary" below describes the completed benchmark tracks (human and
   # LLM 10K). The PRISM screening tool scores the same categories three-level and derives a
@@ -16,6 +16,7 @@ metadata:
     levels: [nein, teilweise, ja]   # 0 / 1 / 2
     derivation: "both dimensions ja => Include; both at least teilweise => Unclear; any dimension entirely nein => Exclude"
   changelog:
+    - "v1.4 (2026-10-01): operator adoption of the amended codebook (knowledge/codebook-v1.4-proposal.md, status adopted). New SQ4 fields AN_Gender_Definition, AN_Bias_Definition, AN_Gender_Understanding and AN_Theory_Reference, new pilot field AN_Task for SQ1, coding rules and anchors for AN_Bias_Axes and AN_Harm_Types, derived field state not_collected for annotations coded under an earlier codebook version. Analysis fields are coded by AI agent tracks only. AN_Stage_Status is deferred until a validator exists. Ten eligibility categories, decision rule and exclusion reasons unchanged."
     - "2026-10-01: exclusion reason Consolidated_expert_exclusion added so PRISM can confirm a consolidated expert Exclude without inventing a reason (ADR-042); German display labels for the exclusion reasons; categories, decision rule and analysis vocabulary unchanged."
     - "v1.3 (2026-07-17): analysis_fields block frozen after the pilot and operator study-goal clarification (update-protocol B.1); Studientyp becomes required for Include; eligibility content unchanged from v1.2."
     - "2026-07-01: three-level PRISM screening scale documented (ADR-024); benchmark type stays binary."
@@ -208,13 +209,15 @@ study_types:
   - Literaturreview
   - Unclear
 
-# Analysis fields (TP4), frozen 2026-07-17 after the pilot (knowledge/analysis-fields-pilot.md)
-# and the operator study-goal clarification. Descriptive coding fields for included papers,
-# NOT eligibility criteria; eligibility content above is unchanged (v1.2). Design and rules
-# in knowledge/update-protocol.md sections B, B.1, C. Coded only for Decision = Include;
-# every field has a None code, an empty cell for an included paper is a validation error.
-# `serves` names the sub-questions SQ1 to SQ5 of knowledge/project.md (numbering of
-# 2026-10-01). SQ4 Conceptual grounding has no field until codebook amendment v1.4.
+# Analysis fields (TP4), frozen 2026-07-17 and amended to v1.4 on 2026-10-01
+# (knowledge/codebook-v1.4-proposal.md). Descriptive coding fields for included papers,
+# NOT eligibility criteria; eligibility content above is unchanged (v1.2). Rules in
+# knowledge/update-protocol.md (Analysis coding). Coded only for Decision = Include and
+# only by AI agent tracks, human reviewers screen. `serves` names the sub-questions SQ1
+# to SQ5 of knowledge/project.md (numbering of 2026-10-01). `introduced_in` marks a field
+# added after v1.3, and an annotation coded under an earlier version derives the state
+# not_collected for it (analysis_field_states). `rules` and `anchors` are coding guidance
+# for the agent tracks and are not projected into the app vocabulary.
 analysis_fields:
   - name: AN_Prompting_Role
     multi: true
@@ -230,12 +233,33 @@ analysis_fields:
     serves: SQ2
     values: [Gender, Race_Ethnicity, Intersectional, Disability, Age, Socioeconomic, Language_Culture, Sexual_Orientation_Identity, Religion, Physical_Appearance, Nationality_Migration, Other_Axis, None]
     note: "Intersectional requires at least two axes treated in their interaction, not merely co-mentioned."
+    rules:
+      - "An axis is coded when the work analyses bias along it, measures or compares groups along it, or uses it as a worked example in its own argument. An axis that appears only in an enumeration of protected attributes, in sample demographics, in a related-work passage or in an outlook is left uncoded."
+      - "Other_Axis is reserved for a social axis of disadvantage that the list lacks, such as caste or place of residence, and the axis is named in AN_Notes. Unspecified marginalised groups and non-social variables such as study subject or programming experience are no axes. Other_Axis never replaces a listed axis."
+      - "None applies when the work discusses bias without any axis it analyses in the sense of the first rule."
+      - "Race_Ethnicity covers racialisation and ethnic group, Nationality_Migration citizenship, country of origin and migration or refugee status, Language_Culture language, language variety and cultural region. The axis is coded under the name the work gives it, and both are coded when the work uses both."
+      - "Intersectional additionally requires a passage in which the outcome or argument depends on the combination of axes, such as a result for Black women that differs from the results for Black people and for women."
+    anchors:
+      - "HMDFMBV3 (positive for Intersectional): the dataset pairs a combined group with its stereotype, such as ('Black+Women', 'Angry Black Woman'), section 2.3."
+      - "R7V99ERA (negative for enumerations): the introduction lists gender, disability and mental health status as dimensions studied elsewhere, while the work itself examines race, so only Race_Ethnicity is coded."
+      - "VSZM7CT6 (boundary): the sentence 'AI algorithms may reinforce racial and gender stereotypes' counts only when the work develops it as its own worked example."
   - name: AN_Harm_Types
     multi: true
     optional: true
     binding_when: AN_Coding_Basis = Fulltext
     serves: SQ2
     values: [Derogatory_Language, Disparate_Performance, Erasure, Exclusionary_Norms, Misrepresentation, Stereotyping, Toxicity, Direct_Discrimination, Indirect_Discrimination, None]
+    rules:
+      - "A harm type is coded when the work demonstrates, measures or argues the mechanism for its own object, and every assigned value has its own passage. A harm named only in background, in a definitions table or in a related-work passage is left uncoded. A review or taxonomy codes the harm types that structure its own synthesis as a section, table row or coded category."
+      - "Allocational harms are separated from representational harms first (Gallegos et al. 2024, Table 1). Direct_Discrimination and Indirect_Discrimination require an allocation or a decision about persons or groups, such as hiring, benefits, screening-in or a risk score. Output that depicts or describes a group is a representational harm."
+      - "Direct_Discrimination applies when the decision changes with the group attribute itself, stated in the input or the rule. Indirect_Discrimination applies when an apparently neutral criterion or proxy such as a name, postcode, prior service contact or digital access produces the disadvantage. An audit that varies names correlated with race or gender is indirect discrimination. When the work classifies the discrimination itself, its classification is coded."
+      - "Disparate_Performance covers differences in system quality between groups or language varieties, such as accuracy, error rate or recognition. A difference in decision outcomes is discrimination, a difference in quality is Disparate_Performance, and a work that shows both codes both."
+      - "Exclusionary_Norms applies when the norm of a dominant group acts as default and other groups are left out or devalued, such as a male default, cis-centric answers or the assumption of digitally skilled clients. Stereotyping ascribes attributes to a group, Erasure leaves a group or its experience out, Misrepresentation generalises an unrepresentative depiction to a group."
+    anchors:
+      - "MS3CNU3S (taxonomy): Table 1 divides representational harms from allocational harms, the latter being the 'Disparate distribution of resources or opportunities between social groups'."
+      - "YMABYPKF (Indirect_Discrimination): an audit of names correlated with race and gender concludes that disparities 'may constitute bias in the form of disparate impact'."
+      - "7FEFMCBZ (allocational harm): a racial disparity in screen-in decisions of child welfare workers and an algorithm is discrimination, not only Disparate_Performance."
+      - "MA3LBJS6 (Exclusionary_Norms): digital first contact must not be the only route, since otherwise less digitally skilled help seekers are no longer reached."
   - name: AN_Mitigation_Stage
     multi: true
     serves: [SQ3, SQ5]  # SQ5 through Organisational_Process
@@ -249,12 +273,75 @@ analysis_fields:
     serves: [SQ1, SQ2]
     values: [Child_Family_Welfare, Mental_Health, Health_Care, Homelessness_Youth, Social_Assistance_Admin, Education_Professional, General_Social_Work, Not_SW_Specific]
     note: "Education_Professional restricted to professional or higher-education AI-literacy settings; general or unspecified context goes to Not_SW_Specific."
+  - name: AN_Task
+    multi: true
+    optional: true  # binding for Include once the pilot has finalised the values
+    introduced_in: "1.4"
+    pilot: true  # values are candidates until the pilot decision rule is met
+    serves: SQ1
+    values: [Documentation_Recording, Case_Assessment_Decision_Support, Counselling_Client_Communication, Administration, Research, Teaching_Further_Education, Other_Task, None]
+    note: "Task of professional practice for which the work describes, tests or proposes the use of AI. Complements AN_Population, which records the field or group of addressees. Documentation_Recording and Administration are separated by the case reference. A general LLM benchmark without an application task receives None. A task outside social work, such as resume screening, receives Other_Task with the task named in AN_Notes."
+  - name: AN_Gender_Definition
+    multi: false
+    optional: true  # binding when the coding basis is the full text
+    introduced_in: "1.4"
+    binding_when: AN_Coding_Basis = Fulltext
+    serves: SQ4
+    values: [Explicit, Implicit_Only, Absent, Not_Applicable]
+    note: "Whether the work says what it means by gender. Not_Applicable exactly when AN_Gender_Understanding is Not_Applicable, Absent exactly when it is Unclear. Sample demographics, a gender control variable or a single mention in an enumeration do not make gender an object. An Explicit code carries its defining passage with location."
+    anchors:
+      - "GP4JDSI8 (Explicit): 'neither sex nor gender are essential, natural, or fixed properties'."
+      - "CYZQ6XPK (Implicit_Only): 'The gender biases we considered in this paper cover only binary gender.' in the limitations."
+      - "RAV6DAFQ (Not_Applicable): no passage treats gender as an object."
+  - name: AN_Bias_Definition
+    multi: false
+    optional: true
+    introduced_in: "1.4"
+    binding_when: AN_Coding_Basis = Fulltext
+    serves: SQ4
+    values: [Explicit, Implicit_Only, Absent, Not_Applicable]
+    note: "Whether the work says what it means by bias. Explicit when the work determines bias, discrimination or unfairness in a sentence of its own or adopts a cited or technical determination explicitly, such as a fairness criterion or the legal pair of disparate treatment and disparate impact. Implicit_Only when the understanding is recognisable from measurement or frame only. Absent when the work treats bias without either. Not_Applicable when bias is no object of the work. An Explicit code carries its defining passage with location."
+    anchors:
+      - "AZJW38MF (Explicit): 'In social work it is common to define bias as a prejudice against certain problems'."
+      - "YMABYPKF (Explicit): bias is introduced through the legal pair of disparate treatment and disparate impact."
+  - name: AN_Gender_Understanding
+    multi: true
+    optional: true
+    introduced_in: "1.4"
+    binding_when: AN_Coding_Basis = Fulltext
+    serves: SQ4
+    values: [Binary_Categorical, Social_Construct, Non_Binary_Inclusive, Intersectional, Unclear, Not_Applicable]
+    note: "The understanding of gender that underlies the work's own analysis. A conceptual statement that the analysis does not follow goes to AN_Notes and the value follows the analysis. Binary_Categorical and Non_Binary_Inclusive exclude each other. Unclear and Not_Applicable stand alone. Social_Construct and Intersectional combine with each other and with Non_Binary_Inclusive. Intersectional follows the rule of Intersectional in AN_Bias_Axes. Non_Binary_Inclusive needs genders beyond the binary as categories of the analysis, a limitation sentence does not suffice."
+    anchors:
+      - "2EBHMYU4 (Social_Construct and Intersectional): 'the traditional understanding of gender as binary (male/female) is being challenged today' with intersectionality as frame."
+      - "3XMBE43Z (Non_Binary_Inclusive): 'we included variations that referenced non-binary individuals'."
+      - "22XEFRWP (boundary): 'Gender was dummy-coded (0 = woman, 1 = man)' is sample demography and decides nothing alone."
+  - name: AN_Theory_Reference
+    multi: false
+    optional: true
+    introduced_in: "1.4"
+    binding_when: AN_Coding_Basis = Fulltext
+    serves: SQ4
+    values: ["Yes", "No"]  # quoted, YAML 1.1 would read bare Yes and No as booleans
+    note: "Yes when the work names a theory, theoretical tradition or theoretical concept and uses it to frame its treatment of gender or bias. A citation that supports an empirical finding is no theory reference, and a theory that frames neither gender nor bias does not count. Each theory is recorded as a source-linked theory reference with its passage and location, not as a closed code."
+    anchors:
+      - "7L93JBLR (Yes): queer theory and intersectional feminism frame the treatment of gender equality in EU AI law."
+      - "CYZQ6XPK (No): an evaluation of gender bias without a theoretical frame."
   - name: AN_Coding_Basis
     multi: false
     serves: audit-trail
     values: [Fulltext, Knowledge_Doc, Abstract]
   - name: AN_Notes
     free_text: true
+
+# Field states for analysis fields. Derived per annotation and field, never entered as a
+# code. not_collected keeps a field introduced after the codebook version of an annotation
+# apart from coded absence (None), from undecidable and from a field still to be coded.
+analysis_field_states:
+  not_collected:
+    label: Nicht erhoben
+    definition: Das Feld wurde erst nach der Codebuchversion eingeführt, unter der der Datensatz codiert wurde. Der Zustand sagt nichts über das Werk aus.
+    applies_when: introduced_in of the field is later than the codebook version recorded for the annotation, and an annotation without a recorded version counts as v1.3
 
 # Presentation metadata for PRISM and the public Evidence Companion, projected by
 # src/publish/build_analysis_fields.py into docs/data/analysis_fields.json. German
@@ -313,7 +400,7 @@ analysis_presentation:
         definition: Das Werk nennt keine codierbare Technik, auch wenn es Prompting behandelt.
   AN_Bias_Axes:
     label: Bias-Achsen
-    definition: Soziale Achsen, entlang derer das Werk Bias ausdrücklich analysiert, nicht bloß als demografisches Merkmal nennt.
+    definition: Soziale Achsen, entlang derer das Werk Bias analysiert, misst, Gruppen vergleicht oder ein eigenes Beispiel ausführt. Eine Achse, die nur in einer Aufzählung geschützter Merkmale, in Stichprobenangaben, im Forschungsstand oder im Ausblick steht, wird nicht codiert.
     values:
       Gender:
         label: Geschlecht
@@ -323,7 +410,7 @@ analysis_presentation:
         definition: Das Werk analysiert Bias entlang rassistischer Zuschreibung oder ethnischer Zugehörigkeit.
       Intersectional:
         label: Intersektional
-        definition: Das Werk behandelt mindestens zwei Achsen in ihrer Wechselwirkung, nicht bloß nebeneinander.
+        definition: Das Werk behandelt mindestens zwei Achsen in ihrer Wechselwirkung, und eine Textstelle zeigt ein Ergebnis oder Argument, das von der Kombination abhängt.
       Disability:
         label: Behinderung
         definition: Das Werk analysiert Bias entlang von Behinderung.
@@ -350,26 +437,26 @@ analysis_presentation:
         definition: Das Werk analysiert Bias entlang von Staatsangehörigkeit, Herkunft oder Migration.
       Other_Axis:
         label: Andere Achse
-        definition: Das Werk analysiert Bias entlang einer Achse, die diese Liste nicht enthält.
+        definition: Das Werk analysiert Bias entlang einer sozialen Achse, die diese Liste nicht enthält, etwa Kaste oder Wohnort. Die Achse steht in den Notizen.
       None:
         label: Keine Achse
-        definition: Das Werk analysiert Bias entlang keiner sozialen Achse.
+        definition: Das Werk behandelt Bias, analysiert ihn aber entlang keiner bestimmten sozialen Achse.
   AN_Harm_Types:
     label: Schadensarten
-    definition: Im Werk ausdrücklich benannte oder nachgewiesene Schadensmechanismen nach der Taxonomie von Gallegos et al. (2024), verbindlich bei Volltext als Codierbasis.
+    definition: Schadensmechanismen nach der Taxonomie von Gallegos et al. (2024), die das Werk für seinen eigenen Gegenstand nachweist, misst oder argumentiert, jeder Wert mit eigener Textstelle. Verbindlich bei Volltext als Codierbasis.
     values:
       Derogatory_Language:
         label: Abwertende Sprache
         definition: Beleidigungen, Schimpfwörter oder andere Ausdrücke, die eine soziale Gruppe herabsetzen.
       Disparate_Performance:
         label: Ungleiche Leistung
-        definition: Das System verarbeitet oder erzeugt Sprache für verschiedene soziale Gruppen oder Sprachvarietäten unterschiedlich gut.
+        definition: Die Qualität des Systems, etwa Genauigkeit, Fehlerrate oder Erkennung, unterscheidet sich zwischen sozialen Gruppen oder Sprachvarietäten.
       Erasure:
         label: Unsichtbarmachung
         definition: Sprache und Erfahrungen einer sozialen Gruppe werden ausgelassen oder unsichtbar gemacht.
       Exclusionary_Norms:
         label: Ausschließende Normen
-        definition: Normen der dominanten Gruppe werden verstärkt und andere Gruppen implizit ausgeschlossen oder abgewertet.
+        definition: Die Norm einer dominanten Gruppe wirkt als Standard, andere Gruppen werden ausgelassen oder abgewertet, etwa männlicher Standard oder die Annahme digital versierter Klient:innen.
       Misrepresentation:
         label: Fehldarstellung
         definition: Eine unvollständige oder nicht repräsentative Darstellung wird auf eine soziale Gruppe verallgemeinert.
@@ -381,10 +468,10 @@ analysis_presentation:
         definition: Anstößige Sprache, die eine soziale Gruppe angreift, bedroht oder zu Hass oder Gewalt aufruft.
       Direct_Discrimination:
         label: Unmittelbare Diskriminierung
-        definition: Ungleichbehandlung ausdrücklich wegen der Zugehörigkeit zu einer sozialen Gruppe.
+        definition: Eine Entscheidung über Personen oder Gruppen, etwa Einstellung, Leistung oder Risikowert, ändert sich mit dem Gruppenmerkmal selbst.
       Indirect_Discrimination:
         label: Mittelbare Diskriminierung
-        definition: Ungleichbehandlung trotz scheinbar neutraler Kriterien, etwa über stellvertretende Merkmale.
+        definition: Eine Entscheidung über Personen oder Gruppen benachteiligt über ein scheinbar neutrales Kriterium oder stellvertretendes Merkmal, etwa Name, Postleitzahl oder digitalen Zugang.
       None:
         label: Keine Schadensart
         definition: Das Werk benennt keinen Schadensmechanismus.
@@ -457,6 +544,98 @@ analysis_presentation:
       Not_SW_Specific:
         label: Nicht spezifisch für Soziale Arbeit
         definition: Allgemeine oder nicht bestimmte Kontexte ohne Bezug auf ein Handlungsfeld der Sozialen Arbeit.
+  AN_Task:
+    label: Aufgabe
+    definition: Aufgabe der beruflichen Praxis, für die das Werk den Einsatz von KI beschreibt, erprobt oder vorschlägt. Die Werte werden pilotiert.
+    values:
+      Documentation_Recording:
+        label: Dokumentation
+        definition: Fallbezogene Dokumentation, etwa Fall-, Gesprächs- und Verlaufsnotizen, Berichte und Hilfepläne.
+      Case_Assessment_Decision_Support:
+        label: Fallbeurteilung und Entscheidungsunterstützung
+        definition: Einschätzung von Situationen, Risiken und Bedarfen sowie Unterstützung von Entscheidungen über Hilfen.
+      Counselling_Client_Communication:
+        label: Beratung und Kommunikation mit Klient:innen
+        definition: Beratung, Gesprächsführung und schriftliche oder digitale Kommunikation mit Adressat:innen.
+      Administration:
+        label: Verwaltung
+        definition: Organisatorische Aufgaben ohne Fallbezug, etwa Terminplanung, Anträge der Einrichtung, interne Korrespondenz und Abrechnung.
+      Research:
+        label: Forschung
+        definition: Forschungstätigkeit in der Sozialen Arbeit, etwa Literaturarbeit, Datenanalyse und Schreiben.
+      Teaching_Further_Education:
+        label: Lehre und Weiterbildung
+        definition: Studium, Lehre, Fort- und Weiterbildung von Fachkräften.
+      Other_Task:
+        label: Andere Aufgabe
+        definition: Eine Aufgabe, die diese Liste nicht enthält. Die Aufgabe steht in den Notizen.
+      None:
+        label: Keine Aufgabe
+        definition: Das Werk beschreibt keine Aufgabe, für die KI genutzt wird.
+  AN_Gender_Definition:
+    label: Definition von Geschlecht
+    definition: Ob das Werk sagt, was es unter Geschlecht versteht, codiert aus dem Volltext.
+    values:
+      Explicit:
+        label: Ausdrücklich
+        definition: Das Werk bestimmt Geschlecht in einem eigenen Satz oder übernimmt ausdrücklich eine zitierte Bestimmung.
+      Implicit_Only:
+        label: Nur implizit
+        definition: Das Werk bestimmt Geschlecht nicht, sein Verständnis ist aber aus Kategorien, Messung oder Theorierahmen erkennbar.
+      Absent:
+        label: Fehlt
+        definition: Das Werk behandelt Geschlecht, ohne es zu bestimmen oder ein Verständnis erkennen zu lassen.
+      Not_Applicable:
+        label: Nicht anwendbar
+        definition: Das Werk behandelt Geschlecht nicht als Gegenstand, Stichprobenangaben genügen nicht.
+  AN_Bias_Definition:
+    label: Definition von Bias
+    definition: Ob das Werk sagt, was es unter Bias versteht, codiert aus dem Volltext.
+    values:
+      Explicit:
+        label: Ausdrücklich
+        definition: Das Werk bestimmt Bias, Diskriminierung oder Unfairness in einem eigenen Satz oder übernimmt ausdrücklich eine zitierte oder technische Bestimmung, etwa ein Fairnesskriterium.
+      Implicit_Only:
+        label: Nur implizit
+        definition: Das Werk bestimmt Bias nicht, sein Verständnis ist aber aus Messung oder Rahmung erkennbar.
+      Absent:
+        label: Fehlt
+        definition: Das Werk behandelt Bias, ohne ihn zu bestimmen oder ein Verständnis erkennen zu lassen.
+      Not_Applicable:
+        label: Nicht anwendbar
+        definition: Das Werk behandelt Bias nicht als Gegenstand.
+  AN_Gender_Understanding:
+    label: Verständnis von Geschlecht
+    definition: Verständnis von Geschlecht, das der eigenen Analyse des Werks zugrunde liegt.
+    values:
+      Binary_Categorical:
+        label: Binär und kategorial
+        definition: Geschlecht erscheint als zwei feste Kategorien, etwa Frau und Mann, ohne dass das Werk diese Setzung prüft.
+      Social_Construct:
+        label: Soziale Konstruktion
+        definition: Geschlecht gilt als sozial hergestellt, als Verhältnis oder als Machtstruktur.
+      Non_Binary_Inclusive:
+        label: Nicht-binär einschließend
+        definition: Die Analyse führt Geschlechter jenseits der Binarität, etwa nicht-binäre oder trans Personen, als eigene Kategorien.
+      Intersectional:
+        label: Intersektional
+        definition: Geschlecht wird in Wechselwirkung mit mindestens einer weiteren Achse analysiert.
+      Unclear:
+        label: Unklar
+        definition: Das Werk behandelt Geschlecht, sein Verständnis ist aber nicht bestimmbar.
+      Not_Applicable:
+        label: Nicht anwendbar
+        definition: Das Werk behandelt Geschlecht nicht als Gegenstand.
+  AN_Theory_Reference:
+    label: Theoriebezug
+    definition: Ob das Werk eine Theorie, Theorietradition oder ein theoretisches Konzept benennt und damit seine Behandlung von Geschlecht oder Bias rahmt. Die Theorien selbst stehen als belegte Bezüge mit Fundstelle.
+    values:
+      "Yes":
+        label: Ja
+        definition: Das Werk rahmt seine Behandlung von Geschlecht oder Bias ausdrücklich theoretisch.
+      "No":
+        label: Nein
+        definition: Das Werk nennt keinen solchen Theoriebezug.
   AN_Coding_Basis:
     label: Codierbasis
     definition: Text des Werks, auf dem die Codierung beruht.

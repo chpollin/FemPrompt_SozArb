@@ -1313,9 +1313,14 @@ function completeAnalysis(source) {
     return { fields: fields, undecidable: {} };
 }
 
-test('analysis vocabulary loaded from the built categories.yaml source (v1.3)', function() {
+test('analysis vocabulary loaded from the built categories.yaml source (v1.4)', function() {
     assert(window.__ANALYSIS_FIELDS__, 'the runner injected docs/data/analysis_fields.json');
-    assertEqual(T.anVersion(), '1.3', 'the frozen analysis_fields version');
+    assertEqual(T.anVersion(), '1.4', 'the analysis_fields version');
+    // fields introduced in v1.4 are optional in PRISM and carry their version
+    ['AN_Task', 'AN_Gender_Definition', 'AN_Bias_Definition', 'AN_Gender_Understanding', 'AN_Theory_Reference'].forEach(function(name) {
+        assert(T.anField(name).optional === true, name + ' is optional');
+        assertEqual(T.anField(name).introduced_in, '1.4', name + ' records its codebook version');
+    });
     // AN_Prompting_Role is captured first (coding-concept sec. 3)
     assertEqual(T.anFieldNames()[0], 'AN_Prompting_Role', 'AN_Prompting_Role is the first field');
     // spot-check a closed vocabulary against categories.yaml v1.3
@@ -1346,6 +1351,15 @@ test('analysisPanelHtml is fed only from the closed vocabulary (no free option v
     });
     // only AN_Notes is a free field; there is exactly one free-text control
     assertEqual(html.split('data-an-free="AN_Notes"').length - 1, 1, 'exactly one free-text control (AN_Notes)');
+});
+
+test('sanitizeAnalysis keeps a recorded codebook version and adds none to a legacy record', function() {
+    var kept = T.sanitizeAnalysis({ fields: { AN_Mitigation_Status: 'None' }, undecidable: {}, codebook_version: '1.4' }, 'raw');
+    assertEqual(kept.codebook_version, '1.4', 'the recorded version survives');
+    var legacy = T.sanitizeAnalysis({ fields: { AN_Mitigation_Status: 'None' }, undecidable: {} }, 'raw');
+    assert(!('codebook_version' in legacy), 'a record without a version stays without one, which reads as v1.3');
+    var junk = T.sanitizeAnalysis({ fields: {}, undecidable: {}, codebook_version: 'latest' }, 'raw');
+    assert(!('codebook_version' in junk), 'a malformed version is dropped');
 });
 
 test('sanitizeAnalysis drops any value outside the frozen vocabulary', function() {
@@ -1513,11 +1527,13 @@ test('analysis export uses the human_assessment.csv column schema with AN column
     assertEqual(cols[0], 'ID');
     assertEqual(cols.indexOf('Studientyp') !== -1, true, 'Studientyp column present');
     // AN order after Notes: techniques, bias, harms, mitigation stage, mitigation status,
-    // population, THEN prompting role (B.1 point 7), then coding basis, notes
+    // population, THEN prompting role (B.1 point 7), then the v1.4 fields in vocabulary
+    // order, coding basis, notes
     var anOrder = cols.slice(iNotes + 1).join(',');
     assertEqual(anOrder,
         'AN_Prompt_Techniques,AN_Bias_Axes,AN_Harm_Types,AN_Mitigation_Stage,AN_Mitigation_Status,' +
-        'AN_Population,AN_Prompting_Role,AN_Coding_Basis,AN_Notes',
+        'AN_Population,AN_Prompting_Role,AN_Task,AN_Gender_Definition,AN_Bias_Definition,' +
+        'AN_Gender_Understanding,AN_Theory_Reference,AN_Coding_Basis,AN_Notes',
         'AN columns in the update-protocol D order (Prompting_Role after Population)');
 });
 
