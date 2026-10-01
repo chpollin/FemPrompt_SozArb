@@ -5,7 +5,7 @@ project:
   repository: https://github.com/chpollin/FemPrompt_SozArb
 method:
   name: Promptotyping
-status: complete
+status: snapshot
 language: en
 version: "0.7"
 created: 2026-09-05
@@ -63,4 +63,4 @@ Research priorities are applying the now documented mitigation-stage rules, reso
 
 ## Operation
 
-Follow the setup commands in `README.md`. `npm run build` constructs all managed projections and `npm run check` verifies them. `npm run preview` opens the working application from `docs/`; the optional result export is available under `/results/`. The Pages workflow requires an explicit deployment from main. The operator authorised committing and pushing the reviewed session on its working branch; this does not deploy the site, alter Zotero or complete the scientific manuscript.
+Follow the setup commands in `README.md`. `npm run build` constructs all managed projections and `npm run check` verifies them. `npm run preview` opens the working application from `docs/`; the optional result export is available under `/results/`. The Pages workflow requires an explicit deployment from main.
