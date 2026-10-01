@@ -12,6 +12,11 @@
 
 .netz-controls { align-items: flex-start; }
 
+/* Long term options set the select's intrinsic width; without a cap it pushes the page
+   wider than a phone viewport in fonts wider than the local ones (CI runs on Linux). */
+.netz-controls > label { min-inline-size: 0; max-inline-size: 100%; }
+.netz-controls select#netz-term { max-inline-size: 100%; min-inline-size: 0; }
+
 .netz-fields {
     border: 1px solid var(--gray-300);
     border-radius: var(--radius-md);
