@@ -96,8 +96,8 @@
                         <div class="filter-group">
                             <label class="filter-label" for="sort-by">Sortierung</label>
                             <select class="filter-select" id="sort-by">
+                                <option value="stage" selected>nach Stand</option>
                                 <option value="relevance">LLM-Include zuerst</option>
-                                <option value="stage">Stand (am weitesten zuerst)</option>
                                 <option value="year">Jahr (neueste)</option>
                                 <option value="author">Autor (A-Z)</option>
                                 <option value="title">Titel (A-Z)</option>
@@ -108,7 +108,7 @@
                 </aside>
 
                 <div class="korpus-main">
-                    <ol class="stage-bar" id="stage-bar" aria-label="Review-Stand"></ol>
+                    <div class="stage-bar" id="stage-bar"></div>
 
                     <div class="results-row">
                         <p class="results-counter" id="results-counter" aria-live="polite">

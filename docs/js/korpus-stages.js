@@ -1,5 +1,5 @@
-// Review stages of the Korpus view: per work whether a full text exists, the expert
-// screening decision, analysis coding and use in Assertions, as a stage filter, work
+// Review stages of the Korpus view: per work whether a full text exists, the human
+// screening decision, analysis coding and use in Assertions, as two stage bars, work
 // lists of the gaps and a compact stage track per table row. research-app.js owns the
 // filter pipeline and the URL; this module owns the stage data and its markup.
 (function () {
@@ -9,14 +9,25 @@
 // SERVED_AGENT_TRACKS); human reviewer files carry no analysis part (ADR-045).
 const AGENT_TRACKS = ['ar2'];
 
-const STAGES = [
+// Two bars, because the stages are not nested: the agent coded and the Assertions cite
+// works of round two that no human screened, so one funnel would overstate how many
+// coded works passed the screening. Each Auswertung stage therefore carries the subset
+// with a human Include as a subordinate filter of its own.
+const SCREENING = [
     { key: 'all', label: 'Identifiziert' },
     { key: 'text', label: 'mit Text', needsText: true },
     { key: 'bewertet', label: 'bewertet' },
     { key: 'eingeschlossen', label: 'eingeschlossen' },
+];
+const AUSWERTUNG = [
     { key: 'kodiert', label: 'kodiert' },
     { key: 'aussagen', label: 'in Aussagen' },
 ];
+const INCLUDED_SUFFIX = '-eingeschlossen';
+const STAGES = SCREENING.concat(AUSWERTUNG);
+const SUBS = AUSWERTUNG.map(function (s) {
+    return { key: s.key + INCLUDED_SUFFIX, parent: s.key, label: s.label + ', davon eingeschlossen' };
+});
 
 const GAPS = [
     { key: 'ohne-text', label: 'ohne Volltext', needsText: true },
@@ -34,6 +45,9 @@ let assertionSource = null; // 'working', 'released' or null
 let reviewers = []; // [{ key, label }] from the assignment
 const assigneeOf = {};
 const workOfRecord = {};
+const corpusRecord = {};
+// paper id -> { decision, ts, reviewer } of the newest saved human reviewer record
+const humanRecord = {};
 
 function fetchJson(url) {
     return fetch(url)
@@ -50,7 +64,10 @@ function workOf(recordId, fallback) {
 }
 
 function load(papers) {
-    papers.forEach(function (p) { if (p.work_id) workOfRecord[p.id] = p.work_id; });
+    papers.forEach(function (p) {
+        corpusRecord[p.id] = p;
+        if (p.work_id) workOfRecord[p.id] = p.work_id;
+    });
     const agent = Promise.all(AGENT_TRACKS.map(function (key) {
         return fetchJson('data/screening/' + key + '.json');
     })).then(function (tracks) {
@@ -95,8 +112,40 @@ function load(papers) {
             const key = a.assignments[pid];
             if (reviewers.some(function (r) { return r.key === key; })) assigneeOf[pid] = key;
         });
+    }).then(function () {
+        // PRISM writes reviewer keys in lower case; an agent track never counts as human screening.
+        return Promise.all(reviewers.map(function (r) {
+            const key = r.key.toLowerCase();
+            if (AGENT_TRACKS.indexOf(key) >= 0) return null;
+            return fetchJson('data/screening/' + key + '.json').then(function (file) { addReviewerFile(key, file); });
+        }));
     });
     return Promise.all([agent, claims, text, assignment]);
+}
+
+// A saved reviewer file, read with the checks PRISM applies before it loads one
+// (validateReviewerEnvelope, isAgentTrackPayload, recordProblem): an unusable file or
+// record is skipped, never guessed at. The file is a trust boundary like the URL.
+function addReviewerFile(key, file) {
+    if (!file || typeof file !== 'object' || Array.isArray(file)) return;
+    if (!/^femprompt-prisma-reviewer\/0\.[12345]$/.test(String(file.schema || ''))) return;
+    if (file.actor === 'agent') return;
+    const decisions = file.decisions;
+    if (!decisions || typeof decisions !== 'object' || Array.isArray(decisions)) return;
+    Object.keys(decisions).forEach(function (pid) {
+        const rec = decisions[pid];
+        const paper = corpusRecord[pid];
+        if (!paper || !rec || typeof rec !== 'object' || Array.isArray(rec)) return;
+        if (rec.actor === 'agent') return;
+        if (['Include', 'Exclude', 'Unclear'].indexOf(rec.decision) === -1) return;
+        if (rec.work_id && rec.version_id && paper.work_id && paper.version_id &&
+            (rec.work_id !== paper.work_id || rec.version_id !== paper.version_id)) return;
+        const ts = String(rec.ts || file.updated || '');
+        const known = humanRecord[pid];
+        // Two reviewers on one paper: the later record is the current assessment.
+        if (known && known.ts >= ts) return;
+        humanRecord[pid] = { decision: rec.decision, ts: ts, reviewer: key };
+    });
 }
 
 function addAssertion(id, works) {
@@ -106,13 +155,27 @@ function addAssertion(id, works) {
     });
 }
 
-// The consolidated expert decision, as the former Human column showed it. PRISM's
-// isDone counts it as done as well; open means no such decision.
+// The current human screening decision in the order of PRISM's paperSubject: a saved
+// reviewer record first, since it is always the later assessment (it confirms or
+// corrects the round-one decision it was seeded from, ADR-042), else the consolidated
+// expert decision of round one. PRISM's isDone counts both as done; open means neither.
 function decision(paper) {
+    const own = humanRecord[paper.id];
+    if (own) return own.decision === 'Include' ? 'include' : own.decision === 'Exclude' ? 'exclude' : 'unclear';
     if (!paper.benchmark || !paper.benchmark.has_human || !paper.human) return 'open';
     if (paper.human.decision === 'Include') return 'include';
     if (paper.human.decision === 'Exclude') return 'exclude';
     return 'open';
+}
+
+// The reviewer key of a saved record, 'expert' for the round-one decision, '' when open.
+function decisionSource(paper) {
+    if (humanRecord[paper.id]) return humanRecord[paper.id].reviewer;
+    return decision(paper) === 'open' ? '' : 'expert';
+}
+
+function hasUnclear() {
+    return Object.keys(humanRecord).some(function (pid) { return humanRecord[pid].decision === 'Unclear'; });
 }
 
 function hasText(paper) {
@@ -133,7 +196,7 @@ function textKnown() { return manifest !== null; }
 function offenKey(reviewer) { return 'offen-' + reviewer.key; }
 
 function keys() {
-    const all = STAGES.concat(GAPS).filter(function (s) { return !s.needsText || textKnown(); }).map(function (s) { return s.key; });
+    const all = STAGES.concat(SUBS, GAPS).filter(function (s) { return !s.needsText || textKnown(); }).map(function (s) { return s.key; });
     return all.concat(reviewers.map(offenKey));
 }
 
@@ -150,6 +213,8 @@ function match(key, p) {
         case 'eingeschlossen': return decision(p) === 'include';
         case 'kodiert': return isCoded(p);
         case 'aussagen': return assertionCount(p) > 0;
+        case 'kodiert' + INCLUDED_SUFFIX: return isCoded(p) && decision(p) === 'include';
+        case 'aussagen' + INCLUDED_SUFFIX: return assertionCount(p) > 0 && decision(p) === 'include';
         case 'ohne-text': return hasText(p) === false;
         case 'offen': return decision(p) === 'open';
         case 'nicht-kodiert': return decision(p) === 'include' && !isCoded(p);
@@ -178,12 +243,33 @@ function button(cls, key, label, n, selected) {
         '<span class="stage-label">' + esc(label) + '</span> <span class="stage-n">' + n + '</span></button>';
 }
 
-// The funnel over the table. Identifiziert is the unfiltered state, so it is pressed
+// The subordinate filter of an Auswertung stage: smaller and introduced by "davon", so
+// its rank shows in size and wording, not in colour.
+function subButton(sub, n, selected) {
+    const on = selected === sub.key;
+    return '<button type="button" class="stage-sub" data-stage="' + esc(sub.key) + '" aria-pressed="' + on + '"' +
+        (n === 0 && !on ? ' disabled' : '') + ' aria-label="' + esc(sub.label + ', ' + werke(n)) + '">' +
+        '<span class="stage-label">davon</span> <span class="stage-n">' + n + '</span> eingeschlossen</button>';
+}
+
+function group(id, label, items) {
+    return '<div class="stage-group" role="group" aria-labelledby="' + id + '">' +
+        '<span class="stage-group-h" id="' + id + '">' + esc(label) + '</span>' +
+        '<ul class="stage-list">' + items + '</ul></div>';
+}
+
+// Two bars over the table. Identifiziert is the unfiltered state, so it is pressed
 // while no stage or work list applies.
 function barHtml(c, selected) {
-    return STAGES.filter(function (s) { return !s.needsText || textKnown(); }).map(function (s) {
+    const screening = SCREENING.filter(function (s) { return !s.needsText || textKnown(); }).map(function (s) {
         return '<li>' + button('stage-btn', s.key, s.label, c[s.key], selected) + '</li>';
     }).join('');
+    const auswertung = AUSWERTUNG.map(function (s) {
+        const sub = SUBS.find(function (x) { return x.parent === s.key; });
+        return '<li class="stage-item">' + button('stage-btn', s.key, s.label, c[s.key], selected) +
+            subButton(sub, c[sub.key], selected) + '</li>';
+    }).join('');
+    return group('stage-h-screening', 'Screening', screening) + group('stage-h-auswertung', 'Auswertung', auswertung);
 }
 
 function gapsHtml(c, selected) {
@@ -198,7 +284,7 @@ function gapsHtml(c, selected) {
     }).join('');
 }
 
-const DECISION_LABEL = { include: 'eingeschlossen', exclude: 'ausgeschlossen', open: 'nicht bewertet' };
+const DECISION_LABEL = { include: 'eingeschlossen', exclude: 'ausgeschlossen', unclear: 'unklar', open: 'nicht bewertet' };
 
 function mark(kind, state, label) {
     return '<span class="st-mark st-mark--' + kind + ' is-' + state + '" role="img" aria-label="' +
@@ -231,24 +317,26 @@ function csvFields(p) {
     const text = hasText(p);
     return {
         Fulltext: text === null ? '' : (text ? 'yes' : 'no'),
-        Expert_Decision: dec2csv(decision(p)),
+        Screening_Decision: dec2csv(decision(p)),
+        Screening_Source: decisionSource(p),
         Coded: isCoded(p) ? 'yes' : 'no',
         Assertions: assertionCount(p),
         Assignee: assigneeOf[p.id] || '',
     };
 }
 
-function dec2csv(dec) { return dec === 'open' ? '' : dec === 'include' ? 'Include' : 'Exclude'; }
+function dec2csv(dec) { return { include: 'Include', exclude: 'Exclude', unclear: 'Unclear' }[dec] || ''; }
 
 function labelOf(key) {
-    const item = STAGES.concat(GAPS).find(function (s) { return s.key === key; });
+    const item = STAGES.concat(SUBS, GAPS).find(function (s) { return s.key === key; });
     if (item) return item.label;
     const r = reviewers.find(function (x) { return offenKey(x) === key; });
     return r ? 'offen, ' + r.label : key;
 }
 
 window.EC.korpusStages = {
-    load: load, decision: decision, keys: keys, parse: parse, match: match, counts: counts,
+    load: load, decision: decision, decisionSource: decisionSource, hasUnclear: hasUnclear,
+    keys: keys, parse: parse, match: match, counts: counts,
     barHtml: barHtml, gapsHtml: gapsHtml, trackHtml: trackHtml, depth: depth, csvFields: csvFields,
     labelOf: labelOf,
     assertionSource: function () { return assertionSource; },
