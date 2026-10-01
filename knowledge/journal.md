@@ -24,6 +24,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: One page for the working Companion
+
+The operator asked to bring the interface together on one page. `docs/index.html` keeps its header, navigation and footer and now hosts the result-site views. Literaturbild shows the evidence-and-gap matrix, Wissensnetz the network of joint coding, and answer pages per sub-question and a work view open inside the page. The old Literaturbild and the concept-graph network, which the operator had called the old state, are no longer loaded. Their files remain until the operator confirms their deletion. One router in `research-app.js` owns the hash and lends it to the result modules through `EC.host`, so `docs/release.html` keeps working on its own ([[specification#Working Companion]]).
+
+The start view follows the operator's approval. Main question, status line and cards share one measure, the status line is computed from the coverage contract, and each card names the finding status of its question and leads to its answer page. The two buttons that repeated the navigation were removed. Navigation tooltips now exist on every generated page and carry one sentence per item without counts. Category chips share one markup, whose look the PRISM work defines in the shared stylesheet. Until both lines are merged, chips in this branch show no coloured dot and no pressed state.
+
 ### 2026-10-01: Substantive questions first, corrected projections and a question-led public companion
 
 The operator made the substantive question primary. The review now asks how social work professionals can use LLMs for their tasks responsibly, constructively and productively, with four sub-questions on use, risks, practices and competences, and the methodological question became the second question of the paper ([[project#Research questions]]). A critical review of the earlier questions found them sound as coding instructions but without a substantive frame, and found that per-work field lists support a map of joint coding but not a mapping of techniques to evidence status. The proposed codebook amendment v1.4 follows from that finding and awaits the operator ([[update-protocol]], [[plan#Open decisions]]).

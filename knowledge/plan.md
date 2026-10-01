@@ -77,7 +77,7 @@ The public Evidence Companion is specified in [[specification#Public Evidence Co
 5. Fix the clipped labels of the Netz view at 390 px. Its public visibility follows decision 7.
 6. Run the [[testing#Independent acceptance review of the result site]], which recomputes every displayed figure from the released data and checks display rules, keyboard operation, zoom, contrast and content fitness. Its findings are recorded in this plan. An operator review on the phone follows, and an acceptance session with the domain experts comes later.
 7. Switch Pages to `build/site/` under [[#Deployment]]. Until then Pages serves `docs/` including internal working data.
-8. Keep the internal working application `docs/index.html` local. Its Wissensnetz uses the historical concept graph ([[data#Historical concept graph and divergence classification]]) and is not part of the public site.
+8. Keep the internal working application `docs/index.html` local. Its Kategorien view still lists concepts from the historical concept graph ([[data#Historical concept graph and divergence classification]]), and the page is not part of the public site.
 
 ## Deployment
 
