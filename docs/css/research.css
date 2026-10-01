@@ -526,7 +526,7 @@ main {
 
 .filters-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
     gap: var(--space-lg);
 }
 
@@ -534,6 +534,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
+    min-inline-size: 0;
 }
 
 .filter-label {
@@ -554,6 +555,7 @@ main {
     cursor: pointer;
     font-family: var(--font-body);
     transition: var(--transition-fast);
+    max-inline-size: 100%;
 }
 
 .filter-select:hover {
@@ -1013,9 +1015,20 @@ main {
         display: none;
     }
 
-    .papers-table .col-title {
-        max-width: 200px;
+    /* Fixed layout lets the title column absorb the width, so the table never pushes
+       the page sideways when fonts are wider than the local ones (CI runs on Linux). */
+    .papers-table {
+        table-layout: fixed;
+        inline-size: 100%;
     }
+
+    .papers-table .col-title {
+        max-width: none;
+        overflow-wrap: anywhere;
+    }
+
+    .papers-table .col-dec { inline-size: 3.5rem; }
+    .papers-table .col-status { inline-size: 6.5rem; }
 
     .papers-table thead th,
     .papers-table tbody td {
