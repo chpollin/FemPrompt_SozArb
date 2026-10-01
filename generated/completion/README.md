@@ -1,6 +1,6 @@
 # Completion package
 
-Source fingerprint: `sha256:061b83f9e16516535e1670b9e8e29677abf817ee763890b3c10be44083695ba6`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:17e3505b543884d28b7d58472384aa26ef63fc15037efab0737ccf4bc4fecff2`. Deterministic internal preparation; no approval is created.
 
 Scope: existing corpus plus all already identified 2026 candidates (search cutoff 2026-08-24) and the separate targeted gap-fill intake from 2026-09-05. Candidate membership does not imply inclusion. New search should address a concrete evidence gap with excellent sources.
 
@@ -56,6 +56,15 @@ Use `candidate-2026-readiness.csv` for import, exact Work-Version binding, sourc
 Use [targeted-followup-queue.csv](targeted-followup-queue.csv) or [targeted-followup-queue.json](targeted-followup-queue.json) for the 3 targeted gap-fill candidates, their stated evidence gaps, source-access limits and next steps. They are identified, unbound and unscreened; recorded fulltext reading does not grant review or release authority. These candidates belong to the completion scope but are counted separately from canonical works and the original 2026 search. The later targeted search date does not change that search's cutoff.
 
 Use `sq-analysis-tables.csv` for provisional descriptive counts and `synthesis-outline.md` for the source-bound writing plan. Uncoded works and conflicts remain visible in each denominator. Complete source reading and explicit AI-review provenance are required for new scientific assertions; deterministic checks alone do not constitute review. Study quality must be appraised separately before deriving practice recommendations.
+
+## Descriptive mapping tools
+
+The analysis is a scoping-review mapping. The corpus is a curated search result and not a sample, so the tables below report counts, work IDs and the Jaccard index only, without significance tests or effect estimates.
+
+- `field-states.csv` assigns every work with a recorded Include exactly one state per analysis field, for all works and separately for the legacy-human and AI-review decision tracks. The states sum to the Include denominator. A hold or an open negative source review takes precedence over a decision conflict, which takes precedence over missing governed coding and the field-level states.
+- `sq-association-tables.csv` holds the evidence-and-gap matrices of SQ1 to SQ3 and the Gegenstand by Perspektive category matrix. Cells count governed coding at `ai-agent-reviewed` or higher and carry their work IDs, the works coded on both fields, the works still open and an authority breakdown derived from the contributing works. An empty cell with open works is `not_determinable`, and an empty cell after complete coding is `zero_in_complete_coding`. Neither status describes a gap in the literature.
+- `round1-category-cooccurrence.csv` describes round-one category co-occurrence for the human and the LLM track on the screened and the included records. The round-one Include requires a Gegenstand and a Perspektive category, so across-group co-occurrence among included records is selection-induced.
+- `agent-track-diagnostics.csv` reports per field the differences between the two operationally isolated agent tracks of each pooled run, the AI Agent Review outcome relative to both tracks and the later accepted AI corrections. The JSON adds run scope, blockers, lifecycle states and coding bases. Agreement between agent tracks is a workflow diagnostic and estimates neither accuracy nor inter-expert reliability.
 
 Regenerate with `python -m src.analysis.build_completion_package`; verify freshness with `python -m src.analysis.build_completion_package --check`. Generated tables and prose share the JSON fingerprint. `--check` fails if any managed output is absent or differs, including after source deletion or a changed annotation.
 

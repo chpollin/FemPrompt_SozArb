@@ -1,6 +1,6 @@
 # Data dictionary
 
-Source fingerprint: `sha256:061b83f9e16516535e1670b9e8e29677abf817ee763890b3c10be44083695ba6`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:17e3505b543884d28b7d58472384aa26ef63fc15037efab0737ccf4bc4fecff2`. Deterministic internal preparation; no approval is created.
 
 | Field / artifact | Meaning |
 |---|---|
@@ -18,7 +18,7 @@ Source fingerprint: `sha256:061b83f9e16516535e1670b9e8e29677abf817ee763890b3c10b
 | applied_ai_correction / original_analysis | Immutable correction projection and original coding side by side; correction base artifact/hash and each field change remain auditable. |
 | ai_correction_provenance | Work-queue references to each correction, its immutable basis, hashes and correcting/reviewing agent, model and dates. |
 | open_ai_source_review_record_ids | Negative or unverifiable source reviews with no accepted correction; affected work coding is not counted in interim SQ tables. |
-| analysis_eligible | Include with AI-reviewed analysis, no within-track decision conflict, no human/AI decision divergence and no unresolved negative source review. |
+| analysis_eligible | Include with AI-reviewed analysis, no within-track decision conflict, no human/AI decision divergence, no unresolved negative source review and no source-version or integrity hold. |
 | analysis_fields | Consistent coded values across Include annotations of the work; absent values remain missing. |
 | analysis_conflicts / analysis_undecidable | Conflicting or explicitly undecidable coding; excluded from that field's denominator. |
 | source_blockers / next_actions | Preparation actions for the operator, not automatic exclusion reasons. |
@@ -35,6 +35,11 @@ Source fingerprint: `sha256:061b83f9e16516535e1670b9e8e29677abf817ee763890b3c10b
 | denominator_ai_analysis_eligible_works | Works eligible for this interim AI analysis before missing-field handling. |
 | denominator_recorded_include_works | All works with a consistent Include decision in the selected authority track. |
 | missing_or_unresolved_included_works | Included works not represented in this field; not coded as None. |
+| authority / authority_breakdown | Derived from the works counted in the row or cell. `authority` names the weakest governed lifecycle state among them, or `no_contributing_works`. The breakdown counts coding lifecycle states, decision authority tracks and works with an accepted AI correction. |
+| analysis_field_states | Per track and field, the Include denominator and the work IDs in each of the states coded, explicit_none, undecidable, conflict_coding, conflict_decision, hold, open_negative_review, invalid_code and missing. Each work has exactly one state per field. |
+| analysis_associations | Cross-tabulations with population, determinable and open work IDs. Cell `status` is observed, not_determinable or zero_in_complete_coding. The category matrices cover all governed screened works at level ja and at level teilweise or ja. |
+| round1_selection_check | Round-one category marginals, include-rule counts and pairwise co-occurrence with Jaccard index per track and population, counted per record as in the canonical replay. |
+| agent_track_diagnostics | Workflow diagnostics over committed agent-run packages with run scope, track differences with Cohen's kappa for decision and categories, code-level disagreements for analysis fields, AI Agent Review outcomes, accepted correction fields and blockers. Labelled `workflow_diagnostic_not_accuracy`. |
 | assertions[].sources | Exact distillate paths, block anchors, record, Work and Version binding. |
 | structural_grounding_complete | All stated targets/anchors/identities exist; not verification of content. |
 | sources / source_fingerprint | SHA-256 of each input and deterministic aggregate; known text formats normalize CRLF to LF, binary bytes remain exact. Existing acquisition hashes retain their original byte-exact contract. No wall-clock timestamp disguises stale data. |

@@ -28,6 +28,7 @@ from src.analysis.build_work_version_registry import (
 )
 from src.analysis.historical_resolution import RESOLUTION_PATH, load_resolution
 from src.analysis.knowledge_coverage import build_knowledge_coverage
+from src.assess.agent_track_diagnostics import build_diagnostics, diagnostics_rows
 from src.assess.artifact_verification import (
     LEDGER_PATH,
     artifact_hash,
@@ -36,6 +37,7 @@ from src.assess.artifact_verification import (
     reviewed_screening_projection,
 )
 from src.file_hashing import file_sha256
+from src.replay import replay_round1
 
 REPO = Path(__file__).resolve().parents[2]
 OUTPUT = Path("generated/completion")
@@ -62,6 +64,30 @@ STATES = (
     "ai-agent-reviewed",
     "verified",
     "publication-approved",
+)
+FIELD_STATES = (
+    "coded",
+    "explicit_none",
+    "undecidable",
+    "conflict_coding",
+    "conflict_decision",
+    "hold",
+    "open_negative_review",
+    "invalid_code",
+    "missing",
+)
+FIELD_STATE_TRACKS = ("all", "legacy_human", "ai_review")
+ASSOCIATIONS = (
+    ("SQ2", "AN_Bias_Axes", "AN_Harm_Types"),
+    ("SQ2", "AN_Bias_Axes", "AN_Mitigation_Stage"),
+    ("SQ1", "AN_Prompt_Techniques", "AN_Mitigation_Status"),
+    ("SQ1, SQ3", "AN_Prompt_Techniques", "AN_Population"),
+    ("SQ2", "AN_Mitigation_Stage", "AN_Mitigation_Status"),
+)
+CATEGORY_ORDER = tuple(replay_round1.CATEGORIES)
+ROUND_ONE_TRACKS = (
+    ("human", "assessment/human_assessment.csv"),
+    ("llm", "assessment/llm_assessment_10k.csv"),
 )
 
 
@@ -326,6 +352,9 @@ def _agent_records(
                     if correction
                     else body.get("analysis", {}).get("fields", {}),
                     "original_analysis": body.get("analysis", {}).get("fields", {}),
+                    "categories": projected.get("categories", {})
+                    if correction
+                    else body.get("categories", {}),
                     "current_ai_source_review": _review_summary(current_review),
                     "current_ai_review_result": current_review["result"]
                     if current_review
@@ -701,6 +730,7 @@ def _work_rows(
                 and bool(eligible_agent_rows)
                 and not open_reviews
                 and not source_hold
+                and not integrity_hold
                 and not any(
                     c.endswith("decisions") or c == "human_agent_decision_divergence"
                     for c in conflicts
@@ -775,11 +805,318 @@ def _analysis(rows: list[dict], schema: dict) -> list[dict]:
                         "denominator_recorded_include_works": len(included),
                         "missing_or_unresolved_included_works": len(included)
                         - len(available),
-                        "authority": "provisional_recorded_ai_review",
+                        "authority": _authority_label(matching),
+                        "authority_breakdown": _authority_breakdown(matching),
                         "counting_rule": "Each work counted at most once per value; multi-code field totals may exceed denominator.",
                     }
                 )
     return output
+
+
+def _coding_state(work: dict, include_only: bool = True) -> str | None:
+    """Weakest governed lifecycle state among the rows that carry the coding."""
+    states = [
+        row["state"]
+        for row in work["agent_records"]
+        if row["state"] in STATES[3:]
+        and (not include_only or row["decision"] == "Include")
+    ]
+    return min(states, key=STATES.index) if states else None
+
+
+def _authority_breakdown(works: list[dict], include_only: bool = True) -> dict:
+    """Derive authority from the contributing works instead of asserting one tier."""
+    return {
+        "coding_lifecycle_state": dict(
+            sorted(
+                Counter(
+                    _coding_state(work, include_only) or "none" for work in works
+                ).items()
+            )
+        ),
+        "decision_authority": dict(
+            sorted(Counter(work["decision_authority"] for work in works).items())
+        ),
+        "with_accepted_ai_correction": sum(
+            bool(work["corrected_ai_record_ids"]) for work in works
+        ),
+    }
+
+
+def _authority_label(works: list[dict], include_only: bool = True) -> str:
+    states = [state for work in works if (state := _coding_state(work, include_only))]
+    return min(states, key=STATES.index) if states else "no_contributing_works"
+
+
+def _vocabularies(schema: dict) -> dict[str, list[str]]:
+    vocabulary = {
+        field["name"]: [str(value) for value in field["values"]]
+        for field in schema["analysis_fields"]
+        if field.get("values")
+    }
+    vocabulary["Studientyp"] = [str(value) for value in schema["study_types"]]
+    return vocabulary
+
+
+def _field_state(work: dict, name: str, allowed: list[str]) -> str:
+    """Assign exactly one state; the order makes work-wide blocks win over field codes."""
+    if {"source_integrity_hold", "source_version_hold"} & set(work["conflicts"]):
+        return "hold"
+    if work["open_ai_source_review_record_ids"]:
+        return "open_negative_review"
+    if any(
+        conflict.endswith("decisions") or conflict == "human_agent_decision_divergence"
+        for conflict in work["conflicts"]
+    ):
+        return "conflict_decision"
+    if not work["analysis_eligible"]:
+        return "missing"
+    if name in work["analysis_conflicts"]:
+        return "conflict_coding"
+    if name in work["analysis_undecidable"]:
+        return "undecidable"
+    codes = work["analysis_fields"].get(name)
+    if not codes:
+        return "missing"
+    if any(code not in allowed for code in codes):
+        return "invalid_code"
+    return "explicit_none" if codes == ["None"] else "coded"
+
+
+def _field_states(rows: list[dict], schema: dict) -> list[dict]:
+    included = [row for row in rows if row["effective_decision"] == "Include"]
+    output = []
+    for track in FIELD_STATE_TRACKS:
+        members = [
+            row
+            for row in included
+            if track == "all" or row["decision_authority"] == track
+        ]
+        for name, allowed in _vocabularies(schema).items():
+            groups: dict[str, list[str]] = {state: [] for state in FIELD_STATES}
+            for row in members:
+                groups[_field_state(row, name, allowed)].append(row["work_id"])
+            output.append(
+                {
+                    "track": track,
+                    "field": name,
+                    "include_denominator": len(members),
+                    "states": {
+                        state: {"count": len(ids), "work_ids": ids}
+                        for state, ids in groups.items()
+                    },
+                }
+            )
+    return output
+
+
+def _matrix(
+    question: str,
+    row_field: str,
+    column_field: str,
+    row_values: list[str],
+    column_values: list[str],
+    population: list[dict],
+    values: dict[str, tuple[set[str], set[str]]],
+    scope: str,
+    include_only: bool = True,
+) -> dict:
+    """Cross-tabulate determinable works; an empty cell is never read as a gap."""
+    by_id = {work["work_id"]: work for work in population}
+    determinable = sorted(values)
+    open_ids = sorted(set(by_id) - set(values))
+    cells = []
+    for row_value in row_values:
+        for column_value in column_values:
+            ids = [
+                work_id
+                for work_id in determinable
+                if row_value in values[work_id][0]
+                and column_value in values[work_id][1]
+            ]
+            works = [by_id[work_id] for work_id in ids]
+            cells.append(
+                {
+                    "row_value": row_value,
+                    "column_value": column_value,
+                    "work_count": len(ids),
+                    "work_ids": ids,
+                    "works_coded_on_both_fields": len(determinable),
+                    "works_open": len(open_ids),
+                    "status": "observed"
+                    if ids
+                    else "not_determinable"
+                    if open_ids
+                    else "zero_in_complete_coding",
+                    "authority": _authority_label(works, include_only),
+                    "authority_breakdown": _authority_breakdown(works, include_only),
+                }
+            )
+    return {
+        "matrix": f"{row_field} x {column_field}",
+        "question": question,
+        "row_field": row_field,
+        "column_field": column_field,
+        "scope": scope,
+        "population_works": len(population),
+        "determinable_work_ids": determinable,
+        "open_work_ids": open_ids,
+        "cells": cells,
+    }
+
+
+def _associations(rows: list[dict], schema: dict) -> list[dict]:
+    vocabulary = _vocabularies(schema)
+    included = [row for row in rows if row["effective_decision"] == "Include"]
+    decided = {"coded", "explicit_none"}
+    matrices = []
+    for question, row_field, column_field in ASSOCIATIONS:
+        values = {
+            row["work_id"]: (
+                set(row["analysis_fields"][row_field]),
+                set(row["analysis_fields"][column_field]),
+            )
+            for row in included
+            if _field_state(row, row_field, vocabulary[row_field]) in decided
+            and _field_state(row, column_field, vocabulary[column_field]) in decided
+        }
+        matrices.append(
+            _matrix(
+                question,
+                row_field,
+                column_field,
+                vocabulary[row_field],
+                vocabulary[column_field],
+                included,
+                values,
+                "Works with a recorded Include; cells count governed (ai-agent-reviewed or higher) coding decided on both fields, explicit None included as a code.",
+            )
+        )
+    groups = {
+        group: [c["name"] for c in schema["categories"] if c.get("group") == group]
+        for group in ("technik", "sozial")
+    }
+    screened = [row for row in rows if row["agent_records"]]
+    for threshold, label in ((2, "ja"), (1, "teilweise_or_ja")):
+        values = {}
+        for row in screened:
+            governed = [r for r in row["agent_records"] if r["state"] in STATES[3:]]
+            vectors = {
+                tuple(int(r["categories"].get(name, 0)) for name in CATEGORY_ORDER)
+                for r in governed
+            }
+            if (
+                len(vectors) != 1
+                or row["open_ai_source_review_record_ids"]
+                or {"source_integrity_hold", "source_version_hold"}
+                & set(row["conflicts"])
+            ):
+                continue
+            levels = dict(zip(CATEGORY_ORDER, next(iter(vectors))))
+            values[row["work_id"]] = tuple(
+                {name for name in groups[group] if levels[name] >= threshold}
+                for group in ("technik", "sozial")
+            )
+        matrix = _matrix(
+            "category groups",
+            "Gegenstand",
+            "Perspektive",
+            groups["technik"],
+            groups["sozial"],
+            screened,
+            values,
+            f"All governed screened works regardless of decision, level {label}. The round-two Include is derived from these levels, so restricting the matrix to Includes would induce co-occurrence.",
+            include_only=False,
+        )
+        matrix["matrix"] += f" ({label})"
+        matrices.append(matrix)
+    return matrices
+
+
+def _round_one_selection(repo: Path, inputs: set[str], schema: dict) -> dict:
+    """Describe round-one category co-occurrence where selection induces it."""
+    groups = {
+        c["name"]: "Gegenstand" if c.get("group") == "technik" else "Perspektive"
+        for c in schema["categories"]
+    }
+    tracks = []
+    for track, relative in ROUND_ONE_TRACKS:
+        inputs.add(relative)
+        records = replay_round1.load_assessment(repo / relative)
+        screened = {key: value for key, value in records.items() if value["decision"]}
+        populations = {
+            "screened": screened,
+            "included": {
+                key: value
+                for key, value in screened.items()
+                if value["decision"] == "Include"
+            },
+        }
+        for population, members in populations.items():
+            positive = {
+                name: {
+                    key for key, value in members.items() if value["cats"][name] == "Ja"
+                }
+                for name in CATEGORY_ORDER
+            }
+            pairs = []
+            for index, first in enumerate(CATEGORY_ORDER):
+                for second in CATEGORY_ORDER[index + 1 :]:
+                    both = positive[first] & positive[second]
+                    union = positive[first] | positive[second]
+                    pairs.append(
+                        {
+                            "category_a": first,
+                            "category_b": second,
+                            "pair_kind": "across_groups"
+                            if groups[first] != groups[second]
+                            else f"within_{groups[first]}",
+                            "both_ja": len(both),
+                            "a_ja": len(positive[first]),
+                            "b_ja": len(positive[second]),
+                            "jaccard": round(len(both) / len(union), 4)
+                            if union
+                            else None,
+                        }
+                    )
+            tracks.append(
+                {
+                    "track": track,
+                    "source": relative,
+                    "population": population,
+                    "records": len(members),
+                    "records_with_ten_ja_nein_categories": sum(
+                        all(
+                            value["cats"][name] in {"Ja", "Nein"}
+                            for name in CATEGORY_ORDER
+                        )
+                        for value in members.values()
+                    ),
+                    "records_meeting_include_rule": sum(
+                        any(
+                            value["cats"][name] == "Ja"
+                            for name in CATEGORY_ORDER
+                            if groups[name] == "Gegenstand"
+                        )
+                        and any(
+                            value["cats"][name] == "Ja"
+                            for name in CATEGORY_ORDER
+                            if groups[name] == "Perspektive"
+                        )
+                        for value in members.values()
+                    ),
+                    "category_ja": {name: len(ids) for name, ids in positive.items()},
+                    "pairs": pairs,
+                }
+            )
+    return {
+        "label": "descriptive_selection_check_no_inference",
+        "unit": "round-one record (Zotero_Key), as in the canonical replay",
+        "statistics": "counts and Jaccard index only",
+        "selection_note": "The round-one Include requires at least one Gegenstand and one Perspektive category at Ja, so across-group co-occurrence among included records is selection-induced (Berkson). Compare the included with the screened population; neither population is a sample of a literature.",
+        "include_rule": "at least one Gegenstand category and one Perspektive category at Ja",
+        "tracks": tracks,
+    }
 
 
 def _candidate_identifier_tokens(candidate: dict) -> set[str]:
@@ -1019,6 +1356,8 @@ def build_package(repo: Path = REPO) -> dict:
         "src/analysis/build_completion_package.py",
         "src/file_hashing.py",
         "generated/conformance/conformance_map.yaml",
+        "src/assess/agent_track_diagnostics.py",
+        "src/replay/replay_round1.py",
     }
     reviews = load_reviews(repo)
     if (repo / LEDGER_PATH).is_file():
@@ -1060,6 +1399,8 @@ def build_package(repo: Path = REPO) -> dict:
     followup_candidates = _followup_rows(followup, registry)
     assertions = _assertions(repo, inputs, reviews)
     knowledge_coverage = build_knowledge_coverage(repo, registry, inputs)
+    diagnostics = build_diagnostics(repo, inputs, works, queue)
+    round_one = _round_one_selection(repo, inputs, schema)
     source_records = [
         {"path": path, "sha256": _sha(repo / path)} for path in sorted(inputs)
     ]
@@ -1188,6 +1529,10 @@ def build_package(repo: Path = REPO) -> dict:
             for work in registry_extra
         ],
         "analysis_tables": _analysis(works, schema),
+        "analysis_field_states": _field_states(works, schema),
+        "analysis_associations": _associations(works, schema),
+        "round1_selection_check": round_one,
+        "agent_track_diagnostics": diagnostics,
         "analysis_field_definitions": schema["analysis_fields"],
         "assertions": assertions,
         "issues": issues,
@@ -1271,6 +1616,15 @@ Use [targeted-followup-queue.csv](targeted-followup-queue.csv) or [targeted-foll
 
 Use `sq-analysis-tables.csv` for provisional descriptive counts and `synthesis-outline.md` for the source-bound writing plan. Uncoded works and conflicts remain visible in each denominator. Complete source reading and explicit AI-review provenance are required for new scientific assertions; deterministic checks alone do not constitute review. Study quality must be appraised separately before deriving practice recommendations.
 
+## Descriptive mapping tools
+
+The analysis is a scoping-review mapping. The corpus is a curated search result and not a sample, so the tables below report counts, work IDs and the Jaccard index only, without significance tests or effect estimates.
+
+- `field-states.csv` assigns every work with a recorded Include exactly one state per analysis field, for all works and separately for the legacy-human and AI-review decision tracks. The states sum to the Include denominator. A hold or an open negative source review takes precedence over a decision conflict, which takes precedence over missing governed coding and the field-level states.
+- `sq-association-tables.csv` holds the evidence-and-gap matrices of SQ1 to SQ3 and the Gegenstand by Perspektive category matrix. Cells count governed coding at `ai-agent-reviewed` or higher and carry their work IDs, the works coded on both fields, the works still open and an authority breakdown derived from the contributing works. An empty cell with open works is `not_determinable`, and an empty cell after complete coding is `zero_in_complete_coding`. Neither status describes a gap in the literature.
+- `round1-category-cooccurrence.csv` describes round-one category co-occurrence for the human and the LLM track on the screened and the included records. The round-one Include requires a Gegenstand and a Perspektive category, so across-group co-occurrence among included records is selection-induced.
+- `agent-track-diagnostics.csv` reports per field the differences between the two operationally isolated agent tracks of each pooled run, the AI Agent Review outcome relative to both tracks and the later accepted AI corrections. The JSON adds run scope, blockers, lifecycle states and coding bases. Agreement between agent tracks is a workflow diagnostic and estimates neither accuracy nor inter-expert reliability.
+
 Regenerate with `python -m src.analysis.build_completion_package`; verify freshness with `python -m src.analysis.build_completion_package --check`. Generated tables and prose share the JSON fingerprint. `--check` fails if any managed output is absent or differs, including after source deletion or a changed annotation.
 
 This directory is an internal operator package and is not a website release input. Publication selection is handled by the dedicated policy and publisher, not by these provisional tables.
@@ -1296,7 +1650,7 @@ This directory is an internal operator package and is not a website release inpu
 | applied_ai_correction / original_analysis | Immutable correction projection and original coding side by side; correction base artifact/hash and each field change remain auditable. |
 | ai_correction_provenance | Work-queue references to each correction, its immutable basis, hashes and correcting/reviewing agent, model and dates. |
 | open_ai_source_review_record_ids | Negative or unverifiable source reviews with no accepted correction; affected work coding is not counted in interim SQ tables. |
-| analysis_eligible | Include with AI-reviewed analysis, no within-track decision conflict, no human/AI decision divergence and no unresolved negative source review. |
+| analysis_eligible | Include with AI-reviewed analysis, no within-track decision conflict, no human/AI decision divergence, no unresolved negative source review and no source-version or integrity hold. |
 | analysis_fields | Consistent coded values across Include annotations of the work; absent values remain missing. |
 | analysis_conflicts / analysis_undecidable | Conflicting or explicitly undecidable coding; excluded from that field's denominator. |
 | source_blockers / next_actions | Preparation actions for the operator, not automatic exclusion reasons. |
@@ -1313,6 +1667,11 @@ This directory is an internal operator package and is not a website release inpu
 | denominator_ai_analysis_eligible_works | Works eligible for this interim AI analysis before missing-field handling. |
 | denominator_recorded_include_works | All works with a consistent Include decision in the selected authority track. |
 | missing_or_unresolved_included_works | Included works not represented in this field; not coded as None. |
+| authority / authority_breakdown | Derived from the works counted in the row or cell. `authority` names the weakest governed lifecycle state among them, or `no_contributing_works`. The breakdown counts coding lifecycle states, decision authority tracks and works with an accepted AI correction. |
+| analysis_field_states | Per track and field, the Include denominator and the work IDs in each of the states coded, explicit_none, undecidable, conflict_coding, conflict_decision, hold, open_negative_review, invalid_code and missing. Each work has exactly one state per field. |
+| analysis_associations | Cross-tabulations with population, determinable and open work IDs. Cell `status` is observed, not_determinable or zero_in_complete_coding. The category matrices cover all governed screened works at level ja and at level teilweise or ja. |
+| round1_selection_check | Round-one category marginals, include-rule counts and pairwise co-occurrence with Jaccard index per track and population, counted per record as in the canonical replay. |
+| agent_track_diagnostics | Workflow diagnostics over committed agent-run packages with run scope, track differences with Cohen's kappa for decision and categories, code-level disagreements for analysis fields, AI Agent Review outcomes, accepted correction fields and blockers. Labelled `workflow_diagnostic_not_accuracy`. |
 | assertions[].sources | Exact distillate paths, block anchors, record, Work and Version binding. |
 | structural_grounding_complete | All stated targets/anchors/identities exist; not verification of content. |
 | sources / source_fingerprint | SHA-256 of each input and deterministic aggregate; known text formats normalize CRLF to LF, binary bytes remain exact. Existing acquisition hashes retain their original byte-exact contract. No wall-clock timestamp disguises stale data. |
@@ -1479,7 +1838,108 @@ Controlled descriptive fields below come from `assessment/categories.yaml`. They
                 "denominator_recorded_include_works",
                 "missing_or_unresolved_included_works",
                 "authority",
+                "authority_breakdown",
                 "counting_rule",
+            ],
+        ),
+        "field-states.csv": _csv(
+            [
+                {
+                    "track": row["track"],
+                    "field": row["field"],
+                    "include_denominator": row["include_denominator"],
+                    **{
+                        key: value
+                        for state, entry in row["states"].items()
+                        for key, value in (
+                            (state, entry["count"]),
+                            (f"{state}_work_ids", entry["work_ids"]),
+                        )
+                    },
+                }
+                for row in package["analysis_field_states"]
+            ],
+            [
+                "track",
+                "field",
+                "include_denominator",
+                *FIELD_STATES,
+                *(f"{state}_work_ids" for state in FIELD_STATES),
+            ],
+        ),
+        "sq-association-tables.csv": _csv(
+            [
+                {
+                    "matrix": matrix["matrix"],
+                    "question": matrix["question"],
+                    "row_field": matrix["row_field"],
+                    "column_field": matrix["column_field"],
+                    **cell,
+                }
+                for matrix in package["analysis_associations"]
+                for cell in matrix["cells"]
+            ],
+            [
+                "matrix",
+                "question",
+                "row_field",
+                "row_value",
+                "column_field",
+                "column_value",
+                "work_count",
+                "status",
+                "works_coded_on_both_fields",
+                "works_open",
+                "authority",
+                "authority_breakdown",
+                "work_ids",
+            ],
+        ),
+        "round1-category-cooccurrence.csv": _csv(
+            [
+                {
+                    "track": entry["track"],
+                    "population": entry["population"],
+                    "records": entry["records"],
+                    **pair,
+                }
+                for entry in package["round1_selection_check"]["tracks"]
+                for pair in entry["pairs"]
+            ],
+            [
+                "track",
+                "population",
+                "records",
+                "category_a",
+                "category_b",
+                "pair_kind",
+                "both_ja",
+                "a_ja",
+                "b_ja",
+                "jaccard",
+            ],
+        ),
+        "agent-track-diagnostics.csv": _csv(
+            diagnostics_rows(package["agent_track_diagnostics"]),
+            [
+                "field",
+                "kind",
+                "compared_records",
+                "identical",
+                "different",
+                "cohens_kappa",
+                "code_disagreements",
+                "reviewed_records",
+                "kept_track_agreement",
+                "overrode_track_agreement",
+                "adopted_one_track",
+                "value_from_neither_track",
+                "accepted_ai_correction_records",
+                "different_record_refs",
+                "overrode_track_agreement_record_refs",
+                "adopted_one_track_record_refs",
+                "value_from_neither_track_record_refs",
+                "label",
             ],
         ),
     }
