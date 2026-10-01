@@ -363,11 +363,12 @@ function initializeUI() {
     document.getElementById('search-box').addEventListener('input', handleSearch);
     document.getElementById('filter-decision').addEventListener('change', function() { applyFilters(); });
     document.getElementById('filter-human').addEventListener('change', function() { applyFilters(); });
-    document.getElementById('filter-year').addEventListener('change', function() { applyFilters(); });
     document.getElementById('sort-by').addEventListener('change', function() {
         currentSort = this.value;
         applyFilters();
     });
+
+    initYearHistogram();
 
     // Dropdown navigation
     setupDropdownNav();
@@ -515,7 +516,6 @@ function sortPapers(papers, sortBy) {
 function applyFilters() {
     const decision = document.getElementById('filter-decision').value;
     const humanStatus = document.getElementById('filter-human').value;
-    const year = document.getElementById('filter-year').value;
 
     let filtered = filteredPapers.slice();
 
@@ -533,24 +533,222 @@ function applyFilters() {
         filtered = filtered.filter(function(p) { return !p.benchmark.has_human; });
     }
 
-    if (year !== 'all') {
-        if (year === '2021') {
-            filtered = filtered.filter(function(p) { return p.year && p.year <= 2021; });
-        } else {
-            filtered = filtered.filter(function(p) { return p.year == parseInt(year); });
-        }
-    }
-
     if (activeCategories.size > 0) {
         filtered = filtered.filter(function(p) {
             return Array.from(activeCategories).every(function(cat) { return p.llm.all_categories[cat] === 1; });
         });
     }
 
+    // The histogram counts the selection before its own year filter, so it shows how the
+    // current selection spreads over the years and every other year stays choosable.
+    renderYearHistogram(filtered);
+    if (yearSel !== 'all') {
+        filtered = filtered.filter(function(p) { return yearSelected(yearKey(p)); });
+    }
+
     filtered = sortPapers(filtered, currentSort);
     currentPage = 1;
     renderPapers(filtered);
     syncUrl();
+}
+
+// Publication-year histogram, the year filter of the corpus
+
+const NO_YEAR = 'oj'; // the URL value of the column for works without a year
+// Top-down order of the stacked segments; the legend and the tooltip list them alike,
+// so a status is identified by position as well as by colour.
+const YEAR_STATUS = [
+    { key: 'open', label: 'offen' },
+    { key: 'exclude', label: 'ausgeschlossen' },
+    { key: 'include', label: 'eingeschlossen' },
+];
+const YEAR_LABEL_MIN_PX = 36; // the width an axis label needs before neighbours collide
+let yearColumns = [];
+let yearCounts = {};
+let yearSel = 'all'; // 'all', 'YYYY', 'YYYY-YYYY' or NO_YEAR
+let yearAnchor = null; // the year a shift+click extends a range from
+
+function yearKey(paper) {
+    const year = parseInt(paper.year, 10);
+    return isFinite(year) ? String(year) : NO_YEAR;
+}
+
+function yearName(key) {
+    return key === NO_YEAR ? 'o. J.' : key;
+}
+
+function workCount(n) {
+    return n === 1 ? '1 Werk' : n + ' Werke';
+}
+
+// The expert decision as the Human column of the table shows it; no decision is open.
+function yearStatus(paper) {
+    if (!paper.benchmark.has_human || !paper.human) return 'open';
+    if (paper.human.decision === 'Include') return 'include';
+    if (paper.human.decision === 'Exclude') return 'exclude';
+    return 'open';
+}
+
+// Normalizes a year selection from the URL, a trust boundary; anything else is no filter.
+function parseYearSel(value) {
+    const v = String(value || '');
+    if (v === NO_YEAR || /^\d{4}$/.test(v)) return v;
+    const range = /^(\d{4})-(\d{4})$/.exec(v);
+    if (!range) return 'all';
+    const from = Math.min(+range[1], +range[2]);
+    const to = Math.max(+range[1], +range[2]);
+    return from === to ? String(from) : from + '-' + to;
+}
+
+function yearSelected(key) {
+    if (yearSel === 'all') return false;
+    if (yearSel === NO_YEAR || key === NO_YEAR) return yearSel === key;
+    const bounds = yearSel.split('-');
+    const year = Number(key);
+    return year >= Number(bounds[0]) && year <= Number(bounds[bounds.length - 1]);
+}
+
+function selectYear(key, extend) {
+    if (extend && key !== NO_YEAR && yearAnchor !== null && yearAnchor !== key) {
+        const a = Number(yearAnchor), b = Number(key);
+        yearSel = Math.min(a, b) + '-' + Math.max(a, b);
+    } else if (yearSel === key) {
+        yearSel = 'all';
+        yearAnchor = null;
+    } else {
+        yearSel = key;
+        yearAnchor = key === NO_YEAR ? null : key;
+    }
+    applyFilters();
+}
+
+function yearSwatch(key) {
+    return '<span class="year-swatch year-seg--' + key + '" aria-hidden="true"></span>';
+}
+
+// The columns are fixed by the whole corpus, a continuous year range so that gaps show
+// as empty columns, and keep their place while the other filters change the heights.
+function initYearHistogram() {
+    const box = document.getElementById('year-hist');
+    if (!box) return;
+    const years = allPapers.map(yearKey).filter(function(k) { return k !== NO_YEAR; }).map(Number);
+    yearColumns = [];
+    if (years.length) {
+        const last = Math.max.apply(null, years);
+        for (let y = Math.min.apply(null, years); y <= last; y++) yearColumns.push(String(y));
+    }
+    if (allPapers.some(function(p) { return yearKey(p) === NO_YEAR; })) yearColumns.push(NO_YEAR);
+
+    box.innerHTML = '<div class="year-hist-scroll"><div class="year-hist-cols">' +
+        yearColumns.map(function(key) {
+            return '<button type="button" class="year-col' + (key === NO_YEAR ? ' year-col--none' : '') +
+                '" data-year="' + escapeHtml(key) + '" aria-pressed="false" aria-describedby="year-tip">' +
+                '<span class="year-bar">' + YEAR_STATUS.map(function(s) {
+                    return '<span class="year-seg year-seg--' + s.key + '"></span>';
+                }).join('') + '</span>' +
+                '<span class="year-label">' + escapeHtml(yearName(key)) + '</span></button>';
+        }).join('') + '</div></div>' +
+        '<ul class="year-hist-legend" aria-hidden="true">' + YEAR_STATUS.map(function(s) {
+            return '<li>' + yearSwatch(s.key) + s.label + '</li>';
+        }).join('') + '</ul>';
+
+    const tip = document.createElement('div');
+    tip.id = 'year-tip';
+    tip.className = 'rich-tooltip year-tip';
+    tip.setAttribute('role', 'tooltip');
+    tip.hidden = true;
+    document.body.appendChild(tip);
+
+    function show(btn) {
+        const key = btn.dataset.year;
+        const c = yearCounts[key];
+        if (!c) return;
+        tip.innerHTML = '<div class="year-tip-title">' + escapeHtml(yearName(key)) + ', ' + escapeHtml(workCount(c.total)) + '</div>' +
+            '<ul class="year-tip-list">' + YEAR_STATUS.map(function(s) {
+                return '<li>' + yearSwatch(s.key) + '<span>' + s.label + '</span><span class="year-tip-n">' + c[s.key] + '</span></li>';
+            }).join('') + '</ul>';
+        tip.hidden = false;
+        positionTip(tip, btn);
+    }
+    function hide() { tip.hidden = true; }
+
+    box.addEventListener('click', function(e) {
+        const btn = e.target.closest('.year-col');
+        if (!btn) return;
+        selectYear(btn.dataset.year, e.shiftKey);
+        show(btn);
+    });
+    box.addEventListener('mouseover', function(e) {
+        const btn = e.target.closest('.year-col');
+        if (btn) show(btn);
+    });
+    box.addEventListener('mouseleave', function() {
+        if (!box.contains(document.activeElement)) hide();
+    });
+    box.addEventListener('focusin', function(e) {
+        const btn = e.target.closest('.year-col');
+        if (btn) show(btn);
+    });
+    box.addEventListener('focusout', function(e) {
+        if (!e.relatedTarget || !box.contains(e.relatedTarget)) hide();
+    });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') hide(); });
+    window.addEventListener('resize', thinYearLabels);
+}
+
+// Placement as in the navigation tooltips (nav-tips.js), below the anchor and inside the viewport.
+function positionTip(tip, anchor) {
+    const rect = anchor.getBoundingClientRect();
+    const box = tip.getBoundingClientRect();
+    let left = rect.left + rect.width / 2 - box.width / 2;
+    let top = rect.bottom + 8;
+    if (left < 8) left = 8;
+    if (left + box.width > window.innerWidth - 8) left = window.innerWidth - box.width - 8;
+    if (top + box.height > window.innerHeight - 8) top = rect.top - box.height - 8;
+    tip.style.left = left + window.scrollX + 'px';
+    tip.style.top = top + window.scrollY + 'px';
+}
+
+function renderYearHistogram(papers) {
+    const box = document.getElementById('year-hist');
+    if (!box || !yearColumns.length) return;
+    yearCounts = {};
+    yearColumns.forEach(function(key) { yearCounts[key] = { include: 0, exclude: 0, open: 0, total: 0 }; });
+    papers.forEach(function(p) {
+        const c = yearCounts[yearKey(p)];
+        c[yearStatus(p)]++;
+        c.total++;
+    });
+    // One linear scale for all columns, fitted to the current selection.
+    const max = Math.max(1, Math.max.apply(null, yearColumns.map(function(key) { return yearCounts[key].total; })));
+    box.classList.toggle('has-selection', yearSel !== 'all');
+    box.querySelectorAll('.year-col').forEach(function(btn) {
+        const key = btn.dataset.year;
+        const c = yearCounts[key];
+        const on = yearSelected(key);
+        btn.setAttribute('aria-pressed', String(on));
+        btn.setAttribute('aria-label', yearName(key) + ', ' + workCount(c.total));
+        // A selected empty year stays enabled so that it can be cleared.
+        btn.disabled = c.total === 0 && !on;
+        btn.querySelectorAll('.year-seg').forEach(function(seg, i) {
+            seg.style.height = (c[YEAR_STATUS[i].key] / max * 100) + '%';
+        });
+    });
+    thinYearLabels();
+}
+
+// Labels every year while the columns are wide enough, else every second, fifth or tenth
+// year counted back from the newest, the year most often looked for.
+function thinYearLabels() {
+    const cols = document.querySelector('#year-hist .year-hist-cols');
+    if (!cols) return;
+    const width = cols.clientWidth / yearColumns.length;
+    let step = 1;
+    [1, 2, 5, 10].some(function(s) { step = s; return !width || width * s >= YEAR_LABEL_MIN_PX; });
+    const labels = cols.querySelectorAll('.year-col:not(.year-col--none) .year-label');
+    labels.forEach(function(label, i) {
+        label.classList.toggle('is-thinned', (labels.length - 1 - i) % step !== 0);
+    });
 }
 
 // Table Rendering
@@ -745,6 +943,8 @@ function switchView(viewId, params, ctx) {
         if (window.initializeKategorien) window.initializeKategorien();
         benchmarkInitialized = true;
     }
+    // A hidden histogram has no width, so its labels are thinned once it shows.
+    if (viewId === 'korpus') thinYearLabels();
     if (viewId === 'chat' && !chatInitialized) {
         chatInitialized = true;
         if (window.initWissensChat) window.initWissensChat();
@@ -846,7 +1046,7 @@ function stateFromUI() {
         q: document.getElementById('search-box').value.trim(),
         dec: document.getElementById('filter-decision').value,
         hum: document.getElementById('filter-human').value,
-        year: document.getElementById('filter-year').value,
+        year: yearSel,
         sort: currentSort,
         cat: Array.from(activeCategories),
         paper: currentDetailPaper ? currentDetailPaper.id : null,
@@ -872,7 +1072,9 @@ function applyStateToUI(s, ctx) {
             document.getElementById('search-box').value = s.q || '';
             document.getElementById('filter-decision').value = s.dec || 'all';
             document.getElementById('filter-human').value = s.hum || 'all';
-            document.getElementById('filter-year').value = s.year || 'all';
+            yearSel = parseYearSel(s.year);
+            const anchor = /^\d{4}/.exec(yearSel);
+            yearAnchor = anchor ? anchor[0] : null;
             currentSort = s.sort || 'relevance';
             // A select silently ignores an unknown value, so assign directly rather than
             // probe with querySelector (a crafted sort= would otherwise be an invalid selector).
@@ -952,7 +1154,7 @@ function deserializeState(hashStr) {
         q: p.get('q') || '',
         dec: p.get('dec') || 'all',
         hum: p.get('hum') || 'all',
-        year: p.get('year') || 'all',
+        year: parseYearSel(p.get('year')),
         sort: p.get('sort') || 'relevance',
         // Drop unknown category keys at this trust boundary; otherwise an every()
         // over a non-existent column would silently empty the corpus.

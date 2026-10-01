@@ -1,5 +1,6 @@
 // Chromium acceptance run for the working Companion docs/index.html: start view, answer
-// pages, Literaturbild matrix, Wissensnetz, work view, legacy hashes, nav tooltips and reflow.
+// pages, Literaturbild matrix, Wissensnetz, work view, legacy hashes, nav tooltips, the corpus
+// year histogram and reflow.
 import { chromium } from 'playwright';
 import { createServer } from 'node:http';
 import { existsSync, readFileSync, statSync } from 'node:fs';
@@ -149,6 +150,62 @@ try {
   check('a corpus category chip toggles through aria-pressed', await chip.getAttribute('aria-pressed') === 'true');
   await chip.click();
 
+  // The year histogram is the year filter of the corpus; expectations come from the data the view loads.
+  const corpus = JSON.parse(readFileSync(resolve(docs, 'data', 'research_vault_v2.json'))).papers;
+  const yearOf = (paper) => (Number.isFinite(parseInt(paper.year, 10)) ? String(parseInt(paper.year, 10)) : 'oj');
+  const years = corpus.map(yearOf).filter((key) => key !== 'oj').map(Number);
+  const expectedColumns = Math.max(...years) - Math.min(...years) + 1 + (corpus.some((paper) => yearOf(paper) === 'oj') ? 1 : 0);
+  const werke = (n) => (n === 1 ? '1 Werk' : `${n} Werke`);
+  const tableYears = () => page.$$eval('#papers-grid td.col-year', (cells) => [...new Set(cells.map((cell) => cell.textContent))]);
+  const resultCount = async () => Number(await page.locator('#results-count').innerText());
+  const n2024 = corpus.filter((paper) => yearOf(paper) === '2024').length;
+  const col2024 = page.locator('#year-hist .year-col[data-year="2024"]');
+  check('the year histogram renders one column per year of the corpus and one for works without a year',
+    await page.locator('#year-hist .year-col').count() === expectedColumns &&
+    await page.locator('#year-hist .year-col[data-year="oj"] .year-label').innerText() === 'o. J.');
+  check('a year column is named by year and count', await col2024.getAttribute('aria-label') === `2024, ${werke(n2024)}`);
+  await col2024.click();
+  check('clicking a year filters the table to that year',
+    await col2024.getAttribute('aria-pressed') === 'true' && await resultCount() === n2024 &&
+    JSON.stringify(await tableYears()) === '["2024"]' && hashParams().get('year') === '2024');
+  check('the year tooltip lists the counts per status', /^2024, \d+ Werke/.test(await page.locator('#year-tip').innerText()) &&
+    await page.locator('#year-tip li').count() === 3);
+  await col2024.click();
+  check('clicking the year again clears the filter',
+    await col2024.getAttribute('aria-pressed') === 'false' && await resultCount() === corpus.length && !hashParams().has('year'));
+  await page.locator('#year-hist .year-col[data-year="2023"]').click();
+  await col2024.click({ modifiers: ['Shift'] });
+  const n2023to2024 = corpus.filter((paper) => ['2023', '2024'].includes(yearOf(paper))).length;
+  check('shift+click extends the selection to a year range',
+    hashParams().get('year') === '2023-2024' && await resultCount() === n2023to2024 &&
+    (await tableYears()).every((year) => year === '2023' || year === '2024'),
+    `${hashParams().get('year')} ${await resultCount()}/${n2023to2024}`);
+  await page.locator('#year-hist .year-col[data-year="2023"]').click();
+  await page.locator('#year-hist .year-col[data-year="2023"]').click();
+  await page.locator('#filter-decision').selectOption('Include');
+  const included2024 = corpus.filter((paper) => paper.llm.decision === 'Include' && yearOf(paper) === '2024').length;
+  check('the histogram counts the selection of the other filters', await col2024.getAttribute('aria-label') === `2024, ${werke(included2024)}`);
+  await col2024.click();
+  check('the year filter combines with the other filters',
+    await resultCount() === included2024 && hashParams().get('dec') === 'Include' && hashParams().get('year') === '2024');
+  await page.reload({ waitUntil: 'networkidle' });
+  await page.waitForSelector('#year-hist .year-col');
+  check('a year selection survives reload', await col2024.getAttribute('aria-pressed') === 'true' && await resultCount() === included2024);
+  await col2024.click();
+  await page.locator('#filter-decision').selectOption('all');
+  const n2025 = corpus.filter((paper) => yearOf(paper) === '2025').length;
+  await page.locator('#year-hist .year-col[data-year="2025"]').focus();
+  check('keyboard focus shows the year tooltip', await page.locator('#year-tip').isVisible());
+  await page.keyboard.press('Enter');
+  check('Enter on a focused year filters and keeps the focus',
+    await resultCount() === n2025 && await page.evaluate(() => document.activeElement.dataset.year === '2025'));
+  await page.keyboard.press('Space');
+  check('Space on the selected year clears the filter', await resultCount() === corpus.length);
+  await page.goto(`${base}/index.html#view=korpus&year=bogus`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#year-hist .year-col');
+  check('an invalid year parameter is no filter',
+    await page.locator('#year-hist .year-col[aria-pressed="true"]').count() === 0 && await resultCount() === corpus.length);
+
   await page.locator('#tab-korpus').focus();
   const tipId = await page.locator('#tab-korpus').getAttribute('aria-describedby');
   check('a nav tooltip shows on keyboard focus', Boolean(tipId) && await page.locator('#' + tipId).isVisible());
@@ -190,6 +247,13 @@ try {
     const list = document.querySelector('.netz-list-wrap');
     return figure.scrollWidth <= figure.clientWidth + 1 && list.scrollWidth <= list.clientWidth + 1;
   }));
+  await page.goto(`${base}/index.html#view=korpus&year=2024`, { waitUntil: 'networkidle' });
+  await page.waitForSelector('#year-hist .year-col');
+  check('at 390 px the year histogram fits its column without scrolling the page', await page.evaluate(() => {
+    const scroll = document.querySelector('.year-hist-scroll');
+    return scroll.scrollWidth <= scroll.clientWidth + 1 && document.documentElement.scrollWidth <= window.innerWidth + 1;
+  }));
+  check('at 390 px axis labels are thinned out', await page.locator('#year-hist .year-label.is-thinned').count() > 0);
   await page.goto(`${base}/index.html`, { waitUntil: 'networkidle' });
   check('at 390 px the cards stack in one column', await page.evaluate(() =>
     getComputedStyle(document.querySelector('.start-cards')).gridTemplateColumns.split(' ').length === 1));

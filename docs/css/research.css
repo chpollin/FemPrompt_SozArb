@@ -746,6 +746,163 @@ main {
     color: var(--gray-400);
 }
 
+/* Publication-year histogram of the Korpus view, which is its year filter (research-app.js) */
+.year-hist {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--space-sm) var(--space-xl);
+    margin-bottom: var(--space-sm);
+}
+
+/* Many years compress the columns down to their minimum width, then scroll in here. */
+.year-hist-scroll {
+    flex: 1 1 auto;
+    min-inline-size: 0;
+    max-inline-size: 30rem;
+    overflow-x: auto;
+}
+
+.year-hist-cols {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+}
+
+.year-col {
+    flex: 1 1 0;
+    min-inline-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2px 1px 0;
+    border: 0;
+    border-radius: var(--radius-sm);
+    background: none;
+    font: inherit;
+    color: var(--gray-500);
+    cursor: pointer;
+}
+
+.year-col--none {
+    margin-inline-start: var(--space-sm);
+}
+
+.year-col:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
+.year-col:disabled {
+    cursor: default;
+}
+
+.year-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    block-size: 3.5rem;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.year-seg {
+    display: block;
+    flex: none;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.year-seg--include { background: var(--decision-include); }
+.year-seg--exclude { background: var(--decision-exclude); }
+/* Open matches the dash of an undecided Human cell in the table. */
+.year-seg--open { background: var(--gray-300); }
+
+.year-col:hover:not(:disabled) .year-bar {
+    border-bottom-color: var(--gray-500);
+}
+
+.year-hist.has-selection .year-col[aria-pressed="false"] .year-bar {
+    opacity: 0.3;
+}
+
+.year-col[aria-pressed="true"] .year-bar {
+    border-bottom-color: var(--gray-800);
+}
+
+.year-label {
+    font-size: var(--text-xs);
+    line-height: 1.6;
+    text-align: center;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+.year-label.is-thinned {
+    visibility: hidden;
+}
+
+.year-col[aria-pressed="true"] .year-label {
+    color: var(--gray-900);
+    font-weight: 600;
+}
+
+.year-hist-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-bottom: 1.25rem;
+    list-style: none;
+    font-size: var(--text-xs);
+    color: var(--gray-600);
+}
+
+.year-hist-legend li,
+.year-tip-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.year-swatch {
+    flex: none;
+    inline-size: 0.625rem;
+    block-size: 0.625rem;
+    border-radius: 2px;
+}
+
+.year-tip {
+    min-width: 0;
+    padding: 0.5rem 0.75rem;
+}
+
+.year-tip-title {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.year-tip-list {
+    list-style: none;
+}
+
+.year-tip-n {
+    margin-inline-start: auto;
+    padding-inline-start: 0.75rem;
+    color: white;
+    font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 600px) {
+    .year-hist-scroll {
+        max-inline-size: none;
+    }
+
+    .year-hist-legend {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.25rem 0.75rem;
+        padding-bottom: 0;
+    }
+}
+
 /* Results Row (counter + exports) */
 .results-row {
     display: flex;
@@ -2564,6 +2721,7 @@ main {
 @media print {
     .header-nav,
     .search-filters,
+    .year-hist,
     .category-filter-row,
     .export-button,
     .modal,
