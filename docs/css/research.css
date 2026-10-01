@@ -3045,3 +3045,267 @@ main {
 .start-card--practice { --card-accent: var(--cat-prompt); }
 .start-card--concept { --card-accent: var(--cat-gender); }
 .start-card--competence { --card-accent: var(--cat-ai-lit); }
+
+/* Argumentkarte (argumentkarte.js). Monochrome tiles keep colour for the selection;
+   fill, border style and unit marks carry the data. */
+.amap { margin-top: var(--space-2xl); }
+
+.amap-title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--gray-900);
+    margin: 0 0 var(--space-lg);
+}
+
+.amap-columns {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: var(--space-md);
+}
+
+@media (max-width: 52rem) {
+    .amap-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 30rem) {
+    .amap-columns { grid-template-columns: 1fr; }
+}
+
+.amap-col {
+    min-width: 0;
+    padding-top: var(--space-sm);
+    border-top: 3px solid var(--col-accent, var(--gray-300));
+}
+
+.amap-col--use { --col-accent: var(--cat-soz-arb); }
+.amap-col--risk { --col-accent: var(--cat-bias); }
+.amap-col--practice { --col-accent: var(--cat-prompt); }
+.amap-col--concept { --col-accent: var(--cat-gender); }
+.amap-col--competence { --col-accent: var(--cat-ai-lit); }
+
+.amap-col h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-sm);
+    font-size: var(--text-base);
+    font-weight: 600;
+    color: var(--gray-800);
+    margin: 0 0 var(--space-sm);
+}
+
+.amap-col-name { min-width: 0; overflow-wrap: anywhere; }
+
+.amap-count {
+    font-variant-numeric: tabular-nums;
+    font-weight: 400;
+    color: var(--gray-500);
+}
+
+.amap-tiles {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.amap-empty {
+    font-size: var(--text-sm);
+    color: var(--gray-500);
+    margin: 0;
+}
+
+.amap-rest { margin-top: var(--space-lg); }
+.amap-rest .amap-col { border-top-style: dotted; }
+
+.amap-tile {
+    position: relative;
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0 0 5px;
+    border: 1px solid var(--gray-400);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    cursor: pointer;
+    transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+
+.amap-tile--released,
+.amap-tile--verified {
+    background: var(--gray-700);
+    border-color: var(--gray-700);
+}
+
+.amap-units {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+    max-width: 1.4rem;
+}
+
+.amap-units i {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gray-600);
+}
+
+.amap-tile--released .amap-units i,
+.amap-tile--verified .amap-units i { background: #fff; }
+
+.amap-tile:focus-visible,
+.amap-tile.is-selected {
+    outline: 2px solid var(--primary-dark);
+    outline-offset: 2px;
+}
+
+.amap--active .amap-tile[data-id]:not(.is-selected):not(.is-shared):not(.is-contested) { opacity: 0.25; }
+
+.amap-tile.is-shared { border: 2px solid var(--primary); }
+
+.amap-tile.is-contested { border: 2px dashed var(--danger); }
+
+/* The glyph repeats the dashed border for readers who cannot tell the line styles apart. */
+.amap-tile.is-contested::after {
+    content: "≠";
+    position: absolute;
+    top: -0.55rem;
+    right: -0.45rem;
+    font-size: var(--text-xs);
+    line-height: 1;
+    padding: 1px 2px;
+    background: #fff;
+    color: var(--gray-900);
+    border-radius: 2px;
+}
+
+.amap-legend {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-lg) 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-lg);
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+}
+
+.amap-legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.amap-tile--sample {
+    width: 1rem;
+    height: 1rem;
+    padding: 0 0 2px;
+    cursor: default;
+}
+
+.amap-tile--sample .amap-units i { width: 3px; height: 3px; }
+.amap-tile--sample.is-contested::after { top: -0.5rem; right: -0.5rem; padding: 0 1px; }
+
+.amap-detail {
+    margin-top: var(--space-lg);
+    padding: var(--space-lg);
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+}
+
+.amap-detail-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+.amap-detail h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    color: var(--gray-900);
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.amap-close {
+    flex: none;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    background: #fff;
+    color: var(--gray-700);
+    font-size: var(--text-xl);
+    line-height: 1;
+    cursor: pointer;
+}
+
+.amap-close:focus-visible,
+.amap-jump:focus-visible {
+    outline: 2px solid var(--primary-dark);
+    outline-offset: 2px;
+}
+
+.amap-detail-meta {
+    margin: var(--space-xs) 0 var(--space-md);
+    font-size: var(--text-sm);
+    color: var(--gray-600);
+}
+
+.amap-statement {
+    font-size: var(--text-md);
+    line-height: 1.55;
+    color: var(--gray-800);
+    margin: 0 0 var(--space-md);
+}
+
+.amap-detail h4 {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--gray-700);
+    margin: var(--space-md) 0 var(--space-xs);
+}
+
+.amap-works,
+.amap-contested {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.amap-work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0 var(--space-md);
+    padding: var(--space-xs) 0;
+    border-top: 1px solid var(--gray-100);
+    font-size: var(--text-sm);
+}
+
+.amap-work-title { min-width: 0; overflow-wrap: anywhere; color: var(--gray-800); }
+.amap-work-meta { color: var(--gray-500); white-space: nowrap; }
+
+.amap-jump {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: var(--space-xs) 0;
+    border: 0;
+    border-top: 1px solid var(--gray-100);
+    background: none;
+    color: var(--primary-dark);
+    font: inherit;
+    font-size: var(--text-sm);
+    text-decoration: underline;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}

@@ -69,6 +69,8 @@ Canonical definitions stay in `assessment/categories.yaml`. `src/publish/build_c
 
 `docs/data/assertion_index.json` carries for each released Assertion `research_questions`, the sorted sub-questions of its frontmatter field `research-questions` ([[research-vault#Assertions]]). An Assertion without the field exports an empty list.
 
+`src/publish/build_assertion_map.py` writes the local working file `docs/data/assertions_working.json` (schema `femprompt-assertion-working/0.1`) for the Argumentkarte of the working Companion. It holds every document of type `assertion` in `research-vault/30_assertions/`, drafts included, with `id`, `ref`, `title`, `statement`, `status`, `released`, `research_questions`, `contested_with` and `works`. `released` is true exactly for the Assertions of the released index, which the build writes first. `contested_with` is the symmetric closure of the frontmatter field, so an entry recorded on one side marks both Assertions. `works` follows each grounding link to its distillate and maps the distillate's `record-id` to the record in `docs/data/promptotyping_v2.json` for `work_id`, title and author-year, one entry per record. The file is git-ignored like the reading layer, rebuilt by `npm run build`, listed among the build outputs so `npm run check` verifies it, and excluded from `build/site/` by the allowlist ([[governance#Publication boundary]]).
+
 ## Screening annotation and lifecycle (per paper)
 
 The decision record is the annotation unit. Its substantive fields stay stable when later review events are appended.

@@ -24,6 +24,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: Argumentkarte on the start view
+
+After the operator found the prototype too full and too text-driven, the start view of the working Companion received an Argumentkarte whose tiles carry no text. Fill shows the release state, unit marks the number of source Works, and selection highlights shared Works and marks contested Assertions. Draft Assertions reach the browser only through the git-ignored working file `docs/data/assertions_working.json`, which the build writes beside the reading layer, so the Pages site keeps showing released Assertions alone. Two questions stay open, the column placement of the reviewed Assertions, whose `research-questions` still awaits the remapping in [[research-vault#Assertions]], and whether the result site should show the map over the released index.
+
 ### 2026-10-01: Year histogram as the year filter of the Korpus view
 
 After the operator found an earlier timeline prototype too full and too text-driven, the Korpus view received a compact year histogram as its year filter. It replaces the year select instead of standing beside it, so that one control owns the year state. The columns stack the current selection by expert decision and keep their place while the other filters change their heights, and a selected year or range filters the table and lives in the hash. A legacy link with `year=2021` now means the year 2021 and no longer 2021 and earlier.

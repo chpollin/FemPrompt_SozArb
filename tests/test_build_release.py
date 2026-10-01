@@ -19,6 +19,7 @@ def test_release_excludes_raw_tracks_and_local_sources():
         for name in files
     )
     assert "data/fulltext_manifest.json" not in files
+    assert "data/assertions_working.json" not in files
     assert "data/promptotyping_v2.json" not in files
     assert "prisma.html" not in files
     public = json.loads(files["data/public_release.json"])

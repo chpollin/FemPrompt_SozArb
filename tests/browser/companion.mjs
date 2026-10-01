@@ -1,6 +1,6 @@
 // Chromium acceptance run for the working Companion docs/index.html: start view, answer
-// pages, Literaturbild matrix, Wissensnetz, work view, Landkarte, legacy hashes, nav tooltips, the corpus
-// year histogram and reflow.
+// pages, Argumentkarte, Literaturbild matrix, Wissensnetz, work view, Landkarte, legacy hashes, nav
+// tooltips, the corpus year histogram and reflow.
 import { chromium } from 'playwright';
 import { createServer } from 'node:http';
 import { existsSync, readFileSync, statSync } from 'node:fs';
@@ -12,6 +12,15 @@ const docs = resolve(here, '..', '..', 'docs');
 const landscape = JSON.parse(readFileSync(resolve(docs, 'data', 'literature_landscape.json')));
 const vault = JSON.parse(readFileSync(resolve(docs, 'data', 'research_vault_v2.json')));
 const schema = JSON.parse(readFileSync(resolve(docs, 'data', 'category_schema.json')));
+// The ignored working file exists after npm run build; without it the map shows the
+// released index alone, so the expectations follow whichever file the page will read.
+const workingPath = resolve(docs, 'data', 'assertions_working.json');
+const hasWorking = existsSync(workingPath);
+const released = JSON.parse(readFileSync(resolve(docs, 'data', 'assertion_index.json'))).assertions;
+const mapItems = hasWorking ? JSON.parse(readFileSync(workingPath)).assertions : released.map((a) => ({
+  id: a.assertion_ref.split('/').pop(), research_questions: a.research_questions || [], contested_with: [], released: true,
+  works: [...new Set(a.evidence.map((e) => e.record_id))].map((id) => ({ record_id: id })),
+}));
 const mime = {
   '.css': 'text/css; charset=utf-8', '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8',
@@ -43,7 +52,10 @@ try {
   const errors = [];
   const external = [];
   page.on('pageerror', (error) => errors.push(String(error)));
-  page.on('console', (message) => { if (message.type() === 'error') errors.push(message.text()); });
+  page.on('console', (message) => {
+    // A missing working file is the expected public state, not an error of the page.
+    if (message.type() === 'error' && !String(message.location().url).endsWith('/data/assertions_working.json')) errors.push(message.text());
+  });
   page.on('request', (request) => {
     const url = new URL(request.url());
     if (/^https?:$/.test(url.protocol) && url.origin !== base) external.push(request.url());
@@ -86,6 +98,91 @@ try {
   const cardLines = await page.locator('.start-card-status').allInnerTexts();
   check('every card names its finding status',
     cardLines.length === 5 && cardLines.every((line) => /^(\d+ KI-geprüfte?r? Befunde?|noch kein geprüfter Befund|noch nicht codiert$)/.test(line)), cardLines.join(' | '));
+
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.waitForSelector('#argument-map .amap-columns');
+  const questionOf = (item) => item.research_questions.map((value) => (/(\d+)/.exec(value) || [])[1]).filter(Boolean);
+  const sharesWork = (a, b) => a.id !== b.id && a.works.some((work) => b.works.some((own) => own.record_id === work.record_id));
+  const columnCounts = await page.locator('#argument-map .amap-columns > .amap-col').evaluateAll((cols) =>
+    cols.map((col) => [col.dataset.sq, col.querySelectorAll('.amap-tile[data-id]').length,
+      Number(col.querySelector('.amap-count').textContent), Boolean(col.querySelector('.amap-empty'))]));
+  check('the Argumentkarte renders five question columns with the counts of the data',
+    columnCounts.length === 5 && columnCounts.every(([sq, tiles, count, empty]) => {
+      const expected = mapItems.filter((item) => questionOf(item).includes(sq)).length;
+      return tiles === expected && count === expected && empty === (expected === 0);
+    }), JSON.stringify(columnCounts));
+  check('the map reads the working file where it exists and the released index otherwise',
+    await page.locator('#argument-map').getAttribute('data-source') === (hasWorking ? 'working' : 'released'));
+  check('every tile shows its release state in form and its Works as unit marks', await page.evaluate((items) => {
+    const byId = Object.fromEntries(items.map((item) => [item.id, item]));
+    return [...document.querySelectorAll('#argument-map .amap-tile[data-id]')].every((tile) => {
+      const item = byId[tile.dataset.id];
+      return item && tile.classList.contains(item.released ? 'amap-tile--released' : 'amap-tile--draft') &&
+        tile.querySelectorAll('.amap-units i').length === Math.min(item.works.length, 6);
+    });
+  }, mapItems));
+  const placed = mapItems.filter((item) => questionOf(item).length);
+  const target = placed.find((item) => item.contested_with.length && mapItems.some((other) => sharesWork(item, other))) ||
+    placed.find((item) => mapItems.some((other) => sharesWork(item, other))) || placed[0];
+  const sharing = new Set(mapItems.filter((other) => sharesWork(other, target)).map((other) => other.id));
+  await page.locator(`#argument-map .amap-columns .amap-tile[data-id="${target.id}"]`).first().click();
+  await page.waitForTimeout(250); // the dimming fades in over 0.15 s
+  const marked = await page.evaluate(() => {
+    const ids = (selector) => [...new Set([...document.querySelectorAll(selector)].map((tile) => tile.dataset.id))];
+    return {
+      shared: ids('#argument-map .amap-tile.is-shared[data-id]'),
+      contested: ids('#argument-map .amap-tile.is-contested[data-id]'),
+      contestedForm: [...document.querySelectorAll('#argument-map .amap-tile.is-contested[data-id]')].every((tile) =>
+        getComputedStyle(tile).borderTopStyle === 'dashed' && getComputedStyle(tile, '::after').content.includes('≠')),
+      dimmed: [...document.querySelectorAll('#argument-map.amap--active .amap-tile[data-id]:not(.is-selected):not(.is-shared):not(.is-contested)')]
+        .every((tile) => Number(getComputedStyle(tile).opacity) < 0.5),
+      detail: !document.getElementById('amap-detail').hidden && document.querySelector('#amap-detail .amap-statement').textContent.length > 0,
+      works: document.querySelectorAll('#amap-detail .amap-work').length,
+      links: [...document.querySelectorAll('#amap-detail .amap-work a')].map((link) => link.getAttribute('href')),
+    };
+  });
+  check('selecting a tile shows its statement and source Works with work and PRISM links',
+    marked.detail && marked.works === target.works.length &&
+    target.works.every((work) => marked.links.includes('prisma.html?paper=' + encodeURIComponent(work.record_id))), JSON.stringify(marked));
+  check('selecting a tile marks the tiles sharing a Work and dims the rest',
+    marked.shared.length === sharing.size && marked.shared.every((id) => sharing.has(id)) && marked.dimmed, JSON.stringify(marked));
+  check('selecting a tile marks contested tiles by dashed border and glyph',
+    marked.contested.length === target.contested_with.length && target.contested_with.every((id) => marked.contested.includes(id)) && marked.contestedForm,
+    JSON.stringify({ marked, expected: target.contested_with }));
+  if (target.contested_with.length) {
+    await page.locator('#amap-detail .amap-jump').first().click();
+    check('a contested Assertion in the detail jumps to its tile',
+      await page.evaluate((id) => document.activeElement.dataset.id === id &&
+        document.activeElement.getAttribute('aria-pressed') === 'true', target.contested_with[0]));
+  }
+  check('the map leaves no horizontal overflow at 1280 px', await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1));
+  await page.keyboard.press('Escape');
+  check('Escape clears the selection', await page.locator('#amap-detail').isHidden() &&
+    await page.locator('#argument-map .amap-tile[aria-pressed="true"]').count() === 0);
+  const keyTile = page.locator('#argument-map .amap-columns .amap-tile[data-id]').first();
+  await keyTile.focus();
+  check('a focused tile shows its tooltip', await page.locator('#amap-tip').isVisible());
+  await page.keyboard.press('Enter');
+  check('a tile is selectable by keyboard', await keyTile.getAttribute('aria-pressed') === 'true' && await page.locator('#amap-detail').isVisible());
+  await page.keyboard.press('Space');
+  check('a second activation deselects the tile', await keyTile.getAttribute('aria-pressed') === 'false' && await page.locator('#amap-detail').isHidden());
+  await page.setViewportSize({ width: 390, height: 844 });
+  await keyTile.click();
+  check('at 390 px the map with an open detail has no horizontal overflow',
+    await page.locator('#amap-detail').isVisible() && await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1));
+  await keyTile.click();
+  await page.setViewportSize({ width: 1440, height: 900 });
+
+  const fallback = await browser.newPage({ viewport: { width: 1280, height: 800 }, locale: 'de-AT' });
+  await fallback.route('**/data/assertions_working.json', (route) => route.fulfill({ status: 404, body: 'not found' }));
+  await fallback.goto(`${base}/index.html`, { waitUntil: 'networkidle' });
+  await fallback.waitForSelector('#argument-map .amap-columns');
+  check('without the working file the map shows only released Assertions',
+    await fallback.locator('#argument-map').getAttribute('data-source') === 'released' &&
+    await fallback.locator('#argument-map .amap-tile--draft[data-id]').count() === 0 &&
+    new Set(await fallback.locator('#argument-map .amap-tile[data-id]').evaluateAll((tiles) => tiles.map((tile) => tile.dataset.id))).size === released.length);
+  await fallback.close();
+  await page.goto(`${base}/index.html`, { waitUntil: 'networkidle' });
 
   await page.locator('.start-card[data-sq="2"]').focus();
   await page.keyboard.press('Enter');
