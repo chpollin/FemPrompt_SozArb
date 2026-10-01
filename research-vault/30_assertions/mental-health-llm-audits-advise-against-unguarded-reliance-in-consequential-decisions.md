@@ -12,7 +12,7 @@ grounding:
 - '[[20_distillates/publications/demographic-bias-psychiatric-llm-diagnoses#^s2]]'
 contested-with: []
 research-questions:
-- SQ4
+- SQ5
 intended-output:
 - literature-report
 created: '2026-10-01'

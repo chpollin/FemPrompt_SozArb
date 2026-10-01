@@ -26,7 +26,7 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ### 2026-10-01: Repository cleanup and rescued assertion drafts
 
-Three agent worktrees of the day held untracked Assertion drafts for the reformulated sub-questions and a draft report chapter on SQ2 that had never reached `main`. They were integrated unchanged at status `grounded`, without AI Agent Review or expert verification, and the Research Vault validator passed. On the operator's confirmation the agent worktrees, the local and remote branches already contained in `main`, the obsolete codebook patch, the onboarding redirect page and the Literaturbild and concept-graph modules that no page loads were removed, together with the test that exercised only the unloaded module. The dated project review of 2026-09-05 stays as a snapshot.
+Three agent worktrees of the day held untracked Assertion drafts for the reformulated sub-questions and a draft report chapter on SQ2 that had never reached `main`. They were integrated unchanged at status `grounded`, without AI Agent Review or expert verification, and the Research Vault validator passed. On the operator's confirmation the agent worktrees, the local and remote branches already contained in `main`, the obsolete codebook patch, the onboarding redirect page and the Literaturbild and concept-graph modules that no page loads were removed, together with the test that exercised only the unloaded module. The dated project review of 2026-09-05 stays as a snapshot. The drafts carried the morning numbering of the sub-questions, so their field `research-questions` was mapped from SQ4 Competences to SQ5. Their `task-context` keeps the original wording as provenance.
 
 ### 2026-10-01: Analysis fields only for agents, PRISM review
 

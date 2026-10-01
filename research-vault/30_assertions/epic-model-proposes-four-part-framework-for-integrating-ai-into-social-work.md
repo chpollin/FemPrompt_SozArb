@@ -22,7 +22,7 @@ grounding:
 contested-with: []
 research-questions:
 - SQ3
-- SQ4
+- SQ5
 intended-output:
 - literature-report
 ---

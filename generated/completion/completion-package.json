@@ -34168,7 +34168,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:05ab4bd821d45b4abe0c5a222c3fa6ffb88f1f507d983ce7f96702e1bbf4facc",
+  "source_fingerprint": "sha256:f52cebc92852b839a491db9ea98fd17ce4dba794750dfb97aff0cb2e7343ef9b",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -37112,11 +37112,11 @@
     },
     {
       "path": "research-vault/30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding.md",
-      "sha256": "93420e5d1712d5b1f200b0c52b3dd550ee82ab158e3e23f213840ad33cc1f971"
+      "sha256": "7dd0e2f21c52bc4eae23cc99fb89a584b43d82b6024bb10d387f8724ea4af4b0"
     },
     {
       "path": "research-vault/30_assertions/algorithmic-decision-making-can-introduce-and-expose-structural-bias.md",
-      "sha256": "d6357c7b44cbd75c11826e954885c0d4e41f5a10dc688d2aaf448984322e8780"
+      "sha256": "9d424e7cda5bccba628e61c4a62d677a8a87cd3eae8967d6df39931f23e6e4bf"
     },
     {
       "path": "research-vault/30_assertions/assigned-social-identity-personas-induced-identity-congruent-bias.md",
@@ -37124,7 +37124,7 @@
     },
     {
       "path": "research-vault/30_assertions/beloch-and-martin-argue-ai-supported-counselling-needs-concepts-tailored-to-clients.md",
-      "sha256": "9198a1f531428f8da866c75ff10ae33ae9a871afb76d2b1302b7c0dc1bb5beef"
+      "sha256": "c6525476b8b99f6bd6cd9724df39abf4583be3cacccb85b7bf04d0b6d2346c4a"
     },
     {
       "path": "research-vault/30_assertions/bias-evaluations-name-binary-gender-operationalisation-as-limitation.md",
@@ -37132,7 +37132,7 @@
     },
     {
       "path": "research-vault/30_assertions/biased-user-framing-reduced-llm-diagnostic-accuracy-in-a-simulation.md",
-      "sha256": "87577b337c0e7f99bb2c462955a675e9a9b432eed4c4e270d3ff0f5053dfc4b3"
+      "sha256": "23a7acae11e7060e849671b5998b3feb7f09264fec0ab8a15ce626cac3746810"
     },
     {
       "path": "research-vault/30_assertions/chain-of-thought-prompting-added-inference-overhead-in-clinical-benchmark.md",
@@ -37156,11 +37156,11 @@
     },
     {
       "path": "research-vault/30_assertions/cheng-et-al-report-that-workers-used-context-to-compensate-for-model-limitations.md",
-      "sha256": "9188d6e85e9ee8d28fab009ed2743f02593601f2e6a43db9506c77a87d9e9bd6"
+      "sha256": "a1e62c76e3d077457482e2f759ddd953aea37b3c62460bb8e4f72e4487d9fd51"
     },
     {
       "path": "research-vault/30_assertions/child-protection-analysis-proposes-preserving-accountable-professional-discretion.md",
-      "sha256": "e7a7af548cd864ecc7ab3e2426904ea11280a3269810aca78b7ca70838db72c2"
+      "sha256": "7e3812edf088f51236551a9d6deceebba5c7c6100880e7148881b66304058e02"
     },
     {
       "path": "research-vault/30_assertions/child-protection-nlp-showed-lower-name-recall-for-black-clients.md",
@@ -37192,7 +37192,7 @@
     },
     {
       "path": "research-vault/30_assertions/epic-model-proposes-four-part-framework-for-integrating-ai-into-social-work.md",
-      "sha256": "c247a6f1ce926d689a6dd5bfeb8494f5719b2466bcc5f3d3439ac5d509d0cc2d"
+      "sha256": "42084e580595fb3ff832fc13bae102dc0575f8a540da992366342f8b103fe798"
     },
     {
       "path": "research-vault/30_assertions/fairness-aware-prompts-reduced-measured-disparities-in-mental-health-classification.md",
@@ -37220,11 +37220,11 @@
     },
     {
       "path": "research-vault/30_assertions/james-et-al-propose-a-case-based-technical-critical-pedagogy.md",
-      "sha256": "6e0a4682c238d31d4c5a3583ad26006233d2ca2de1309e83d4d5d53dc82eba80"
+      "sha256": "e52e03a9f7409995b0f51563dbae11a775a50ab5bf85c5c8645fbf332dca203f"
     },
     {
       "path": "research-vault/30_assertions/james-et-al-propose-preparing-social-workers-to-challenge-harmful-algorithmic-processes.md",
-      "sha256": "e04f0cfcf51651b06417586ec0dfcdbf37f8b36797ec6043f35ca5d4d6caa55a"
+      "sha256": "c1ef7f061f482084566532c4b0edd11d0c1e217ea19d7d1af2544fdfbb2dd315"
     },
     {
       "path": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
@@ -37252,7 +37252,7 @@
     },
     {
       "path": "research-vault/30_assertions/mental-health-llm-audits-advise-against-unguarded-reliance-in-consequential-decisions.md",
-      "sha256": "d24e1410351c0c71de9830a60129e92c3a6638b8239622aee8beab1cbd7bd099"
+      "sha256": "edaf3b097915d8f18fbfabefa495f41d035948971ad067cf11916c55d406f32a"
     },
     {
       "path": "research-vault/30_assertions/multi-persona-thinking-reported-lower-benchmark-bias-than-prompting-baselines.md",
@@ -37268,7 +37268,7 @@
     },
     {
       "path": "research-vault/30_assertions/persona-prompting-can-introduce-identity-congruent-bias.md",
-      "sha256": "86c4318d581107ab4096824394cd1e9c0da0b311808ab48a0441d6e1bab47b3e"
+      "sha256": "818ecacd08ad0acd4ea9778ba8d9f61863c469971e295a7576c6218b755a0c2d"
     },
     {
       "path": "research-vault/30_assertions/persona-prompts-shift-llm-outputs-toward-assigned-identities.md",
@@ -37276,7 +37276,7 @@
     },
     {
       "path": "research-vault/30_assertions/prompt-language-shifted-rather-than-removed-measured-cultural-bias.md",
-      "sha256": "e0fcc3e2301e1875bf399f64a9a8eb3134e1a4ce6f498ac05ea20a07db88e578"
+      "sha256": "609c4d0c4d64bebf47e37c92af5cf10a61204e6b0e01a6febe71e2a7cff11147"
     },
     {
       "path": "research-vault/30_assertions/psychiatric-diagnosis-audit-reports-gender-and-racial-ethnic-bias.md",
@@ -37288,7 +37288,7 @@
     },
     {
       "path": "research-vault/30_assertions/reflexive-use-of-algorithmic-decisions-can-expose-bias-without-preventing-it.md",
-      "sha256": "bd519af6cd84ba9dd15da8e30475600182a73881f3db587c29204a91b571788d"
+      "sha256": "2edc69f8329d3fd6f123d5513f19bb4aa1ddf4ddf36299a9f2250d89a58dced9"
     },
     {
       "path": "research-vault/30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories.md",
@@ -37296,7 +37296,7 @@
     },
     {
       "path": "research-vault/30_assertions/rickman-proposes-a-counterfactual-evaluation-of-gender-bias-in-generated-care-summaries.md",
-      "sha256": "95d65a61c26d818e53ed4183f806e94771397b3b1bb3ed0eb726ca0ec7148672"
+      "sha256": "6a0f713c941f9586f5fdbc66bd5ca0bfc4ff564fe746dcea1cdae004aceec8c1"
     },
     {
       "path": "research-vault/30_assertions/rickman-tests-llm-summaries-of-social-care-notes-for-gender-bias.md",
@@ -37312,7 +37312,7 @@
     },
     {
       "path": "research-vault/30_assertions/social-work-education-framework-uses-recorded-image-prompts-as-critique-material.md",
-      "sha256": "a3fcb3e81f9bb260224cff1df90558d1ca660a28a430a1c304154e32fe831a5c"
+      "sha256": "da665677dc156717d6a401f935eb4f86a131d3d679bc1e2f7924604ff85ae5ab"
     },
     {
       "path": "research-vault/30_assertions/social-work-research-guidance-conditions-llm-use-on-human-validation-and-accountability.md",
@@ -37320,43 +37320,43 @@
     },
     {
       "path": "research-vault/30_assertions/social-work-research-guidance-proposes-disclosing-prompts-and-model-versions.md",
-      "sha256": "3cd892235e18e5391eb09c65ef4fe61f1d47914091ec863aac32ae4d815b66ed"
+      "sha256": "1ffd0afa866dc926bdbc9ed63519616065fdcec793fb5be1097dcefb1c1af6df"
     },
     {
       "path": "research-vault/30_assertions/social-work-research-guidance-requires-disclosure-of-prompts-and-models.md",
-      "sha256": "6b409cd6df25517f8e88243ea1c773984a4b0be6d390a3a09543564a6793741a"
+      "sha256": "ac9d1974916deaffd1915cb299a71a1d5959c1964519c04392d0746f6d6d965e"
     },
     {
       "path": "research-vault/30_assertions/social-work-research-guidance-requires-human-verification-of-generated-outputs.md",
-      "sha256": "241a513baa04d91cfcf35ac239acccf08f6cc4b54e9ef661670fa466e0341176"
+      "sha256": "520121d6a7240eb67cf0ef16c93cb21a7d36ddf6182f310978b8ebf4f0772334"
     },
     {
       "path": "research-vault/30_assertions/social-work-research-guidance-requires-verification-of-and-accountability-for-ai-outputs.md",
-      "sha256": "b8be6d8b44e8ea43c81a164d1c4e54731571fb5d82054b35e49f787364358562"
+      "sha256": "006f569abe703a738f6d2d6a6ccebdaff5549a1b09d448a8e1aa7949d4945dd8"
     },
     {
       "path": "research-vault/30_assertions/social-work-sources-name-professional-judgement-as-a-capacity-to-retain-and-strengthen.md",
-      "sha256": "843e2c34b7834afa310eb018cbe26e3f06bfec9eb157e9573c1f52f0a8df0061"
+      "sha256": "ef779db8b19942df2eaf99dfeaa3a0295d50f31d0650b923b64ab3212df9afca"
     },
     {
       "path": "research-vault/30_assertions/sources-link-responsible-llm-use-to-attention-to-marginalised-and-misrepresented-groups.md",
-      "sha256": "512b361a31027cf061e65262c93f5898d1aabf34b088d1f94407d611353219cc"
+      "sha256": "e8fb2cf7ca4c3d55666a9465b1344a3719645dba2df30c762f5fea94add1d01c"
     },
     {
       "path": "research-vault/30_assertions/sources-locate-responsible-ai-use-in-governance-and-quality-control-structures.md",
-      "sha256": "363106ce85b08d4ee295a2b796e5ba28b3db3da0b71ffc15eddd3e62d1ba1c6a"
+      "sha256": "f28bb5e5867b83440dd5a0d8b20f177589f7a5b525dbb00166095fd14abaad51"
     },
     {
       "path": "research-vault/30_assertions/sources-name-participation-of-affected-communities-as-a-condition-of-equitable-ai.md",
-      "sha256": "c0f639fdcaa9d2b480fb97a906ae0e2b57e0830f89ca3c5fcb0133d8c2adb9a1"
+      "sha256": "54046fb8d4fbdd0fdbeaec0c8ffa10ae576feed5c4b6bcf87616d0f53fb41b8f"
     },
     {
       "path": "research-vault/30_assertions/sources-tie-algorithmic-decision-support-to-retained-professional-control.md",
-      "sha256": "4902d29268f2f736e60ce4a88badd13dc45b0fd563a5b85ebb171a1426fd7ee3"
+      "sha256": "40271bef9f5a164c122717b80b7dc85f01cb855fa7e3c4f9a921143e6eca4d5f"
     },
     {
       "path": "research-vault/30_assertions/sources-tie-fair-deployment-to-the-rights-and-power-position-of-those-subjected-to-ai.md",
-      "sha256": "b4e3d2e345a725300dd3a6154e5e08ced5a04702d0f617f0efa4b3a198ceaa0e"
+      "sha256": "82b70df026fde479cf09fb9d24fea58e0be7a1becb7f622a9088a1876c02a5ff"
     },
     {
       "path": "research-vault/30_assertions/statistical-fairness-criteria-leave-rights-questions-in-child-protection-open.md",
@@ -37368,7 +37368,7 @@
     },
     {
       "path": "research-vault/30_assertions/victor-et-al-require-knowledge-of-tool-construction-limits-and-biases.md",
-      "sha256": "35ac3c168cfa37b6108d63c147c0d2478dd0a91192021c7cb2b39d11d6e0a44b"
+      "sha256": "98a6cb29c12494e57b234d068e61a2089d04a98f36ae7bb0629a3a84c92fce06"
     },
     {
       "path": "research-vault/30_assertions/vision-language-model-gender-stereotypes-override-visual-evidence.md",
@@ -37384,7 +37384,7 @@
     },
     {
       "path": "research-vault/30_assertions/wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities.md",
-      "sha256": "89da112b0d36bd003bdd8cdffdf3dcf7f70d61a8225dd99154fbc30f5779fadf"
+      "sha256": "4d35e2f5e486abc6ff3e646d6acb15fe2a7d3915f3f36be8794b588652783a17"
     },
     {
       "path": "research-vault/30_assertions/worker-assisted-screening-showed-smaller-racial-disparity-than-algorithm-only-policy.md",
@@ -37392,7 +37392,7 @@
     },
     {
       "path": "research-vault/30_assertions/xiao-et-al-find-no-fair-prompting-strategy-effective-in-every-tested-scenario.md",
-      "sha256": "3fb6c99c618bd6668f13f833b957d01ff7fbc448329e758727764c697b81c6da"
+      "sha256": "cff80ca27800352fe84576930d19dc7053dec4e466d081ec4560325e241f7566"
     },
     {
       "path": "research-vault/40_output/paper/paper.md",

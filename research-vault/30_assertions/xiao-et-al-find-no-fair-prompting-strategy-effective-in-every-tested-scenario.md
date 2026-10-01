@@ -12,7 +12,7 @@ contested-with:
 - '[[30_assertions/wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities]]'
 research-questions:
 - SQ3
-- SQ4
+- SQ5
 intended-output:
 - literature-report
 created: '2026-10-01'
