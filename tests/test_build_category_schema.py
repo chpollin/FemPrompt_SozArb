@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def test_public_category_schema_matches_canonical_yaml() -> None:
     payload = category_schema.build()
 
-    assert payload["version"] == "1.4"
+    assert payload["version"] == "1.4.1"
     assert payload["decision_options"] == ["Include", "Exclude", "Unclear"]
     assert payload["exclusion_reasons"] == [
         "Duplicate",

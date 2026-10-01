@@ -10,6 +10,8 @@ checked:
 grounding:
   - "[[20_distillates/publications/ahn-2025-ai-literacy-for-social-work#^s1]]"
 contested-with: []
+research-questions:
+  - SQ5
 created: 2026-08-23
 updated: 2026-08-23
 ---

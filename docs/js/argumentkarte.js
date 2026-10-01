@@ -45,7 +45,7 @@ function fromReleased() {
         });
         return {
             id: String(assertion.assertion_ref || assertion.id).split('/').pop(),
-            title: assertion.title, statement: assertion.statement, status: assertion.status,
+            title: assertion.title, label: assertion.label || '', statement: assertion.statement, status: assertion.status,
             released: true, research_questions: assertion.research_questions || [],
             contested_with: [], works: Object.keys(works).map(function (key) { return works[key]; }),
         };
@@ -75,9 +75,12 @@ function tileHtml(item) {
     const units = Math.min(item.works.length, MAX_UNITS);
     let marks = '';
     for (let index = 0; index < units; index += 1) marks += '<i></i>';
-    return '<li><button type="button" class="amap-tile amap-tile--' + status.key + '" data-id="' + EC.esc(item.id) + '" aria-pressed="false" ' +
-        'aria-label="' + EC.esc(item.title + ', ' + status.label + ', ' + worksLabel(item.works.length)) + '">' +
-        '<span class="amap-units" aria-hidden="true">' + marks + '</span></button></li>';
+    // A short label shows the core claim in the tile; its accessible name starts with it.
+    const label = item.label ? '<span class="amap-label">' + EC.esc(item.label) + '</span>' : '';
+    return '<li><button type="button" class="amap-tile amap-tile--' + status.key + (label ? ' amap-tile--labelled' : '') +
+        '" data-id="' + EC.esc(item.id) + '" aria-pressed="false" ' +
+        'aria-label="' + EC.esc((item.label ? item.label + ': ' : '') + item.title + ', ' + status.label + ', ' + worksLabel(item.works.length)) + '">' +
+        label + '<span class="amap-units" aria-hidden="true">' + marks + '</span></button></li>';
 }
 
 // Reviewed tiles lead, then tiles with more source Works.

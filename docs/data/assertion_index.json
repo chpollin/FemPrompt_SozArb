@@ -17,19 +17,21 @@
       "assertion_ref": "30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories",
       "title": "Reported prompting effects on bias vary across models and bias categories",
       "statement": "The cited evaluations report that the effects of prompting-based bias mitigation vary across model conditions and bias categories.",
+      "label": "Prompting-Effekte variieren nach Modell und Biasart",
       "topics": [
         "Prompting and Bias Mitigation"
       ],
-      "research_questions": [],
+      "research_questions": [
+        "SQ3"
+      ],
       "status": "ai-agent-reviewed",
       "review": {
         "type": "ai-source-review",
-        "artifact_sha256": "sha256:2d93d46185de2246740df38d5162244f4bd54d8f82573304b4fb770e1fc7d70d",
-        "agent_id": "/root/research_completion",
-        "model": "GPT-6",
-        "reviewed_at": "2026-09-05T12:20:05Z",
-        "findings": "Checked both grounding blocks against their original sources. Kaneko section 4.3 conditions comparative CoT benefit on model size/training; Kamruzzaman abstract and model/bias-specific results describe different best configurations across models and bias categories. The combined statement says the cited evaluations report variation; it does not infer a universal effect, cross-study pooled estimate, or transfer to social work. Supported as a narrow cross-source qualification. AI review does not constitute human verification or appraisal of methodological certainty.",
-        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed"
+        "artifact_sha256": "sha256:40624b24c5a3d6501710c1276ccc1b7a7e01f7e0cf7f0185be5b34bc00a37016",
+        "agent_id": "claude-code/subagent-a161cd413a39618e5",
+        "model": "Claude Sonnet 5.5",
+        "reviewed_at": "2026-10-01T17:44:48Z",
+        "findings": "Kaneko et al. state that CoT does not necessarily debias better than a debiasing prompt for relatively small or only pre-trained models, and Kamruzzaman and Kim state that the best combination of prompting features depends on the exact model and bias category. Together these support that effects vary across model conditions and bias categories, worded as reported by the cited evaluations. Each source supports one dimension and the combined wording stays hedged."
       },
       "evidence": [
         {
@@ -89,19 +91,21 @@
       "assertion_ref": "30_assertions/kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations",
       "title": "Kaneko et al. report that CoT prompting reduced measured bias in specific evaluations",
       "statement": "Kaneko et al. report lower measured bias scores for zero-shot and few-shot Chain-of-Thought prompting in their evaluation.",
+      "label": "Chain-of-Thought senkt gemessenen Gender-Bias",
       "topics": [
         "Prompting and Bias Mitigation"
       ],
-      "research_questions": [],
+      "research_questions": [
+        "SQ3"
+      ],
       "status": "ai-agent-reviewed",
       "review": {
         "type": "ai-source-review",
-        "artifact_sha256": "sha256:1273273e9c732b22da38c920b70d51b36f8776a55769dfff22fd1139bed101bf",
-        "agent_id": "/root/research_completion",
-        "model": "GPT-6",
-        "reviewed_at": "2026-09-05T12:20:05Z",
-        "findings": "Compared the statement and supporting distillate s1 directly with the original Results 3.3, Table 1 and limitations. The assertion attributes lower measured bias scores to Kaneko et al. and limits the statement to their evaluation. It does not claim every model improved or that CoT eliminates bias. Section 4.3 and the binary-gender/English limitations remain essential context for any later answer or recommendation. The source locator in the supporting distillate was corrected to sec. 3.3 before this receipt.",
-        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed"
+        "artifact_sha256": "sha256:7a5b3f8fc63bce08849f9411388fd5a52cb9723101c42383c8b7f99f0b46607b",
+        "agent_id": "claude-code/subagent-a161cd413a39618e5",
+        "model": "Claude Sonnet 5.5",
+        "reviewed_at": "2026-10-01T17:44:48Z",
+        "findings": "The source reports that both Zero-shot+CoT and Few-shot+CoT decrease bias scores on its benchmark, while the plain debiasing prompt was almost identical to baseline. The statement is limited to 'their evaluation' and 'measured bias scores', so it does not generalise beyond the reported setting."
       },
       "evidence": [
         {
@@ -136,20 +140,22 @@
       "assertion_ref": "30_assertions/ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies",
       "title": "Ahn et al. propose integrating AI literacy across existing core competencies",
       "statement": "Ahn et al. propose integrating AI literacy across existing core competencies.",
+      "label": "KI-Literacy quer durch bestehende Kernkompetenzen",
       "topics": [
         "AI Literacy",
         "Generative AI in Social Work"
       ],
-      "research_questions": [],
+      "research_questions": [
+        "SQ5"
+      ],
       "status": "ai-agent-reviewed",
       "review": {
         "type": "ai-source-review",
-        "artifact_sha256": "sha256:97030c4b4049d47849421135a31e50d7cb1473814c21e2e925942e63f841df49",
-        "agent_id": "/root/research_completion",
-        "model": "GPT-6",
-        "reviewed_at": "2026-09-05T12:20:05Z",
-        "findings": "Compared the assertion and its distillate block s1 with the original Discussion. The verb propose matches the explicit author recommendation and avoids presenting the conceptual framework as empirically validated. The referenced Work-Version binding matches the active distillate. Future empirical testing remains open in the source. Accepted as an AI-reviewed report of a proposal, not human verification.",
-        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed"
+        "artifact_sha256": "sha256:02d42cbfd52927f34423cf48737beaeea3c3f49149917bc76579b5780aab63a3",
+        "agent_id": "claude-code/subagent-acdd777b53eb7fd3f",
+        "model": "Claude Sonnet 5.5",
+        "reviewed_at": "2026-10-01T17:44:41Z",
+        "findings": "The discussion section of the source says 'we propose that AI literacy should also be integrated across existing core competencies', which matches the statement and its proposal framing."
       },
       "evidence": [
         {
@@ -184,22 +190,21 @@
       "assertion_ref": "30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation",
       "title": "Kabra et al. transfer reasoning traces through fine-tuning",
       "statement": "Kabra, Jha and Reddy define ReGiFT as a fine-tuning procedure that transfers reasoning traces generated by a reasoning model to base models as training supervision.",
+      "label": "ReGiFT überträgt Reasoning durch Fine-Tuning",
       "topics": [
         "Prompting and Bias Mitigation"
       ],
       "research_questions": [
-        "SQ1",
-        "SQ2"
+        "SQ3"
       ],
       "status": "ai-agent-reviewed",
       "review": {
         "type": "ai-source-review",
-        "artifact_sha256": "sha256:730a652c89b468bfaf3c20a06f098c9303636722cf6ca838b62c8fb89c83d486",
-        "agent_id": "/root/source_review_check",
-        "model": "GPT-6",
-        "reviewed_at": "2026-09-05T19:23:05.511878Z",
-        "findings": "Accepted the single bounded method assertion: ReGiFT transfers generated reasoning traces as training supervision through fine-tuning. Both cited distillate anchors s1 and s2 were traced to and checked against original ReGiFT v3 passages in sections 3 and 3.2; the receipt cites that original source directly. The inference-time CoT distinction follows the section 3.2 comparison. The assertion correctly withholds universal bias-mitigation efficacy, trace correctness/faithfulness, consensus and human verification. Full final Markdown was read after promotion; original preparer attribution remains and current AI-review status is explicit. No substantive method correction was required.",
-        "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed"
+        "artifact_sha256": "sha256:0eb73a9dc5fb0759f04dfdc9c6de6232ec0bc4ae33d56c2aac1508beadb379b9",
+        "agent_id": "claude-code/subagent-a49c0ac62a818d702",
+        "model": "Claude Sonnet 5.5",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "findings": "The method section describes a two-step approach that extracts reasoning traces from advanced reasoning models and uses them to fine-tune base models, and names the result ReGiFT. The authors also contrast it with inference-time chain-of-thought prompting. The Statement describes the proposed procedure only and makes no effectiveness claim, in line with its scope boundary; the author names match the paper header."
       },
       "evidence": [
         {

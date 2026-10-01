@@ -79,7 +79,7 @@ def test_approved_chain_exports_exact_version_and_excerpt_deterministically(tmp_
     assert source["locator"] == "discussion"
     assert source["source_url"] == "https://doi.org/10.1086/735187"
     assert source["statement_ref"].endswith("#^s1")
-    assert assertion["research_questions"] == []
+    assert assertion["research_questions"] == ["SQ5"]
 
 
 def test_research_questions_are_exported_in_order(tmp_path):

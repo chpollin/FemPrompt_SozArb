@@ -1312,9 +1312,9 @@ function completeAnalysis(source) {
     return { fields: fields, undecidable: {} };
 }
 
-test('analysis vocabulary loaded from the built categories.yaml source (v1.4)', function() {
+test('analysis vocabulary loaded from the built categories.yaml source (v1.4.1)', function() {
     assert(window.__ANALYSIS_FIELDS__, 'the runner injected docs/data/analysis_fields.json');
-    assertEqual(T.anVersion(), '1.4', 'the analysis_fields version');
+    assertEqual(T.anVersion(), '1.4.1', 'the analysis_fields version');
     // fields introduced in v1.4 are optional in PRISM and carry their version
     ['AN_Task', 'AN_Gender_Definition', 'AN_Bias_Definition', 'AN_Gender_Understanding', 'AN_Theory_Reference'].forEach(function(name) {
         assert(T.anField(name).optional === true, name + ' is optional');
@@ -1355,6 +1355,8 @@ test('analysisPanelHtml is fed only from the closed vocabulary (no free option v
 test('sanitizeAnalysis keeps a recorded codebook version and adds none to a legacy record', function() {
     var kept = T.sanitizeAnalysis({ fields: { AN_Mitigation_Status: 'None' }, undecidable: {}, codebook_version: '1.4' }, 'raw');
     assertEqual(kept.codebook_version, '1.4', 'the recorded version survives');
+    var patch = T.sanitizeAnalysis({ fields: { AN_Mitigation_Status: 'None' }, undecidable: {}, codebook_version: '1.4.1' }, 'raw');
+    assertEqual(patch.codebook_version, '1.4.1', 'a patch version survives');
     var legacy = T.sanitizeAnalysis({ fields: { AN_Mitigation_Status: 'None' }, undecidable: {} }, 'raw');
     assert(!('codebook_version' in legacy), 'a record without a version stays without one, which reads as v1.3');
     var junk = T.sanitizeAnalysis({ fields: {}, undecidable: {}, codebook_version: 'latest' }, 'raw');

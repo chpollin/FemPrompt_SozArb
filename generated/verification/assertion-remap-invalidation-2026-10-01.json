@@ -1,0 +1,63 @@
+{
+  "schema": "femprompt-artifact-verification/0.1",
+  "activity": {
+    "type": "review_invalidation",
+    "reason": "Provisional remapping of four AI-reviewed Assertions to the sub-question numbering of 1 October 2026",
+    "recorded_at": "2026-10-01T17:39:28Z",
+    "revert_path": "Restore the previous research-questions values and remove this batch from generated/verification/ai-source-reviews.json review_sources"
+  },
+  "reviews": [
+    {
+      "review_type": "ai-source-review",
+      "result": "changes_requested",
+      "artifact": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
+      "sha256": "sha256:0eb73a9dc5fb0759f04dfdc9c6de6232ec0bc4ae33d56c2aac1508beadb379b9",
+      "agent_id": "claude-code/worktree-agent-a714c556cb448f93b",
+      "actor_type": "ai_agent",
+      "model": "Claude Opus 5.5",
+      "model_id": "claude-opus-5-5",
+      "reviewed_at": "2026-10-01T17:39:28Z",
+      "authority": "Invalidation of an earlier acceptance only. No source review, human verification or approval is recorded.",
+      "findings": "The research-questions field was changed from SQ1, SQ2 of the earlier numbering to SQ3 under the provisional remapping of 1 October 2026 (knowledge/plan.md, decisions taken, operator acceptance pending). The earlier accepted source review covers the previous bytes only, so it no longer applies. The Assertion stays withheld until a new source review of the current bytes is recorded."
+    },
+    {
+      "review_type": "ai-source-review",
+      "result": "changes_requested",
+      "artifact": "research-vault/30_assertions/kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations.md",
+      "sha256": "sha256:7a5b3f8fc63bce08849f9411388fd5a52cb9723101c42383c8b7f99f0b46607b",
+      "agent_id": "claude-code/worktree-agent-a714c556cb448f93b",
+      "actor_type": "ai_agent",
+      "model": "Claude Opus 5.5",
+      "model_id": "claude-opus-5-5",
+      "reviewed_at": "2026-10-01T17:39:28Z",
+      "authority": "Invalidation of an earlier acceptance only. No source review, human verification or approval is recorded.",
+      "findings": "The research-questions field was changed from no field to SQ3 under the provisional remapping of 1 October 2026 (knowledge/plan.md, decisions taken, operator acceptance pending). The earlier accepted source review covers the previous bytes only, so it no longer applies. The Assertion stays withheld until a new source review of the current bytes is recorded."
+    },
+    {
+      "review_type": "ai-source-review",
+      "result": "changes_requested",
+      "artifact": "research-vault/30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories.md",
+      "sha256": "sha256:40624b24c5a3d6501710c1276ccc1b7a7e01f7e0cf7f0185be5b34bc00a37016",
+      "agent_id": "claude-code/worktree-agent-a714c556cb448f93b",
+      "actor_type": "ai_agent",
+      "model": "Claude Opus 5.5",
+      "model_id": "claude-opus-5-5",
+      "reviewed_at": "2026-10-01T17:39:28Z",
+      "authority": "Invalidation of an earlier acceptance only. No source review, human verification or approval is recorded.",
+      "findings": "The research-questions field was changed from no field to SQ3 under the provisional remapping of 1 October 2026 (knowledge/plan.md, decisions taken, operator acceptance pending). The earlier accepted source review covers the previous bytes only, so it no longer applies. The Assertion stays withheld until a new source review of the current bytes is recorded."
+    },
+    {
+      "review_type": "ai-source-review",
+      "result": "changes_requested",
+      "artifact": "research-vault/30_assertions/ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies.md",
+      "sha256": "sha256:02d42cbfd52927f34423cf48737beaeea3c3f49149917bc76579b5780aab63a3",
+      "agent_id": "claude-code/worktree-agent-a714c556cb448f93b",
+      "actor_type": "ai_agent",
+      "model": "Claude Opus 5.5",
+      "model_id": "claude-opus-5-5",
+      "reviewed_at": "2026-10-01T17:39:28Z",
+      "authority": "Invalidation of an earlier acceptance only. No source review, human verification or approval is recorded.",
+      "findings": "The research-questions field was changed from no field to SQ5 under the provisional remapping of 1 October 2026 (knowledge/plan.md, decisions taken, operator acceptance pending). The earlier accepted source review covers the previous bytes only, so it no longer applies. The Assertion stays withheld until a new source review of the current bytes is recorded."
+    }
+  ]
+}

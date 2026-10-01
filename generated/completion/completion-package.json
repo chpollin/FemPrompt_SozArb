@@ -12717,10 +12717,10 @@
       "name": "AN_Harm_Types",
       "optional": true,
       "rules": [
-        "A harm type is coded when the work demonstrates, measures or argues the mechanism for its own object, and every assigned value has its own passage. A harm named only in background, in a definitions table or in a related-work passage is left uncoded. A review or taxonomy codes the harm types that structure its own synthesis as a section, table row or coded category.",
+        "A harm type is coded when the work demonstrates, measures or argues the mechanism for its own object, and every assigned value has its own passage. A harm named only in background, in a definitions table or in a related-work passage is left uncoded, and so is a harm the work only cites from other work, including a list of cited cases, when its own argument or result does not establish it. A review or taxonomy codes the harm types that structure its own synthesis as a section, table row or coded category.",
         "Allocational harms are separated from representational harms first (Gallegos et al. 2024, Table 1). Direct_Discrimination and Indirect_Discrimination require an allocation or a decision about persons or groups, such as hiring, benefits, screening-in or a risk score. Output that depicts or describes a group is a representational harm.",
         "Direct_Discrimination applies when the decision changes with the group attribute itself, stated in the input or the rule. Indirect_Discrimination applies when an apparently neutral criterion or proxy such as a name, postcode, prior service contact or digital access produces the disadvantage. An audit that varies names correlated with race or gender is indirect discrimination. When the work classifies the discrimination itself, its classification is coded.",
-        "Disparate_Performance covers differences in system quality between groups or language varieties, such as accuracy, error rate or recognition. A difference in decision outcomes is discrimination, a difference in quality is Disparate_Performance, and a work that shows both codes both.",
+        "Disparate_Performance covers differences in system quality between groups or language varieties, such as accuracy, error rate or recognition. A difference in decision outcomes is discrimination, a difference in quality is Disparate_Performance, and a work that shows both codes both. A difference in tone or style of model output between groups is not by itself Disparate_Performance.",
         "Exclusionary_Norms applies when the norm of a dominant group acts as default and other groups are left out or devalued, such as a male default, cis-centric answers or the assumption of digitally skilled clients. Stereotyping ascribes attributes to a group, Erasure leaves a group or its experience out, Misrepresentation generalises an unrepresentative depiction to a group."
       ],
       "serves": "SQ2",
@@ -12852,7 +12852,7 @@
       "introduced_in": "1.4",
       "multi": true,
       "name": "AN_Gender_Understanding",
-      "note": "The understanding of gender that underlies the work's own analysis. A conceptual statement that the analysis does not follow goes to AN_Notes and the value follows the analysis. Binary_Categorical and Non_Binary_Inclusive exclude each other. Unclear and Not_Applicable stand alone. Social_Construct and Intersectional combine with each other and with Non_Binary_Inclusive. Intersectional follows the rule of Intersectional in AN_Bias_Axes. Non_Binary_Inclusive needs genders beyond the binary as categories of the analysis, a limitation sentence does not suffice.",
+      "note": "The understanding of gender that underlies the work's own analysis. A conceptual statement that the analysis does not follow goes to AN_Notes and the value follows the analysis. Binary_Categorical and Non_Binary_Inclusive exclude each other. Unclear and Not_Applicable stand alone. Social_Construct and Intersectional combine with each other and with Non_Binary_Inclusive. Intersectional follows the rule of Intersectional in AN_Bias_Axes. Non_Binary_Inclusive needs genders beyond the binary as categories of the analysis, a limitation sentence does not suffice. Social_Construct needs an explicit statement in the work that gender is socially produced, a relation or a power structure.",
       "optional": true,
       "serves": "SQ4",
       "values": [
@@ -21781,14 +21781,13 @@
         "validation": "2026-08-23"
       },
       "current_ai_source_review": {
-        "agent_id": "/root/research_completion",
+        "agent_id": "claude-code/subagent-acdd777b53eb7fd3f",
         "artifact": "research-vault/30_assertions/ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies.md",
-        "findings": "Compared the assertion and its distillate block s1 with the original Discussion. The verb propose matches the explicit author recommendation and avoids presenting the conceptual framework as empirically validated. The referenced Work-Version binding matches the active distillate. Future empirical testing remains open in the source. Accepted as an AI-reviewed report of a proposal, not human verification.",
-        "model": "GPT-6",
-        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "findings": "The discussion section of the source says 'we propose that AI literacy should also be integrated across existing core competencies', which matches the statement and its proposal framing.",
+        "model": "Claude Sonnet 5.5",
         "result": "accepted",
-        "reviewed_at": "2026-09-05T12:20:05Z",
-        "sha256": "sha256:97030c4b4049d47849421135a31e50d7cb1473814c21e2e925942e63f841df49"
+        "reviewed_at": "2026-10-01T17:44:41Z",
+        "sha256": "sha256:02d42cbfd52927f34423cf48737beaeea3c3f49149917bc76579b5780aab63a3"
       },
       "path": "research-vault/30_assertions/ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies.md",
       "sources": [
@@ -21827,7 +21826,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-af1b859b3011968fe",
+        "artifact": "research-vault/30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding.md",
+        "findings": "Checked the three passages. The first article frames digital literacy as more than technical competence, citing both technical proficiency and critical understanding of social and political implications. The 2023 article defines digital literacy as technical competency plus critical understanding of technical implications and social form. The student-attitude study calls for critical AI literacy covering algorithmic bias, data ethics and human judgement beyond purely technical training. The statement's 'social, ethical and political' is a fair union of the three, and the scope boundary correctly states that these are proposals.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:39Z",
+        "sha256": "sha256:7dd0e2f21c52bc4eae23cc99fb89a584b43d82b6024bb10d387f8724ea4af4b0"
+      },
       "path": "research-vault/30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding.md",
       "sources": [
         {
@@ -21882,7 +21889,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a89507f52f5a4ce01",
+        "artifact": "research-vault/30_assertions/algorithmic-decision-making-can-introduce-and-expose-structural-bias.md",
+        "findings": "The source sentence says ADM gives no assurance of removing racism, disablism, heterosexism and misogyny in resource allocation or risk assessment, that it can introduce new structural biases, and that used reflexively it can draw attention to such biases. The statement keeps the modal 'can', labels the source as a conceptual article and does not report an observed effect. The following sentence ('at least that is the theory') confirms the claim is a possibility, which the statement does not overstate.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:35Z",
+        "sha256": "sha256:9d424e7cda5bccba628e61c4a62d677a8a87cd3eae8967d6df39931f23e6e4bf"
+      },
       "path": "research-vault/30_assertions/algorithmic-decision-making-can-introduce-and-expose-structural-bias.md",
       "sources": [
         {
@@ -21911,7 +21926,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a49c0ac62a818d702",
+        "artifact": "research-vault/30_assertions/assigned-social-identity-personas-induced-identity-congruent-bias.md",
+        "findings": "The first study's abstract reports that self-categorization of an assigned social identity leads to ingroup favouritism and outgroup bias. The second reports up to 9% reduced veracity discernment for persona-assigned LLMs and frames this as identity-congruent motivated reasoning, alongside a larger identity-congruent effect in the scientific-evidence task. The Statement is attributed to the evaluations and is hedged accordingly; the delimiting limitations (political and gender domains, English, US; binary gender) are present in the sources and in the scope text of the Assertion file.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:ae7dcf38d2e090e17aeb90c0b6e24fe0423ea0ba69691f8bcb8a99e051db718b"
+      },
       "path": "research-vault/30_assertions/assigned-social-identity-personas-induced-identity-congruent-bias.md",
       "sources": [
         {
@@ -21977,7 +22000,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a161cd413a39618e5",
+        "artifact": "research-vault/30_assertions/beloch-and-martin-argue-ai-supported-counselling-needs-concepts-tailored-to-clients.md",
+        "findings": "The abstract and section 5.1 state that the analysis of a social and debt counselling study, with attention to AI-supported counselling formats, shows a need for individual concepts oriented to clients' resources and support needs. The study collected no chatbot data, so a prospective 'would need' with 'argue' is the correct strength. The scope boundary states this.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:48Z",
+        "sha256": "sha256:c6525476b8b99f6bd6cd9724df39abf4583be3cacccb85b7bf04d0b6d2346c4a"
+      },
       "path": "research-vault/30_assertions/beloch-and-martin-argue-ai-supported-counselling-needs-concepts-tailored-to-clients.md",
       "sources": [
         {
@@ -22018,7 +22049,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-acdd777b53eb7fd3f",
+        "artifact": "research-vault/30_assertions/bias-evaluations-name-binary-gender-operationalisation-as-limitation.md",
+        "findings": "Each of the three sources states in its own limitation or ethics passage that binary or predefined gender or identity categories do not capture non-binary, diverse or intersectional identities. The third source (multi-persona thinking) is a mitigation framework tested experimentally, which the scope boundary covers as an experiment. The Assertion reports only the authors' limitation statements.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:41Z",
+        "sha256": "sha256:b456882ff23c4f62e95ce6947103f6e4bb1caa1dfee7c46d59a154d1b3faaf29"
+      },
       "path": "research-vault/30_assertions/bias-evaluations-name-binary-gender-operationalisation-as-limitation.md",
       "sources": [
         {
@@ -22073,7 +22112,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a161cd413a39618e5",
+        "artifact": "research-vault/30_assertions/biased-user-framing-reduced-llm-diagnostic-accuracy-in-a-simulation.md",
+        "findings": "The abstract and discussion report that cognitively biased consultations lowered diagnostic accuracy for all six models and that errors were frequently aligned with the patient's preferred but incorrect diagnosis. The simulation setting (simulated patient agent, MedQA cases) is named in the statement and the scope boundary acknowledges limited ecological validity.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:48Z",
+        "sha256": "sha256:23a7acae11e7060e849671b5998b3feb7f09264fec0ab8a15ce626cac3746810"
+      },
       "path": "research-vault/30_assertions/biased-user-framing-reduced-llm-diagnostic-accuracy-in-a-simulation.md",
       "sources": [
         {
@@ -22102,7 +22149,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a5af9da52815caa8c",
+        "artifact": "research-vault/30_assertions/chain-of-thought-prompting-added-inference-overhead-in-clinical-benchmark.md",
+        "findings": "Finding 3 and the results text state that overhead varies by model, that role-playing and bias-aware prompting have minimal effects, and that chain-of-thought is the only strategy consistently increasing cost, with output length and latency up for most models and one model as the exception. The statement matches this, including 'most tested models'. Latency is estimated from script runtime, which the statement does not contradict.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:b3492a124384ec3350895c62507e06580b7e187c0d0bd7116b32c7b14a15fbb3"
+      },
       "path": "research-vault/30_assertions/chain-of-thought-prompting-added-inference-overhead-in-clinical-benchmark.md",
       "sources": [
         {
@@ -22131,7 +22186,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a18e715e73645e8f8",
+        "artifact": "research-vault/30_assertions/chain-of-thought-reduced-clinical-accuracy-gaps-most-often-but-not-universally.md",
+        "findings": "The source reports chain-of-thought with the most significant reduction cases (8/15) and no strategy universally effective, with some strategies exacerbating bias (abstract, Finding 1, role-playing cases in Finding 2). The statement matches in scope (AMQA benchmark with counterfactual pairs, fairness-oriented prompting strategies) and hedges correctly.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:24Z",
+        "sha256": "sha256:9dfa331f5709ffffc1f376ca3477c918ad162097a44f0eb8c57484c307a7e06e"
+      },
       "path": "research-vault/30_assertions/chain-of-thought-reduced-clinical-accuracy-gaps-most-often-but-not-universally.md",
       "sources": [
         {
@@ -22172,7 +22235,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a161cd413a39618e5",
+        "artifact": "research-vault/30_assertions/chatterji-et-al-report-guidance-information-and-writing-dominate-consumer-chatgpt-use.md",
+        "findings": "The source states that Practical Guidance, Seeking Information and Writing are the three most common conversation topics, together about 77 percent of ChatGPT conversations, and that analysis ran through automated LLM-based classifiers with no human reading message content. The statement's 'most' is a fair rendering of 77 percent and the classification caveat is stated. The scope boundary limits it to consumer use and a general reference profile.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:48Z",
+        "sha256": "sha256:4b2fcd7d6208ed5d62ec6b75f7c06c604c7bd5d666a320c3a31834e96887f3df"
+      },
       "path": "research-vault/30_assertions/chatterji-et-al-report-guidance-information-and-writing-dominate-consumer-chatgpt-use.md",
       "sources": [
         {
@@ -22213,7 +22284,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a7bae48024aa33209",
+        "artifact": "research-vault/30_assertions/cheng-et-al-and-field-et-al-examine-predictive-and-nlp-tools-in-child-welfare.md",
+        "findings": "Cheng et al. compare hypothetical AFST-only screening with worker decisions aided by the AFST in one county's intake, and Field et al. analyse more than 3 million contact notes of one county with NER and coreference models and a risk tool using text. Both descriptions match the statement, and neither tool is an LLM, consistent with the scope boundary. The statement makes no claim beyond the tool types and settings.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:11Z",
+        "sha256": "sha256:c8945ba0bf2c424c88b12ef6875e1650ca6d32de2d14397b4a969c0c71dc152f"
+      },
       "path": "research-vault/30_assertions/cheng-et-al-and-field-et-al-examine-predictive-and-nlp-tools-in-child-welfare.md",
       "sources": [
         {
@@ -22255,7 +22334,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a7bae48024aa33209",
+        "artifact": "research-vault/30_assertions/cheng-et-al-report-smaller-disparity-for-worker-assisted-than-algorithm-only-screening.md",
+        "findings": "The source reports a 20% algorithm-only versus 9% worker-assisted Black-white screen-in disparity, robust across thresholds, and states that causation by the AFST introduction is unclear because of other policy changes and no randomization. The statement's hedging (no attribution to the tool) and the scope boundary (counterfactual, threshold-dependent, one county) match the source.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:11Z",
+        "sha256": "sha256:c36983a210c8b93c7c1d00042c1c34b2d971208b94f1e5ca276d50625c778616"
+      },
       "path": "research-vault/30_assertions/cheng-et-al-report-smaller-disparity-for-worker-assisted-than-algorithm-only-screening.md",
       "sources": [
         {
@@ -22308,7 +22395,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a7bae48024aa33209",
+        "artifact": "research-vault/30_assertions/cheng-et-al-report-that-workers-used-context-to-compensate-for-model-limitations.md",
+        "findings": "The source summarises contextual inquiries and interviews with 13 workers showing holistic contextual decisions, compensation for perceived AFST limitations and collaborative decisions among caseworkers and supervisors. The authors frame these as hypotheses from qualitative data, matching the statement's 'suggest'. The July 2021 fieldwork postdates the 2016 to 2018 quantitative period, as the scope boundary says.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:11Z",
+        "sha256": "sha256:a1e62c76e3d077457482e2f759ddd953aea37b3c62460bb8e4f72e4487d9fd51"
+      },
       "path": "research-vault/30_assertions/cheng-et-al-report-that-workers-used-context-to-compensate-for-model-limitations.md",
       "sources": [
         {
@@ -22378,7 +22473,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-af1b859b3011968fe",
+        "artifact": "research-vault/30_assertions/child-protection-nlp-showed-lower-name-recall-for-black-clients.md",
+        "findings": "The abstract reports consistent unfairness in NER models, possible unfairness in coreference and little evidence of exacerbated racial bias in risk prediction. Table 5 states that recall is higher for names of white than black clients across models and that all differences are statistically significant. The data set is described as more than 3 million contact notes from one anonymous county. The statement matches this and keeps the risk-model finding as 'little evidence', not as absence of effect.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:39Z",
+        "sha256": "sha256:4a2d7195dc466cd54c5c26bd0afc33567a15f68480d66095afcd2cf5e619021a"
+      },
       "path": "research-vault/30_assertions/child-protection-nlp-showed-lower-name-recall-for-black-clients.md",
       "sources": [
         {
@@ -22473,7 +22576,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a7bae48024aa33209",
+        "artifact": "research-vault/30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm.md",
+        "findings": "The mixed-methods study compares worker decisions assisted by the AFST with a hypothetical AFST-only policy and finds 9% versus 20% disparity, while explicitly noting that causal attribution to the AFST is unclear. The statement and its scope boundary (threshold at 15, warranted versus unwarranted disparity, one county) are consistent with the source text.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:11Z",
+        "sha256": "sha256:9c35f76caf4a5c2df8e28b4fc1b3a5199c2f9bf16213685cfe53233ddaed4749"
+      },
       "path": "research-vault/30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm.md",
       "sources": [
         {
@@ -22538,7 +22649,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a18e715e73645e8f8",
+        "artifact": "research-vault/30_assertions/clinical-prompting-fairness-gains-came-from-lifting-unprivileged-groups.md",
+        "findings": "Finding 2 and the surrounding text say accuracy is preserved for privileged groups and generally improved for unprivileged groups, so fairness improvements stem primarily from lifting unprivileged groups. The source notes rare exceptions (one bias-aware, two role-playing cases), which the word 'mainly' covers. The abstract confirms the pattern for the chain-of-thought gains.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:24Z",
+        "sha256": "sha256:b88ceaa1eb6ba2df05c303485ca2fc470da4bc07dfe1f302a7d4ae4706c85586"
+      },
       "path": "research-vault/30_assertions/clinical-prompting-fairness-gains-came-from-lifting-unprivileged-groups.md",
       "sources": [
         {
@@ -22567,7 +22686,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a7bae48024aa33209",
+        "artifact": "research-vault/30_assertions/clinician-client-focus-groups-link-fair-deployment-to-equitable-use-policies.md",
+        "findings": "Six focus groups (n=18) with people who were both clinicians and current therapy clients responded to a hypothetical AI deception-detection scenario. In RQ3 the source states 'Clear, equitable use policies are essential' and reports participant concerns about decision-making authority and discretionary deployment introducing bias, stigma or power imbalance. The equitable-use-policy recommendation was formulated by the research team in response to those concerns, a nuance the statement ('tied to') tolerates.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:11Z",
+        "sha256": "sha256:cb19da7539a73fb1797cac576dda784b9ec105b7e8b431a1c71423884152d8c8"
+      },
       "path": "research-vault/30_assertions/clinician-client-focus-groups-link-fair-deployment-to-equitable-use-policies.md",
       "sources": [
         {
@@ -22608,7 +22735,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/worktree-agent-a714c556cb448f93b",
+        "artifact": "research-vault/30_assertions/counterfactual-gender-audit-demonstrated-on-social-care-summaries.md",
+        "findings": "Orchestrator sample check against the source. The batch reviewer narrowed the clause that the evaluation is designed to show both whether and in which form summaries differ, because the distillate's quoted sentence states only reproducibility and interpretability. The same Generalisibility section of the source states the design goal verbatim as a framework for analysing both the presence and nature of gender bias, and it contrasts this with scalar bias scores that do not capture how bias manifests. The Statement is supported as worded. The distillate's choice of quotation for block s4 remains weak and could cite this sentence instead.",
+        "model": "Claude Opus 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:47:10Z",
+        "sha256": "sha256:e2ef0eeaf026489441d990b3bd654f0882ae5c94bb0db8d4e8a5c24efcc47802"
+      },
       "path": "research-vault/30_assertions/counterfactual-gender-audit-demonstrated-on-social-care-summaries.md",
       "sources": [
         {
@@ -22661,7 +22796,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a161cd413a39618e5",
+        "artifact": "research-vault/30_assertions/debt-counselling-study-discusses-chatbot-use-prospectively-without-chatbot-data.md",
+        "findings": "The source states that no chatbot-specific data were collected, and its abstract and section 5.1 derive conditions for AI-supported counselling from a social and debt counselling study. The statement does not claim observed chatbot benefits. The title and statement are consistent with the s1 to s3 blocks.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:48Z",
+        "sha256": "sha256:5c1eec362e8e3aff91f78c6d765206a43271fd29930d1a9db7f1def6cb7bf0b0"
+      },
       "path": "research-vault/30_assertions/debt-counselling-study-discusses-chatbot-use-prospectively-without-chatbot-data.md",
       "sources": [
         {
@@ -22714,7 +22857,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a18e715e73645e8f8",
+        "artifact": "research-vault/30_assertions/epic-model-proposes-four-part-framework-for-integrating-ai-into-social-work.md",
+        "findings": "The abstract and method section present the EPIC model, derived from a literature review, with the four named components, for integrating AI into the profession, and call for a proactive and ethical approach. Calling it a governance framework is a mild interpretive label, but policy development, advocacy and ethics components make it defensible, and the statement correctly marks it as a literature-based proposal.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:24Z",
+        "sha256": "sha256:42084e580595fb3ff832fc13bae102dc0575f8a540da992366342f8b103fe798"
+      },
       "path": "research-vault/30_assertions/epic-model-proposes-four-part-framework-for-integrating-ai-into-social-work.md",
       "sources": [
         {
@@ -22755,7 +22906,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a7bae48024aa33209",
+        "artifact": "research-vault/30_assertions/fairness-aware-prompts-reduced-measured-disparities-in-mental-health-classification.md",
+        "findings": "The source reports for three LLMs on three datasets that fairness-aware prompts lowered EO scores to varying extents with F1 on par with best results, and concludes they 'show the potential of mitigating biases without significantly compromising model performance'. The statement is hedged to 'evaluated settings' and attributes the claim to the authors. The title's second clause rests on the separate conclusion that LLMs remain inadequate for real-world deployment, which is a general finding, not specifically a post-mitigation result; the statement itself does not claim it.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:11Z",
+        "sha256": "sha256:141ba8e242d63abe1f5cbb4d17be876bf5c55ef533e3448e884ff9917142d194"
+      },
       "path": "research-vault/30_assertions/fairness-aware-prompts-reduced-measured-disparities-in-mental-health-classification.md",
       "sources": [
         {
@@ -22808,7 +22967,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a7bae48024aa33209",
+        "artifact": "research-vault/30_assertions/focus-groups-anticipate-misreading-of-underrepresented-clients-by-deception-detection.md",
+        "findings": "Participants questioned whether AI could distinguish deceit from expressions shaped by culture, neurodiversity or emotional regulation, and worried training data might not reflect client diversity. The explicit consequence of higher false positives for underrepresented groups is partly the authors' elaboration after the participant worry, but the statement is hedged ('could') and the scope boundary frames the harms as anticipated.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:11Z",
+        "sha256": "sha256:532a39a5fa8edcb349f8bfbf045e64979fa3a3810840d72ec2c2ccc6a6d2ec03"
+      },
       "path": "research-vault/30_assertions/focus-groups-anticipate-misreading-of-underrepresented-clients-by-deception-detection.md",
       "sources": [
         {
@@ -22837,7 +23004,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-af1b859b3011968fe",
+        "artifact": "research-vault/30_assertions/gender-equity-framework-links-gender-bias-to-allocative-and-representational-harms.md",
+        "findings": "The article locates bias in team composition, data generation, collection and labelling, training sets and variables or proxies, and lists six impact types including lower service quality, unfair allocation, stereotypes, erasure, and physical safety and health hazards. The statement matches this list, and the scope boundary discloses that the allocative/representational grouping in the title is the Assertion's own classification and that the case percentages are not prevalence estimates.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:39Z",
+        "sha256": "sha256:e3bed703f006a7e3cd49f3744a3f5e911462f688467241e51ef67585c21f43c2"
+      },
       "path": "research-vault/30_assertions/gender-equity-framework-links-gender-bias-to-allocative-and-representational-harms.md",
       "sources": [
         {
@@ -22878,7 +23053,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-af1b859b3011968fe",
+        "artifact": "research-vault/30_assertions/gender-equity-framework-proposes-documentation-audits-and-participatory-governance.md",
+        "findings": "The article's two action lists contain feminist data practices, gender expertise, documentation of datasets and models, gender-lens audits, centring marginalised community voices via participatory design and gender-sensitive governance. These are presented as actions to take, so 'proposes' is accurate, and the framing as a response to the development decisions listed under the bias section is consistent with the article's structure.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:39Z",
+        "sha256": "sha256:34e0dd1120189c9f53e94c251cbe23f2d0757bc161948baf66718c0fc11f4693"
+      },
       "path": "research-vault/30_assertions/gender-equity-framework-proposes-documentation-audits-and-participatory-governance.md",
       "sources": [
         {
@@ -22919,7 +23102,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-af1b859b3011968fe",
+        "artifact": "research-vault/30_assertions/gender-equity-literature-rejects-algorithmic-neutrality.md",
+        "findings": "The article states that data and algorithms are not neutral and that ML systems are not objective, and places bias in team composition, data, labels, variables and proxies. The chapter states that neutrality is unachievable because data and design are socially constructed. The enumeration of labels, variables and proxies in the statement comes from the first source only, but the statement is a joint formulation and not misleading, and the scope boundary describes the second source as a conceptual chapter with a small survey.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:39Z",
+        "sha256": "sha256:cdbc46da57ee8c936d7a9f4023d0ff9572ef298f5713446306ce03548eea4308"
+      },
       "path": "research-vault/30_assertions/gender-equity-literature-rejects-algorithmic-neutrality.md",
       "sources": [
         {
@@ -22961,7 +23152,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a89507f52f5a4ce01",
+        "artifact": "research-vault/30_assertions/ingram-reports-expected-tensions-of-ai-assisted-recording-in-social-work.md",
+        "findings": "The abstract lists the five tensions (administrative relief versus the reflective value of writing, judgement, relational practice, accessibility and inclusion versus deskilling, enthusiasm versus ethical complexity) from the baseline evaluation of Magic Note in a Scottish local authority and states five proposed curriculum principles. The source also says most participants had not yet used the tool with service users, which supports the 'expected' framing and the scope boundary. The distillate block only says the source supports a bounded finding, but the full text carries the statement.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:35Z",
+        "sha256": "sha256:254ba37b76643c18770571ae91bed282b7c7bf422ab16482907621bfe62487bd"
+      },
       "path": "research-vault/30_assertions/ingram-reports-expected-tensions-of-ai-assisted-recording-in-social-work.md",
       "sources": [
         {
@@ -22990,7 +23189,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a89507f52f5a4ce01",
+        "artifact": "research-vault/30_assertions/james-et-al-propose-a-case-based-technical-critical-pedagogy.md",
+        "findings": "The source describes the case-study method in its own teaching and lists guiding questions on grounding assumptions, social intersectionalities, intended and unintended consequences and the consequences of forms of relational engagement. This matches the statement; the statement says 'propose', and the scope boundary notes no evaluation is reported. The distillate block has no quotation, but the passages in the Conclusion and implications section confirm it.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:35Z",
+        "sha256": "sha256:e52e03a9f7409995b0f51563dbae11a775a50ab5bf85c5c8645fbf332dca203f"
+      },
       "path": "research-vault/30_assertions/james-et-al-propose-a-case-based-technical-critical-pedagogy.md",
       "sources": [
         {
@@ -23050,14 +23257,13 @@
         "validation": "2026-09-05"
       },
       "current_ai_source_review": {
-        "agent_id": "/root/source_review_check",
+        "agent_id": "claude-code/subagent-a49c0ac62a818d702",
         "artifact": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
-        "findings": "Accepted the single bounded method assertion: ReGiFT transfers generated reasoning traces as training supervision through fine-tuning. Both cited distillate anchors s1 and s2 were traced to and checked against original ReGiFT v3 passages in sections 3 and 3.2; the receipt cites that original source directly. The inference-time CoT distinction follows the section 3.2 comparison. The assertion correctly withholds universal bias-mitigation efficacy, trace correctness/faithfulness, consensus and human verification. Full final Markdown was read after promotion; original preparer attribution remains and current AI-review status is explicit. No substantive method correction was required.",
-        "model": "GPT-6",
-        "model_id_status": "Runtime family disclosed; exact deployment ID not exposed; no immutable identifier claimed",
+        "findings": "The method section describes a two-step approach that extracts reasoning traces from advanced reasoning models and uses them to fine-tune base models, and names the result ReGiFT. The authors also contrast it with inference-time chain-of-thought prompting. The Statement describes the proposed procedure only and makes no effectiveness claim, in line with its scope boundary; the author names match the paper header.",
+        "model": "Claude Sonnet 5.5",
         "result": "accepted",
-        "reviewed_at": "2026-09-05T19:23:05.511878Z",
-        "sha256": "sha256:730a652c89b468bfaf3c20a06f098c9303636722cf6ca838b62c8fb89c83d486"
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:0eb73a9dc5fb0759f04dfdc9c6de6232ec0bc4ae33d56c2aac1508beadb379b9"
       },
       "path": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
       "sources": [
@@ -23119,14 +23325,13 @@
         "validation": "2026-08-23"
       },
       "current_ai_source_review": {
-        "agent_id": "/root/research_completion",
+        "agent_id": "claude-code/subagent-a161cd413a39618e5",
         "artifact": "research-vault/30_assertions/kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations.md",
-        "findings": "Compared the statement and supporting distillate s1 directly with the original Results 3.3, Table 1 and limitations. The assertion attributes lower measured bias scores to Kaneko et al. and limits the statement to their evaluation. It does not claim every model improved or that CoT eliminates bias. Section 4.3 and the binary-gender/English limitations remain essential context for any later answer or recommendation. The source locator in the supporting distillate was corrected to sec. 3.3 before this receipt.",
-        "model": "GPT-6",
-        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "findings": "The source reports that both Zero-shot+CoT and Few-shot+CoT decrease bias scores on its benchmark, while the plain debiasing prompt was almost identical to baseline. The statement is limited to 'their evaluation' and 'measured bias scores', so it does not generalise beyond the reported setting.",
+        "model": "Claude Sonnet 5.5",
         "result": "accepted",
-        "reviewed_at": "2026-09-05T12:20:05Z",
-        "sha256": "sha256:1273273e9c732b22da38c920b70d51b36f8776a55769dfff22fd1139bed101bf"
+        "reviewed_at": "2026-10-01T17:44:48Z",
+        "sha256": "sha256:7a5b3f8fc63bce08849f9411388fd5a52cb9723101c42383c8b7f99f0b46607b"
       },
       "path": "research-vault/30_assertions/kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations.md",
       "sources": [
@@ -23220,7 +23425,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-af1b859b3011968fe",
+        "artifact": "research-vault/30_assertions/llm-generated-text-positions-cultures-asymmetrically.md",
+        "findings": "Compared the statement with the abstract of the interview-script benchmark (insider tones in over 88% of US-contexted scripts, outsider stance for non-Western cultures) and the abstract of the bilingual benchmark (Chinese prompting merely shifts bias toward East Asian perspectives). Both limitation quotations (small subset of cultures, no repeated multi-run evaluations) appear in the Limitations sections. The wording 'most US-context scripts' and 'shift instead of removal' matches the sources, and the scope boundary keeps the claim at benchmark level.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:39Z",
+        "sha256": "sha256:b01b0215df6e2d1d17f7fabbcd9a008f3c2bc523ac70be3e51d98ab9ce9bdbd7"
+      },
       "path": "research-vault/30_assertions/llm-generated-text-positions-cultures-asymmetrically.md",
       "sources": [
         {
@@ -23286,7 +23499,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a89507f52f5a4ce01",
+        "artifact": "research-vault/30_assertions/long-term-care-summaries-showed-model-dependent-gender-differences.md",
+        "findings": "The abstract reports gender-swapped long-term-care records of a London local authority, summarised by Llama 3 and Gemma, with no gender differences for Llama 3 and the most significant for Gemma, assessed through sentiment, word frequency and themes. The underemphasis of women's health needs is linked to disparities in service receipt only conditionally ('may lead to'), which the statement and scope boundary reproduce as a possibility. Benchmark models T5 and BART also varied, which does not contradict the wording 'depended on the model'.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:35Z",
+        "sha256": "sha256:3f6e5dc316d3df6d0ae8569ba1aacf1292ffec7be36e8b83a7c19b9653f72b00"
+      },
       "path": "research-vault/30_assertions/long-term-care-summaries-showed-model-dependent-gender-differences.md",
       "sources": [
         {
@@ -23339,7 +23560,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a5af9da52815caa8c",
+        "artifact": "research-vault/30_assertions/mental-health-classification-shows-demographic-disparities-across-language-models.md",
+        "findings": "The source enriches test samples with gender, race, religion, nationality, sexuality and age plus 24 expert-proposed combinations, evaluates ten general and domain-specific LLMs with an equalized-odds fairness metric, and reports that fairness-aware prompts lower EO scores to varying extents on three models and datasets. The statement keeps the hedges (evaluated settings, remaining differences) and the arXiv preprint status. The research-question and section 4.5 quotes match the distillate blocks.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:bb902db8bf9e3e7a82a6e943509b4b548487d1e6876bd8f03fbf55e8884734fa"
+      },
       "path": "research-vault/30_assertions/mental-health-classification-shows-demographic-disparities-across-language-models.md",
       "sources": [
         {
@@ -23404,7 +23633,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a5af9da52815caa8c",
+        "artifact": "research-vault/30_assertions/mental-health-llm-audits-advise-against-unguarded-reliance-in-consequential-decisions.md",
+        "findings": "Wang et al. judge the evaluated LLMs inadequate for real-world deployment in critical mental-health tasks, and the psychiatric diagnosis audit urges caution and vigilance in clinical decision support given the observed biases. The wording 'should not be relied on without caution' is a fair reading of both, and the scope notes the benchmark and vignette designs. Wang et al. is somewhat stronger than caution, which the statement does not overstate.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:edaf3b097915d8f18fbfabefa495f41d035948971ad067cf11916c55d406f32a"
+      },
       "path": "research-vault/30_assertions/mental-health-llm-audits-advise-against-unguarded-reliance-in-consequential-decisions.md",
       "sources": [
         {
@@ -23446,7 +23683,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a49c0ac62a818d702",
+        "artifact": "research-vault/30_assertions/multi-persona-thinking-reported-lower-benchmark-bias-than-prompting-baselines.md",
+        "findings": "The abstract describes MPT as an inference-time framework that uses contrasting social identities with a neutral viewpoint interacting through iterative reasoning, evaluated on two bias benchmarks, and states the lower bias than prompting-based methods while maintaining reasoning ability. The Statement is worded as reported and the limitation on non-binary and intersectional identities is present in the source.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:1a402790d7e5b61fc8635216188fe3053ec6d3794b875b4b50ca922a49e9a156"
+      },
       "path": "research-vault/30_assertions/multi-persona-thinking-reported-lower-benchmark-bias-than-prompting-baselines.md",
       "sources": [
         {
@@ -23487,7 +23732,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-af1b859b3011968fe",
+        "artifact": "research-vault/30_assertions/participation-of-affected-groups-proposed-as-safeguard-without-reported-evaluation.md",
+        "findings": "All three passages are recommendations in a normative register (centre marginalised voices and participatory design, interventions must be co-designed, recruitment of women and marginalised groups should be promoted), and none reports an evaluation of the participation measure. The mini review does cite other research on communities' capacity to critique algorithms under participatory governance, but that is not an evaluation of the education co-design proposal grounded here. The statement correctly confines the claim to the cited statements.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:39Z",
+        "sha256": "sha256:023f94f184e3399b5c359d215e0066fb3c651f29d66e95217f0dc5a1947c74f7"
+      },
       "path": "research-vault/30_assertions/participation-of-affected-groups-proposed-as-safeguard-without-reported-evaluation.md",
       "sources": [
         {
@@ -23542,7 +23795,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-acdd777b53eb7fd3f",
+        "artifact": "research-vault/30_assertions/patton-and-victor-describe-prospective-llm-uses-in-social-work-research.md",
+        "findings": "Patton et al. describe ChatGPT as best suited as an assistive tool and list research questions, qualitative themes, transcript editing and presentation assistance in conditional wording ('could', 'may'). Victor et al. mention information extraction, classification and clustering in the analysis section as tasks for which reporting is recommended. Both are conceptual contributions, so describing the uses as prospective assistive uses is supported.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:41Z",
+        "sha256": "sha256:e01051cb62dfe34ca7bf2ed27765828a347014917d54abc97415c54dfb3ddb4d"
+      },
       "path": "research-vault/30_assertions/patton-and-victor-describe-prospective-llm-uses-in-social-work-research.md",
       "sources": [
         {
@@ -23584,7 +23845,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a49c0ac62a818d702",
+        "artifact": "research-vault/30_assertions/persona-prompting-can-introduce-identity-congruent-bias.md",
+        "findings": "Both abstracts support the claim as hedged with can and report. The outgroup-bias study measures ingroup favouritism and outgroup bias after identity assignment, and the motivated-reasoning study measures reduced veracity discernment and identity-congruent evaluation after persona assignment. The scope sentence (political, gender, sociodemographic, English, US, binary gender, no social-work tasks) matches the sources' limitations.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:818ecacd08ad0acd4ea9778ba8d9f61863c469971e295a7576c6218b755a0c2d"
+      },
       "path": "research-vault/30_assertions/persona-prompting-can-introduce-identity-congruent-bias.md",
       "sources": [
         {
@@ -23626,7 +23895,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a49c0ac62a818d702",
+        "artifact": "research-vault/30_assertions/persona-prompts-shift-llm-outputs-toward-assigned-identities.md",
+        "findings": "The core is supported by the same two studies, and the scope boundary names the Likert-based measures, binary categories and the inference status of any practice implication. The wording that outputs shift toward the assigned identity fits ingroup favouritism directly and fits the veracity result only through the authors' own motivated-reasoning framing, where the identity-congruent effect is clearest in the scientific-evidence task; this is a mild looseness, not an overreach, since the Statement attributes both to the reports of the two experiments.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:c2753572fa51f4e70762a8b58b50d5bc85539c4274942df90b1f79df8dfc3f68"
+      },
       "path": "research-vault/30_assertions/persona-prompts-shift-llm-outputs-toward-assigned-identities.md",
       "sources": [
         {
@@ -23692,7 +23969,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a49c0ac62a818d702",
+        "artifact": "research-vault/30_assertions/prompt-language-shifted-rather-than-removed-measured-cultural-bias.md",
+        "findings": "The abstract and introduction state that with the new evaluation framework Chinese prompting merely shifts bias toward East Asian perspectives rather than eliminating it. The Statement is attributed to the study and limited to the prompt-language condition, as its scope boundary says.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:609c4d0c4d64bebf47e37c92af5cf10a61204e6b0e01a6febe71e2a7cff11147"
+      },
       "path": "research-vault/30_assertions/prompt-language-shifted-rather-than-removed-measured-cultural-bias.md",
       "sources": [
         {
@@ -23721,7 +24006,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a49c0ac62a818d702",
+        "artifact": "research-vault/30_assertions/psychiatric-diagnosis-audit-reports-gender-and-racial-ethnic-bias.md",
+        "findings": "The abstract describes an audit of six general and medical LLMs on psychiatric training cases altered by names, pronouns and descriptors across demographic groups while keeping clinical symptoms constant, and the conclusion states the biases found and the call for caution and vigilance. The Statement matches this at the level of audit design and headline conclusion, and the scope text keeps the form of the bias and simulation limits separate.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:a1ce075cebf1fb5f8242dd8c5edb0d55b75fb854345fa730ba361c712499211c"
+      },
       "path": "research-vault/30_assertions/psychiatric-diagnosis-audit-reports-gender-and-racial-ethnic-bias.md",
       "sources": [
         {
@@ -23762,7 +24055,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a161cd413a39618e5",
+        "artifact": "research-vault/30_assertions/rapid-review-reports-limited-evidence-for-generative-ai-in-youth-mental-health-apps.md",
+        "findings": "The review includes five studies, names chatbots as the most common integration, calls the studies heterogeneous in design, sample selection and methods with small samples, and concludes that evidence for preventive or health-promoting effects remains limited. All elements of the statement are in the source. The scope boundary correctly excludes the usability and benefit findings.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:48Z",
+        "sha256": "sha256:1f7a5ca60186291a5a467038bec57ebb1f9a17edd43ae27a86ca2cc8cbec7b29"
+      },
       "path": "research-vault/30_assertions/rapid-review-reports-limited-evidence-for-generative-ai-in-youth-mental-health-apps.md",
       "sources": [
         {
@@ -23803,7 +24104,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a89507f52f5a4ce01",
+        "artifact": "research-vault/30_assertions/reflexive-use-of-algorithmic-decisions-can-expose-bias-without-preventing-it.md",
+        "findings": "Same source sentence as the structural-bias assertion: no assurance against racism, disablism, heterosexism and misogyny, possible new structural biases, and reflexive use can draw attention to such biases. The statement is worded with 'can' and 'argues', and no stronger claim is made. The title's 'professional bias' is supported by the preceding source clause about drawing attention to professional bias against marginalized groups.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:35Z",
+        "sha256": "sha256:2edc69f8329d3fd6f123d5513f19bb4aa1ddf4ddf36299a9f2250d89a58dced9"
+      },
       "path": "research-vault/30_assertions/reflexive-use-of-algorithmic-decisions-can-expose-bias-without-preventing-it.md",
       "sources": [
         {
@@ -23834,14 +24143,13 @@
         "validation": "2026-08-23"
       },
       "current_ai_source_review": {
-        "agent_id": "/root/research_completion",
+        "agent_id": "claude-code/subagent-a161cd413a39618e5",
         "artifact": "research-vault/30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories.md",
-        "findings": "Checked both grounding blocks against their original sources. Kaneko section 4.3 conditions comparative CoT benefit on model size/training; Kamruzzaman abstract and model/bias-specific results describe different best configurations across models and bias categories. The combined statement says the cited evaluations report variation; it does not infer a universal effect, cross-study pooled estimate, or transfer to social work. Supported as a narrow cross-source qualification. AI review does not constitute human verification or appraisal of methodological certainty.",
-        "model": "GPT-6",
-        "model_id_status": "family disclosed by runtime; exact deployment identifier not exposed",
+        "findings": "Kaneko et al. state that CoT does not necessarily debias better than a debiasing prompt for relatively small or only pre-trained models, and Kamruzzaman and Kim state that the best combination of prompting features depends on the exact model and bias category. Together these support that effects vary across model conditions and bias categories, worded as reported by the cited evaluations. Each source supports one dimension and the combined wording stays hedged.",
+        "model": "Claude Sonnet 5.5",
         "result": "accepted",
-        "reviewed_at": "2026-09-05T12:20:05Z",
-        "sha256": "sha256:2d93d46185de2246740df38d5162244f4bd54d8f82573304b4fb770e1fc7d70d"
+        "reviewed_at": "2026-10-01T17:44:48Z",
+        "sha256": "sha256:40624b24c5a3d6501710c1276ccc1b7a7e01f7e0cf7f0185be5b34bc00a37016"
       },
       "path": "research-vault/30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories.md",
       "sources": [
@@ -23902,7 +24210,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/worktree-agent-a714c556cb448f93b",
+        "artifact": "research-vault/30_assertions/rickman-proposes-a-counterfactual-evaluation-of-gender-bias-in-generated-care-summaries.md",
+        "findings": "Orchestrator sample check against the source. The batch reviewer narrowed the clause that the evaluation is designed to show both whether and in which form summaries differ, because the distillate's quoted sentence states only reproducibility and interpretability. The same Generalisibility section of the source states the design goal verbatim as a framework for analysing both the presence and nature of gender bias, and it contrasts this with scalar bias scores that do not capture how bias manifests. The Statement is supported as worded. The distillate's choice of quotation for block s4 remains weak and could cite this sentence instead.",
+        "model": "Claude Opus 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:47:10Z",
+        "sha256": "sha256:6a0f713c941f9586f5fdbc66bd5ca0bfc4ff564fe746dcea1cdae004aceec8c1"
+      },
       "path": "research-vault/30_assertions/rickman-proposes-a-counterfactual-evaluation-of-gender-bias-in-generated-care-summaries.md",
       "sources": [
         {
@@ -23943,7 +24259,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a89507f52f5a4ce01",
+        "artifact": "research-vault/30_assertions/rickman-tests-llm-summaries-of-social-care-notes-for-gender-bias.md",
+        "findings": "The abstract states that long-term-care records were gender-swapped and summarised by several models, that Llama 3 showed no differences and Gemma the most, and that underemphasis of women's needs may lead to disparities in service receipt only conditionally. The statement claims only the summarisation task and model dependence, and the scope boundary correctly calls the allocation consequence a possibility.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:35Z",
+        "sha256": "sha256:ae763f456b1907d03038c13113d7f508caee935ae4e1524120a0690ebd609301"
+      },
       "path": "research-vault/30_assertions/rickman-tests-llm-summaries-of-social-care-notes-for-gender-bias.md",
       "sources": [
         {
@@ -23996,7 +24320,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a161cd413a39618e5",
+        "artifact": "research-vault/30_assertions/schroder-et-al-follow-development-of-an-ai-counselling-assistant-in-an-ngo.md",
+        "findings": "The abstract reports an organisational ethnography of a Scandinavian NGO covering efforts of social workers and data engineers to establish an AI counselling assistant supporting volunteer staff in online communication with children. It describes socio-technical work that continuously questions the ethicality of the assistant, which supports the framing as continuing ethics work. The statement says 'AI counselling assistant' without claiming generative AI, consistent with the scope boundary.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:48Z",
+        "sha256": "sha256:62876c70d11d5f370b819e82d530a3ad06668450b201ca4e9a60f2263dc3413f"
+      },
       "path": "research-vault/30_assertions/schroder-et-al-follow-development-of-an-ai-counselling-assistant-in-an-ngo.md",
       "sources": [
         {
@@ -24025,7 +24357,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a49c0ac62a818d702",
+        "artifact": "research-vault/30_assertions/single-attribute-fairness-can-conceal-intersectional-unfairness.md",
+        "findings": "Checked the three distillate blocks against the survey full text. The survey states that a predictor might be fair for independent groups but not intersectional groups, that subgroup fairness down-weights minority groups and so fails to adequately protect them while risking the same fairness gerrymandering, and that intersectional notions have mostly been explored theoretically. The Statement is worded as the survey's report and matches these passages, with the LLM transfer correctly kept out of the claim.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:545d24842228097158734b7ae4b17e5db5e9a0190c5ea6d2f3c0275bab75339d"
+      },
       "path": "research-vault/30_assertions/single-attribute-fairness-can-conceal-intersectional-unfairness.md",
       "sources": [
         {
@@ -24078,7 +24418,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-af1b859b3011968fe",
+        "artifact": "research-vault/30_assertions/social-work-education-framework-uses-recorded-image-prompts-as-critique-material.md",
+        "findings": "The source records the prompts (Table 2) and generated images (Table 3), disclaims an extensive bias analysis, and lists the questions on who or what is missing, marginalised or misrepresented and on stereotypes. The article also calls the case an illustrative case example. The statement stays within this teaching use and the scope-free wording is not overextended.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:39Z",
+        "sha256": "sha256:da665677dc156717d6a401f935eb4f86a131d3d679bc1e2f7924604ff85ae5ab"
+      },
       "path": "research-vault/30_assertions/social-work-education-framework-uses-recorded-image-prompts-as-critique-material.md",
       "sources": [
         {
@@ -24119,7 +24467,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-acdd777b53eb7fd3f",
+        "artifact": "research-vault/30_assertions/social-work-research-guidance-conditions-llm-use-on-human-validation-and-accountability.md",
+        "findings": "Patton et al. state that LLM edits of qualitative data require human validation before professional or scientific dissemination, and Victor et al. require researchers to examine, verify and take accountability for text and analyses produced. The combined statement distributes the two requirements across the two sources, which is acceptable. The scope boundary correctly marks them as recommendations of the sources.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:41Z",
+        "sha256": "sha256:11b0c63f99f4cf9d8c0fd1696622a093c0a9221bdf6295087b06fddcaf7ad6fd"
+      },
       "path": "research-vault/30_assertions/social-work-research-guidance-conditions-llm-use-on-human-validation-and-accountability.md",
       "sources": [
         {
@@ -24245,7 +24601,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a18e715e73645e8f8",
+        "artifact": "research-vault/30_assertions/social-work-research-guidance-requires-human-verification-of-generated-outputs.md",
+        "findings": "Victor et al. tie verification to researchers' accountability for text and analyses, and Patton et al. require human validation of AI-edited qualitative transcripts before dissemination. The statement keeps the two distinct framings and uses the hedged 'propose'.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:24Z",
+        "sha256": "sha256:520121d6a7240eb67cf0ef16c93cb21a7d36ddf6182f310978b8ebf4f0772334"
+      },
       "path": "research-vault/30_assertions/social-work-research-guidance-requires-human-verification-of-generated-outputs.md",
       "sources": [
         {
@@ -24287,7 +24651,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a18e715e73645e8f8",
+        "artifact": "research-vault/30_assertions/social-work-research-guidance-requires-verification-of-and-accountability-for-ai-outputs.md",
+        "findings": "Victor et al. call for verifying and taking accountability for text and analyses, and Patton et al. require human validation before dissemination and state it is scientists' responsibility to cross-validate information. The condensed statement slightly merges the two sources, since the explicit accountability wording is Victor's and Patton's validation passage concerns AI-edited transcripts and information sources, but the combination stays within both. The scope boundary correctly marks them as normative and research-focused.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:24Z",
+        "sha256": "sha256:006f569abe703a738f6d2d6a6ccebdaff5549a1b09d448a8e1aa7949d4945dd8"
+      },
       "path": "research-vault/30_assertions/social-work-research-guidance-requires-verification-of-and-accountability-for-ai-outputs.md",
       "sources": [
         {
@@ -24384,7 +24756,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-acdd777b53eb7fd3f",
+        "artifact": "research-vault/30_assertions/sources-link-responsible-llm-use-to-attention-to-marginalised-and-misrepresented-groups.md",
+        "findings": "Patton et al. state that social work scientists must be aware of social justice and antiracist principles and prompt for underrepresented perspectives. The second source offers the guiding question about who is missing, marginalized or misrepresented in AI-generated images, based on five images. 'Part of responsible engagement' is a fair paraphrase, and the scope boundary limits it to a named orientation.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:41Z",
+        "sha256": "sha256:e8fb2cf7ca4c3d55666a9465b1344a3719645dba2df30c762f5fea94add1d01c"
+      },
       "path": "research-vault/30_assertions/sources-link-responsible-llm-use-to-attention-to-marginalised-and-misrepresented-groups.md",
       "sources": [
         {
@@ -24426,7 +24806,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a18e715e73645e8f8",
+        "artifact": "research-vault/30_assertions/sources-locate-responsible-ai-use-in-governance-and-quality-control-structures.md",
+        "findings": "Baker proposes ethics and policy components, the gender-equity article recommends documentation (datasheets, model cards), algorithm audits with a gender lens and gender-sensitive governance, and Victor et al. call for editorial quality control procedures. The distillate quote for the gender-equity article (block s3) is a loosely chosen sentence, but the source text itself carries the audit, documentation and governance recommendations. The hedged wording and scope boundary (conceptual, no evaluation, not social work for one source) are accurate.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:24Z",
+        "sha256": "sha256:f28bb5e5867b83440dd5a0d8b20f177589f7a5b525dbb00166095fd14abaad51"
+      },
       "path": "research-vault/30_assertions/sources-locate-responsible-ai-use-in-governance-and-quality-control-structures.md",
       "sources": [
         {
@@ -24481,7 +24869,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-acdd777b53eb7fd3f",
+        "artifact": "research-vault/30_assertions/sources-name-participation-of-affected-communities-as-a-condition-of-equitable-ai.md",
+        "findings": "All four sources name involvement of affected communities or stakeholders (co-design with target communities, centring marginalised community members via participatory design, broader stakeholder involvement in designing fairness notions, community engagement as an EPIC component). 'Condition' is somewhat strong for the fairness and EPIC sources, which phrase it as a need or component, but the scope boundary states that these are named requirements without evaluation. The quotation recorded for the gender-equity distillate block (human creations, not enough) does not itself speak about participation. The source's recommendation 'Center the voices of marginalized community members' does, so the claim holds.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:41Z",
+        "sha256": "sha256:54046fb8d4fbdd0fdbeaec0c8ffa10ae576feed5c4b6bcf87616d0f53fb41b8f"
+      },
       "path": "research-vault/30_assertions/sources-name-participation-of-affected-communities-as-a-condition-of-equitable-ai.md",
       "sources": [
         {
@@ -24549,7 +24945,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a5af9da52815caa8c",
+        "artifact": "research-vault/30_assertions/sources-tie-algorithmic-decision-support-to-retained-professional-control.md",
+        "findings": "Keddell states that tool implementation is crucial for workers to maintain ultimate control of decisions, and Trudeau et al. describe the planned decision support as a team-consulted input meant to support, not replace, provider-driven decision making. 'Condition for implementing' is slightly firmer than either wording, but the scope states the sources' different stances and that neither tests harm prevention. Accepted as worded.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:40271bef9f5a164c122717b80b7dc85f01cb855fa7e3c4f9a921143e6eca4d5f"
+      },
       "path": "research-vault/30_assertions/sources-tie-algorithmic-decision-support-to-retained-professional-control.md",
       "sources": [
         {
@@ -24591,7 +24995,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a7bae48024aa33209",
+        "artifact": "research-vault/30_assertions/sources-tie-fair-deployment-to-the-rights-and-power-position-of-those-subjected-to-ai.md",
+        "findings": "King et al. tie procedural fairness to decision-making authority and discretionary deployment creating power imbalance. Keddell's article (checked, resolving the open note in the scope boundary) argues families have a right to know and challenge their risk score and that participation is difficult without consent, with a power differential. Both are hedged correctly as non-generative and stakeholder or conceptual in nature.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:11Z",
+        "sha256": "sha256:82b70df026fde479cf09fb9d24fea58e0be7a1becb7f622a9088a1876c02a5ff"
+      },
       "path": "research-vault/30_assertions/sources-tie-fair-deployment-to-the-rights-and-power-position-of-those-subjected-to-ai.md",
       "sources": [
         {
@@ -24633,7 +25045,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a5af9da52815caa8c",
+        "artifact": "research-vault/30_assertions/statistical-fairness-criteria-leave-rights-questions-in-child-protection-open.md",
+        "findings": "The paper distinguishes statistical fairness from broader social-justice and rights definitions, and discusses due process, the right to reasonable inference, consent, family participation and the right to challenge a risk score. 'Identifiable families' is the distillate's gloss for decisions about individual families and persons, which matches the paper's right to be treated as an individual. The statement is framed as the analysis's own argument.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:61426818be8ec8cff2cd3e002a42da4bea5d5442b6e3b2d87d4567fd1c516101"
+      },
       "path": "research-vault/30_assertions/statistical-fairness-criteria-leave-rights-questions-in-child-protection-open.md",
       "sources": [
         {
@@ -24674,7 +25094,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-acdd777b53eb7fd3f",
+        "artifact": "research-vault/30_assertions/switching-prompt-language-shifted-rather-than-removed-cultural-bias.md",
+        "findings": "The abstract and introduction of the source state that Chinese prompting merely shifts bias toward East Asian perspectives rather than eliminating it, found with CEBiasBench and Multi-Agent Vote. The Assertion keeps to this finding and explicitly excludes the debate procedure. The limitations passage confirms that no repeated multi-run evaluation was done, which matches the stated scope.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:41Z",
+        "sha256": "sha256:0efc842b9a5caa42072fac5eb63c048375f94b1f93ec9113a4e78bdd7831721c"
+      },
       "path": "research-vault/30_assertions/switching-prompt-language-shifted-rather-than-removed-cultural-bias.md",
       "sources": [
         {
@@ -24715,7 +25143,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a161cd413a39618e5",
+        "artifact": "research-vault/30_assertions/victor-et-al-require-knowledge-of-tool-construction-limits-and-biases.md",
+        "findings": "The source section 'Construction and Limitations of Artificial Intelligence Tools' says researchers should first understand how AI tools are constructed, including algorithms, data sources and training processes, and that this knowledge is essential for recognising limitations and potential biases. This matches the normative framing and the distillate block s2. The scope boundary correctly notes the depth of knowledge is unspecified.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:48Z",
+        "sha256": "sha256:98a6cb29c12494e57b234d068e61a2089d04a98f36ae7bb0629a3a84c92fce06"
+      },
       "path": "research-vault/30_assertions/victor-et-al-require-knowledge-of-tool-construction-limits-and-biases.md",
       "sources": [
         {
@@ -24744,7 +25180,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-acdd777b53eb7fd3f",
+        "artifact": "research-vault/30_assertions/vision-language-model-gender-stereotypes-override-visual-evidence.md",
+        "findings": "Section 2 states that reliance on stereotypical cues can cause the model to override visual and linguistic evidence and thereby cause representational harms, and section 4.4 reports for the case study that the model's gender bias overrides the visual evidence. The Assertion is limited to VL-BERT and hedges with 'can', as the source does.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:41Z",
+        "sha256": "sha256:62ddce937eb3d132253fa54ad910b4f488bb60f076367c040a70fac28c5600dc"
+      },
       "path": "research-vault/30_assertions/vision-language-model-gender-stereotypes-override-visual-evidence.md",
       "sources": [
         {
@@ -24785,7 +25229,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-acdd777b53eb7fd3f",
+        "artifact": "research-vault/30_assertions/visual-disinformation-review-identifies-compounded-risks-for-marginalised-communities.md",
+        "findings": "The abstract states that communities of colour, low-income populations and individuals in the Global South face compounded risks, and section 4.2 describes the matrix as analytical constructs rather than original empirical findings. Both parts of the statement match, and the narrative-review scope is consistent with the source.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:41Z",
+        "sha256": "sha256:4ec4eb5fdb6ca2b8ad858587ec6bd9564d512e9ddae06810da96d8e0babc0803"
+      },
       "path": "research-vault/30_assertions/visual-disinformation-review-identifies-compounded-risks-for-marginalised-communities.md",
       "sources": [
         {
@@ -24826,7 +25278,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-af1b859b3011968fe",
+        "artifact": "research-vault/30_assertions/wallengren-lynch-proposes-generated-images-as-material-for-critical-teaching.md",
+        "findings": "The source says the paper does not aim at an extensive analysis of AI bias, that the generated images can help educators create discussion, and gives the teaching questions. The method section confirms an integrative literature review, so 'conceptual integrative review' in the scope boundary holds. The statement frames this as a proposal and as illustrative, which matches.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:39Z",
+        "sha256": "sha256:30c61d80ef5dadd25e78aca7cf432f45b52ecc6d760b00ae9076d1d146e9d6f2"
+      },
       "path": "research-vault/30_assertions/wallengren-lynch-proposes-generated-images-as-material-for-critical-teaching.md",
       "sources": [
         {
@@ -24867,7 +25327,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a5af9da52815caa8c",
+        "artifact": "research-vault/30_assertions/wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities.md",
+        "findings": "Section 4.5 and Table 4 show fairness-aware prompts reducing EO scores on three LLMs across three datasets, for example from 38.2 to 31.6 for GPT-4 on Dreaddit, with EO differences across models and datasets remaining. The authors phrase the result as potential for mitigation, and the Assertion's hedged wording ('report', 'evaluated settings') matches. The scope correctly notes the preprint status and that no claim of bias removal is made.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:30Z",
+        "sha256": "sha256:4d35e2f5e486abc6ff3e646d6acb15fe2a7d3915f3f36be8794b588652783a17"
+      },
       "path": "research-vault/30_assertions/wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities.md",
       "sources": [
         {
@@ -24896,7 +25364,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a7bae48024aa33209",
+        "artifact": "research-vault/30_assertions/worker-assisted-screening-showed-smaller-racial-disparity-than-algorithm-only-policy.md",
+        "findings": "The statement reports the observed 9% worker-assisted versus hypothetical 20% algorithm-only Black-white screen-in disparity in one county's post-deployment period (August 2016 to May 2018), which the source states directly. It stays descriptive and makes no causal claim; it carries no scope boundary, but the wording 'hypothetical policy' and 'one county' already marks the limits.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:45:11Z",
+        "sha256": "sha256:0aeab603b6b5d9e8f5490de7612968649ffcecb17d1aa40fd95589e4fdbecc53"
+      },
       "path": "research-vault/30_assertions/worker-assisted-screening-showed-smaller-racial-disparity-than-algorithm-only-policy.md",
       "sources": [
         {
@@ -24961,7 +25437,15 @@
       "checked": {
         "validation": "2026-10-01"
       },
-      "current_ai_source_review": null,
+      "current_ai_source_review": {
+        "agent_id": "claude-code/subagent-a18e715e73645e8f8",
+        "artifact": "research-vault/30_assertions/xiao-et-al-find-no-fair-prompting-strategy-effective-in-every-tested-scenario.md",
+        "findings": "Finding 1 and the abstract state strong model dependence and heterogeneity with no strategy universally effective. The statement is hedged and the scope boundary correctly notes that particular strategies and models showed reductions.",
+        "model": "Claude Sonnet 5.5",
+        "result": "accepted",
+        "reviewed_at": "2026-10-01T17:44:24Z",
+        "sha256": "sha256:cff80ca27800352fe84576930d19dc7053dec4e466d081ec4560325e241f7566"
+      },
       "path": "research-vault/30_assertions/xiao-et-al-find-no-fair-prompting-strategy-effective-in-every-tested-scenario.md",
       "sources": [
         {
@@ -29284,7 +29768,7 @@
   ],
   "counts": {
     "active_assertions": 72,
-    "active_assertions_with_current_ai_source_review": 4,
+    "active_assertions_with_current_ai_source_review": 65,
     "ai_review_recorded_works": 31,
     "assertion_states": {
       "ai-agent-reviewed": 4,
@@ -34168,11 +34652,11 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:f52cebc92852b839a491db9ea98fd17ce4dba794750dfb97aff0cb2e7343ef9b",
+  "source_fingerprint": "sha256:49805490676f3e7d48b4f0d82a2ca4cff382c5a72ab9cc7ca359ba908def9380",
   "sources": [
     {
       "path": "assessment/categories.yaml",
-      "sha256": "c84046379af8e70664216f1559f4fe03f3828fb60476dffc524ee2f3f4903275"
+      "sha256": "9a1d67e2556ccc023a12412044445d4a5f3165cfdcb41388a1021840e15b3648"
     },
     {
       "path": "assessment/human_assessment.csv",
@@ -34221,6 +34705,30 @@
     {
       "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/hodgson-griffith-am-text.md",
       "sha256": "eaa18a97253a97d8d0ef65a5464e02a01422341769d3b5be5dfc6988eb3af12f"
+    },
+    {
+      "path": "corpus/source-acquisition/checklist-resolution-2026-09-05/trudeau-pmc-original.md",
+      "sha256": "028152c0cc60276390fa3b4a6c9f5b8c5964065a19b7b26992923499a6d293cd"
+    },
+    {
+      "path": "corpus/source-acquisition/completion-20260921/9ZKZQM63.identity-bound.md",
+      "sha256": "bce7b8de4b1bb063064193b7e230d1825cd235f72add20aca038807e281cf14c"
+    },
+    {
+      "path": "corpus/source-acquisition/completion-20260921/J4K3XA52-reading.md",
+      "sha256": "c7f0d251037326c79a930f63ae0de319b8336f7081326bc48ee906f0eace57c2"
+    },
+    {
+      "path": "corpus/source-acquisition/completion-20260921/SHJQQTI6-reading.md",
+      "sha256": "3ff6ed0113e1c1f4eb3d1447f5b3bf2a7fa03a7195345560215a6cb070d36c76"
+    },
+    {
+      "path": "corpus/source-acquisition/completion-20260921/V8SBEH4E.identity-bound.md",
+      "sha256": "e899385c54b3118d6eec98a0195a659ff18fc33c4c0dcc3a9e8cccda7a244353"
+    },
+    {
+      "path": "corpus/source-acquisition/completion-20260921/Z9DNTBFF.identity-bound.md",
+      "sha256": "729606223c6f936d78f837d285ae84f5d18f010b62af7dfa793cce64119fd3c0"
     },
     {
       "path": "corpus/source-acquisition/historical-resolution-2026-09-05/6JAZXKEB.json",
@@ -34392,7 +34900,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "66d09851666d4718b57e33246d1ca34052a78570010c8d8bcf72c419801d7a7a"
+      "sha256": "ea22ceaf256905f81fddb3146f2679ffcee541c7715347e070237b831be26e18"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -35236,7 +35744,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "a46bb82238d2ecbb974341881b283f052629253be5ba0854fdd3c1d296529dbc"
+      "sha256": "456dad6d10878e27dc2aa3663085fd0637a0d9e9d33462476ef2f02faf0d22e6"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -36247,12 +36755,20 @@
       "sha256": "2788fcd57f992f3ee056d910a3ee5cba746498b3a8a78b185533e2e77ea0fc98"
     },
     {
+      "path": "generated/markdown/7FEFMCBZ.md",
+      "sha256": "f3b71cdb2bd086d8249f95159d51482d091a3b9cdfe7c9587162b5d3c044e36d"
+    },
+    {
       "path": "generated/markdown/Feminist_AI_n.d._Academy.md",
       "sha256": "65348e56baa5ae0e0bb627c2d834b9e6d37f231101d9bfff4382333f7dd2f6aa"
     },
     {
       "path": "generated/markdown/Project_2024_Intersectionality.md",
       "sha256": "5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3"
+    },
+    {
+      "path": "generated/markdown/R7V99ERA.md",
+      "sha256": "9555c30e0bac19f16810d62e566a4a7d6dd51c0e3e40b05b4a82d13fd69dd674"
     },
     {
       "path": "generated/markdown/Statistics_2023_Occupational.md",
@@ -36291,6 +36807,10 @@
       "sha256": "49a17523925a989ed5903ded9a6fdd747176bfdc9355bfc80d0048246b364400"
     },
     {
+      "path": "generated/markdown_clean/Baker_2025_Artificial_intelligence_in_social_work_An_EPIC.md",
+      "sha256": "f49c7419289238b9d1e01a8547e2f1181b34ea9d02537a37f2c4eebd7202c99e"
+    },
+    {
       "path": "generated/markdown_clean/Boetto_2025_Artificial_Intelligence_in_Social_Work_An_EPIC.md",
       "sha256": "19fb49d5bbe45104fe370162a945d2800144f52c69ae548752d18fd9221e911f"
     },
@@ -36313,6 +36833,10 @@
     {
       "path": "generated/markdown_clean/J7V3AAQT.md",
       "sha256": "aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1"
+    },
+    {
+      "path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+      "sha256": "0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a"
     },
     {
       "path": "generated/markdown_clean/Kamruzzaman_2024_Prompting_techniques_for_reducing_social_bias_in.md",
@@ -36343,6 +36867,10 @@
       "sha256": "a4f670474ec99e6c7d888653b43044fd775ebd6dde861dfe2e886c30a8cbf42d"
     },
     {
+      "path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+      "sha256": "fbd051643e9b25e079948ddeef2d9a7d70e0a1a1343f5b8e953a233e25a96330"
+    },
+    {
       "path": "generated/markdown_clean/QUV5DQH3.md",
       "sha256": "e5f3106b938f608704fa0809264ce0914030730aec95910259145ff71c6c0293"
     },
@@ -36361,6 +36889,10 @@
     {
       "path": "generated/markdown_clean/VSZM7CT6.md",
       "sha256": "bb09a10fa4ba2e39330cd4c30615f5b449cac3b0959ed17a2d9b1a0f68b02990"
+    },
+    {
+      "path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+      "sha256": "faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225"
     },
     {
       "path": "generated/markdown_clean/Wilson_2024_Gender,_race,_and_intersectional_bias_in_AI.md",
@@ -36401,6 +36933,10 @@
     {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/2e6aa61930deea324751.md",
       "sha256": "16fffb7438de2ed8cbf62ab4b19919a51a05484d97275f0ff2ea32a72c5868bc"
+    },
+    {
+      "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
+      "sha256": "93ff941db75f745dc31191edecf3339916094c0bdf8c98f5bf57f704660fe979"
     },
     {
       "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/45a89ba69a2b7d1a99cd.md",
@@ -36508,7 +37044,7 @@
     },
     {
       "path": "generated/verification/ai-source-reviews.json",
-      "sha256": "f65d287029409c89b442dac94c1a42729d3b88decdb610fa89de12049cfc5f10"
+      "sha256": "2e5ad3513143149473636740901b2930c50573e45343a482c1253ab419e91188"
     },
     {
       "path": "generated/verification/historical-resolution-2026-09-05.json",
@@ -37108,7 +37644,7 @@
     },
     {
       "path": "research-vault/30_assertions/ahn-et-al-propose-integrating-ai-literacy-across-existing-core-competencies.md",
-      "sha256": "97030c4b4049d47849421135a31e50d7cb1473814c21e2e925942e63f841df49"
+      "sha256": "02d42cbfd52927f34423cf48737beaeea3c3f49149917bc76579b5780aab63a3"
     },
     {
       "path": "research-vault/30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding.md",
@@ -37228,11 +37764,11 @@
     },
     {
       "path": "research-vault/30_assertions/kabra-et-al-transfer-reasoning-through-fine-tuning-for-bias-mitigation.md",
-      "sha256": "730a652c89b468bfaf3c20a06f098c9303636722cf6ca838b62c8fb89c83d486"
+      "sha256": "0eb73a9dc5fb0759f04dfdc9c6de6232ec0bc4ae33d56c2aac1508beadb379b9"
     },
     {
       "path": "research-vault/30_assertions/kaneko-et-al-report-cot-reduced-bias-in-specific-evaluations.md",
-      "sha256": "1273273e9c732b22da38c920b70d51b36f8776a55769dfff22fd1139bed101bf"
+      "sha256": "7a5b3f8fc63bce08849f9411388fd5a52cb9723101c42383c8b7f99f0b46607b"
     },
     {
       "path": "research-vault/30_assertions/llm-diagnosis-and-mental-health-studies-caution-against-clinical-reliance.md",
@@ -37292,7 +37828,7 @@
     },
     {
       "path": "research-vault/30_assertions/reported-prompting-effects-vary-across-models-and-bias-categories.md",
-      "sha256": "2d93d46185de2246740df38d5162244f4bd54d8f82573304b4fb770e1fc7d70d"
+      "sha256": "40624b24c5a3d6501710c1276ccc1b7a7e01f7e0cf7f0185be5b34bc00a37016"
     },
     {
       "path": "research-vault/30_assertions/rickman-proposes-a-counterfactual-evaluation-of-gender-bias-in-generated-care-summaries.md",

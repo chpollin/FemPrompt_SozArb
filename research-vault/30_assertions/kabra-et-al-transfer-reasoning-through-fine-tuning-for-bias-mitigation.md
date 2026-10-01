@@ -24,8 +24,7 @@ grounding:
 - '[[20_distillates/publications/kabra-2025-reasoning-guided-fine-tuning#^s2]]'
 contested-with: []
 research-questions:
-- SQ1
-- SQ2
+- SQ3
 intended-output:
 - literature-report
 - paper

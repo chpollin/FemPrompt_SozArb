@@ -4,7 +4,7 @@
     "source": "assessment/categories.yaml",
     "note": "Closed vocabulary for the PRISM analysis panel (FR-14/ADR-026); the one source, do not hand-edit. Labels and definitions are presentation only."
   },
-  "version": "1.4",
+  "version": "1.4.1",
   "fields": [
     {
       "name": "AN_Prompting_Role",
@@ -151,7 +151,7 @@
       },
       "value_definitions": {
         "Derogatory_Language": "Beleidigungen, Schimpfwörter oder andere Ausdrücke, die eine soziale Gruppe herabsetzen.",
-        "Disparate_Performance": "Die Qualität des Systems, etwa Genauigkeit, Fehlerrate oder Erkennung, unterscheidet sich zwischen sozialen Gruppen oder Sprachvarietäten.",
+        "Disparate_Performance": "Die Qualität des Systems, etwa Genauigkeit, Fehlerrate oder Erkennung, unterscheidet sich zwischen sozialen Gruppen oder Sprachvarietäten. Ein Unterschied in Ton oder Stil der Ausgabe ist für sich keine ungleiche Leistung.",
         "Erasure": "Sprache und Erfahrungen einer sozialen Gruppe werden ausgelassen oder unsichtbar gemacht.",
         "Exclusionary_Norms": "Die Norm einer dominanten Gruppe wirkt als Standard, andere Gruppen werden ausgelassen oder abgewertet, etwa männlicher Standard oder die Annahme digital versierter Klient:innen.",
         "Misrepresentation": "Eine unvollständige oder nicht repräsentative Darstellung wird auf eine soziale Gruppe verallgemeinert.",
@@ -373,7 +373,7 @@
       },
       "value_definitions": {
         "Binary_Categorical": "Geschlecht erscheint als zwei feste Kategorien, etwa Frau und Mann, ohne dass das Werk diese Setzung prüft.",
-        "Social_Construct": "Geschlecht gilt als sozial hergestellt, als Verhältnis oder als Machtstruktur.",
+        "Social_Construct": "Das Werk hält ausdrücklich fest, dass Geschlecht sozial hergestellt, ein Verhältnis oder eine Machtstruktur ist.",
         "Non_Binary_Inclusive": "Die Analyse führt Geschlechter jenseits der Binarität, etwa nicht-binäre oder trans Personen, als eigene Kategorien.",
         "Intersectional": "Geschlecht wird in Wechselwirkung mit mindestens einer weiteren Achse analysiert.",
         "Unclear": "Das Werk behandelt Geschlecht, sein Verständnis ist aber nicht bestimmbar.",
