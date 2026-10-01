@@ -151,12 +151,16 @@ try {
   }
   await page.goto(base + '/index.html#view=frage&sq=1', { waitUntil: 'networkidle' });
   await visible('frage');
-  const populationOf = selector => page.locator(selector).evaluateAll(items => items.map(item =>
-    Array.from(item.querySelectorAll('.code-row')).find(row => row.querySelector('dt').textContent === 'Population').querySelector('dd').textContent));
+  // Labels come from the projected vocabulary, so the check follows any relabelling.
+  const populationField = fields.fields.find(field => field.name === 'AN_Population');
+  const populationLabel = populationField.label || 'Population';
+  const notSpecific = (populationField.value_labels || {}).Not_SW_Specific || 'Not SW Specific';
+  const populationOf = selector => page.locator(selector).evaluateAll((items, label) => items.map(item =>
+    Array.from(item.querySelectorAll('.code-row')).find(row => row.querySelector('dt').textContent === label).querySelector('dd').textContent), populationLabel);
   const outsideRows = await populationOf('#frage-werke .outside-group .work-item');
   const mainRows = await populationOf('#frage-werke > .worklist .work-item');
-  check('SQ1 lists works coded only as not specific to social work apart', outsideRows.every(t => t === 'Not SW Specific') &&
-    mainRows.every(t => t !== 'Not SW Specific') && (outsideRows.length === 0 ||
+  check('SQ1 lists works coded only as not specific to social work apart', outsideRows.every(t => t === notSpecific) &&
+    mainRows.every(t => t !== notSpecific) && (outsideRows.length === 0 ||
     (await page.locator('#frage-outside-title').innerText()).includes('Nicht spezifisch für die Soziale Arbeit')));
 
   await page.goto(base + '/index.html#view=matrix&rows=perspective&cols=AN_Bias_Axes', { waitUntil: 'networkidle' });
