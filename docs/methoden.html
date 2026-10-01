@@ -45,126 +45,164 @@
         <article class="prose">
             <h2>Methoden</h2>
 
-            <h3>Forschungsfrage</h3>
-            <p>Was passiert mit Wissen, wenn es durch eine LLM-gestuetzte Pipeline fliesst? Dieser qualitative, LLM-gestuetzte Review untersucht Publikationen zu feministischen AI Literacies in der Sozialen Arbeit. Der Vergleich maschineller und menschlicher Klassifikation dient als Pruefpunkt der Verlaesslichkeit, nicht als eigenes Forschungsziel.</p>
-
-            <h3>Pipeline</h3>
-            <p>Die Publikationen durchlaufen fuenf Verarbeitungsstufen. Jede Stufe transformiert das Material und kann Verluste erzeugen, ueberwiegend in der PDF-Akquise; die quantifizierte Verlustkette steht im <a href="index.html#korpus">Korpus</a> und in der Verifikation des Repositorys.</p>
-
-            <div class="pipeline-flow">
-                <div class="pipeline-stage">
-                    <span class="pipeline-label">Identifikation</span>
-                    <span class="pipeline-detail">Deep Research, 4 Provider (OpenAI, Google, Perplexity, Anthropic)</span>
-                </div>
-                <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
-                <div class="pipeline-stage">
-                    <span class="pipeline-label">PDF-Akquise</span>
-                    <span class="pipeline-detail">4 Fallback-Strategien (DOI, Unpaywall, Crossref, Manual)</span>
-                </div>
-                <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
-                <div class="pipeline-stage">
-                    <span class="pipeline-label">Markdown</span>
-                    <span class="pipeline-detail">Docling PDF-zu-Markdown-Konversion</span>
-                </div>
-                <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
-                <div class="pipeline-stage">
-                    <span class="pipeline-label">Wissensextraktion</span>
-                    <span class="pipeline-detail">Claude Haiku 4.5, 3-stufig (JSON, Markdown, Verifikation)</span>
-                </div>
-                <div class="pipeline-arrow"><i class="fas fa-arrow-right"></i></div>
-                <div class="pipeline-stage">
-                    <span class="pipeline-label">Assessment</span>
-                    <span class="pipeline-detail">LLM und Expert:innen, identisches 10-Kategorien-Schema</span>
-                </div>
-            </div>
-
-            <h3>Kategorie-System</h3>
-            <p>Jedes Paper wird nach 10 binaeren Kategorien bewertet. Inklusion erfordert mindestens eine Technik- UND eine Sozial-Kategorie.</p>
-
+            <h3>Forschungsfragen</h3>
+            <p>Der Review ist eine qualitative Literaturanalyse. Seine Hauptfrage lautet: &bdquo;Wie können Fachkräfte der Sozialen Arbeit verantwortlich mit LLMs arbeiten, und welche Bias-Formen und welchen Umgang damit zeigt die Literatur?&ldquo; Fünf Unterfragen gliedern die Antwort.</p>
             <div class="table-scroll">
             <table class="methoden-table">
                 <thead>
-                    <tr><th>Kategorie</th><th>Dimension</th><th>Definition</th></tr>
+                    <tr><th>Unterfrage</th><th>Wortlaut</th></tr>
                 </thead>
                 <tbody>
-                    <tr><td><span class="cat-name" style="color:var(--cat-ai-lit)">AI Literacies</span></td><td>Technik</td><td>KI-Kompetenzen, Faehigkeiten, kritisches Verstaendnis von KI-Systemen</td></tr>
-                    <tr><td><span class="cat-name" style="color:var(--cat-gen-ki)">Generative KI</span></td><td>Technik</td><td>LLMs, ChatGPT, Bildgeneratoren, generative Modelle</td></tr>
-                    <tr><td><span class="cat-name" style="color:var(--cat-prompt)">Prompting</span></td><td>Technik</td><td>Prompt-Engineering, Prompt-Strategien, Eingabegestaltung</td></tr>
-                    <tr><td><span class="cat-name" style="color:var(--cat-ki-sonst)">KI Sonstige</span></td><td>Technik</td><td>ML, algorithmische Entscheidungssysteme, Predictive Analytics, Robotik</td></tr>
-                    <tr><td><span class="cat-name" style="color:var(--cat-soz-arb)">Soziale Arbeit</span></td><td>Sozial</td><td>Praxis, Theorie, Ausbildung, Zielgruppen Sozialer Arbeit</td></tr>
-                    <tr><td><span class="cat-name" style="color:var(--cat-bias)">Bias &amp; Ungleichheit</span></td><td>Sozial</td><td>Algorithmischer Bias, Diskriminierung, soziale Ungleichheit</td></tr>
-                    <tr><td><span class="cat-name" style="color:var(--cat-gender)">Gender</span></td><td>Sozial</td><td>Expliziter Gender-Fokus, Geschlechterperspektive, Gender-Bias-Analyse</td></tr>
-                    <tr><td><span class="cat-name" style="color:var(--cat-divers)">Diversitaet</span></td><td>Sozial</td><td>Inklusion, Repraesentation verschiedener Gruppen</td></tr>
-                    <tr><td><span class="cat-name" style="color:var(--cat-femin)">Feministisch</span></td><td>Sozial</td><td>Feministische Theorie/Methodologie, implizite feministische Ansaetze</td></tr>
-                    <tr><td><span class="cat-name" style="color:var(--cat-fairness)">Fairness</span></td><td>Sozial</td><td>Algorithmische Fairness, Fairness-Metriken, faire ML-Systeme</td></tr>
+                    <tr><td>UF1 Nutzung</td><td>Für welche Aufgaben und Felder der Sozialen Arbeit beschreibt die Literatur den Einsatz von LLMs, und welchen Nutzen berichtet sie?</td></tr>
+                    <tr><td>UF2 Bias-Formen</td><td>Welche Bias-Formen thematisiert die ausgewählte Literatur, mit welchen Schadensarten, für welche Gruppen, und welche Formen fehlen?</td></tr>
+                    <tr><td>UF3 Umgang mit Bias</td><td>Wie geht die Literatur mit den benannten Bias-Formen um, auf welcher Stufe, mit welchen Techniken und mit welchem Evidenzstatus?</td></tr>
+                    <tr><td>UF4 Begriffliche Fundierung</td><td>Definiert die Literatur Gender und Bias, welches Verständnis von Gender liegt ihr zugrunde, und auf welche Theorien stützt sie sich?</td></tr>
+                    <tr><td>UF5 Kompetenzen</td><td>Welche Kompetenzen und organisationalen Voraussetzungen nennt die Literatur für einen verantwortlichen Einsatz, und wo greifen allgemeine Prompting-Anleitungen für die Soziale Arbeit zu kurz?</td></tr>
                 </tbody>
             </table>
             </div>
+            <p>Die Fragen wurden am 1. Oktober 2026 aus den Fragen des Förderantrags, dem Raster einer Teambesprechung und einer inhaltlichen Neufassung zusammengeführt. Der Review liefert die Evidenzbasis und keine eigenen Praxisempfehlungen. Empfehlungen der Literatur werden als Empfehlungen ihrer Quelle berichtet. Die zweite Frage des geplanten Papers ist methodisch. Sie fragt, wie sich LLMs und KI-Agenten so in einen qualitativen Literaturreview einbinden lassen, dass ihre Beiträge nachvollziehbar, die Verarbeitung erneut ausführbar und die abschließende wissenschaftliche Autorität bei den Fachexpert:innen bleibt.</p>
 
-            <h3>Duale Bewertung</h3>
-            <p>Zwei unabhaengige Bewertungspfade klassifizieren nach identischem Schema:</p>
+            <h3>Identifikation und Auswahl</h3>
+            <p>Die Literatur wurde ohne Recherche in bibliographischen Datenbanken identifiziert. In der ersten Runde im Oktober 2025 erhielten vier Deep-Research-Systeme (ChatGPT, Claude, Gemini, Perplexity) denselben parametrisierten Prompt, ergänzt durch eine begrenzte manuelle Suche. Die Ergebnisse wurden in eine Zotero-Gruppenbibliothek übernommen und dort kuratiert. Die zweite Runde begann am 17. Juli 2026 mit Deep-Research-Läufen in ChatGPT, Claude, Gemini und Claude Code für das Publikationsfenster Juli 2025 bis Juni 2026. Perplexity entfiel in dieser Runde, weil der Zugang endete. Am 24. August 2026 folgte eine kontextgestützte Ergänzung in drei getrennten Codex-Agentenläufen, ab demselben Tag eine vertiefte Codex-Websuche, die nur Fassungen aus 2026 aufnahm, und am 5. September 2026 eine gezielte Nachsuche nach Lücken. In den Codex-Läufen ordneten KI-Agenten jeden Fund einer Übernahmestufe zu oder schlossen ihn als ungeeignet aus. Dubletten wurden regelbasiert über DOI, arXiv-Kennung und normalisierten Titel erkannt.</p>
+            <p>Gegenüber PRISMA 2020 (Page et al. 2021) ist dies eine erklärte Abweichung bei den Informationsquellen und der Suchstrategie (Items 6 und 7). Eine Suchstrategie existiert nur als Prompt in natürlicher Sprache, den ein Deep-Research-System in Suchanfragen übersetzt, die es nicht offenlegt. Die Suchen selbst sind deshalb nicht reproduzierbar. Berichtet werden je System das Ausführungsdatum und der Prompt oder das Laufprotokoll. Der Review berichtet Identifikation, Auswahl und Screening nach PRISMA 2020 und der vorgeschlagenen Erweiterung PRISMA-trAIce (Holst et al. 2025) für den Einsatz von KI im Reviewprozess. Ob die beschreibende Kartierung zusätzlich nach PRISMA-ScR (Tricco et al. 2018) berichtet wird, ist empfohlen und noch nicht entschieden. Ebenfalls offen ist, ob eine ergänzende Suche nach Literatur zum LLM-Einsatz in Aufgaben der Sozialen Arbeit ohne Bias-Schwerpunkt das Korpus erweitert.</p>
+
+            <h4>Funde je Identifikationsquelle</h4>
+            <div class="table-scroll">
+            <table class="methoden-table">
+                <thead>
+                    <tr><th>Quelle</th><th>Identifiziert</th><th>Dubletten</th><th>Nicht übernommen (Stufe B oder von KI-Agenten ausgeschlossen)</th><th>Neu übernommen</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Runde 2, Deep Research mit vier Systemen (ab 17.&nbsp;Juli 2026)</td><td>29</td><td>6</td><td>0</td><td>23</td></tr>
+                    <tr><td>Kontextgestützte Ergänzung (24.&nbsp;August 2026)</td><td>85</td><td>11</td><td>52</td><td>22</td></tr>
+                    <tr><td>Codex-Websuche 2026</td><td>148</td><td>38</td><td>66</td><td>44</td></tr>
+                    <tr><td>Gezielte Nachsuche (5.&nbsp;September 2026)</td><td>3</td><td>0</td><td>0</td><td>3</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p>Die erste Runde umfasst 326 Datensätze der Zotero-Bibliothek, von denen 100 als Dubletten markiert sind. Die konsolidierte Expert:innen-Bewertung entschied über 303 Datensätze, schloss 142 ein und 161 aus. Nur ein kleiner Teil dieser Datensätze lässt sich einem einzelnen Deep-Research-System zuordnen, die Zahlen je System sind daher Untergrenzen. Die Tabelle zählt Datensätze. Dubletten innerhalb eines Laufs, zwischen den Läufen und gegenüber früheren Quellen sind zusammengefasst.</p>
+
+            <h4>Stand je Werk</h4>
+            <p>Das Flussdiagramm zählt Werke. Eine Publikation, die in mehreren Zotero-Datensätzen oder in mehreren Fassungen vorliegt, zählt einmal. Die folgende Tabelle gibt den Stand der generierten Flussdaten vom 1. Oktober 2026 wieder.</p>
+            <div class="table-scroll">
+            <table class="methoden-table">
+                <thead>
+                    <tr><th>Stand</th><th>Werke</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Werke insgesamt</td><td>361</td></tr>
+                    <tr><td>Eingeschlossen nach konsolidierter Expert:innen-Entscheidung</td><td>138</td></tr>
+                    <tr><td>Ausgeschlossen nach konsolidierter Expert:innen-Entscheidung</td><td>90</td></tr>
+                    <tr><td>Expert:innen-Entscheidung nicht aufgelöst</td><td>1</td></tr>
+                    <tr><td>Einschluss nach KI-Agenten-Review, fachliche Verifikation ausstehend</td><td>16</td></tr>
+                    <tr><td>Ausschluss nach KI-Agenten-Review, fachliche Verifikation ausstehend</td><td>8</td></tr>
+                    <tr><td>Offen, geprüfter Volltext liegt vor</td><td>57</td></tr>
+                    <tr><td>Offen, Volltext nicht beschafft</td><td>44</td></tr>
+                    <tr><td>Offen, noch nicht zum Screening eingereiht</td><td>7</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p>Die Flussdaten erzeugt ein Skript im Projektbuild aus den Bibliotheks- und Bewertungsdaten. Eine eigene Ansicht des Flussdiagramms gibt es in dieser Arbeitsumgebung nicht. Den laufenden Stand je Werk zeigt der <a href="index.html#view=korpus">Korpus</a> mit seinen Stufen Identifiziert, mit Text, bewertet und eingeschlossen.</p>
+
+            <h3>Screening</h3>
+            <p>Jedes Werk wird nach zehn Kategorien in zwei Gruppen bewertet. Die Definitionen stammen aus dem Kategorienschema in Version 1.4, dessen Inhalt für die Eignungsprüfung seit Version 1.2 unverändert ist.</p>
+            <div class="table-scroll">
+            <table class="methoden-table">
+                <thead>
+                    <tr><th>Kategorie</th><th>Gruppe</th><th>Definition</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="cat-name" style="color:var(--cat-ai-lit)">AI Literacies</span></td><td>Gegenstand</td><td>Das Paper behandelt Kompetenzen, Fähigkeiten oder Wissen im Umgang mit KI-Systemen. Umfasst kritische Reflexion, technisches Verständnis oder praktische Anwendungskompetenz.</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-gen-ki)">Generative KI</span></td><td>Gegenstand</td><td>Fokus auf generative KI-Modelle wie Large Language Models, Bildgeneratoren oder andere generative Systeme.</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-prompt)">Prompting</span></td><td>Gegenstand</td><td>Behandelt Prompt-Engineering, Prompt-Strategien oder die Gestaltung von Eingaben für KI-Systeme.</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-ki-sonst)">KI Sonstige</span></td><td>Gegenstand</td><td>Andere KI/ML-Themen wie klassisches Machine Learning, algorithmische Entscheidungssysteme, Predictive Analytics, Robotik und Computer Vision. Algorithmische Systeme im Sozialbereich, etwa Risikobewertung in der Jugendhilfe, zählen hierzu.</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-soz-arb)">Soziale Arbeit</span></td><td>Perspektive</td><td>Direkter Bezug zu sozialarbeiterischer Praxis, Theorie, Ausbildung oder den Zielgruppen Sozialer Arbeit.</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-bias)">Bias &amp; Ungleichheit</span></td><td>Perspektive</td><td>Thematisiert Diskriminierung, algorithmischen Bias, soziale Ungleichheit oder strukturelle Benachteiligung im KI-Kontext.</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-gender)">Gender</span></td><td>Perspektive</td><td>Expliziter Gender-Fokus, Geschlechterperspektive oder Analyse von Gender-Bias.</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-divers)">Diversität</span></td><td>Perspektive</td><td>Thematisiert Diversität, Inklusion oder Repräsentation verschiedener Gruppen.</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-femin)">Feministisch</span></td><td>Perspektive</td><td>Verwendet feministische Theorie, Methodik oder Perspektive. Auch implizit feministische Ansätze zählen, etwa intersektionale Analysen, die kritische Betrachtung von Machtstrukturen oder ein Fokus auf marginalisierte Gruppen aus Geschlechterperspektive.</td></tr>
+                    <tr><td><span class="cat-name" style="color:var(--cat-fairness)">Fairness</span></td><td>Perspektive</td><td>Thematisiert algorithmische Fairness, faire ML-Systeme oder Fairness-Metriken.</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p>Im Screening-Werkzeug PRISM wird jede Kategorie dreistufig mit nein, teilweise oder ja bewertet, und die Entscheidung wird abgeleitet. Ein Einschluss verlangt in jeder der beiden Gruppen mindestens eine Kategorie mit ja. Unklar ist ein Werk, das in jeder Gruppe mindestens teilweise erfüllt, ohne die Einschlussregel zu erreichen. Bleibt eine Gruppe vollständig bei nein, wird das Werk ausgeschlossen. Ausschlussgründe sind kontrolliert (Duplikat, Thema nicht einschlägig, Falscher Publikationstyp, Kein Volltext, Sprache). Eine übernommene Expert:innen-Entscheidung zum Ausschluss lässt sich ohne eigenen inhaltlichen Grund bestätigen. Jede Kategorie, die eine Person neu setzt oder verändert, braucht einen Beleg aus dem Text des Werks.</p>
+
+            <h4>Erste Runde</h4>
+            <p>In der ersten Runde liefen zwei Bewertungen getrennt nebeneinander, beide binär nach denselben zehn Kategorien. Forschende aus Sozialer Arbeit, Gender- und Diversitätsforschung und Technikforschung bewerteten die Werke in einer Tabelle. Diese konsolidierte Expert:innen-Bewertung ist für die erste Runde verbindlich, sie enthält keine Zuordnung einzelner Entscheidungen zu Personen und erlaubt deshalb keine Schätzung der Übereinstimmung zwischen Expert:innen. Unabhängig davon bewertete ein LLM (Claude Haiku 4.5) die Werke ohne Zugang zu den Expert:innen-Urteilen. Ein ergänzender Vergleich variierte die Eingabe (Titel und Abstract gegenüber dem Wissensdokument) und das Modell (Haiku 4.5 gegenüber Sonnet 4.6). Die LLM-Bewertung ist ein beratender Vergleichsbestand und begründet keinen Einschluss.</p>
+
+            <h4>Zweite Runde</h4>
+            <p>Die noch offenen Werke screenen zwei Fachexpert:innen in PRISM. Eine feste, nur erweiterbare Zuteilung verteilt die offenen Werke im Wechsel auf beide. PRISM zeigt in einer menschlichen Sitzung keine KI-Vorbewertung, weder die LLM-Bewertung der ersten Runde noch die Kodierung der KI-Agenten. Das LLM-Wissensdestillat eines Werks öffnet sich erst, wenn der eigene Datensatz gespeichert ist. Ausgangspunkt einer Bearbeitung ist der eigene gespeicherte Datensatz, sonst die konsolidierte Expert:innen-Entscheidung als vorausgefüllter Entwurf, sonst ein leerer Entwurf. Ein Datensatz, der aus der Expert:innen-Entscheidung hervorgeht, bestätigt oder korrigiert diese Entscheidung. Er gilt nicht als zweite unabhängige Bewertung und wird nicht für Übereinstimmungsanalysen gegen sie verwendet. Bearbeiten lässt sich nur in einer lokalen Kopie des Projekts.</p>
+            <p>Unabhängig davon bewerten KI-Agenten Werke mit geprüftem Volltext in zwei getrennten Spuren, und ein weiterer KI-Agent prüft beide Spuren gegen den Text. Diese Agentenbewertung bleibt ein eigener Bestand. Sie wird den Fachexpert:innen nicht angezeigt und erst nachträglich mit ihren Entscheidungen verglichen.</p>
+
+            <h3>Analyse</h3>
+            <p>Eingeschlossene Werke erhalten Analysefelder nach dem Codebuch 1.4, das seit dem 1. Oktober 2026 gilt. Die Felder ordnen sich den Unterfragen zu.</p>
             <ul>
-                <li><strong>LLM (Claude Haiku 4.5)</strong> -- automatisierte Bewertung des gesamten Korpus</li>
-                <li><strong>Expert:innen</strong> -- manuelle Bewertung durch Fachwissenschaftler:innen, ohne vollstaendige Abdeckung</li>
+                <li>UF1, Aufgabe der beruflichen Praxis (Pilotfeld) und adressierte Zielgruppe oder Handlungsfeld</li>
+                <li>UF2, analysierte Bias-Achsen, nachgewiesene Schadensarten und Zielgruppen</li>
+                <li>UF3, Prompt-Techniken, Stufe und Evidenzstatus der Bias-Minderung</li>
+                <li>UF4, Bestimmung von Gender und von Bias, zugrunde liegendes Gender-Verständnis und Theoriebezug</li>
+                <li>UF5, Prompting als Lerninhalt, organisationale Maßnahmen und die Kategorie AI Literacies</li>
             </ul>
-            <p>Die Schnittmenge der beidseitig bewerteten Papers bildet die Benchmark-Basis.</p>
+            <p>Die Rolle des Promptings im Werk dient UF1, UF3 und UF5. Bias-Achsen zählen nur, wenn ein Werk Bias entlang dieser Achse analysiert. Eine bloße Aufzählung geschützter Merkmale genügt nicht.</p>
+            <p>Die Analysefelder kodieren ausschließlich KI-Agenten. Zwei Spuren erhalten dieselben Kriterien und Texte in getrennten Arbeitsumgebungen und lesen die Ergebnisse der jeweils anderen nicht. Ein separat beauftragter KI-Agent vergleicht beide Spuren mit dem Text und prüft Quellenidentität, Zitattreue, Kategorienbelege und die Feldregeln. Ein Lauf hält Modell, Prompt, Codebuchversion und Quellen-Hashes fest. Die Übereinstimmung der beiden Spuren dient als Prozessdiagnose und ist keine Schätzung von Genauigkeit oder Reliabilität. Werke, die unter dem Codebuch 1.3 kodiert wurden, werden für die geänderten und die neuen Felder erneut kodiert. Ein Pilotlauf vom 1. Oktober 2026 erprobte das Codebuch an zehn Werken, ohne produktive Daten zu schreiben.</p>
+            <p>Eine menschliche Validierung der Analysefelder liegt bisher nicht vor. Das Protokoll sieht je Lauf eine Stichprobe vor, die Fachexpert:innen zuerst ohne Einsicht in die KI-Kodierung aus dem Volltext kodieren und danach mit dem KI-Ergebnis abgleichen. Diese Stichprobenprüfung steht aus.</p>
 
-            <h3>Annotationsbasierte Synthese</h3>
-            <p>Das <a href="index.html#literaturbild">Literaturbild</a> wird aus den produktiven PRISM-Records
-            erzeugt. Thematische Haeufigkeiten verwenden ausschliesslich eingeschlossene Papers. Entscheidungen mit
-            dem Status Unclear und ausgeschlossene Papers bleiben im Bearbeitungsstand sichtbar, fliessen jedoch
-            nicht in die Inhaltsprofile ein.</p>
-            <p>Der Generator prueft Paper-Identitaet, Kategorien, Belege und die Analysevollstaendigkeit jedes
-            eingeschlossenen Papers. Jede Aggregation bleibt bis zu den zugrunde liegenden Paper-Belegen
-            rueckverfolgbar. Volltext- und Abstract-Codierungen werden getrennt ausgewiesen.</p>
+            <h3>Synthese</h3>
+            <p>Die Analyse arbeitet in zwei Schichten. Die beschreibende Kartierung folgt der JBI-Methodik für Scoping Reviews (Peters et al. 2020) und stellt kodierte Werke in Evidenz- und Lückenkarten dar. Eine Zelle zählt Werke, in denen zwei Codes gemeinsam vorkommen, und behauptet keinen Zusammenhang zwischen ihnen. Ein nicht kodiertes Feld gilt nie als Lücke in der Literatur.</p>
+            <p>Die interpretierende Synthese arbeitet mit Aussagen, quellengebundenen Einzelaussagen, die auf belegte Stellen in den Destillaten der Werke verweisen. Mehrere Quellen können eine Aussage stützen, einschränken oder ihr widersprechen, und Widersprüche werden ausdrücklich festgehalten. Primäres Verfahren ist die Best-Fit-Framework-Synthese (Carroll et al. 2011, 2013) mit den Kategorien und Analysevokabularen als vorab festgelegtem Rahmen. Für konzeptuelle Fragen kommen als interpretierende Schicht die Critical Interpretive Synthesis (Dixon-Woods et al. 2006) oder ein Meta-Narrative Review in Frage, die Wahl ist noch offen. UF5 wird als Rahmensynthese gegen die Arbeitsdefinition feministischer AI Literacies und gegen einen benannten externen Rahmen allgemeiner Prompting-Anleitungen beantwortet. Kandidat dafür ist die Taxonomie von <i>The Prompt Report</i> (Schulhoff et al. 2024), entschieden ist er noch nicht. Die Synthese vergleicht berichtete Befunde, Studienbedingungen, Widersprüche und Grenzen. Praxisempfehlungen des Projekts würden eine eigene Entscheidung und eine Bewertung der Studienqualität voraussetzen.</p>
 
-            <h3>Beobachtete Divergenz (motivierende Illustration)</h3>
-            <p>Als Illustration, warum Verlaesslichkeit nicht vorausgesetzt werden kann, nicht als Befund des Reviews, schliesst das LLM deutlich mehr Publikationen ein als die Expert:innen; die Divergenz ist asymmetrisch, das LLM ueberinkludiert oefter als umgekehrt. Cohen's Kappa ist bei stark ungleichen Basisraten kein valider Indikator fuer Uebereinstimmung (Byrt et al. 1993); primaere Metriken sind die Konfusionsmatrix und die Basisraten. Die Raten beider Seiten je Kategorie und Kategorienpaar zeigt die Ansicht <a href="index.html#view=vergleich&amp;lens=uebereinstimmung">Kategorien</a> unter dem Mass Uebereinstimmung, berechnet ueber die Werke, die beide Seiten kodiert haben, mit den Werken, die nur eine Seite kodiert hat. Die Werke mit abweichender Einschlussentscheidung listet der <a href="index.html#view=korpus&amp;hum=disagreement">Korpus</a> mit dem Filter &bdquo;Divergenz zum LLM&ldquo;.</p>
-
-            <h3>Divergenz-Klassifikation</h3>
-            <p>Die Faelle, in denen LLM und Expert:innen unterschiedlich entscheiden, wurden in drei epistemische Muster klassifiziert:</p>
+            <h3>Prüfstufen</h3>
+            <p>Jeder KI-gestützte Arbeitsschritt hat eine benannte Kontrollinstanz, und die erreichte Stufe gilt nur für das geprüfte Artefakt. Sie überträgt sich nicht automatisch auf eine abgeleitete Aussage, Abbildung oder Textstelle.</p>
             <ul>
-                <li><strong>Semantische Expansion</strong> -- Das LLM interpretiert Kategorien breiter. Es erkennt Relevanz, wo disziplinaeres Fachwissen engere Grenzen zieht.</li>
-                <li><strong>Implizite Feldzugehoerigkeit</strong> -- Das LLM ordnet Papers einem Feld zu, das implizit mitschwingt, aber nicht explizit adressiert wird.</li>
-                <li><strong>Keyword-Inklusion</strong> -- Das LLM schliesst von Schluesselwoertern auf Relevanz, ohne den inhaltlichen Kontext zu pruefen.</li>
+                <li>Deterministische Validierung prüft Form und Regeln eines Datensatzes und verleiht keine inhaltliche Autorität.</li>
+                <li>KI-quellengeprüft heißt, dass ein KI-Agent Aussage und Belege gegen die zugewiesene Quelle geprüft hat.</li>
+                <li>Fachlich verifiziert heißt, dass eine Fachexpertin oder ein Fachexperte Belege und Interpretation bestätigt hat.</li>
+                <li>Freigegeben heißt, dass eine berechtigte Person ein verifiziertes Artefakt für eine bestimmte Veröffentlichung freigegeben hat.</li>
             </ul>
+            <p>Die öffentliche Ergebnisseite zeigt nur freigegebenes Material, mit einer Ausnahme, deren Behandlung noch offen ist. Sie nennt zusammengefasste Kodierungszahlen auch über nicht freigegebene eingeschlossene Werke, ohne deren Inhalt. Seit dem 5. September 2026 ist eine vorläufige Veröffentlichung KI-quellengeprüfter Ergebnisse erlaubt, wenn ein aktueller, an Artefakt und Quelle gebundener Prüfnachweis vorliegt. Die Seite kennzeichnet solche Werke mit ◆ KI-quellengeprüft und verifizierte mit ● fachlich verifiziert. Eine KI-Quellenprüfung erscheint nie als fachliche Verifikation. Das abschließende Manuskript braucht die fachliche Verifikation und eine personengebundene Freigabe. Wie viele Werke fachlich verifiziert sind, nennt die Statuszeile der <a href="index.html#view=start">Startansicht</a>.</p>
 
-            <h3>Transparenz</h3>
-            <p>Alle LLM-Aufrufe sind im Repository gecacht (.vault_cache/) und reproduzierbar. Prompts sind versioniert (prompts/CHANGELOG.md). Der gesamte Quellcode ist offen: <a href="https://github.com/chpollin/FemPrompt_SozArb" style="color:var(--primary);">github.com/chpollin/FemPrompt_SozArb</a></p>
+            <h3>Übereinstimmung von Expert:innen und LLM</h3>
+            <p>Der Vergleich der ersten Runde misst die Abweichung zwischen zwei dokumentierten Bewertungen und keine Fehlerrate, weil ein Referenzstandard aus mehreren unabhängigen Expert:innen fehlt. Er dient als Begründung für die getrennte Erfassung von Mensch und Maschine und ist kein eigener Befund des Reviews.</p>
+            <p>Bei der Einschlussentscheidung schloss das LLM mehr Werke ein als die Expert:innen. Ein großer Teil dieser Abweichung geht auf Ausschlüsse wegen Dubletten, fehlenden Volltexts oder falschen Publikationstyps zurück, die ein Werk für Werk arbeitendes LLM nicht treffen kann. Ohne diese Fälle nähern sich die Einschlussraten an und die Übereinstimmung steigt. Eingaben über das Wissensdokument führten auch danach zu einer einschließenderen Bewertung.</p>
+            <p>Bei der Kategorie Gender liegt die Abweichung umgekehrt. Die Expert:innen vergaben Gender deutlich häufiger als das LLM. Eine KI-gestützte Prüfung vom 1. Oktober 2026 ordnete die 72 Datensätze, die Gender nur auf Seite der Expert:innen tragen, nach der Rolle von Gender in ihrem verfügbaren Text ein, mit wörtlichem Beleg je Datensatz und einer Nachprüfung eines Teils der Fälle am Text. In 55 davon erfüllt der Text die Definition nicht, häufig ist Gender dort nur in einer Aufzählung wie &bdquo;race, gender&ldquo; genannt. Hier lasen die Expert:innen breiter als die Definition. Ein kleinerer Teil betrifft Werke, die Gender als eine von mehreren Bias-Dimensionen messen und die das LLM übersah. Ob solche Werke als Analyse von Gender-Bias gelten, lässt die Definition offen. Die Gender-Zahlen der Kategorien-Ansicht folgen der breiten Lesart der Expert:innen. Das Codebuch 1.4 kodiert Bias-Achsen dagegen nach der engen Lesart.</p>
+            <p>Primäre Kennzahlen sind die Konfusionsmatrix und die Basisraten. Cohen's Kappa dient nur als Vergleichsanker, weil es bei ungleichen Basisraten sinkt, ohne dass sich das Muster der Übereinstimmung ändert (Byrt et al. 1993). Auch die um die Prävalenz bereinigte Kennzahl bleibt für die Einschlussentscheidung schwach, die ungleichen Basisraten erklären die Abweichung also nicht allein. Die Linse Übereinstimmung der Ansicht <a href="index.html#view=vergleich&amp;lens=uebereinstimmung">Kategorien</a> rechnet nur über Werke, die beide Seiten bewertet haben. Sie zeigt je Kategorie und Kategorienpaar den Anteil der Werke, denen beide Seiten die Kategorie zuwiesen, an den Werken, denen mindestens eine Seite sie zuwies, und erfasst damit Abweichungen in beide Richtungen. Werke mit abweichender Einschlussentscheidung listet der <a href="index.html#view=korpus&amp;hum=disagreement">Korpus</a> mit dem Filter &bdquo;Divergenz zum LLM&ldquo;.</p>
+            <p>Zur Fallbetrachtung dienen drei beschreibende Muster, die keine Richtigkeit zuweisen. Semantische Expansion bezeichnet eine Kategorie, die das LLM breiter anwendet als ihre Definition. Implizite Feldzugehörigkeit bezeichnet Fälle, in denen Expert:innen die Feldrelevanz an disziplinären Hinweisen erkennen, die der Prompt nicht sichtbar macht. Keyword-Inklusion bezeichnet eine Zuordnung aufgrund eines Stichworts ohne ausreichenden Kontext. Eine Zuordnung einzelner Werke zu diesen Mustern liegt derzeit nicht vor.</p>
 
-            <h3>Limitationen</h3>
+            <h3>Grenzen</h3>
             <ul>
-                <li>Substanzielle Verlustrate bei der PDF-Akquise (Zugangsbarrieren)</li>
-                <li>LLM-Bewertung basiert auf extrahiertem Wissen, nicht auf Volltexten -- doppelte Vermittlung</li>
-                <li>Human-Bewertung deckt nicht den gesamten Korpus ab</li>
-                <li>Konzept-Extraktion ist LLM-abhaengig und nicht extern validiert</li>
-                <li>Divergenz-Muster-Klassifikation ist LLM-gestuetzt (Claude Sonnet)</li>
+                <li>Deep-Research-Systeme legen ihre Suchanfragen nicht offen. Die genau ausgeführten Prompts der ersten Runde sind verloren, die Umwandlung ihrer Ergebnisse in RIS ist nicht reproduzierbar, und für die erste Runde lag kein vorab festgelegtes Protokoll vor.</li>
+                <li>Das Korpus ist keine Zufallsstichprobe. Weil die Identifikation auf Bias und Gender zielte, ist Literatur zum LLM-Einsatz in Aufgaben der Sozialen Arbeit ohne diesen Schwerpunkt vermutlich unterrepräsentiert, was besonders UF1 begrenzt.</li>
+                <li>Die beiden KI-Spuren der Analysekodierung laufen in der Regel in derselben Modellumgebung, im Pilotlauf auf demselben LLM. Ihre Übereinstimmung ist deshalb kein unabhängiger Befund.</li>
+                <li>Die Analysefelder sind bisher von keiner Fachexpertin und keinem Fachexperten validiert.</li>
+                <li>Die Gender-Kodierung der ersten Runde folgt einer Lesart, die breiter ist als die Definition.</li>
+                <li>Dieselbe Publikation kann als mehrere Datensätze mit voneinander abweichenden Expert:innen-Entscheidungen vorliegen. Das Flussdiagramm zählt deshalb auf Werkebene, die Zusammenführung solcher Werke ist teilweise offen.</li>
+                <li>Ein erheblicher Teil der Literatur liegt hinter Zugangsschranken. Beschaffung, Umwandlung und Destillation verlieren auf jeder Stufe Material, und Werke ohne beschafften Volltext bleiben offen.</li>
+                <li>Die Wissensdokumente sind LLM-Destillate ohne gemeinsame Prüfung. Das Konzeptnetz, aus dem die Kategorien-Ansicht häufige Konzepte nennt, stammt aus einer früheren LLM-Extraktion und ist ungeprüft.</li>
             </ul>
+
             <h3>Nachnutzung</h3>
-            <p>Die veröffentlichten Wissensdokumente können als nachvollziehbarer Kontext für die eigene Forschung genutzt werden.</p>
+            <p>Die Wissensdokumente lassen sich als Kontext für eigene Arbeit nutzen. Ein Wissensdokument ist ein LLM-Destillat eines Werks mit Metadaten, Abstract, Kernbefund, Forschungsfrage, Methodik, Hauptargumenten und Belegstellen zu den Kategorien. Es ersetzt nicht das Werk selbst und hat in der Regel keine fachliche Prüfung durchlaufen. Volltexte sind nicht Teil der Downloads.</p>
 
             <h4>Obsidian</h4>
-            <p><a href="downloads/vault.zip">Paper-Wissenssammlung herunterladen</a> und entpacken. Die Sammlung enthält die veröffentlichten Paper-Dokumente mit Transformationspfad, Assessment-Vergleich und Wissensdestillat.</p>
+            <p><a href="downloads/vault.zip">Paper-Wissenssammlung herunterladen</a> und entpacken. Die Sammlung enthält die verknüpften Wissensdokumente als Markdown und einen Datensatzindex, der jedes Dokument den Zotero-Datensätzen und der verwendeten Fassung des Werks zuordnet. Sie ist eine vorläufige Arbeitssammlung.</p>
 
-            <h4>Claude Code</h4>
-            <p>Im <a href="index.html#korpus" style="color:var(--primary);">Korpus</a> Papers filtern und per "Markdown-Export" als gemeinsame Datei herunterladen. Die Datei enthaelt die ausgewaehlten Wissensdokumente mit Record- und Werkkennung.</p>
+            <h4>Auswahl aus dem Korpus</h4>
+            <p>Im <a href="index.html#view=korpus">Korpus</a> eine Auswahl filtern und exportieren. CSV liefert eine Tabelle mit dem Stand je Werk. Markdown fasst die Wissensdokumente der Auswahl in einer Datei zusammen, jedes mit Datensatz- und Werkkennung. Vault packt die Wissensdokumente der Auswahl mit ihrem Datensatzindex als ZIP-Archiv. Die Markdown-Datei lässt sich als Quelle in NotebookLM, in Claude Code oder als Kontext in einem anderen LLM verwenden.</p>
             <p>Beispiel-Prompts:</p>
             <ul>
-                <li>"Welche Papers behandeln Gender Bias in Large Language Models?"</li>
-                <li>"Vergleiche die Methodik von Paper X und Paper Y."</li>
-                <li>"Fasse die Hauptargumente zum Thema Algorithmic Fairness zusammen."</li>
+                <li>&bdquo;Welche Werke behandeln Gender Bias in Large Language Models?&ldquo;</li>
+                <li>&bdquo;Vergleiche die Methodik von Werk X und Werk Y.&ldquo;</li>
+                <li>&bdquo;Fasse die Hauptargumente zum Thema Algorithmic Fairness zusammen.&ldquo;</li>
             </ul>
-
-            <h4>NotebookLM (Google)</h4>
-            <p>Die exportierte Markdown-Datei als Quelle in NotebookLM hochladen. Sie enthaelt alle Wissensdokumente der aktuellen Auswahl.</p>
-
-            <h4>ChatGPT, Gemini und andere Frontier-LLMs</h4>
-            <p>Die exportierte Markdown-Datei als Kontext hochladen und den untenstehenden System-Prompt verwenden.</p>
 
             <div style="background:var(--gray-50);border-radius:var(--radius-md);padding:1rem 1.25rem;margin-top:1.5rem;">
                 <h4 style="margin-top:0;">System-Prompt (Vorlage)</h4>
-                <pre style="font-size:var(--text-sm);color:var(--gray-700);white-space:pre-wrap;margin:0;">Du bist ein Forschungsassistent fuer einen systematischen Literature Review zu feministischen AI Literacies in der Sozialen Arbeit. Dir liegen Wissensdokumente vor, die aus wissenschaftlichen Papers extrahiert wurden. Jedes Dokument enthaelt: Kernbefund, Forschungsfrage, Methodik und Hauptargumente. Beantworte Fragen auf Basis dieser Dokumente. Zitiere immer die Quelle (Autor, Jahr). Wenn eine Information nicht in den Dokumenten steht, sage das explizit.</pre>
+                <pre style="font-size:var(--text-sm);color:var(--gray-700);white-space:pre-wrap;margin:0;">Du bist ein Forschungsassistent für einen Literaturreview zum verantwortlichen Einsatz von LLMs in der Sozialen Arbeit. Dir liegen Wissensdokumente vor, die ein LLM aus wissenschaftlichen Werken destilliert hat und die in der Regel nicht fachlich geprüft sind. Jedes Dokument enthält Kernbefund, Forschungsfrage, Methodik, Hauptargumente und Belegstellen. Beantworte Fragen nur auf Basis dieser Dokumente. Nenne zu jeder Aussage die Quelle mit Autor, Jahr und Werkkennung. Wenn eine Information nicht in den Dokumenten steht, sage das ausdrücklich.</pre>
             </div>
+
+            <h4>Code und Daten</h4>
+            <p>Code, Prompts mit Versionsgeschichte, Laufprotokolle und Forschungsdaten liegen in einem privaten Forschungsrepository des Projektteams. Volltexte bleiben dort und werden nicht veröffentlicht.</p>
         </article>
     </main>
 
