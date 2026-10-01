@@ -134,9 +134,10 @@ Bounded subagent assignments receive explicit record lists, permitted write path
 - Repair the source-identified formula and figure losses in *Worst of Both Worlds: Biases Compound in Pre-trained Vision-and-Language Models* and *Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models*, as specified by the [conversion-QC receipts](../generated/source-acquisition/completion-20260921/conversion-qc/oa-review/conversion-qc.json).
 - Bind or convert any further Paper representation only after its work identity has passed the source audit.
 - Resolve the [registered-identifier gaps](../corpus/source-acquisition/completion-20260921/existing-version-contract-gaps.json) for the located reports before binding their reading copies.
-- Bind the prepared 2026 reading texts that fail the quoted-DOI rule once the binding-contract decision under [[#Open decisions]] is taken, and rebuild the registry.
+- Apply the prepared metadata corrections with their receipt bindings. `generated/source-acquisition/oa-batch-2026-10-01/pending-metadata-corrections.patch` corrects corrupt Zotero metadata from authoritative evidence and binds the texts that then pass the identity check. Applied with `git apply` and rebuilt, it removes the published projections of the legacy knowledge documents whose bibliographic identity it corrects, so it waits for the operator's confirmation of those deletions.
+- Acquire the texts listed in `generated/source-acquisition/oa-batch-2026-10-01/remaining-for-acquisition.csv`. Several are open access but refused automated download and open in a browser; the others need licence or library access. The list also names the held texts that fail the identity check and what each needs.
+- Re-review *Defeating Nondeterminism in LLM Inference* (`FTJM5R8N`) on the newly captured page with its title before binding it, since its released AI review read the earlier conversion.
 - Rebuild the agent-screening queue after each source or corpus change.
-- Among the 2026 works without a usable full text, only the JSSWR paper on Chinese social work standards has an open-access author preprint, recorded in `generated/source-acquisition/codex-websearch-2026/reacquisition-2026-09-22.json` and converted locally without source QC or binding. The others are publisher-restricted and stay on the manual acquisition list `fehlende-volltexte-2026.xlsx`, which the partners received.
 
 Canonical state carriers are `corpus/work_version_registry.json`, `generated/round2-intake-package.json`, `generated/round2-zotero-import.ris`, `generated/contextual-update-2026-08-24-intake-package.json`, `corpus/deep-research/round2/Codex Websearch/codex-websearch-2026-package.json`, `corpus/deep-research/round2/Codex Websearch/bibliographic-audit.json`, `generated/source-acquisition/codex-websearch-2026/source-readiness.json`, `generated/agent-screening-queue.json`, `docs/data/knowledge_doc_bindings.json`, and the reviewed full-text manifest.
 
@@ -195,7 +196,7 @@ The works in the source acquisition queue lack a reviewed Paper source. Their bl
 
 ### Open decisions
 
-None of these decisions has been taken. The numbers are referenced from the steps above.
+Decision 13 was taken on 1 October 2026 and is kept in the table as closed. The other decisions have not been taken. The numbers are referenced from the steps above.
 
 | No. | Decision | Required contribution |
 |---|---|---|
@@ -211,7 +212,7 @@ None of these decisions has been taken. The numbers are referenced from the step
 | 10 | Whether the full-text cascade switches to creator-based `author_year` keys, which would change the source binding of several records | Source-identity decision by the operator |
 | 11 | Paper architecture after the priority change. The Paper-Pipeline document in the personal vault still describes the methodological workflow as the main part, and the division of literature report, paper and Companion is open | Operator decision |
 | 12 | Author set and order of the result paper. The venue is the special issue recorded in [[project#Publication context]] | Decision by the co-author group |
-| 13 | Whether the source-binding contract accepts acquisition receipts, meaning the publisher landing URL and PDF hash, as identity evidence for prepared 2026 reading texts whose converted Markdown lost its DOI | Operator decision on the binding contract |
+| 13 | Whether the source-binding contract accepts acquisition receipts, meaning the publisher landing URL and PDF hash, as identity evidence for prepared 2026 reading texts whose converted Markdown lost its DOI | Closed on 1 October 2026. The operator decided that a text is bound on an acquisition receipt plus a passed identity check of title and, where present, authors, year and DOI, recording version type and difference to the preferred Version, with manuscripts of a Version of Record added through the manuscript path ([[data#Published Companion records and work identity]]) |
 | 14 | Tier 2 reference coding needs a PRISM session mode that also hides the consolidated expert decision, since ADR-044 already hides the LLM proposal and the agent coding, and a randomly drawn verification sample in addition to the assigned scope ([[analysis-methods#Tier 2, analyses after complete expert-verified coding]]) | Operator decision on tool contract and sampling |
 | 15 | Final scholarly release of verified research records and outputs | Person-attributed publication approval. The preliminary AI-source-reviewed release is already authorised |
 | 16 | Final submission package | Approval of manuscript, supplement, disclosures, and selected venue requirements |

@@ -4052,7 +4052,40 @@
       "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
       "bibliographic_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
       "source_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "8MRNK6FX",
+        "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
+        "bibliographic_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+        "source_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown/Unknown_2024_Research.md",
+        "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work",
+          "doi": "10.23977/jaip.2024.070222"
+        },
+        "acquisition_receipt": {
+          "repo_path": "generated/markdown/Unknown_2024_Research.md",
+          "retrieved_at": "2026-02-03T20:49:12+01:00",
+          "sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
+          "route": "repository: earlier Docling conversion of an acquired PDF",
+          "note": "Original PDF Unknown_2024_Research.pdf is not versioned; the receipt time is the conversion time."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "not_printed"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "version_type": "version_of_record",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -4133,6 +4166,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "8MRNK6FX"
             },
             {
@@ -4144,6 +4179,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "SSF5Q33W"
             }
           ]
@@ -4161,6 +4198,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "8MRNK6FX"
             },
             {
@@ -4172,6 +4211,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "SSF5Q33W"
             }
           ]
@@ -4189,6 +4230,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "8MRNK6FX"
             },
             {
@@ -4200,6 +4243,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "SSF5Q33W"
             }
           ]
@@ -4217,6 +4262,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "8MRNK6FX"
             },
             {
@@ -4228,6 +4275,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "SSF5Q33W"
             }
           ]
@@ -4245,6 +4294,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "8MRNK6FX"
             },
             {
@@ -4256,6 +4307,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "SSF5Q33W"
             }
           ]
@@ -4273,6 +4326,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "8MRNK6FX"
             },
             {
@@ -4284,6 +4339,8 @@
               "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
               "recorded_work_id": "doi:10.23977/jaip.2024.070222",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Unknown_2024_Research.md",
+              "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
               "source_record_id": "SSF5Q33W"
             }
           ]
@@ -4362,7 +4419,40 @@
           "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
           "bibliographic_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
           "source_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "8MRNK6FX",
+            "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
+            "bibliographic_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+            "source_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+            "source_version_type": "version_of_record",
+            "preferred_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown/Unknown_2024_Research.md",
+            "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
+            "binding_mode": "acquisition_receipt",
+            "bibliographic_identity": {
+              "title": "Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work",
+              "doi": "10.23977/jaip.2024.070222"
+            },
+            "acquisition_receipt": {
+              "repo_path": "generated/markdown/Unknown_2024_Research.md",
+              "retrieved_at": "2026-02-03T20:49:12+01:00",
+              "sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
+              "route": "repository: earlier Docling conversion of an acquired PDF",
+              "note": "Original PDF Unknown_2024_Research.pdf is not versioned; the receipt time is the conversion time."
+            },
+            "identity_check": {
+              "title": "pass",
+              "first_author": "not_registered",
+              "doi": "not_printed",
+              "year": "not_printed"
+            },
+            "version_relation": {
+              "source_version_type": "version_of_record",
+              "preferred_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+              "difference_to_preferred": "none: the bound text is the preferred version"
+            }
+          },
           "version_type": "version_of_record",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -4442,7 +4532,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             },
@@ -4458,7 +4550,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             },
@@ -4474,7 +4568,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             },
@@ -4490,7 +4586,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             },
@@ -4506,7 +4604,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             },
@@ -4522,7 +4622,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             }
@@ -4584,7 +4686,40 @@
           "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
           "bibliographic_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
           "source_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "SSF5Q33W",
+            "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
+            "bibliographic_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+            "source_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+            "source_version_type": "version_of_record",
+            "preferred_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown/Unknown_2024_Research.md",
+            "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
+            "binding_mode": "acquisition_receipt",
+            "bibliographic_identity": {
+              "title": "Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work",
+              "doi": "10.23977/jaip.2024.070222"
+            },
+            "acquisition_receipt": {
+              "repo_path": "generated/markdown/Unknown_2024_Research.md",
+              "retrieved_at": "2026-02-03T20:49:12+01:00",
+              "sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0",
+              "route": "repository: earlier Docling conversion of an acquired PDF",
+              "note": "Original PDF Unknown_2024_Research.pdf is not versioned; the receipt time is the conversion time."
+            },
+            "identity_check": {
+              "title": "pass",
+              "first_author": "not_registered",
+              "doi": "not_printed",
+              "year": "not_printed"
+            },
+            "version_relation": {
+              "source_version_type": "version_of_record",
+              "preferred_version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
+              "difference_to_preferred": "none: the bound text is the preferred version"
+            }
+          },
           "version_type": "version_of_record",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -4665,7 +4800,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             },
@@ -4681,7 +4818,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             },
@@ -4697,7 +4836,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             },
@@ -4713,7 +4854,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             },
@@ -4729,7 +4872,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             },
@@ -4745,7 +4890,9 @@
                   "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
                   "version_id": "version:09f3f9a5-44e5-5b5f-aff4-33c330d2d670",
                   "recorded_work_id": "doi:10.23977/jaip.2024.070222",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Unknown_2024_Research.md",
+                  "source_sha256": "sha256:3e0988a83a4182d4a641d06f2d8287ff6651122d7185e7564641437e7bb915a0"
                 }
               ]
             }
@@ -5234,7 +5381,40 @@
       "version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
       "bibliographic_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
       "source_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "3ZNMTJ5B",
+        "work_id": "work:56d6f68e-55d4-5741-85f5-014faceedd04",
+        "bibliographic_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+        "source_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown/Feminist_AI_n.d._Academy.md",
+        "source_sha256": "sha256:65348e56baa5ae0e0bb627c2d834b9e6d37f231101d9bfff4382333f7dd2f6aa",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "feminist AI | ACADEMY"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://www.feminist-ai.com/academy",
+          "repo_path": "generated/markdown/Feminist_AI_n.d._Academy.md",
+          "retrieved_at": "2026-08-23T00:00:00+00:00",
+          "sha256": "sha256:65348e56baa5ae0e0bb627c2d834b9e6d37f231101d9bfff4382333f7dd2f6aa",
+          "route": "repository: earlier acquisition from the source URL in the conversion header",
+          "note": "Date-only retrieval stamp from the conversion header."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_registered",
+          "year": "not_registered"
+        },
+        "version_relation": {
+          "source_version_type": "unknown",
+          "preferred_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "version_type": "unknown",
       "version_date": "n.d.",
       "peer_review_status": "not_established",
@@ -5328,7 +5508,40 @@
           "version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
           "bibliographic_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
           "source_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "3ZNMTJ5B",
+            "work_id": "work:56d6f68e-55d4-5741-85f5-014faceedd04",
+            "bibliographic_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+            "source_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+            "source_version_type": "unknown",
+            "preferred_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown/Feminist_AI_n.d._Academy.md",
+            "source_sha256": "sha256:65348e56baa5ae0e0bb627c2d834b9e6d37f231101d9bfff4382333f7dd2f6aa",
+            "binding_mode": "acquisition_receipt",
+            "bibliographic_identity": {
+              "title": "feminist AI | ACADEMY"
+            },
+            "acquisition_receipt": {
+              "source_url": "https://www.feminist-ai.com/academy",
+              "repo_path": "generated/markdown/Feminist_AI_n.d._Academy.md",
+              "retrieved_at": "2026-08-23T00:00:00+00:00",
+              "sha256": "sha256:65348e56baa5ae0e0bb627c2d834b9e6d37f231101d9bfff4382333f7dd2f6aa",
+              "route": "repository: earlier acquisition from the source URL in the conversion header",
+              "note": "Date-only retrieval stamp from the conversion header."
+            },
+            "identity_check": {
+              "title": "pass",
+              "first_author": "not_registered",
+              "doi": "not_registered",
+              "year": "not_registered"
+            },
+            "version_relation": {
+              "source_version_type": "unknown",
+              "preferred_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
+              "difference_to_preferred": "none: the bound text is the preferred version"
+            }
+          },
           "version_type": "unknown",
           "version_date": "n.d.",
           "peer_review_status": "not_established",
@@ -5410,7 +5623,39 @@
       "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
       "bibliographic_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
       "source_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "EQV4DNQR",
+        "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
+        "bibliographic_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+        "source_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+        "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Challenging systematic prejudices: an Investigation into Gender Bias in Large Language Models"
+        },
+        "acquisition_receipt": {
+          "repo_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+          "retrieved_at": "2026-02-03T18:58:37+01:00",
+          "sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750",
+          "route": "repository: earlier Docling conversion of an acquired PDF",
+          "note": "Original PDF UNESCO_2024_Bias_against_women_and_girls_in_large_language.pdf is not versioned; the receipt time is the conversion time."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "not_registered",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "unknown",
+          "preferred_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "version_type": "unknown",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -5487,6 +5732,8 @@
               "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
               "recorded_work_id": "record:EQV4DNQR",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+              "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750",
               "source_record_id": "EQV4DNQR"
             }
           ]
@@ -5504,6 +5751,8 @@
               "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
               "recorded_work_id": "record:EQV4DNQR",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+              "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750",
               "source_record_id": "EQV4DNQR"
             }
           ]
@@ -5521,6 +5770,8 @@
               "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
               "recorded_work_id": "record:EQV4DNQR",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+              "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750",
               "source_record_id": "EQV4DNQR"
             }
           ]
@@ -5538,6 +5789,8 @@
               "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
               "recorded_work_id": "record:EQV4DNQR",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+              "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750",
               "source_record_id": "EQV4DNQR"
             }
           ]
@@ -5555,6 +5808,8 @@
               "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
               "recorded_work_id": "record:EQV4DNQR",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+              "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750",
               "source_record_id": "EQV4DNQR"
             }
           ]
@@ -5572,6 +5827,8 @@
               "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
               "recorded_work_id": "record:EQV4DNQR",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+              "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750",
               "source_record_id": "EQV4DNQR"
             }
           ]
@@ -5589,6 +5846,8 @@
               "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
               "recorded_work_id": "record:EQV4DNQR",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+              "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750",
               "source_record_id": "EQV4DNQR"
             }
           ]
@@ -5713,7 +5972,39 @@
           "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
           "bibliographic_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
           "source_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "EQV4DNQR",
+            "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
+            "bibliographic_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+            "source_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+            "source_version_type": "unknown",
+            "preferred_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+            "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750",
+            "binding_mode": "acquisition_receipt",
+            "bibliographic_identity": {
+              "title": "Challenging systematic prejudices: an Investigation into Gender Bias in Large Language Models"
+            },
+            "acquisition_receipt": {
+              "repo_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+              "retrieved_at": "2026-02-03T18:58:37+01:00",
+              "sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750",
+              "route": "repository: earlier Docling conversion of an acquired PDF",
+              "note": "Original PDF UNESCO_2024_Bias_against_women_and_girls_in_large_language.pdf is not versioned; the receipt time is the conversion time."
+            },
+            "identity_check": {
+              "title": "pass",
+              "first_author": "pass",
+              "doi": "not_registered",
+              "year": "pass"
+            },
+            "version_relation": {
+              "source_version_type": "unknown",
+              "preferred_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+              "difference_to_preferred": "none: the bound text is the preferred version"
+            }
+          },
           "version_type": "unknown",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -5789,7 +6080,9 @@
                   "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
                   "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
                   "recorded_work_id": "record:EQV4DNQR",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+                  "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750"
                 }
               ]
             },
@@ -5805,7 +6098,9 @@
                   "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
                   "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
                   "recorded_work_id": "record:EQV4DNQR",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+                  "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750"
                 }
               ]
             },
@@ -5821,7 +6116,9 @@
                   "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
                   "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
                   "recorded_work_id": "record:EQV4DNQR",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+                  "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750"
                 }
               ]
             },
@@ -5837,7 +6134,9 @@
                   "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
                   "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
                   "recorded_work_id": "record:EQV4DNQR",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+                  "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750"
                 }
               ]
             },
@@ -5853,7 +6152,9 @@
                   "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
                   "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
                   "recorded_work_id": "record:EQV4DNQR",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+                  "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750"
                 }
               ]
             },
@@ -5869,7 +6170,9 @@
                   "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
                   "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
                   "recorded_work_id": "record:EQV4DNQR",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+                  "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750"
                 }
               ]
             },
@@ -5885,7 +6188,9 @@
                   "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
                   "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
                   "recorded_work_id": "record:EQV4DNQR",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+                  "source_sha256": "sha256:87cbcb74240ee9d9e6d0bba70eb7c7267659a47feb97ff636fa6ab02093ea750"
                 }
               ]
             }
@@ -7344,7 +7649,39 @@
       "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
       "bibliographic_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
       "source_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "3GB9B4IJ",
+        "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+        "bibliographic_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+        "source_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+        "source_sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Can LLMs reason about trust? A pilot study"
+        },
+        "acquisition_receipt": {
+          "repo_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+          "retrieved_at": "2026-02-03T08:46:34+01:00",
+          "sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
+          "route": "repository: earlier Docling conversion of an acquired PDF",
+          "note": "Original PDF Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.pdf is not versioned; the receipt time is the conversion time."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "not_registered",
+          "year": "not_printed"
+        },
+        "version_relation": {
+          "source_version_type": "preprint",
+          "preferred_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "version_type": "preprint",
       "version_date": "2025-06-11",
       "peer_review_status": "not_established",
@@ -7379,7 +7716,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "identity_unresolved",
+      "knowledge_coverage": "linked",
       "decision": "Exclude",
       "reason": "Not_relevant_topic",
       "text_source": "raw",
@@ -7423,6 +7760,8 @@
               "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
               "recorded_work_id": "",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+              "source_sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
               "source_record_id": "3GB9B4IJ"
             }
           ]
@@ -7440,6 +7779,8 @@
               "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
               "recorded_work_id": "",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+              "source_sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
               "source_record_id": "3GB9B4IJ"
             }
           ]
@@ -7457,6 +7798,8 @@
               "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
               "recorded_work_id": "",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+              "source_sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
               "source_record_id": "3GB9B4IJ"
             }
           ]
@@ -7493,7 +7836,39 @@
           "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
           "bibliographic_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
           "source_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "3GB9B4IJ",
+            "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+            "bibliographic_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+            "source_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+            "source_version_type": "preprint",
+            "preferred_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+            "source_sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
+            "binding_mode": "acquisition_receipt",
+            "bibliographic_identity": {
+              "title": "Can LLMs reason about trust? A pilot study"
+            },
+            "acquisition_receipt": {
+              "repo_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+              "retrieved_at": "2026-02-03T08:46:34+01:00",
+              "sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
+              "route": "repository: earlier Docling conversion of an acquired PDF",
+              "note": "Original PDF Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.pdf is not versioned; the receipt time is the conversion time."
+            },
+            "identity_check": {
+              "title": "pass",
+              "first_author": "pass",
+              "doi": "not_registered",
+              "year": "not_printed"
+            },
+            "version_relation": {
+              "source_version_type": "preprint",
+              "preferred_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+              "difference_to_preferred": "none: the bound text is the preferred version"
+            }
+          },
           "version_type": "preprint",
           "version_date": "2025-06-11",
           "peer_review_status": "not_established",
@@ -7528,7 +7903,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "identity_unresolved",
+          "knowledge_coverage": "linked",
           "decision": "Exclude",
           "reason": "Not_relevant_topic",
           "text_source": "raw",
@@ -7571,7 +7946,9 @@
                   "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
                   "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
                   "recorded_work_id": "",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+                  "source_sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4"
                 }
               ]
             },
@@ -7587,7 +7964,9 @@
                   "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
                   "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
                   "recorded_work_id": "",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+                  "source_sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4"
                 }
               ]
             },
@@ -7603,7 +7982,9 @@
                   "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
                   "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
                   "recorded_work_id": "",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+                  "source_sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4"
                 }
               ]
             }
@@ -8977,7 +9358,40 @@
       "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
       "bibliographic_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
       "source_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "UKKQKL7I",
+        "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
+        "bibliographic_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+        "source_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown/Washington_2025_Fragile.md",
+        "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Fragile Foundations: Hidden Risks of Generative AI",
+          "doi": "10.11586/2025078"
+        },
+        "acquisition_receipt": {
+          "repo_path": "generated/markdown/Washington_2025_Fragile.md",
+          "retrieved_at": "2026-02-03T20:49:21+01:00",
+          "sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
+          "route": "repository: earlier Docling conversion of an acquired PDF",
+          "note": "Original PDF Washington_2025_Fragile.pdf is not versioned; the receipt time is the conversion time."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "pass",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "version_type": "version_of_record",
       "version_date": "2025",
       "peer_review_status": "not_established",
@@ -9058,6 +9472,8 @@
               "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
               "recorded_work_id": "doi:10.11586/2025078",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Washington_2025_Fragile.md",
+              "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
               "source_record_id": "UKKQKL7I"
             }
           ]
@@ -9075,6 +9491,8 @@
               "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
               "recorded_work_id": "doi:10.11586/2025078",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Washington_2025_Fragile.md",
+              "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
               "source_record_id": "UKKQKL7I"
             }
           ]
@@ -9092,6 +9510,8 @@
               "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
               "recorded_work_id": "doi:10.11586/2025078",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Washington_2025_Fragile.md",
+              "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
               "source_record_id": "UKKQKL7I"
             }
           ]
@@ -9109,6 +9529,8 @@
               "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
               "recorded_work_id": "doi:10.11586/2025078",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Washington_2025_Fragile.md",
+              "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
               "source_record_id": "UKKQKL7I"
             }
           ]
@@ -9126,6 +9548,8 @@
               "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
               "recorded_work_id": "doi:10.11586/2025078",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Washington_2025_Fragile.md",
+              "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
               "source_record_id": "UKKQKL7I"
             }
           ]
@@ -9143,6 +9567,8 @@
               "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
               "recorded_work_id": "doi:10.11586/2025078",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Washington_2025_Fragile.md",
+              "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
               "source_record_id": "UKKQKL7I"
             }
           ]
@@ -9160,6 +9586,8 @@
               "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
               "recorded_work_id": "doi:10.11586/2025078",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Washington_2025_Fragile.md",
+              "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
               "source_record_id": "UKKQKL7I"
             }
           ]
@@ -9177,6 +9605,8 @@
               "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
               "recorded_work_id": "doi:10.11586/2025078",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Washington_2025_Fragile.md",
+              "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
               "source_record_id": "UKKQKL7I"
             }
           ]
@@ -9253,7 +9683,40 @@
           "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
           "bibliographic_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
           "source_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "UKKQKL7I",
+            "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
+            "bibliographic_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+            "source_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+            "source_version_type": "version_of_record",
+            "preferred_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown/Washington_2025_Fragile.md",
+            "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
+            "binding_mode": "acquisition_receipt",
+            "bibliographic_identity": {
+              "title": "Fragile Foundations: Hidden Risks of Generative AI",
+              "doi": "10.11586/2025078"
+            },
+            "acquisition_receipt": {
+              "repo_path": "generated/markdown/Washington_2025_Fragile.md",
+              "retrieved_at": "2026-02-03T20:49:21+01:00",
+              "sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2",
+              "route": "repository: earlier Docling conversion of an acquired PDF",
+              "note": "Original PDF Washington_2025_Fragile.pdf is not versioned; the receipt time is the conversion time."
+            },
+            "identity_check": {
+              "title": "pass",
+              "first_author": "pass",
+              "doi": "pass",
+              "year": "pass"
+            },
+            "version_relation": {
+              "source_version_type": "version_of_record",
+              "preferred_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+              "difference_to_preferred": "none: the bound text is the preferred version"
+            }
+          },
           "version_type": "version_of_record",
           "version_date": "2025",
           "peer_review_status": "not_established",
@@ -9333,7 +9796,9 @@
                   "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
                   "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
                   "recorded_work_id": "doi:10.11586/2025078",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Washington_2025_Fragile.md",
+                  "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2"
                 }
               ]
             },
@@ -9349,7 +9814,9 @@
                   "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
                   "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
                   "recorded_work_id": "doi:10.11586/2025078",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Washington_2025_Fragile.md",
+                  "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2"
                 }
               ]
             },
@@ -9365,7 +9832,9 @@
                   "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
                   "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
                   "recorded_work_id": "doi:10.11586/2025078",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Washington_2025_Fragile.md",
+                  "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2"
                 }
               ]
             },
@@ -9381,7 +9850,9 @@
                   "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
                   "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
                   "recorded_work_id": "doi:10.11586/2025078",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Washington_2025_Fragile.md",
+                  "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2"
                 }
               ]
             },
@@ -9397,7 +9868,9 @@
                   "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
                   "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
                   "recorded_work_id": "doi:10.11586/2025078",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Washington_2025_Fragile.md",
+                  "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2"
                 }
               ]
             },
@@ -9413,7 +9886,9 @@
                   "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
                   "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
                   "recorded_work_id": "doi:10.11586/2025078",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Washington_2025_Fragile.md",
+                  "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2"
                 }
               ]
             },
@@ -9429,7 +9904,9 @@
                   "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
                   "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
                   "recorded_work_id": "doi:10.11586/2025078",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Washington_2025_Fragile.md",
+                  "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2"
                 }
               ]
             },
@@ -9445,7 +9922,9 @@
                   "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
                   "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
                   "recorded_work_id": "doi:10.11586/2025078",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Washington_2025_Fragile.md",
+                  "source_sha256": "sha256:c688ffa92ed26809ec4c1a21c0c9f077fa894e43ef8ad1f38b41629e2ea066d2"
                 }
               ]
             }
@@ -9755,7 +10234,39 @@
       "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
       "bibliographic_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
       "source_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "J5EF9W6M",
+        "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+        "bibliographic_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+        "source_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+        "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "AI & Intersectionality: A Toolkit For Fairness & Inclusion"
+        },
+        "acquisition_receipt": {
+          "repo_path": "generated/markdown/Project_2024_Intersectionality.md",
+          "retrieved_at": "2026-02-03T20:46:57+01:00",
+          "sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+          "route": "repository: earlier Docling conversion of an acquired PDF",
+          "note": "Original PDF Project_2024_Intersectionality.pdf is not versioned; the receipt time is the conversion time."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_registered",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "unknown",
+          "preferred_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "version_type": "unknown",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -9833,6 +10344,8 @@
               "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
               "recorded_work_id": "record:J5EF9W6M",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+              "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
               "source_record_id": "J5EF9W6M"
             }
           ]
@@ -9850,6 +10363,8 @@
               "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
               "recorded_work_id": "record:J5EF9W6M",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+              "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
               "source_record_id": "J5EF9W6M"
             }
           ]
@@ -9867,6 +10382,8 @@
               "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
               "recorded_work_id": "record:J5EF9W6M",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+              "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
               "source_record_id": "J5EF9W6M"
             }
           ]
@@ -9884,6 +10401,8 @@
               "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
               "recorded_work_id": "record:J5EF9W6M",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+              "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
               "source_record_id": "J5EF9W6M"
             }
           ]
@@ -9901,6 +10420,8 @@
               "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
               "recorded_work_id": "record:J5EF9W6M",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+              "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
               "source_record_id": "J5EF9W6M"
             }
           ]
@@ -9918,6 +10439,8 @@
               "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
               "recorded_work_id": "record:J5EF9W6M",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+              "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
               "source_record_id": "J5EF9W6M"
             }
           ]
@@ -9935,6 +10458,8 @@
               "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
               "recorded_work_id": "record:J5EF9W6M",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+              "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
               "source_record_id": "J5EF9W6M"
             }
           ]
@@ -9952,6 +10477,8 @@
               "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
               "recorded_work_id": "record:J5EF9W6M",
               "recorded_version_id": "",
+              "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+              "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
               "source_record_id": "J5EF9W6M"
             }
           ]
@@ -10067,7 +10594,39 @@
           "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
           "bibliographic_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
           "source_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "J5EF9W6M",
+            "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+            "bibliographic_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+            "source_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+            "source_version_type": "unknown",
+            "preferred_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+            "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+            "binding_mode": "acquisition_receipt",
+            "bibliographic_identity": {
+              "title": "AI & Intersectionality: A Toolkit For Fairness & Inclusion"
+            },
+            "acquisition_receipt": {
+              "repo_path": "generated/markdown/Project_2024_Intersectionality.md",
+              "retrieved_at": "2026-02-03T20:46:57+01:00",
+              "sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3",
+              "route": "repository: earlier Docling conversion of an acquired PDF",
+              "note": "Original PDF Project_2024_Intersectionality.pdf is not versioned; the receipt time is the conversion time."
+            },
+            "identity_check": {
+              "title": "pass",
+              "first_author": "not_registered",
+              "doi": "not_registered",
+              "year": "pass"
+            },
+            "version_relation": {
+              "source_version_type": "unknown",
+              "preferred_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+              "difference_to_preferred": "none: the bound text is the preferred version"
+            }
+          },
           "version_type": "unknown",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -10144,7 +10703,9 @@
                   "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
                   "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
                   "recorded_work_id": "record:J5EF9W6M",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+                  "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3"
                 }
               ]
             },
@@ -10160,7 +10721,9 @@
                   "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
                   "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
                   "recorded_work_id": "record:J5EF9W6M",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+                  "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3"
                 }
               ]
             },
@@ -10176,7 +10739,9 @@
                   "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
                   "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
                   "recorded_work_id": "record:J5EF9W6M",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+                  "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3"
                 }
               ]
             },
@@ -10192,7 +10757,9 @@
                   "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
                   "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
                   "recorded_work_id": "record:J5EF9W6M",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+                  "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3"
                 }
               ]
             },
@@ -10208,7 +10775,9 @@
                   "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
                   "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
                   "recorded_work_id": "record:J5EF9W6M",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+                  "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3"
                 }
               ]
             },
@@ -10224,7 +10793,9 @@
                   "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
                   "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
                   "recorded_work_id": "record:J5EF9W6M",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+                  "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3"
                 }
               ]
             },
@@ -10240,7 +10811,9 @@
                   "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
                   "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
                   "recorded_work_id": "record:J5EF9W6M",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+                  "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3"
                 }
               ]
             },
@@ -10256,7 +10829,9 @@
                   "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
                   "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
                   "recorded_work_id": "record:J5EF9W6M",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown/Project_2024_Intersectionality.md",
+                  "source_sha256": "sha256:5527459c9567d1704f8a67f8f627f8da8d1a1efc6348cb62f323ad8ac5c133e3"
                 }
               ]
             }
@@ -11484,7 +12059,39 @@
       "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
       "bibliographic_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
       "source_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "4KMMPA6A",
+        "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
+        "bibliographic_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+        "source_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+        "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Faires KIPrompting – Ein Leitfaden für Unternehmen. BSP Business and Law School – Hochschule für Management und Recht"
+        },
+        "acquisition_receipt": {
+          "repo_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+          "retrieved_at": "2026-02-03T08:58:17+01:00",
+          "sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
+          "route": "repository: earlier Docling conversion of an acquired PDF",
+          "note": "Original PDF Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.pdf is not versioned; the receipt time is the conversion time."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "not_registered",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "unknown",
+          "preferred_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "version_type": "unknown",
       "version_date": "2024",
       "peer_review_status": "not_established",
@@ -11517,7 +12124,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "identity_unresolved",
+      "knowledge_coverage": "fulltext_ready",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -11560,6 +12167,8 @@
               "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
               "recorded_work_id": "record:4KMMPA6A",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+              "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
               "source_record_id": "4KMMPA6A"
             }
           ]
@@ -11577,6 +12186,8 @@
               "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
               "recorded_work_id": "record:4KMMPA6A",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+              "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
               "source_record_id": "4KMMPA6A"
             }
           ]
@@ -11594,6 +12205,8 @@
               "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
               "recorded_work_id": "record:4KMMPA6A",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+              "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
               "source_record_id": "4KMMPA6A"
             }
           ]
@@ -11611,6 +12224,8 @@
               "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
               "recorded_work_id": "record:4KMMPA6A",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+              "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
               "source_record_id": "4KMMPA6A"
             }
           ]
@@ -11628,6 +12243,8 @@
               "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
               "recorded_work_id": "record:4KMMPA6A",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+              "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
               "source_record_id": "4KMMPA6A"
             }
           ]
@@ -11645,6 +12262,8 @@
               "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
               "recorded_work_id": "record:4KMMPA6A",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+              "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
               "source_record_id": "4KMMPA6A"
             }
           ]
@@ -11662,6 +12281,8 @@
               "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
               "recorded_work_id": "record:4KMMPA6A",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+              "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
               "source_record_id": "4KMMPA6A"
             }
           ]
@@ -11679,6 +12300,8 @@
               "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
               "recorded_work_id": "record:4KMMPA6A",
               "recorded_version_id": "",
+              "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+              "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
               "source_record_id": "4KMMPA6A"
             }
           ]
@@ -11819,7 +12442,39 @@
           "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
           "bibliographic_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
           "source_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "4KMMPA6A",
+            "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
+            "bibliographic_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+            "source_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+            "source_version_type": "unknown",
+            "preferred_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+            "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
+            "binding_mode": "acquisition_receipt",
+            "bibliographic_identity": {
+              "title": "Faires KIPrompting – Ein Leitfaden für Unternehmen. BSP Business and Law School – Hochschule für Management und Recht"
+            },
+            "acquisition_receipt": {
+              "repo_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+              "retrieved_at": "2026-02-03T08:58:17+01:00",
+              "sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1",
+              "route": "repository: earlier Docling conversion of an acquired PDF",
+              "note": "Original PDF Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.pdf is not versioned; the receipt time is the conversion time."
+            },
+            "identity_check": {
+              "title": "pass",
+              "first_author": "pass",
+              "doi": "not_registered",
+              "year": "pass"
+            },
+            "version_relation": {
+              "source_version_type": "unknown",
+              "preferred_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
+              "difference_to_preferred": "none: the bound text is the preferred version"
+            }
+          },
           "version_type": "unknown",
           "version_date": "2024",
           "peer_review_status": "not_established",
@@ -11852,7 +12507,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "identity_unresolved",
+          "knowledge_coverage": "fulltext_ready",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -11894,7 +12549,9 @@
                   "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
                   "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
                   "recorded_work_id": "record:4KMMPA6A",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+                  "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1"
                 }
               ]
             },
@@ -11910,7 +12567,9 @@
                   "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
                   "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
                   "recorded_work_id": "record:4KMMPA6A",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+                  "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1"
                 }
               ]
             },
@@ -11926,7 +12585,9 @@
                   "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
                   "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
                   "recorded_work_id": "record:4KMMPA6A",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+                  "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1"
                 }
               ]
             },
@@ -11942,7 +12603,9 @@
                   "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
                   "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
                   "recorded_work_id": "record:4KMMPA6A",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+                  "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1"
                 }
               ]
             },
@@ -11958,7 +12621,9 @@
                   "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
                   "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
                   "recorded_work_id": "record:4KMMPA6A",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+                  "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1"
                 }
               ]
             },
@@ -11974,7 +12639,9 @@
                   "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
                   "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
                   "recorded_work_id": "record:4KMMPA6A",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+                  "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1"
                 }
               ]
             },
@@ -11990,7 +12657,9 @@
                   "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
                   "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
                   "recorded_work_id": "record:4KMMPA6A",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+                  "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1"
                 }
               ]
             },
@@ -12006,7 +12675,9 @@
                   "work_id": "work:ce611f7b-8bda-5e6a-9ca9-3b46a8027694",
                   "version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
                   "recorded_work_id": "record:4KMMPA6A",
-                  "recorded_version_id": ""
+                  "recorded_version_id": "",
+                  "source_path": "generated/markdown_clean/Gengler_2024_Faires_KI-Prompting_–_Ein_Leitfaden_für.md",
+                  "source_sha256": "sha256:9e82e8b5d842f961b326d9f50807e3b663c3bdd177cc6823772d124a37e713d1"
                 }
               ]
             }
@@ -13181,7 +13852,40 @@
       "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
       "bibliographic_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
       "source_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "8NG4ZEWE",
+        "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+        "bibliographic_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+        "source_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/8NG4ZEWE.md",
+        "source_sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Intersektionalität"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://wb-erwachsenenbildung.net/download/intersektionalitaet/",
+          "repo_path": "generated/markdown_clean/8NG4ZEWE.md",
+          "retrieved_at": "2026-08-26T00:00:00+00:00",
+          "sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a",
+          "route": "repository: earlier acquisition from the source URL in the conversion header",
+          "note": "Date-only retrieval stamp from the conversion header."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "not_registered",
+          "year": "not_printed"
+        },
+        "version_relation": {
+          "source_version_type": "unknown",
+          "preferred_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "version_type": "unknown",
       "version_date": "2023-04-03",
       "peer_review_status": "not_established",
@@ -13258,6 +13962,8 @@
               "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
               "recorded_work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
               "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+              "source_path": "generated/markdown_clean/8NG4ZEWE.md",
+              "source_sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a",
               "source_record_id": "8NG4ZEWE"
             }
           ]
@@ -13275,6 +13981,8 @@
               "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
               "recorded_work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
               "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+              "source_path": "generated/markdown_clean/8NG4ZEWE.md",
+              "source_sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a",
               "source_record_id": "8NG4ZEWE"
             }
           ]
@@ -13292,6 +14000,8 @@
               "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
               "recorded_work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
               "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+              "source_path": "generated/markdown_clean/8NG4ZEWE.md",
+              "source_sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a",
               "source_record_id": "8NG4ZEWE"
             }
           ]
@@ -13309,6 +14019,8 @@
               "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
               "recorded_work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
               "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+              "source_path": "generated/markdown_clean/8NG4ZEWE.md",
+              "source_sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a",
               "source_record_id": "8NG4ZEWE"
             }
           ]
@@ -13344,7 +14056,40 @@
           "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
           "bibliographic_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
           "source_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
-          "source_binding": null,
+          "source_binding": {
+            "record_id": "8NG4ZEWE",
+            "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
+            "bibliographic_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+            "source_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+            "source_version_type": "unknown",
+            "preferred_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+            "is_preferred_version": true,
+            "source_path": "generated/markdown_clean/8NG4ZEWE.md",
+            "source_sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a",
+            "binding_mode": "acquisition_receipt",
+            "bibliographic_identity": {
+              "title": "Intersektionalität"
+            },
+            "acquisition_receipt": {
+              "source_url": "https://wb-erwachsenenbildung.net/download/intersektionalitaet/",
+              "repo_path": "generated/markdown_clean/8NG4ZEWE.md",
+              "retrieved_at": "2026-08-26T00:00:00+00:00",
+              "sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a",
+              "route": "repository: earlier acquisition from the source URL in the conversion header",
+              "note": "Date-only retrieval stamp from the conversion header."
+            },
+            "identity_check": {
+              "title": "pass",
+              "first_author": "pass",
+              "doi": "not_registered",
+              "year": "not_printed"
+            },
+            "version_relation": {
+              "source_version_type": "unknown",
+              "preferred_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+              "difference_to_preferred": "none: the bound text is the preferred version"
+            }
+          },
           "version_type": "unknown",
           "version_date": "2023-04-03",
           "peer_review_status": "not_established",
@@ -13420,7 +14165,9 @@
                   "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
                   "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
                   "recorded_work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
-                  "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+                  "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+                  "source_path": "generated/markdown_clean/8NG4ZEWE.md",
+                  "source_sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a"
                 }
               ]
             },
@@ -13436,7 +14183,9 @@
                   "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
                   "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
                   "recorded_work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
-                  "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+                  "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+                  "source_path": "generated/markdown_clean/8NG4ZEWE.md",
+                  "source_sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a"
                 }
               ]
             },
@@ -13452,7 +14201,9 @@
                   "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
                   "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
                   "recorded_work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
-                  "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+                  "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+                  "source_path": "generated/markdown_clean/8NG4ZEWE.md",
+                  "source_sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a"
                 }
               ]
             },
@@ -13468,7 +14219,9 @@
                   "work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
                   "version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
                   "recorded_work_id": "work:f684b737-f5e5-5797-9591-43a5729fc511",
-                  "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816"
+                  "recorded_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
+                  "source_path": "generated/markdown_clean/8NG4ZEWE.md",
+                  "source_sha256": "sha256:9f20057ac511d2e9ff05c6f2234d591c038b40051c5a178030afa9b8eaabba0a"
                 }
               ]
             }

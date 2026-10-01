@@ -426,44 +426,24 @@
       "ai_review": {},
       "source_queue": {
         "preferred_version_paper_source_missing": [
-          "work:0079c902-19b5-5e78-8b23-06cda81b2792",
-          "work:4ceaffbe-54e4-5865-acd6-bffa1af7ac55",
           "work:be146ab5-46d5-531d-9f2a-62aedf1e54e0"
         ],
         "reviewed_fulltext_markdown_missing": [
-          "work:0047ae4b-70f2-53bc-ae76-87aa24cec7ac",
-          "work:0079c902-19b5-5e78-8b23-06cda81b2792",
           "work:0414138e-c8db-522b-8e98-94913418d861",
-          "work:04a0acc2-9533-58d5-b53c-7d931f30d34f",
           "work:07d0801a-2468-5738-b788-0e265e95976a",
-          "work:0956e6b6-04d8-5572-a9a0-9018c23788a2",
-          "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d",
-          "work:1406264b-e0cd-5dde-be3b-dbfd17fb0711",
           "work:14ff652e-92a8-5982-bf91-a64c26254d13",
           "work:1bf0286b-2c77-5cc6-9f86-c387c306c504",
-          "work:2a9dcaf7-01d3-52a7-a0a2-1a9f06dceee5",
           "work:3120ff22-ca6c-526b-8107-98006fcd39e4",
-          "work:34294df8-8138-5c66-8137-b0c1a6afa3ff",
           "work:38dda3f3-a302-5518-ae71-9d25ce9728c7",
-          "work:395de8af-225b-54df-9dcd-19a709c2dcc8",
           "work:3b02e536-2608-5664-8375-e41cd0501530",
           "work:42607135-da86-5d16-a8da-32f4625eddcb",
-          "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4",
           "work:45d9af93-79ae-5cea-834f-b465c751fc8d",
-          "work:46be07be-83b3-59c5-946e-b41472558493",
-          "work:48e00f1e-369a-59d9-8883-f6d8cea1a7bc",
-          "work:4ceaffbe-54e4-5865-acd6-bffa1af7ac55",
-          "work:4ffc2ade-42d9-52a0-ab34-275b1555e19d",
           "work:5214816c-608d-55ba-98f3-2a3a3357b7ac",
           "work:5afec464-2212-543d-9b3f-abb12a282783",
           "work:5d44ca3d-827b-5f4e-a4f1-1ee40ec55c18",
           "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
-          "work:6b23f3bc-ecce-551d-b7f4-8c1b00fcf117",
           "work:6cefc242-e12f-5be0-830d-33952ecad5e7",
           "work:702fdf21-e0e7-5903-a2e7-d64ce0842858",
-          "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c",
-          "work:76eafb72-f674-51b7-b980-05ca1e500f58",
-          "work:78ab2081-865c-5e19-b831-19fe7c2574d0",
           "work:7932a8e0-53aa-5105-9d0a-86603d8aff25",
           "work:79601e71-971d-574c-a299-65b068101286",
           "work:7bec80be-f7f9-516a-8845-7215f683db24",
@@ -476,37 +456,23 @@
           "work:a2194871-3b0b-5750-9b17-ddee423cb40a",
           "work:a68f9db2-cf06-54f2-b8a9-7beb11e0bc9e",
           "work:a6e813e5-57e0-555c-92f9-1155ffc79f42",
-          "work:aada8ec1-ce81-50d6-90c3-c9b2787d6a5b",
-          "work:acf1ac10-2b58-5eab-b1ff-5a139ee5afce",
           "work:b3f64b11-e34c-58f2-bbcb-c91add9d5e16",
           "work:b440aa78-e9c1-5b93-8d4d-2200924a02cd",
-          "work:b86204c8-abca-51c2-a398-a9a78c8aba08",
           "work:bd56a9b4-b852-5918-88bb-8f6ad888fa6c",
           "work:be146ab5-46d5-531d-9f2a-62aedf1e54e0",
           "work:be71f040-2a73-5980-8dc4-e7bb83aa4575",
           "work:bfc73f5a-39eb-5331-bddb-b897f3bbe650",
           "work:c7e78e57-eccc-510a-810a-491bf50ecb85",
-          "work:c8ae8d5b-fcdc-5cac-9969-519b06516912",
           "work:c8ee6229-4d78-51b8-be80-0831d5e650a5",
-          "work:cb1293bf-0c88-59cb-ac2c-ee567a14cd25",
-          "work:cfe60968-caff-5fda-a10e-f204b31115c9",
           "work:d3e51cd3-1781-55c6-abc7-80ced266a26e",
           "work:da7ca8ae-1095-5199-a51a-b9cce3e8c07c",
           "work:e0680eb6-6ddd-5f4a-ae90-29d2359cba3e",
           "work:e2a638bd-caa4-5f73-a532-6f9e7767693e",
           "work:e3fcbaca-43ce-552e-85d8-0c743c12fee2",
-          "work:e56cb050-aad5-5a20-8994-ac450ec25bc0",
-          "work:e769d36a-8e1e-5b9b-9e22-301723be1c24",
           "work:f23df8e7-b57c-555e-8a09-afa5a74b659f",
           "work:f4196a02-dca2-57b3-9858-23487b191908",
-          "work:f43c0a7f-e499-5be3-8deb-a100f15cafab",
           "work:f50cd1ef-241a-515c-b970-b491ce2b97f7",
-          "work:f5657618-8172-57e3-8294-94d2e46aed62",
-          "work:f66a5701-d3b8-5c56-91b4-3dfb9ab82387",
-          "work:fa2c7082-9f5a-5906-93ad-27af9cc6fc7a",
-          "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c",
-          "work:fb07e9e8-562c-5c51-9aa7-f1faa654c172",
-          "work:feb70530-663a-5606-8a38-0eb3a39f35fa"
+          "work:fb07e9e8-562c-5c51-9aa7-f1faa654c172"
         ]
       }
     },
@@ -22793,13 +22759,13 @@
     "counts": {
       "broken_link_records": 0,
       "canonical_records": 463,
-      "distinct_linked_documents": 199,
-      "linked_records": 269,
-      "linked_works": 197,
-      "missing_link_records": 194,
+      "distinct_linked_documents": 209,
+      "linked_records": 285,
+      "linked_works": 208,
+      "missing_link_records": 178,
       "record_bound_works": 361,
-      "shared_documents_across_works": 3,
-      "works_without_linked_document": 164
+      "shared_documents_across_works": 4,
+      "works_without_linked_document": 153
     },
     "definitions": {
       "active_status": "Literal document maturity metadata only. Current source-bound review receipts are evaluated separately by the assertion and completion builders.",
@@ -22887,9 +22853,7 @@
         "Trustworthy AI"
       ],
       "mapped_records_without_document": [
-        "2FUXNFZS",
         "2WHGF83D",
-        "2YS85B49",
         "4LY3SA4E",
         "55ZR64VU",
         "5T55I5Z7",
@@ -22898,25 +22862,18 @@
         "7IVS7X63",
         "7QQV7R9S",
         "99QJDBSV",
-        "A776TPGG",
         "BDBYDLVK",
         "BKSU66QB",
         "BR2LG8LD",
         "C485NKYA",
         "CHJQ52DC",
         "CLKAD87H",
-        "DGLWM93D",
         "E4G328PD",
         "H7E3N6VR",
-        "HJ7BHX8J",
         "HLBXNWAZ",
-        "IGFYSIV8",
         "JGZDWMN3",
         "JZ4P8V8S",
-        "K3YCLBXK",
-        "K6JQ7SVA",
         "LMW8DZ78",
-        "LT3D3ZQ2",
         "M7AGB7LI",
         "MITLDF9S",
         "MPCZVZEW",
@@ -22929,7 +22886,6 @@
         "QKFG72IT",
         "QZJL6KBZ",
         "RM833D5N",
-        "RZ4QFXQI",
         "S8WGUVQT",
         "SS5HTYY6",
         "SSH3LVN6",
@@ -23236,11 +23192,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "2FUXNFZS",
-        "work_id": "work:9ad5daa2-9b05-5ea0-afb0-cbac15231f0d"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "2JSZR47F",
         "work_id": "work:b5b557a0-a651-5a88-b70c-1b05374e5b06"
       },
@@ -23256,18 +23207,8 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "2YS85B49",
-        "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "3AHQEHDF",
         "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "3GB9B4IJ",
-        "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88"
       },
       {
         "reason": "no_document_link",
@@ -23283,11 +23224,6 @@
         "reason": "no_document_link",
         "record_id": "44AA6ETH",
         "work_id": "work:4f5b1e4d-e7b1-55a5-91ad-e582dd7039cb"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "4GYXUS9Y",
-        "work_id": "work:97f2994f-5f16-598e-9aa5-3f5edaf6fb23"
       },
       {
         "reason": "no_document_link",
@@ -23461,11 +23397,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "A776TPGG",
-        "work_id": "work:4c307a06-8f57-5dd6-8cd6-cb7aaf20d574"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "ACDF4FL9",
         "work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400"
       },
@@ -23496,11 +23427,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "BCBWSU3Z",
-        "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "BDBYDLVK",
         "work_id": "work:21fb26e6-0662-58b2-bb09-35d6c7c54bdd"
       },
@@ -23508,11 +23434,6 @@
         "reason": "no_document_link",
         "record_id": "BDI6XU5A",
         "work_id": "work:bd83caf1-923f-5895-b6bb-9d558c619ceb"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "BJZYGNEE",
-        "work_id": "work:190638a5-2d71-5ad6-af0f-c97f18e938e9"
       },
       {
         "reason": "no_document_link",
@@ -23573,11 +23494,6 @@
         "reason": "no_document_link",
         "record_id": "DENAHEUW",
         "work_id": "work:e769d36a-8e1e-5b9b-9e22-301723be1c24"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "DGLWM93D",
-        "work_id": "work:03c5d999-8f35-5312-8651-ade4abebf935"
       },
       {
         "reason": "no_document_link",
@@ -23691,11 +23607,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "HJ7BHX8J",
-        "work_id": "work:1d90c6d8-2bb3-524f-a584-983167355ffb"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "HLBXNWAZ",
         "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87"
       },
@@ -23708,11 +23619,6 @@
         "reason": "no_document_link",
         "record_id": "I7BQH4U4",
         "work_id": "work:68b57d67-221a-5e96-8d7b-153b4b26c91a"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "IGFYSIV8",
-        "work_id": "work:190638a5-2d71-5ad6-af0f-c97f18e938e9"
       },
       {
         "reason": "no_document_link",
@@ -23761,16 +23667,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "K3YCLBXK",
-        "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "K6JQ7SVA",
-        "work_id": "work:135fb923-b32d-521c-9393-f5c6e4491369"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "KI9GRGHB",
         "work_id": "work:a6e813e5-57e0-555c-92f9-1155ffc79f42"
       },
@@ -23793,11 +23689,6 @@
         "reason": "no_document_link",
         "record_id": "LR8Z3YHP",
         "work_id": "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "LT3D3ZQ2",
-        "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431"
       },
       {
         "reason": "no_document_link",
@@ -23926,11 +23817,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "RZ4QFXQI",
-        "work_id": "work:bae61996-c445-52f4-830b-9fb2deaf238c"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "RZ8ADW94",
         "work_id": "work:bd56a9b4-b852-5918-88bb-8f6ad888fa6c"
       },
@@ -23938,11 +23824,6 @@
         "reason": "no_document_link",
         "record_id": "S8WGUVQT",
         "work_id": "work:0f32c6e1-9f19-5e58-b51e-6099f4cc91cd"
-      },
-      {
-        "reason": "no_document_link",
-        "record_id": "SHDNTZJZ",
-        "work_id": "work:190638a5-2d71-5ad6-af0f-c97f18e938e9"
       },
       {
         "reason": "no_document_link",
@@ -24171,11 +24052,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "ZAU6P4BK",
-        "work_id": "work:374ffb8c-c284-5be3-9050-86a7f02aced0"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "ZETPJ8EC",
         "work_id": "work:42607135-da86-5d16-a8da-32f4625eddcb"
       },
@@ -24239,6 +24115,19 @@
           "work:55f0efa8-e433-5588-9afe-3f708043a400",
           "work:7644e99b-9dd1-545f-af98-ab7fed6643e6"
         ]
+      },
+      {
+        "knowledge_doc": "docs/vault/Papers/Shaping feminist artificial intelligence.md",
+        "record_ids": [
+          "BJZYGNEE",
+          "IGFYSIV8",
+          "SHDNTZJZ",
+          "ZAU6P4BK"
+        ],
+        "work_ids": [
+          "work:190638a5-2d71-5ad6-af0f-c97f18e938e9",
+          "work:374ffb8c-c284-5be3-9050-86a7f02aced0"
+        ]
       }
     ],
     "unbound_projection_record_ids": [],
@@ -24260,12 +24149,6 @@
           "YV53DKI2"
         ],
         "work_id": "work:02644be9-7d50-5d9e-a122-62e031e1263d"
-      },
-      {
-        "record_ids": [
-          "DGLWM93D"
-        ],
-        "work_id": "work:03c5d999-8f35-5312-8651-ade4abebf935"
       },
       {
         "record_ids": [
@@ -24323,12 +24206,6 @@
       },
       {
         "record_ids": [
-          "K6JQ7SVA"
-        ],
-        "work_id": "work:135fb923-b32d-521c-9393-f5c6e4491369"
-      },
-      {
-        "record_ids": [
           "H958FXZR",
           "NJUBGV8X"
         ],
@@ -24354,14 +24231,6 @@
       },
       {
         "record_ids": [
-          "BJZYGNEE",
-          "IGFYSIV8",
-          "SHDNTZJZ"
-        ],
-        "work_id": "work:190638a5-2d71-5ad6-af0f-c97f18e938e9"
-      },
-      {
-        "record_ids": [
           "VIHZB2CS"
         ],
         "work_id": "work:1bf0286b-2c77-5cc6-9f86-c387c306c504"
@@ -24371,12 +24240,6 @@
           "UBYTNGNV"
         ],
         "work_id": "work:1c7bb6b2-9c36-5199-a172-76003d7cb61f"
-      },
-      {
-        "record_ids": [
-          "HJ7BHX8J"
-        ],
-        "work_id": "work:1d90c6d8-2bb3-524f-a584-983167355ffb"
       },
       {
         "record_ids": [
@@ -24431,12 +24294,6 @@
           "6JAZXKEB"
         ],
         "work_id": "work:3524f378-58a5-59c1-8676-7f043b252c93"
-      },
-      {
-        "record_ids": [
-          "ZAU6P4BK"
-        ],
-        "work_id": "work:374ffb8c-c284-5be3-9050-86a7f02aced0"
       },
       {
         "record_ids": [
@@ -24545,12 +24402,6 @@
       },
       {
         "record_ids": [
-          "A776TPGG"
-        ],
-        "work_id": "work:4c307a06-8f57-5dd6-8cd6-cb7aaf20d574"
-      },
-      {
-        "record_ids": [
           "SSH3LVN6"
         ],
         "work_id": "work:4cab8171-b278-509a-989f-32e20446537d"
@@ -24615,18 +24466,6 @@
           "XD28QSM7"
         ],
         "work_id": "work:5afec464-2212-543d-9b3f-abb12a282783"
-      },
-      {
-        "record_ids": [
-          "LT3D3ZQ2"
-        ],
-        "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431"
-      },
-      {
-        "record_ids": [
-          "K3YCLBXK"
-        ],
-        "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836"
       },
       {
         "record_ids": [
@@ -24735,14 +24574,6 @@
       },
       {
         "record_ids": [
-          "2YS85B49",
-          "3GB9B4IJ",
-          "BCBWSU3Z"
-        ],
-        "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88"
-      },
-      {
-        "record_ids": [
           "WS4KQPWN"
         ],
         "work_id": "work:7613a7ed-0f4e-56a5-a2da-6e361bf549a9"
@@ -24842,12 +24673,6 @@
           "55ZR64VU"
         ],
         "work_id": "work:990eedb3-3515-5180-87eb-2288399e3222"
-      },
-      {
-        "record_ids": [
-          "2FUXNFZS"
-        ],
-        "work_id": "work:9ad5daa2-9b05-5ea0-afb0-cbac15231f0d"
       },
       {
         "record_ids": [
@@ -24978,12 +24803,6 @@
           "UWQGNPSE"
         ],
         "work_id": "work:b86204c8-abca-51c2-a398-a9a78c8aba08"
-      },
-      {
-        "record_ids": [
-          "RZ4QFXQI"
-        ],
-        "work_id": "work:bae61996-c445-52f4-830b-9fb2deaf238c"
       },
       {
         "record_ids": [
@@ -27001,7 +26820,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:f9e98e61ee04748c32084dfddb2b5250cad7eb9d6d4edea5aed6e3c3b09ab14b",
+  "source_fingerprint": "sha256:4fb92beb1bfec9ddf861e9f7cc35c926271eb9e2184eb1abd2726216042c416c",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -27185,7 +27004,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "6cfd6ab33dc6e320cff9850da25522e8da3fb11c68dd82e1bfd66b28cc45d24f"
+      "sha256": "36a562a6ad952bffed8b27118c2dad65ad057ec003011dbd1f2250a9ba916abb"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -27225,7 +27044,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "54cd3455775c905c78a6314a0c067a0b4737dfc2d437070f0f4bb7ceac5e78e0"
+      "sha256": "13b1e64facddd90088c43838a29840a3ca01800f02675ad2e7ba698d56991de8"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -27262,6 +27081,10 @@
     {
       "path": "docs/vault/Papers/AI Gender Bias, Disparities, and Fairness- Does Training Data Matter-.md",
       "sha256": "8eb60b349b14c29a9df46d292847d1b0866dd1bca711c46fa16685c48a8b986d"
+    },
+    {
+      "path": "docs/vault/Papers/AI Literacy- A Framework to Understand, Evaluate, and Use-74e320.md",
+      "sha256": "9887d631202d1e3d880a95500621fe0a4415bc81b9cdae0a998aaef9a65a72a5"
     },
     {
       "path": "docs/vault/Papers/AI algorithm transparency, pipelines for trust not prisms-dc7821.md",
@@ -27336,6 +27159,10 @@
       "sha256": "80e7a76a83fe3bd55595ef6f925af091690d7c5e5f69011b4236c0d7cf17a14e"
     },
     {
+      "path": "docs/vault/Papers/Can LLMs reason about trust- A pilot study.md",
+      "sha256": "24c308d2371eed5d79a0d3efeb706cd42ce967fbbd1011b74b001a2d4cc8780a"
+    },
+    {
       "path": "docs/vault/Papers/Can prompt modifiers control bias- A comparative analysis of-9cf0bd.md",
       "sha256": "145e2f16ab805628ae1796200d7f62f8b73530e9d12ab7a332db34bcb86e2938"
     },
@@ -27398,6 +27225,14 @@
     {
       "path": "docs/vault/Papers/Dipper- Diversity in Prompts for Producing Large Language Model Outputs.md",
       "sha256": "764b7693bc33cdba2791b45f511f30cd3a53fbd295c0a605306ee237d01e40bd"
+    },
+    {
+      "path": "docs/vault/Papers/Discriminating Systems- Gender, Race, and Power in AI.md",
+      "sha256": "58cdad212d14221801ca7c87076abab8465b212a88428111611ee766ccf26b96"
+    },
+    {
+      "path": "docs/vault/Papers/Engineers on responsibility- feminist approaches to who's-c00aae.md",
+      "sha256": "c1b5577dd1a9fe8eee6ed94dab3e470b28905507fecce63a1ddb78b43e69943c"
     },
     {
       "path": "docs/vault/Papers/Ethical issues related to the use of technology in social work-73568f.md",
@@ -27520,6 +27355,10 @@
       "sha256": "08bbc439b48bccd395ea9efc5c34dc846269fe6708df3de0891b81269325df0f"
     },
     {
+      "path": "docs/vault/Papers/Intersectional Fairness- A Fractal Approach.md",
+      "sha256": "c0241e31af48e5e94b9655428736e964b3bf115620cc7a05336a5de00130a865"
+    },
+    {
       "path": "docs/vault/Papers/Intersectional Stereotypes in Large Language Models- Dataset and-12e417.md",
       "sha256": "3ea7848a28738f933b9805341745c9f8a8b7f6f278eb087c9c411618cfd1acca"
     },
@@ -27636,6 +27475,10 @@
       "sha256": "986240e082e4bc2e0281f49dcfcdc8026228e55b7407af71458a88402053c991"
     },
     {
+      "path": "docs/vault/Papers/RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE-6ff43c.md",
+      "sha256": "d8cbd1c25d67f416763ae4ac4a5f3583f16a5705c6fe42424ab2bfe8f80bbe39"
+    },
+    {
       "path": "docs/vault/Papers/Rationalisierung durch Digitalisierung-.md",
       "sha256": "15a56da7629dbe470a4a2ba6bc180872ca43c01b37b948978a98fd77d3a23146"
     },
@@ -27650,6 +27493,10 @@
     {
       "path": "docs/vault/Papers/Revisiting Technical Bias Mitigation Strategies.md",
       "sha256": "b12375c3b543fa389f519b16ca2a5bbcb4bd1f6e599aa6442c1e886b54ab4b96"
+    },
+    {
+      "path": "docs/vault/Papers/Shaping feminist artificial intelligence.md",
+      "sha256": "931474de3fa4df1b76db95d5a5fb06a5202f7c9a1002faf21a031faf275d83cb"
     },
     {
       "path": "docs/vault/Papers/Social work and artificial intelligence- Collaboration and challenges.md",
@@ -27670,6 +27517,10 @@
     {
       "path": "docs/vault/Papers/The AI literacy development canvas- Assessing and building AI-d0ef54.md",
       "sha256": "0836ff2b3a6aee4a4343ee522f7477d7780a796eba625b9ee2ff15bceb5a0c27"
+    },
+    {
+      "path": "docs/vault/Papers/The EU artificial intelligence act through a gender lens.md",
+      "sha256": "87a411106f95af742316b30a9a17fda023a79bb653adcec30878eea13e324267"
     },
     {
       "path": "docs/vault/Papers/The End of the World as We Know It- ChatGPT and Social Work.md",
@@ -27700,6 +27551,10 @@
       "sha256": "bc647709fceb9bd0de5a7e1f9aedf922c3027bc5800afb55436658ff0e2d2809"
     },
     {
+      "path": "docs/vault/Papers/Towards a Feminist Metaethics of AI.md",
+      "sha256": "2c0d80fe5db00f5049a9659097575271d46b0cd44cdfd53b601289f78dc29212"
+    },
+    {
       "path": "docs/vault/Papers/Training in Co-Creation as a Methodological Approach to Improve-dfbc6f.md",
       "sha256": "d1344a39e60cffa200c9b8dd307804bda1940b5ae7611953b2c6d8e2a34cd441"
     },
@@ -27718,6 +27573,10 @@
     {
       "path": "docs/vault/Papers/Unequal voices- How LLMs construct constrained queer narratives.md",
       "sha256": "1e3ace29f154b5a9a6603387515ea6b83e96792f79d52311d9ca3d091f6d15e3"
+    },
+    {
+      "path": "docs/vault/Papers/Voll (dia)logisch- Ein Werkstattbericht über den Einsatz von-aa3866.md",
+      "sha256": "149da20d80a94cfddfbd72ff405be147c519abb4e3cfec8bd7601fc003622e18"
     },
     {
       "path": "docs/vault/Papers/What are artificial intelligence literacy and competency- A-33af20.md",
@@ -28029,7 +27888,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "ad97b38dbcd982fb5f7ae3b6925f7e97bf0a7e7453143ecc6e4b85b66f1aaced"
+      "sha256": "1644322ebc7ef98586068cd5477832833700688d84fafac64498e39d1928de24"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -30459,7 +30318,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "2RK458W2"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -30475,7 +30336,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:8f30cc62-ffe6-5001-8f4d-759391b0878d",
@@ -30483,10 +30344,8 @@
         "2RK458W2"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes",
       "version_ids": [
@@ -30507,7 +30366,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "YW3UAXFP"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -30523,7 +30384,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:3b053ebc-d2ef-5371-bd55-10f9b4a141bb",
@@ -30531,11 +30392,8 @@
         "YW3UAXFP"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing",
-        "preferred_version_paper_source_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Feminist AI: Confronting Bias, Power, and the Promise of Justice-Oriented Technology",
       "version_ids": [
@@ -30676,7 +30534,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "DGLWM93D"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -30784,7 +30644,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "BX2UPC4N"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -30800,7 +30662,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:01823f24-d998-5b14-a34f-63a5598f2d8c",
@@ -30808,10 +30670,8 @@
         "BX2UPC4N"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Prompting Fairness: Integrating Causality to Debias Large Language Models",
       "version_ids": [
@@ -30940,7 +30800,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "DALR26DL"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -30956,7 +30818,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:0ca609ef-3735-5101-918e-b8053c7ff43d",
@@ -30964,10 +30826,8 @@
         "DALR26DL"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "\"Grillz on a hijabi\": Intersectional Identities in Fostering Critical AI Literacy",
       "version_ids": [
@@ -31487,7 +31347,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "8YZKPS42"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -31503,7 +31365,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
@@ -31511,10 +31373,8 @@
         "8YZKPS42"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
       "version_ids": [
@@ -32145,7 +32005,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "K6JQ7SVA"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -32205,7 +32067,10 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "H958FXZR",
+        "NJUBGV8X"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -32221,7 +32086,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:bc8447b9-95ae-50fd-8bfd-b216a224d60d",
@@ -32230,10 +32095,8 @@
         "NJUBGV8X"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Intersectional biases in narratives produced by open-ended prompting of generative language models",
       "version_ids": [
@@ -32361,7 +32224,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "Q4LK53XW"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -32421,7 +32286,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "SS5HTYY6"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -32552,7 +32419,11 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "BJZYGNEE",
+        "IGFYSIV8",
+        "SHDNTZJZ"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -32695,7 +32566,9 @@
       ],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "CHJQ52DC"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -33433,7 +33306,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "HJ7BHX8J"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -34594,7 +34469,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "JJLSMEQA"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -34910,7 +34787,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "5WNZMJJQ"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -34926,7 +34805,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
@@ -34934,10 +34813,8 @@
         "5WNZMJJQ"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Artificial Intelligence and Case-Based Learning in Social Work Education: Pedagogical Considerations and Future Directions",
       "version_ids": [
@@ -35384,7 +35261,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "KJWMQSMN"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -35400,7 +35279,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
@@ -35408,10 +35287,8 @@
         "KJWMQSMN"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
       "version_ids": [
@@ -35432,7 +35309,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "6JAZXKEB"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -36363,7 +36242,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "ZAU6P4BK"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -36422,7 +36303,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "TNLGELEQ"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -36608,7 +36491,10 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "7IVS7X63",
+        "YPYQ2TCL"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -36784,7 +36670,10 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "VIKH8BAI",
+        "WUMNU3W5"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -36800,7 +36689,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
@@ -36809,10 +36698,8 @@
         "WUMNU3W5"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "AI literacy and its implications for prompt engineering strategies",
       "version_ids": [
@@ -36952,7 +36839,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "R2LPR3VD"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -37912,7 +37801,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "EFMF4449"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -37928,7 +37819,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
@@ -37936,10 +37827,8 @@
         "EFMF4449"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
       "version_ids": [
@@ -38008,7 +37897,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "BKYNQZHQ"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -38024,7 +37915,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:ad149ad0-134b-5935-b766-37dca94bfab2",
@@ -38032,10 +37923,8 @@
         "BKYNQZHQ"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "A Critique of Human-Centred AI: A Plea for a Feminist AI Framework (FAIF)",
       "version_ids": [
@@ -38461,7 +38350,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "9AVG53AQ"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -38477,7 +38368,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
@@ -38485,10 +38376,8 @@
         "9AVG53AQ"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
       "version_ids": [
@@ -39024,7 +38913,11 @@
       "current_ai_review_results": [
         "accepted"
       ],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "8MRNK6FX",
+        "JFVQIWE5",
+        "SSF5Q33W"
+      ],
       "decision_authority": "ai_review",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -39132,7 +39025,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "A776TPGG"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -39250,7 +39145,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "PS8KVDVS"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -39266,7 +39163,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:2c3a44a7-be34-54b7-bb25-c6cb2308b8c3",
@@ -39274,11 +39171,8 @@
         "PS8KVDVS"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing",
-        "preferred_version_paper_source_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Intersectional Fairness in Large Language Models",
       "version_ids": [
@@ -39478,7 +39372,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "IPH8G42U"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -39494,7 +39390,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:480e112e-281c-51f3-a413-690ad078b651",
@@ -39502,10 +39398,8 @@
         "IPH8G42U"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Paying the Cognitive Debt: An Experiential Learning Framework for Integrating AI in Social Work Education",
       "version_ids": [
@@ -39645,7 +39539,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "YN9JAREI"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -39753,7 +39649,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "6Y5EPQRR"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -40276,7 +40174,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "ACDF4FL9"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -40324,8 +40224,7 @@
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
         "retain_legacy_human_decision_and_document_historical_provenance_limits",
-        "complete_source_bound_SQ1_to_SQ5_coding",
-        "Keep existing canonical Work/Version IDs and rebuild the applied author/date/type/repository corrections. Resolve the true duplicate Kamruzzaman Works in an explicit identity migration with source-version and receipt audit before adding the deferred DOI. No new source review or human verification is inferred."
+        "complete_source_bound_SQ1_to_SQ5_coding"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583",
@@ -40710,7 +40609,10 @@
       "current_ai_review_results": [
         "accepted"
       ],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "3ZNMTJ5B",
+        "FKJH2278"
+      ],
       "decision_authority": "ai_review",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -41043,7 +40945,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "LT3D3ZQ2"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -41163,7 +41067,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "K3YCLBXK"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -41668,7 +41574,10 @@
       "current_ai_review_results": [
         "accepted"
       ],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "8JR5AGRG",
+        "EQV4DNQR"
+      ],
       "decision_authority": "ai_review",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -41715,7 +41624,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "H7E3N6VR"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -43434,7 +43345,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "Z6QC4HW9"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -43450,7 +43363,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:6c3f114f-3fd1-5751-a224-23bf9353cb86",
@@ -43458,10 +43371,8 @@
         "Z6QC4HW9"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Gender Bias in LLM Hiring Decisions: Evidence from a Japanese Context and Evaluation of Mitigation Strategies",
       "version_ids": [
@@ -44261,7 +44172,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "BKSU66QB"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -44320,7 +44233,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "2WHGF83D"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -44755,7 +44670,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "9MDIBETZ"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -44934,7 +44851,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "XRQE5VM2"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -44950,7 +44869,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
@@ -44958,10 +44877,8 @@
         "XRQE5VM2"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
       "version_ids": [
@@ -45614,7 +45531,11 @@
       "current_ai_review_results": [
         "accepted"
       ],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "2YS85B49",
+        "3GB9B4IJ",
+        "BCBWSU3Z"
+      ],
       "decision_authority": "ai_review",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -45824,7 +45745,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "MN2K9JW8"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -45840,7 +45763,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:5ac914e1-ddd5-5d98-b3d5-06ba5549d622",
@@ -45848,10 +45771,8 @@
         "MN2K9JW8"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Verbesserung der KI-Literacy von Lehrenden im Hochschulbereich",
       "version_ids": [
@@ -45872,7 +45793,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "AITNC2I9"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -45888,7 +45811,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:bc4057d5-713b-5cea-afe4-02a31ca5f6fe",
@@ -45896,10 +45819,8 @@
         "AITNC2I9"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Toward True Neutrality: Evaluating Inference-Time Debiasing Strategies for Gender Coreference Resolution in LLMs",
       "version_ids": [
@@ -46400,7 +46321,12 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "9Y7ZFGI5",
+        "AIZGTQKG",
+        "BFG8VUK3",
+        "UY65LIAI"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -48027,7 +47953,9 @@
       ],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "5UAHQESQ"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -49296,7 +49224,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "H8WRNPP7"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -49542,7 +49472,10 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "4GYXUS9Y",
+        "RAV6DAFQ"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -49733,7 +49666,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "2FUXNFZS"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -50239,7 +50174,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "C485NKYA"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -50639,7 +50576,10 @@
       "current_ai_review_results": [
         "accepted"
       ],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "M62T5ICP",
+        "UKKQKL7I"
+      ],
       "decision_authority": "ai_review",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -50686,7 +50626,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "9BDIJE9B"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -51180,7 +51122,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "MQJEES7J"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -51359,7 +51303,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "65NGEK5Q"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -51375,7 +51321,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
@@ -51383,10 +51329,8 @@
         "65NGEK5Q"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
       "version_ids": [
@@ -51585,7 +51529,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "TFMETSCH"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -51601,7 +51547,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
@@ -51609,10 +51555,8 @@
         "TFMETSCH"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses",
       "version_ids": [
@@ -51800,7 +51744,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "XCS4YCQH"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -53126,7 +53072,10 @@
       "current_ai_review_results": [
         "accepted"
       ],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "AHUSFEEA",
+        "J5EF9W6M"
+      ],
       "decision_authority": "ai_review",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -53173,7 +53122,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "UWQGNPSE"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -53189,7 +53140,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
@@ -53197,10 +53148,8 @@
         "UWQGNPSE"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Rethinking Prompt-based Debiasing in Large Language Model",
       "version_ids": [
@@ -53221,7 +53170,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "RZ4QFXQI"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -53701,7 +53652,9 @@
       "current_ai_review_results": [
         "accepted"
       ],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "JFDBPUBN"
+      ],
       "decision_authority": "ai_review",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -54191,7 +54144,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "UJ7DXK8Y"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -55130,7 +55085,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "QKFG72IT"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -55189,7 +55146,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "VXDH5KWP"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -55205,7 +55164,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:3da2b173-7839-5e9e-9453-155987bdc1b9",
@@ -55213,10 +55172,8 @@
         "VXDH5KWP"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "AI Literacy and Gender Bias: Comparative Perspectives from the UK and Indonesia",
       "version_ids": [
@@ -55453,7 +55410,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "DZ39L7GC"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -55513,7 +55472,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "IYUPQPTA"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -55529,7 +55490,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:8af3af2f-f4ab-5fcc-884f-65d3a46ad101",
@@ -55537,10 +55498,8 @@
         "IYUPQPTA"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Black feminism and Artificial Intelligence: the possibilities and limitations of contesting discriminatory AI from a critical social theory perspective",
       "version_ids": [
@@ -56044,7 +56003,9 @@
       "current_ai_review_results": [
         "accepted"
       ],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "4KMMPA6A"
+      ],
       "decision_authority": "ai_review",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -56150,7 +56111,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "JD5JZ3KR"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -56166,7 +56129,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:30132234-87e5-5656-8dd8-64f9e1ecf211",
@@ -56174,10 +56137,8 @@
         "JD5JZ3KR"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Mitigating Anchoring Bias When Using AI in Social Work Research: Responsible Conduct of AI-Assisted Research",
       "version_ids": [
@@ -57068,7 +57029,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "UFJ7ERFF"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -57960,7 +57923,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "DZ5EAPXR"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -57976,7 +57941,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
@@ -57984,10 +57949,8 @@
         "DZ5EAPXR"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Sycophantic AI decreases prosocial intentions and promotes dependence",
       "version_ids": [
@@ -58127,7 +58090,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "DENAHEUW"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -58143,7 +58108,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
@@ -58151,10 +58116,8 @@
         "DENAHEUW"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Designing a framework for ethnography-driven prompt engineering in social work",
       "version_ids": [
@@ -58803,7 +58766,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "QFPTW4VL"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -59758,7 +59723,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "KUVUZMDU"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -59774,7 +59741,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
@@ -59782,10 +59749,8 @@
         "KUVUZMDU"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
       "version_ids": [
@@ -59854,7 +59819,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "P285BA5N"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -59870,7 +59837,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:8abb2d32-d879-527d-9aed-2a92a575969b",
@@ -59878,10 +59845,8 @@
         "P285BA5N"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "GenderAlign: An Alignment Dataset for Mitigating Gender Bias in Large Language Models",
       "version_ids": [
@@ -59902,7 +59867,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "EWPPFD7U"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -59918,7 +59885,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
@@ -59926,10 +59893,8 @@
         "EWPPFD7U"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
       "version_ids": [
@@ -60139,7 +60104,10 @@
       "current_ai_review_results": [
         "accepted"
       ],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "8NG4ZEWE",
+        "IUHC62RX"
+      ],
       "decision_authority": "ai_review",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -60708,7 +60676,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "ZXVBZQGS"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -60724,7 +60694,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
@@ -60732,10 +60702,8 @@
         "ZXVBZQGS"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
       "version_ids": [
@@ -60756,7 +60724,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "ZFRE26IV"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -60772,7 +60742,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
@@ -60780,10 +60750,8 @@
         "ZFRE26IV"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
       "version_ids": [
@@ -61193,7 +61161,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "Z599JJFT"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -61209,7 +61179,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
@@ -61217,10 +61187,8 @@
         "Z599JJFT"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
       "title": "Sesgos de género y modelos de IA generativa: Aproximaciones desde una experiencia de análisis cualitativo desde la generación de imágenes",
       "version_ids": [

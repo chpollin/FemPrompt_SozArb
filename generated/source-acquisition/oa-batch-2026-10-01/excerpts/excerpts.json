@@ -1,0 +1,50 @@
+{
+ "schema": "femprompt-source-excerpts/0.1",
+ "rule": "Lines are 1-based and inclusive, counted in the source after CRLF normalisation; the excerpt adds nothing and changes nothing within the range.",
+ "records": {
+  "BKSU66QB": {
+   "source_path": "generated/markdown_clean/Kutscher_2024_Digitalität_und_Digitalisierung_als_Gegenstand.md",
+   "source_sha256": "sha256:7741667b5c0564698e1dd247c23944831620fb40ed9447d65c5da3886f5021f7",
+   "lines": [
+    1410,
+    1644
+   ],
+   "excerpt_path": "generated/source-acquisition/oa-batch-2026-10-01/excerpts/BKSU66QB.md",
+   "excerpt_sha256": "sha256:eb0580092e2e9d86cc3293b66d377604625192513c932f3ebbcc912f5ac59743",
+   "note": "Chapter 'Digitalität und Digitalisierung als Gegenstand der Sozialen Arbeit' (Nadia Kutscher) from the converted volume 'Digitale Medien und die Produktion von Wissenschaft' (Medienbildung und Gesellschaft 47), from chapter heading through its reference list"
+  },
+  "H7E3N6VR": {
+   "source_path": "generated/markdown_clean/Sūna_2024_Diskriminierung_durch_Algorithmen_–_Überlegungen.md",
+   "source_sha256": "sha256:f79dfbe33a9dc6c3ad0dfa9c663605eb2113c4c83ef6aee5352db10be1e26d7e",
+   "lines": [
+    68,
+    220
+   ],
+   "excerpt_path": "generated/source-acquisition/oa-batch-2026-10-01/excerpts/H7E3N6VR.md",
+   "excerpt_sha256": "sha256:df2a06ba70cc90cbead369e6c61a2015756091f2a665fd7dcc6437bfc865f809",
+   "note": "Article by Sūna, Hoffmann and Mollen from the converted volume 'Un|Sichtbarkeiten?' (Schriften zur Medienpädagogik 60), from title through its funding and licence notes; the volume glossary is left out"
+  },
+  "2WHGF83D": {
+   "source_path": "generated/markdown_clean/Schneider_2024_AI_for_decision_support_What_are_possible.md",
+   "source_sha256": "sha256:b20d0319b1f5950c15f4fccaeca2f7910b543ad2d64a9e51542882f2d9222c90",
+   "lines": [
+    325,
+    489
+   ],
+   "excerpt_path": "generated/source-acquisition/oa-batch-2026-10-01/excerpts/2WHGF83D.md",
+   "excerpt_sha256": "sha256:c7a0b80d745ca461a8cd3805ec50a08b34ffb560d8c63659a70f79cdd68318e4",
+   "note": "Special-topic header and opening statement by Diana Schneider and Karsten Weber from the converted complete TATuP issue 33/1 (2024), through the author notes; the issue's other articles are left out"
+  },
+  "TNLGELEQ": {
+   "source_path": "generated/markdown_clean/Näscher_2025_ReflectAI_Design_and_evaluation_of_an_AI_coach_to.md",
+   "source_sha256": "sha256:04cf3e4da723235c26da3b8d14df4818838d595abf1e48ccf82db3e228e58faa",
+   "lines": [
+    1967,
+    2175
+   ],
+   "excerpt_path": "generated/source-acquisition/oa-batch-2026-10-01/excerpts/TNLGELEQ.md",
+   "excerpt_sha256": "sha256:7d71604c7e379941269e110f6618209397ffd7633f9eb3e9cfa9455d126dd354",
+   "note": "Chapter 'ReflectAI' (Näscher, Schaffner, Koddebusch) from the converted complete ePart 2025 proceedings volume, from title through its reference list"
+  }
+ }
+}

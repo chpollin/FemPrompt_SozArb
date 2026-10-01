@@ -261,13 +261,20 @@ def _historical_receipt_matches_existing_version_source(
     paper: dict[str, Any],
     receipt: dict[str, Any],
 ) -> bool:
-    """Recognize an older receipt that already reviewed the exact served VOR source."""
+    """Recognize an older receipt that already reviewed the exact served source.
+
+    An acquisition-receipt binding of the record's own version qualifies like an
+    existing-version binding. Its reviews may cite the bound file or the reading
+    layer served from it, whose bytes are a pure function of that file, and may add
+    JSON metadata evidence, which is no reading text; every cited text must match.
+    """
     binding = paper.get("source_binding")
     if not isinstance(binding, dict):
         return False
     version_id = paper.get("version_id")
+    mode = binding.get("binding_mode")
     if (
-        binding.get("binding_mode") != "existing_version"
+        mode not in {"existing_version", "acquisition_receipt"}
         or binding.get("record_id") != paper_id
         or binding.get("work_id") != paper.get("work_id")
         or binding.get("bibliographic_version_id") != version_id
@@ -277,17 +284,45 @@ def _historical_receipt_matches_existing_version_source(
     evidence = receipt.get("evidence")
     if not isinstance(evidence, list) or not evidence:
         return False
-    expected = {
-        "source_path": binding.get("source_path"),
-        "sha256": binding.get("source_sha256"),
-        "work_id": binding.get("work_id"),
-        "version_id": version_id,
-    }
-    return all(
+    identity = {"work_id": binding.get("work_id"), "version_id": version_id}
+    accepted = [
+        {"source_path": binding.get("source_path"), "sha256": binding.get("source_sha256")}
+    ]
+    if mode == "acquisition_receipt":
+        accepted.append(
+            {
+                "source_path": f"docs/data/fulltext/{paper_id}.md",
+                "sha256": _served_reading_digest(binding),
+            }
+        )
+        evidence = [
+            item
+            for item in evidence
+            if not (
+                isinstance(item, dict)
+                and str(item.get("source_path", "")).endswith(".json")
+            )
+        ]
+    return bool(evidence) and all(
         isinstance(item, dict)
-        and {field: item.get(field) for field in expected} == expected
+        and {field: item.get(field) for field in identity} == identity
+        and {"source_path": item.get("source_path"), "sha256": item.get("sha256")}
+        in accepted
         for item in evidence
     )
+
+
+def _served_reading_digest(binding: dict[str, Any]) -> str | None:
+    """Digest of the reading-layer text build_fulltext serves from a bound source."""
+    import hashlib
+
+    from src.publish.build_fulltext import clean
+
+    path = REPO_ROOT / str(binding.get("source_path") or "")
+    if not path.is_file():
+        return None
+    served = clean(path.read_text(encoding="utf-8", errors="replace"))
+    return "sha256:" + hashlib.sha256(served.encode("utf-8")).hexdigest()
 
 
 def stale_source_review(
@@ -391,8 +426,10 @@ def _validate_and_transform_record(
                 bound_identity,
                 source_binding["source_version_id"] if source_binding else None,
             )
+            # A snippet's leading or trailing ellipsis marks where the excerpt was
+            # cut; the quoted words themselves must still occur in the source.
             if source_binding and any(
-                " ".join(passage[field].split()) not in source_body
+                " ".join(passage[field].split()).strip("…").strip() not in source_body
                 for field in ("term", "snippet")
             ):
                 raise ValueError(

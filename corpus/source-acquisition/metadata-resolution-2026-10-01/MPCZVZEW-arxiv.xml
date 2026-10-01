@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/PiXdn8vnq28g0i0JOEb3NNVnYhY</id>
+  <title>arXiv Query: search_query=&amp;id_list=2504.16148&amp;start=0&amp;max_results=10</title>
+  <updated>2026-10-01T14:29:46Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=&amp;start=0&amp;max_results=10&amp;id_list=2504.16148" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>10</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2504.16148v1</id>
+    <title>Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room</title>
+    <updated>2025-04-22T13:20:43Z</updated>
+    <link href="https://arxiv.org/abs/2504.16148v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.16148v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Despite significant advancements in AI-driven educational systems and ongoing calls for responsible AI for education, several critical issues remain unresolved -- acting as the elephant in the room within AI in education, learning analytics, educational data mining, learning sciences, and educational psychology communities. This critical analysis identifies and examines nine persistent challenges that continue to undermine the fairness, transparency, and effectiveness of current AI methods and applications in education. These include: (1) the lack of clarity around what AI for education truly means -- often ignoring the distinct purposes, strengths, and limitations of different AI families -- and the trend of equating it with domain-agnostic, company-driven large language models; (2) the widespread neglect of essential learning processes such as motivation, emotion, and (meta)cognition in AI-driven learner modelling and their contextual nature; (3) limited integration of domain knowledge and lack of stakeholder involvement in AI design and development; (4) continued use of non-sequential machine learning models on temporal educational data; (5) misuse of non-sequential metrics to evaluate sequential models; (6) use of unreliable explainable AI methods to provide explanations for black-box models; (7) ignoring ethical guidelines in addressing data inconsistencies during model training; (8) use of mainstream AI methods for pattern discovery and learning analytics without systematic benchmarking; and (9) overemphasis on global prescriptions while overlooking localised, student-specific recommendations. Supported by theoretical and empirical research, we demonstrate how hybrid AI methods -- specifically neural-symbolic AI -- can address the elephant in the room and serve as the foundation for responsible, trustworthy AI systems in education.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-22T13:20:43Z</published>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Danial Hooshyar</name>
+    </author>
+    <author>
+      <name>Gustav Šír</name>
+    </author>
+    <author>
+      <name>Yeongwook Yang</name>
+    </author>
+    <author>
+      <name>Eve Kikas</name>
+    </author>
+    <author>
+      <name>Raija Hämäläinen</name>
+    </author>
+    <author>
+      <name>Tommi Kärkkäinen</name>
+    </author>
+    <author>
+      <name>Dragan Gašević</name>
+    </author>
+    <author>
+      <name>Roger Azevedo</name>
+    </author>
+    <arxiv:doi>10.1016/j.caeai.2025.100524</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.caeai.2025.100524" title="doi"/>
+  </entry>
+</feed>

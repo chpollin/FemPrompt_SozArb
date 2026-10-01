@@ -67,6 +67,43 @@
         "url": { "type": "string", "format": "uri" }
       }
     },
+    "acquisitionReceipt": {
+      "$comment": "Where the text came from. A licensed original named by repo_path may stay local; its digest is then retained provenance and re-verified wherever the file is present.",
+      "type": "object",
+      "required": ["retrieved_at", "sha256"],
+      "anyOf": [{ "required": ["source_url"] }, { "required": ["repo_path"] }],
+      "additionalProperties": false,
+      "properties": {
+        "source_url": { "type": "string", "pattern": "^https?://\\S+$" },
+        "repo_path": { "type": "string", "minLength": 1 },
+        "retrieved_at": { "$ref": "#/$defs/timestamp" },
+        "sha256": { "$ref": "#/$defs/sha256Prefixed" },
+        "route": { "type": "string" },
+        "note": { "type": "string" }
+      }
+    },
+    "identityCheck": {
+      "$comment": "Result of work_versions.receipt_identity_check on the bound text's opening pages; the builder re-runs it and requires equality. No element may fail, title must pass.",
+      "type": "object",
+      "required": ["title", "first_author", "doi", "year"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "const": "pass" },
+        "first_author": { "enum": ["pass", "not_registered"] },
+        "doi": { "enum": ["pass", "not_printed", "not_registered"] },
+        "year": { "enum": ["pass", "not_printed", "not_registered"] }
+      }
+    },
+    "versionRelation": {
+      "type": "object",
+      "required": ["source_version_type", "preferred_version_id", "difference_to_preferred"],
+      "additionalProperties": false,
+      "properties": {
+        "source_version_type": { "$ref": "#/$defs/versionType" },
+        "preferred_version_id": { "$ref": "#/$defs/versionId" },
+        "difference_to_preferred": { "type": "string", "minLength": 1 }
+      }
+    },
     "evidenceItem": {
       "type": "object",
       "required": ["locator", "source_path", "sha256"],
@@ -124,7 +161,10 @@
         "model_id_status": { "type": "string" },
         "reviewed_at": { "$ref": "#/$defs/timestamp" },
         "reason": { "type": "string", "minLength": 1 },
-        "binding_mode": { "enum": ["accepted_manuscript", "existing_version"] },
+        "binding_mode": { "enum": ["accepted_manuscript", "existing_version", "acquisition_receipt"] },
+        "acquisition_receipt": { "$ref": "#/$defs/acquisitionReceipt" },
+        "identity_check": { "$ref": "#/$defs/identityCheck" },
+        "version_relation": { "$ref": "#/$defs/versionRelation" },
         "bibliographic_identity": { "$ref": "#/$defs/identity" },
         "version_identity": { "$ref": "#/$defs/identity" },
         "binding": { "$ref": "#/$defs/binding" },
@@ -193,8 +233,47 @@
         },
         {
           "if": {
+            "properties": { "binding_mode": { "const": "acquisition_receipt" } },
+            "required": ["binding_mode"]
+          },
+          "then": {
+            "$comment": "Operator decision of 1 October 2026. Mirrors the receipt branch of build_work_version_registry.apply_source_bindings: an acquisition receipt plus a passed, deterministically re-run identity check of the bound text. A 'version' block is present only when the text is a manuscript or preprint added to the record's bibliographic Version.",
+            "required": ["acquisition_receipt", "identity_check", "version_relation"],
+            "additionalProperties": false,
+            "properties": {
+              "binding_mode": true,
+              "binding": {
+                "additionalProperties": false,
+                "properties": {
+                  "record_id": true,
+                  "work_id": true,
+                  "bibliographic_version_id": true,
+                  "source_version_id": true,
+                  "source_version_type": true,
+                  "preferred_version_id": true,
+                  "is_preferred_version": true,
+                  "source_path": true,
+                  "source_sha256": true
+                }
+              },
+              "bibliographic_identity": true,
+              "acquisition_receipt": true,
+              "identity_check": true,
+              "version_relation": true,
+              "version": true,
+              "agent_id": true,
+              "model": true,
+              "model_id_status": true,
+              "reviewed_at": true,
+              "reason": true,
+              "evidence": true
+            }
+          }
+        },
+        {
+          "if": {
             "not": {
-              "properties": { "binding_mode": { "const": "existing_version" } },
+              "properties": { "binding_mode": { "enum": ["existing_version", "acquisition_receipt"] } },
               "required": ["binding_mode"]
             }
           },

@@ -63,9 +63,9 @@ Identity rule. Records are the same find when they share a normalised DOI, an ar
 
 | Source | expert_include | expert_exclude | expert_unresolved | ai_review_include_pending_verification | ai_review_exclude_pending_verification | open_fulltext_ready | open_fulltext_not_retrieved | open_not_queued | not_in_library |
 |---|---|---|---|---|---|---|---|---|---|
-| round2_deep_research | 0 | 0 | 0 | 0 | 0 | 1 | 22 | 0 | 0 |
-| contextual_update_2026_08_24 | 0 | 0 | 0 | 0 | 0 | 8 | 14 | 0 | 0 |
-| codex_websearch_2026 | 0 | 0 | 0 | 0 | 0 | 13 | 31 | 0 | 0 |
+| round2_deep_research | 0 | 0 | 0 | 0 | 0 | 10 | 13 | 0 | 0 |
+| contextual_update_2026_08_24 | 0 | 0 | 0 | 0 | 0 | 16 | 6 | 0 | 0 |
+| codex_websearch_2026 | 0 | 0 | 0 | 0 | 0 | 25 | 19 | 0 | 0 |
 | targeted_followup_2026_09_05 | 0 | 0 | 0 | 0 | 0 | 2 | 1 | 0 | 0 |
 
 ## Current screening state
@@ -92,8 +92,8 @@ Identity rule. Records are the same find when they share a normalised DOI, an ar
 | works | expert_unresolved | 1 |
 | works | ai_review_include_pending_verification | 16 |
 | works | ai_review_exclude_pending_verification | 8 |
-| works | open_fulltext_ready | 25 |
-| works | open_fulltext_not_retrieved | 76 |
+| works | open_fulltext_ready | 57 |
+| works | open_fulltext_not_retrieved | 44 |
 | works | open_not_queued | 7 |
 
 Historical records without a live item and their live re-imports describe the same publication twice at record level. The Work level counts each publication once.

@@ -680,7 +680,12 @@ def resolve_docling(
                 f"{paper.get('id')}: corpus source binding differs from canonical registry"
             )
         path = ROOT / binding["source_path"]
-        if identity_conflicts(paper, path):
+        # A receipt binding was just re-checked against its Work's registered DOIs,
+        # which also admits the arXiv DOI a bound preprint prints. Every other
+        # bound source keeps the guard against the record's own DOI.
+        if binding.get("binding_mode") != "acquisition_receipt" and identity_conflicts(
+            paper, path
+        ):
             raise ValueError(
                 f"{paper.get('id')}: bound manuscript conflicts with bibliography"
             )

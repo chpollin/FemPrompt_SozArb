@@ -9,6 +9,7 @@ identical across the pipeline.
 
 from __future__ import annotations
 
+import html
 import json
 import re
 import unicodedata
@@ -133,6 +134,240 @@ def validate_source_version_identity(
             )
 
 
+# Receipt-based bindings (operator decision of 1 October 2026). An acquisition
+# receipt proves where a text came from; it never proves which work the text is.
+# Identity therefore comes from the paper's own opening pages, never from the
+# converter's front matter, which was written from the Zotero record itself.
+RECEIPT_MODE = "acquisition_receipt"
+RECEIPT_HEAD_CHARS = 12000
+AUTHOR_WINDOW_BEFORE = 1500
+AUTHOR_WINDOW_AFTER = 2500
+# A source-only addition is a manuscript-stage expression. "unknown" covers an
+# author-layout repository copy whose stage (submitted or accepted) the source
+# does not state; it ranks lowest and can never become the preferred version.
+ADDED_SOURCE_VERSION_TYPES = {
+    "authors_original",
+    "submitted_manuscript_under_review",
+    "preprint",
+    "accepted_manuscript",
+    "unknown",
+}
+FRONTMATTER_PATTERN = re.compile(r"\A﻿?---\s*\n.*?\n---\s*\n", re.DOTALL)
+COMMENT_PATTERN = re.compile(r"<!--.*?-->", re.DOTALL)
+DOI_PATTERN = re.compile(
+    r"(?:\bdoi\s*:?\s*|doi\.org/\s*)(10\.\d{4,9}\s*/\s*[^\s<>\"'\])]+)",
+    re.IGNORECASE,
+)
+DOI_MASTHEAD_CHARS = 6000
+REFERENCES_PATTERN = re.compile(
+    r"\n#*\s*(?:references|literatur|literaturverzeichnis|bibliography|referencias)\b",
+    re.IGNORECASE,
+)
+
+
+def identity_compact(value: object) -> str:
+    """Return a letters-and-digits key that survives line breaks and hyphenation."""
+    # Docling writes undecodable ligatures as glyph names such as "/uniFB01".
+    text = re.sub(
+        r"\s?/uni([0-9A-Fa-f]{4})\s?",
+        lambda match: chr(int(match[1], 16)),
+        html.unescape(str(value or "")),
+    )
+    text = unicodedata.normalize("NFKD", text).casefold()
+    text = "".join(char for char in text if not unicodedata.combining(char))
+    text = text.replace("&", "and").replace("¨", "")
+    return "".join(char for char in text if char.isalnum())
+
+
+def source_text_head(text: str) -> str:
+    """Return the paper's own opening text without converter front matter."""
+    text = FRONTMATTER_PATTERN.sub("", text, count=1)
+    return COMMENT_PATTERN.sub(" ", text)[:RECEIPT_HEAD_CHARS]
+
+
+def first_author_surname(authors: object) -> str:
+    """Return the first registered creator's surname, or an organisation's name."""
+    names = values(authors)
+    if not names:
+        return ""
+    name = names[0]
+    if "," in name:
+        return name.split(",", 1)[0].strip()
+    parts = name.split()
+    # Personal names end in the surname. An organisation keeps its full name.
+    return parts[-1] if 1 < len(parts) <= 4 and not name.endswith(".") else name
+
+
+def receipt_identity_check(
+    text: str, version: dict, accepted_dois: Iterable[str] = ()
+) -> dict[str, str]:
+    """Check a bound text against one registered version by title, author, DOI, year.
+
+    The title must occur in the opening text; the first registered author's surname
+    must occur there whenever authors are registered. A DOI printed in the opening
+    text must be one of the accepted DOIs, so a text that prints another work's DOI
+    fails. A year that is not printed stays recorded as such and cannot pass.
+    """
+    head = source_text_head(text)
+    compact_head = identity_compact(head)
+    title = identity_compact(version.get("title"))
+    position = compact_head.find(title) if len(title) >= 8 else -1
+    if position < 0 and len(title) >= 8:
+        # A printed acronym in parentheses, e.g. "Intelligence (AI)", is the
+        # only tolerated difference; it cannot turn another title into this one.
+        bare_head = identity_compact(re.sub(r"\([^)]{1,12}\)", " ", head))
+        bare_title = identity_compact(
+            re.sub(r"\([^)]{1,12}\)", " ", str(version.get("title") or ""))
+        )
+        bare_position = bare_head.find(bare_title)
+        if bare_position >= 0:
+            compact_head, title, position = bare_head, bare_title, bare_position
+    result = {"title": "pass" if position >= 0 else "fail"}
+    surname = identity_compact(first_author_surname(version.get("authors")))
+    if not surname:
+        result["first_author"] = "not_registered"
+    else:
+        # The byline stands next to a printed title, on the title page or in the
+        # recommended citation. A surname found only elsewhere is usually a citation
+        # of another work and cannot confirm authorship.
+        found = False
+        while position >= 0 and not found:
+            start = max(0, position - AUTHOR_WINDOW_BEFORE)
+            end = position + len(title) + AUTHOR_WINDOW_AFTER
+            found = surname in compact_head[start:end]
+            position = compact_head.find(title, position + 1)
+        result["first_author"] = "pass" if found else "fail"
+    accepted = {normalise_doi(doi) for doi in accepted_dois if normalise_doi(doi)}
+    # Only the masthead region counts: DOIs of cited works in a reference list
+    # say nothing about the citing text's own identity.
+    masthead = REFERENCES_PATTERN.split(head[:DOI_MASTHEAD_CHARS], maxsplit=1)[0]
+    printed = {
+        normalise_doi(re.sub(r"\s+", "", match).rstrip(".,;:"))
+        for match in DOI_PATTERN.findall(html.unescape(masthead))
+    }
+    if not accepted:
+        result["doi"] = "not_registered"
+    elif not printed:
+        result["doi"] = "not_printed"
+    elif printed & accepted or any(
+        doi.startswith(item) or item.startswith(doi)
+        for doi in printed
+        for item in accepted
+    ):
+        result["doi"] = "pass"
+    else:
+        result["doi"] = "fail"
+    year = re.match(r"\d{4}", str(version.get("version_date") or ""))
+    if not year:
+        result["year"] = "not_registered"
+    else:
+        result["year"] = "pass" if year[0] in head else "not_printed"
+    return result
+
+
+def receipt_identity_failures(check: dict[str, str]) -> list[str]:
+    """Name the identity elements that refute a receipt-based binding."""
+    return [field for field, value in check.items() if value == "fail"]
+
+
+def accepted_receipt_dois(work: dict, source_version: dict) -> set[str]:
+    """DOIs a bound text of this Work may print without contradicting identity.
+
+    A manuscript commonly prints the DOI of its published version, so every DOI
+    registered for the same Work is accepted; the version type is reviewed apart.
+    """
+    versions = [*work.get("versions", []), source_version]
+    dois = {
+        normalise_doi(doi)
+        for version in versions
+        for doi in values(version.get("identifiers", {}).get("doi"))
+    }
+    for version in versions:
+        for value in values(version.get("identifiers", {}).get("arxiv")):
+            if parsed := normalise_arxiv(value):
+                dois.add("10.48550/arxiv." + re.sub(r"v\d+$", "", parsed))
+    return dois
+
+
+def validate_acquisition_receipt(receipt: object, repo: Path | None = None) -> None:
+    """Require origin, retrieval time and artefact hash for an acquired source."""
+    if not isinstance(receipt, dict) or set(receipt) - {
+        "source_url",
+        "repo_path",
+        "retrieved_at",
+        "sha256",
+        "route",
+        "note",
+    }:
+        raise ValueError("acquisition receipt is missing or has unsupported fields")
+    url = receipt.get("source_url")
+    path = receipt.get("repo_path")
+    if not (
+        (isinstance(url, str) and re.match(r"https?://\S+$", url))
+        or (isinstance(path, str) and path)
+    ):
+        raise ValueError("acquisition receipt needs a source URL or repository path")
+    if not re.fullmatch(r"sha256:[0-9a-f]{64}", str(receipt.get("sha256", ""))):
+        raise ValueError("acquisition receipt needs the acquired artefact's sha256")
+    from datetime import datetime
+
+    try:
+        retrieved = datetime.fromisoformat(
+            str(receipt.get("retrieved_at", "")).replace("Z", "+00:00")
+        )
+    except ValueError as error:
+        raise ValueError("acquisition receipt needs a retrieval timestamp") from error
+    if retrieved.tzinfo is None:
+        raise ValueError("acquisition receipt timestamp needs a timezone")
+    if isinstance(path, str) and path:
+        reference = Path(path)
+        if "\\" in path or reference.is_absolute() or ".." in reference.parts:
+            raise ValueError("acquisition receipt path must stay in the repository")
+        if repo is not None:
+            local = (repo / path).resolve()
+            # Licensed originals such as PDFs stay local and git-ignored. Their
+            # digest is then retained provenance and is verified wherever present.
+            if local.is_file() and "sha256:" + file_sha256(local) != receipt["sha256"]:
+                raise ValueError("acquisition receipt hash differs from its artefact")
+            if not local.is_file() and not url:
+                raise ValueError("acquisition receipt artefact is missing")
+
+
+def validate_receipt_binding(
+    binding: dict, work: dict, version: dict, repo: Path | None = None
+) -> None:
+    """Re-run the receipt rule against the bound text whenever it is available."""
+    validate_acquisition_receipt(binding.get("acquisition_receipt"), repo)
+    recorded = binding.get("identity_check")
+    if not isinstance(recorded, dict) or receipt_identity_failures(recorded):
+        raise ValueError("receipt binding lacks a passed identity check")
+    if recorded.get("title") != "pass" or recorded.get("first_author") not in {
+        "pass",
+        "not_registered",
+    }:
+        raise ValueError("receipt binding needs a passed title and author check")
+    relation = binding.get("version_relation")
+    if (
+        not isinstance(relation, dict)
+        or relation.get("source_version_type") != version.get("version_type")
+        or relation.get("preferred_version_id") != work.get("preferred_version_id")
+        or not isinstance(relation.get("difference_to_preferred"), str)
+        or not relation["difference_to_preferred"].strip()
+    ):
+        raise ValueError("receipt binding must record its version and difference")
+    if repo is not None:
+        path = repo / binding["source_path"]
+        check = receipt_identity_check(
+            path.read_text(encoding="utf-8", errors="replace"),
+            version,
+            accepted_receipt_dois(work, version),
+        )
+        if check != recorded:
+            raise ValueError(
+                f"receipt identity check no longer holds: {check} != {recorded}"
+            )
+
+
 def source_binding_for_record(
     registry: dict, record_id: str, repo: Path | None = None
 ) -> dict | None:
@@ -172,7 +407,23 @@ def source_binding_for_record(
             f"{record_id}: source binding crosses or misstates canonical Work-Version identity"
         )
     mode = binding.get("binding_mode")
-    if mode is not None or binding["source_version_id"] == canonical["version_id"]:
+    if mode == RECEIPT_MODE:
+        bibliographic = next(
+            item
+            for item in work["versions"]
+            if item["version_id"] == canonical["version_id"]
+        )
+        if normalise_title(
+            (binding.get("bibliographic_identity") or {}).get("title")
+        ) != normalise_title(bibliographic.get("title")):
+            raise ValueError(f"{record_id}: receipt binding names another bibliography")
+        # The source Version was looked up inside the record's own Work above, so
+        # a differing source can only be another registered expression of it.
+        try:
+            validate_receipt_binding(binding, work, version, repo)
+        except ValueError as error:
+            raise ValueError(f"{record_id}: {error}") from error
+    elif mode is not None or binding["source_version_id"] == canonical["version_id"]:
         if (
             mode != "existing_version"
             or binding["source_version_id"] != canonical["version_id"]
