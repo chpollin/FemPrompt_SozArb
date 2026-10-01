@@ -876,8 +876,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -934,7 +934,7 @@
       "latest_version_id": "version:406f4328-7ff9-5fba-b0c2-90845db5a5d7",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "SY8LNID7",
@@ -5217,8 +5217,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -5282,7 +5282,7 @@
       "latest_version_id": "version:b000862f-dfc6-574e-b4f8-d825b8528ad7",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "8MDXCTA6",
@@ -5405,40 +5405,41 @@
     },
     {
       "id": "4GYXUS9Y",
+      "stem": "Goldkind_2023_The_End_of_the_World_as_We_Know_It_ChatGPT_and",
       "title": "The end of the world as we know it? ChatGPT and social work",
-      "authors": "Goldkind, L.; Wolf, L.; Glennon, A.; Rios, J.; Nissen, L.",
       "author_year": "Goldkind et al. (2024)",
       "year": 2024,
       "doi": "10.1093/sw/swad044",
       "url": "",
-      "item_type": "journalArticle",
-      "journal": "",
-      "work_id": "work:97f2994f-5f16-598e-9aa5-3f5edaf6fb23",
-      "version_id": "version:ed28aa1b-14c4-53d1-b535-2339d1ae8242",
-      "version_type": "version_of_record",
-      "version_date": "2024",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
-      "preferred_version_id": "version:ed28aa1b-14c4-53d1-b535-2339d1ae8242",
-      "latest_version_id": "version:ed28aa1b-14c4-53d1-b535-2339d1ae8242",
-      "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
       "abstract": "Editorial in flagship journal Social Work providing critical reflection on ChatGPT's introduction and implications for social work practice. Addresses how ChatGPT, built on natural language processing, responds to prompts and generates text responses. Notes social work's historical reluctance to embrace new technologies and positions ChatGPT as opportunity to reflect on strategies promoting just technology use. Urges social workers to join cross-disciplinary conversations about AI evolution and advocate for fair use. Calls for profession to move beyond fear and awe toward critical, reflective engagement with AI systems through thoughtful prompting practices.",
-      "stem": "_thin_4GYXUS9Y",
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
       "stages": {
         "identification": {
           "in_zotero": true
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": true,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": false,
+            "Diversitaet": true,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "ChatGPT bietet sowohl Chancen (Effizienzsteigerung) als auch Risiken für die Soziale Arbeit, erfordert aber kritische Auseinandersetzung der Profession mit ethischen, justizialen und kompetenzbezogene",
+          "stage3_completeness": 92,
+          "stage3_correctness": 98,
+          "stage3_overall": 94
+        },
         "assessment": {
           "human": {
             "decision": "Exclude",
@@ -5482,7 +5483,37 @@
           },
           "agreement": "disagree"
         }
-      }
+      },
+      "concepts": [
+        "AI Literacy for Social Workers",
+        "Algorithmic Bias in Social Services",
+        "Algorithmic Fairness in Vulnerable Populations",
+        "Automation of Social Work Tasks",
+        "Natural Language Processing (NLP)",
+        "Professional Competency and Ethical Accountability",
+        "Training Data Bias in Language Models"
+      ],
+      "knowledge_summary": "ChatGPT bietet sowohl Chancen (Effizienzsteigerung) als auch Risiken für die Soziale Arbeit, erfordert aber kritische Auseinandersetzung der Profession mit ethischen, justizialen und kompetenzbezogenen Fragen, um vulnerable Populationen vor algorithmengestützter Marginalisierung zu schützen.",
+      "knowledge_sections": {
+        "kernbefund": "ChatGPT bietet sowohl Chancen (Effizienzsteigerung) als auch Risiken für die Soziale Arbeit, erfordert aber kritische Auseinandersetzung der Profession mit ethischen, justizialen und kompetenzbezogenen Fragen, um vulnerable Populationen vor algorithmengestützter Marginalisierung zu schützen.",
+        "forschungsfrage": "Wie wird ChatGPT und KI die Praxis, Ausbildung und ethischen Grundlagen der Sozialen Arbeit disruptieren und wie können Sozialarbeiter:innen zu gerechter KI-Nutzung beitragen?",
+        "methodik": "Theoretisch/Kommentar: Konzeptuelle Analyse mit praktischen Beispielen (ChatGPT-Fallnote) und reflexive Diskussion der Implikationen für Soziale Arbeit\n**Datenbasis:** Nicht empirisch: konzeptuelle Analyse, Literaturüberblick, praktisches Beispiel einer KI-generierten Fallnotiz",
+        "hauptargumente": "- ChatGPT ist ein hochkomplexes Sprachmodell, das auf 40 Gigabyte Textdaten trainiert wurde, aber strukturelle Verzerrungen der Trainungsdaten reproduziert und keine inhärente Ethik, Beziehungsfähigkeit oder Problemidentifikationskompetenz besitzt.\n- Soziale Arbeit als Profession hat historisch Technologien nicht adaptiert, muss aber jetzt Curricula, Codex-Schulung und Kompetenzanforderungen an KI-Tools anpassen, um ethische Nutzung in Lehre und Praxis zu sichern.\n- Algorithmengestützte Entscheidungssysteme verstärken existierende Diskriminierung und Marginalisierung vulnerabler Populationen in Kontexten wie Sentencing und Child Welfare; Sozialarbeiter:innen müssen in globale Debatten zu AI-Regulierung und justizialer Nutzung eintreten."
+      },
+      "authors": "Goldkind, L.; Wolf, L.; Glennon, A.; Rios, J.; Nissen, L.",
+      "item_type": "journalArticle",
+      "journal": "",
+      "work_id": "work:97f2994f-5f16-598e-9aa5-3f5edaf6fb23",
+      "version_id": "version:ed28aa1b-14c4-53d1-b535-2339d1ae8242",
+      "version_type": "version_of_record",
+      "version_date": "2024",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:ed28aa1b-14c4-53d1-b535-2339d1ae8242",
+      "latest_version_id": "version:ed28aa1b-14c4-53d1-b535-2339d1ae8242",
+      "is_preferred_version": true,
+      "knowledge_doc": "vault/Papers/The End of the World as We Know It- ChatGPT and Social Work.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "CLKAD87H",
@@ -5937,8 +5968,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -5997,7 +6028,7 @@
       "latest_version_id": "version:e59acc91-f92c-5baf-b774-3e78a5cd20cd",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "QKFG72IT",
@@ -6014,8 +6045,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -6080,7 +6111,7 @@
       "latest_version_id": "version:50f6f3f5-1ef4-5223-96f6-9bd3d199f543",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "BKSU66QB",
@@ -6097,8 +6128,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -6161,7 +6192,7 @@
       "latest_version_id": "version:0117f1ae-2f50-5e1a-a78a-810897f99b79",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "M2FYV58I",
@@ -6374,8 +6405,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -6436,7 +6467,7 @@
       "latest_version_id": "version:bac0282f-fb85-5f65-9bff-918f48aad953",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "44AA6ETH",
@@ -7448,10 +7479,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": true,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": false,
+            "Diversitaet": true,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "AI bietet bedeutende Potenziale für die Soziale Arbeit (Datenanalyse, Ressourcenallokation, administrative Automatisierung), birgt aber erhebliche ethische Risiken (Bias, Datenschutz, Verlust von Mens",
+          "stage3_completeness": 92,
+          "stage3_correctness": 98,
+          "stage3_overall": 95
+        },
         "assessment": {
           "human": {
             "decision": "Exclude",
@@ -7502,9 +7551,22 @@
           "agreement": "disagree"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "AI Literacy for Social Work Professionals",
+        "AI-Enhanced Administrative Automation",
+        "Algorithmic Bias in Social Services",
+        "Human-Centered Social Work Ethics",
+        "Informed Consent and Transparency in AI Systems",
+        "Predictive Modeling for Risk Assessment",
+        "Structural Inequality Reinforcement through AI"
+      ],
+      "knowledge_summary": "AI bietet bedeutende Potenziale für die Soziale Arbeit (Datenanalyse, Ressourcenallokation, administrative Automatisierung), birgt aber erhebliche ethische Risiken (Bias, Datenschutz, Verlust von Menschlichkeit), die durch multidisziplinäre Ansätze und ethische Standards adressiert werden müssen.",
+      "knowledge_sections": {
+        "kernbefund": "AI bietet bedeutende Potenziale für die Soziale Arbeit (Datenanalyse, Ressourcenallokation, administrative Automatisierung), birgt aber erhebliche ethische Risiken (Bias, Datenschutz, Verlust von Menschlichkeit), die durch multidisziplinäre Ansätze und ethische Standards adressiert werden müssen.",
+        "forschungsfrage": "Welche Chancen und Risiken ergeben sich durch die Integration von Künstlicher Intelligenz in die Soziale Arbeit und wie können diese ethisch verantwortungsvoll gestaltet werden?",
+        "methodik": "Theoretisch/Review - Narrative Literaturanalyse zu AI-Anwendungen in der Sozialen Arbeit mit Fokus auf Chancen, Risiken und ethische Fragen\n**Datenbasis:** nicht empirisch - argumentatives Review der wissenschaftlichen Literatur",
+        "hauptargumente": "- AI kann administrative Aufgaben automatisieren und Sozialarbeiter:innen mehr Zeit für direkte Klientenarbeit freigeben, sowie Risikovorhersagen und frühzeitige Interventionen bei vulnerablen Gruppen ermöglichen.\n- Algorithmische Bias und strukturelle Diskriminierung sind zentrale Risiken, da AI-Systeme von privilegierten Gruppen entwickelt werden und bestehende Ungleichheiten verstärken können, besonders gegenüber einkommensschwachen und marginalisierten Bevölkerungsgruppen.\n- Der Kern der Sozialen Arbeit basiert auf menschlicher Beziehung, Empathie und Vertrauensaufbau, die nicht durch AI-Algorithmen ersetzt werden können; informed consent, Vertraulichkeit und Transparenz sind ethische Grundvoraussetzungen."
+      },
       "authors": "",
       "item_type": "bookSection",
       "journal": "",
@@ -7517,8 +7579,8 @@
       "preferred_version_id": "version:c2f5d733-ca03-50b8-ad21-9dfd0fcb4417",
       "latest_version_id": "version:c2f5d733-ca03-50b8-ad21-9dfd0fcb4417",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/RETHINKING SOCIAL SERVICES WITH ARTIFICIAL INTELLIGENCE-6ff43c.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "HSQW48VE",
@@ -7648,8 +7710,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -7719,7 +7781,7 @@
       "latest_version_id": "version:e0132e00-9c92-5ac1-a488-4df62ba89fc0",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "H59BNSX8",
@@ -9125,8 +9187,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -9197,7 +9259,7 @@
       "latest_version_id": "version:56b93a3f-fb1b-5e99-ad40-74145084f9a9",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "MITLDF9S",
@@ -9374,10 +9436,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": true,
+            "Prompting": true,
+            "KI_Sonstige": false,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": false,
+            "Diversitaet": true,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 4,
+          "stage1_key_finding": "Generative KI sollte nicht nur als Werkzeug, sondern als kooperativer nicht-menschlicher Akteur verstanden werden, der transformativ in Hochschulbildung einschreitet und neue curriculare sowie didakti",
+          "stage3_completeness": 92,
+          "stage3_correctness": 98,
+          "stage3_overall": 95
+        },
         "assessment": {
           "human": {
             "decision": "Include",
@@ -9427,9 +9507,22 @@
           "agreement": "agree"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "AI Ethics in Professional Social Work",
+        "Algorithmic Bias in Social Service Systems",
+        "Curriculum Transformation through Generative AI",
+        "Data Literacy in Social Work Education",
+        "Digital Inclusivity in Higher Education",
+        "Generative AI as Non-Human Actor",
+        "Prompting Competence"
+      ],
+      "knowledge_summary": "Generative KI sollte nicht nur als Werkzeug, sondern als kooperativer nicht-menschlicher Akteur verstanden werden, der transformativ in Hochschulbildung einschreitet und neue curriculare sowie didaktische Anforderungen schafft.",
+      "knowledge_sections": {
+        "kernbefund": "Generative KI sollte nicht nur als Werkzeug, sondern als kooperativer nicht-menschlicher Akteur verstanden werden, der transformativ in Hochschulbildung einschreitet und neue curriculare sowie didaktische Anforderungen schafft.",
+        "forschungsfrage": "Welche Potenziale und Herausforderungen entstehen durch den Einsatz generativer KI in der Hochschulbildung für Soziale Arbeit, und wie verändern sich die Rollen von Lehrenden und Lernenden?",
+        "methodik": "Theoretisch; Werkstattbericht mit praktischen Szenarien und konzeptionellen Überlegungen basierend auf Fachliteratur und Praxiserfahrungen\n**Datenbasis:** Keine empirische Datenerhebung; basiert auf Literaturanalyse, konzeptionellen Überlegungen und drei idealtypischen Anwendungsszenarien",
+        "hauptargumente": "- Generative KI-Systeme wie ChatGPT bieten Potenziale zur Bereicherung und Diversifizierung von Lehr-/Lernprozessen, erfordern aber eine ausgewogene Nutzung, die akademische Redlichkeit sicherstellt und kritische Denk- und Analysefähigkeit fördert.\n- Die Rolle der KI in der Hochschulbildung sollte über eine verkürzte Chancen-Risiken-Diskussion hinausgehen und als transformative Funktion verstanden werden, wobei KI-Tools als kooperative Agenten und nicht-menschliche Akteure fungieren, die sich in die Hochschulbildung einschreiben.\n- Prompting-Kompetenz stellt eine metakognitive Grundfähigkeit dar, die Studierende erwerben müssen, um KI-Systeme effektiv zu steuern und eigene Recherche- und Arbeitsprozesse selbstreflexiv zu gestalten.\n- Für die Hochschulbildung Sozialer Arbeit ergeben sich curriculare Konsequenzen in drei Bereichen: Data Literacy in fachwissenschaftlichen Grundlagen, neue didaktische Methoden für die Vermittlung von Beratungskompetenzen, und kritische Reflexion der ethischen, sozialen und diskriminierenden Potenziale von KI."
+      },
       "authors": "Engelhardt, E.; Ley, T.",
       "item_type": "bookSection",
       "journal": "",
@@ -9442,8 +9535,8 @@
       "preferred_version_id": "version:1bb4b1af-7508-5d41-9386-290c0f9d3d53",
       "latest_version_id": "version:1bb4b1af-7508-5d41-9386-290c0f9d3d53",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/Voll (dia)logisch- Ein Werkstattbericht über den Einsatz von-aa3866.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "EB7PZUZZ",
@@ -11856,10 +11949,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": true,
+            "Prompting": true,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": false,
+            "Bias_Ungleichheit": true,
+            "Gender": false,
+            "Diversitaet": true,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 5,
+          "stage1_key_finding": "Ein integriertes AI Literacy Framework mit drei Modes of Engagement (Understand, Evaluate, Use), sechs AI Literacy Practices und zwei Core Values (Human Judgment, Centering Justice), das Schulleitern ",
+          "stage3_completeness": 92,
+          "stage3_correctness": 98,
+          "stage3_overall": 92
+        },
         "assessment": {
           "human": {
             "decision": "Include",
@@ -11908,9 +12019,22 @@
           "agreement": "disagree"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "AI Literacy",
+        "Algorithmic Bias",
+        "Algorithmic Fairness Evaluation",
+        "Computational Thinking",
+        "Data Privacy Literacy",
+        "Generative AI Literacy",
+        "Tech Justice"
+      ],
+      "knowledge_summary": "Ein integriertes AI Literacy Framework mit drei Modes of Engagement (Understand, Evaluate, Use), sechs AI Literacy Practices und zwei Core Values (Human Judgment, Centering Justice), das Schulleitern bei der Gestaltung von KI-Kompetenzvermittlung hilft und Risiken wie Bias, Datenschutz und Desinformation adressiert.",
+      "knowledge_sections": {
+        "kernbefund": "Ein integriertes AI Literacy Framework mit drei Modes of Engagement (Understand, Evaluate, Use), sechs AI Literacy Practices und zwei Core Values (Human Judgment, Centering Justice), das Schulleitern bei der Gestaltung von KI-Kompetenzvermittlung hilft und Risiken wie Bias, Datenschutz und Desinformation adressiert.",
+        "forschungsfrage": "Welche Kompetenzen und Praktiken benötigen Lernende, Lehrende und Gemeinschaften, um KI-Systeme sicher und effektiv zu verstehen, zu bewerten und zu nutzen?",
+        "methodik": "Theoretisch-konzeptionell: Synthese von Forschungsliteratur zu AI Literacy, Media Literacy, Computational Thinking und Tech Justice mit Stakeholder-Feedback von Experten und Praktikern aus K-12 Education; keine empirische Datenerhebung\n**Datenbasis:** Keine empirische Datenerhebung; Framework basiert auf Literaturanalyse und Expert:innenfeedback von über 50 Reviewer:innen aus Schulen, Forschungsinstitutionen und Non-Profits",
+        "hauptargumente": "- KI-Literalität ist essential für alle Beteiligten in Bildungssettings, um die Risiken von KI-Systemen (Bias, Datenverletzungen, Desinformation) zu mitigieren und informierte Entscheidungen über deren Nutzung zu treffen.\n- Understanding und Evaluating von KI müssen dem Using vorausgehen und durchgehend implementiert werden; alle drei Modes sind interdependent und unterstützen sich gegenseitig.\n- AI Literacy Practices (Algorithmic Thinking, Data Analysis, Data Privacy, Digital Communication, Ethics & Impact, Information Literacy) können konkret auf drei Types of Use (Interacting, Creating, Problem-Solving) angewendet werden, wobei jeder Typ spezifische Risiken und Anforderungen hat.\n- Systemic bias in Trainingsdaten und die Perpetuierung historischer Ungleichheiten durch Algorithmen sind zentrale Herausforderungen, besonders bei generativen KI-Systemen, die ohne Oversight für vulnerable Populationen schädliche Outputs generieren können.\n- Five Leadership Strategies (Adoption Guidance, Cross-Grade Integration, Professional Learning, Powerful Learning Experiences, Awareness & Agency) sind notwendig, um KI-Literalität strukturell in K-12 Education zu verankern und Equity zu fördern."
+      },
       "authors": "Ruiz, Pati; Mills, Kelly; Lee, Keun-woo; Coenraad, Merijke; Fusco, Judi; Roschelle, Jeremy; Weisgrau, Josh",
       "item_type": "report",
       "journal": "",
@@ -11923,8 +12047,8 @@
       "preferred_version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12",
       "latest_version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/AI Literacy- A Framework to Understand, Evaluate, and Use-74e320.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "BFG8VUK3",
@@ -14022,8 +14146,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -14091,7 +14215,7 @@
       "latest_version_id": "version:66dcd8c4-c9aa-59aa-a8fd-9f78fcc423b6",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "DUV4TUG3",
@@ -15037,40 +15161,41 @@
     },
     {
       "id": "BCBWSU3Z",
+      "stem": "Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study",
       "title": "Can LLMs reason about trust? A pilot study",
-      "authors": "Debnath, A.; Cranefield, S.; Lorini, E.; Savarimuthu, B. T. R.",
       "author_year": "Debnath et al. (2025)",
       "year": 2025,
       "doi": "",
       "url": "https://arxiv.org/html/2507.21075v1",
-      "item_type": "preprint",
-      "journal": "",
-      "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
-      "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
-      "version_type": "preprint",
-      "version_date": "2025-06-11",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
-      "preferred_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
-      "latest_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
-      "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
       "abstract": "Pilot study investigating LLMs' ability to reason about trust between individuals by capturing complex mental states that exceed traditional symbolic approaches. Evaluates whether LLMs can analyze conversations and assess trust levels based on willingness, competence, and security factors. Demonstrates that LLMs can identify individual goals and develop improvement suggestions for trust building, as well as generate strategic action plans for trust promotion. Suggests LLMs have potential to bridge the gap between computational and socio-cognitive trust models.",
-      "stem": "_thin_BCBWSU3Z",
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
       "stages": {
         "identification": {
           "in_zotero": true
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": true,
+            "Prompting": true,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": false,
+            "Gender": false,
+            "Diversitaet": false,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "LLMs zeigen grundsätzliche Fähigkeit, Vertrauen anhand von Willingness, Competence und Safety zu analysieren und strategische Aktionspläne zu entwickeln; GPT-4o performt am besten, aber alle Modelle z",
+          "stage3_completeness": 88,
+          "stage3_correctness": 92,
+          "stage3_overall": 88
+        },
         "assessment": {
           "human": {
             "decision": "Exclude",
@@ -15110,7 +15235,37 @@
           },
           "agreement": "agree"
         }
-      }
+      },
+      "concepts": [
+        "AI Reasoning Capability Evaluation",
+        "Human-Computer-Mediated Social Interaction",
+        "Large Language Model Hallucination",
+        "Model Performance Fairness Disparity",
+        "Socio-Cognitive Trust Reasoning",
+        "Structured Prompt-Based Reasoning Cycle",
+        "Trust-Building Through Strategic Planning"
+      ],
+      "knowledge_summary": "LLMs zeigen grundsätzliche Fähigkeit, Vertrauen anhand von Willingness, Competence und Safety zu analysieren und strategische Aktionspläne zu entwickeln; GPT-4o performt am besten, aber alle Modelle zeigen Halluzinationen und Fehlurteile bei komplexen Szenarien.",
+      "knowledge_sections": {
+        "kernbefund": "LLMs zeigen grundsätzliche Fähigkeit, Vertrauen anhand von Willingness, Competence und Safety zu analysieren und strategische Aktionspläne zu entwickeln; GPT-4o performt am besten, aber alle Modelle zeigen Halluzinationen und Fehlurteile bei komplexen Szenarien.",
+        "forschungsfrage": "Können Large Language Models über Vertrauen zwischen zwei Personen reasoning durchführen und Vertrauen durch strategische Planung aufbauen?",
+        "methodik": "Empirisch mit Mixed-Methods: Fallstudienanalyse von fünf Dialogszenarien zwischen Professor und PhD-Student; Vergleich von vier LLM-Modellen (gpt-4o, llama-3.3-70b, mixtral-8x7b, gemma2-9b) gegen menschliche Grundwahrheit; iteratives Prompt-Response-Design mit standardisierten Trust-Fragen.\n**Datenbasis:** Qualitative Fallstudien: 5 Dialogszenarien (Fallstudie 1) + 2 Rollen-Play-Szenarien (Fallstudie 2); Vergleich mit Annotationen der Erstautorin als Ground Truth; keine quantitativen Survey-Daten",
+        "hauptargumente": "- LLMs können komplexe mentale Zustände (beliefs, goals, intentions) zur Vertrauensmodellierung erfassen, wo traditionelle symbolische Ansätze scheitern. Sie lernen Vertrauensmuster aus großen Datenmengen und adaptieren sich flexibel an neue Kontexte ohne vordefinierte logische Regeln.\n- Castelfranchi und Falcones sozio-kognitive Vertrauenstheorie mit den Komponenten Trustor, Trustee, Action und Goal bietet ein rigoroses Framework für die Evaluation von LLM-Reasoning über Vertrauen in dynamischen, zielorientierten Szenarien wie Professor-Student-Beziehungen.\n- LLMs können nicht nur Vertrauen zwischen Individuen analysieren, sondern auch proaktiv Vertrauensaufbau durch rollenbasierte Szenarien planen und konkrete Handlungsschritte vorschlagen, was Anwendungen in menschlich-computergestützten sozialen Interaktionen eröffnet."
+      },
+      "authors": "Debnath, A.; Cranefield, S.; Lorini, E.; Savarimuthu, B. T. R.",
+      "item_type": "preprint",
+      "journal": "",
+      "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+      "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "version_type": "preprint",
+      "version_date": "2025-06-11",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "latest_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "is_preferred_version": true,
+      "knowledge_doc": "vault/Papers/Can LLMs reason about trust- A pilot study.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "G53MCF3W",
@@ -16423,40 +16578,41 @@
     },
     {
       "id": "3GB9B4IJ",
+      "stem": "Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study",
       "title": "Can LLMs reason about trust? A pilot study",
-      "authors": "Debnath, A.; Cranefield, S.; Lorini, E.; Savarimuthu, B. T. R.",
       "author_year": "Debnath et al. (2025)",
       "year": 2025,
       "doi": "",
       "url": "https://arxiv.org/html/2507.21075v1",
-      "item_type": "preprint",
-      "journal": "",
-      "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
-      "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
-      "version_type": "preprint",
-      "version_date": "2025-06-11",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
-      "preferred_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
-      "latest_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
-      "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
       "abstract": "Pilot study investigating LLMs' ability to reason about trust between individuals by capturing complex mental states that exceed traditional symbolic approaches. Evaluates whether LLMs can analyze conversations and assess trust levels based on willingness, competence, and security factors. Demonstrates that LLMs can identify individual goals and develop improvement suggestions for trust building, as well as generate strategic action plans for trust promotion. Suggests LLMs have potential to bridge the gap between computational and socio-cognitive trust models.",
-      "stem": "_thin_3GB9B4IJ",
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
       "stages": {
         "identification": {
           "in_zotero": true
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": true,
+            "Prompting": true,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": false,
+            "Gender": false,
+            "Diversitaet": false,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "LLMs zeigen grundsätzliche Fähigkeit, Vertrauen anhand von Willingness, Competence und Safety zu analysieren und strategische Aktionspläne zu entwickeln; GPT-4o performt am besten, aber alle Modelle z",
+          "stage3_completeness": 88,
+          "stage3_correctness": 92,
+          "stage3_overall": 88
+        },
         "assessment": {
           "human": {
             "decision": "Exclude",
@@ -16496,7 +16652,37 @@
           },
           "agreement": "agree"
         }
-      }
+      },
+      "concepts": [
+        "AI Reasoning Capability Evaluation",
+        "Human-Computer-Mediated Social Interaction",
+        "Large Language Model Hallucination",
+        "Model Performance Fairness Disparity",
+        "Socio-Cognitive Trust Reasoning",
+        "Structured Prompt-Based Reasoning Cycle",
+        "Trust-Building Through Strategic Planning"
+      ],
+      "knowledge_summary": "LLMs zeigen grundsätzliche Fähigkeit, Vertrauen anhand von Willingness, Competence und Safety zu analysieren und strategische Aktionspläne zu entwickeln; GPT-4o performt am besten, aber alle Modelle zeigen Halluzinationen und Fehlurteile bei komplexen Szenarien.",
+      "knowledge_sections": {
+        "kernbefund": "LLMs zeigen grundsätzliche Fähigkeit, Vertrauen anhand von Willingness, Competence und Safety zu analysieren und strategische Aktionspläne zu entwickeln; GPT-4o performt am besten, aber alle Modelle zeigen Halluzinationen und Fehlurteile bei komplexen Szenarien.",
+        "forschungsfrage": "Können Large Language Models über Vertrauen zwischen zwei Personen reasoning durchführen und Vertrauen durch strategische Planung aufbauen?",
+        "methodik": "Empirisch mit Mixed-Methods: Fallstudienanalyse von fünf Dialogszenarien zwischen Professor und PhD-Student; Vergleich von vier LLM-Modellen (gpt-4o, llama-3.3-70b, mixtral-8x7b, gemma2-9b) gegen menschliche Grundwahrheit; iteratives Prompt-Response-Design mit standardisierten Trust-Fragen.\n**Datenbasis:** Qualitative Fallstudien: 5 Dialogszenarien (Fallstudie 1) + 2 Rollen-Play-Szenarien (Fallstudie 2); Vergleich mit Annotationen der Erstautorin als Ground Truth; keine quantitativen Survey-Daten",
+        "hauptargumente": "- LLMs können komplexe mentale Zustände (beliefs, goals, intentions) zur Vertrauensmodellierung erfassen, wo traditionelle symbolische Ansätze scheitern. Sie lernen Vertrauensmuster aus großen Datenmengen und adaptieren sich flexibel an neue Kontexte ohne vordefinierte logische Regeln.\n- Castelfranchi und Falcones sozio-kognitive Vertrauenstheorie mit den Komponenten Trustor, Trustee, Action und Goal bietet ein rigoroses Framework für die Evaluation von LLM-Reasoning über Vertrauen in dynamischen, zielorientierten Szenarien wie Professor-Student-Beziehungen.\n- LLMs können nicht nur Vertrauen zwischen Individuen analysieren, sondern auch proaktiv Vertrauensaufbau durch rollenbasierte Szenarien planen und konkrete Handlungsschritte vorschlagen, was Anwendungen in menschlich-computergestützten sozialen Interaktionen eröffnet."
+      },
+      "authors": "Debnath, A.; Cranefield, S.; Lorini, E.; Savarimuthu, B. T. R.",
+      "item_type": "preprint",
+      "journal": "",
+      "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+      "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "version_type": "preprint",
+      "version_date": "2025-06-11",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "latest_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "is_preferred_version": true,
+      "knowledge_doc": "vault/Papers/Can LLMs reason about trust- A pilot study.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "25XSMXKT",
@@ -18240,10 +18426,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": true,
+            "Prompting": true,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": false,
+            "Gender": false,
+            "Diversitaet": false,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "LLMs zeigen grundsätzliche Fähigkeit, Vertrauen anhand von Willingness, Competence und Safety zu analysieren und strategische Aktionspläne zu entwickeln; GPT-4o performt am besten, aber alle Modelle z",
+          "stage3_completeness": 88,
+          "stage3_correctness": 92,
+          "stage3_overall": 88
+        },
         "assessment": {
           "llm": {
             "assessment_status": "assessed",
@@ -18268,9 +18472,22 @@
           "agreement": "llm_only"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "AI Reasoning Capability Evaluation",
+        "Human-Computer-Mediated Social Interaction",
+        "Large Language Model Hallucination",
+        "Model Performance Fairness Disparity",
+        "Socio-Cognitive Trust Reasoning",
+        "Structured Prompt-Based Reasoning Cycle",
+        "Trust-Building Through Strategic Planning"
+      ],
+      "knowledge_summary": "LLMs zeigen grundsätzliche Fähigkeit, Vertrauen anhand von Willingness, Competence und Safety zu analysieren und strategische Aktionspläne zu entwickeln; GPT-4o performt am besten, aber alle Modelle zeigen Halluzinationen und Fehlurteile bei komplexen Szenarien.",
+      "knowledge_sections": {
+        "kernbefund": "LLMs zeigen grundsätzliche Fähigkeit, Vertrauen anhand von Willingness, Competence und Safety zu analysieren und strategische Aktionspläne zu entwickeln; GPT-4o performt am besten, aber alle Modelle zeigen Halluzinationen und Fehlurteile bei komplexen Szenarien.",
+        "forschungsfrage": "Können Large Language Models über Vertrauen zwischen zwei Personen reasoning durchführen und Vertrauen durch strategische Planung aufbauen?",
+        "methodik": "Empirisch mit Mixed-Methods: Fallstudienanalyse von fünf Dialogszenarien zwischen Professor und PhD-Student; Vergleich von vier LLM-Modellen (gpt-4o, llama-3.3-70b, mixtral-8x7b, gemma2-9b) gegen menschliche Grundwahrheit; iteratives Prompt-Response-Design mit standardisierten Trust-Fragen.\n**Datenbasis:** Qualitative Fallstudien: 5 Dialogszenarien (Fallstudie 1) + 2 Rollen-Play-Szenarien (Fallstudie 2); Vergleich mit Annotationen der Erstautorin als Ground Truth; keine quantitativen Survey-Daten",
+        "hauptargumente": "- LLMs können komplexe mentale Zustände (beliefs, goals, intentions) zur Vertrauensmodellierung erfassen, wo traditionelle symbolische Ansätze scheitern. Sie lernen Vertrauensmuster aus großen Datenmengen und adaptieren sich flexibel an neue Kontexte ohne vordefinierte logische Regeln.\n- Castelfranchi und Falcones sozio-kognitive Vertrauenstheorie mit den Komponenten Trustor, Trustee, Action und Goal bietet ein rigoroses Framework für die Evaluation von LLM-Reasoning über Vertrauen in dynamischen, zielorientierten Szenarien wie Professor-Student-Beziehungen.\n- LLMs können nicht nur Vertrauen zwischen Individuen analysieren, sondern auch proaktiv Vertrauensaufbau durch rollenbasierte Szenarien planen und konkrete Handlungsschritte vorschlagen, was Anwendungen in menschlich-computergestützten sozialen Interaktionen eröffnet."
+      },
       "authors": "Debnath, A.; Cranefield, S.; Lorini, E.; Savarimuthu, B. T. R.",
       "item_type": "preprint",
       "journal": "",
@@ -18283,8 +18500,8 @@
       "preferred_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
       "latest_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/Can LLMs reason about trust- A pilot study.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "Z4YXX9PZ",
@@ -19522,7 +19739,7 @@
       "latest_version_id": "version:0b32f577-41da-5577-bf28-4ba788da6032",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
+      "knowledge_coverage": "fulltext_ready",
       "abstract": "",
       "stem": "_thin_YPYQ2TCL",
       "concepts": [],
@@ -19534,8 +19751,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -20077,7 +20294,7 @@
       "latest_version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing",
+      "knowledge_coverage": "fulltext_ready",
       "abstract": "",
       "stem": "_thin_ACDF4FL9",
       "concepts": [],
@@ -20089,8 +20306,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -21703,10 +21920,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": false,
+            "Generative_KI": false,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": false,
+            "Bias_Ungleichheit": true,
+            "Gender": true,
+            "Diversitaet": true,
+            "Feministisch": true,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "Das EU-AI-Gesetz enthält zwar Verweise auf Nicht-Diskriminierung, verfügt aber über kritische Lücken bei der expliziten Behandlung von Geschlechtergerechtigkeit und feministischen Perspektiven. Eine i",
+          "stage3_completeness": 92,
+          "stage3_correctness": 96,
+          "stage3_overall": 95
+        },
         "assessment": {
           "human": {
             "decision": "Exclude",
@@ -21757,9 +21992,22 @@
           "agreement": "disagree"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "Algorithmic Fairness Auditing",
+        "Feminist Data Protection",
+        "Feminist Legal Analysis of AI Regulation",
+        "Gender Bias in AI Systems",
+        "Gender-Neutral Language in AI Policy",
+        "High-Risk AI Systems Regulation",
+        "Intersectionality in AI Governance"
+      ],
+      "knowledge_summary": "Das EU-AI-Gesetz enthält zwar Verweise auf Nicht-Diskriminierung, verfügt aber über kritische Lücken bei der expliziten Behandlung von Geschlechtergerechtigkeit und feministischen Perspektiven. Eine intersektionale, geschlechtersensible Überarbeitung ist notwendig, um marginalisierte Gruppen effektiv zu schützen.",
+      "knowledge_sections": {
+        "kernbefund": "Das EU-AI-Gesetz enthält zwar Verweise auf Nicht-Diskriminierung, verfügt aber über kritische Lücken bei der expliziten Behandlung von Geschlechtergerechtigkeit und feministischen Perspektiven. Eine intersektionale, geschlechtersensible Überarbeitung ist notwendig, um marginalisierte Gruppen effektiv zu schützen.",
+        "forschungsfrage": "Wie adressiert das EU-Gesetz über künstliche Intelligenz Geschlechtergerechtigkeit und strukturelle Machtungleichgewichte in KI-Systemen, und welche Lücken bestehen bei der Bekämpfung von Geschlechterbias?",
+        "methodik": "Theoretisch: Feministische Textanalyse des AI Act mit artikel-für-artikel-Analyse; Fallstudienanalyse zur Illustration von KI-bedingten Geschlechterungerechtigkeit\n**Datenbasis:** nicht angegeben (theoretisches und dokumentenanalytisches Papier)",
+        "hauptargumente": "- KI-Systeme können bestehende gesellschaftliche Geschlechterverzerrungen perpetuieren (Amazon-Rekrutierungstool, Deliveroo-Algorithmus, iBorderCtrl, VioGen), was die Notwendigkeit geschlechtssensitiver Regulation unterstreicht.\n- Das EU-AI-Gesetz verwendet überwiegend geschlechtsneutrale Sprache und vermeidet explizite geschlechtsspezifische Begriffe, wodurch die Herausforderungen marginalisierter Gruppen einschließlich Frauen of Colour, LGBTQIA+ und nicht-binärer Personen übersehen werden.\n- Eine intersektionale, feministische Approach ist notwendig, um zu verstehen, wie Geschlecht mit Rasse, Klasse, Behinderung und anderen Identitätsfaktoren interagiert und wie KI-Systeme diese multiplen Diskriminierungen verstärken können."
+      },
       "authors": "",
       "item_type": "report",
       "journal": "",
@@ -21772,8 +22020,8 @@
       "preferred_version_id": "version:3825d562-cc7e-56d0-ad27-82cbdda22161",
       "latest_version_id": "version:3825d562-cc7e-56d0-ad27-82cbdda22161",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/The EU artificial intelligence act through a gender lens.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "MTMU9UPJ",
@@ -22588,8 +22836,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -22652,7 +22900,7 @@
       "latest_version_id": "version:fdf4d4e8-faf0-572f-8f75-1efddb963ed8",
       "is_preferred_version": false,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "UDZLIJWX",
@@ -23246,10 +23494,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": false,
+            "Generative_KI": false,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": true,
+            "Diversitaet": true,
+            "Feministisch": true,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 5,
+          "stage1_key_finding": "Die Diversity-Krise in der AI-Industrie und der Bias in AI-Systemen sind zwei Manifestationen desselben Problems struktureller Ungleichheit. Die herrschende Pipeline-Fokus-Strategie hat nach Jahrzehnt",
+          "stage3_completeness": 92,
+          "stage3_correctness": 98,
+          "stage3_overall": 95
+        },
         "assessment": {
           "human": {
             "decision": "Exclude",
@@ -23300,9 +23566,22 @@
           "agreement": "disagree"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "Algorithmic Bias",
+        "Algorithmic Fairness",
+        "Gender Classification Systems",
+        "Intersectional Feminism in AI",
+        "Pipeline Problem in Diversity",
+        "Structural Inequality in Tech Workforce",
+        "Surveillance Capitalism and Marginalized Communities"
+      ],
+      "knowledge_summary": "Die Diversity-Krise in der AI-Industrie und der Bias in AI-Systemen sind zwei Manifestationen desselben Problems struktureller Ungleichheit. Die herrschende Pipeline-Fokus-Strategie hat nach Jahrzehnten kein substantielles Fortschritt gebracht, weil sie tiefere Probleme wie Workplace-Kultur, Machtasymmetrien und Ausschlusslogiken ignoriert.",
+      "knowledge_sections": {
+        "kernbefund": "Die Diversity-Krise in der AI-Industrie und der Bias in AI-Systemen sind zwei Manifestationen desselben Problems struktureller Ungleichheit. Die herrschende Pipeline-Fokus-Strategie hat nach Jahrzehnten kein substantielles Fortschritt gebracht, weil sie tiefere Probleme wie Workplace-Kultur, Machtasymmetrien und Ausschlusslogiken ignoriert.",
+        "forschungsfrage": "Wie sind die Diversity-Krisen in der AI-Industrie und die Probleme von Bias in AI-Systemen miteinander verflochten, und welche strukturellen Faktoren erklären diese Ungleichheiten?",
+        "methodik": "Theoretisch/Review – umfassende Literaturanalyse über ein Jahr mit Perspektiven aus Informatik, Sozialwissenschaften und Geisteswissenschaften; systematische Analyse von Industrie-Statistiken, Fallstudien zu AI-Systemen und Dokumentation von Workplace-Bewegungen\n**Datenbasis:** Sekundäranalyse: 18% Frauen an führenden AI-Konferenzen, >80% männliche AI-Professoren, 10-15% Frauen in AI-Research in Top-Tech-Unternehmen, 2.5-4% schwarze Arbeitnehmer bei Google/Facebook/Microsoft; keine Daten zu trans Arbeitern",
+        "hauptargumente": "- Die Diversity-Krise ist nicht nur ein Geschlechter-, sondern ein umfassendes Macht- und Machtverhältnis-Problem, das durch intersektionale Perspektiven verstanden werden muss, da ausschließliche 'Frauen-in-Tech'-Fokussierung weiße Frauen bevorzugt und andere marginalisierte Gruppen ignoriert.\n- AI-Systeme werden in extrem homogenen Räumen (weiß, wohlhabend, männlich, technisch orientiert) entwickelt, was dazu führt, dass bestehende gesellschaftliche Diskriminierungsmuster in den Systemen reproduziert und verstärkt werden, was zwei eng verflochtene Probleme bildet.\n- Der bisherige Fokus auf technische Bias-Lösungen ist unzureichend und kann aktiv schaden – besonders wenn Systeme wie Gesichtserkennung in polizeilicher Überwachung missbraucht werden und marginalisierte Communities ohne Zustimmung für Datenbeschaffung ausgebeutet werden.\n- Biologischer Determinismus re-emergt sowohl als Gegenbewegung gegen Diversity-Forderungen als auch in AI-Systemdesign selbst, was historische Rechtfertigungslogiken für Ungleichheit revitalisiert und automatisiert.\n- Einige AI-Systeme (z.B. Geschlechtserkennung, Sexualitätserkennung) sollten möglicherweise gar nicht entwickelt werden; 'Diversifizierung' von Datensätzen kann harmful systems nur legitimieren statt sie in Frage zu stellen."
+      },
       "authors": "West, S.M.; Whittaker, M.; Crawford, K.",
       "item_type": "report",
       "journal": "",
@@ -23315,8 +23594,8 @@
       "preferred_version_id": "version:11e2016c-ae67-5a45-9534-0181533e4ce3",
       "latest_version_id": "version:11e2016c-ae67-5a45-9534-0181533e4ce3",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/Discriminating Systems- Gender, Race, and Power in AI.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "K2KL8WH8",
@@ -23540,10 +23819,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": false,
+            "Generative_KI": false,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": false,
+            "Bias_Ungleichheit": true,
+            "Gender": true,
+            "Diversitaet": true,
+            "Feministisch": true,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "Fairness propagiert 'aufwärts' durch Intersektionalitätsebenen (von spezifischsten zu allgemeineren Gruppen), aber nicht 'abwärts'. Die Varianz der empirischen Erfolgsquoten folgt unter perfekter Fair",
+          "stage3_completeness": 92,
+          "stage3_correctness": 98,
+          "stage3_overall": 95
+        },
         "assessment": {
           "human": {
             "decision": "Include",
@@ -23595,9 +23892,22 @@
           "agreement": "agree"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "Algorithmic Bias in Protected Subgroups",
+        "Fairness Gerrymandering",
+        "Fairness Propagation",
+        "Hypercube Geometric Modeling",
+        "Intersectional Fairness",
+        "Intersectional Statistical Parity",
+        "VarRatio Fairness Metrics"
+      ],
+      "knowledge_summary": "Fairness propagiert 'aufwärts' durch Intersektionalitätsebenen (von spezifischsten zu allgemeineren Gruppen), aber nicht 'abwärts'. Die Varianz der empirischen Erfolgsquoten folgt unter perfekter Fairness einem exponentiellen Skalierungsgesetz, das als Benchmark für Intersektionale Statistische Parität verwendet werden kann.",
+      "knowledge_sections": {
+        "kernbefund": "Fairness propagiert 'aufwärts' durch Intersektionalitätsebenen (von spezifischsten zu allgemeineren Gruppen), aber nicht 'abwärts'. Die Varianz der empirischen Erfolgsquoten folgt unter perfekter Fairness einem exponentiellen Skalierungsgesetz, das als Benchmark für Intersektionale Statistische Parität verwendet werden kann.",
+        "forschungsfrage": "Wie kann intersektionale Fairness in KI-Systemen mathematisch modelliert und gemessen werden, wenn multiple geschützte Attribute auf verschiedenen Ebenen der Granularität intersektieren?",
+        "methodik": "Theoretisch/Mathematisch mit empirischer Validierung: Geometrische Modellierung durch Hypercube-Struktur, dynamische Programmierung für Propagation, theoretische Beweise zur Fairness-Propagation, synthetische und echte Datenexperimente (Adult-Dataset).\n**Datenbasis:** Synthetische Daten: M=10 geschützte Attribute, 1024 Vertices mit je 200R Instanzen (R∈[1,10]); Real: Adult-Dataset (N=48,842 Instanzen mit M=4 binären geschützten Attributen)",
+        "hauptargumente": "- Die Modellierung von Intersektionalität als Hypercube-Struktur ermöglicht eine einheitliche geometrische Analyse aller möglichen intersektionalen Subgruppen gleichzeitig, anstatt a priori eine bestimmte Granularität festzulegen.\n- Mathematischer Beweis: Wenn Fairness an der niedrigsten Ebene (vollständige Intersection aller geschützten Attribute) garantiert wird, impliziert dies notwendigerweise Fairness auf allen höheren Ebenen und für alle einzelnen Attribute – dies widerlegt die Annahme, dass Fairness auf Individualebene zu Gruppenfairness führt.\n- Die Varianzreduktion erfolgt exponentiell mit aufsteigenden Ebenen unter Intersektionaler Statistischer Parität (ISP), was einen neuen statistischen Test und die VarRatio-Metrikfamilie zur Quantifizierung intersektionalen Bias ermöglicht und robuster gegen Stichprobenvarianz ist."
+      },
       "authors": "Zannone, S.",
       "item_type": "report",
       "journal": "",
@@ -23610,8 +23920,8 @@
       "preferred_version_id": "version:96febd23-a639-517d-91b9-8169623975b9",
       "latest_version_id": "version:96febd23-a639-517d-91b9-8169623975b9",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/Intersectional Fairness- A Fractal Approach.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "NBYNRKBL",
@@ -24092,8 +24402,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -24164,7 +24474,7 @@
       "latest_version_id": "version:202a209b-9a67-5437-8010-848149dee938",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "XIYX5HJS",
@@ -25186,7 +25496,7 @@
       "latest_version_id": "version:3a40ee22-5db9-569d-b8fc-8dfbed340b11",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
+      "knowledge_coverage": "fulltext_ready",
       "abstract": "Comprehensive feminist framework directly critiques individualized approaches to AI ethics, challenging the \"liberal framework of making algorithms unbiased and inclusive\" in favor of structural \"remediation\" addressing \"systemic and structural dimensions of discrimination.\" Examines how AI research is captured by \"racial, gendered capitalism\" and proposes nine principles focusing on structural power analysis including examining power, challenging power, and making labor visible. Explicitly positions against technical solutions ignoring power structures.",
       "stem": "_thin_UFJ7ERFF",
       "concepts": [],
@@ -25198,8 +25508,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -25258,40 +25568,41 @@
     },
     {
       "id": "BJZYGNEE",
+      "stem": "Toupin_2024_Shaping_feminist_artificial_intelligence",
       "title": "Shaping feminist artificial intelligence",
-      "authors": "Toupin, S.",
       "author_year": "Toupin (2024)",
       "year": 2024,
       "doi": "10.1177/14614448221150776",
       "url": "https://journals.sagepub.com/doi/full/10.1177/14614448221150776",
-      "item_type": "journalArticle",
-      "journal": "",
-      "work_id": "work:190638a5-2d71-5ad6-af0f-c97f18e938e9",
-      "version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
-      "version_type": "version_of_record",
-      "version_date": "2024",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
-      "preferred_version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
-      "latest_version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
-      "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
       "abstract": "Comprehensive typology establishes six ways feminism and AI intersect: model, design, policy, culture, discourse, and science. The \"design\" category most directly addresses prompting practices, exploring how feminist approaches emphasize participatory design, community involvement, and challenging masculine-coded AI systems. Traces feminist AI from 1990s theoretical foundations through contemporary projects, establishing frameworks for feminist human-AI interaction informing critical prompting practices.",
-      "stem": "_thin_BJZYGNEE",
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
       "stages": {
         "identification": {
           "in_zotero": true
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": false,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": true,
+            "Diversitaet": true,
+            "Feministisch": true,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es b",
+          "stage3_completeness": 88,
+          "stage3_correctness": 92,
+          "stage3_overall": 88
+        },
         "assessment": {
           "human": {
             "decision": "Exclude",
@@ -25336,7 +25647,37 @@
           },
           "agreement": "disagree"
         }
-      }
+      },
+      "concepts": [
+        "Algorithmic Fairness in Legal AI",
+        "Decolonial AI",
+        "Feminist Artificial Intelligence",
+        "Feminist Data Practices",
+        "Intersectional Algorithmic Bias",
+        "Participatory AI Design",
+        "Situated Knowledge in AI Development"
+      ],
+      "knowledge_summary": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es bislang in der technoliberalen Sphäre der Inklusion stecken und stellt keine transformative Politik dar, die kapitalistische Ungleichheitsstrukturen fundamental herausfordert.",
+      "knowledge_sections": {
+        "kernbefund": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es bislang in der technoliberalen Sphäre der Inklusion stecken und stellt keine transformative Politik dar, die kapitalistische Ungleichheitsstrukturen fundamental herausfordert.",
+        "forschungsfrage": "What does the term feminist artificial intelligence (FAI) mean and how has FAI been shaped over time?",
+        "methodik": "Kritische Literaturübersicht und Analyse von Schriften und Praktiken; Purposive Sampling aus akademischen Datenbanken, Suchmaschinen und Twitter; kritische Untersuchung von Mikrogeschichte durch Alison Adam und zeitgenössische Beispiele aus Global South und Global North\n**Datenbasis:** nicht empirisch; qualitative Analyse von Schriften (akademische Texte, Online-Präsentationen, Projektdokumentationen) und Praktiken aus globalen Kontexten; Fokus auf Werke, die den Begriff FAI verwenden oder verwandte Konzepte (intersectional AI, transfeminist AI, decolonial AI)",
+        "hauptargumente": "- Feminist artificial intelligence wurzelt in konstruktivistischen Perspektiven der Wissenschafts- und Technikforschung und Alison Adam hat bereits in den 1990ern die Grundlagen von FAI gelegt, indem sie fragte, wie AI-Systeme gender, race und class berücksichtigen können und wie feministische Theorie AI informieren kann.\n- Zeitgenössische FAI manifestiert sich in mindestens sechs verschiedenen Formen: als experimentelles Modell (z.B. Sinders' Feminist Data Set), als Designpraktik (z.B. feminist.ai mit Poieto-Software), als internationale Entwicklungspolitik (f<a+i>r-Netzwerk), als diskursive Kategorie zur Kritik von AI, und als wissenschaftliche Praxis, die alternative AI-Imaginaries schafft.\n- Trotz der Bemühungen um Partizipation, Langsamkeit und Gemeinschaftsorientierung bleiben FAI-Projekte in einer technoliberalen Logik der Inklusion stecken, die die grundlegenden Macht- und Ungleichheitsstrukturen des kapitalistischen Systems sowie Umweltdestruktion nicht fundamental herausfordert; eine dekoloniale feministische Intelligenz müsste über technische Lösungen hinausgehen."
+      },
+      "authors": "Toupin, S.",
+      "item_type": "journalArticle",
+      "journal": "",
+      "work_id": "work:190638a5-2d71-5ad6-af0f-c97f18e938e9",
+      "version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
+      "version_type": "version_of_record",
+      "version_date": "2024",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
+      "latest_version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
+      "is_preferred_version": true,
+      "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "N7J2ZRFP",
@@ -25436,10 +25777,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": false,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": true,
+            "Diversitaet": true,
+            "Feministisch": true,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "Verantwortung sollte nicht als statisches individuelles Merkmal verstanden werden, sondern als 'response-ability' – eine dynamische, kollektive Fähigkeit zur Rechenschaft, die durch organisationale Ku",
+          "stage3_completeness": 92,
+          "stage3_correctness": 98,
+          "stage3_overall": 95
+        },
         "assessment": {
           "human": {
             "decision": "Include",
@@ -25486,9 +25845,23 @@
           "agreement": "disagree"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "Algorithmic Accountability in Fluid AI Ecosystems",
+        "Algorithmic Bias and Discriminatory AI Outcomes",
+        "Black Box Problem and Algorithmic Explainability",
+        "Feminist Care Ethics in AI Development",
+        "Feminist Science and Technology Studies (Feminist STS) Approach",
+        "Gendered and Racialized Labor in AI Systems",
+        "Organizational Culture and Ethical AI Implementation",
+        "Response-Ability as Relational Responsibility"
+      ],
+      "knowledge_summary": "Verantwortung sollte nicht als statisches individuelles Merkmal verstanden werden, sondern als 'response-ability' – eine dynamische, kollektive Fähigkeit zur Rechenschaft, die durch organisationale Kulturen ermöglicht wird, die Care- und Wartungsarbeit wertschätzen und strukturelle Barrieren abbaut.",
+      "knowledge_sections": {
+        "kernbefund": "Verantwortung sollte nicht als statisches individuelles Merkmal verstanden werden, sondern als 'response-ability' – eine dynamische, kollektive Fähigkeit zur Rechenschaft, die durch organisationale Kulturen ermöglicht wird, die Care- und Wartungsarbeit wertschätzen und strukturelle Barrieren abbaut.",
+        "forschungsfrage": "Wie verstehen KI-Praktiker Verantwortung im Kontext von KI-Entwicklung und -Einsatz, und wer sollte verantwortlich sein, wenn etwas schiefgeht?",
+        "methodik": "Empirisch-qualitativ: 50 leitfadengestützte Interviews mit KI-Praktikern und Tech-Arbeitern in einem multinationalen Technologieunternehmen (2020-2021), interpretiert durch feministische politische Theorie\n**Datenbasis:** n=ca. 50+ Interviews mit KI-Praktikern und Tech-Arbeitern an einem multinationalen Technologieunternehmen über 12 Monate (2020-2021)",
+        "hauptargumente": "- Traditionelle, statische Modelle von individueller Verantwortung können nicht mit den dynamischen, fluiden Ökosystemen von KI-Entwicklung umgehen, in denen Systeme die Besitzer wechseln, Arbeitskräfte das Unternehmen verlassen und Produkte orphan werden.\n- KI-Ingenieure werden durch Druck und 'Tunnel-Vision'-Fokus auf unmittelbare technische Leistung daran gehindert, holistische Verantwortung für Langzeiteffekte zu übernehmen; dies erfordert Umgestaltung von Arbeitskultur und Bewertung von Wartungsarbeit.\n- Feministische Theorie (Haraway, Puig de la Bellacasa, Young, Butler) bietet einen konzeptionellen Rahmen, der Verantwortung als relationales, gegenseitig abhängiges Phänomen rekonzeptualisiert und die unsichtbaren Care- und Wartungsarbeiten – historisch feminisiert und marginalisiert – als zentral für ethische KI-Entwicklung anerkennt."
+      },
       "authors": "Browne, J.; Drage, E.; McInerney, K.",
       "item_type": "journalArticle",
       "journal": "",
@@ -25501,8 +25874,8 @@
       "preferred_version_id": "version:37ed4ff2-3eba-593d-bba8-7afb93102265",
       "latest_version_id": "version:37ed4ff2-3eba-593d-bba8-7afb93102265",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/Engineers on responsibility- feminist approaches to who's-c00aae.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "VFD9ENG6",
@@ -26798,40 +27171,41 @@
     },
     {
       "id": "SHDNTZJZ",
+      "stem": "Toupin_2024_Shaping_feminist_artificial_intelligence",
       "title": "Shaping feminist artificial intelligence",
-      "authors": "Toupin, S.",
       "author_year": "Toupin (2024)",
       "year": 2024,
       "doi": "10.1177/14614448221150776",
       "url": "https://doi.org/10.1177/14614448221150776",
-      "item_type": "journalArticle",
-      "journal": "",
-      "work_id": "work:190638a5-2d71-5ad6-af0f-c97f18e938e9",
-      "version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
-      "version_type": "version_of_record",
-      "version_date": "2024",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
-      "preferred_version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
-      "latest_version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
-      "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
       "abstract": "Toupin reviews historical and conceptual developments of feminist AI, identifying six key forms—model, design, policy, culture, discourse, and science. She demonstrates how feminist initiatives historically and currently surface hidden biases and power dynamics in AI. Advocates for integrating feminist perspectives directly into AI discourse and development.",
-      "stem": "_thin_SHDNTZJZ",
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
       "stages": {
         "identification": {
           "in_zotero": true
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": false,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": true,
+            "Diversitaet": true,
+            "Feministisch": true,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es b",
+          "stage3_completeness": 88,
+          "stage3_correctness": 92,
+          "stage3_overall": 88
+        },
         "assessment": {
           "human": {
             "decision": "Include",
@@ -26883,7 +27257,37 @@
           },
           "agreement": "agree"
         }
-      }
+      },
+      "concepts": [
+        "Algorithmic Fairness in Legal AI",
+        "Decolonial AI",
+        "Feminist Artificial Intelligence",
+        "Feminist Data Practices",
+        "Intersectional Algorithmic Bias",
+        "Participatory AI Design",
+        "Situated Knowledge in AI Development"
+      ],
+      "knowledge_summary": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es bislang in der technoliberalen Sphäre der Inklusion stecken und stellt keine transformative Politik dar, die kapitalistische Ungleichheitsstrukturen fundamental herausfordert.",
+      "knowledge_sections": {
+        "kernbefund": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es bislang in der technoliberalen Sphäre der Inklusion stecken und stellt keine transformative Politik dar, die kapitalistische Ungleichheitsstrukturen fundamental herausfordert.",
+        "forschungsfrage": "What does the term feminist artificial intelligence (FAI) mean and how has FAI been shaped over time?",
+        "methodik": "Kritische Literaturübersicht und Analyse von Schriften und Praktiken; Purposive Sampling aus akademischen Datenbanken, Suchmaschinen und Twitter; kritische Untersuchung von Mikrogeschichte durch Alison Adam und zeitgenössische Beispiele aus Global South und Global North\n**Datenbasis:** nicht empirisch; qualitative Analyse von Schriften (akademische Texte, Online-Präsentationen, Projektdokumentationen) und Praktiken aus globalen Kontexten; Fokus auf Werke, die den Begriff FAI verwenden oder verwandte Konzepte (intersectional AI, transfeminist AI, decolonial AI)",
+        "hauptargumente": "- Feminist artificial intelligence wurzelt in konstruktivistischen Perspektiven der Wissenschafts- und Technikforschung und Alison Adam hat bereits in den 1990ern die Grundlagen von FAI gelegt, indem sie fragte, wie AI-Systeme gender, race und class berücksichtigen können und wie feministische Theorie AI informieren kann.\n- Zeitgenössische FAI manifestiert sich in mindestens sechs verschiedenen Formen: als experimentelles Modell (z.B. Sinders' Feminist Data Set), als Designpraktik (z.B. feminist.ai mit Poieto-Software), als internationale Entwicklungspolitik (f<a+i>r-Netzwerk), als diskursive Kategorie zur Kritik von AI, und als wissenschaftliche Praxis, die alternative AI-Imaginaries schafft.\n- Trotz der Bemühungen um Partizipation, Langsamkeit und Gemeinschaftsorientierung bleiben FAI-Projekte in einer technoliberalen Logik der Inklusion stecken, die die grundlegenden Macht- und Ungleichheitsstrukturen des kapitalistischen Systems sowie Umweltdestruktion nicht fundamental herausfordert; eine dekoloniale feministische Intelligenz müsste über technische Lösungen hinausgehen."
+      },
+      "authors": "Toupin, S.",
+      "item_type": "journalArticle",
+      "journal": "",
+      "work_id": "work:190638a5-2d71-5ad6-af0f-c97f18e938e9",
+      "version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
+      "version_type": "version_of_record",
+      "version_date": "2024",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
+      "latest_version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
+      "is_preferred_version": true,
+      "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "9YCFMPVT",
@@ -26987,8 +27391,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -27053,7 +27457,7 @@
       "latest_version_id": "version:41f297df-6f78-5562-bf80-22caf3791c53",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "XZ6Z8A9C",
@@ -27376,40 +27780,41 @@
     },
     {
       "id": "ZAU6P4BK",
+      "stem": "Toupin_2024_Shaping_feminist_artificial_intelligence",
       "title": "Shaping feminist artificial intelligence",
-      "authors": "Toupin, S.",
       "author_year": "Toupin (2024)",
       "year": 2024,
       "doi": "",
       "url": "",
-      "item_type": "journalArticle",
-      "journal": "",
-      "work_id": "work:374ffb8c-c284-5be3-9050-86a7f02aced0",
-      "version_id": "version:f473eb07-9c10-5676-9483-21f04b00c06e",
-      "version_type": "version_of_record",
-      "version_date": "2024",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
-      "preferred_version_id": "version:f473eb07-9c10-5676-9483-21f04b00c06e",
-      "latest_version_id": "version:f473eb07-9c10-5676-9483-21f04b00c06e",
-      "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved",
       "abstract": "This study examines the historical and contemporary shaping of feminist AI (FAI) through a typology of six approaches: FAI as model, design, politics, culture, discourse, and science. Toupin analyzes how feminist perspectives are implemented in various areas of AI development and identifies both potentials and limitations of feminist approaches. The work shows that FAI is not only a technological concept but also a movement that aims to transform power relations in AI development and promote social justice.",
-      "stem": "_thin_ZAU6P4BK",
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
       "stages": {
         "identification": {
           "in_zotero": true
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": false,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": true,
+            "Diversitaet": true,
+            "Feministisch": true,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es b",
+          "stage3_completeness": 88,
+          "stage3_correctness": 92,
+          "stage3_overall": 88
+        },
         "assessment": {
           "human": {
             "decision": "Exclude",
@@ -27454,7 +27859,37 @@
           },
           "agreement": "disagree"
         }
-      }
+      },
+      "concepts": [
+        "Algorithmic Fairness in Legal AI",
+        "Decolonial AI",
+        "Feminist Artificial Intelligence",
+        "Feminist Data Practices",
+        "Intersectional Algorithmic Bias",
+        "Participatory AI Design",
+        "Situated Knowledge in AI Development"
+      ],
+      "knowledge_summary": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es bislang in der technoliberalen Sphäre der Inklusion stecken und stellt keine transformative Politik dar, die kapitalistische Ungleichheitsstrukturen fundamental herausfordert.",
+      "knowledge_sections": {
+        "kernbefund": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es bislang in der technoliberalen Sphäre der Inklusion stecken und stellt keine transformative Politik dar, die kapitalistische Ungleichheitsstrukturen fundamental herausfordert.",
+        "forschungsfrage": "What does the term feminist artificial intelligence (FAI) mean and how has FAI been shaped over time?",
+        "methodik": "Kritische Literaturübersicht und Analyse von Schriften und Praktiken; Purposive Sampling aus akademischen Datenbanken, Suchmaschinen und Twitter; kritische Untersuchung von Mikrogeschichte durch Alison Adam und zeitgenössische Beispiele aus Global South und Global North\n**Datenbasis:** nicht empirisch; qualitative Analyse von Schriften (akademische Texte, Online-Präsentationen, Projektdokumentationen) und Praktiken aus globalen Kontexten; Fokus auf Werke, die den Begriff FAI verwenden oder verwandte Konzepte (intersectional AI, transfeminist AI, decolonial AI)",
+        "hauptargumente": "- Feminist artificial intelligence wurzelt in konstruktivistischen Perspektiven der Wissenschafts- und Technikforschung und Alison Adam hat bereits in den 1990ern die Grundlagen von FAI gelegt, indem sie fragte, wie AI-Systeme gender, race und class berücksichtigen können und wie feministische Theorie AI informieren kann.\n- Zeitgenössische FAI manifestiert sich in mindestens sechs verschiedenen Formen: als experimentelles Modell (z.B. Sinders' Feminist Data Set), als Designpraktik (z.B. feminist.ai mit Poieto-Software), als internationale Entwicklungspolitik (f<a+i>r-Netzwerk), als diskursive Kategorie zur Kritik von AI, und als wissenschaftliche Praxis, die alternative AI-Imaginaries schafft.\n- Trotz der Bemühungen um Partizipation, Langsamkeit und Gemeinschaftsorientierung bleiben FAI-Projekte in einer technoliberalen Logik der Inklusion stecken, die die grundlegenden Macht- und Ungleichheitsstrukturen des kapitalistischen Systems sowie Umweltdestruktion nicht fundamental herausfordert; eine dekoloniale feministische Intelligenz müsste über technische Lösungen hinausgehen."
+      },
+      "authors": "Toupin, S.",
+      "item_type": "journalArticle",
+      "journal": "",
+      "work_id": "work:374ffb8c-c284-5be3-9050-86a7f02aced0",
+      "version_id": "version:f473eb07-9c10-5676-9483-21f04b00c06e",
+      "version_type": "version_of_record",
+      "version_date": "2024",
+      "peer_review_status": "not_established",
+      "peer_review_basis": "unknown",
+      "preferred_version_id": "version:f473eb07-9c10-5676-9483-21f04b00c06e",
+      "latest_version_id": "version:f473eb07-9c10-5676-9483-21f04b00c06e",
+      "is_preferred_version": true,
+      "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "Y8J3HI9J",
@@ -28151,10 +28586,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": false,
+            "Generative_KI": false,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": false,
+            "Bias_Ungleichheit": true,
+            "Gender": false,
+            "Diversitaet": true,
+            "Feministisch": true,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "Eine feministische Metaethik des AI sollte sich systematisch mit vier Dimensionen befassen: (i) der Kontinuität zwischen Theorie und Handlung in der AI-Ethik, (ii) den realen Effekten von AI-Ethik, (i",
+          "stage3_completeness": 88,
+          "stage3_correctness": 92,
+          "stage3_overall": 89
+        },
         "assessment": {
           "human": {
             "decision": "Include",
@@ -28205,9 +28658,22 @@
           "agreement": "agree"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "Algorithmic Fairness and Power Relations",
+        "Contextual and Narrative AI Ethics Methods",
+        "Data Colonialism",
+        "Epistemic Injustice in AI Systems",
+        "Ethics Washing",
+        "Feminist Metaethics of AI",
+        "Intersectional AI Governance"
+      ],
+      "knowledge_summary": "Eine feministische Metaethik des AI sollte sich systematisch mit vier Dimensionen befassen: (i) der Kontinuität zwischen Theorie und Handlung in der AI-Ethik, (ii) den realen Effekten von AI-Ethik, (iii) der Rolle und dem Profil der in AI-Ethik involvierten Akteure, und (iv) den Auswirkungen von AI auf Machtbeziehungen durch kontextuelle, emotionale und narrative Methoden.",
+      "knowledge_sections": {
+        "kernbefund": "Eine feministische Metaethik des AI sollte sich systematisch mit vier Dimensionen befassen: (i) der Kontinuität zwischen Theorie und Handlung in der AI-Ethik, (ii) den realen Effekten von AI-Ethik, (iii) der Rolle und dem Profil der in AI-Ethik involvierten Akteure, und (iv) den Auswirkungen von AI auf Machtbeziehungen durch kontextuelle, emotionale und narrative Methoden.",
+        "forschungsfrage": "Wie kann eine feministische Metaethik des AI entwickelt werden, um die Insuffizienzen der gegenwärtigen AI-Ethik-Debatte zu adressieren?",
+        "methodik": "Theoretisch; kritische Analyse von AI-Ethik-Literatur und -Praktiken, feministische Philosophie, konzeptuelle Entwicklung eines Forschungsrahmens\n**Datenbasis:** keine empirischen Daten; theoretische und dokumentarische Analyse von AI-Ethik-Dokumenten, Richtlinien und dokumentierten Incidents",
+        "hauptargumente": "- Die derzeitige AI-Ethik-Debatte hat ein strukturelles Problem: Sie konzentriert sich primär auf normative Prinzipien und Richtlinien, führt aber nicht zu substantiellen ethischen Reformen in der Praxis, wie die dokumentierten Incidents von 'Ethics-Washing', 'Ethics-Shopping' und Konflikten bei Google, Facebook und MIT zeigen.\n- Traditionelle Metaethik ist zu sehr nicht-normativ und theoretisch. Eine feministische Metaethik hingegen verbindet deskriptive mit normativen Fragen und fragt nicht nur, was Ethik ist, sondern auch wie wir uns ethisch engagieren sollten und wer an ethischen Prozessen beteiligt sein sollte.\n- Eine feministische Metaethik des AI erfordert kontextuelle Aufmerksamkeit für marginalisierte Gruppen, Machtbeziehungen und strukturelle Ungerechtigkeit, unter Verwendung von narrativen Methoden, emotionaler Intelligenz und intersektionalen Perspektiven statt abstrakt-universeller Theorien."
+      },
       "authors": "Siapka, A.",
       "item_type": "journalArticle",
       "journal": "",
@@ -28220,8 +28686,8 @@
       "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
       "latest_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/Towards a Feminist Metaethics of AI.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "D2EGAVKZ",
@@ -28728,8 +29194,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -28796,7 +29262,7 @@
       "latest_version_id": "version:27af1d3e-0f3f-582b-ae03-641b46ab11c0",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "MJDTRLAI",
@@ -29646,8 +30112,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -29714,7 +30180,7 @@
       "latest_version_id": "version:ed0cecb4-269e-54d9-9f4c-0f2a35588a17",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "AIGLDZ4C",
@@ -30582,7 +31048,7 @@
       "latest_version_id": "version:92d831d1-9df3-57bd-9c7a-d8984110326d",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing",
+      "knowledge_coverage": "fulltext_ready",
       "abstract": "Comprehensive policy brief series analyzing how AI systems perpetuate gender inequalities while highlighting pathways for more equitable development. Documents that 44% of AI systems show gender bias, with 25% exhibiting both gender and racial bias, and provides evidence-based policy recommendations for addressing systematic underrepresentation and discriminatory outcomes.",
       "stem": "_thin_9BDIJE9B",
       "concepts": [],
@@ -30594,8 +31060,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -32154,10 +32620,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": false,
+            "Prompting": false,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": true,
+            "Bias_Ungleichheit": true,
+            "Gender": true,
+            "Diversitaet": true,
+            "Feministisch": true,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es b",
+          "stage3_completeness": 88,
+          "stage3_correctness": 92,
+          "stage3_overall": 88
+        },
         "assessment": {
           "human": {
             "decision": "Exclude",
@@ -32202,9 +32686,22 @@
           "agreement": "disagree"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "Algorithmic Fairness in Legal AI",
+        "Decolonial AI",
+        "Feminist Artificial Intelligence",
+        "Feminist Data Practices",
+        "Intersectional Algorithmic Bias",
+        "Participatory AI Design",
+        "Situated Knowledge in AI Development"
+      ],
+      "knowledge_summary": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es bislang in der technoliberalen Sphäre der Inklusion stecken und stellt keine transformative Politik dar, die kapitalistische Ungleichheitsstrukturen fundamental herausfordert.",
+      "knowledge_sections": {
+        "kernbefund": "FAI ist ein plurales Konzept mit multiplen Bedeutungen und Manifestationen, das sich in sechs Typologien manifestiert (als Modell, Design, Policy, Kultur, Diskurs und Wissenschaft), jedoch bleibt es bislang in der technoliberalen Sphäre der Inklusion stecken und stellt keine transformative Politik dar, die kapitalistische Ungleichheitsstrukturen fundamental herausfordert.",
+        "forschungsfrage": "What does the term feminist artificial intelligence (FAI) mean and how has FAI been shaped over time?",
+        "methodik": "Kritische Literaturübersicht und Analyse von Schriften und Praktiken; Purposive Sampling aus akademischen Datenbanken, Suchmaschinen und Twitter; kritische Untersuchung von Mikrogeschichte durch Alison Adam und zeitgenössische Beispiele aus Global South und Global North\n**Datenbasis:** nicht empirisch; qualitative Analyse von Schriften (akademische Texte, Online-Präsentationen, Projektdokumentationen) und Praktiken aus globalen Kontexten; Fokus auf Werke, die den Begriff FAI verwenden oder verwandte Konzepte (intersectional AI, transfeminist AI, decolonial AI)",
+        "hauptargumente": "- Feminist artificial intelligence wurzelt in konstruktivistischen Perspektiven der Wissenschafts- und Technikforschung und Alison Adam hat bereits in den 1990ern die Grundlagen von FAI gelegt, indem sie fragte, wie AI-Systeme gender, race und class berücksichtigen können und wie feministische Theorie AI informieren kann.\n- Zeitgenössische FAI manifestiert sich in mindestens sechs verschiedenen Formen: als experimentelles Modell (z.B. Sinders' Feminist Data Set), als Designpraktik (z.B. feminist.ai mit Poieto-Software), als internationale Entwicklungspolitik (f<a+i>r-Netzwerk), als diskursive Kategorie zur Kritik von AI, und als wissenschaftliche Praxis, die alternative AI-Imaginaries schafft.\n- Trotz der Bemühungen um Partizipation, Langsamkeit und Gemeinschaftsorientierung bleiben FAI-Projekte in einer technoliberalen Logik der Inklusion stecken, die die grundlegenden Macht- und Ungleichheitsstrukturen des kapitalistischen Systems sowie Umweltdestruktion nicht fundamental herausfordert; eine dekoloniale feministische Intelligenz müsste über technische Lösungen hinausgehen."
+      },
       "authors": "Toupin, S.",
       "item_type": "journalArticle",
       "journal": "",
@@ -32217,8 +32714,8 @@
       "preferred_version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
       "latest_version_id": "version:6f564928-31c7-562c-8ee1-017bab19c05f",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/Shaping feminist artificial intelligence.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "BDI6XU5A",
@@ -32574,8 +33071,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -32623,7 +33120,7 @@
       "latest_version_id": "version:3be96d59-a494-5a9b-b8ee-2234d73cd668",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "3ZNMTJ5B",
@@ -32884,8 +33381,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -32925,7 +33422,7 @@
       "latest_version_id": "version:8f30cc62-ffe6-5001-8f4d-759391b0878d",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "V8SBEH4E",
@@ -33174,8 +33671,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -33215,7 +33712,7 @@
       "latest_version_id": "version:30132234-87e5-5656-8dd8-64f9e1ecf211",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "IPH8G42U",
@@ -33232,8 +33729,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -33273,7 +33770,7 @@
       "latest_version_id": "version:480e112e-281c-51f3-a413-690ad078b651",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "UWQGNPSE",
@@ -33290,8 +33787,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -33331,7 +33828,7 @@
       "latest_version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "DENAHEUW",
@@ -33348,8 +33845,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -33389,7 +33886,7 @@
       "latest_version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "63UVG3ZU",
@@ -33522,8 +34019,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -33563,7 +34060,7 @@
       "latest_version_id": "version:6c3f114f-3fd1-5751-a224-23bf9353cb86",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "BX2UPC4N",
@@ -33580,8 +34077,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -33621,7 +34118,7 @@
       "latest_version_id": "version:01823f24-d998-5b14-a34f-63a5598f2d8c",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "AITNC2I9",
@@ -33638,8 +34135,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -33679,7 +34176,7 @@
       "latest_version_id": "version:bc4057d5-713b-5cea-afe4-02a31ca5f6fe",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "UV9AI4X3",
@@ -33986,8 +34483,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -34027,7 +34524,7 @@
       "latest_version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "VIHZB2CS",
@@ -34334,8 +34831,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -34375,7 +34872,7 @@
       "latest_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "Z599JJFT",
@@ -34392,8 +34889,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -34433,7 +34930,7 @@
       "latest_version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "ZXVBZQGS",
@@ -34450,8 +34947,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -34491,7 +34988,7 @@
       "latest_version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "ZH6T88D5",
@@ -35204,8 +35701,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -35245,7 +35742,7 @@
       "latest_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "RZ8ADW94",
@@ -35726,8 +36223,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -35767,7 +36264,7 @@
       "latest_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "AZJW38MF",
@@ -35958,8 +36455,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -35999,7 +36496,7 @@
       "latest_version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "DHKP5FGN",
@@ -36422,8 +36919,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36463,7 +36960,7 @@
       "latest_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "RH8MC67Z",
@@ -36712,8 +37209,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36753,7 +37250,7 @@
       "latest_version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "S2DN9CFC",
@@ -36944,8 +37441,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36985,7 +37482,7 @@
       "latest_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "EFMF4449",
@@ -37002,8 +37499,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -37043,7 +37540,7 @@
       "latest_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "6N9ANHXA",
@@ -37118,8 +37615,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -37159,7 +37656,7 @@
       "latest_version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "DZ5EAPXR",
@@ -37176,8 +37673,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -37217,7 +37714,7 @@
       "latest_version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "YW3UAXFP",
@@ -37234,8 +37731,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -37275,7 +37772,7 @@
       "latest_version_id": "version:3b053ebc-d2ef-5371-bd55-10f9b4a141bb",
       "is_preferred_version": false,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "DL7G37W9",
@@ -37582,8 +38079,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -37623,7 +38120,7 @@
       "latest_version_id": "version:2c3a44a7-be34-54b7-bb25-c6cb2308b8c3",
       "is_preferred_version": false,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "NJUBGV8X",
@@ -37640,8 +38137,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -37681,7 +38178,7 @@
       "latest_version_id": "version:f3da083d-b627-5143-a5e1-52cc31dd3547",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "7B6V8MN6",
@@ -37872,8 +38369,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -37913,7 +38410,7 @@
       "latest_version_id": "version:3da2b173-7839-5e9e-9453-155987bdc1b9",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "DALR26DL",
@@ -37930,8 +38427,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -37971,7 +38468,7 @@
       "latest_version_id": "version:256dea78-665b-5a96-968d-9375dc1016f8",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "BKYNQZHQ",
@@ -37988,8 +38485,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38029,7 +38526,7 @@
       "latest_version_id": "version:ad149ad0-134b-5935-b766-37dca94bfab2",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "IYUPQPTA",
@@ -38046,8 +38543,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38087,7 +38584,7 @@
       "latest_version_id": "version:8af3af2f-f4ab-5fcc-884f-65d3a46ad101",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "H958FXZR",
@@ -38104,8 +38601,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38145,7 +38642,7 @@
       "latest_version_id": "version:f3da083d-b627-5143-a5e1-52cc31dd3547",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "MN2K9JW8",
@@ -38162,8 +38659,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38203,7 +38700,7 @@
       "latest_version_id": "version:5ac914e1-ddd5-5d98-b3d5-06ba5549d622",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "6IU5JG5Y",
@@ -38301,8 +38798,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38342,7 +38839,7 @@
       "latest_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "VYCF5NCB",
@@ -38475,8 +38972,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38516,7 +39013,7 @@
       "latest_version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "VIKH8BAI",
@@ -38533,8 +39030,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38574,7 +39071,7 @@
       "latest_version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "P285BA5N",
@@ -38591,8 +39088,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38632,7 +39129,7 @@
       "latest_version_id": "version:8abb2d32-d879-527d-9aed-2a92a575969b",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "6JAZXKEB",
@@ -38649,8 +39146,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38715,7 +39212,7 @@
       "latest_version_id": "version:4d915505-1aca-5f29-90d7-96e79b754292",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "JJLSMEQA",
@@ -38732,8 +39229,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38795,7 +39292,7 @@
       "latest_version_id": "version:6ff895ce-e9e5-5253-a9a6-12248ce31418",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "9MDIBETZ",
@@ -38812,8 +39309,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38878,7 +39375,7 @@
       "latest_version_id": "version:e388b2e6-914d-5839-aad2-5bd47afd57d1",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "R2LPR3VD",
@@ -38895,8 +39392,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38956,7 +39453,7 @@
       "latest_version_id": "version:b0858185-250b-50b6-948e-43d00d01869b",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "MQJEES7J",
@@ -38973,8 +39470,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -39037,7 +39534,7 @@
       "latest_version_id": "version:9f457384-07b7-5d2d-a7c6-56374b2be202",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "CLADZZKS",
@@ -39160,8 +39657,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -39223,7 +39720,7 @@
       "latest_version_id": "version:4fdec451-c22b-503f-8213-064f6d515fac",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "WGVC7FQ5",
@@ -39321,8 +39818,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -39382,7 +39879,7 @@
       "latest_version_id": "version:0ea58cba-175f-5046-8b5d-5a8b3ab307ab",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "UY65LIAI",
@@ -39657,8 +40154,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -39698,7 +40195,7 @@
       "latest_version_id": "version:760b8567-f41d-5576-8229-d88a557e569c",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "ET4MMZGH",
@@ -39831,8 +40328,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -39872,7 +40369,7 @@
       "latest_version_id": "version:55533b0b-5613-5347-a46f-5a3ef7be2816",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "8JR5AGRG",
@@ -39970,8 +40467,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -40011,7 +40508,7 @@
       "latest_version_id": "version:ccdb5896-271a-5b88-a272-f2b8b8cedcaf",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "Z5287FAB",
@@ -41228,7 +41725,7 @@
         "frequency": 43,
         "papers_count": 43,
         "definition": "Die kognitiven und behavioralen Fähigkeiten, die es Individuen auf allen Organisationsebenen ermöglichen, AI-Systeme kritisch zu verstehen, zu evaluieren und damit zu interagieren. Umfasst eine tripartite Struktur (Kognition-Verhalten-Einstellung) über generische AI-Konzepte, domänenspezifische Anwe",
-        "cluster": "sozial"
+        "cluster": "bridge"
       },
       {
         "id": "Algorithmic Fairness",
@@ -41820,7 +42317,7 @@
         "frequency": 2,
         "papers_count": 2,
         "definition": "Systematische Überprüfungsprozesse, die über die Identifikation offener Diskriminierung hinausgehen und umfassende Bias-Audits durchführen, insbesondere in hochrisikanten KI-Anwendungen wie Rekrutierung und Gesundheitswesen.",
-        "cluster": "bridge"
+        "cluster": "sozial"
       },
       {
         "id": "AI Competency Framework",
@@ -41980,7 +42477,7 @@
         "frequency": 2,
         "papers_count": 2,
         "definition": "Die systematische Benachteiligung bestimmter Gruppen durch KI-Systeme bei der Wissensproduktion und -vermittlung, insbesondere wie Large Language Models zu epistemischen Ungerechtigheden beitragen.",
-        "cluster": "technik"
+        "cluster": "sozial"
       },
       {
         "id": "Structural Injustice",
@@ -42084,7 +42581,7 @@
         "frequency": 2,
         "papers_count": 2,
         "definition": "Problem-solving approach involving algorithmic thinking and logical reasoning to understand how AI systems process information and make decisions, foundational to AI literacy.",
-        "cluster": "bridge"
+        "cluster": "technik"
       },
       {
         "id": "Algorithmic Fairness in NLP",
@@ -52111,7 +52608,7 @@
         "description": "Einträge mit verknüpftem Wissensdokument oder bereitstehendem Volltext",
         "type": "deterministic",
         "input": 463,
-        "output": 283,
+        "output": 362,
         "unit": "corpus_record",
         "prompt": null,
         "limitations": [
@@ -52124,10 +52621,10 @@
         "name": "Structured Knowledge Extraction",
         "description": "Kanonisch verknüpfte Wissensdokumente",
         "type": "probabilistic",
-        "input": 283,
-        "output": 269,
+        "input": 362,
+        "output": 285,
         "unit": "corpus_record",
-        "distinct_documents": 199,
+        "distinct_documents": 209,
         "prompts": {
           "stage1": "Du bist ein Experte für wissenschaftliche Literaturanalyse im Bereich KI, Soziale Arbeit und Gender Studies.\n\n# PAPER (Markdown-Format)\n[PAPER-INHALT]\n\n# AUFGABE\nExtrahiere alle relevanten Informationen und klassifiziere das Paper nach 10 Kategorien.\nAntworte im JSON-Format (kein Markdown-Codeblock, nur reines JSON).\n\n{\n  \"metadata\": {\n    \"title\": \"Vollständiger Titel des Papers\",\n    \"authors\": [\"Autor1\", \"Autor2\"],\n    \"year\": 2024,\n    \"type\": \"journalArticle|conferencePaper|report|book|thesis|workingPaper\",\n    \"language\": \"en|de|other\"\n  },\n  \"core\": {\n    \"research_question\": \"Die zentrale Forschungsfrage (1 Satz)\",\n    \"methodology\": \"Ansatz und Methoden (kurz: Empirisch/Theoretisch/Mixed/Review + spezifische Methoden)\",\n    \"key_finding\": \"Wichtigster Befund oder Beitrag (1-2 Sätze)\",\n    \"data_basis\": \"Datenbasis falls empirisch (z.B. n=125 Surveys, 50 Interviews)\"\n  },\n  \"arguments\": [\n    \"Hauptargument 1 (1-2 Sätze)\",\n    \"Hauptargument 2 (1-2 Sätze)\",\n    \"Hauptargument 3 (1-2 Sätze)\"\n  ],\n  \"categories\": {\n    \"AI_Literacies\": true,\n    \"Generative_KI\": false,\n    \"Prompting\": false,\n    \"KI_Sonstige\": true,\n    \"Soziale_Arbeit\": true,\n    \"Bias_Ungleichheit\": true,\n    \"Gender\": false,\n    \"Diversitaet\": true,\n    \"Feministisch\": false,\n    \"Fairness\": true\n  },\n  \"category_evidence\": {\n    \"AI_Literacies\": \"Direktes Zitat oder Paraphrase als Evidenz\",\n    \"KI_Sonstige\": \"Evidenz...\",\n    \"Soziale_Arbeit\": \"Evidenz...\",\n    \"Bias_Ungleichheit\": \"Evidenz...\",\n    \"Diversitaet\": \"Evidenz...\",\n    \"Fairness\": \"Evidenz...\"\n  },\n  \"references\": [\n    {\"author\": \"Buolamwini\", \"year\": 2018, \"short_title\": \"Gender Shades\"},\n    {\"author\": \"D'Ignazio & Klein\", \"year\": 2020, \"short_title\": \"Data Feminism\"},\n    {\"author\": \"Eubanks\", \"year\": 2019, \"short_title\": \"Automating Inequality\"}\n  ],\n  \"assessment\": {\n    \"domain_fit\": \"Wie relevant ist das Paper für die Schnittstelle AI/Soziale Arbeit/Gender? (1-2 Sätze)\",\n    \"unique_contribution\": \"Was ist der besond",
           "stage2_note": "Stufe 2 ist deterministisch: Python-Template.",
@@ -52157,8 +52654,8 @@
         "name": "Wissenssammlung",
         "description": "Verknüpfte Wissensdokumente; kein Maß für den Abschluss der Synthese",
         "type": "mixed",
-        "input": 269,
-        "output": 269,
+        "input": 285,
+        "output": 285,
         "unit": "corpus_record",
         "prompt": null,
         "limitations": [
@@ -52373,18 +52870,18 @@
     }
   ],
   "meta": {
-    "source_fingerprint": "sha256:d596ce1bcca6a7c9f6b768307c0acf2861b98c060348086374649fb9874fa881",
+    "source_fingerprint": "sha256:9033318334be566ac921b3a3a2bde8b1b4d3f7473d53113907d33838fd97ff12",
     "total_papers": 463,
     "corpus_record_total": 463,
     "corpus_work_total": 361,
     "aggregation_unit": "record",
-    "knowledge_docs": 199,
-    "knowledge_linked_records": 269,
+    "knowledge_docs": 209,
+    "knowledge_linked_records": 285,
     "knowledge_coverage": {
-      "fulltext_ready": 14,
-      "identity_unresolved": 67,
-      "linked": 269,
-      "source_missing": 113
+      "fulltext_ready": 77,
+      "identity_unresolved": 37,
+      "linked": 285,
+      "source_missing": 64
     },
     "human_assessed": 302,
     "llm_assessed": 326,
@@ -52436,7 +52933,7 @@
       "knowledge_docs": "distinct_knowledge_doc_paths"
     },
     "exported_journeys": 463,
-    "enriched_journeys": 201,
+    "enriched_journeys": 217,
     "divergence_items": 142,
     "concepts_count": 136,
     "pattern_distribution": {},

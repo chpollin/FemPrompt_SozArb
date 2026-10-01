@@ -5,11 +5,11 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "2edd534175136a05ba6b25f9f062ff89a275042c5aeacc815e5164c51ffa48b4",
+    "research_vault_sha256": "66d09851666d4718b57e33246d1ca34052a78570010c8d8bcf72c419801d7a7a",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "c16a2d600de40524c224335a122cc1ffc69d6d1c38c776ca37e206cf673e49d3",
+    "fulltext_manifest_sha256": "2aae636d9d09e735053b48684c983acd23211567de1d16e534110ae99aa67874",
     "work_version_registry": "corpus/work_version_registry.json",
-    "work_version_registry_sha256": "6cfd6ab33dc6e320cff9850da25522e8da3fb11c68dd82e1bfd66b28cc45d24f",
+    "work_version_registry_sha256": "36a562a6ad952bffed8b27118c2dad65ad057ec003011dbd1f2250a9ba916abb",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
@@ -20,38 +20,70 @@
     "unannotated_alias_records_covered_at_work_level": 27,
     "queued_records": 110,
     "queued_works": 101,
-    "ready_works": 25,
-    "blocked_abstract_only_works": 16,
-    "blocked_without_text_works": 60
+    "ready_works": 57,
+    "blocked_abstract_only_works": 8,
+    "blocked_without_text_works": 36
   },
   "gate": {
     "status": "partial",
     "ready_work_ids": [
+      "work:0047ae4b-70f2-53bc-ae76-87aa24cec7ac",
+      "work:0079c902-19b5-5e78-8b23-06cda81b2792",
+      "work:04a0acc2-9533-58d5-b53c-7d931f30d34f",
+      "work:0956e6b6-04d8-5572-a9a0-9018c23788a2",
       "work:0acf6fa2-7f5e-53c4-a1d1-30ab1ae8d310",
+      "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d",
       "work:0fb6cbb2-9d40-5815-9680-3e9f14f27e16",
       "work:1004a5c5-f980-5475-ad36-952eab77b516",
+      "work:1406264b-e0cd-5dde-be3b-dbfd17fb0711",
       "work:2707a834-08fe-5819-a92c-4afb47ca08c5",
+      "work:2a9dcaf7-01d3-52a7-a0a2-1a9f06dceee5",
       "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902",
+      "work:34294df8-8138-5c66-8137-b0c1a6afa3ff",
+      "work:395de8af-225b-54df-9dcd-19a709c2dcc8",
+      "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4",
+      "work:46be07be-83b3-59c5-946e-b41472558493",
+      "work:48e00f1e-369a-59d9-8883-f6d8cea1a7bc",
+      "work:4ceaffbe-54e4-5865-acd6-bffa1af7ac55",
+      "work:4ffc2ade-42d9-52a0-ab34-275b1555e19d",
       "work:5aaa355e-8f65-5850-a132-43fa3458195e",
       "work:677ea395-cc39-50b4-9979-496e0f17665d",
       "work:68b57d67-221a-5e96-8d7b-153b4b26c91a",
+      "work:6b23f3bc-ecce-551d-b7f4-8c1b00fcf117",
       "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f",
       "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314",
+      "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c",
       "work:73eda891-2e28-587a-a7fb-a950323a0dad",
+      "work:76eafb72-f674-51b7-b980-05ca1e500f58",
+      "work:78ab2081-865c-5e19-b831-19fe7c2574d0",
       "work:7eb826eb-db16-5ae7-8201-3339f108ae93",
       "work:7f8d6ea5-b9ea-55b6-8b7c-312cabf4a2a9",
       "work:88488d25-08d0-5719-8948-5bff2e7d43cf",
+      "work:aada8ec1-ce81-50d6-90c3-c9b2787d6a5b",
       "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec",
+      "work:acf1ac10-2b58-5eab-b1ff-5a139ee5afce",
       "work:ad093524-5d10-5430-838d-3360c0d710cc",
       "work:b385e0cf-739b-5592-b5f0-c9d7fd2ead0a",
       "work:b5b557a0-a651-5a88-b70c-1b05374e5b06",
+      "work:b86204c8-abca-51c2-a398-a9a78c8aba08",
+      "work:c8ae8d5b-fcdc-5cac-9969-519b06516912",
       "work:ca3ae89d-5ddd-5036-a44d-165c58097219",
+      "work:cb1293bf-0c88-59cb-ac2c-ee567a14cd25",
       "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f",
+      "work:cfe60968-caff-5fda-a10e-f204b31115c9",
       "work:d3e1b501-39ff-5531-a410-391d0ae61c77",
       "work:e2d886f7-c01f-50cc-9ce2-e65f7be00157",
+      "work:e56cb050-aad5-5a20-8994-ac450ec25bc0",
       "work:e62005d4-d179-5cef-af39-3aca00c24a04",
+      "work:e769d36a-8e1e-5b9b-9e22-301723be1c24",
       "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
-      "work:f7d29922-360f-5874-8d4c-cf7f7451f638"
+      "work:f43c0a7f-e499-5be3-8deb-a100f15cafab",
+      "work:f5657618-8172-57e3-8294-94d2e46aed62",
+      "work:f66a5701-d3b8-5c56-91b4-3dfb9ab82387",
+      "work:f7d29922-360f-5874-8d4c-cf7f7451f638",
+      "work:fa2c7082-9f5a-5906-93ad-27af9cc6fc7a",
+      "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c",
+      "work:feb70530-663a-5606-8a38-0eb3a39f35fa"
     ],
     "required_action": "Acquire and review Paper Markdown for every blocked work before its agent run."
   },
@@ -63,7 +95,40 @@
       "selected_version_id": "version:8f30cc62-ffe6-5001-8f4d-759391b0878d",
       "selected_version_type": "unknown",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "2RK458W2",
+        "work_id": "work:0047ae4b-70f2-53bc-ae76-87aa24cec7ac",
+        "bibliographic_version_id": "version:8f30cc62-ffe6-5001-8f4d-759391b0878d",
+        "source_version_id": "version:8f30cc62-ffe6-5001-8f4d-759391b0878d",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:8f30cc62-ffe6-5001-8f4d-759391b0878d",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown/Kamruzzaman_2024_Prompting.md",
+        "source_sha256": "sha256:04f108340f6fdc03f67f1bf24e8a5f145a329826ccf8b035c8e0716cf804555e",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes",
+          "doi": "10.26615/978-954-452-098-4-060"
+        },
+        "acquisition_receipt": {
+          "repo_path": "generated/markdown/Kamruzzaman_2024_Prompting.md",
+          "retrieved_at": "2026-02-03T20:46:19+01:00",
+          "sha256": "sha256:04f108340f6fdc03f67f1bf24e8a5f145a329826ccf8b035c8e0716cf804555e",
+          "route": "repository: earlier Docling conversion of an acquired PDF",
+          "note": "Original PDF Kamruzzaman_2024_Prompting.pdf is not versioned; the receipt time is the conversion time."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "unknown",
+          "preferred_version_id": "version:8f30cc62-ffe6-5001-8f4d-759391b0878d",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:8f30cc62-ffe6-5001-8f4d-759391b0878d",
@@ -100,16 +165,14 @@
       "doi": "10.26615/978-954-452-098-4-060",
       "url": "https://aclanthology.org/2025.ranlp-1.60/",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 78166,
+      "paper_source": "docs/data/fulltext/2RK458W2.md",
       "paper_source_work_id": "work:0047ae4b-70f2-53bc-ae76-87aa24cec7ac",
       "paper_source_version_id": "version:8f30cc62-ffe6-5001-8f4d-759391b0878d",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "80e08fa067143f3db9ce371aaebeca41a6f5239bc6d4d69bef6ff6605f14bd6a",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:0079c902-19b5-5e78-8b23-06cda81b2792",
@@ -118,7 +181,41 @@
       "selected_version_id": "version:f53b3141-0510-5d5c-be61-d13fd9f6dbb1",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": false,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "YW3UAXFP",
+        "work_id": "work:0079c902-19b5-5e78-8b23-06cda81b2792",
+        "bibliographic_version_id": "version:f53b3141-0510-5d5c-be61-d13fd9f6dbb1",
+        "source_version_id": "version:f53b3141-0510-5d5c-be61-d13fd9f6dbb1",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:3b053ebc-d2ef-5371-bd55-10f9b4a141bb",
+        "is_preferred_version": false,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/YW3UAXFP.md",
+        "source_sha256": "sha256:6198731e81976e9f004bcf171b89f938b84b3c63034d7bb3462229466438e358",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Feminist AI: Confronting Bias, Power, and the Promise of Justice-Oriented Technology",
+          "doi": "10.31995/jgv.2026.v17i01"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://anubooks.com/uploads/session_pdf/178230309029.%20Rashmi%20Singh%20280-291.pdf",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/YW3UAXFP.pdf",
+          "retrieved_at": "2026-10-01T14:38:06+00:00",
+          "sha256": "sha256:34e9681327455cd33c827f99a2f335fbaacf79921843da60f574981be1925ea1",
+          "route": "publisher OA (Anu Books, Journal of Global Values)",
+          "note": "Licence as stated by the source: not stated."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "pass",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:3b053ebc-d2ef-5371-bd55-10f9b4a141bb",
+          "difference_to_preferred": "version_of_record bound while the preferred version is a version_of_record: "
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:224c4f71-d68f-5240-8149-f83529c1995c",
@@ -211,17 +308,14 @@
       "doi": "10.31995/jgv.2026.v17i01",
       "url": null,
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 29093,
+      "paper_source": "docs/data/fulltext/YW3UAXFP.md",
       "paper_source_work_id": "work:0079c902-19b5-5e78-8b23-06cda81b2792",
       "paper_source_version_id": "version:f53b3141-0510-5d5c-be61-d13fd9f6dbb1",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing",
-        "preferred_version_paper_source_missing"
-      ]
+      "paper_source_sha256": "f5677f5f13b60a76d02545daeee2287742b6b73ae4b6266d58efa0441ef623a7",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:0414138e-c8db-522b-8e98-94913418d861",
@@ -286,7 +380,40 @@
       "selected_version_id": "version:01823f24-d998-5b14-a34f-63a5598f2d8c",
       "selected_version_type": "unknown",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "BX2UPC4N",
+        "work_id": "work:04a0acc2-9533-58d5-b53c-7d931f30d34f",
+        "bibliographic_version_id": "version:01823f24-d998-5b14-a34f-63a5598f2d8c",
+        "source_version_id": "version:01823f24-d998-5b14-a34f-63a5598f2d8c",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:01823f24-d998-5b14-a34f-63a5598f2d8c",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/BX2UPC4N.md",
+        "source_sha256": "sha256:4bfd003b8adaad5dc1d9425f8027d7b65cd3bd77c633b2d746f797d727414d9e",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Prompting Fairness: Integrating Causality to Debias Large Language Models"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/9f26a2d143a227376dff99a279f93f99-Paper-Conference.pdf",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/BX2UPC4N.pdf",
+          "retrieved_at": "2026-10-01T14:38:53+00:00",
+          "sha256": "sha256:dcab1f5608ecea22c6b498ac4cf4ee79474767d4d979c71dc2224ab92d0dcef5",
+          "route": "publisher OA (ICLR proceedings)",
+          "note": "Licence as stated by the source: not stated (ICLR proceedings, open access)."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_registered",
+          "year": "not_printed"
+        },
+        "version_relation": {
+          "source_version_type": "unknown",
+          "preferred_version_id": "version:01823f24-d998-5b14-a34f-63a5598f2d8c",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:01823f24-d998-5b14-a34f-63a5598f2d8c",
@@ -320,16 +447,14 @@
       "doi": null,
       "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/9f26a2d143a227376dff99a279f93f99-Abstract-Conference.html",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 93717,
+      "paper_source": "docs/data/fulltext/BX2UPC4N.md",
       "paper_source_work_id": "work:04a0acc2-9533-58d5-b53c-7d931f30d34f",
       "paper_source_version_id": "version:01823f24-d998-5b14-a34f-63a5598f2d8c",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "e333cb430978bc1ea9f5d1ddfd7a2f072054fa0dcb4c780a7edcb422305f37bc",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:07d0801a-2468-5738-b788-0e265e95976a",
@@ -394,7 +519,41 @@
       "selected_version_id": "version:0ca609ef-3735-5101-918e-b8053c7ff43d",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "DALR26DL",
+        "work_id": "work:0956e6b6-04d8-5572-a9a0-9018c23788a2",
+        "bibliographic_version_id": "version:0ca609ef-3735-5101-918e-b8053c7ff43d",
+        "source_version_id": "version:0ca609ef-3735-5101-918e-b8053c7ff43d",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:0ca609ef-3735-5101-918e-b8053c7ff43d",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/DALR26DL.md",
+        "source_sha256": "sha256:bd3dadf82d5ebbc30fa814d19c210f9f5546787b8b984c6ed6982758203004d0",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "\"Grillz on a hijabi\": Intersectional Identities in Fostering Critical AI Literacy",
+          "doi": "10.1145/3769994.3770037"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://dl.acm.org/doi/pdf/10.1145/3769994.3770037",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/DALR26DL.pdf",
+          "retrieved_at": "2026-10-01T14:34:36+00:00",
+          "sha256": "sha256:485633d428f316413028d28a179b746b7387319a5f07c60046da060e2fe3e798",
+          "route": "unpaywall:publisher (ACM Digital Library)",
+          "note": "Licence as stated by the source: cc-by."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "pass",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:0ca609ef-3735-5101-918e-b8053c7ff43d",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:0ca609ef-3735-5101-918e-b8053c7ff43d",
@@ -467,16 +626,14 @@
       "doi": "10.1145/3769994.3770037",
       "url": "https://doi.org/10.1145/3769994.3770037",
       "abstract_available": true,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 64682,
+      "paper_source": "docs/data/fulltext/DALR26DL.md",
       "paper_source_work_id": "work:0956e6b6-04d8-5572-a9a0-9018c23788a2",
       "paper_source_version_id": "version:0ca609ef-3735-5101-918e-b8053c7ff43d",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "a50ab3c38a8d85a1ea2dfdbe3d3bcfb9df23d32d858dbf8c76b93f4d8b721644",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:0acf6fa2-7f5e-53c4-a1d1-30ab1ae8d310",
@@ -557,7 +714,41 @@
       "selected_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "8YZKPS42",
+        "work_id": "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d",
+        "bibliographic_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+        "source_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/eb3406e6b996a77368bd.md",
+        "source_sha256": "sha256:79016b7af0d493ce7491226cd171ae860548f04d4aa577bb0014abb191666cdc",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Beyond inclusion: feminist AI for transformative justice in STEM",
+          "doi": "10.1007/s43681-026-01161-9"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://link.springer.com/content/pdf/10.1007/s43681-026-01161-9.pdf",
+          "repo_path": "generated/pdfs/codex-websearch-2026/eb3406e6b996a77368bd.pdf",
+          "retrieved_at": "2026-08-24T15:24:08.796534+00:00",
+          "sha256": "sha256:f2ac629b87a81e89f507977aa2db4f635279175309f009874bc4e7c921333deb",
+          "route": "codex-websearch-2026 acquisition",
+          "note": "Original PDF stays local; the acquisition manifest records its URL and digest."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "not_printed",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
@@ -627,16 +818,14 @@
       "doi": "10.1007/s43681-026-01161-9",
       "url": "https://link.springer.com/article/10.1007/s43681-026-01161-9",
       "abstract_available": true,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 49700,
+      "paper_source": "docs/data/fulltext/8YZKPS42.md",
       "paper_source_work_id": "work:0b69246b-4c05-5e2f-a22e-1416ec893b1d",
       "paper_source_version_id": "version:47a79a31-c2f5-5529-ac37-3681eb291579",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "1f82301f742e7d1234dd349521466414a1844eeed57241e5969f3afab99421cc",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:0fb6cbb2-9d40-5815-9680-3e9f14f27e16",
@@ -789,7 +978,41 @@
       "selected_version_id": "version:bc8447b9-95ae-50fd-8bfd-b216a224d60d",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "H958FXZR",
+        "work_id": "work:1406264b-e0cd-5dde-be3b-dbfd17fb0711",
+        "bibliographic_version_id": "version:bc8447b9-95ae-50fd-8bfd-b216a224d60d",
+        "source_version_id": "version:bc8447b9-95ae-50fd-8bfd-b216a224d60d",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:bc8447b9-95ae-50fd-8bfd-b216a224d60d",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/NJUBGV8X.md",
+        "source_sha256": "sha256:14de97668c936d2fdf3b71c17b1bcaca97dfce9d2411cba23da123967e95de3e",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Intersectional biases in narratives produced by open-ended prompting of generative language models",
+          "doi": "10.1038/s41467-025-68004-9"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://www.nature.com/articles/s41467-025-68004-9.pdf",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/NJUBGV8X.pdf",
+          "retrieved_at": "2026-10-01T14:29:35+00:00",
+          "sha256": "sha256:7001e15b58e1f4d6ee63eccc96ef0851c46774d46d334a10e22f3b5a76fba498",
+          "route": "unpaywall:publisher (Nature Communications)",
+          "note": "Licence as stated by the source: cc-by-nc-nd."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "pass",
+          "year": "not_printed"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:bc8447b9-95ae-50fd-8bfd-b216a224d60d",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:bc8447b9-95ae-50fd-8bfd-b216a224d60d",
@@ -891,16 +1114,14 @@
       "doi": "10.1038/s41467-025-68004-9",
       "url": "https://www.nature.com/articles/s41467-025-68004-9",
       "abstract_available": true,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 127884,
+      "paper_source": "docs/data/fulltext/H958FXZR.md",
       "paper_source_work_id": "work:1406264b-e0cd-5dde-be3b-dbfd17fb0711",
       "paper_source_version_id": "version:bc8447b9-95ae-50fd-8bfd-b216a224d60d",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "46d56c32ffaf271f87cc1e043fe14f3925876f40464d76acd9882374a1ce9eb1",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:14ff652e-92a8-5982-bf91-a64c26254d13",
@@ -1091,7 +1312,41 @@
       "selected_version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "5WNZMJJQ",
+        "work_id": "work:2a9dcaf7-01d3-52a7-a0a2-1a9f06dceee5",
+        "bibliographic_version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
+        "source_version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/e98f1e62b53a093069fc.md",
+        "source_sha256": "sha256:07336af6333041c9d8e062e2d0c6a952b9b0efd14573bb01715f407b22b20805",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Artificial Intelligence and Case-Based Learning in Social Work Education: Pedagogical Considerations and Future Directions",
+          "doi": "10.55121/jele.v2i1.1050"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://research.gold.ac.uk/id/eprint/40392/2/JELE-1050-v2i1-129-141.pdf",
+          "repo_path": "generated/pdfs/codex-websearch-2026/e98f1e62b53a093069fc.pdf",
+          "retrieved_at": "2026-08-24T15:24:08.796534+00:00",
+          "sha256": "sha256:460ea78abfca21929015d9268bdc01befd9224f68b849acb0a65bc28ff548655",
+          "route": "codex-websearch-2026 acquisition",
+          "note": "Original PDF stays local; the acquisition manifest records its URL and digest."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
@@ -1128,16 +1383,14 @@
       "doi": "10.55121/jele.v2i1.1050",
       "url": "https://doi.org/10.55121/jele.v2i1.1050",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 60901,
+      "paper_source": "docs/data/fulltext/5WNZMJJQ.md",
       "paper_source_work_id": "work:2a9dcaf7-01d3-52a7-a0a2-1a9f06dceee5",
       "paper_source_version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "3238c4f923a5b745f065cadf465788e2350d7ebde3e58c4530bee7e0fe9cda1f",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902",
@@ -1273,7 +1526,41 @@
       "selected_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "KJWMQSMN",
+        "work_id": "work:34294df8-8138-5c66-8137-b0c1a6afa3ff",
+        "bibliographic_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+        "source_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/014fa29a31624d80e530.md",
+        "source_sha256": "sha256:56072f3397613215e25c4c4792143bc82739e25c1c12feae65d0ad6b4e8465bd",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Toward substantive intersectional algorithmic fairness: desiderata for a feminist approach",
+          "doi": "10.1007/s43681-025-00926-y"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://link.springer.com/content/pdf/10.1007/s43681-025-00926-y.pdf",
+          "repo_path": "generated/pdfs/codex-websearch-2026/014fa29a31624d80e530.pdf",
+          "retrieved_at": "2026-08-24T15:24:08.796534+00:00",
+          "sha256": "sha256:c629305371b4b968b847d1a2b5b165211f2871a4914a684389a8254e8dbe136c",
+          "route": "codex-websearch-2026 acquisition",
+          "note": "Original PDF stays local; the acquisition manifest records its URL and digest."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
@@ -1310,16 +1597,14 @@
       "doi": "10.1007/s43681-025-00926-y",
       "url": "https://link.springer.com/article/10.1007/s43681-025-00926-y",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 120633,
+      "paper_source": "docs/data/fulltext/KJWMQSMN.md",
       "paper_source_work_id": "work:34294df8-8138-5c66-8137-b0c1a6afa3ff",
       "paper_source_version_id": "version:7549e3c1-700e-5337-8718-3d08f77c0685",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "7e13f5003cbd37ecb4f911168ded39c9ee39a9d1681ad471dd7b81f649a93fc2",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:38dda3f3-a302-5518-ae71-9d25ce9728c7",
@@ -1384,7 +1669,41 @@
       "selected_version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "VIKH8BAI",
+        "work_id": "work:395de8af-225b-54df-9dcd-19a709c2dcc8",
+        "bibliographic_version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
+        "source_version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/WUMNU3W5.md",
+        "source_sha256": "sha256:1d34b8ab1515745fddb669a847ad9bf821ca35b809e266da830e08990838a428",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "AI literacy and its implications for prompt engineering strategies",
+          "doi": "10.1016/j.caeai.2024.100225"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://alexandria.unisg.ch/bitstreams/18883c45-82eb-47e9-b87a-76f35a7c1446/download",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/WUMNU3W5.pdf",
+          "retrieved_at": "2026-10-01T14:32:34+00:00",
+          "sha256": "sha256:d75cd33ebeeb807e00e0c8ff845c6b4590e00818eca9ccdc328261c9574ce11f",
+          "route": "repository:Alexandria (University of St.Gallen)",
+          "note": "Licence as stated by the source: other-oa (repository); article cc-by per Unpaywall."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "pass",
+          "year": "not_registered"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
@@ -1423,16 +1742,14 @@
       "doi": "10.1016/j.caeai.2024.100225",
       "url": "https://linkinghub.elsevier.com/retrieve/pii/S2666920X24000262",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 107094,
+      "paper_source": "docs/data/fulltext/VIKH8BAI.md",
       "paper_source_work_id": "work:395de8af-225b-54df-9dcd-19a709c2dcc8",
       "paper_source_version_id": "version:7911be25-05c3-5920-b48b-b1f30942d5a2",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "38c36403350d666dcb15562b601b4991ac934cc7871ca4afa95b7f7a3d77854b",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:3b02e536-2608-5664-8375-e41cd0501530",
@@ -1552,7 +1869,41 @@
       "selected_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "EFMF4449",
+        "work_id": "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4",
+        "bibliographic_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+        "source_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/20972ab37764965190de.md",
+        "source_sha256": "sha256:f354295d2eb7911bc5e772ecd89db25a96dfbf53b9f2e459c136fd9be76e09a2",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Teachers’ perceptions of generative AI in gender-inclusive STEM education: a grounded theory study",
+          "doi": "10.1007/s10639-026-13908-2"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://link.springer.com/content/pdf/10.1007/s10639-026-13908-2.pdf",
+          "repo_path": "generated/pdfs/codex-websearch-2026/20972ab37764965190de.pdf",
+          "retrieved_at": "2026-08-24T15:24:08.796534+00:00",
+          "sha256": "sha256:48eb49e0e39d1668614de1906352e949b9453b736d5d6803ff701b7791478563",
+          "route": "codex-websearch-2026 acquisition",
+          "note": "Original PDF stays local; the acquisition manifest records its URL and digest."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
@@ -1589,16 +1940,14 @@
       "doi": "10.1007/s10639-026-13908-2",
       "url": "https://link.springer.com/article/10.1007/s10639-026-13908-2",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 113959,
+      "paper_source": "docs/data/fulltext/EFMF4449.md",
       "paper_source_work_id": "work:45373e2c-7027-53c3-b5c6-fe3200ae53c4",
       "paper_source_version_id": "version:d73695ad-f9cd-5319-9a3b-bbb4562e4d60",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "91c906c15a907076ebf6275c5e759f3f5bbc54f248469685fd780f1372e6a4c1",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:45d9af93-79ae-5cea-834f-b465c751fc8d",
@@ -1663,7 +2012,41 @@
       "selected_version_id": "version:ad149ad0-134b-5935-b766-37dca94bfab2",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "BKYNQZHQ",
+        "work_id": "work:46be07be-83b3-59c5-946e-b41472558493",
+        "bibliographic_version_id": "version:ad149ad0-134b-5935-b766-37dca94bfab2",
+        "source_version_id": "version:ad149ad0-134b-5935-b766-37dca94bfab2",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:ad149ad0-134b-5935-b766-37dca94bfab2",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/BKYNQZHQ.md",
+        "source_sha256": "sha256:5438b3fd3e36f5b0901abef9968de1da15e0d9427a63e2e0bc89fc2aaf918409",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "A Critique of Human-Centred AI: A Plea for a Feminist AI Framework (FAIF)",
+          "doi": "10.1007/s00146-025-02556-8"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://link.springer.com/content/pdf/10.1007/s00146-025-02556-8.pdf",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/BKYNQZHQ.pdf",
+          "retrieved_at": "2026-10-01T14:29:43+00:00",
+          "sha256": "sha256:d5be6b7c382cb27ae27bc8abd4059b6a570fe8a1d85dc7a2f620ee7d2c3031e9",
+          "route": "unpaywall:publisher (Springer)",
+          "note": "Licence as stated by the source: cc-by."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "not_printed",
+          "year": "not_printed"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:ad149ad0-134b-5935-b766-37dca94bfab2",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:5f86fef0-622e-5622-968b-0138cd223c27",
@@ -1733,16 +2116,14 @@
       "doi": "10.1007/s00146-025-02556-8",
       "url": "https://link.springer.com/article/10.1007/s00146-025-02556-8",
       "abstract_available": true,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 66213,
+      "paper_source": "docs/data/fulltext/BKYNQZHQ.md",
       "paper_source_work_id": "work:46be07be-83b3-59c5-946e-b41472558493",
       "paper_source_version_id": "version:ad149ad0-134b-5935-b766-37dca94bfab2",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "74fbb580d5b781d9c23ede31db5a9d1da179b7592a8627163583d409a5afd04c",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:48e00f1e-369a-59d9-8883-f6d8cea1a7bc",
@@ -1751,7 +2132,41 @@
       "selected_version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "9AVG53AQ",
+        "work_id": "work:48e00f1e-369a-59d9-8883-f6d8cea1a7bc",
+        "bibliographic_version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
+        "source_version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/9AVG53AQ.md",
+        "source_sha256": "sha256:e916bd928b80eb921cdd3a901975a72f87dbff559b6233063862f008ab98f611",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "AI-Generated Images of Social Workers in Healthcare and Implications for Professional Identity",
+          "doi": "10.1080/0312407x.2026.2627220"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/0312407X.2026.2627220",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/9AVG53AQ.pdf",
+          "retrieved_at": "2026-10-01T14:34:18+00:00",
+          "sha256": "sha256:cbf07c6a977c1763a968498732d81d66fee4291cc80a652ead20a3eb88443f5f",
+          "route": "unpaywall:publisher (Taylor & Francis)",
+          "note": "Licence as stated by the source: cc-by."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "pass",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
@@ -1788,16 +2203,14 @@
       "doi": "10.1080/0312407x.2026.2627220",
       "url": "https://doi.org/10.1080/0312407X.2026.2627220",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 47268,
+      "paper_source": "docs/data/fulltext/9AVG53AQ.md",
       "paper_source_work_id": "work:48e00f1e-369a-59d9-8883-f6d8cea1a7bc",
       "paper_source_version_id": "version:3cc1ce6f-015b-536d-ba38-17daac2d04db",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "2c421c157cd8696611b69db1efbf98b7de3fcdc8c23781eb54132f1cfcf93011",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:4ceaffbe-54e4-5865-acd6-bffa1af7ac55",
@@ -1806,7 +2219,41 @@
       "selected_version_id": "version:fd1523e6-e133-59e5-897b-cc675bb0ca36",
       "selected_version_type": "preprint",
       "selected_version_is_preferred": false,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "PS8KVDVS",
+        "work_id": "work:4ceaffbe-54e4-5865-acd6-bffa1af7ac55",
+        "bibliographic_version_id": "version:fd1523e6-e133-59e5-897b-cc675bb0ca36",
+        "source_version_id": "version:fd1523e6-e133-59e5-897b-cc675bb0ca36",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:2c3a44a7-be34-54b7-bb25-c6cb2308b8c3",
+        "is_preferred_version": false,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/PS8KVDVS.md",
+        "source_sha256": "sha256:70d81b26d7570b8ae375cf2d542eb36e035c0848b445af95b31d16aeb4573636",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Intersectional Fairness in Large Language Models",
+          "doi": "10.48550/arxiv.2604.20677"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://arxiv.org/pdf/2604.20677",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/PS8KVDVS.pdf",
+          "retrieved_at": "2026-10-01T14:29:33+00:00",
+          "sha256": "sha256:e75565902ef9a9543295fc6185d04e2394c0529537a7d7075c34a428a14d22f2",
+          "route": "arxiv",
+          "note": "Licence as stated by the source: arXiv non-exclusive distribution licence 1.0."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "not_printed",
+          "year": "not_printed"
+        },
+        "version_relation": {
+          "source_version_type": "preprint",
+          "preferred_version_id": "version:2c3a44a7-be34-54b7-bb25-c6cb2308b8c3",
+          "difference_to_preferred": "preprint bound while the preferred version is a preprint: "
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:2c3a44a7-be34-54b7-bb25-c6cb2308b8c3",
@@ -1872,17 +2319,14 @@
       "doi": "10.48550/arXiv.2604.20677",
       "url": null,
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 101444,
+      "paper_source": "docs/data/fulltext/PS8KVDVS.md",
       "paper_source_work_id": "work:4ceaffbe-54e4-5865-acd6-bffa1af7ac55",
       "paper_source_version_id": "version:fd1523e6-e133-59e5-897b-cc675bb0ca36",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing",
-        "preferred_version_paper_source_missing"
-      ]
+      "paper_source_sha256": "07c551840a8bc0e365cb68db2dcc1f5c3ee93fa1ed7f559712800ace58e31bce",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:4ffc2ade-42d9-52a0-ab34-275b1555e19d",
@@ -1891,7 +2335,41 @@
       "selected_version_id": "version:480e112e-281c-51f3-a413-690ad078b651",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "IPH8G42U",
+        "work_id": "work:4ffc2ade-42d9-52a0-ab34-275b1555e19d",
+        "bibliographic_version_id": "version:480e112e-281c-51f3-a413-690ad078b651",
+        "source_version_id": "version:480e112e-281c-51f3-a413-690ad078b651",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:480e112e-281c-51f3-a413-690ad078b651",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/IPH8G42U.md",
+        "source_sha256": "sha256:7a75f421125cfacf6fc5487f97a1a9039d8438867be508550dccb7f55019bc0e",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Paying the Cognitive Debt: An Experiential Learning Framework for Integrating AI in Social Work Education",
+          "doi": "10.3390/educsci15101304"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://mdpi-res.com/d_attachment/education/education-15-01304/article_deploy/education-15-01304.pdf",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/IPH8G42U.pdf",
+          "retrieved_at": "2026-10-01T14:40:19+00:00",
+          "sha256": "sha256:ca70bd41718454d1acf4711eac4b94e218478a9743d3b6e8a41d146fa6dcca9a",
+          "route": "publisher OA (MDPI, via mdpi-res.com file host)",
+          "note": "Licence as stated by the source: cc-by."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "pass",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:480e112e-281c-51f3-a413-690ad078b651",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:480e112e-281c-51f3-a413-690ad078b651",
@@ -1928,16 +2406,14 @@
       "doi": "10.3390/educsci15101304",
       "url": "https://www.mdpi.com/2227-7102/15/10/1304",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 69185,
+      "paper_source": "docs/data/fulltext/IPH8G42U.md",
       "paper_source_work_id": "work:4ffc2ade-42d9-52a0-ab34-275b1555e19d",
       "paper_source_version_id": "version:480e112e-281c-51f3-a413-690ad078b651",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "326182888ffe20a5d3fd775466134ada3864460f8f0202d10465f6531c44e785",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:5214816c-608d-55ba-98f3-2a3a3357b7ac",
@@ -2386,7 +2862,40 @@
       "selected_version_id": "version:6c3f114f-3fd1-5751-a224-23bf9353cb86",
       "selected_version_type": "preprint",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "Z6QC4HW9",
+        "work_id": "work:6b23f3bc-ecce-551d-b7f4-8c1b00fcf117",
+        "bibliographic_version_id": "version:6c3f114f-3fd1-5751-a224-23bf9353cb86",
+        "source_version_id": "version:6c3f114f-3fd1-5751-a224-23bf9353cb86",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:6c3f114f-3fd1-5751-a224-23bf9353cb86",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/Z6QC4HW9.md",
+        "source_sha256": "sha256:7960e9fd82cc875b8f6e6a9433fa8a8a7b335bf6be16dcb6c659abe5abf7cc01",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Gender Bias in LLM Hiring Decisions: Evidence from a Japanese Context and Evaluation of Mitigation Strategies"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://arxiv.org/pdf/2606.18649",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/Z6QC4HW9.pdf",
+          "retrieved_at": "2026-10-01T14:29:25+00:00",
+          "sha256": "sha256:9d9ed39eebd29e392524fdfd2d1541171ef77ad4f40183315718437e9f9ab19c",
+          "route": "arxiv",
+          "note": "Licence as stated by the source: arXiv non-exclusive distribution licence 1.0."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_registered",
+          "year": "not_printed"
+        },
+        "version_relation": {
+          "source_version_type": "preprint",
+          "preferred_version_id": "version:6c3f114f-3fd1-5751-a224-23bf9353cb86",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:6c3f114f-3fd1-5751-a224-23bf9353cb86",
@@ -2420,16 +2929,14 @@
       "doi": null,
       "url": "https://arxiv.org/abs/2606.18649",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 47183,
+      "paper_source": "docs/data/fulltext/Z6QC4HW9.md",
       "paper_source_work_id": "work:6b23f3bc-ecce-551d-b7f4-8c1b00fcf117",
       "paper_source_version_id": "version:6c3f114f-3fd1-5751-a224-23bf9353cb86",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "7633fe85da280c2b0ac3be03d1c5b32cf390d8174639e40b2005a58c9ab2643d",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:6c8a1072-fcca-5fbd-8611-08774ef0ad7f",
@@ -2697,7 +3204,41 @@
       "selected_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "XRQE5VM2",
+        "work_id": "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c",
+        "bibliographic_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+        "source_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/8a561b548035e4512084.md",
+        "source_sha256": "sha256:da5913c3c50c6326b42d669767b5dd85b232197827c3859e1e1bd62618cb8cc8",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "IA, salud mental y género: Un mapeo sistemático de las ciencias sociales y humanas en América Latina",
+          "doi": "10.35362/issn.1850-0013-1259"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://ojs.revistacts.net/index.php/CTS/article/download/1259/947",
+          "repo_path": "generated/pdfs/codex-websearch-2026/8a561b548035e4512084.pdf",
+          "retrieved_at": "2026-08-24T15:24:08.796534+00:00",
+          "sha256": "sha256:b4a4ab9ef3b805abcb3134961dc7c1cbbf97180631ec5179c3104fe611e92258",
+          "route": "codex-websearch-2026 acquisition",
+          "note": "Original PDF stays local; the acquisition manifest records its URL and digest."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
@@ -2734,16 +3275,14 @@
       "doi": "10.35362/issn.1850-0013-1259",
       "url": "https://ojs.revistacts.net/index.php/CTS/article/view/1259",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 84889,
+      "paper_source": "docs/data/fulltext/XRQE5VM2.md",
       "paper_source_work_id": "work:7350cc88-47a1-5497-8c7e-14f2ca8aae6c",
       "paper_source_version_id": "version:d3d54d63-7ff2-5b49-9ff0-fbc135706e03",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "87adc43fa7b96952fcd6ad8b159b2e116df16485a3c7fc658b2f291bcd69df7e",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad",
@@ -2824,7 +3363,41 @@
       "selected_version_id": "version:5ac914e1-ddd5-5d98-b3d5-06ba5549d622",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "MN2K9JW8",
+        "work_id": "work:76eafb72-f674-51b7-b980-05ca1e500f58",
+        "bibliographic_version_id": "version:5ac914e1-ddd5-5d98-b3d5-06ba5549d622",
+        "source_version_id": "version:5ac914e1-ddd5-5d98-b3d5-06ba5549d622",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:5ac914e1-ddd5-5d98-b3d5-06ba5549d622",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/MN2K9JW8.md",
+        "source_sha256": "sha256:fd90e185c4075775ab32091e4de72f616cd2d2d8cb6ef271981419ac3ed43763",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Verbesserung der KI-Literacy von Lehrenden im Hochschulbereich",
+          "doi": "10.21240/zfhe/sh-ki-1/09"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://www.zfhe.at/index.php/zfhe/article/download/2086/1324",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/MN2K9JW8.pdf",
+          "retrieved_at": "2026-10-01T14:35:34+00:00",
+          "sha256": "sha256:1bb1494821b77910711d07536ba951951219f14759bbffc7c41f440c78ad56fa",
+          "route": "publisher OA (Zeitschrift für Hochschulentwicklung)",
+          "note": "Licence as stated by the source: cc-by."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "not_printed",
+          "year": "not_printed"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:5ac914e1-ddd5-5d98-b3d5-06ba5549d622",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:5ac914e1-ddd5-5d98-b3d5-06ba5549d622",
@@ -2862,16 +3435,14 @@
       "doi": "10.21240/zfhe/SH-KI-1/09",
       "url": "https://zfhe.at/index.php/zfhe/article/view/2086",
       "abstract_available": true,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 33814,
+      "paper_source": "docs/data/fulltext/MN2K9JW8.md",
       "paper_source_work_id": "work:76eafb72-f674-51b7-b980-05ca1e500f58",
       "paper_source_version_id": "version:5ac914e1-ddd5-5d98-b3d5-06ba5549d622",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "b10512dc27c838394385734b12b98e37f23a78ba7b5eb2fe05257f539030b88a",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:78ab2081-865c-5e19-b831-19fe7c2574d0",
@@ -2880,7 +3451,40 @@
       "selected_version_id": "version:bc4057d5-713b-5cea-afe4-02a31ca5f6fe",
       "selected_version_type": "unknown",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "AITNC2I9",
+        "work_id": "work:78ab2081-865c-5e19-b831-19fe7c2574d0",
+        "bibliographic_version_id": "version:bc4057d5-713b-5cea-afe4-02a31ca5f6fe",
+        "source_version_id": "version:bc4057d5-713b-5cea-afe4-02a31ca5f6fe",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:bc4057d5-713b-5cea-afe4-02a31ca5f6fe",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/AITNC2I9.md",
+        "source_sha256": "sha256:90730070faa208da15196769ebe70b8c3c411d6dca549afdc8020fbea1444fbf",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Toward True Neutrality: Evaluating Inference-Time Debiasing Strategies for Gender Coreference Resolution in LLMs"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://aclanthology.org/2025.paclic-1.19.pdf",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/AITNC2I9.pdf",
+          "retrieved_at": "2026-10-01T14:29:27+00:00",
+          "sha256": "sha256:4662ccf9b7647acdb75c219f77942052de828ce3a006badee58590a4a3e4bc25",
+          "route": "publisher OA (ACL Anthology)",
+          "note": "Licence as stated by the source: not printed; ACL Anthology states CC BY 4.0 as its default licence."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_registered",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "unknown",
+          "preferred_version_id": "version:bc4057d5-713b-5cea-afe4-02a31ca5f6fe",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:bc4057d5-713b-5cea-afe4-02a31ca5f6fe",
@@ -2914,16 +3518,14 @@
       "doi": null,
       "url": "https://aclanthology.org/2025.paclic-1.19/",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 39874,
+      "paper_source": "docs/data/fulltext/AITNC2I9.md",
       "paper_source_work_id": "work:78ab2081-865c-5e19-b831-19fe7c2574d0",
       "paper_source_version_id": "version:bc4057d5-713b-5cea-afe4-02a31ca5f6fe",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "b45eddb9b05b1a44deb272ac9c5c7f18ec6e5efeae3aec4b08e0777e31d41ddc",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:7932a8e0-53aa-5105-9d0a-86603d8aff25",
@@ -3892,10 +4494,44 @@
       "work_id": "work:aada8ec1-ce81-50d6-90c3-c9b2787d6a5b",
       "preferred_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
       "latest_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
-      "selected_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
-      "selected_version_type": "version_of_record",
-      "selected_version_is_preferred": true,
-      "source_binding": null,
+      "selected_version_id": "version:2fa16e8f-a023-5db8-9f4a-b2c714408802",
+      "selected_version_type": "unknown",
+      "selected_version_is_preferred": false,
+      "source_binding": {
+        "record_id": "65NGEK5Q",
+        "work_id": "work:aada8ec1-ce81-50d6-90c3-c9b2787d6a5b",
+        "bibliographic_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
+        "source_version_id": "version:2fa16e8f-a023-5db8-9f4a-b2c714408802",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
+        "is_preferred_version": false,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/5fa4fb41e396f11b2c6e.md",
+        "source_sha256": "sha256:361a83e825ea840f7618cee194d5767844a61f891d3f10446c789f4486212bd3",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+          "doi": "10.1080/26408066.2026.2616711"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://digitalcollection.zhaw.ch/server/api/core/bitstreams/9e397e56-2222-4079-9708-14d82f6e45d1/content",
+          "repo_path": "generated/pdfs/codex-websearch-2026/5fa4fb41e396f11b2c6e.pdf",
+          "retrieved_at": "2026-08-24T15:24:08.796534+00:00",
+          "sha256": "sha256:03ad5369c4899a37c0727718f4e91474cb3d44f4e9c13d6300445f239af1b27d",
+          "route": "codex-websearch-2026 acquisition",
+          "note": "Original PDF stays local; the acquisition manifest records its URL and digest."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "not_registered"
+        },
+        "version_relation": {
+          "source_version_type": "unknown",
+          "preferred_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
+          "difference_to_preferred": "unknown bound while the preferred version is a version_of_record: author-layout manuscript without journal pagination or copy-editing; stage not stated by the copy"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
@@ -3918,9 +4554,38 @@
           "access_status": "unknown",
           "landing_url": "https://doi.org/10.1080/26408066.2026.2616711",
           "fulltext_url": "",
-          "relations": [],
+          "relations": [
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:2fa16e8f-a023-5db8-9f4a-b2c714408802"
+            }
+          ],
           "is_preferred": true,
           "is_latest": true
+        },
+        {
+          "version_id": "version:2fa16e8f-a023-5db8-9f4a-b2c714408802",
+          "version_type": "unknown",
+          "version_date": "",
+          "identifiers": {
+            "url": [
+              "https://digitalcollection.zhaw.ch/handle/11475/35186"
+            ]
+          },
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "https://digitalcollection.zhaw.ch/handle/11475/35186",
+          "fulltext_url": "https://digitalcollection.zhaw.ch/server/api/core/bitstreams/9e397e56-2222-4079-9708-14d82f6e45d1/content",
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748"
+            }
+          ],
+          "is_preferred": false,
+          "is_latest": false
         }
       ],
       "representative_record_id": "65NGEK5Q",
@@ -3932,16 +4597,14 @@
       "doi": "10.1080/26408066.2026.2616711",
       "url": "https://doi.org/10.1080/26408066.2026.2616711",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 72345,
+      "paper_source": "docs/data/fulltext/65NGEK5Q.md",
       "paper_source_work_id": "work:aada8ec1-ce81-50d6-90c3-c9b2787d6a5b",
-      "paper_source_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_version_id": "version:2fa16e8f-a023-5db8-9f4a-b2c714408802",
+      "paper_source_sha256": "71d041cb9d3b096949ee0feec89d55e8878c7e68c576c450ec66bb3181a37756",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec",
@@ -4022,7 +4685,40 @@
       "selected_version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
       "selected_version_type": "unknown",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "TFMETSCH",
+        "work_id": "work:acf1ac10-2b58-5eab-b1ff-5a139ee5afce",
+        "bibliographic_version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
+        "source_version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/TFMETSCH.md",
+        "source_sha256": "sha256:a307529cf5c1f25fcbc397243c827b342692612464f7bc37accc550d6a0867c5",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/file/71c3451f6cd6a4f82bb822db25cea4fd-Paper-Conference.pdf",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/TFMETSCH.pdf",
+          "retrieved_at": "2026-10-01T14:38:49+00:00",
+          "sha256": "sha256:9d8a2f17c5902db2e71654bb813ba384660d81bc957e01ff1640bad1ac8309fe",
+          "route": "publisher OA (ICLR proceedings)",
+          "note": "Licence as stated by the source: not stated (ICLR proceedings, open access)."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_registered",
+          "year": "not_printed"
+        },
+        "version_relation": {
+          "source_version_type": "unknown",
+          "preferred_version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
@@ -4056,16 +4752,14 @@
       "doi": null,
       "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c3451f6cd6a4f82bb822db25cea4fd-Abstract-Conference.html",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 91941,
+      "paper_source": "docs/data/fulltext/TFMETSCH.md",
       "paper_source_work_id": "work:acf1ac10-2b58-5eab-b1ff-5a139ee5afce",
       "paper_source_version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "df4e879da3e99484237fa7732cc5f86069ef76e40af584c9735b59ef0bca07c8",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:ad093524-5d10-5430-838d-3360c0d710cc",
@@ -4451,7 +5145,41 @@
       "selected_version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "UWQGNPSE",
+        "work_id": "work:b86204c8-abca-51c2-a398-a9a78c8aba08",
+        "bibliographic_version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
+        "source_version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/UWQGNPSE.md",
+        "source_sha256": "sha256:e42dc1add2fa94bde7a3f6c2c8db410516845e2e547e91f9460c83eb9c454da4",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Rethinking Prompt-based Debiasing in Large Language Model",
+          "doi": "10.18653/v1/2025.findings-acl.1361"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://aclanthology.org/2025.findings-acl.1361.pdf",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/UWQGNPSE.pdf",
+          "retrieved_at": "2026-10-01T14:29:20+00:00",
+          "sha256": "sha256:57d9f2924d5a878498acc478b0cce4f799b648bf04824f7a8698328c43dec5f7",
+          "route": "publisher OA (ACL Anthology)",
+          "note": "Licence as stated by the source: not printed; ACL Anthology states CC BY 4.0 as its default licence."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
@@ -4488,16 +5216,14 @@
       "doi": "10.18653/v1/2025.findings-acl.1361",
       "url": "https://aclanthology.org/2025.findings-acl.1361/",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 68279,
+      "paper_source": "docs/data/fulltext/UWQGNPSE.md",
       "paper_source_work_id": "work:b86204c8-abca-51c2-a398-a9a78c8aba08",
       "paper_source_version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "3ff6ab11d6648dbbeca1a21842e7f52b334d0745b178ccdd38c6f42b1eb1be61",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:bd56a9b4-b852-5918-88bb-8f6ad888fa6c",
@@ -4835,7 +5561,41 @@
       "selected_version_id": "version:3da2b173-7839-5e9e-9453-155987bdc1b9",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "VXDH5KWP",
+        "work_id": "work:c8ae8d5b-fcdc-5cac-9969-519b06516912",
+        "bibliographic_version_id": "version:3da2b173-7839-5e9e-9453-155987bdc1b9",
+        "source_version_id": "version:3da2b173-7839-5e9e-9453-155987bdc1b9",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:3da2b173-7839-5e9e-9453-155987bdc1b9",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/VXDH5KWP.md",
+        "source_sha256": "sha256:6c8e6d18fd718110ed7c5e4642a1e5bf91877b75954092f2b5676690b29e92a4",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "AI Literacy and Gender Bias: Comparative Perspectives from the UK and Indonesia",
+          "doi": "10.3390/educsci15091143"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://mdpi-res.com/d_attachment/education/education-15-01143/article_deploy/education-15-01143.pdf",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/VXDH5KWP.pdf",
+          "retrieved_at": "2026-10-01T14:42:31+00:00",
+          "sha256": "sha256:fe6602ce637e5247e80ede722ad5ceab1b3feb024ec8b6ff7438cea15422e467",
+          "route": "publisher OA (MDPI, via mdpi-res.com file host)",
+          "note": "Licence as stated by the source: cc-by."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "pass",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:3da2b173-7839-5e9e-9453-155987bdc1b9",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:3da2b173-7839-5e9e-9453-155987bdc1b9",
@@ -4872,16 +5632,14 @@
       "doi": "10.3390/educsci15091143",
       "url": "https://www.mdpi.com/2227-7102/15/9/1143",
       "abstract_available": true,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 81702,
+      "paper_source": "docs/data/fulltext/VXDH5KWP.md",
       "paper_source_work_id": "work:c8ae8d5b-fcdc-5cac-9969-519b06516912",
       "paper_source_version_id": "version:3da2b173-7839-5e9e-9453-155987bdc1b9",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "521ad7062591f1750616cd11bf5921409cebdcc4170766f9b40223c229b51c8b",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:c8ee6229-4d78-51b8-be80-0831d5e650a5",
@@ -5017,7 +5775,41 @@
       "selected_version_id": "version:8af3af2f-f4ab-5fcc-884f-65d3a46ad101",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "IYUPQPTA",
+        "work_id": "work:cb1293bf-0c88-59cb-ac2c-ee567a14cd25",
+        "bibliographic_version_id": "version:8af3af2f-f4ab-5fcc-884f-65d3a46ad101",
+        "source_version_id": "version:8af3af2f-f4ab-5fcc-884f-65d3a46ad101",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:8af3af2f-f4ab-5fcc-884f-65d3a46ad101",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/IYUPQPTA.md",
+        "source_sha256": "sha256:d04b4a5c9c0b7c5457235cf70f3bbe85c2c86c65ce7c12ded0ae575a527fe097",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Black feminism and Artificial Intelligence: the possibilities and limitations of contesting discriminatory AI from a critical social theory perspective",
+          "doi": "10.3389/fsoc.2025.1602947"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://www.frontiersin.org/journals/sociology/articles/10.3389/fsoc.2025.1602947/pdf",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/IYUPQPTA.pdf",
+          "retrieved_at": "2026-10-01T14:29:40+00:00",
+          "sha256": "sha256:fd422e5c6a3260dcc33ba3771f73bc446cca4f1631a91ff9784af5243b35bdd7",
+          "route": "unpaywall:publisher (Frontiers)",
+          "note": "Licence as stated by the source: cc-by."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "pass",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:8af3af2f-f4ab-5fcc-884f-65d3a46ad101",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:8af3af2f-f4ab-5fcc-884f-65d3a46ad101",
@@ -5054,16 +5846,14 @@
       "doi": "10.3389/fsoc.2025.1602947",
       "url": "https://www.frontiersin.org/journals/sociology/articles/10.3389/fsoc.2025.1602947/full",
       "abstract_available": true,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 81578,
+      "paper_source": "docs/data/fulltext/IYUPQPTA.md",
       "paper_source_work_id": "work:cb1293bf-0c88-59cb-ac2c-ee567a14cd25",
       "paper_source_version_id": "version:8af3af2f-f4ab-5fcc-884f-65d3a46ad101",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "f727551262dc9d5f37f53004190dc68d7dff8534b17d0118c3f80a2583697dd7",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:ce1b3961-e4e4-5bd2-a6a8-b97ef7fbc90f",
@@ -5145,7 +5935,41 @@
       "selected_version_id": "version:30132234-87e5-5656-8dd8-64f9e1ecf211",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "JD5JZ3KR",
+        "work_id": "work:cfe60968-caff-5fda-a10e-f204b31115c9",
+        "bibliographic_version_id": "version:30132234-87e5-5656-8dd8-64f9e1ecf211",
+        "source_version_id": "version:30132234-87e5-5656-8dd8-64f9e1ecf211",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:30132234-87e5-5656-8dd8-64f9e1ecf211",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/JD5JZ3KR.md",
+        "source_sha256": "sha256:34e67b2d464c1cbcc2409e78c1f147d4240b31f4bbd2b7ce3f2a543d9b82016d",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Mitigating Anchoring Bias When Using AI in Social Work Research: Responsible Conduct of AI-Assisted Research",
+          "doi": "10.55521/10-022-106"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://jswve.org/wp-content/uploads/2025/07/10-022-106-IJSWVE-2025.pdf",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/JD5JZ3KR.pdf",
+          "retrieved_at": "2026-10-01T14:29:16+00:00",
+          "sha256": "sha256:33aeae3891752ac2dce7fe0c3adb07aa65017d3c1c7fc4d4b269553dfd4f21aa",
+          "route": "unpaywall:publisher (IJSWVE, bronze)",
+          "note": "Licence as stated by the source: none (free to read; 'may be freely shared among individuals, but not republished')."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "pass",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:30132234-87e5-5656-8dd8-64f9e1ecf211",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:30132234-87e5-5656-8dd8-64f9e1ecf211",
@@ -5182,16 +6006,14 @@
       "doi": "10.55521/10-022-106",
       "url": "https://jswve.org/volume-22/issue-1/item-06/",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 37820,
+      "paper_source": "docs/data/fulltext/JD5JZ3KR.md",
       "paper_source_work_id": "work:cfe60968-caff-5fda-a10e-f204b31115c9",
       "paper_source_version_id": "version:30132234-87e5-5656-8dd8-64f9e1ecf211",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "c295208a66eba005432ad94ce5ca3f4a06ba2644eba573d10f87111397a150c6",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:d3e1b501-39ff-5531-a410-391d0ae61c77",
@@ -5616,11 +6438,72 @@
       "work_id": "work:e56cb050-aad5-5a20-8994-ac450ec25bc0",
       "preferred_version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
       "latest_version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
-      "selected_version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
-      "selected_version_type": "version_of_record",
-      "selected_version_is_preferred": true,
-      "source_binding": null,
+      "selected_version_id": "version:117f50fc-cd64-5837-8bf6-9bbd0332308b",
+      "selected_version_type": "preprint",
+      "selected_version_is_preferred": false,
+      "source_binding": {
+        "record_id": "DZ5EAPXR",
+        "work_id": "work:e56cb050-aad5-5a20-8994-ac450ec25bc0",
+        "bibliographic_version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
+        "source_version_id": "version:117f50fc-cd64-5837-8bf6-9bbd0332308b",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
+        "is_preferred_version": false,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/DZ5EAPXR.md",
+        "source_sha256": "sha256:4c5670d25b716bd6abf84049a490784b19785139d3be34b9545c58f0f509db56",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Sycophantic AI decreases prosocial intentions and promotes dependence",
+          "doi": "10.1126/science.aec8352"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://arxiv.org/pdf/2510.01395",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/DZ5EAPXR.pdf",
+          "retrieved_at": "2026-10-01T14:38:03+00:00",
+          "sha256": "sha256:b8cd2afbbc06ed1d40c5c1e92e497203d4c302b034b8b592dee9044f946b3bd2",
+          "route": "arxiv",
+          "note": "Licence as stated by the source: cc-by-4.0."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "not_registered"
+        },
+        "version_relation": {
+          "source_version_type": "preprint",
+          "preferred_version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
+          "difference_to_preferred": "preprint bound while the preferred version is a version_of_record: preprint before peer review and copy-editing"
+        }
+      },
       "available_versions": [
+        {
+          "version_id": "version:117f50fc-cd64-5837-8bf6-9bbd0332308b",
+          "version_type": "preprint",
+          "version_date": "",
+          "identifiers": {
+            "arxiv": [
+              "2510.01395v1"
+            ],
+            "url": [
+              "https://arxiv.org/abs/2510.01395v1"
+            ]
+          },
+          "peer_review_status": "not_peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "https://arxiv.org/abs/2510.01395v1",
+          "fulltext_url": "https://arxiv.org/pdf/2510.01395",
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087"
+            }
+          ],
+          "is_preferred": false,
+          "is_latest": false
+        },
         {
           "version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
           "version_type": "version_of_record",
@@ -5642,7 +6525,12 @@
           "access_status": "unknown",
           "landing_url": "https://doi.org/10.1126/science.aec8352",
           "fulltext_url": "",
-          "relations": [],
+          "relations": [
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:117f50fc-cd64-5837-8bf6-9bbd0332308b"
+            }
+          ],
           "is_preferred": true,
           "is_latest": true
         }
@@ -5656,16 +6544,14 @@
       "doi": "10.1126/science.aec8352",
       "url": "https://doi.org/10.1126/science.aec8352",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 140808,
+      "paper_source": "docs/data/fulltext/DZ5EAPXR.md",
       "paper_source_work_id": "work:e56cb050-aad5-5a20-8994-ac450ec25bc0",
-      "paper_source_version_id": "version:39bcf800-7995-56e3-b029-3faa4b943087",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_version_id": "version:117f50fc-cd64-5837-8bf6-9bbd0332308b",
+      "paper_source_sha256": "9e939cde2b0e21d1e3eadc1b0047a45e6078284149923fabe9c2d6096402e601",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:e62005d4-d179-5cef-af39-3aca00c24a04",
@@ -5746,7 +6632,41 @@
       "selected_version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "DENAHEUW",
+        "work_id": "work:e769d36a-8e1e-5b9b-9e22-301723be1c24",
+        "bibliographic_version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
+        "source_version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/DENAHEUW.md",
+        "source_sha256": "sha256:3ec1054f841237d6f09921f63fa43c0daa6ffbf0506bddf19782267f0a0daa38",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Designing a framework for ethnography-driven prompt engineering in social work",
+          "doi": "10.14254/1795-6889.2025.21-1.5"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://ht.csr-pub.eu/index.php/ht/article/download/460/317",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/DENAHEUW.pdf",
+          "retrieved_at": "2026-10-01T14:29:23+00:00",
+          "sha256": "sha256:112ee6fc8a35a18c0550f894beb77997e78f753ac1d7e592a5c0edab714f6b44",
+          "route": "unpaywall:publisher (Human Technology)",
+          "note": "Licence as stated by the source: cc-by-nc."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "pass",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
@@ -5783,16 +6703,14 @@
       "doi": "10.14254/1795-6889.2025.21-1.5",
       "url": "https://www.ht.csr-pub.eu/index.php/ht/article/view/460",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 78992,
+      "paper_source": "docs/data/fulltext/DENAHEUW.md",
       "paper_source_work_id": "work:e769d36a-8e1e-5b9b-9e22-301723be1c24",
       "paper_source_version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "ff4dc10e1ffa818b0428afdc61dd7386b5535facba49c9dbacdb192c6831c816",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
@@ -5985,7 +6903,41 @@
       "selected_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "KUVUZMDU",
+        "work_id": "work:f43c0a7f-e499-5be3-8deb-a100f15cafab",
+        "bibliographic_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+        "source_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/98a0f77c12e1ee6328c0.md",
+        "source_sha256": "sha256:d03d737f0083c774926dd5a46f0aaa1dcf410c8811c5b4b352f445ad194c1a3c",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Addressing benchmarking gaps in large language models for health and medicine with dynamic red-teaming",
+          "doi": "10.1038/s44360-026-00152-8"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://www.nature.com/articles/s44360-026-00152-8.pdf",
+          "repo_path": "generated/pdfs/codex-websearch-2026/98a0f77c12e1ee6328c0.pdf",
+          "retrieved_at": "2026-08-24T15:24:08.796534+00:00",
+          "sha256": "sha256:d08f7176886fb952e7311e2013052ef6f7ed53ca2fb965beee5e537b8e12da84",
+          "route": "codex-websearch-2026 acquisition",
+          "note": "Original PDF stays local; the acquisition manifest records its URL and digest."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
@@ -6022,16 +6974,14 @@
       "doi": "10.1038/s44360-026-00152-8",
       "url": "https://www.nature.com/articles/s44360-026-00152-8",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 87515,
+      "paper_source": "docs/data/fulltext/KUVUZMDU.md",
       "paper_source_work_id": "work:f43c0a7f-e499-5be3-8deb-a100f15cafab",
       "paper_source_version_id": "version:13610000-bc8f-53c8-a01f-0a9ab5d2c33c",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "9b48f70fd1569e4c740be38defa9e996ab6307be4b47aa3bd8311b98ffb7be89",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:f50cd1ef-241a-515c-b970-b491ce2b97f7",
@@ -6126,7 +7076,40 @@
       "selected_version_id": "version:8abb2d32-d879-527d-9aed-2a92a575969b",
       "selected_version_type": "preprint",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "P285BA5N",
+        "work_id": "work:f5657618-8172-57e3-8294-94d2e46aed62",
+        "bibliographic_version_id": "version:8abb2d32-d879-527d-9aed-2a92a575969b",
+        "source_version_id": "version:8abb2d32-d879-527d-9aed-2a92a575969b",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:8abb2d32-d879-527d-9aed-2a92a575969b",
+        "is_preferred_version": true,
+        "source_path": "generated/markdown_clean/Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.md",
+        "source_sha256": "sha256:5ae36335f6e502a27a28260e2c2d98d9c99fcab46a45b2e4fc7a2d0904e397d5",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "GenderAlign: An Alignment Dataset for Mitigating Gender Bias in Large Language Models",
+          "doi": "10.48550/arxiv.2406.13925"
+        },
+        "acquisition_receipt": {
+          "repo_path": "generated/markdown_clean/Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.md",
+          "retrieved_at": "2026-02-03T09:34:32+01:00",
+          "sha256": "sha256:5ae36335f6e502a27a28260e2c2d98d9c99fcab46a45b2e4fc7a2d0904e397d5",
+          "route": "repository: earlier Docling conversion of an acquired PDF",
+          "note": "Original PDF Zhang_2024_GenderAlign_An_Alignment_Dataset_for_Mitigating.pdf is not versioned; the receipt time is the conversion time."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "not_printed",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "preprint",
+          "preferred_version_id": "version:8abb2d32-d879-527d-9aed-2a92a575969b",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:8abb2d32-d879-527d-9aed-2a92a575969b",
@@ -6163,16 +7146,14 @@
       "doi": "10.48550/arXiv.2406.13925",
       "url": "http://arxiv.org/abs/2406.13925",
       "abstract_available": true,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "clean",
+      "source_chars": 68921,
+      "paper_source": "docs/data/fulltext/P285BA5N.md",
       "paper_source_work_id": "work:f5657618-8172-57e3-8294-94d2e46aed62",
       "paper_source_version_id": "version:8abb2d32-d879-527d-9aed-2a92a575969b",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "3e9878efce8a180defa98019d4bdb2b3f06b94631836396890e46bf237043512",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:f66a5701-d3b8-5c56-91b4-3dfb9ab82387",
@@ -6181,7 +7162,41 @@
       "selected_version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "EWPPFD7U",
+        "work_id": "work:f66a5701-d3b8-5c56-91b4-3dfb9ab82387",
+        "bibliographic_version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
+        "source_version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/oa-batch-2026-10-01/EWPPFD7U.md",
+        "source_sha256": "sha256:d9985e3abb24c91146b061010cec38cfd73f69a0ef80ae8d3d0bfa4f56d60cad",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Can AI reduce gender bias? The case of AI-generated audio conversations in Google's NotebookLM",
+          "doi": "10.1016/j.chbr.2026.101246"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://trepo.tuni.fi/bitstream/handle/10024/239956/Can_AI_reduce_gender_bias.pdf?sequence=1&isAllowed=y",
+          "repo_path": "generated/source-acquisition/oa-batch-2026-10-01/pdf/EWPPFD7U.pdf",
+          "retrieved_at": "2026-10-01T14:43:54+00:00",
+          "sha256": "sha256:c51e02346b5fe3b466cc60f0ca06cfe7e43b9441ec432d51b5b4c6cae39a0273",
+          "route": "repository:Trepo (Tampere University)",
+          "note": "Licence as stated by the source: cc-by-4.0."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "pass",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
@@ -6218,16 +7233,14 @@
       "doi": "10.1016/j.chbr.2026.101246",
       "url": "https://doi.org/10.1016/j.chbr.2026.101246",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 79527,
+      "paper_source": "docs/data/fulltext/EWPPFD7U.md",
       "paper_source_work_id": "work:f66a5701-d3b8-5c56-91b4-3dfb9ab82387",
       "paper_source_version_id": "version:c2dcd2d3-9339-5bc3-aa6d-9a606950cbac",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "85d861809a966d2c74507e6e2d1519fede7757c148b016e58c61a08fa9581fbf",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:f7d29922-360f-5874-8d4c-cf7f7451f638",
@@ -6305,11 +7318,72 @@
       "work_id": "work:fa2c7082-9f5a-5906-93ad-27af9cc6fc7a",
       "preferred_version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
       "latest_version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
-      "selected_version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
-      "selected_version_type": "version_of_record",
-      "selected_version_is_preferred": true,
-      "source_binding": null,
+      "selected_version_id": "version:55be7d66-1c6f-5511-aec5-83646d69644e",
+      "selected_version_type": "preprint",
+      "selected_version_is_preferred": false,
+      "source_binding": {
+        "record_id": "ZXVBZQGS",
+        "work_id": "work:fa2c7082-9f5a-5906-93ad-27af9cc6fc7a",
+        "bibliographic_version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
+        "source_version_id": "version:55be7d66-1c6f-5511-aec5-83646d69644e",
+        "source_version_type": "preprint",
+        "preferred_version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
+        "is_preferred_version": false,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/cf8d8fbb3db223f01b6c.md",
+        "source_sha256": "sha256:94b049f19e56e4195502dd609c6f7e4bc86268c92fe4335fc639230d01a33bdd",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "No Free Lunch in Language Model Bias Mitigation? Targeted Bias Reduction Can Exacerbate Unmitigated LLM Biases",
+          "doi": "10.3390/ai7010024"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://arxiv.org/pdf/2511.18635",
+          "repo_path": "generated/pdfs/codex-websearch-2026/cf8d8fbb3db223f01b6c.pdf",
+          "retrieved_at": "2026-08-24T15:24:08.796534+00:00",
+          "sha256": "sha256:7bf9959c93b23235efe8c13d7fa5c05026a6d4fa57fc75e1a69fdc35e12ac4a7",
+          "route": "codex-websearch-2026 acquisition",
+          "note": "Original PDF stays local; the acquisition manifest records its URL and digest."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "not_registered"
+        },
+        "version_relation": {
+          "source_version_type": "preprint",
+          "preferred_version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
+          "difference_to_preferred": "preprint bound while the preferred version is a version_of_record: arXiv preprint before journal peer review and copy-editing; the unversioned PDF URL served the latest revision at retrieval"
+        }
+      },
       "available_versions": [
+        {
+          "version_id": "version:55be7d66-1c6f-5511-aec5-83646d69644e",
+          "version_type": "preprint",
+          "version_date": "",
+          "identifiers": {
+            "arxiv": [
+              "2511.18635"
+            ],
+            "url": [
+              "https://arxiv.org/abs/2511.18635"
+            ]
+          },
+          "peer_review_status": "not_peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "https://arxiv.org/abs/2511.18635",
+          "fulltext_url": "https://arxiv.org/pdf/2511.18635",
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138"
+            }
+          ],
+          "is_preferred": false,
+          "is_latest": false
+        },
         {
           "version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
           "version_type": "version_of_record",
@@ -6331,7 +7405,12 @@
           "access_status": "unknown",
           "landing_url": "https://www.mdpi.com/2673-2688/7/1/24",
           "fulltext_url": "",
-          "relations": [],
+          "relations": [
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:55be7d66-1c6f-5511-aec5-83646d69644e"
+            }
+          ],
           "is_preferred": true,
           "is_latest": true
         }
@@ -6345,16 +7424,14 @@
       "doi": "10.3390/ai7010024",
       "url": "https://www.mdpi.com/2673-2688/7/1/24",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 57700,
+      "paper_source": "docs/data/fulltext/ZXVBZQGS.md",
       "paper_source_work_id": "work:fa2c7082-9f5a-5906-93ad-27af9cc6fc7a",
-      "paper_source_version_id": "version:acacd002-d68d-50b3-ac25-75d212e56138",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_version_id": "version:55be7d66-1c6f-5511-aec5-83646d69644e",
+      "paper_source_sha256": "b2763bc07937278df371abc0da7d23057e073998fb89f739d41cd55de2821ea7",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c",
@@ -6363,7 +7440,41 @@
       "selected_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "ZFRE26IV",
+        "work_id": "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c",
+        "bibliographic_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+        "source_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/45a89ba69a2b7d1a99cd.md",
+        "source_sha256": "sha256:5c7cb91faec1be1c693e21d341e256c4ebe0b089145a0e4a016cc8cee9987f87",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Algorithmic bias in clinical resource allocation by a large language model: a cross-sectional in-silico evaluation of 13,608 decisions",
+          "doi": "10.1186/s12910-026-01496-2"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://link.springer.com/content/pdf/10.1186/s12910-026-01496-2.pdf",
+          "repo_path": "generated/pdfs/codex-websearch-2026/45a89ba69a2b7d1a99cd.pdf",
+          "retrieved_at": "2026-08-24T15:24:08.796534+00:00",
+          "sha256": "sha256:2a9216b9e5f25d7923147cc18653865ad6f97752212d15dab2aea4cd40b2b633",
+          "route": "codex-websearch-2026 acquisition",
+          "note": "Original PDF stays local; the acquisition manifest records its URL and digest."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
@@ -6400,16 +7511,14 @@
       "doi": "10.1186/s12910-026-01496-2",
       "url": "https://link.springer.com/article/10.1186/s12910-026-01496-2",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 49855,
+      "paper_source": "docs/data/fulltext/ZFRE26IV.md",
       "paper_source_work_id": "work:fa73d2ef-033a-5e5b-8bc5-f774136b020c",
       "paper_source_version_id": "version:5edb0cf7-6a2a-57d3-b219-a7e79204f3e4",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "0c410acf3159873a20ea1f3d46ea1b42185e7eacc2eb4097efd2d4a15fc573f5",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:fb07e9e8-562c-5c51-9aa7-f1faa654c172",
@@ -6473,7 +7582,41 @@
       "selected_version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
       "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "Z599JJFT",
+        "work_id": "work:feb70530-663a-5606-8a38-0eb3a39f35fa",
+        "bibliographic_version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
+        "source_version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/fe0639bed94ac912274d.md",
+        "source_sha256": "sha256:f85c2e44213e5cdb1f575b49e5c670d1891cc0eaca4dae140460d01978a09956",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Sesgos de género y modelos de IA generativa: Aproximaciones desde una experiencia de análisis cualitativo desde la generación de imágenes",
+          "doi": "10.35362/issn.1850-0013-1258"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://ojs.revistacts.net/index.php/CTS/article/download/1258/943",
+          "repo_path": "generated/pdfs/codex-websearch-2026/fe0639bed94ac912274d.pdf",
+          "retrieved_at": "2026-08-24T15:24:08.796534+00:00",
+          "sha256": "sha256:9d9fd3ee23e7f880a1ac49661f51afe8d5f62872c39334f4fccdf21a9addade9",
+          "route": "codex-websearch-2026 acquisition",
+          "note": "Original PDF stays local; the acquisition manifest records its URL and digest."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "not_registered",
+          "doi": "not_printed",
+          "year": "pass"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
           "version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
@@ -6510,16 +7653,14 @@
       "doi": "10.35362/issn.1850-0013-1258",
       "url": "https://ojs.revistacts.net/index.php/CTS/article/view/1258",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 57669,
+      "paper_source": "docs/data/fulltext/Z599JJFT.md",
       "paper_source_work_id": "work:feb70530-663a-5606-8a38-0eb3a39f35fa",
       "paper_source_version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "6c4bd44c28879126d3ef7b18b37950cd75b61f5dc7bbb87d3b116015bf74f93d",
+      "queue_status": "ready",
+      "blockers": []
     }
   ],
   "covered_alias_records": [

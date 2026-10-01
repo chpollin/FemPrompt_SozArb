@@ -25,8 +25,8 @@
     "corpus/source_tool_mapping.json": "sha256:9feb96ce613a778cf76ac43f0b5dcd302170e0a8e5d8331bf3052cd0d5737c76",
     "corpus/zotero_export.json": "sha256:a6bddc7f5da07b5d4b6a9c67ccc861658cec4eeff317c32b075068117a551b68",
     "corpus/zotero_sync.json": "sha256:a68c1242fa39cb279c830e374d5ec07d174dad2763e8773cbc2db6b8e07d272b",
-    "docs/data/research_vault_v2.json": "sha256:2edd534175136a05ba6b25f9f062ff89a275042c5aeacc815e5164c51ffa48b4",
-    "generated/completion/completion-package.json": "sha256:497843868996b7b5232e5b650cdbb28b61b93389fb00dd155c63cc6217b88063",
+    "docs/data/research_vault_v2.json": "sha256:66d09851666d4718b57e33246d1ca34052a78570010c8d8bcf72c419801d7a7a",
+    "generated/completion/completion-package.json": "sha256:ee57e79c9035944e4182f2f774370ac68810bc0d32c9bf68cbfc0ee3f6a3adef",
     "generated/contextual-update-2026-08-24-intake-package.json": "sha256:b7266d89cd632346c67d0e4f7b09a574edfd11888a61c29731785c2c05e31a48",
     "generated/round2-intake-package.json": "sha256:b83bb42daff38d23ce3d7981797d92aabc15caf415e600c5558f03e4ef465d1a"
   },
@@ -228,8 +228,8 @@
         "expert_unresolved": 0,
         "ai_review_include_pending_verification": 0,
         "ai_review_exclude_pending_verification": 0,
-        "open_fulltext_ready": 1,
-        "open_fulltext_not_retrieved": 22,
+        "open_fulltext_ready": 10,
+        "open_fulltext_not_retrieved": 13,
         "open_not_queued": 0,
         "not_in_library": 0
       }
@@ -291,8 +291,8 @@
         "expert_unresolved": 0,
         "ai_review_include_pending_verification": 0,
         "ai_review_exclude_pending_verification": 0,
-        "open_fulltext_ready": 8,
-        "open_fulltext_not_retrieved": 14,
+        "open_fulltext_ready": 16,
+        "open_fulltext_not_retrieved": 6,
         "open_not_queued": 0,
         "not_in_library": 0
       }
@@ -353,8 +353,8 @@
         "expert_unresolved": 0,
         "ai_review_include_pending_verification": 0,
         "ai_review_exclude_pending_verification": 0,
-        "open_fulltext_ready": 13,
-        "open_fulltext_not_retrieved": 31,
+        "open_fulltext_ready": 25,
+        "open_fulltext_not_retrieved": 19,
         "open_not_queued": 0,
         "not_in_library": 0
       }
@@ -739,16 +739,16 @@
         "expert_unresolved": 1,
         "ai_review_include_pending_verification": 16,
         "ai_review_exclude_pending_verification": 8,
-        "open_fulltext_ready": 25,
-        "open_fulltext_not_retrieved": 76,
+        "open_fulltext_ready": 57,
+        "open_fulltext_not_retrieved": 44,
         "open_not_queued": 7
       }
     },
     "fulltext_availability_records": {
-      "fulltext_ready": 14,
-      "identity_unresolved": 67,
-      "linked": 269,
-      "source_missing": 113
+      "fulltext_ready": 77,
+      "identity_unresolved": 37,
+      "linked": 285,
+      "source_missing": 64
     }
   },
   "package_crosscheck": {
