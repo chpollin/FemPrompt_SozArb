@@ -24,6 +24,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## PRISM and the epistemic infrastructure (2026)
 
+### 2026-10-01: Repository cleanup and rescued assertion drafts
+
+Three agent worktrees of the day held untracked Assertion drafts for the reformulated sub-questions and a draft report chapter on SQ2 that had never reached `main`. They were integrated unchanged at status `grounded`, without AI Agent Review or expert verification, and the Research Vault validator passed. On the operator's confirmation the agent worktrees, the local and remote branches already contained in `main`, the obsolete codebook patch, the onboarding redirect page and the Literaturbild and concept-graph modules that no page loads were removed, together with the test that exercised only the unloaded module. The dated project review of 2026-09-05 stays as a snapshot.
+
 ### 2026-10-01: Analysis fields only for agents, PRISM review
 
 The operator decided that only AI agents code the analysis fields. A human Include in PRISM no longer opens or requires the analysis step, an existing analysis part of a human record is written back unchanged, and agent records keep the full FR-14 contract (ADR-045). A critical review in Chromium at desktop, narrow and zoomed widths in both modes, followed by an independent exploratory pass, led to calm corrections of the existing interface. The corpus list was 463 tab stops long and became one stop with arrow-key movement, Ctrl+S saves, each opened paper is a history entry, `Lesen` no longer renders controls that cannot act, an untouched empty draft shows no decision, unsaved drafts are named in the list and in `Lesen`, and the category chips are not offered under `Offen`, where they could only empty the list. Two persistence gaps were closed. A conflict choice now writes at once and names its paper and the decision it keeps, and records that only the browser holds after a failed write stay writable through the disk action, which before could be disabled. The save status line now appears when it is set.

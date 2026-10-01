@@ -15,7 +15,7 @@ prepared-by:
   artifact-review-status: pending, no AI Agent Review and no domain-expert verification
 checked:
   validation: '2026-10-01'
-assertion-id: child-welfare-worker-decisions-showed-smaller-racial-disparity-than-algorithm-only-policy
+assertion-id: child-welfare-workers-showed-smaller-racial-disparity-than-algorithm
 grounding:
 - '[[20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities#^s1]]'
 - '[[20_distillates/publications/7fefmcbz-child-welfare-worker-algorithm-disparities#^s2]]'

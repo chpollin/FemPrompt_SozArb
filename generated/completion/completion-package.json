@@ -21828,6 +21828,61 @@
         "validation": "2026-10-01"
       },
       "current_ai_source_review": null,
+      "path": "research-vault/30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding.md",
+      "sources": [
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai#^s1]]",
+          "path": "research-vault/20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai.md",
+          "record_id": "QRK7C3JK",
+          "version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+          "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec"
+        },
+        {
+          "anchor": "^s1",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/completion-qi5aye4v-algorithmic-decision-making-pedagogy#^s1]]",
+          "path": "research-vault/20_distillates/publications/completion-qi5aye4v-algorithmic-decision-making-pedagogy.md",
+          "record_id": "QI5AYE4V",
+          "version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+          "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d"
+        },
+        {
+          "anchor": "^s2",
+          "anchor_present": true,
+          "current_ai_source_review": null,
+          "distillate_state": "ai-agent-reviewed",
+          "exists": true,
+          "link": "[[20_distillates/publications/social-work-students-ai-readiness#^s2]]",
+          "path": "research-vault/20_distillates/publications/social-work-students-ai-readiness.md",
+          "record_id": "88CFIG8R",
+          "version_id": "version:834d178c-fc76-51f3-bddf-b86e25436742",
+          "work_id": "work:1004a5c5-f980-5475-ad36-952eab77b516"
+        }
+      ],
+      "state": "grounded",
+      "statement": "Three social-work education sources describe the digital or AI literacy that social workers need as a combination of technical understanding with critical understanding of the social, ethical and political effects of the technology.",
+      "structural_grounding_complete": true,
+      "title": "Social-work education sources frame AI literacy as critical understanding beyond technical competence",
+      "work_ids": [
+        "work:1004a5c5-f980-5475-ad36-952eab77b516",
+        "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
+        "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec"
+      ]
+    },
+    {
+      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
+      "checked": {
+        "validation": "2026-10-01"
+      },
+      "current_ai_source_review": null,
       "path": "research-vault/30_assertions/algorithmic-decision-making-can-introduce-and-expose-structural-bias.md",
       "sources": [
         {
@@ -22419,7 +22474,7 @@
         "validation": "2026-10-01"
       },
       "current_ai_source_review": null,
-      "path": "research-vault/30_assertions/child-welfare-worker-decisions-showed-smaller-racial-disparity-than-algorithm-only-policy.md",
+      "path": "research-vault/30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm.md",
       "sources": [
         {
           "anchor": "^s1",
@@ -24330,61 +24385,6 @@
         "validation": "2026-10-01"
       },
       "current_ai_source_review": null,
-      "path": "research-vault/30_assertions/sources-frame-ai-literacy-for-social-work-as-critical-understanding-beyond-technical-competence.md",
-      "sources": [
-        {
-          "anchor": "^s1",
-          "anchor_present": true,
-          "current_ai_source_review": null,
-          "distillate_state": "ai-agent-reviewed",
-          "exists": true,
-          "link": "[[20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai#^s1]]",
-          "path": "research-vault/20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai.md",
-          "record_id": "QRK7C3JK",
-          "version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
-          "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec"
-        },
-        {
-          "anchor": "^s1",
-          "anchor_present": true,
-          "current_ai_source_review": null,
-          "distillate_state": "ai-agent-reviewed",
-          "exists": true,
-          "link": "[[20_distillates/publications/completion-qi5aye4v-algorithmic-decision-making-pedagogy#^s1]]",
-          "path": "research-vault/20_distillates/publications/completion-qi5aye4v-algorithmic-decision-making-pedagogy.md",
-          "record_id": "QI5AYE4V",
-          "version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
-          "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d"
-        },
-        {
-          "anchor": "^s2",
-          "anchor_present": true,
-          "current_ai_source_review": null,
-          "distillate_state": "ai-agent-reviewed",
-          "exists": true,
-          "link": "[[20_distillates/publications/social-work-students-ai-readiness#^s2]]",
-          "path": "research-vault/20_distillates/publications/social-work-students-ai-readiness.md",
-          "record_id": "88CFIG8R",
-          "version_id": "version:834d178c-fc76-51f3-bddf-b86e25436742",
-          "work_id": "work:1004a5c5-f980-5475-ad36-952eab77b516"
-        }
-      ],
-      "state": "grounded",
-      "statement": "Three social-work education sources describe the digital or AI literacy that social workers need as a combination of technical understanding with critical understanding of the social, ethical and political effects of the technology.",
-      "structural_grounding_complete": true,
-      "title": "Social-work education sources frame AI literacy as critical understanding beyond technical competence",
-      "work_ids": [
-        "work:1004a5c5-f980-5475-ad36-952eab77b516",
-        "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
-        "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec"
-      ]
-    },
-    {
-      "authority_note": "Recorded AI-review state is distinct from human verification; structural grounding does not verify meaning.",
-      "checked": {
-        "validation": "2026-10-01"
-      },
-      "current_ai_source_review": null,
       "path": "research-vault/30_assertions/sources-link-responsible-llm-use-to-attention-to-marginalised-and-misrepresented-groups.md",
       "sources": [
         {
@@ -24868,7 +24868,7 @@
         "validation": "2026-10-01"
       },
       "current_ai_source_review": null,
-      "path": "research-vault/30_assertions/wang-et-al-report-fairness-aware-prompting-reduced-measured-disparities-in-mental-health-prediction.md",
+      "path": "research-vault/30_assertions/wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities.md",
       "sources": [
         {
           "anchor": "^s3",
@@ -29742,6 +29742,11 @@
           "type": "assertion"
         },
         {
+          "path": "research-vault/30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding.md",
+          "recorded_status": "grounded",
+          "type": "assertion"
+        },
+        {
           "path": "research-vault/30_assertions/algorithmic-decision-making-can-introduce-and-expose-structural-bias.md",
           "recorded_status": "grounded",
           "type": "assertion"
@@ -29812,7 +29817,7 @@
           "type": "assertion"
         },
         {
-          "path": "research-vault/30_assertions/child-welfare-worker-decisions-showed-smaller-racial-disparity-than-algorithm-only-policy.md",
+          "path": "research-vault/30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm.md",
           "recorded_status": "grounded",
           "type": "assertion"
         },
@@ -30022,11 +30027,6 @@
           "type": "assertion"
         },
         {
-          "path": "research-vault/30_assertions/sources-frame-ai-literacy-for-social-work-as-critical-understanding-beyond-technical-competence.md",
-          "recorded_status": "grounded",
-          "type": "assertion"
-        },
-        {
           "path": "research-vault/30_assertions/sources-link-responsible-llm-use-to-attention-to-marginalised-and-misrepresented-groups.md",
           "recorded_status": "grounded",
           "type": "assertion"
@@ -30082,7 +30082,7 @@
           "type": "assertion"
         },
         {
-          "path": "research-vault/30_assertions/wang-et-al-report-fairness-aware-prompting-reduced-measured-disparities-in-mental-health-prediction.md",
+          "path": "research-vault/30_assertions/wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities.md",
           "recorded_status": "grounded",
           "type": "assertion"
         },
@@ -34168,7 +34168,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:b2c5d28a1d51bb22fbb73693f53aac473534428b0d4ae13df57e5aa9cec5f874",
+  "source_fingerprint": "sha256:05ab4bd821d45b4abe0c5a222c3fa6ffb88f1f507d983ce7f96702e1bbf4facc",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -37111,8 +37111,12 @@
       "sha256": "97030c4b4049d47849421135a31e50d7cb1473814c21e2e925942e63f841df49"
     },
     {
+      "path": "research-vault/30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding.md",
+      "sha256": "93420e5d1712d5b1f200b0c52b3dd550ee82ab158e3e23f213840ad33cc1f971"
+    },
+    {
       "path": "research-vault/30_assertions/algorithmic-decision-making-can-introduce-and-expose-structural-bias.md",
-      "sha256": "0a2c674d7a29cfcccab9292fbbafc265f5570697648e95bf23e151d087230673"
+      "sha256": "d6357c7b44cbd75c11826e954885c0d4e41f5a10dc688d2aaf448984322e8780"
     },
     {
       "path": "research-vault/30_assertions/assigned-social-identity-personas-induced-identity-congruent-bias.md",
@@ -37164,11 +37168,11 @@
     },
     {
       "path": "research-vault/30_assertions/child-protection-records-carry-existing-inequalities-into-algorithmic-decisions.md",
-      "sha256": "1b9c64a6d220a9aae974e1c74b8cae0f4cc1c0f724e84a815f1583a393a916e8"
+      "sha256": "6764d8293c14d4543e4e46180d5dbe9313b42d5e3b059148f346a191663facef"
     },
     {
-      "path": "research-vault/30_assertions/child-welfare-worker-decisions-showed-smaller-racial-disparity-than-algorithm-only-policy.md",
-      "sha256": "115682650ffac463689762daa696c8ae1b6e20cf99f243444cedce9a5ee048c4"
+      "path": "research-vault/30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm.md",
+      "sha256": "9c35f76caf4a5c2df8e28b4fc1b3a5199c2f9bf16213685cfe53233ddaed4749"
     },
     {
       "path": "research-vault/30_assertions/clinical-prompting-fairness-gains-came-from-lifting-unprivileged-groups.md",
@@ -37216,7 +37220,7 @@
     },
     {
       "path": "research-vault/30_assertions/james-et-al-propose-a-case-based-technical-critical-pedagogy.md",
-      "sha256": "d41c15abed8f8c04ed5094b42addad62668911735078987af28a7e102c082e84"
+      "sha256": "6e0a4682c238d31d4c5a3583ad26006233d2ca2de1309e83d4d5d53dc82eba80"
     },
     {
       "path": "research-vault/30_assertions/james-et-al-propose-preparing-social-workers-to-challenge-harmful-algorithmic-processes.md",
@@ -37248,7 +37252,7 @@
     },
     {
       "path": "research-vault/30_assertions/mental-health-llm-audits-advise-against-unguarded-reliance-in-consequential-decisions.md",
-      "sha256": "c6daaf2b758d940c4bc8a37b01b459fee8d39f2e442564556d8181f068b9809e"
+      "sha256": "d24e1410351c0c71de9830a60129e92c3a6638b8239622aee8beab1cbd7bd099"
     },
     {
       "path": "research-vault/30_assertions/multi-persona-thinking-reported-lower-benchmark-bias-than-prompting-baselines.md",
@@ -37332,15 +37336,11 @@
     },
     {
       "path": "research-vault/30_assertions/social-work-sources-name-professional-judgement-as-a-capacity-to-retain-and-strengthen.md",
-      "sha256": "d3d1390d6cc703635dfbe675b53f84f3a18bae32dfbef530ded490e6665f7cc4"
-    },
-    {
-      "path": "research-vault/30_assertions/sources-frame-ai-literacy-for-social-work-as-critical-understanding-beyond-technical-competence.md",
-      "sha256": "703197cad824e9740913b9941dbe60c2854a759e05bd45665887f5a47b8f0ceb"
+      "sha256": "843e2c34b7834afa310eb018cbe26e3f06bfec9eb157e9573c1f52f0a8df0061"
     },
     {
       "path": "research-vault/30_assertions/sources-link-responsible-llm-use-to-attention-to-marginalised-and-misrepresented-groups.md",
-      "sha256": "0f417b5de2311a9326404e94c456f2578fc102d8197c4c20841c402ed87d4426"
+      "sha256": "512b361a31027cf061e65262c93f5898d1aabf34b088d1f94407d611353219cc"
     },
     {
       "path": "research-vault/30_assertions/sources-locate-responsible-ai-use-in-governance-and-quality-control-structures.md",
@@ -37368,7 +37368,7 @@
     },
     {
       "path": "research-vault/30_assertions/victor-et-al-require-knowledge-of-tool-construction-limits-and-biases.md",
-      "sha256": "f107e3fd4cdf716bc94daec14863c76f6d941894e6bb4d8a49e9a6a54d32f40c"
+      "sha256": "35ac3c168cfa37b6108d63c147c0d2478dd0a91192021c7cb2b39d11d6e0a44b"
     },
     {
       "path": "research-vault/30_assertions/vision-language-model-gender-stereotypes-override-visual-evidence.md",
@@ -37383,8 +37383,8 @@
       "sha256": "30c61d80ef5dadd25e78aca7cf432f45b52ecc6d760b00ae9076d1d146e9d6f2"
     },
     {
-      "path": "research-vault/30_assertions/wang-et-al-report-fairness-aware-prompting-reduced-measured-disparities-in-mental-health-prediction.md",
-      "sha256": "06f194a6d7ad09dd86526cd12043dc03f8d8b28a3f7e45e4e0c3ca388cd30f2f"
+      "path": "research-vault/30_assertions/wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities.md",
+      "sha256": "89da112b0d36bd003bdd8cdffdf3dcf7f70d61a8225dd99154fbc30f5779fadf"
     },
     {
       "path": "research-vault/30_assertions/worker-assisted-screening-showed-smaller-racial-disparity-than-algorithm-only-policy.md",
@@ -37392,7 +37392,7 @@
     },
     {
       "path": "research-vault/30_assertions/xiao-et-al-find-no-fair-prompting-strategy-effective-in-every-tested-scenario.md",
-      "sha256": "3cf2bfc9de9f33181700b3724e0db39046590b76b9d9216dc71ca05613f166a3"
+      "sha256": "3fb6c99c618bd6668f13f833b957d01ff7fbc448329e758727764c697b81c6da"
     },
     {
       "path": "research-vault/40_output/paper/paper.md",

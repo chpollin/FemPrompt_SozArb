@@ -35,7 +35,7 @@ The operator decided the following on 1 October 2026.
 - The human pilot of the draft is replaced by the agreement of the two isolated AI tracks per field and a human spot check against the full text ([[update-protocol#Validation of the AI coding]]).
 - The works coded under 1.3 are recoded by the AI tracks for `AN_Bias_Axes` and `AN_Harm_Types` and receive the new fields.
 
-The draft numbered the sub-questions UF1 to UF5. The adopted codebook uses the identifiers SQ1 Nutzung, SQ2 Bias-Formen, SQ3 Umgang mit Bias, SQ4 Begriffliche Fundierung and SQ5 Kompetenzen of [[project#Research questions]]. `assessment/categories-v1.4.patch` was cut against the earlier numbering and no longer applies. The adopted change was cut anew against the current file.
+The draft numbered the sub-questions UF1 to UF5. The adopted codebook uses the identifiers SQ1 Nutzung, SQ2 Bias-Formen, SQ3 Umgang mit Bias, SQ4 Begriffliche Fundierung and SQ5 Kompetenzen of [[project#Research questions]]. The patch `assessment/categories-v1.4.patch`, cut against the earlier numbering, was removed. The adopted change was cut anew against the current file.
 
 ## Sub-questions and fields
 

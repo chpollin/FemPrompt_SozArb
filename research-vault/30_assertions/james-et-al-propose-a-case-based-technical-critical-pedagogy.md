@@ -41,4 +41,4 @@ The cited distillate statement carries no attached quotation. A later review has
 ## Related
 
 - [[30_assertions/james-et-al-propose-preparing-social-workers-to-challenge-harmful-algorithmic-processes]]
-- [[30_assertions/sources-frame-ai-literacy-for-social-work-as-critical-understanding-beyond-technical-competence]]
+- [[30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding]]

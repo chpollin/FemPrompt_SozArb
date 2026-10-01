@@ -1,6 +1,6 @@
 ---
 type: assertion
-assertion-id: wang-et-al-report-fairness-aware-prompting-reduced-measured-disparities-in-mental-health-prediction
+assertion-id: wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities
 topics:
 - '[[Prompting and Bias Mitigation]]'
 status: grounded

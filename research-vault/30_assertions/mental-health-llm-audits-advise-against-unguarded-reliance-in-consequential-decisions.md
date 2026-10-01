@@ -42,5 +42,5 @@ Both studies use benchmark or vignette designs in clinical settings and do not o
 
 ## Related
 
-- [[30_assertions/wang-et-al-report-fairness-aware-prompting-reduced-measured-disparities-in-mental-health-prediction]]
+- [[30_assertions/wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities]]
 - [[30_assertions/sources-tie-algorithmic-decision-support-to-retained-professional-control]]

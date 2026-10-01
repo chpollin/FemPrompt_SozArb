@@ -7,7 +7,7 @@ checked:
 assertions:
   - "[[30_assertions/child-protection-records-carry-existing-inequalities-into-algorithmic-decisions]]"
   - "[[30_assertions/child-protection-nlp-showed-lower-name-recall-for-black-clients]]"
-  - "[[30_assertions/child-welfare-worker-decisions-showed-smaller-racial-disparity-than-algorithm-only-policy]]"
+  - "[[30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm]]"
   - "[[30_assertions/algorithmic-decision-making-can-introduce-and-expose-structural-bias]]"
   - "[[30_assertions/long-term-care-summaries-showed-model-dependent-gender-differences]]"
   - "[[30_assertions/psychiatric-diagnosis-audit-reports-gender-and-racial-ethnic-bias]]"
@@ -41,7 +41,7 @@ Every empty cell of the matrix has the status `not_determinable` because open Wo
 
 The Assertions draw on the active distillates in `research-vault/20_distillates/publications/`. The Works behind these distillates differ in screening state, which the completion package records per Work.[^4]
 
-- Included and coded in the map: [[30_assertions/child-protection-records-carry-existing-inequalities-into-algorithmic-decisions]], [[30_assertions/child-protection-nlp-showed-lower-name-recall-for-black-clients]], [[30_assertions/child-welfare-worker-decisions-showed-smaller-racial-disparity-than-algorithm-only-policy]], [[30_assertions/gender-equity-framework-links-gender-bias-to-allocative-and-representational-harms]] and the gender-equity source of [[30_assertions/gender-equity-literature-rejects-algorithmic-neutrality]].
+- Included and coded in the map: [[30_assertions/child-protection-records-carry-existing-inequalities-into-algorithmic-decisions]], [[30_assertions/child-protection-nlp-showed-lower-name-recall-for-black-clients]], [[30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm]], [[30_assertions/gender-equity-framework-links-gender-bias-to-allocative-and-representational-harms]] and the gender-equity source of [[30_assertions/gender-equity-literature-rejects-algorithmic-neutrality]].
 - Included without governed coding: [[30_assertions/algorithmic-decision-making-can-introduce-and-expose-structural-bias]].
 - No screening decision recorded: the sources of all other Assertions in this chapter, including every LLM-specific harm finding and the feminist chapter in the neutrality Assertion.
 
@@ -154,7 +154,7 @@ Each governed agent run codes a record in two operationally isolated tracks, whi
 [^5]: Data from `generated/completion/sq-analysis-tables.csv`, fields `AN_Bias_Axes` and `AN_Harm_Types`, column `work_count` with the denominator `denominator_field_coded_works`.
 [^6]: Grounded in [[30_assertions/child-protection-records-carry-existing-inequalities-into-algorithmic-decisions]].
 [^7]: Grounded in [[30_assertions/child-protection-nlp-showed-lower-name-recall-for-black-clients]].
-[^8]: Grounded in [[30_assertions/child-welfare-worker-decisions-showed-smaller-racial-disparity-than-algorithm-only-policy]].
+[^8]: Grounded in [[30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm]].
 [^9]: Grounded in [[30_assertions/algorithmic-decision-making-can-introduce-and-expose-structural-bias]].
 [^10]: Grounded in [[30_assertions/long-term-care-summaries-showed-model-dependent-gender-differences]].
 [^11]: Grounded in [[30_assertions/psychiatric-diagnosis-audit-reports-gender-and-racial-ethnic-bias]].

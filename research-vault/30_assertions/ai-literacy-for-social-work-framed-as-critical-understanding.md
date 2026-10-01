@@ -1,6 +1,6 @@
 ---
 type: assertion
-assertion-id: sources-frame-ai-literacy-for-social-work-as-critical-understanding-beyond-technical-competence
+assertion-id: ai-literacy-for-social-work-framed-as-critical-understanding
 topics:
 - '[[AI Literacy]]'
 - '[[Generative AI in Social Work]]'

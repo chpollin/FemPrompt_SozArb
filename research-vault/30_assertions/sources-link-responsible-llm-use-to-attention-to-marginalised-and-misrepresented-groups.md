@@ -42,5 +42,5 @@ The first source is a normative commentary on research use, and the second uses 
 
 ## Related
 
-- [[30_assertions/sources-frame-ai-literacy-for-social-work-as-critical-understanding-beyond-technical-competence]]
+- [[30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding]]
 - [[30_assertions/james-et-al-propose-a-case-based-technical-critical-pedagogy]]

@@ -50,5 +50,5 @@ Prepared on 1 October 2026 as attributed in the frontmatter. The status `grounde
 ## Related
 
 - [[30_assertions/child-protection-nlp-showed-lower-name-recall-for-black-clients]]
-- [[30_assertions/child-welfare-worker-decisions-showed-smaller-racial-disparity-than-algorithm-only-policy]]
+- [[30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm]]
 - [[30_assertions/algorithmic-decision-making-can-introduce-and-expose-structural-bias]]

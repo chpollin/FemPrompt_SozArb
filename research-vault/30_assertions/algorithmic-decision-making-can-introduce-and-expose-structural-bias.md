@@ -38,7 +38,7 @@ A conceptual article on social-work practice and pedagogy argues that algorithmi
 
 ## Scope boundary
 
-Affected groups: people receiving social-work support who are exposed to racism, disablism, heterosexism and misogyny in allocation and risk assessment. Systems: algorithmic decision-making tools discussed through cases from child welfare, disability insurance, health, policing and corrections, not generative LLMs. Study type: conceptual analysis with illustrative cases, without a systematic comparison or new empirical evaluation. The empirical study in [[30_assertions/child-welfare-worker-decisions-showed-smaller-racial-disparity-than-algorithm-only-policy]] reports the converse direction for one county, in which worker discretion was associated with a smaller disparity than the algorithm-only policy. Both statements concern possibilities or a single setting and do not contradict each other in the strict sense, so `contested-with` remains empty. The tension over whether the tool or the professional corrects the other is named in the SQ2 chapter.
+Affected groups: people receiving social-work support who are exposed to racism, disablism, heterosexism and misogyny in allocation and risk assessment. Systems: algorithmic decision-making tools discussed through cases from child welfare, disability insurance, health, policing and corrections, not generative LLMs. Study type: conceptual analysis with illustrative cases, without a systematic comparison or new empirical evaluation. The empirical study in [[30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm]] reports the converse direction for one county, in which worker discretion was associated with a smaller disparity than the algorithm-only policy. Both statements concern possibilities or a single setting and do not contradict each other in the strict sense, so `contested-with` remains empty. The tension over whether the tool or the professional corrects the other is named in the SQ2 chapter.
 
 ## Review status
 
@@ -46,5 +46,5 @@ Prepared on 1 October 2026 as attributed in the frontmatter. The status `grounde
 
 ## Related
 
-- [[30_assertions/child-welfare-worker-decisions-showed-smaller-racial-disparity-than-algorithm-only-policy]]
+- [[30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm]]
 - [[30_assertions/child-protection-records-carry-existing-inequalities-into-algorithmic-decisions]]

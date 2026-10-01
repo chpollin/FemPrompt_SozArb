@@ -41,4 +41,4 @@ The statement is a normative requirement for researchers. The source does not sp
 ## Related
 
 - [[30_assertions/social-work-research-guidance-requires-verification-of-and-accountability-for-ai-outputs]]
-- [[30_assertions/sources-frame-ai-literacy-for-social-work-as-critical-understanding-beyond-technical-competence]]
+- [[30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding]]

@@ -9,7 +9,7 @@ checked:
 grounding:
 - '[[20_distillates/publications/a7u389p5-medical-bias-prompt-engineering#^s1]]'
 contested-with:
-- '[[30_assertions/wang-et-al-report-fairness-aware-prompting-reduced-measured-disparities-in-mental-health-prediction]]'
+- '[[30_assertions/wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities]]'
 research-questions:
 - SQ3
 - SQ4
@@ -37,7 +37,7 @@ In a medical benchmark, Xiao et al. (2026) report heterogeneous results of fair 
 
 ## Contested evidence
 
-[[30_assertions/wang-et-al-report-fairness-aware-prompting-reduced-measured-disparities-in-mental-health-prediction]] reports reduced disparities across its evaluated settings. The tension concerns how far a prompting effect generalises across settings. It may dissolve once task, model and metric differences between the two studies are compared, which the synthesis has not yet done.
+[[30_assertions/wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities]] reports reduced disparities across its evaluated settings. The tension concerns how far a prompting effect generalises across settings. It may dissolve once task, model and metric differences between the two studies are compared, which the synthesis has not yet done.
 
 ## Scope boundary
 

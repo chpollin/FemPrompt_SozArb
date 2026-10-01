@@ -44,5 +44,5 @@ The sources are a prospective conceptual discussion, a student attitude survey w
 
 ## Related
 
-- [[30_assertions/sources-frame-ai-literacy-for-social-work-as-critical-understanding-beyond-technical-competence]]
+- [[30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding]]
 - [[30_assertions/sources-tie-algorithmic-decision-support-to-retained-professional-control]]

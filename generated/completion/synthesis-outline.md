@@ -1,6 +1,6 @@
 # Provisional source-bound synthesis outline
 
-Source fingerprint: `sha256:b2c5d28a1d51bb22fbb73693f53aac473534428b0d4ae13df57e5aa9cec5f874`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:05ab4bd821d45b4abe0c5a222c3fa6ffb88f1f507d983ce7f96702e1bbf4facc`. Deterministic internal preparation; no approval is created.
 
 This is a writing and verification plan, not a finished synthesis. The canonical manuscript remains `research-vault/40_output/paper/paper.md`. Tables count recorded coding; the statements below are existing assertion texts with their recorded authority, not new findings.
 
@@ -56,6 +56,18 @@ Ahn et al. propose integrating AI literacy across existing core competencies.
 Current source review: `/root/research_completion`, GPT-6, `2026-09-05T12:20:05Z`. Compared the assertion and its distillate block s1 with the original Discussion. The verb propose matches the explicit author recommendation and avoids presenting the conceptual framework as empirically validated. The referenced Work-Version binding matches the active distillate. Future empirical testing remains open in the source. Accepted as an AI-reviewed report of a proposal, not human verification.
 
 - `research-vault/20_distillates/publications/ahn-2025-ai-literacy-for-social-work.md#^s1`; Work `work:70312fae-6975-587e-b409-06a82d50b6ce`; Version `version:7b79b88e-3857-5a65-8cfe-94478052d8ee`; distillate state `ai-agent-reviewed`.
+
+Review exact text, study conditions, direction of reported findings and transfer limits before expanding this statement. Preserve the AI-review and human-verification distinction.
+
+### Social-work education sources frame AI literacy as critical understanding beyond technical competence
+
+Recorded state: `grounded`. Source: `research-vault/30_assertions/ai-literacy-for-social-work-framed-as-critical-understanding.md`.
+
+Three social-work education sources describe the digital or AI literacy that social workers need as a combination of technical understanding with critical understanding of the social, ethical and political effects of the technology.
+
+- `research-vault/20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai.md#^s1`; Work `work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec`; Version `version:c2db337e-61b4-5717-bfb5-56cd6de7d117`; distillate state `ai-agent-reviewed`.
+- `research-vault/20_distillates/publications/completion-qi5aye4v-algorithmic-decision-making-pedagogy.md#^s1`; Work `work:5f49f95b-dcfe-5778-8376-a313cb039d4d`; Version `version:2e650cfc-0147-5778-ab55-ed2e17a4f86b`; distillate state `ai-agent-reviewed`.
+- `research-vault/20_distillates/publications/social-work-students-ai-readiness.md#^s2`; Work `work:1004a5c5-f980-5475-ad36-952eab77b516`; Version `version:834d178c-fc76-51f3-bddf-b86e25436742`; distillate state `ai-agent-reviewed`.
 
 Review exact text, study conditions, direction of reported findings and transfer limits before expanding this statement. Preserve the AI-review and human-verification distinction.
 
@@ -216,7 +228,7 @@ Review exact text, study conditions, direction of reported findings and transfer
 
 ### Worker-assisted child-welfare screening showed a smaller racial disparity than an algorithm-only policy
 
-Recorded state: `grounded`. Source: `research-vault/30_assertions/child-welfare-worker-decisions-showed-smaller-racial-disparity-than-algorithm-only-policy.md`.
+Recorded state: `grounded`. Source: `research-vault/30_assertions/child-welfare-workers-showed-smaller-racial-disparity-than-algorithm.md`.
 
 In one county's child-welfare referral screening, a mixed-methods study reports that worker decisions assisted by the Allegheny Family Screening Tool produced a smaller Black-white disparity in screen-in rates than a hypothetical algorithm-only policy based on the same tool, without establishing that the tool caused the change.
 
@@ -690,18 +702,6 @@ Social-work sources name professional judgement as a capacity that education sho
 
 Review exact text, study conditions, direction of reported findings and transfer limits before expanding this statement. Preserve the AI-review and human-verification distinction.
 
-### Social-work education sources frame AI literacy as critical understanding beyond technical competence
-
-Recorded state: `grounded`. Source: `research-vault/30_assertions/sources-frame-ai-literacy-for-social-work-as-critical-understanding-beyond-technical-competence.md`.
-
-Three social-work education sources describe the digital or AI literacy that social workers need as a combination of technical understanding with critical understanding of the social, ethical and political effects of the technology.
-
-- `research-vault/20_distillates/publications/qrk7c3jk-critical-digital-literacy-social-work-ai.md#^s1`; Work `work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec`; Version `version:c2db337e-61b4-5717-bfb5-56cd6de7d117`; distillate state `ai-agent-reviewed`.
-- `research-vault/20_distillates/publications/completion-qi5aye4v-algorithmic-decision-making-pedagogy.md#^s1`; Work `work:5f49f95b-dcfe-5778-8376-a313cb039d4d`; Version `version:2e650cfc-0147-5778-ab55-ed2e17a4f86b`; distillate state `ai-agent-reviewed`.
-- `research-vault/20_distillates/publications/social-work-students-ai-readiness.md#^s2`; Work `work:1004a5c5-f980-5475-ad36-952eab77b516`; Version `version:834d178c-fc76-51f3-bddf-b86e25436742`; distillate state `ai-agent-reviewed`.
-
-Review exact text, study conditions, direction of reported findings and transfer limits before expanding this statement. Preserve the AI-review and human-verification distinction.
-
 ### Sources link responsible LLM use to attention to marginalised and misrepresented groups
 
 Recorded state: `grounded`. Source: `research-vault/30_assertions/sources-link-responsible-llm-use-to-attention-to-marginalised-and-misrepresented-groups.md`.
@@ -827,7 +827,7 @@ Review exact text, study conditions, direction of reported findings and transfer
 
 ### Wang et al. report that fairness-aware prompting reduced measured disparities in mental-health prediction
 
-Recorded state: `grounded`. Source: `research-vault/30_assertions/wang-et-al-report-fairness-aware-prompting-reduced-measured-disparities-in-mental-health-prediction.md`.
+Recorded state: `grounded`. Source: `research-vault/30_assertions/wang-et-al-fairness-aware-prompting-reduced-mental-health-disparities.md`.
 
 Wang et al. (2024) report that fairness-aware prompting reduced measured demographic disparities in mental-health prediction across their evaluated settings, while differences between models and tasks remained.
 
