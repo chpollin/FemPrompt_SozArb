@@ -92,3 +92,31 @@ def test_flow_conserves_records_without_inventing_serial_pdf_losses():
     assert nodes["agree"]["value"] == 1
     assert nodes["disagree"]["value"] == 2
     assert "conv_fail" not in nodes
+
+
+def test_unclassified_divergences_carry_null_pattern_not_an_empty_classification():
+    from pathlib import Path
+
+    divergences = publisher.build_divergences_list(Path(publisher.REPO_ROOT))
+
+    assert divergences
+    for item in divergences:
+        assert item["pattern"] is None or item["pattern"].strip()
+        assert item["justification"] is None or item["justification"].strip()
+
+
+def test_concept_graph_provenance_reports_counts_that_do_not_recompute():
+    graph = {
+        "nodes": [{"id": "A", "frequency": 3}, {"id": "B", "frequency": 2}],
+        "edges": [{"source": "B", "target": "A", "weight": 2}],
+        "paper_concepts": {"p1": ["A", "B"], "p2": ["A", "B", "A"]},
+    }
+
+    provenance = publisher.concept_graph_provenance(graph)
+
+    assert provenance["status"] == "historical_frozen_unreviewed"
+    assert provenance["generator"] is None
+    assert provenance["node_frequencies_recompute"] is False
+    assert provenance["edge_weights_recompute"] is True
+    graph["nodes"][0]["frequency"] = 2
+    assert publisher.concept_graph_provenance(graph)["node_frequencies_recompute"]

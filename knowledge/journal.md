@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-09-22
+updated: 2026-10-01
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -27,6 +27,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ### 2026-10-01: Methodische Grundlage der Literaturanalyse
 
 `knowledge/analysis-methods.md` legt die Analyse in zwei Schichten fest, eine Kartierung als JBI-Scoping-Review mit PRISMA-ScR und Evidence-and-Gap-Maps und eine Synthese als Best-Fit-Framework-Synthese über Assertions. Ob Critical Interpretive Synthesis oder Meta-Narrative Review die interpretative Schicht trägt, entscheidet die Projektleitung. Die Analysen sind in drei Stufen geordnet, nach aktuellem Datenstand, nach vollständiger fachlich verifizierter Kodierung und explorativ mit Validierungspflicht. Alle Literaturangaben wurden über DOI oder Verlags- und Indexseite aufgelöst. Zwei Befunde betreffen bestehende Festlegungen. Eine blinde Referenzkodierung widerspricht dem geltenden ADR-038, weil PRISM die Runde-eins-Referenzen in jeder menschlichen Sitzung zeigt. Schätzer für teilweise Verifikation setzen eine zufällig gezogene Verifikationsstichprobe voraus, die der zugewiesene Verifikationsumfang nicht liefert. PRISMA-ScR ist in `standards.md` noch nicht als angewandter Standard geführt.
+
+### 2026-10-01: Make analysis coverage explicit and repair silent projection errors
+
+The public literature landscape now states every released analysis field as a value, an explicit None, undecidable or absent, and `meta.analysis_coverage` partitions the recorded Include scope per field into those states, not yet coded, and withheld with a named reason. The coverage reuses the completion package's Work rows through `canonical_work_rows` and publishes counts only. [[data#Analysis field states and coverage]] holds the contract. Whether aggregate counts about unreleased Works belong on the result site is an open governance question, because the earlier release meta only counted the productive track.
+
+An audit of the projections found three silent errors of the class of the diversity-column bug. Empty expert cells projected as Nein, lowercase Ja and Nein were dropped, and the Zotero-keyed disagreement file was joined through the LLM sheet's sequential ID, so no record carried its disagreement type or severity. The generators now project uncoded cells as null, read Ja and Nein case-insensitively like the replay and join on the Zotero key. The divergence pattern classification has had no committed source since the local LLM cache left the build, so unclassified items now carry null instead of an empty string. The concept graph has no generator and its counts do not recompute from its own paper concepts. It stays frozen and is labelled as a historical, unreviewed artifact in the data and in [[data#Historical concept graph and divergence classification]]. The Companion browser test still waits for the inventory header removed in the preceding commit and fails on that check alone.
 
 ### 2026-09-22: Referenzen sichtbar, Werkzeugleiste in der Korpusspalte, Anleitung für die Verifikationsrolle
 

@@ -1430,7 +1430,7 @@
             ],
             "all_categories": {
               "AI_Literacies": 1,
-              "Generative_KI": 0,
+              "Generative_KI": null,
               "Prompting": 0,
               "KI_Sonstige": 1,
               "Soziale_Arbeit": 0,
@@ -2664,7 +2664,7 @@
             ],
             "all_categories": {
               "AI_Literacies": 1,
-              "Generative_KI": 0,
+              "Generative_KI": null,
               "Prompting": 0,
               "KI_Sonstige": 1,
               "Soziale_Arbeit": 0,
@@ -4069,7 +4069,8 @@
               "Soziale_Arbeit",
               "Bias_Ungleichheit",
               "Gender",
-              "Diversitaet"
+              "Diversitaet",
+              "Fairness"
             ],
             "all_categories": {
               "AI_Literacies": 0,
@@ -4081,7 +4082,7 @@
               "Gender": 1,
               "Diversitaet": 1,
               "Feministisch": 0,
-              "Fairness": 0
+              "Fairness": 1
             }
           },
           "llm": {
@@ -4303,13 +4304,13 @@
               "AI_Literacies": 0,
               "Generative_KI": 0,
               "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -5231,7 +5232,7 @@
               "Generative_KI": 1,
               "Prompting": 0,
               "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
+              "Soziale_Arbeit": null,
               "Bias_Ungleichheit": 0,
               "Gender": 0,
               "Diversitaet": 0,
@@ -5443,16 +5444,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -5614,16 +5615,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -6382,16 +6383,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -6461,16 +6462,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -6674,11 +6675,11 @@
               "Prompting": 0,
               "KI_Sonstige": 0,
               "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -7561,16 +7562,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -8570,7 +8571,8 @@
               "Soziale_Arbeit",
               "Bias_Ungleichheit",
               "Gender",
-              "Diversitaet"
+              "Diversitaet",
+              "Fairness"
             ],
             "all_categories": {
               "AI_Literacies": 1,
@@ -8582,7 +8584,7 @@
               "Gender": 1,
               "Diversitaet": 1,
               "Feministisch": 0,
-              "Fairness": 0
+              "Fairness": 1
             }
           },
           "llm": {
@@ -9221,16 +9223,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -9302,16 +9304,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -9663,16 +9665,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -9760,16 +9762,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -10329,16 +10331,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -10498,16 +10500,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -10954,15 +10956,15 @@
             ],
             "all_categories": {
               "AI_Literacies": 1,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -11175,16 +11177,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -11969,15 +11971,15 @@
             ],
             "all_categories": {
               "AI_Literacies": 1,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -13351,16 +13353,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -13579,16 +13581,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -14454,16 +14456,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -14563,16 +14565,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -14673,16 +14675,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -14785,16 +14787,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -15074,16 +15076,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -15270,16 +15272,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -15498,16 +15500,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -16013,16 +16015,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -16239,16 +16241,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -16348,16 +16350,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -16460,16 +16462,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -16537,16 +16539,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -17056,16 +17058,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -17169,15 +17171,15 @@
             "categories": [],
             "all_categories": {
               "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -17393,16 +17395,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -17505,16 +17507,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -17930,16 +17932,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -18040,16 +18042,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -18866,16 +18868,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -20827,16 +20829,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -21041,16 +21043,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -21628,16 +21630,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -22392,16 +22394,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -22595,16 +22597,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -22815,16 +22817,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -23774,16 +23776,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -24004,16 +24006,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -24206,16 +24208,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -24445,7 +24447,7 @@
               "Fairness"
             ],
             "all_categories": {
-              "AI_Literacies": 0,
+              "AI_Literacies": null,
               "Generative_KI": 0,
               "Prompting": 0,
               "KI_Sonstige": 1,
@@ -24975,16 +24977,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -25090,16 +25092,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -25295,16 +25297,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -26221,16 +26223,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -26421,16 +26423,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -27413,16 +27415,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -30072,16 +30074,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -30397,16 +30399,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -30497,16 +30499,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -30601,16 +30603,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -32161,16 +32163,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -39424,16 +39426,16 @@
             "decision": "Exclude",
             "categories": [],
             "all_categories": {
-              "AI_Literacies": 0,
-              "Generative_KI": 0,
-              "Prompting": 0,
-              "KI_Sonstige": 0,
-              "Soziale_Arbeit": 0,
-              "Bias_Ungleichheit": 0,
-              "Gender": 0,
-              "Diversitaet": 0,
-              "Feministisch": 0,
-              "Fairness": 0
+              "AI_Literacies": null,
+              "Generative_KI": null,
+              "Prompting": null,
+              "KI_Sonstige": null,
+              "Soziale_Arbeit": null,
+              "Bias_Ungleichheit": null,
+              "Gender": null,
+              "Diversitaet": null,
+              "Feministisch": null,
+              "Fairness": null
             }
           },
           "llm": {
@@ -42705,7 +42707,14 @@
         "target": "Intersectional Feminism",
         "weight": 2
       }
-    ]
+    ],
+    "provenance": {
+      "source": "docs/data/concept_graph.json",
+      "status": "historical_frozen_unreviewed",
+      "generator": null,
+      "node_frequencies_recompute": false,
+      "edge_weights_recompute": false
+    }
   },
   "divergences": [
     {
@@ -42719,8 +42728,8 @@
       "affected_categories": "Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet",
       "n_affected": 6,
       "llm_reasoning": "Das Paper behandelt AI Literacy im Bildungskontext (PK-12 Education) und erfüllt die TECHNIK-Bedingung durch AI_Literacies = Ja. Es fehlt jedoch jegliche SOZIAL-Komponente: Kein Bezug zu Sozialer Arbeit, keine Behandlung von Bias/Ungleichheit, Gender, Diversität, feministischen Perspektiven oder Fairness. Es ist ein rein pädagogisches Framework für allgemeine Bildung ohne Sozialarbeitsfokus oder kritische Betrachtung struktureller Ungleichheiten.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -42785,8 +42794,8 @@
       "affected_categories": "Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet",
       "n_affected": 6,
       "llm_reasoning": "Der Titel deutet auf AI Literacies (Kompetenzen für Studierende) hin, was die TECHNIK-Bedingung erfüllen könnte. Jedoch fehlt das Abstract und der vollständige Text, was eine fundierte Bewertung unmöglich macht. Zudem ist unklar, ob ein Sozialbezug vorliegt. Ohne Volltext kann nicht überprüft werden, ob die SOZIAL-Bedingung erfüllt ist.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -42851,8 +42860,8 @@
       "affected_categories": "Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Gender",
       "n_affected": 5,
       "llm_reasoning": "Das Paper fokussiert auf AI Literacy als Kompetenzbreich – ein eindeutiges TECHNIK-Thema (AI_Literacies: Ja). Der Titel und Fokus deuten auf eine Übersichtsarbeit zu Lernmethoden und Effekten hin, ohne soziale/kritische Dimensionen. Ohne Abstract und Hinweise auf Soziale Arbeit oder kritische Bias-/Fairness-Analysen erfüllt das Paper nicht die SOZIAL-Bedingung.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -42917,8 +42926,8 @@
       "affected_categories": "Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Fairness",
       "n_affected": 5,
       "llm_reasoning": "Paper behandelt AI-Vertrauen, Transparenz und Accountability (AI_Literacies, KI_Sonstige, Fairness) sowie Prompting im Design-Kontext. Erfüllt TECHNIK_OK. Fehlt aber SOZIAL_OK: Kein direkter Bezug zu Sozialer Arbeit/Zielgruppen, keine Analyse von Bias/Ungleichheit oder struktureller Benachteiligung. Fairness bezieht sich auf Transparenz-Metriken, nicht auf systematische Diskriminierung.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -42983,8 +42992,8 @@
       "affected_categories": "Generative_KI, Prompting, Bias_Ungleichheit, Diversitaet, Fairness",
       "n_affected": 5,
       "llm_reasoning": "Titel deutet auf AI Literacy Framework hin - klare AI_Literacies-Kategorie. Kein Abstract vorhanden; basierend auf Titel keine Indikation für soziale Dimensionen (Bias, Ungleichheit, Gender, Fairness, Soziale Arbeit). Paper erfüllt nur Technik-Kriterium, nicht Sozial-Kriterium. EXCLUDE nach strikter Logik.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -43049,8 +43058,8 @@
       "affected_categories": "Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit, Fairness",
       "n_affected": 5,
       "llm_reasoning": "Paper behandelt philosophische Grundlagen von AI-Explainability und Systematizität (KI_Sonstige: Ja). Dies ist jedoch rein technisch-philosophischer Natur ohne Bezug zu sozialen Auswirkungen, Bias, Ungleichheit, Gender, Diversität, Feminismus oder Fairness. Kein Bezug zu Sozialer Arbeit. TECHNIK erfüllt (KI_Sonstige), SOZIAL nicht erfüllt → Exclude.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -43115,8 +43124,8 @@
       "affected_categories": "Prompting, KI_Sonstige, Gender, Diversitaet",
       "n_affected": 4,
       "llm_reasoning": "Paper behandelt Bias und Fairness in LLMs durch ein Benchmark für direktionalen Bias. Dies erfüllt TECHNIK-Bedingung (Generative_KI, Bias_Ungleichheit, Fairness). JEDOCH: Keine Verbindung zu Soziale_Arbeit erkennbar. Das Paper fokussiert auf technische Bias-Metriken in LLMs, nicht auf sozialarbeiterische Praxis oder deren Zielgruppen. Reine KI-Fairness-Technologie ohne sozialen Anwendungskontext → Exclude.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -43181,8 +43190,8 @@
       "affected_categories": "Generative_KI, Bias_Ungleichheit, Diversitaet, Fairness",
       "n_affected": 4,
       "llm_reasoning": "Das Paper behandelt AI Literacy und Kompetenzentwicklung im KI-Bereich (AI_Literacies = Ja), erfüllt aber die zweite Bedingung nicht: Es fehlt ein direkter Bezug zu Sozialer Arbeit, Bias/Ungleichheit, Gender, Diversität, Feminismus oder Fairness. Das Paper ist relevant für AI Literacy generell, nicht aber für den Kontext von KI und Sozialer Arbeit. Ohne Volltext kann die fehlende Sozial-Komponente nicht widerlegt werden.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -43247,8 +43256,8 @@
       "affected_categories": "Prompting, KI_Sonstige, Bias_Ungleichheit, Diversitaet",
       "n_affected": 4,
       "llm_reasoning": "Das Paper behandelt ein Assessment-Tool für generative KI-Kompetenzen und liegt damit im Bereich AI Literacies. Es fehlt jedoch jeder erkennbare Bezug zu sozialen Dimensionen (Soziale Arbeit, Bias, Gender, Diversität, Fairness). Das Paper adressiert rein bildungstechnische Aspekte von KI-Kompetenzermittlung ohne sozialwissenschaftliche oder kritische Perspektive.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -43313,8 +43322,8 @@
       "affected_categories": "Generative_KI, Prompting, KI_Sonstige, Bias_Ungleichheit",
       "n_affected": 4,
       "llm_reasoning": "Das Paper behandelt substantiell AI Literacy und Kompetenzen (AI_Literacies = Ja). Allerdings fehlt jeglicher Bezug zu sozialen Aspekten wie Soziale Arbeit, Bias, Gender, Diversität, Fairness oder feministische Perspektiven. TECHNIK-Kriterium erfüllt, aber SOZIAL-Kriterium nicht. Daher: Exclude.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -43379,8 +43388,8 @@
       "affected_categories": "Generative_KI, KI_Sonstige, Bias_Ungleichheit, Fairness",
       "n_affected": 4,
       "llm_reasoning": "Das Paper entwickelt ein umfassendes AI-Literacy-Kompetenzframework und erfüllt die TECHNIK-Bedingung substanziell (AI_Literacies=Ja). Allerdings fehlt jeglicher SOZIAL-Bezug: Es gibt keinen Fokus auf Soziale Arbeit, Bias/Ungleichheit, Gender, Diversität, feministische Perspektiven oder Fairness. Das Paper behandelt rein Bildungscurricula und Kompetenzentwicklung ohne sozialen oder kritischen Perspektivbezug. Die SOZIAL-Bedingung ist nicht erfüllt.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -43445,8 +43454,8 @@
       "affected_categories": "KI_Sonstige, Gender, Diversitaet",
       "n_affected": 3,
       "llm_reasoning": "Das Paper behandelt AI Literacy als Bildungsintervention für Studierende mit unterschiedlichen Hintergründen. Während die AI_Literacies-Kategorie klar erfüllt ist (Evaluation eines Kompetenz-Kursus), fehlt jeder Bezug zu sozialen Aspekten wie Bias, Ungleichheit, Gender, Diversität, Fairness oder Sozialer Arbeit. Es ist ein reines Bildungs-Evaluationspaper ohne soziale/kritische Dimension.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -43511,8 +43520,8 @@
       "affected_categories": "KI_Sonstige, Gender, Diversitaet",
       "n_affected": 3,
       "llm_reasoning": "Das Paper entwickelt ein KI-Literacy-Framework und evaluiert einen Kurs für Sekundarschüler – klarer Fokus auf AI Literacies als Kompetenzentwicklung. Jedoch kein Bezug zu Sozialer Arbeit, Bias/Ungleichheit, Gender, Diversität, Feminismus oder Fairness erkennbar. Erfüllt nur TECHNIK-Bedingung, nicht SOZIAL-Bedingung.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -43577,8 +43586,8 @@
       "affected_categories": "AI_Literacies, Generative_KI, Soziale_Arbeit",
       "n_affected": 3,
       "llm_reasoning": "Paper erfüllt TECHNIK-Kriterium (AI_Literacies, KI_Sonstige) und SOZIAL-Kriterium (Bias_Ungleichheit, Fairness). JEDOCH: Thema ist klinische Entscheidungsunterstützung im Gesundheitswesen, NICHT Soziale Arbeit. Keine Verknüpfung zu sozialarbeiterischer Praxis, Theorie oder Zielgruppen. Bias/Fairness-Diskussion bezieht sich auf medizinische Kontexte, nicht auf Soziale Arbeit. Daher: außerhalb des Scope des Literaturreviews zu KI in Sozialer Arbeit.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -43643,8 +43652,8 @@
       "affected_categories": "AI_Literacies, Prompting, Gender",
       "n_affected": 3,
       "llm_reasoning": "Paper behandelt LLM-Vertrauen und individuelle Unterschiede (AI_Literacies, Generative_KI erfüllt). ABER: Kein Bezug zu sozialen Ungleichheiten, Bias, Gender, Diversität, Fairness oder Sozialer Arbeit. Prompting wird nur beiläufig erwähnt ('prompt-engineering'), nicht substantiell behandelt. Psychologische Vertrauensforschung ohne sozialen/kritischen Bezug. SOZIAL-Kriterien nicht erfüllt → Exclude.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -43709,8 +43718,8 @@
       "affected_categories": "Gender, Diversitaet, Fairness",
       "n_affected": 3,
       "llm_reasoning": "Titel deutet auf Generative KI und Bias hin, aber ohne Abstract oder Volltext ist die Einordnung spekulativ. Sicher sind: Generative_KI=Ja (ChatGPT/Claude), Bias_Ungleichheit=Ja (Titel erwähnt 'Bias'). ABER: Kein Bezug zu Sozialer Arbeit erkennbar. Die Themen 'ethical dilemmas' sind philosophisch, nicht sozialarbeitsbezogen. Daher TECHNIK_OK (Generative_KI), aber SOZIAL nicht erfüllt (Bias allein ohne Sozialarbeitsbezug reicht nicht, und ohne Text kann nicht überprüft werden, ob tatsächlicher Fo",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -43775,8 +43784,8 @@
       "affected_categories": "Prompting, KI_Sonstige, Gender",
       "n_affected": 3,
       "llm_reasoning": "Paper erfüllt TECHNIK-Kriterium (Generative_KI, KI_Sonstige) und SOZIAL-Kriterium (Bias_Ungleichheit, Diversitaet, Fairness). Allerdings: Paper behandelt allgemeine LLM-Bias-Evaluation ohne direkten Bezug zu Sozialer Arbeit, sozialarbeiterischen Zielgruppen oder sozialarbeiterischer Praxis. Bias-Analyse ist technisch-orientiert (Fairness-Metriken für LLMs), nicht anwendungsorientiert für Sozialarbeit. Keine Verbindung zu Soziale_Arbeit identifizierbar.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -43841,8 +43850,8 @@
       "affected_categories": "Prompting, Gender, Diversitaet",
       "n_affected": 3,
       "llm_reasoning": "Paper behandelt Fairness in Large Language Models (Generative_KI: Ja, Fairness: Ja, Bias_Ungleichheit: Ja). Jedoch fehlt der erforderliche SOZIAL-Kontext: Es gibt keinen direkten Bezug zu Sozialer Arbeit, Gender-Perspektive, Diversität oder feministischen Ansätzen. Allgemeine Fairness-Diskussionen in KI ohne Sozialarbeitsbezug sind nicht relevant für das Literature Review zu KI und Sozialer Arbeit. TECHNIK-Bedingung erfüllt, aber SOZIAL-Bedingung nicht erfüllt → Exclude.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -43907,8 +43916,8 @@
       "affected_categories": "Bias_Ungleichheit, Diversitaet, Fairness",
       "n_affected": 3,
       "llm_reasoning": "Paper behandelt Steerability von LLMs (Generative_KI: Ja, Prompting: Ja). Dies sind Technik-Kategorien. Jedoch fehlt jeglicher Bezug zu sozialen Aspekten (Bias, Fairness, Soziale Arbeit, etc.). Ohne Abstract kann keine substantielle Einschätzung des Inhalts erfolgen, aber auf Basis des Titels liegt ein rein technisches Paper zu LLM-Kontrollierbarkeit vor. TECHNIK_OK, aber SOZIAL nicht erfüllt → Exclude.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -43973,8 +43982,8 @@
       "affected_categories": "KI_Sonstige, Gender, Diversitaet",
       "n_affected": 3,
       "llm_reasoning": "Das Paper ist eine systematische Literaturreviw zu AI Literacy im K-12 Bildungskontext und behandelt substantiell AI-Kompetenzen, Curricula und Lernansätze (AI_Literacies = Ja). Es erfüllt jedoch KEINE sozialen Kriterien (Soziale_Arbeit, Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness alle Nein). Der Fokus liegt rein auf Bildungsintegration und Kompetenzentwicklung, nicht auf sozialen Auswirkungen, Ungleichheiten oder Soziale Arbeit. Beide Bedingungen (Technik UND Sozial) sind nic",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -44039,8 +44048,8 @@
       "affected_categories": "Gender, Diversitaet, Fairness",
       "n_affected": 3,
       "llm_reasoning": "Das Paper behandelt deutlich Generative KI (LLMs) und Prompting-Strategien zur Bias-Reduktion (Self-Debiasing). Es adressiert auch Fairness und Bias. Jedoch: Keine direkten sozialen Aspekte im Sinne der Review-Kriterien (Soziale_Arbeit, strukturelle Ungleichheit, Gender-Fokus, Diversität, oder feministische Perspektive). Es bleibt eine technisch-methodische Studie ohne sozialarbeiterischen oder strukturellen sozialen Kontext.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -44105,8 +44114,8 @@
       "affected_categories": "KI_Sonstige, Fairness",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt TECHNIK-Bedingung (Generative_KI, KI_Sonstige) und SOZIAL-Bedingung (Bias_Ungleichheit, Gender, Fairness). ABER: Kein Bezug zu Sozialer Arbeit oder deren Zielgruppen/Praxis. Rein technische Studie zu LLM-Bias ohne Anwendungskontext in Sozialbereich. Für Literature Review Soziale Arbeit nicht relevant.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -44171,8 +44180,8 @@
       "affected_categories": "Bias_Ungleichheit, Gender",
       "n_affected": 2,
       "llm_reasoning": "Paper kombiniert feministische Theorie (Browne et al.) mit KI-Verantwortungsdiskurs. KI_Sonstige=Ja (KI-Entwicklung, Verantwortungsrahmen), Feministisch=Ja (explizit feministische politische Theorie). Jedoch: Soziale_Arbeit=Nein (kein Bezug zu SW-Praxis/Zielgruppen), Bias_Ungleichheit=Nein (nicht substantiell), Gender=Nein (keine Gender-Spezifik). Fehlt: SOZIAL-Komponente im engeren Sinne des Reviews. Nur eines der 6 sozialen Kriterien erfüllt → Exclude.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -44237,8 +44246,8 @@
       "affected_categories": "Gender, Diversitaet",
       "n_affected": 2,
       "llm_reasoning": "Paper behandelt Prompt-Tuning für Debiasing von LLMs und adressiert Fairness/Bias-Reduktion. Dies sind technische Kategorien. Allerdings fehlt ein substantieller Bezug zu sozialen Auswirkungen, sozialarbeiterischer Praxis oder marginalisierten Gruppen. Die Bias-Thematisierung ist rein algorithmisch-technisch, nicht sozialwissenschaftlich verankert. Damit erfüllt das Paper die SOZIAL-Bedingung nicht.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -44303,8 +44312,8 @@
       "affected_categories": "Prompting, Gender",
       "n_affected": 2,
       "llm_reasoning": "Das Paper erfüllt die TECHNIK-Bedingung (Generative_KI, Bias_Ungleichheit, Fairness alle Ja). Jedoch fehlt die SOZIAL-Bedingung im Sinne des Literature Reviews: Bias_Ungleichheit und Fairness sind zwar vorhanden, aber das Paper behandelt allgemeine KI-Ethik und -Fairness OHNE spezifischen Bezug zu Sozialer Arbeit, sozialen Zielgruppen oder sozialarbeiterischen Kontexten. Die Umfrage konzentriert sich auf technische Metriken und NLP-Debiasing, nicht auf Anwendungen im Sozialbereich. Für den Revie",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -44369,8 +44378,8 @@
       "affected_categories": "Diversitaet, Fairness",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt TECHNIK-Bedingung (Generative_KI, Prompting). Jedoch fehlt SOZIAL-Bedingung für Anwendungsgebiet mit sozialem Fokus: Bias_Ungleichheit, Gender und Fairness behandeln allgemeine LLM-Bias, nicht spezifisch Soziale Arbeit, marginalisierte Communities oder sozialarbeiterische Kontexte. Reine KI-Ethik-Studie ohne Sozialarbeitsbezug → Exclude für dieses Review.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -44435,8 +44444,8 @@
       "affected_categories": "Gender, Diversitaet",
       "n_affected": 2,
       "llm_reasoning": "Das Paper behandelt algorithmische Systeme (KI_Sonstige: Ja) und Machtungleichgewichte durch Big Tech (Bias_Ungleichheit: Ja). Allerdings fehlt ein direkter Bezug zu Sozialer Arbeit oder deren Praxis/Zielgruppen. Die Analyse fokussiert auf politische Wirtschaft und staatliche Souveränität, nicht auf Sozialbereich. SOZIAL-Bedingung ist nicht erfüllt.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -44501,8 +44510,8 @@
       "affected_categories": "Gender, Diversitaet",
       "n_affected": 2,
       "llm_reasoning": "Paper adressiert impliziten Bias in Transformer-Sprachmodellen mittels Embedding Association Test und Prompt Engineering. Dies deckt Generative_KI, Prompting und Bias ab. Jedoch fehlt der Sozial-Kontext: Keine Bezüge zu Sozialer Arbeit, struktureller Benachteiligung oder konkreten sozialen Auswirkungen. Bias-Analyse ohne Kontextualisierung sozialer Implikationen erfüllt nicht die SOZIAL-Kriterien.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -44567,8 +44576,8 @@
       "affected_categories": "Bias_Ungleichheit",
       "n_affected": 1,
       "llm_reasoning": "Basierend auf dem Titel behandelt das Paper generative KI und menschliches Lernen, was auf AI_Literacies und Generative_KI hindeutet. Allerdings fehlt das Abstract und der Volltext für eine verlässliche Bewertung. Ohne substantielle Informationen kann nicht überprüft werden, ob ein echter Sozialarbeits- oder Bias-/Fairness-Bezug vorhanden ist. Die restriktive Klassifizierungsweisung verbietet die Annahme von Sozialbezug nur aufgrund von 'learning'. Exclude.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -44633,8 +44642,8 @@
       "affected_categories": "Diversitaet",
       "n_affected": 1,
       "llm_reasoning": "Paper untersucht AI Literacy bei Doktoranden auf vier Dimensionen (kognitiv, operativ, kritisch, ethisch). Dies erfüllt AI_Literacies-Kriterium substantiell. Jedoch adressiert das Paper keinen direkten Bezug zu Sozialer Arbeit, behandelt Bias/Ungleichheit nicht fokussiert und hat keinen Gender-, Diversitäts-, Feminist. oder Fairness-Schwerpunkt. Allgemeine Ethik-Erwähnung reicht nicht aus.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -44699,8 +44708,8 @@
       "affected_categories": "Fairness",
       "n_affected": 1,
       "llm_reasoning": "Das Paper behandelt LLMs (Generative_KI=Ja), Prompt-Engineering (Prompting=Ja), Gender-Bias (Gender=Ja) und Fairness-Metriken (Fairness=Ja). Dies erfüllt die TECHNIK-Bedingung klar. SOZIAL-Bedingung: Bias_Ungleichheit=Ja ist erfüllt. Allerdings liegt der Fokus ausschließlich auf technischer Sprachübersetzung ohne direkten Bezug zu Sozialer Arbeit oder ihren Zielgruppen/Praktiken. Für Inclusion ist substantieller Bezug zu Soziale_Arbeit erforderlich oder starke strukturelle Ungleichheits-Dimensio",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -44765,8 +44774,8 @@
       "affected_categories": "Bias_Ungleichheit",
       "n_affected": 1,
       "llm_reasoning": "Paper adressiert Mensch-KI-Interaktion und Trust-Adaptivität in Decision-Support-Systemen (AI_Literacies, KI_Sonstige, Fairness). Allerdings fehlt der erforderliche SOZIAL-Anker komplett: kein Bezug zu Soziale Arbeit, keine Analyse von strukturellen Ungleichheiten, keine marginalisierten Gruppen im Fokus. Fairness wird rein technisch/kognitiv behandelt.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -44831,8 +44840,8 @@
       "affected_categories": "Bias_Ungleichheit",
       "n_affected": 1,
       "llm_reasoning": "Paper adressiert generative KI (LLMs), Prompting (uncertainty calibration durch Prompt Engineering) und AI Literacy (Vertrauen in LLM-Ausgaben verstehen). Behandelt auch Fairness-Aspekte durch Kalibrierung. ABER: Kein substantieller sozialer Bezug zu Sozialer Arbeit, Bias/Ungleichheit, Gender, Diversität oder Feminist. Perspektive. Es ist eine allgemeine KI-HCI-Studie ohne Sozialarbeitsbezug. Daher: Nur Technik erfüllt, nicht Sozial → Exclude.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -44897,8 +44906,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper behandelt Prompting-Strategien zur Reduktion von Gender-Bias in LLMs—klare technische Komponente mit Fairness-Fokus. Allerdings fehlt jeder Bezug zu Sozialer Arbeit, Zielgruppen sozialer Dienste oder strukturellen sozialen Implikationen. Es ist eine Standard-Debiasing-Studie ohne sozialarbeitlichen Kontext.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -44963,8 +44972,8 @@
       "affected_categories": "AI_Literacies, Generative_KI, Prompting, Gender, Diversitaet",
       "n_affected": 5,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: TECHNIK (AI_Literacies: Fokus auf AI Literacy in Social Work Education; KI_Sonstige: algorithmische Systeme im Sozialbereich). SOZIAL (Soziale_Arbeit: direkter Bezug zu sozialarbeiterischer Praxis und Ausbildung; Bias_Ungleichheit: algorithmic bias; Fairness: unfairness in AI). Umfassende ethische Analyse von KI-Implementierung im sozialarbeiterischen Kontext mit konkretem Implementierungsprotokoll.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45029,8 +45038,8 @@
       "affected_categories": "AI_Literacies, Generative_KI, Prompting, Gender, Diversitaet",
       "n_affected": 5,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (AI_Literacies + KI_Sonstige: Bezug zu ethischen Rahmenbedingungen und Implementierung von KI-Systemen in sozialer Arbeit) und SOZIAL_OK (Soziale_Arbeit + Bias_Ungleichheit + Fairness: Direkter Bezug zu Sozialarbeitspraxis, explizite Behandlung von algorithmischen Bias und Fairness-Anforderungen). Das Paper entwickelt systematisch ethische Richtlinien und einen Implementierungsrahmen für KI in der Sozialen Arbeit.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45095,8 +45104,8 @@
       "affected_categories": "AI_Literacies, Generative_KI, Prompting, Gender, Diversitaet",
       "n_affected": 5,
       "llm_reasoning": "Das Paper behandelt systematisch ethische Herausforderungen von KI in der Sozialen Arbeit und entwickelt einen umfassenden Implementierungsrahmen. TECHNIK_OK: AI_Literacies (Kompetenzrahmen für ethische KI-Implementierung) + KI_Sonstige (algorithmische Systeme im Sozialkontext). SOZIAL_OK: Soziale_Arbeit (direkter Bezug zu SW-Praxis und -Ethik) + Bias_Ungleichheit (algorithmischer Bias wird thematisiert) + Fairness (Framework-Entwicklung für faire KI). Beide Bedingungen erfüllt → Include.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45161,8 +45170,8 @@
       "affected_categories": "AI_Literacies, Generative_KI, Prompting, Gender, Diversitaet",
       "n_affected": 5,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK durch AI_Literacies (ethische Kompetenzen, professionelle Ausbildung), KI_Sonstige (algorithmische Systeme in Sozialbereich) und Fairness (Bias, Transparenz). SOZIAL_OK durch Soziale_Arbeit (direkte Anwendung in SW-Praxis), Bias_Ungleichheit (algorithmic bias) und Fairness. Umfassende ethische Analyse mit Bezug zu NASW-Kodex und SW-Zielgruppen.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45227,8 +45236,8 @@
       "affected_categories": "AI_Literacies, Gender, Diversitaet, Fairness",
       "n_affected": 4,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK durch AI_Literacies (Vorbereitung von Social Workers auf KI-Nutzung), KI_Sonstige (Predictive Modeling, Algorithmen in Social Services) und Fairness. SOZIAL_OK durch Soziale_Arbeit (direkter Bezug zu Social Work Practice), Bias_Ungleichheit (algorithmic bias als Risiko), und Fairness (Emphasis auf ethische, faire KI-Integration). Paper ist substantiell und adressiert zentrale Schnittstelle KI-Soziale Arbeit.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45293,8 +45302,8 @@
       "affected_categories": "AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender",
       "n_affected": 4,
       "llm_reasoning": "Paper adressiert substantiell generative KI und LLMs (Generative_KI: Ja), entwickelt ein Framework für kritische Analyse (AI_Literacies: Ja) mit explizitem Fokus auf Prompt-Dokumentation und -Transparenz (Prompting: Ja). Direkter Bezug zu sozialarbeiterischer Forschungspraxis und Journal-Editoren in der Sozialen Arbeit (Soziale_Arbeit: Ja). Alle Bedingungen erfüllt: TECHNIK (3x Ja) UND SOZIAL (1x Ja).",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45359,8 +45368,8 @@
       "affected_categories": "AI_Literacies, Prompting, Gender, Diversitaet",
       "n_affected": 4,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: TECHNIK (Generative_KI + AI_Literacies durch Praxis-Guidance) und SOZIAL (Soziale_Arbeit + Bias_Ungleichheit durch Warnung vor racist/sexist assumptions). Es ist eine direkte Praxis-Orientierung für Sozialarbeiter:innen mit ethischen Reflexionspunkten und adressiert substantiell generative KI-Risks (Bias, Halluzinationen, Datenschutz).",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45425,8 +45434,8 @@
       "affected_categories": "AI_Literacies, KI_Sonstige, Bias_Ungleichheit, Gender",
       "n_affected": 4,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (Generative_KI=Ja, Prompting=Ja, AI_Literacies=Ja durch Fokus auf Bildung und kritisches Verständnis von LLMs) und SOZIAL_OK (Soziale_Arbeit=Ja, direkter Bezug zu Forschung und Praxis in Social Work). Framework für verantwortungsvollen KI-Einsatz mit Dokumentations- und Transparenzanforderungen ist substantiell.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45491,8 +45500,8 @@
       "affected_categories": "AI_Literacies, Bias_Ungleichheit, Gender, Feministisch",
       "n_affected": 4,
       "llm_reasoning": "Paper behandelt kritische AI Literacies (TECHNIK) und thematisiert strukturelle Ungleichheiten bezüglich Rasse, Geschlecht und Arbeit (SOZIAL). Expliziter Fokus auf Bias/Ungleichheit und Gender. Kritische Perspektive auf Strukturen deutet auf feministische Ansätze hin. Beide Bedingungen erfüllt → Include.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45557,8 +45566,8 @@
       "affected_categories": "Prompting, KI_Sonstige, Diversitaet, Fairness",
       "n_affected": 4,
       "llm_reasoning": "Paper untersucht systematisch Bias und Diskriminierung in LLM-generierten Narrativen von queeren Personen. Erfüllt TECHNIK-Kriterium (Generative_KI: Fokus auf LLM-Outputs) und SOZIAL-Kriterium (Bias_Ungleichheit: Stereotypisierung marginalisierter Gruppen; Gender: queere Identitäten; Diversitaet: Repräsentation von LGBTQ+-Personen in KI-Systemen). Keine explizite feministische Theorie erkannt, daher Feministisch=Nein.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45623,8 +45632,8 @@
       "affected_categories": "Bias_Ungleichheit, Gender, Diversitaet, Fairness",
       "n_affected": 4,
       "llm_reasoning": "Paper behandelt Datengetriebene Systeme (KI_Sonstige) und deren Auswirkungen auf vulnerable Bevölkerungsgruppen (ältere Erwachsene). Adressiert Bias durch ageist assumptions (Bias_Ungleichheit), partizipative Inklusion marginalisierter Gruppen (Diversitaet). Verwendet implizit-feministische Perspektive durch Kritik von Machtstrukturen und Dominanz mächtiger Akteure (Feministisch). Fokus auf demokratisierte Futures-Making und alternative Narrativen reflektiert Fairness-Perspektive. TECHNIK_OK (KI",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45689,8 +45698,8 @@
       "affected_categories": "Prompting, Gender, Diversitaet",
       "n_affected": 3,
       "llm_reasoning": "Paper untersucht implizite Biase in LLMs durch neuartige Evaluationsmethoden (LLM-WAT, LLM-RDT). Erfüllt TECHNIK-Kriterium (Generative_KI=Ja) und SOZIAL-Kriterien (Bias_Ungleichheit=Ja, Fairness=Ja). Fokus auf stereotype Assoziationen und subtile Diskriminierung in State-of-the-Art Modellen. Kein expliziter Gender-, Diversitäts- oder feministischer Fokus erkennbar, daher diese Kategorien Nein. Kein direkter Sozialarbeitsbezug.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45755,8 +45764,8 @@
       "affected_categories": "Generative_KI, Gender, Fairness",
       "n_affected": 3,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK-OK durch AI_Literacies (community-based AI digital literacy), KI_Sonstige (AI in social work), SOZIAL-OK durch Soziale_Arbeit (direkter Fokus auf sozialarbeiterische Praxis), Bias_Ungleichheit (ethische Gerechtigkeit), Diversitaet (vulnerable populations, technology access) und Fairness (ethics and justice component). EPIC-Modell adressiert systematisch KI-Integration in Sozialarbeit mit Schwerpunkt auf ethische und gerechte Outcomes.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -45821,8 +45830,8 @@
       "affected_categories": "Generative_KI, Soziale_Arbeit, Gender",
       "n_affected": 3,
       "llm_reasoning": "Paper adressiert algorithmische Entscheidungssysteme (KI_Sonstige: Ja) in der Sozialleistungsverwaltung (Soziale_Arbeit: Ja). Zentrale Themen sind Fairness bei der Ressourcenverteilung (Fairness: Ja), kulturelle/kontextuelle Ungleichheiten (Bias_Ungleichheit: Ja) und inklusive Partizipation von marginalisierten Gruppen (Diversitaet: Ja). Erfüllt TECHNIK- und SOZIAL-Kriterium.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45887,8 +45896,8 @@
       "affected_categories": "AI_Literacies, Bias_Ungleichheit, Diversitaet",
       "n_affected": 3,
       "llm_reasoning": "Paper behandelt substantiell AI_Literacies (user guidelines und training für LLM-Nutzung), Generative_KI (LLM-fokussiert), Prompting (diversity-sensitive prompting techniques explizit genannt) und adressiert Bias_Ungleichheit sowie Diversität (diversity-sensitive approaches). Erfüllt TECHNIK (3 Kategorien) und SOZIAL (2 Kategorien). Kein direkter Sozialarbeitsbezug identifizierbar.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -45953,8 +45962,8 @@
       "affected_categories": "AI_Literacies, Soziale_Arbeit, Fairness",
       "n_affected": 3,
       "llm_reasoning": "Paper adressiert Allegheny Family Screening Tool (algorithmisches Entscheidungssystem in der Jugendhilfe). TECHNIK erfüllt: KI_Sonstige (algorithmische Systeme), AI_Literacies (worker training, tool understanding). SOZIAL erfüllt: Soziale_Arbeit (child welfare practice), Bias_Ungleichheit (discrimination risks), Fairness (misalignments, limitations). Empirische Studie mit direktem Sozialarbeitsbezug und kritischer Analyse von Systemrisiken.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46019,8 +46028,8 @@
       "affected_categories": "Prompting, KI_Sonstige, Bias_Ungleichheit",
       "n_affected": 3,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (AI_Literacies Ja: Pedagogisches Framework für kritische KI-Kompetenzentwicklung; Prompting Ja: Expliziter Fokus auf 'critical prompting' in Explore-Phase). SOZIAL_OK (Bias_Ungleichheit Ja: Substantielle Behandlung von Bias-Erkennung und Sichtbarmachung von Diskriminierung in KI-Outputs). Kein Bezug zu Sozialer Arbeit oder explizit feministischer Theorie; daher nur diese Kategorien Ja.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -46085,8 +46094,8 @@
       "affected_categories": "KI_Sonstige, Gender, Diversitaet",
       "n_affected": 3,
       "llm_reasoning": "Paper behandelt Bias-Mitigation und Fairness in ML-Systemen (KI_Sonstige: Ja, Bias_Ungleichheit: Ja, Fairness: Ja). Dies ist ein etabliertes Paper zur algorithmischen Fairness. TECHNIK-Bedingung erfüllt (KI_Sonstige), SOZIAL-Bedingung erfüllt (Bias_Ungleichheit + Fairness). Kein Sozialarbeitsbezug erkannt, aber Fairness-Fokus ist substantiell genug für Inclusion im breiter definierten KI-Ethik-Kontext.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46151,8 +46160,8 @@
       "affected_categories": "AI_Literacies, Generative_KI, Diversitaet",
       "n_affected": 3,
       "llm_reasoning": "Paper behandelt XAI als Kompetenz- und Transparenzthema (AI_Literacies), mit Fokus auf algorithmische Systeme (KI_Sonstige). Substantielle Thematisierung von Bias/Ungleichheit durch Marginalisierung, Diversität durch explizite Nennung marginalisierter Gruppen und Fairness durch ethische/gerechte Entscheidungsfindung. TECHNIK und SOZIAL erfüllt → Include.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46217,8 +46226,8 @@
       "affected_categories": "Gender, Feministisch, Fairness",
       "n_affected": 3,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK durch KI_Sonstige (algorithmische Systeme und AI Bias); SOZIAL_OK durch Bias_Ungleichheit (strukturelle Gerechtigkeit), Diversitaet (Diversity/Equity/Inclusion) und Fairness (Frameworks für faire KI-Governance). Theoretischer Ansatz basierend auf Young's Strukturtheorie, nicht auf feministischer Methode selbst (daher Feministisch=Nein).",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46283,8 +46292,8 @@
       "affected_categories": "AI_Literacies, Prompting, Soziale_Arbeit",
       "n_affected": 3,
       "llm_reasoning": "Paper erfüllt TECHNIK- und SOZIAL-Kriterien: (1) Generative_KI (LLM-basierter AI Coach), Prompting (strukturiertes Prompting für reflektive Praxis), AI_Literacies (Entwicklung von Self-Reflection-Kompetenzen). (2) Soziale_Arbeit (öffentliche Verwaltung, human services context, Kompetenzentwicklung). Empirische User Study mit klarem Fokus auf KI-gestützte Professionalisierung im sozialen Sektor.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46349,8 +46358,8 @@
       "affected_categories": "AI_Literacies, KI_Sonstige, Bias_Ungleichheit",
       "n_affected": 3,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: (1) TECHNIK: Generative_KI (LLMs in Social Work) + AI_Literacies (Pädagogische Integration, Kompetenzentwicklung). (2) SOZIAL: Soziale_Arbeit (direkter Bezug zu Lehre und Praxis Sozialer Arbeit) + Bias_Ungleichheit (Warnung vor Bias, faktischen Fehlern). Substantielle Behandlung aller Kategorien, kein Gender/Feministisch-Fokus erforderlich.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46415,8 +46424,8 @@
       "affected_categories": "KI_Sonstige, Soziale_Arbeit",
       "n_affected": 2,
       "llm_reasoning": "Paper adressiert algorithmische Governance und digitale Systeme in Wohlfahrtsstaat (KI_Sonstige: Ja). Direkter Bezug zu Sozialarbeit durch Analyse von Welfare Services und deren Digitalisierung (Soziale_Arbeit: Ja). Thematisiert Spannungen zwischen Care und Control, was Fragen zu Überwachung und algorithmischer Kontrolle aufwirft (Bias_Ungleichheit: Ja, da Machtasymmetrien und potenzielle Diskriminierung in digitalen Wohlfahrtssystemen adressiert werden). Beide Bedingungen erfüllt: TECHNIK_OK + ",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46481,8 +46490,8 @@
       "affected_categories": "KI_Sonstige, Bias_Ungleichheit",
       "n_affected": 2,
       "llm_reasoning": "Paper behandelt ethische Herausforderungen von Technologie in der Sozialen Arbeit substantiell. KI_Sonstige erfüllt (automatisierte Systeme, digitale Technologien), Soziale_Arbeit erfüllt (direkte Praxisanalyse), Bias_Ungleichheit erfüllt (digital divide, soziale Gerechtigkeit, Selbstbestimmung). Systematischer Review mit klarem Sozialarbeitsbezug und Fokus auf algorithmische Systeme und deren Auswirkungen.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46547,8 +46556,8 @@
       "affected_categories": "Generative_KI, Diversitaet",
       "n_affected": 2,
       "llm_reasoning": "Paper analysiert EU AI Act durch Gender-Lens: KI_Sonstige (algorithmische Systeme unter Regulierung) + Gender (expliziter Geschlechterfokus) + Bias_Ungleichheit (Geschlechtergerechtigkeit) + Fairness (Regulierungsanalyse). Beide Bedingungen erfüllt: TECHNIK_OK (KI_Sonstige), SOZIAL_OK (Gender + Bias_Ungleichheit + Fairness).",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46613,8 +46622,8 @@
       "affected_categories": "AI_Literacies, Fairness",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt TECHNIK-Kriterium (Generative_KI + Prompting + AI_Literacies) und SOZIAL-Kriterium (Bias_Ungleichheit + Gender + Diversitaet + Fairness). Substantieller Fokus auf Prompt-Engineering-Strategien zur Reduktion von Bias in generativen KI-Bildern. Adressiert stereotype Darstellungen und präsentiert konkrete inklusive Prompting-Techniken. Kein explizit feministischer oder sozialarbeiterischer Bezug, daher keine Ja-Vergabe für diese Kategorien.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46679,8 +46688,8 @@
       "affected_categories": "KI_Sonstige, Bias_Ungleichheit",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt beide Inklusionskriterien: (1) TECHNIK-Kriterium: KI_Sonstige=Ja (Algorithmen, datengetriebene Systeme, digitale Plattformen sind zentral). (2) SOZIAL-Kriterium: Soziale_Arbeit=Ja (direkter Fokus auf sozialarbeiterische Praxis und deren Transformation) UND Bias_Ungleichheit=Ja (Analyse von Machtstrukturen, Überwachung und sozialen Ungleichheiten). Kutschers Fokus auf Digitalisierung als Machtfrage und soziale Gerechtigkeit ist substantiell für beide Dimensionen.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46745,8 +46754,8 @@
       "affected_categories": "Generative_KI, Diversitaet",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (Generative_KI: GPT-3.5, KI_Sonstige: BERT, Fairness-Metriken) und SOZIAL_OK (Gender-Bias explizit im Titel, Bias_Ungleichheit als Analysefokus, Fairness-Metriken substantiell behandelt). Empirische Studie zu Gender-Bias in KI-Systemen mit direktem Fairness-Bezug.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46811,8 +46820,8 @@
       "affected_categories": "AI_Literacies, Generative_KI",
       "n_affected": 2,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige: Ja - behandelt AI-Systeme im Allgemeinen), SOZIAL_OK (Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness alle Ja). Explizit feministische Arbeit (D'Ignazio ist Autorin von Data Feminism), intersektionale Perspektive auf KI-Systeme, Fokus auf ungleiche Machtbeziehungen und Gerechtigkeit. Substantielle Behandlung aller relevanten Kategorien.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -46877,8 +46886,8 @@
       "affected_categories": "AI_Literacies, Fairness",
       "n_affected": 2,
       "llm_reasoning": "Paper adressiert substantiell: (1) Prompting: Prompt-Engineering-Strategien zur Bias-Mitigation und Transparenzförderung sind zentral; (2) Generative_KI: LLMs in sozialer Praxis; (3) Soziale_Arbeit: direkter Bezug zu Case Recommendations und Professional Practice; (4) Bias_Ungleichheit und Fairness: explizit Bias-Mitigation und Trust-Framework; (5) AI_Literacies: Professionelle Kompetenzentwicklung (aktive Direktoren vs. passive Konsumenten). TECHNIK und SOZIAL beide erfüllt → Include.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -46943,8 +46952,8 @@
       "affected_categories": "AI_Literacies, Generative_KI",
       "n_affected": 2,
       "llm_reasoning": "Paper behandelt NLP als KI-Technologie (KI_Sonstige: Ja) und adressiert direkt sozialarbeiterische Praxis, Theorie und professionsethische Fragen (Soziale_Arbeit: Ja). Kritische Auseinandersetzung mit KI-Chancen/-Risiken impliziert auch AI Literacy-Anforderungen (AI_Literacies: Ja). TECHNIK-Kriterium erfüllt (3x Ja). SOZIAL-Kriterium erfüllt (Soziale_Arbeit: Ja). Inklusionskriterien erfüllt.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47009,8 +47018,8 @@
       "affected_categories": "Bias_Ungleichheit, Fairness",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige: Entscheidungsunterstützungssysteme/algorithmische Systeme) und SOZIAL_OK (Soziale_Arbeit: expliziter Fokus auf Sozialarbeiter und Behindertenservices; Bias_Ungleichheit: Reduktion subjektiver Vorurteile; Fairness: Transparenz in Ressourcenallokation). Empirische Untersuchung mit direktem Bezug zu sozialarbeiterischer Praxis und algorithmischen Systemen im Sozialbereich.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47075,8 +47084,8 @@
       "affected_categories": "AI_Literacies, Generative_KI",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt beide Kriterien: (1) TECHNIK_OK: Behandelt AI_Literacies (kritische Reflexion von NLP-Technologien in sozialer Arbeit) und KI_Sonstige (NLP als spezifisches ML-System). (2) SOZIAL_OK: Direkter Fokus auf Soziale_Arbeit (arbeitsfeldübergreifende Analyse, Auswirkungen auf sozialarbeiterische Praxis). Kritische Auseinandersetzung mit Chancen/Risiken der KI-Implementierung im Kontext authentischer Sozialer Arbeit.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47141,8 +47150,8 @@
       "affected_categories": "Bias_Ungleichheit, Fairness",
       "n_affected": 2,
       "llm_reasoning": "Paper adressiert AI Literacy durch Forderung nach Stakeholder-Involvement und Transparenz in KI-Systemen für Bildung. KI_Sonstige zutreffend: Neural-Symbolic AI ist ML-Ansatz. Bias_Ungleichheit und Fairness erfüllt durch Kritik an irresponsible KI-Use, unreliablen XAI-Methoden und Forderung nach Verantwortlichkeit. TECHNIK (AI_Literacies + KI_Sonstige) UND SOZIAL (Bias_Ungleichheit + Fairness) erfüllt → Include. Keine direkten Sozialen Arbeits- oder Gender-Bezüge identifiziert.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -47207,8 +47216,8 @@
       "affected_categories": "AI_Literacies, Fairness",
       "n_affected": 2,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: TECHNIK_OK (AI_Literacies, KI_Sonstige) durch Framework-Entwicklung für KI-Kompetenzentwicklung und Machtanalyse in KI-Systemen. SOZIAL_OK (Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness) durch explizite feministische Methodologie nach intersektionalem Ansatz, Bekämpfung struktureller Ungleichheiten und Fairness-Fokus. Das Paper entwickelt substantiell einen feministischen Rahmen für KI-Governance.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47273,8 +47282,8 @@
       "affected_categories": "AI_Literacies, Diversitaet",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (AI_Literacies, KI_Sonstige) + SOZIAL_OK (Bias_Ungleichheit, Gender, Feministisch, Fairness). Behandelt substantiell feministische Perspektive auf KI (intersektional), Gender-Bias in KI-Systemen, AI-Literacy in politischer Bildung. Kein Sozialarb.-Bezug, daher nicht in dieser Kategorie.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47339,8 +47348,8 @@
       "affected_categories": "Generative_KI, Bias_Ungleichheit",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige=Ja, da es sich um Studie zu AI-Development befasst) und SOZIAL_OK (Bias_Ungleichheit=Ja: 'injustices and inequalities'; Fairness=Ja: Responsibility und strukturelle Herausforderungen). Kein Bezug zu Sozialer Arbeit oder feministischer Theorie erkennbar. Empirische Studie mit N=32 Professionals.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47405,8 +47414,8 @@
       "affected_categories": "Gender, Diversitaet",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt beide Einschlusskriterien: (1) TECHNIK: KI_Sonstige=Ja (algorithmisches Entscheidungssystem in der Jugendhilfe). (2) SOZIAL: Soziale_Arbeit=Ja (direkter Bezug zu Child Protection/Jugendhilfe), Bias_Ungleichheit=Ja (Analyse von Diskriminierung gegenüber Immigrantenfamilien), Diversitaet=Ja (Repräsentationsfragen marginalisierter Communities), Fairness=Ja (Fehlerpräzision und Fairness-Metriken). Substantielle empirische Analyse mit dokumentierten Systemharms.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47471,8 +47480,8 @@
       "affected_categories": "AI_Literacies, Bias_Ungleichheit",
       "n_affected": 2,
       "llm_reasoning": "Paper behandelt substantiell AI_Literacies (kritische Reflexion über KI-Kompetenzen von Fachkräften, Automation Bias), KI_Sonstige (Algorithmen, Big Data Analytics), Soziale_Arbeit (direkter Bezug zur sozialen Arbeit und professionellen Entscheidungsfindung) und Bias_Ungleichheit (Automation Bias). Beide Voraussetzungen erfüllt: TECHNIK_OK (KI_Sonstige + AI_Literacies) und SOZIAL_OK (Soziale_Arbeit + Bias_Ungleichheit).",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47537,8 +47546,8 @@
       "affected_categories": "Generative_KI, Soziale_Arbeit",
       "n_affected": 2,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: TECHNIK (KI_Sonstige: Bias-Detection in NLP, algorithmische Systeme im sozialen Kontext) und SOZIAL (Feministisch: explizit feminist AI; Gender: gender-based violence; Soziale_Arbeit: praktische Anwendungen bei Gewalt und Justiz; Bias_Ungleichheit: Bias-Detection; Diversitaet: intersektionale Analyse, multi-regionale Gemeinschaften). Starker feministischer Rahmen mit substantiellem Fokus auf strukturelle Gerechtigkeit.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47603,8 +47612,8 @@
       "affected_categories": "Feministisch, Fairness",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige: Bias in KI-Systemen), SOZIAL_OK (Bias_Ungleichheit, Gender, Diversitaet, Feministisch als intersektionale Kritik an Machtverhältnissen, Fairness). Kritische Analyse von algorithmischen Systemen mit explizitem Gender- und Rassismus-Fokus sowie intersektionaler Perspektive auf Diskriminierung.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47669,8 +47678,8 @@
       "affected_categories": "Gender, Feministisch",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige=Ja: algorithmische Fairness-Systeme) und SOZIAL_OK (Bias_Ungleichheit=Ja, Diversitaet=Ja, Feministisch=Ja [explizite Verwendung von Intersektionalität nach Crenshaw, Analyse von Machtstrukturen], Fairness=Ja). Kritische intersektionale Analyse struktureller Machtverhältnisse in KI-Systemen mit explizitem feministischem Rahmen (Crenshaw).",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47735,8 +47744,8 @@
       "affected_categories": "AI_Literacies, Fairness",
       "n_affected": 2,
       "llm_reasoning": "Paper behandelt substantiell AI Literacy durch feministische Perspektive (Kubes, Gender-kritisch). Analysiert KI-Anwendungen im Kontext Bias (androzentrisch, eurozentrisch, kapitalistisch-patriarchal), Geschlechterperspektive und Inklusion. Praktischer Bezug durch Curriculum und Workshops. Beide Bedingungen erfüllt: TECHNIK (AI_Literacies, KI_Sonstige), SOZIAL (Feministisch, Gender, Bias_Ungleichheit, Diversitaet).",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47801,8 +47810,8 @@
       "affected_categories": "AI_Literacies, Generative_KI",
       "n_affected": 2,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK durch KI_Sonstige (allgemeiner KI/ML-Bezug); SOZIAL_OK durch Bias_Ungleichheit, Gender, Diversitaet und Feministisch (explizite Verwendung des Data-Feminism-Frameworks von D'Ignazio, intersektionale feministische Perspektive). Starker konzeptioneller Beitrag zu equitable und ethical AI.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -47867,8 +47876,8 @@
       "affected_categories": "Generative_KI",
       "n_affected": 1,
       "llm_reasoning": "Das Paper behandelt KI-Anwendungen in der Sozialen Arbeit (Chatbots, Predictive Risk Modeling) und analysiert algorithmischen Bias sowie ethische Fragen. Es erfüllt beide Anforderungen: TECHNIK (Generative_KI für Chatbots, KI_Sonstige für PRM und neuronale Netze) und SOZIAL (Soziale_Arbeit als Fokus, Bias_Ungleichheit als substantielles Thema). Keine feministischen Theorien explizit erwähnt, daher Feministisch=Nein.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47933,8 +47942,8 @@
       "affected_categories": "Gender",
       "n_affected": 1,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: TECHNIK-Bereich durch Generative_KI (LLMs) und Prompting (12 prompt-engineering Strategien sind substantieller Fokus). SOZIAL-Bereich durch Bias_Ungleichheit (explizit: 'social biases', 'stereotypical responses') und Fairness (Bias-Mitigation, Fairness-Strategien). Kein Feministisch, da keine explizite feministische Theorie verwendet.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -47999,8 +48008,8 @@
       "affected_categories": "Fairness",
       "n_affected": 1,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige=Ja, da methodologische Frameworks für AI-Entwicklung), SOZIAL_OK (Feministisch=Ja durch explizite feministische Perspektive; Gender=Ja, Latin American women focus; Diversitaet=Ja, intersektionale Ansätze; Bias_Ungleichheit=Ja, power-balancing und Autonomie). Kein direkter Sozialarbeitsbezug, aber substantielle feminist AI-Entwicklung.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48065,8 +48074,8 @@
       "affected_categories": "Fairness",
       "n_affected": 1,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige: algorithmische Systeme und Bias), SOZIAL_OK (Bias_Ungleichheit, Gender, Diversitaet, Feministisch via intersektionale Analyse nach Crenshaw-Rahmen, Fairness). Intersektionalität und kritische Machtanalyse sind explizit feministisch. Fokus auf strukturelle Systeminnovation, nicht nur technische Fixes.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48131,8 +48140,8 @@
       "affected_categories": "Generative_KI",
       "n_affected": 1,
       "llm_reasoning": "Paper erfüllt TECHNIK-Kriterium durch KI_Sonstige (algorithmische Entscheidungssysteme in Hiring, Healthcare, Law Enforcement). SOZIAL-Kriterium erfüllt durch: Bias_Ungleichheit (Diskriminierung, Bias in automatisierten Systemen), Gender (Unterrepräsentation von Frauen in AI), Diversitaet (marginalisierte Gruppen), Feministisch (explizit feministische Perspektive und Rahmen). Substanzielle Behandlung aller Kategorien im Abstract dokumentiert.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48197,8 +48206,8 @@
       "affected_categories": "Fairness",
       "n_affected": 1,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK-Ja (KI_Sonstige: algorithmische Entscheidungssysteme in der Jugendhilfe), SOZIAL-Ja (Soziale_Arbeit: direkter Fokus auf Auswirkungen von Algorithmen auf sozialarbeiterische Praxis und Professionalität; Bias_Ungleichheit und Fairness: kritische Analyse von Machtstrukturen und Neutralitätsansprüchen). Kritische Analyse struktureller Effekte von Algorithmen auf professionelle Autonomie und Care-Beziehungen.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48263,8 +48272,8 @@
       "affected_categories": "Fairness",
       "n_affected": 1,
       "llm_reasoning": "Paper analysiert Intersektionalität in KI-Systemen explizit mit feministischer Perspektive (Intersektionalitätsagenda nach Crenshaw-Tradition). Thematisiert substantiell: algorithmische Bias/Diskriminierung (KI_Sonstige), strukturelle Ungleichheit (Bias_Ungleichheit), Gender-Perspektive (homogene Gruppen weißer Männer), Diversität in AI-Entwicklung (Diversitaet), feministische Technikforschung (Feministisch) und Fairness-Probleme. Beide Bedingungen erfüllt: Technik (KI_Sonstige=Ja) + Sozial (mul",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48329,8 +48338,8 @@
       "affected_categories": "AI_Literacies",
       "n_affected": 1,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK: KI_Sonstige (Machine Learning, Gradient Boosting für Prediction) + AI_Literacies (Training von Fachkräften, eXplainable AI für Transparenz). SOZIAL: Soziale_Arbeit (Jugendhilfe/Child Guidance Centers, direkte sozialarbeiterische Praxis und Zielgruppen). Implementierungsstudie mit substantiellem Fokus auf Kompetenzentwicklung und praktische Anwendung algorithmischer Systeme im Sozialbereich.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48395,8 +48404,8 @@
       "affected_categories": "Fairness",
       "n_affected": 1,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK-OK durch KI_Sonstige (Bias- und Fairness-Fokus auf AI-Systeme). SOZIAL-OK durch Bias_Ungleichheit, Gender, Diversitaet, Feministisch (explizit intersektionales Feminist AI Framework) und Fairness. Verwendet feministische Theorie substantiell als Kernrahmen zur AI-Kritik. Keine Soziale_Arbeit-Verbindung erkannt.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48461,8 +48470,8 @@
       "affected_categories": "Fairness",
       "n_affected": 1,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (Generative_KI=Ja, Prompting=Ja: systematische Analyse von Prompt-Engineering-Techniken für LLMs). SOZIAL_OK (Bias_Ungleichheit=Ja: kultureller Bias gegen Araber und Muslime; Diversitaet=Ja: kulturelle Repräsentation; Fairness=Ja: Bias-Reduktion und Fairness-Metriken). Substantieller Fokus auf Prompt-Strategien zur Bias-Mitigation in LLMs.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48527,8 +48536,8 @@
       "affected_categories": "Bias_Ungleichheit",
       "n_affected": 1,
       "llm_reasoning": "Der Bericht adressiert algorithmische Diskriminierung (KI_Sonstige: Ja) und behandelt substantiell Bias/Ungleichheit sowie Fairness im Kontext von Antidiskriminierungsrecht. Er erfüllt beide Bedingungen (TECHNIK + SOZIAL) und ist damit included, obwohl er keinen direkten Soziale-Arbeit-Bezug hat.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48593,8 +48602,8 @@
       "affected_categories": "Gender",
       "n_affected": 1,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (Generative_KI + Prompting substantiell behandelt), SOZIAL_OK (Bias_Ungleichheit + Fairness adressiert). Empirische Untersuchung von Prompt-Engineering-Strategien zur Bias-Reduktion in LLMs. Keine sozialen Arbeitskontexte, aber algorithmische Fairness ist relevant für Inklusion.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48659,8 +48668,8 @@
       "affected_categories": "Gender",
       "n_affected": 1,
       "llm_reasoning": "Paper behandelt systematisch Prompting-Strategien (Ja: substantieller Fokus auf 12 Prompt-Varianten) zur Bias-Reduktion in LLMs (Ja: Generative_KI). Bias-Reduktion und Fairness (Ja: beide Kategorien) sind zentrale Themen. TECHNIK-Bedingung erfüllt (Prompting + Generative_KI), SOZIAL-Bedingung erfüllt (Bias_Ungleichheit + Fairness). Kein Bezug zu Sozialer Arbeit oder Gender-spezifisch, kein feministischer Rahmen.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48725,8 +48734,8 @@
       "affected_categories": "Bias_Ungleichheit",
       "n_affected": 1,
       "llm_reasoning": "Paper erfüllt beide Kriterien: TECHNIK_OK durch KI_Sonstige (algorithmische Systeme in öffentlicher Verwaltung: Fraud Detection, Chatbots). SOZIAL_OK durch Soziale_Arbeit (Wohlfahrtssysteme, marginalisierte Populationen) und Bias_Ungleichheit (Analyse von Machtsymmetrien, Surveillance von benachteiligten Gruppen). Kritische Betrachtung algorithmischer Kontrollsysteme im Sozialstaat.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48791,8 +48800,8 @@
       "affected_categories": "Fairness",
       "n_affected": 1,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige: Kritische Analyse von KI-Policy), SOZIAL_OK (Bias_Ungleichheit, Gender, Diversitaet, Feministisch: Explizit intersektionale Analyse mit Fokus auf strukturelle Machtdynamiken; Fairness: Kritik an unzureichenden Fairness-Ansätzen). Die feministische Perspektive ist substantiell durch intersektionale Theoriearbeit (Crenshaw-Rahmen impliziert) verankert.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48857,8 +48866,8 @@
       "affected_categories": "Feministisch",
       "n_affected": 1,
       "llm_reasoning": "Paper kombiniert Technik (Generative_KI: Evaluation von LLMs) mit mehreren sozialen Kategorien. Explizit intersektionale Analyse (Feministisch: Crenshaw'sche Intersektionalität), Gender- und Diversitätsfokus, algorithmischer Bias in Hiring-Kontexten (Bias_Ungleichheit, Fairness). Erfüllt beide Bedingungen klar.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48923,8 +48932,8 @@
       "affected_categories": "Fairness",
       "n_affected": 1,
       "llm_reasoning": "TECHNIK_OK: KI_Sonstige=Ja (algorithmische Systeme und Bias-Analyse). SOZIAL_OK: Bias_Ungleichheit=Ja, Gender=Ja, Diversitaet=Ja, Feministisch=Ja (explizite intersektionale Perspektive nach Crenshaw), Fairness=Ja. Alle Bedingungen erfüllt. Paper nutzt feministische/intersektionale Theorie substantiell zur Analyse von KI-Bias.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -48989,8 +48998,8 @@
       "affected_categories": "Gender",
       "n_affected": 1,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (Generative_KI=Ja, Prompting=Ja) und SOZIAL_OK (Bias_Ungleichheit=Ja, Fairness=Ja). Substantieller Fokus auf Prompt-Engineering-Strategien zur Bias-Reduktion in LLMs. Direkte Behandlung sozialer Bias und Fairness-Ansätze. Nicht auf Soziale Arbeit fokussiert, aber klar KI-Bias-Thematik mit fairness-Implikation.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -49055,8 +49064,8 @@
       "affected_categories": "Feministisch",
       "n_affected": 1,
       "llm_reasoning": "Paper adressiert AI Fairness (KI_Sonstige) mit explizit feministisch-theoretischem Rahmen (Collins, Bilge). Substantielle Behandlung von Intersektionalität (Feministisch, Gender, Diversität, Bias_Ungleichheit). Kritische Analyse algorithmischer Systeme unter intersektionaler Perspektive. TECHNIK (KI_Sonstige) + SOZIAL (Bias, Gender, Diversität, Feministisch, Fairness) erfüllt.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -49121,8 +49130,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper behandelt substantiell feministische Perspektiven auf KI-Entwicklung (Feministisch: Ja), thematisiert Gender-Perspektiven und Geschlechtergerechtigkeit (Gender: Ja), adressiert Diversität und Inklusion durch intersektionale Teams und Community-Partizipation (Diversitaet: Ja), diskutiert Bias und Ungleichheit (Bias_Ungleichheit: Ja), und entwickelt KI-Kompetenzen und Methodologien (AI_Literacies: Ja). Erfüllt beide TECHNIK- und SOZIAL-Kriterien.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -49187,8 +49196,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt TECHNIK-Bedingung (Generative_KI=Ja, Prompting=Ja) und SOZIAL-Bedingung (Bias_Ungleichheit=Ja, Diversitaet=Ja, Fairness=Ja). Systematische Review zu Prompt-Engineering-Techniken zur Reduktion kultureller Vorurteile gegen Araber und Muslime in LLMs mit substantiellem Fokus auf Fairness und strukturelle Diskriminierungsprobleme.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -49253,8 +49262,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper behandelt algorithmische Entscheidungssysteme (KI_Sonstige: Ja) in sensiblen Bereichen (Healthcare, Justiz, Grenzschutz). Substantielle Behandlung von Diskriminierungsrisiken in Trainingsdaten (Bias_Ungleichheit: Ja) und Fairness-Aspekten durch Analyse von Opazität und Accountability (Fairness: Ja). Erfüllt beide Bedingungen (TECHNIK + SOZIAL). Kein Soziale_Arbeit-Bezug, daher nicht umfassend in diesem Kontext, aber relevant für AI-Governance und gesellschaftliche Auswirkungen.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -49319,8 +49328,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper behandelt Algorithmische Entscheidungssysteme (KI_Sonstige: Ja) im Kontext Sozialer Arbeit (Soziale_Arbeit: Ja). Expliziter Fokus auf Klassifikationssysteme und deren Limitations bezüglich Bias und Kontextverlust (Bias_Ungleichheit: Ja). TECHNIK und SOZIAL Bedingungen erfüllt → Include.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -49385,8 +49394,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK-OK (Generative_KI: ChatGPT; Prompting: explizit 'thoughtful prompting practices'; AI_Literacies: kritische Reflexion und kompetenter Umgang), SOZIAL-OK (Soziale_Arbeit: direkter Fokus auf Profession; Fairness: 'just technology use', 'fair use'). Editorial mit kritischer Perspektive auf KI-Integration in Sozialarbeit.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -49451,8 +49460,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK (Generative_KI + Prompting substantiell fokussiert) und SOZIAL (Bias_Ungleichheit + Diversitaet + Fairness adressieren kulturelle und intersektionale Diskriminierung gegen Araber und Muslime). Systematischer Review von Prompt-Engineering zur Bias-Mitigation ist zentral relevant für KI-Ethik im Sozialkontext.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -49517,8 +49526,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper adressiert TECHNIK-Aspekte durch Generative_KI (LLMs) und substantiell Prompting (multilingual prompting als zentrale Strategie). SOZIAL-Aspekte sind erfüllt durch Bias_Ungleichheit (kulturelle Halluzinationen, demographische Bias), Diversitaet (narrative und demographische Diversität) und Fairness (Reduktion von Halluzinationen/Bias). Einschlusskriterien erfüllt.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -49583,8 +49592,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt TECHNIK-Bedingung: AI_Literacies (Ja - untersucht digitale Kompetenzen und KI-Akzeptanz von Fachkräften) und KI_Sonstige (Ja - behandelt KI-Einsatz in Organisationen). Erfüllt SOZIAL-Bedingung: Soziale_Arbeit (Ja - direkter Fokus auf KI-Akzeptanz und Praxis in der Sozialen Arbeit, Bedenken zu Datenschutz und ethischen Herausforderungen). Empirische Studie mit Berufseinsteiger:innen. Inklusion berechtigt.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -49649,8 +49658,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper behandelt algorithmische Systeme im Sozialbereich (digital welfare, automated decision-making) substantiell → KI_Sonstige: Ja. Direkter Bezug zu Sozialarbeit und Welfare-Praxis → Soziale_Arbeit: Ja. Kritische Analyse von algorithmischer Diskriminierung marginalisierter Populationen → Bias_Ungleichheit: Ja. Fokus auf strukturelle Ungleichheiten und marginalisierte Gruppen → Diversitaet: Ja. Fairness-Dimension in automatisierten Entscheidungssystemen → Fairness: Ja. TECHNIK (KI_Sonstige) + S",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -49715,8 +49724,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "TECHNIK_OK: KI_Sonstige=Ja (algorithmische Systeme und deren Auswirkungen). SOZIAL_OK: Bias_Ungleichheit=Ja (Gender-Bias in 44% der KI-Systeme), Gender=Ja (expliziter Gender-Fokus), Fairness=Ja (Policy-Empfehlungen). Kein direkter Soziale_Arbeit-Bezug erkennbar. Nicht feministisch theoretisch fundiert, aber empirisch-analytisch zu Gender-Bias.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -49781,8 +49790,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: (1) TECHNIK: AI_Literacies (Digital Literacy Programme), KI_Sonstige (algorithmische Systeme in Recruitment/Healthcare/Finance); (2) SOZIAL: Bias_Ungleichheit (systematische Gender-Biases), Gender (expliziter Gender-Fokus), Diversitaet (Unterrepräsentation von Frauen), Fairness (algorithmische Fairness). Kein feministischer Theorierahmen explizit erwähnt, daher konservativ Nein.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -49847,8 +49856,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper analysiert intersektionale Perspektiven in KI-Entwicklung und befasst sich substantiell mit Bias, Geschlechterperspektiven und struktureller Unterrepräsentation. Intersektionalität (Crenshaw-Framework) ist eine feministische Methode. Erfüllt TECHNIK (KI_Sonstige) und SOZIAL (Bias_Ungleichheit, Gender, Diversitaet, Feministisch). Kein direkter Soziale_Arbeit-Bezug, aber AI-Systemkritik mit marginalisierten Gruppen im Fokus.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -49913,8 +49922,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: TECHNIK: AI_Literacies (digitale Kompetenzen zur Empowerment), KI_Sonstige (algorithmische Systeme in Recruitment, Healthcare, Finance). SOZIAL: Gender (expliziter Gender-Bias-Fokus), Bias_Ungleichheit (Diskriminierung durch biased datasets und unter-representation), Diversitaet (Inklusion in AI-Entwicklung), Fairness (Bias-Mitigation). Kein explizit feministischer Rahmen erkennbar, aber substantielle Behandlung von Gender und Ungleichheit.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Ja",
@@ -49979,8 +49988,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK (AI_Literacies, Prompting) + SOZIAL (Feministisch, Gender, Bias_Ungleichheit, Diversitaet). Explizit feministische Theorie (Rahmenwerk mit 6 Kategorien), Fokus auf Design und Prompting-Praktiken sowie Geschlechterperspektive auf KI-Systeme. Typen-orientierter Literaturreview mit substanziellem feministischem Ansatz.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50045,8 +50054,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper behandelt KI-Sonstige (Computer Vision, Content-Moderation, Algorithmen) und adressiert multiple soziale Dimensionen: Bias_Ungleichheit (algorithmische Marginalisierung queerer Identitäten), Gender (Geschlechtsklassifikation, heteronormative Annahmen), Diversitaet (queere Communities), Feministisch (kritische Analyse von Machtstrukturen und Marginalisierung) und Fairness (algorithmische Diskriminierung). TECHNIK_OK und SOZIAL_OK → Include.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -50111,8 +50120,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (AI_Literacies + KI_Sonstige für algorithmische Systeme); SOZIAL_OK (Soziale_Arbeit + Bias_Ungleichheit + Fairness). Zentral ist die Integration von KI-Kompetenzen in CSWE-Kernkompetenzen für Sozialarbeiter:innen mit explizitem Fokus auf algorithmischen Bias, Ungleichheit und ethische Governance in der Praxis.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50177,8 +50186,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper behandelt KI in der Sozialen Arbeit und adressiert dabei sowohl Kompetenzentwicklung (AI Literacies: reflektierte Implementationsstrategien, professioneller Diskurs) als auch allgemeine KI/algorithmische Systeme (KI_Sonstige) in sozialarbeiterischen Praxisfeldern (Soziale_Arbeit: direkter Bezug zur Praxis). Beide Bedingungen (TECHNIK + SOZIAL) sind erfüllt → Include. Bias/Fairness nicht substantiell behandelt basierend auf Abstract.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50243,8 +50252,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: TECHNIK-Seite mit AI_Literacies (kritische Kompetenzentwicklung), Generative_KI (Chatbot-Design), Prompting (explizit critical prompting practices), und KI_Sonstige (Datensammlung, Training, Algorithmenauswahl). SOZIAL-Seite mit starkem Feministisch-Fokus (explizit feministische und intersektionale Perspektive), Bias_Ungleichheit (Protest gegen biased AI), Gender und Diversitaet (community-based approach). Substanzielle Behandlung aller Kategorien.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50309,8 +50318,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (Generative_KI + Prompting substantiell behandelt), SOZIAL_OK (Bias_Ungleichheit, Diversitaet, Fairness adressiert). Systematische Review zu Prompt-Engineering-Techniken für Bias-Mitigation gegen Arabs/Muslims in LLMs mit quantifizierten Ergebnissen. Fokus auf kulturelle Repräsentation und algorithmische Fairness. Kein direkter Sozialarbeitsbezug, aber relevantes Anwendungsfeld für diskriminierungssensible KI-Nutzung.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50375,8 +50384,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper behandelt Large Language Models (Generative_KI=Ja) und fokussiert auf Bias-Mitigation bezüglich Altersmerkmalen (Bias_Ungleichheit=Ja, Diversitaet=Ja, Fairness=Ja). Titel und Fokus auf 'responsible AI development' und 'mitigating bias' sind substantiell. TECHNIK_OK (Generative_KI) + SOZIAL_OK (Bias_Ungleichheit, Diversitaet, Fairness) = Include. Kein direkter Bezug zu Sozialer Arbeit identifizierbar, aber Bias/Fairness-Fokus ausreichend für Inklusion.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50441,8 +50450,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK: AI_Literacies (Kompetenzen/Verständnis von KI-Risiken/-Nutzen in der Praxis), KI_Sonstige (allgemeine KI im Kontext). SOZIAL: Soziale_Arbeit (direkter Bezug zu Profession, Praxis, Werten), Bias_Ungleichheit (sozial gerechte Outcomes, ethische Praxis), Fairness (EPIC-Modell mit Ethik und Gerechtigkeit). Literaturreview mit explizitem Fokus auf Schnittstelle KI-Sozialarbeit und deren Auswirkungen auf professionelle Werte.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50507,8 +50516,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: (1) TECHNIK: KI_Sonstige=Ja (algorithmische Systeme in Sozialer Arbeit, insbesondere in Kindesschutz). (2) SOZIAL: Soziale_Arbeit=Ja (direkter Fokus auf Auswirkungen auf Profession) und Bias_Ungleichheit=Ja (kritische Analyse von Diskriminierung und Machtstrukturen in KI-Daten). Die Analyse von automatisierten Verfahren im Kindesschutz und die Thematisierung von Bias in KI-Systemen sind zentrale Inhalte.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50573,8 +50582,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper analysiert Feminist AI (FAI) mit explizit feministischer Theorie und Perspektive (erfüllt Feministisch=Ja). Es behandelt algorithmische Systeme und deren gesellschaftliche Auswirkungen (KI_Sonstige=Ja, Bias_Ungleichheit=Ja). Gender und Diversität sind zentral für die Analyse von FAI-Frameworks. TECHNIK erfüllt (KI_Sonstige), SOZIAL erfüllt (Feministisch, Gender, Bias_Ungleichheit, Diversität). Inklusion korrekt.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50639,8 +50648,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper behandelt explizit AI Literacy im Kontext von Social Work und deren Implikationen für Kernkompetenzen. Dies erfüllt beide Bedingungen: (1) TECHNIK: AI_Literacies = Ja (KI-Kompetenzen für Sozialarbeit), (2) SOZIAL: Soziale_Arbeit = Ja (direkter Bezug zu sozialarbeiterischer Praxis und Ausbildung). Include.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50705,8 +50714,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper behandelt 'Homoglyph unlearning' als Bias-Mitigationsmethode (KI_Sonstige: Ja, technischer Fokus). Der Titel signalisiert explizit Bias Mitigation (Bias_Ungleichheit + Fairness: Ja). Allerdings fehlt das Abstract für vollständige Bewertung. TECHNIK_OK (KI_Sonstige) + SOZIAL_OK (Bias/Fairness) → Include. Confidence moderat wegen fehlender Kontextinformationen.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50771,8 +50780,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Inklusionskriterien: TECHNIK (AI_Literacies, KI_Sonstige) durch EPIC-Framework für KI-Integration und Bias-Mitigation; SOZIAL (Soziale_Arbeit, Bias_Ungleichheit, Fairness) durch direkten Bezug zu Sozialer Arbeit, Ethik, Transparenz und Fairness-Thematisierung. Substantielle Behandlung von KI-Kompetenzen in Sozialarbeit und strukturierter Fairness-Ansatz.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50837,8 +50846,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige: algorithmisches Entscheidungssystem in Kinderschutz; AI_Literacies: Schulungsbedarf erwähnt) + SOZIAL_OK (Soziale_Arbeit: Gefährdungseinschätzung im Kinderschutz; Bias_Ungleichheit: explizite Bias-Risiken; Fairness: Human-in-the-Loop und Fehlklassifikationen). Direkt relevant für Praxis Sozialer Arbeit.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -50903,8 +50912,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt TECHNIK-Kriterien durch Generative_KI (ChatGPT-Fokus) und Prompting (Empfehlungen zu clarifying prompts). Erfüllt SOZIAL-Kriterien durch expliziten Gender-Fokus (unterschiedliche Geschlechteridentitäten), Bias_Ungleichheit (stereotype responses, verringerte Vertrauenswerte) und Fairness (Bias-Mitigation-Strategien). Qualitative empirische Studie mit substantiellem Bias- und Gender-Fokus.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -50969,8 +50978,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper behandelt generative KI (LLMs) mit substantiellem Fokus auf intersektionale Gender-Rassen-Biases. Explizite Bezüge zu Intersektionalitätstheorie (feministische Perspektive nach Crenshaw). Prompting wird als Interventionsstrategie adressiert. Erfüllt beide Bedingungen: TECHNIK (Generative_KI + Prompting) und SOZIAL (Bias_Ungleichheit + Gender + Diversitaet + Feministisch + Fairness).",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51035,8 +51044,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK (Generative_KI + KI_Sonstige: LLM-basierte Entscheidungssysteme), SOZIAL (Bias_Ungleichheit, Gender, Diversitaet, Feministisch: intersektionale Analyse von Geschlechts- und Rassenbias). Explizit intersektionales Design nach Crenshaw-Ansatz (Gender × Rasse). Substanzielle empirische Analyse mit sozialen Implikationen für algorithmic fairness.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51101,8 +51110,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: (1) TECHNIK: AI_Literacies (Rahmenmodell für KI-Integration in Praxis), KI_Sonstige (algorithmische Systeme im Sozialbereich), Fairness (Bias-Mitigation, Transparenz). (2) SOZIAL: Soziale_Arbeit (direkter Fokus auf Integrationsstrategie in sozialarbeiterischer Praxis), Bias_Ungleichheit (explizite Behandlung von Bias-Mitigation), Fairness. EPIC-Modell ist substantielle konzeptuelle Beitrag mit Ethik, Policy und Community-Perspektive für KI in Sozialer Arbeit.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51167,8 +51176,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige: ML-Systeme, Fairness-Metriken); SOZIAL_OK (Bias_Ungleichheit, Gender, Diversitaet, Feministisch via intersektionale Analyse). Explizit intersektionales Framing (Crenshaw-Tradition) mit Fokus auf marginalisierte Gruppen und Machtstrukturen ist substantiell feministisch.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51233,8 +51242,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (AI_Literacies: Ja, Generative_KI: Ja); SOZIAL_OK (Bias_Ungleichheit: Ja, Gender: Ja, Diversitaet: Ja). Qualitative empirische Studie zu generativen KI in Bildung mit explizitem Gender-Fokus und Analyse von Bias-Risiken. Kein explizit feministischer Theoriebezug erkannt, daher Feministisch=Nein. Keine Prompting-Fokussierung oder sozialarbeiterischer Bezug.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51299,8 +51308,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper behandelt AI Literacy substantiell als Kernkompetenz für Sozialarbeiter (AI_Literacies: Ja). Es hat direkten Bezug zu Soziale_Arbeit (Ja) durch explizite Fokussierung auf sozialarbeiterische Praxis und Professionalisierung. Bias und ethische Implikationen von KI werden adressiert (Bias_Ungleichheit: Ja, KI_Sonstige: Ja). TECHNIK- und SOZIAL-Kriterien sind erfüllt → Include.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51365,8 +51374,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper adressiert KI-Governance als algorithmisches System (KI_Sonstige) mit explizitem Fokus auf feministische Theorie und Methodik (Feministisch). Substantielle Behandlung von Machtungleichgewichten, Bias, strukturellen Ungleichheiten (Bias_Ungleichheit), Gender-Perspektive und Diversität/Inklusion von marginalisierten Communities der globalen Mehrheit. Fairness im Governance-Kontext impliziert. Beide Bedingungen (TECHNIK + SOZIAL) erfüllt.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51431,8 +51440,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt TECHNIK-Kriterien (AI_Literacies für KI-Kompetenzen/Beteiligung; KI_Sonstige für allgemeine KI-Entwicklung; Fairness für genderinklusive/faire KI-Systeme) und SOZIAL-Kriterien (Gender explizit im Titel; Bias_Ungleichheit durch Menschenrechtsfokus; Diversitaet durch globale Kooperation und Expertinnenbeteiligung marginalisierter Gruppen). Feministisch=Nein, da keine explizite feministische Theorie erkennbar ist.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51497,8 +51506,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt TECHNIK-Kriterium über KI_Sonstige (algorithmische Auditing-Systeme) und SOZIAL-Kriterium über multiple Kategorien: Bias_Ungleichheit (Fokus auf Diskriminierung und marginalisierte Communities), Diversitaet (Multi-Stakeholder-Prozess, Community-Involvement), Feministisch (intersektionale Kritik an Machtstrukturen, Fokus auf strukturelle Benachteiligung), Fairness (algorithmic auditing für gerechtere Systeme). Kritik an technischen Metriken und Betonung von Community-Perspektiven ze",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51563,8 +51572,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige: analysiert AI-Systeme wie Voice Assistants, Robots, Hiring Tools). SOZIAL_OK (Bias_Ungleichheit: Diskriminierung durch homogene Dev-Teams; Gender + Diversitaet: mehrere Diskriminierungsformen; Feministisch: explizite Anwendung von Crenshaw's Intersektionalitätstheorie). Substantielle intersektionale Analyse von strukturellen KI-Ungleichheiten.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -51629,8 +51638,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper erfüllt beide Bedingungen: TECHNIK: AI_Literacies (Policy-Rahmen für AI-Governance), KI_Sonstige (algorithmische Diskriminierung). SOZIAL: Bias_Ungleichheit (Fokus auf algorithmische Diskriminierung), Gender (explizite intersektionale Genderanalyse), Diversitaet (inklusive Repräsentation), Feministisch (intersektionale Analyse nach Crenshaw-Logik), Fairness (substantive equality vs. formale Fairness). Transformatives Policy-Framework mit starkem Fokus auf strukturelle Gerechtigkeit.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51695,8 +51704,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige: algorithmische Diskriminierungssysteme), SOZIAL_OK (Bias_Ungleichheit + Fairness: systematische Analyse von Diskriminierungstypen, Regelungsansätze, strukturelle Ungleichheiten). Kein direkter Sozialarbeitsbezug, daher nicht als SA-Paper klassifiziert. Substantieller Fokus auf algorithmische Fairness und Bias-Analyse.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51761,8 +51770,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (KI_Sonstige: Ja - Kritik an AI-Ethics-Frameworks als algorithmische Systeme) und SOZIAL_OK (Bias_Ungleichheit, Gender, Diversitaet, Feministisch, Fairness alle Ja). Explizit intersektional-feministischer Ansatz mit Fokus auf marginalisierte Gruppen und strukturelle Gerechtigkeit. Kein Bezug zu Sozialer Arbeit als Disziplin, aber substantielle Behandlung von Fairness und intersektionalen Gerechtigkeitsfragen.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",
@@ -51827,8 +51836,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK_OK (Generative_KI, Prompting substantiell behandelt), SOZIAL_OK (Bias_Ungleichheit, Diversitaet, Fairness adressiert). Systematische Review zu Prompt-Engineering-Techniken für Bias-Mitigation gegen arabische/muslimische Minderheiten in LLMs. Direkter Fokus auf kulturelle Diskriminierung und Fairness-Optimierung.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51893,8 +51902,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Das Paper behandelt substantiell feministische Theorie und Perspektiven im KI-Kontext (KI_Sonstige: Ja). Es adressiert explizit feministische Ansätze, Machtstrukturen und soziale Gerechtigkeit (Feministisch: Ja). Gender und Diversität sind zentral (Gender: Ja, Diversitaet: Ja). Bias/Ungleichheit wird durch die Fokussierung auf Machtrelationen thematisiert (Bias_Ungleichheit: Ja). TECHNIK erfüllt (KI_Sonstige), SOZIAL erfüllt (multiple Kategorien). → Include",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -51959,8 +51968,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Paper erfüllt beide Bedingungen: TECHNIK durch AI_Literacies (EPIC-Modell für KI-Integration), KI_Sonstige (algorithmische Systeme im Sozialbereich) UND SOZIAL durch Soziale_Arbeit (direkter Fokus auf sozialarbeiterische Praxis), Bias_Ungleichheit (Bias-Mitigation) und Fairness (Transparenz, Bias-Adressierung). Intersektionales Denken impliziert, aber nicht explizit feministisch.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": null,
@@ -52025,8 +52034,8 @@
       "affected_categories": "",
       "n_affected": 0,
       "llm_reasoning": "Sammlung mit explizit feministischer Perspektive (TECHNIK: KI_Sonstige durch algorithmische Systeme und deren gesellschaftliche Auswirkungen; SOZIAL: Bias_Ungleichheit, Gender, Diversitaet und Feministisch alle substantiell durch Fokus auf Gerechtigkeit, Diskriminierung und feministische Theorie). Beide Bedingungen erfüllt → Include.",
-      "pattern": "",
-      "justification": "",
+      "pattern": null,
+      "justification": null,
       "category_comparison": {
         "AI_Literacies": {
           "human": "Nein",

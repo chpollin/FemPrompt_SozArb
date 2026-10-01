@@ -270,13 +270,17 @@ def read_csv(filepath: str | Path) -> list[dict[str, str]]:
 
 
 def ja_nein_to_bool(val: object) -> bool | None:
-    """Convert 'Ja'/'Nein' or '1'/'0' to boolean. Empty/None -> None."""
+    """Convert 'Ja'/'Nein' or '1'/'0' to boolean. Empty/None -> None.
+
+    Case-insensitive like the canonical replay, so a hand-typed 'ja' or 'NEin'
+    in the expert sheet keeps its code instead of silently becoming missing.
+    """
     if val is None:
         return None
-    v = str(val).strip()
-    if v in ("Ja", "1", "True", "true", "yes", "Yes"):
+    v = str(val).strip().casefold()
+    if v in ("ja", "1", "true", "yes"):
         return True
-    if v in ("Nein", "0", "False", "false", "no", "No"):
+    if v in ("nein", "0", "false", "no"):
         return False
     return None  # blank or unknown
 
@@ -570,7 +574,8 @@ def load_human_assessment(filepath: str | Path) -> dict[str, dict[str, Any]]:
         positive_cats = []
         for cat in CATEGORIES:
             val = ja_nein_to_bool(human_category_cell(row, cat))
-            all_cats[cat] = 1 if val else 0
+            # An empty or non-Ja/Nein cell was not coded; 0 would claim a Nein.
+            all_cats[cat] = None if val is None else int(val)
             if val:
                 positive_cats.append(cat)
 
@@ -583,7 +588,7 @@ def load_human_assessment(filepath: str | Path) -> dict[str, dict[str, Any]]:
 
 
 def load_disagreements(filepath: str | Path) -> dict[str, dict[str, Any]]:
-    """Return dict: paper_id (as int) -> disagreement info."""
+    """Return dict: paper_id (the Zotero key) -> disagreement info."""
     rows = read_csv(filepath)
     result = {}
     for row in rows:
@@ -775,22 +780,14 @@ def main(argv: Sequence[str] | None = None) -> None:
 
         papers.append(paper)
 
-    # Attach disagreement info (by row index from disagreements CSV, which uses paper_id = ID column from llm CSV)
-    # The disagreements CSV uses paper_id matching llm assessment ID (1-based)
-    # Build a lookup by Zotero_Key via the LLM CSV index
-    llm_id_to_key = {}
-    for row in llm_rows:
-        pid = row.get("ID", "").strip()
-        key = row.get("Zotero_Key", "").strip()
-        if pid and key:
-            llm_id_to_key[pid] = key
-
+    # The canonical replay keys disagreements.csv by Zotero_Key since the pairing
+    # correction; joining through the LLM sheet's sequential ID attached nothing.
     papers_by_id = {paper["id"]: paper for paper in papers}
+    unknown = sorted(set(disagreements) - set(papers_by_id))
+    if unknown:
+        raise ValueError(f"Disagreements without a corpus record: {unknown[:5]}")
     for pid, dis_info in disagreements.items():
-        key = llm_id_to_key.get(pid)
-        paper = papers_by_id.get(key)
-        if paper is None:
-            continue
+        paper = papers_by_id[pid]
         paper["benchmark"]["disagreement_type"] = dis_info["disagreement_type"]
         paper["benchmark"]["severity"] = dis_info["severity"]
         paper["benchmark"]["affected_categories"] = dis_info["affected_categories"]

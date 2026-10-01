@@ -292,55 +292,6 @@ def load_verification_scores(verification_dir: Path) -> dict:
 # Data builders
 # ---------------------------------------------------------------------------
 
-def load_assessments(repo_root: Path):
-    """Load LLM and human assessments, indexed by Zotero_Key."""
-    llm_assessments = {}
-    human_assessments = {}
-
-    llm_path = repo_root / "assessment" / "llm_assessment_10k.csv"
-    if llm_path.exists():
-        with open(llm_path, "r", encoding="utf-8-sig", newline="") as f:
-            for row in csv.DictReader(f):
-                key = row.get("Zotero_Key", "").strip()
-                if not key:
-                    continue
-                cats = {}
-                for cat in ASSESSMENT_CATEGORIES:
-                    cats[cat] = row.get(cat, "").strip() == "Ja"
-                try:
-                    confidence = float(row.get("LLM_Confidence", 0) or 0)
-                except (ValueError, TypeError):
-                    confidence = 0.0
-                llm_assessments[key] = {
-                    "decision": row.get("Decision", "").strip(),
-                    "categories": cats,
-                    "confidence": round(confidence, 2),
-                    "reasoning": row.get("LLM_Reasoning", "").strip()[:500],
-                    "author_year": row.get("Author_Year", "").strip(),
-                    "title": row.get("Title", "").strip(),
-                }
-
-    human_path = repo_root / "assessment" / "human_assessment.csv"
-    if human_path.exists():
-        with open(human_path, "r", encoding="utf-8-sig", newline="") as f:
-            for row in csv.DictReader(f):
-                key = row.get("Zotero_Key", "").strip()
-                if not key:
-                    continue
-                decision = row.get("Decision", "").strip()
-                if not decision:
-                    continue
-                cats = {}
-                for cat in ASSESSMENT_CATEGORIES:
-                    cats[cat] = row.get(cat, "").strip() == "Ja"
-                human_assessments[key] = {
-                    "decision": decision,
-                    "categories": cats,
-                }
-
-    return llm_assessments, human_assessments
-
-
 def load_zotero_items(repo_root: Path) -> dict:
     """Load Zotero items indexed by key."""
     zotero_path = repo_root / "corpus" / "zotero_export.json"
@@ -474,6 +425,38 @@ def build_concept_graph(concept_cache: dict) -> dict:
     return {"nodes": nodes, "edges": edges}
 
 
+def concept_graph_provenance(graph: dict) -> dict:
+    """Describe the frozen concept graph and whether its counts recompute.
+
+    docs/data/concept_graph.json has no generator in this repository any more; it
+    is a historical, unreviewed LLM extraction kept as committed. Its node
+    frequencies and edge weights are checked against its own paper_concepts
+    rather than trusted, and never rebuilt here.
+    """
+    paper_concepts = graph.get("paper_concepts", {})
+    frequency = Counter(c for names in paper_concepts.values() for c in set(names))
+    co_occurrence = Counter(
+        pair
+        for names in paper_concepts.values()
+        for i, first in enumerate(sorted(set(names)))
+        for pair in ((first, second) for second in sorted(set(names))[i + 1:])
+    )
+    return {
+        "source": "docs/data/concept_graph.json",
+        "status": "historical_frozen_unreviewed",
+        "generator": None,
+        "node_frequencies_recompute": all(
+            node.get("frequency") == frequency.get(node["id"], 0)
+            for node in graph.get("nodes", [])
+        ),
+        "edge_weights_recompute": all(
+            edge.get("weight")
+            == co_occurrence.get(tuple(sorted((edge["source"], edge["target"]))), 0)
+            for edge in graph.get("edges", [])
+        ),
+    }
+
+
 def assign_concept_clusters(concept_graph: dict, papers: list) -> None:
     """Assign technik/sozial/bridge cluster to each concept node based on category affinity."""
     # Build paper lookup by concept
@@ -534,33 +517,17 @@ def parse_knowledge_sections(md_content: str) -> dict:
 def build_paper_journeys(
     repo_root: Path,
     kd_to_zotero: dict,
-    llm_assessments: dict,
-    human_assessments: dict,
     zotero_by_key: dict,
     verif_scores: dict,
     concept_cache: dict,
-    divergence_cache: dict,
-    disagreements: list,
 ) -> list:
-    """Build transformation journey for each of the 249 knowledge docs."""
+    """Build the knowledge-document journeys; assessments come from the corpus.
+
+    project_canonical_journeys sets every journey's assessment from the canonical
+    corpus, so the journeys carry an empty placeholder here.
+    """
     knowledge_dir = repo_root / "generated" / "distilled"
     stage1_dir = knowledge_dir / "_stage1_json"
-
-    # Build disagreement lookup by Zotero key
-    disagree_by_key = {}
-    for row in disagreements:
-        pid = row.get("paper_id", "")
-        # Find the Zotero key for this paper
-        # The paper_id in disagreements.csv is the row index, not Zotero key
-        # We need to match by title or use the data directly
-        disagree_by_key[pid] = row
-
-    # Also build by title for matching
-    disagree_by_title = {}
-    for row in disagreements:
-        title = row.get("title", "").strip().lower()
-        if title:
-            disagree_by_title[title] = row
 
     papers = []
     for stem_path in sorted(knowledge_dir.glob("*.md")):
@@ -597,42 +564,6 @@ def build_paper_journeys(
 
         # Stage 3: Verification
         verif = verif_scores.get(stem, {})
-
-        # Stage 4: Assessment
-        llm_data = llm_assessments.get(zotero_key, {})
-        human_data = human_assessments.get(zotero_key, {})
-
-        assessment = {}
-        if llm_data:
-            assessment["llm"] = {
-                "decision": llm_data["decision"],
-                "categories": [c for c, v in llm_data["categories"].items() if v],
-                "reasoning": llm_data.get("reasoning", "")[:300],
-            }
-        if human_data:
-            assessment["human"] = {
-                "decision": human_data["decision"],
-                "categories": [c for c, v in human_data["categories"].items() if v],
-            }
-
-        # Agreement
-        if llm_data and human_data:
-            assessment["agreement"] = "agree" if llm_data["decision"] == human_data["decision"] else "disagree"
-        elif llm_data:
-            assessment["agreement"] = "llm_only"
-
-        # Divergence pattern
-        if assessment.get("agreement") == "disagree":
-            # Find matching disagreement row
-            title_lower = title.lower().strip()
-            disagree_row = disagree_by_title.get(title_lower, {})
-            if disagree_row:
-                pid = disagree_row.get("paper_id", "")
-                div_cls = divergence_cache.get(pid, {})
-                assessment["divergence_pattern"] = div_cls.get("pattern", "")
-                assessment["divergence_justification"] = div_cls.get("justification", "")
-                assessment["disagreement_type"] = disagree_row.get("disagreement_type", "")
-                assessment["severity"] = int(disagree_row.get("severity", 0)) if disagree_row.get("severity", "").isdigit() else 0
 
         # Concepts
         raw_concepts = concept_cache.get(stem, [])
@@ -679,7 +610,7 @@ def build_paper_journeys(
                     "stage3_correctness": verif.get("correctness", 0),
                     "stage3_overall": verif.get("overall", 0),
                 },
-                "assessment": assessment,
+                "assessment": {},
             },
             "concepts": sorted(set(concept_names)),
             "knowledge_summary": kernbefund,
@@ -712,39 +643,6 @@ def build_paper_journeys(
         author_year_thin = f"{first_author} ({year_str})" if first_author and year_str else zkey
         title_thin = zitem.get("title", zkey) or zkey
 
-        llm_data = llm_assessments.get(zkey, {})
-        human_data = human_assessments.get(zkey, {})
-
-        # Build assessment (same logic as full papers)
-        assessment = {}
-        if llm_data:
-            assessment["llm"] = {
-                "decision": llm_data["decision"],
-                "categories": [c for c, v in llm_data["categories"].items() if v],
-                "reasoning": llm_data.get("reasoning", "")[:300],
-            }
-        if human_data:
-            assessment["human"] = {
-                "decision": human_data["decision"],
-                "categories": [c for c, v in human_data["categories"].items() if v],
-            }
-        if llm_data and human_data:
-            assessment["agreement"] = "agree" if llm_data["decision"] == human_data["decision"] else "disagree"
-        elif llm_data:
-            assessment["agreement"] = "llm_only"
-
-        # Check if this paper has a divergence
-        if assessment.get("agreement") == "disagree":
-            title_lower = title_thin.lower().strip()
-            disagree_row = disagree_by_title.get(title_lower, {})
-            if disagree_row:
-                pid = disagree_row.get("paper_id", "")
-                div_cls = divergence_cache.get(pid, {})
-                assessment["divergence_pattern"] = div_cls.get("pattern", "")
-                assessment["divergence_justification"] = div_cls.get("justification", "")
-                assessment["disagreement_type"] = disagree_row.get("disagreement_type", "")
-                assessment["severity"] = int(disagree_row.get("severity", 0)) if disagree_row.get("severity", "").isdigit() else 0
-
         # DOI, URL, Abstract
         doi = (zitem.get("DOI", "") or "").strip()
         url = (zitem.get("url", "") or "").strip()
@@ -771,7 +669,7 @@ def build_paper_journeys(
                     "markdown_converted": False,
                 },
                 "ske": None,  # No knowledge extraction possible
-                "assessment": assessment if assessment else {},
+                "assessment": {},
             },
             "concepts": [],
             "knowledge_summary": None,
@@ -819,8 +717,14 @@ def build_pipeline_flow(corpus: dict) -> dict:
 # Divergences list
 # ---------------------------------------------------------------------------
 
-def build_divergences_list(repo_root: Path, divergence_cache: dict) -> list:
-    """Build the 111 divergence items with classification."""
+def build_divergences_list(repo_root: Path) -> list:
+    """Build the recorded divergence items.
+
+    The pattern classification came from a local, uncommitted LLM cache that the
+    reproducible build no longer reads. No committed classification source exists,
+    so pattern and justification are null (unclassified) rather than an empty
+    string that reads like a recorded classification.
+    """
     disagree_path = repo_root / "generated" / "benchmark-results" / "disagreements.csv"
     if not disagree_path.exists():
         return []
@@ -829,7 +733,6 @@ def build_divergences_list(repo_root: Path, divergence_cache: dict) -> list:
     with open(disagree_path, "r", encoding="utf-8-sig", newline="") as f:
         for row in csv.DictReader(f):
             pid = row.get("paper_id", "")
-            cls = divergence_cache.get(pid, {})
 
             # Category comparison
             category_comparison = {}
@@ -855,8 +758,8 @@ def build_divergences_list(repo_root: Path, divergence_cache: dict) -> list:
                 "affected_categories": row.get("affected_categories", ""),
                 "n_affected": int(row.get("n_affected_categories", 0)) if row.get("n_affected_categories", "").isdigit() else 0,
                 "llm_reasoning": row.get("agent_reasoning", "")[:500],
-                "pattern": cls.get("pattern", ""),
-                "justification": cls.get("justification", ""),
+                "pattern": None,
+                "justification": None,
                 "category_comparison": category_comparison,
             })
 
@@ -911,10 +814,9 @@ def build(repo_root: Path = REPO_ROOT) -> dict:
     summary = build_summary(corpus, agreement_metrics)
 
     # Load all data sources
-    print("  [1/7] Loading Zotero + assessments...")
+    print("  [1/7] Loading Zotero items...")
     zotero_by_key = load_zotero_items(repo_root)
-    llm_assessments, human_assessments = load_assessments(repo_root)
-    print(f"    Zotero: {len(zotero_by_key)}, LLM: {len(llm_assessments)}, Human: {len(human_assessments)}")
+    print(f"    Zotero: {len(zotero_by_key)}")
 
     print("  [2/7] Building knowledge-to-Zotero mapping...")
     kd_to_zotero = build_knowledge_to_zotero_mapping(repo_root)
@@ -922,7 +824,6 @@ def build(repo_root: Path = REPO_ROOT) -> dict:
 
     print("  [3/7] Loading committed concept graph...")
     concept_cache = {}
-    divergence_cache = {}
 
     # Local caches are intentionally ignored: developer machines and clean
     # checkouts must use the same versioned evidence projection. Per-paper
@@ -938,7 +839,7 @@ def build(repo_root: Path = REPO_ROOT) -> dict:
                 if names:
                     concept_cache[stem] = [{"concept": n} for n in names]
             print(f"    Loaded concept_graph.json ({len(pc_by_key)} paper maps)")
-    print(f"    Concepts: {len(concept_cache)} papers, Divergences: {len(divergence_cache)} cases")
+    print(f"    Concepts: {len(concept_cache)} papers")
 
     print("  [4/7] Loading verification scores...")
     verif_dir = repo_root / "generated" / "distilled" / "_verification"
@@ -946,26 +847,23 @@ def build(repo_root: Path = REPO_ROOT) -> dict:
     print(f"    Verification: {len(verif_scores)} files")
 
     print("  [5/7] Building paper journeys...")
-    disagree_path = repo_root / "generated" / "benchmark-results" / "disagreements.csv"
-    disagreements = []
-    if disagree_path.exists():
-        with open(disagree_path, "r", encoding="utf-8-sig", newline="") as f:
-            disagreements = list(csv.DictReader(f))
-
     papers = build_paper_journeys(
-        repo_root, kd_to_zotero, llm_assessments, human_assessments,
-        zotero_by_key, verif_scores, concept_cache, divergence_cache, disagreements
+        repo_root, kd_to_zotero, zotero_by_key, verif_scores, concept_cache
     )
     papers = project_canonical_journeys(corpus, papers)
     print(f"    Papers: {len(papers)}")
 
     print("  [6/7] Building concept graph + divergences + pipeline...")
     if persisted_graph:
-        concept_graph = {"nodes": persisted_graph["nodes"], "edges": persisted_graph["edges"]}
+        concept_graph = {
+            "nodes": persisted_graph["nodes"],
+            "edges": persisted_graph["edges"],
+            "provenance": concept_graph_provenance(persisted_graph),
+        }
     else:
         concept_graph = build_concept_graph(concept_cache)
     assign_concept_clusters(concept_graph, papers)
-    divergences_list = build_divergences_list(repo_root, divergence_cache)
+    divergences_list = build_divergences_list(repo_root)
     pipeline_stages = build_pipeline_stages(repo_root, summary)
     pipeline_flow = build_pipeline_flow(corpus)
     categories = load_categories(repo_root / "assessment" / "categories.yaml")

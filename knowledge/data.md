@@ -7,9 +7,9 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-09-22
+updated: 2026-10-01
 authors: [Christopher Pollin]
-generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6)
+generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
   name: Promptotyping
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
@@ -342,6 +342,45 @@ The generator is a fail-closed publication checkpoint. Without an explicit polic
 
 The Literature Landscape uses only Include records for thematic aggregation. Exclude and Unclear remain part of the progress summary. Category combinations are multi-valued co-occurrences, and the analysis fields retain their multi-select semantics. Every matrix cell and profile value resolves to the supporting papers, their analysis fields, and the stored Paper evidence.
 
+### Analysis field states and coverage
+
+Each released record's `analysis` carries `fields`, `field_states`, `undecidable` and `notes`. `field_states` names every controlled analysis field and `Studientyp` with exactly one state.
+
+- `value` marks a substantive code.
+- `none` marks the explicit code `None`.
+- `undecidable` marks a field the coder declared not decidable from the source.
+- `absent` marks an optional field the coding left empty, such as `AN_Harm_Types` on an abstract basis.
+
+`fields` holds only the codes of `value` and `none` fields, so an empty list never stands in for a missing or undecidable coding. `undecidable` remains the list of undecidable field names for existing consumers.
+
+`meta.analysis_coverage` states for every field how the intended scope is covered, so an empty matrix cell can be read against its denominator instead of as a research gap. The scope joins the Works with a recorded Include in the completion package, where the human decision takes priority, with the released Include Works. `scope` reports both parts and the released Include Works outside the recorded Include set, which arise from documented round-specific divergences. Each entry under `fields` partitions the scope into the four released states and two unreleased states. `withheld` marks a Work that a hold, a conflict or a pending or negative review keeps out of the release, whether or not a coding exists. `withheld_by_reason` assigns each such Work one reason in the precedence order of `withheld_reasons`. `not_coded` marks a Work without coding and without a withholding reason.
+
+- `source_hold` means a source-version or integrity hold restricts the Work.
+- `decision_conflict` means recorded decisions conflict within or across tracks, or the released AI decision for the Work is not Include.
+- `open_negative_review` means the latest AI source review of a record is negative and unresolved.
+- `stale_source_review` means the accepted review targets an earlier source representation than the current binding.
+- `review_pending` means a coded record has no accepted review yet.
+- `field_conflict` means aliases of the Work carry conflicting codes for this field only.
+
+```json
+// counts are placeholders; the current values live in docs/data/literature_landscape.json
+"analysis_coverage": {
+  "unit": "work",
+  "authority": "…",
+  "scope": { "work_total": 0, "recorded_include_work_total": 0, "released_include_work_total": 0,
+             "released_include_outside_recorded_include_work_total": 0 },
+  "states": ["value", "none", "undecidable", "absent", "not_coded", "withheld"],
+  "withheld_reasons": ["source_hold", "decision_conflict", "open_negative_review",
+                       "stale_source_review", "review_pending", "field_conflict"],
+  "fields": {
+    "AN_Bias_Axes": { "value": 0, "none": 0, "undecidable": 0, "absent": 0, "not_coded": 0, "withheld": 0,
+                      "withheld_by_reason": { "source_hold": 0, "…": 0 } }
+  }
+}
+```
+
+The released states recompute from the released records, and the unreleased states derive from the completion package's canonical Work rows through `canonical_work_rows`. The object carries counts only and no content of unreleased Works. The result site and its download carry the same object. Released states are attributed AI source review, never domain-expert verification.
+
 ## Reading text source and corpus search (v4, as built)
 
 What the screening view reads and searches, and what it deliberately does not.
@@ -390,6 +429,14 @@ The tool is seeded with the existing review and the round-one data carried throu
 | `generated/benchmark-results/agreement_metrics.json` | reference agreement figures; `human_yes_rate` and `agent_yes_rate` use the 0 to 100 scale, `Source_Tool` is often empty and provider attribution relies on Zotero collections |
 
 `src/publish/generate_docs_data.py` maps the assessment results and metadata into `docs/data/research_vault_v2.json`, the seed consumed by PRISM. The canonical round-one replay under `src/replay/` deterministically reproduces the benchmark and supplies the conformance check for count-bearing claims.
+
+The projection reads Ja and Nein case-insensitively, as the canonical replay does. An empty cell or any other value in the expert sheet projects as `null` in `human.all_categories`, matching the LLM projection, so an uncoded category never appears as Nein. `generated/benchmark-results/disagreements.csv` is keyed by Zotero key and fills `benchmark.disagreement_type`, `severity` and `affected_categories` of the same record. A disagreement without a corpus record stops the build.
+
+## Historical concept graph and divergence classification
+
+`docs/data/concept_graph.json` is a historical, frozen and unreviewed artifact. An earlier LLM concept extraction produced it from a local cache that is no longer part of the build, and no generator in the repository rebuilds it. Its node frequencies and edge weights do not recompute from its own `paper_concepts`. The Companion and `promptotyping_v2.json` render it unchanged. `generate_promptotyping_data_v2.py` therefore adds `concepts.provenance` with the status `historical_frozen_unreviewed` and two flags that check node frequencies and edge weights against `paper_concepts` on every build. Concept nodes and edges describe co-occurrence in a past extraction, not reviewed findings or current corpus coverage.
+
+The divergence items in `promptotyping_v2.json` carry `pattern` and `justification` as `null`. The pattern classification came from a local LLM cache that the reproducible build no longer reads, and no committed classification source replaces it. `null` marks an unclassified divergence, and `meta.pattern_distribution` stays empty until an attributed classification source exists.
 
 ## Schemas
 

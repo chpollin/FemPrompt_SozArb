@@ -1,6 +1,6 @@
 # Completion package
 
-Source fingerprint: `sha256:ee8da035335a5ce9bf772db0c2937ae7a227c12edd13363b6e5b4cd0c2136c2e`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:fc727786c932cb3671a6ed772d444ad223eb32311efe69ac59c4bd030a6fa486`. Deterministic internal preparation; no approval is created.
 
 Scope: existing corpus plus all already identified 2026 candidates (search cutoff 2026-08-24) and the separate targeted gap-fill intake from 2026-09-05. Candidate membership does not imply inclusion. New search should address a concrete evidence gap with excellent sources.
 

@@ -7,7 +7,6 @@ import { fileURLToPath } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const docs = resolve(here, '..', '..', 'docs');
-const inventory = JSON.parse(readFileSync(resolve(docs, 'data', 'research_vault_v2.json'))).meta;
 const landscape = JSON.parse(readFileSync(resolve(docs, 'data', 'literature_landscape.json')));
 const mime = {
   '.css': 'text/css; charset=utf-8', '.html': 'text/html; charset=utf-8',
@@ -49,10 +48,8 @@ try {
   await page.goto(`${base}/index.html#view=literaturbild`, { waitUntil: 'networkidle' });
   await page.waitForSelector('#literaturbild-root .lit-viz');
   check('Literaturbild is the restored active view', await page.locator('#view-literaturbild').evaluate((node) => node.classList.contains('active')));
-  const intro = await page.locator('#intro-section').innerText();
-  check('inventory distinguishes links and unique knowledge documents',
-    intro.includes(`${inventory.knowledge_linked_records} Verknüpfungen`) &&
-    intro.includes(`${inventory.distinct_knowledge_docs} Wissensdokumente`));
+  check('the header carries no standing inventory counts',
+    await page.locator('#intro-section, .header-stats').count() === 0);
   check('the page uses one visualization and no legacy dashboard cards',
     await page.locator('#literaturbild-root .lit-viz').count() === 1 &&
     await page.locator('#literaturbild-root .lit-stats').count() === 0);

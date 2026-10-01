@@ -1005,6 +1005,30 @@ def _followup_rows(followup: dict, registry: dict) -> list[dict]:
     return sorted(rows, key=lambda row: row["candidate_id"])
 
 
+def canonical_work_rows(
+    repo: Path, inputs: set[str], reviews: dict
+) -> tuple[dict, dict, dict | None, list[dict], list[dict]]:
+    """Derive the Work rows that both this package and the public coverage count.
+
+    Returns the registry, screening queue, historical resolution, Work rows and issues.
+    """
+    registry = _json(repo / "corpus/work_version_registry.json")
+    with (repo / "assessment/human_assessment.csv").open(
+        encoding="utf-8-sig", newline=""
+    ) as handle:
+        human = list(csv.DictReader(handle))
+    queue = _json(repo / "generated/agent-screening-queue.json")
+    agents, issues = _agent_records(
+        repo, inputs, reviews, getattr(reviews, "latest", {})
+    )
+    resolution = load_resolution(repo, registry, human, inputs)
+    if resolution:
+        inputs.add("src/analysis/historical_resolution.py")
+    works, unmapped = _work_rows(registry, human, agents, queue, resolution)
+    issues.extend(unmapped)
+    return registry, queue, resolution, works, issues
+
+
 def build_package(repo: Path = REPO) -> dict:
     inputs = {
         "corpus/work_version_registry.json",
@@ -1029,29 +1053,18 @@ def build_package(repo: Path = REPO) -> dict:
                 source["source_path"].partition("#")[0]
                 for source in receipt["evidence"]
             )
-    registry = _json(repo / "corpus/work_version_registry.json")
-    with (repo / "assessment/human_assessment.csv").open(
-        encoding="utf-8-sig", newline=""
-    ) as handle:
-        human = list(csv.DictReader(handle))
-    queue = _json(repo / "generated/agent-screening-queue.json")
+    registry, queue, resolution, works, issues = canonical_work_rows(
+        repo, inputs, reviews
+    )
     package = _json(repo / SEARCH / "codex-websearch-2026-package.json")
     readiness = _json(repo / READY)
     followup = _json(repo / FOLLOWUP)
     schema = yaml.safe_load(
         (repo / "assessment/categories.yaml").read_text(encoding="utf-8")
     )
-    agents, issues = _agent_records(
-        repo, inputs, reviews, getattr(reviews, "latest", {})
-    )
-    resolution = load_resolution(repo, registry, human, inputs)
-    if resolution:
-        inputs.add("src/analysis/historical_resolution.py")
-    works, unmapped = _work_rows(registry, human, agents, queue, resolution)
     residual = _residual_progress(repo, registry, inputs)
     for work in works:
         _attach_source_progress(work, residual, registry)
-    issues.extend(unmapped)
     zotero_sync = _json(repo / ZOTERO_SYNC)
     inputs.add(ZOTERO_SYNC)
     candidates = _candidate_rows(
