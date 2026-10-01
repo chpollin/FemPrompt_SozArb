@@ -1,5 +1,5 @@
 {
-  "schema": "femprompt-prisma-agent-run/1.3",
+  "schema": "femprompt-prisma-agent-run/1.4",
   "run_id": "replace-me",
   "status": "prepared",
   "lifecycle": {
@@ -8,14 +8,13 @@
     "target": "ai-agent-reviewed",
     "events": []
   },
-  "model": {
-    "provider": "replace-me",
-    "model": "replace-me",
-    "model_version": "replace-me",
-    "immutable_model_id": null
+  "codebook": {
+    "path": "assessment/categories.yaml",
+    "version": "replace-me",
+    "sha256": "replace-me"
   },
   "prompt": {
-    "path": "prompts/prism-agent-reviewer-v1.2.md",
+    "path": "prompts/prism-agent-reviewer-v1.3.md",
     "version": "replace-me",
     "sha256": "replace-me"
   },
@@ -32,7 +31,9 @@
         "version_type": "replace-me",
         "preferred_version_id": "replace-me",
         "selected_version_is_preferred": true,
-        "record_ids": ["replace-me"],
+        "record_ids": [
+          "replace-me"
+        ],
         "human_coverage": false,
         "ai_agent_review_coverage": false,
         "source": {
@@ -46,7 +47,8 @@
   "isolation": {
     "mode": "operational",
     "epistemic_independence_claimed": false,
-    "explanation": "Each agent track uses a separate Codex context, reviewer identity, coding packet, report, and output path. Operational separation records execution conditions; it does not establish epistemic independence."
+    "model_diversity": "replace-me",
+    "explanation": "Each agent track runs in its own harness context with its own working folder, reviewer identity, coding packet, report and output path, and reads the same frozen criteria and Paper sources. Operational separation records execution conditions and establishes no epistemic independence. Two tracks on the same model are less independent than two tracks on different models."
   },
   "actors": [
     {
@@ -74,9 +76,9 @@
   },
   "execution": {
     "mode": "blinded_source_review_with_deterministic_prism_roundtrip",
-    "reason": "Operationally isolated agents create source-grounded coding packets. The orchestrator transfers validated packets deterministically through the production PRISM functions.",
+    "reason": "Operationally isolated agents create source-grounded coding packets in a harness-agnostic AI harness run. The orchestrator transfers validated packets deterministically through the production PRISM functions.",
     "required_controls": [
-      "Reviewer agents may read only the frozen rules, manifest, assigned Paper sources, and their own output paths.",
+      "Reviewer agents may read only the frozen rules, manifest and assigned Paper sources, and write only to their own working folder.",
       "Reviewer agents may not inspect previous judgments, knowledge distillates, the other track, or productive screening data.",
       "The orchestrator projects validated values mechanically and may not resolve substantive ambiguity during transfer."
     ],
@@ -104,7 +106,15 @@
       "reviewer_id": "ar1",
       "actor_id": "replace-me-ar1",
       "actor_type": "ai_agent",
-      "paper_ids": ["replace-me"],
+      "execution_environment": {
+        "harness": "replace-me",
+        "provider": "replace-me",
+        "model": "replace-me",
+        "model_id": "replace-me"
+      },
+      "paper_ids": [
+        "replace-me"
+      ],
       "source_assignments": [
         {
           "paper_id": "replace-me",
@@ -128,7 +138,15 @@
       "reviewer_id": "ar2",
       "actor_id": "replace-me-ar2",
       "actor_type": "ai_agent",
-      "paper_ids": ["replace-me"],
+      "execution_environment": {
+        "harness": "replace-me",
+        "provider": "replace-me",
+        "model": "replace-me",
+        "model_id": "replace-me"
+      },
+      "paper_ids": [
+        "replace-me"
+      ],
       "source_assignments": [
         {
           "paper_id": "replace-me",
@@ -157,7 +175,7 @@
         "run_id": null,
         "method": "source_grounded_ai_agent_review",
         "prompt": {
-          "path": "prompts/prism-ai-agent-review-v0.3.md",
+          "path": "prompts/prism-ai-agent-review-v0.4.md",
           "version": "replace-me",
           "sha256": "replace-me"
         },
@@ -166,11 +184,22 @@
           "model": "replace-me",
           "model_version": "replace-me"
         },
-        "associated_actor_ids": ["replace-me-ai-agent-review"],
+        "execution_environment": {
+          "harness": "replace-me",
+          "provider": "replace-me",
+          "model": "replace-me",
+          "model_id": "replace-me"
+        },
+        "associated_actor_ids": [
+          "replace-me-ai-agent-review"
+        ],
         "status": "planned",
         "actor_id": "replace-me-ai-agent-review",
         "actor_type": "ai_agent",
-        "input_track_ids": ["ar1", "ar2"],
+        "input_track_ids": [
+          "ar1",
+          "ar2"
+        ],
         "source_basis": "assigned paper/source records",
         "started_at": null,
         "completed_at": null,

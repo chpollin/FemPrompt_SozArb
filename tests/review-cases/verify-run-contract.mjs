@@ -21,8 +21,14 @@ const paper = {
 function track(reviewerId) {
   return {
     reviewer_id: reviewerId,
-    actor_id: `codex-${reviewerId}`,
+    actor_id: `agent-${reviewerId}`,
     actor_type: 'ai_agent',
+    execution_environment: {
+      harness: 'Claude Code subagent',
+      provider: 'Anthropic',
+      model: 'opus',
+      model_id: 'claude-example',
+    },
     paper_ids: ['PAPER-1'],
     source_assignments: [{
       paper_id: 'PAPER-1',
@@ -45,23 +51,24 @@ function track(reviewerId) {
 
 function validManifest() {
   return {
-    schema: 'femprompt-prisma-agent-run/1.3',
+    schema: 'femprompt-prisma-agent-run/1.4',
     run_id: 'example-20260823',
     status: 'prepared',
     lifecycle: { baseline: 'identified', state: 'prepared', target: 'ai-agent-reviewed', events: [] },
-    model: { provider: 'OpenAI', model: 'gpt-example', model_version: '2026-08-23' },
+    codebook: { path: 'assessment/categories.yaml', version: '1.4', sha256: hash },
     prompt: { path: 'prompts/prism-agent-reviewer.md', version: '1.0', sha256: hash },
     baseline: { commit: 'a'.repeat(40) },
     assignment: { complete: true, papers: [paper] },
     isolation: {
       mode: 'operational',
       epistemic_independence_claimed: false,
-      explanation: 'Separate Codex contexts, reviewer identities, and output paths are recorded per track.',
+      model_diversity: 'same_model',
+      explanation: 'Separate agent contexts, reviewer identities, and output paths are recorded per track.',
     },
     actors: [
-      { id: 'codex-ar1', type: 'ai_agent', role: 'reviewer', reviewer_id: 'ar1' },
-      { id: 'codex-ar2', type: 'ai_agent', role: 'reviewer', reviewer_id: 'ar2' },
-      { id: 'codex-ai-agent-review', type: 'ai_agent', role: 'ai_agent_reviewer' },
+      { id: 'agent-ar1', type: 'ai_agent', role: 'reviewer', reviewer_id: 'ar1' },
+      { id: 'agent-ar2', type: 'ai_agent', role: 'reviewer', reviewer_id: 'ar2' },
+      { id: 'agent-ai-agent-review', type: 'ai_agent', role: 'ai_agent_reviewer' },
     ],
     timestamps: { created_at: '2026-08-23T10:00:00.000Z', started_at: null, completed_at: null },
     execution: {
@@ -100,10 +107,11 @@ function validManifest() {
         method: 'source_grounded_ai_agent_review',
         prompt: { path: 'prompts/prism-agent-reviewer.md', version: '1.0', sha256: hash },
         model: { provider: 'OpenAI', model: 'gpt-example', model_version: '2026-08-23' },
-        associated_actor_ids: ['codex-ai-agent-review'],
+        associated_actor_ids: ['agent-ai-agent-review'],
         status: 'planned',
-        actor_id: 'codex-ai-agent-review',
+        actor_id: 'agent-ai-agent-review',
         actor_type: 'ai_agent',
+        execution_environment: { harness: 'Claude Code subagent', provider: 'Anthropic', model: 'opus', model_id: 'claude-example' },
         input_track_ids: ['ar1', 'ar2'],
         source_basis: 'assigned paper/source records',
         started_at: null,
@@ -139,8 +147,35 @@ completedWithoutOutputHashes.timestamps.completed_at = '2026-08-23T10:02:00.000Z
 assert(!validateManifest(completedWithoutOutputHashes).ok, 'completed run without output hashes was accepted');
 
 const missingModel = validManifest();
-delete missingModel.model.model_version;
-assert(!validateManifest(missingModel).ok, 'missing model version was accepted');
+delete missingModel.tracks[0].execution_environment.model_id;
+assert(!validateManifest(missingModel).ok, 'missing track model id was accepted');
+
+const missingHarness = validManifest();
+delete missingHarness.tracks[1].execution_environment.harness;
+assert(!validateManifest(missingHarness).ok, 'missing track harness was accepted');
+
+const undeclaredSameModel = validManifest();
+undeclaredSameModel.isolation.model_diversity = 'different_models';
+assert(!validateManifest(undeclaredSameModel).ok, 'two tracks on one model were declared as different models');
+
+const mixedHarness = validManifest();
+mixedHarness.tracks[1].execution_environment = { harness: 'Codex', provider: 'OpenAI', model: 'gpt-example', model_id: 'gpt-example-2026' };
+mixedHarness.isolation.model_diversity = 'different_models';
+assert(validateManifest(mixedHarness).ok, 'tracks on two harnesses and models were rejected');
+
+const missingCodebook = validManifest();
+delete missingCodebook.codebook;
+assert(!validateManifest(missingCodebook).ok, 'run without a codebook version was accepted');
+
+const sharedOutput = validManifest();
+sharedOutput.tracks[1].coding_packet = sharedOutput.tracks[0].coding_packet;
+assert(!validateManifest(sharedOutput).ok, 'tracks sharing an output path were accepted');
+
+const historical = validManifest();
+historical.schema = 'femprompt-prisma-agent-run/1.3';
+delete historical.codebook;
+historical.model = { provider: 'OpenAI', model: 'gpt-example', model_version: '2026-08-23' };
+assert(validateManifest(historical).ok, 'historical 1.3 run was rejected');
 
 const oneTrack = validManifest();
 oneTrack.tracks.pop();
@@ -148,7 +183,7 @@ assert(!validateManifest(oneTrack).ok, 'one-track run was accepted');
 
 const visibleTranscription = validManifest();
 visibleTranscription.execution.mode = 'blinded_source_review_with_operator_prism_transcription';
-assert(!validateManifest(visibleTranscription).ok, 'visible transcription was accepted as the canonical Codex transfer');
+assert(!validateManifest(visibleTranscription).ok, 'visible transcription was accepted as the canonical agent transfer');
 
 const incompleteSource = validManifest();
 incompleteSource.tracks[1].source_assignments = [];
@@ -178,7 +213,7 @@ performedWithoutLog.provenance.activities.unshift({
   method: 'agentic_literature_supplement',
   prompt: { path: 'prompts/prism-agent-reviewer.md', version: '1.0', sha256: hash },
   model: { provider: 'OpenAI', model: 'gpt-example', model_version: '2026-08-23' },
-  associated_actor_ids: ['codex-ar1'],
+  associated_actor_ids: ['agent-ar1'],
   status: 'completed',
   performed: true,
   performed_at: null,

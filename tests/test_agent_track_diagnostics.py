@@ -165,3 +165,41 @@ def test_diagnostics_separate_track_differences_review_outcomes_and_blockers(tmp
     assert "accuracy" not in json.dumps(result["track_differences"]).replace(
         "not_accuracy", ""
     )
+
+
+def test_track_agreement_reports_raw_and_positive_specific_agreement():
+    def include(axes, definition):
+        record = packet_record("Include", "ja", axes)
+        record["analysis"]["AN_Gender_Definition"] = definition
+        return record
+
+    first = {
+        "A": include(["Gender"], "Explicit"),
+        "B": include(["Gender", "Age"], "Implicit_Only"),
+        "C": packet_record("Exclude", "nein"),
+    }
+    second = {
+        "A": include(["Gender"], "Explicit"),
+        "B": include(["Gender"], "Explicit"),
+        "C": packet_record("Include", "ja", ["None"]),
+    }
+    result = diagnostics.track_agreement(first, second, {"AN_Bias_Axes"})
+    rows = {row["field"]: row for row in result["fields"]}
+    assert result["both_include_works"] == 2
+    assert rows["decision"]["raw_agreement"] == round(2 / 3, 4)
+    axes = rows["AN_Bias_Axes"]
+    # C is excluded by one track, so only A and B are compared.
+    assert axes["compared_works"] == 2 and axes["identical"] == 1
+    assert axes["values"]["Gender"]["positive_specific_agreement"] == 1.0
+    assert axes["values"]["Age"] == {
+        "both": 0,
+        "one_track_only": 1,
+        "positive_specific_agreement": 0.0,
+        "cohens_kappa_descriptive": 0.0,
+    }
+    definition = rows["AN_Gender_Definition"]
+    assert definition["raw_agreement"] == 0.5 and definition["different_paper_ids"] == ["B"]
+    assert "cohens_kappa_descriptive" in definition
+    # Fields neither track coded drop out instead of counting as agreement.
+    assert rows["AN_Task"]["compared_works"] == 0
+    assert rows["AN_Task"]["raw_agreement"] is None

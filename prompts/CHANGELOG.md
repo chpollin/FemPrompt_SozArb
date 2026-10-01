@@ -8,9 +8,11 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 
 | Prompt | Datei | Zeilen | Version | Status |
 |--------|-------|--------|---------|--------|
-| PRISM Agent Reviewer | `prompts/prism-agent-reviewer-v1.2.md` | -- | v1.2 | Aktiv; aktuelle Protokollabschnitte, unveränderte Kategorien und Schwellen |
+| PRISM Agent Reviewer | `prompts/prism-agent-reviewer-v1.3.md` | -- | v1.3 | Aktiv; harness-neutral, Codebuch 1.4, Coding-Paket 0.2 mit Codebuchversion und belegten Fundstellen |
+| PRISM Agent Reviewer, historisch | `prompts/prism-agent-reviewer-v1.2.md` | -- | v1.2 | Codebuch 1.3, in den Läufen bis September 2026 verwendet; Hash in den Run-Manifesten gesichert |
 | PRISM Agent Reviewer, historisch | `prompts/prism-agent-reviewer.md` | -- | v1.0 | In den abgeschlossenen Läufen verwendet; Hash im Run-Manifest gesichert |
-| PRISM AI Agent Review | `prompts/prism-ai-agent-review-v0.3.md` | -- | v0.3 | Aktiv; aktuelle Protokollabschnitte, quellengestützte Prüfung vor `ai-agent-reviewed` |
+| PRISM AI Agent Review | `prompts/prism-ai-agent-review-v0.4.md` | -- | v0.4 | Aktiv; harness-neutral, Prüfung nach Codebuch 1.4 einschließlich Feldregeln und belegter Fundstellen |
+| PRISM AI Agent Review, historisch | `prompts/prism-ai-agent-review-v0.3.md` | -- | v0.3 | Codebuch 1.3, quellengestützte Prüfung vor `ai-agent-reviewed`; Hash in den Run-Manifesten gesichert |
 | PRISM Ratification Evaluator, historisch | `prompts/prism-ratification-evaluator.md` | -- | v0.1 | Im ratifizierten Zehn-Paper-Lauf verwendet; Hash im Konsensartefakt gesichert |
 | Deep-Research-Prompt | `prompts/deep-research-template.md` | -- | v1.0 (restauriert) | Template wiederhergestellt, instanziierter Prompt rekonstruiert |
 | SKE Stage 1: Extract & Classify | `src/distill/distill_knowledge.py` | 53-143 | v1.0 | Aktiv, 249 Docs produziert |

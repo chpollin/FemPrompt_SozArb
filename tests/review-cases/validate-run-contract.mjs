@@ -56,6 +56,20 @@ function requireHash(value, label, errors) {
   if (!HASH.test(String(value || ''))) errors.push(`${label} must be a SHA-256 hash`);
 }
 
+// Run schema 1.4 records the execution environment per track instead of one run-wide
+// model, so a run may combine harnesses (a Claude Code subagent, a Codex agent) and
+// models. Identical models on both tracks are allowed and must be declared, since two
+// tracks on one model are less independent than two tracks on different models.
+function validateEnvironment(environment, label, errors) {
+  if (!environment || typeof environment !== 'object' || Array.isArray(environment)) {
+    errors.push(`${label}.execution_environment is missing`);
+    return null;
+  }
+  for (const key of ['harness', 'provider', 'model', 'model_id'])
+    requireString(environment[key], `${label}.execution_environment.${key}`, errors);
+  return `${environment.provider}|${environment.model_id}`;
+}
+
 function requireTimestamp(value, label, errors, nullable = false) {
   if (nullable && value === null) return;
   if (typeof value !== 'string' || !ISO.test(value) || Number.isNaN(Date.parse(value)))
@@ -154,10 +168,11 @@ export function validateManifest(run, { path = '<memory>', allowLegacy = true } 
     && run.execution?.protocol_deviation?.status === 'accepted_as_method_amendment'
     && run.execution?.protocol_deviation?.to === 'deterministic PRISM frontend roundtrip'
     && run.execution?.canonical_successor_schema === 'femprompt-prisma-agent-run/1.2';
-  const versionAwareRun = run.schema === 'femprompt-prisma-agent-run/1.3';
+  const harnessRun = run.schema === 'femprompt-prisma-agent-run/1.4';
+  const versionAwareRun = harnessRun || run.schema === 'femprompt-prisma-agent-run/1.3';
   const historicalRun = run.schema === 'femprompt-prisma-agent-run/1.2';
   if (!versionAwareRun && !historicalRun && !acceptedTransitionRun)
-    errors.push('schema must be femprompt-prisma-agent-run/1.3, historical 1.2, or a documented accepted 1.1 transition run');
+    errors.push('schema must be femprompt-prisma-agent-run/1.4, historical 1.3 or 1.2, or a documented accepted 1.1 transition run');
   requireString(run.run_id, 'run_id', errors);
   if (!['prepared', 'running', 'completed', 'aborted'].includes(run.status)) errors.push('status is invalid');
   if (run.lifecycle?.target !== 'ai-agent-reviewed') errors.push('lifecycle.target must be ai-agent-reviewed');
@@ -170,11 +185,19 @@ export function validateManifest(run, { path = '<memory>', allowLegacy = true } 
     if (!Array.isArray(event?.actor_ids) || !event.actor_ids.length) errors.push(`lifecycle.events[${index}].actor_ids must be non-empty`);
   }
 
-  const model = run.model || {};
-  requireString(model.provider, 'model.provider', errors);
-  requireString(model.model, 'model.model', errors);
-  if (isPlaceholder(model.model_version) && isPlaceholder(model.immutable_model_id))
-    errors.push('model.model_version or model.immutable_model_id is required');
+  if (harnessRun) {
+    if ('model' in run) errors.push('run schema 1.4 records models per track, not run-wide');
+    const codebook = run.codebook || {};
+    if (codebook.path !== 'assessment/categories.yaml') errors.push('codebook.path must be assessment/categories.yaml');
+    if (!/^[0-9]+[.][0-9]+$/.test(String(codebook.version || ''))) errors.push('codebook.version must be major.minor');
+    requireHash(codebook.sha256, 'codebook.sha256', errors);
+  } else {
+    const model = run.model || {};
+    requireString(model.provider, 'model.provider', errors);
+    requireString(model.model, 'model.model', errors);
+    if (isPlaceholder(model.model_version) && isPlaceholder(model.immutable_model_id))
+      errors.push('model.model_version or model.immutable_model_id is required');
+  }
 
   const prompt = run.prompt || {};
   requireString(prompt.path, 'prompt.path', errors);
@@ -321,6 +344,13 @@ export function validateManifest(run, { path = '<memory>', allowLegacy = true } 
     validateOutput(track?.output, `track ${track?.reviewer_id || '<unknown>'}.output`, errors, run.status === 'completed');
   }
   if (!sameSet(trackIds, ['ar1', 'ar2'])) errors.push('tracks must use two distinct reviewer IDs');
+  if (harnessRun) {
+    const models = tracks.map((track) => validateEnvironment(track?.execution_environment, `track ${track?.reviewer_id || '<unknown>'}`, errors));
+    const outputPaths = tracks.flatMap((track) => [track?.coding_packet, track?.report, track?.output?.path]);
+    if (new Set(outputPaths).size !== outputPaths.length) errors.push('track output paths must be distinct');
+    const diversity = models.length === 2 && models[0] && models[0] === models[1] ? 'same_model' : 'different_models';
+    if (isolation.model_diversity !== diversity) errors.push(`isolation.model_diversity must be ${diversity} for the recorded track models`);
+  }
 
   const activities = Array.isArray(run.provenance?.activities)
     ? run.provenance.activities
@@ -374,6 +404,7 @@ export function validateManifest(run, { path = '<memory>', allowLegacy = true } 
     requireString(aiAgentReview.source_basis, 'ai_agent_review.source_basis', errors);
     if (!String(aiAgentReview.source_basis || '').toLowerCase().includes('source')) errors.push('ai_agent_review.source_basis must identify source records');
     if (!aiAgentReview.associated_actor_ids?.includes(aiAgentReview.actor_id)) errors.push('ai_agent_review associated_actor_ids must include its actor');
+    if (harnessRun) validateEnvironment(aiAgentReview.execution_environment, 'ai_agent_review', errors);
     for (const key of ['started_at', 'completed_at']) {
       if (!(key in aiAgentReview)) errors.push(`ai_agent_review.${key} must be recorded`);
       else requireTimestamp(aiAgentReview[key], `ai_agent_review.${key}`, errors, true);

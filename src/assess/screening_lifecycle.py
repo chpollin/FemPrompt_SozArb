@@ -688,8 +688,32 @@ def _recorded_prompt(source: dict[str, Any]) -> dict[str, str]:
     return _prompt_capture(manifest.get("prompt") if manifest else None)
 
 
+def _track_model(manifest: dict[str, Any]) -> dict[str, str] | None:
+    """Run schema 1.4 records the model per track; a shared model stands for the run.
+
+    Tracks on different models yield no single run model and are recorded as a gap
+    until the lifecycle provenance carries one model per track.
+    """
+    environments = [
+        track.get("execution_environment")
+        for track in manifest.get("tracks", [])
+        if _is_mapping(track)
+    ]
+    shared = {
+        (env.get("provider"), env.get("model"), env.get("model_id"))
+        for env in environments
+        if _is_mapping(env)
+    }
+    if len(environments) != 2 or len(shared) != 1:
+        return None
+    provider, model, model_id = next(iter(shared))
+    return {"provider": provider, "model": model, "immutable_model_id": model_id}
+
+
 def _recorded_model(source: dict[str, Any]) -> dict[str, str]:
     manifest = _run_manifest(source)
+    if manifest and "model" not in manifest:
+        return _model_capture(_track_model(manifest))
     return _model_capture(manifest.get("model") if manifest else None)
 
 
