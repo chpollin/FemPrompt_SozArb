@@ -207,7 +207,7 @@ study_types:
 analysis_fields:
   - name: AN_Prompting_Role
     multi: true
-    serves: [SQ3, SQ4]  # SQ4 through Learning_Content. Covers all prompting evidence, not only techniques.
+    serves: [SQ1, SQ3, SQ4]  # SQ1 through Recommended_Practice, SQ4 through Learning_Content. Covers all prompting evidence, not only techniques.
     values: [Recommended_Practice, Research_Instrument, Object_of_Critique, Learning_Content, None]
   - name: AN_Prompt_Techniques
     multi: true
@@ -235,7 +235,7 @@ analysis_fields:
     values: [Evaluated, Demonstrated, Proposed, None]
   - name: AN_Population
     multi: true
-    serves: SQ1
+    serves: [SQ1, SQ2]
     values: [Child_Family_Welfare, Mental_Health, Health_Care, Homelessness_Youth, Social_Assistance_Admin, Education_Professional, General_Social_Work, Not_SW_Specific]
     note: "Education_Professional restricted to professional or higher-education AI-literacy settings; general or unspecified context goes to Not_SW_Specific."
   - name: AN_Coding_Basis

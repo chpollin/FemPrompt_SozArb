@@ -49,10 +49,10 @@ RESIDUAL = "generated/verification/residual-resolution-2026-09-05.json"
 ZOTERO_SYNC = "corpus/zotero_sync.json"
 # Sub-questions of knowledge/project.md and the analysis fields that map them. The
 # grouping mirrors `serves` in assessment/categories.yaml. A field may serve several
-# questions; SQ4 reads only the values named in VALUE_SCOPE.
+# questions; where a question reads only some values of a field, VALUE_SCOPE names them.
 FIELDS = {
-    "SQ1": ("AN_Population",),
-    "SQ2": ("AN_Bias_Axes", "AN_Harm_Types"),
+    "SQ1": ("AN_Population", "AN_Prompting_Role"),
+    "SQ2": ("AN_Bias_Axes", "AN_Harm_Types", "AN_Population"),
     "SQ3": (
         "AN_Prompt_Techniques",
         "AN_Prompting_Role",
@@ -62,6 +62,7 @@ FIELDS = {
     "SQ4": ("AN_Mitigation_Stage", "AN_Prompting_Role"),
 }
 VALUE_SCOPE = {
+    ("SQ1", "AN_Prompting_Role"): ("Recommended_Practice",),
     ("SQ4", "AN_Mitigation_Stage"): ("Organisational_Process",),
     ("SQ4", "AN_Prompting_Role"): ("Learning_Content",),
 }
@@ -97,6 +98,7 @@ ASSOCIATIONS = (
     ("AN_Bias_Axes", "AN_Mitigation_Stage"),
     ("AN_Prompt_Techniques", "AN_Mitigation_Status"),
     ("AN_Prompt_Techniques", "AN_Population"),
+    ("AN_Population", "AN_Prompting_Role"),
     ("AN_Mitigation_Stage", "AN_Mitigation_Status"),
 )
 
