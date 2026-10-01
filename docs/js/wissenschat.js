@@ -222,8 +222,8 @@ function loadEvidenceIndex() {
 }
 
 function showIndexStatus() {
-    updateEvidenceStatus(evidenceIndex.assertions.length + ' quellengeprüfte Aussagen verfügbar. ' +
-        'KI-Prüfung ist keine fachliche Verifikation durch Expert:innen.');
+    // A loaded index needs no standing notice; only loading and failure are reported.
+    updateEvidenceStatus('');
 }
 
 // Conservative lexical retrieval with explicit German/English topic equivalents.

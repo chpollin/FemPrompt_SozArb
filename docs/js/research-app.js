@@ -170,7 +170,6 @@ window.exportFilteredMarkdown = function() { exportFilteredMarkdown(); };
 document.addEventListener('DOMContentLoaded', function() {
     loadData().then(function() {
         initializeUI();
-        renderIntroNumbers();
         renderCategoryChips();
         logInit();
         initRichTooltips();
@@ -394,24 +393,6 @@ function initializeUI() {
             }
         }
     });
-}
-
-// Intro Numbers
-
-function renderIntroNumbers() {
-    let withDecision = allPapers.filter(function(p) {
-        return p.human && p.human.decision && (p.human.decision === 'Include' || p.human.decision === 'Exclude');
-    }).length;
-    const el = function(id) { return document.getElementById(id); };
-    if (el('total-count-intro')) el('total-count-intro').textContent = allPapers.length;
-    if (el('human-count-intro')) el('human-count-intro').textContent = withDecision;
-    if (el('kd-count-intro')) {
-        el('kd-count-intro').textContent = vaultMeta.knowledge_linked_records != null
-            ? vaultMeta.knowledge_linked_records
-            : allPapers.filter(function(p) { return p.knowledge_doc; }).length;
-    }
-    if (el('kd-distinct-intro')) el('kd-distinct-intro').textContent =
-        vaultMeta.distinct_knowledge_docs != null ? vaultMeta.distinct_knowledge_docs : '–';
 }
 
 // Category Chips
@@ -774,66 +755,13 @@ function positionTooltip(tip, anchor) {
 function buildTooltipContent() {
     let papers = allPapers;
 
-    // Single pass over the corpus for every aggregate the tooltips need.
+    // Single pass over the corpus for the aggregates the view tooltips need.
     let total = papers.length;
-    let yearCounts = {}, catCounts = {};
-    let kdCount = 0, withDecision = 0, humanInclude = 0, divergences = 0, llmInclude = 0;
-    CATEGORIES.forEach(function(c) { catCounts[c] = 0; });
+    let withDecision = 0, llmInclude = 0;
     papers.forEach(function(p) {
-        if (p.year) yearCounts[p.year] = (yearCounts[p.year] || 0) + 1;
-        if (p.knowledge_doc) kdCount++;
         if (p.llm && p.llm.decision === 'Include') llmInclude++;
-        if (p.llm && p.llm.all_categories) {
-            CATEGORIES.forEach(function(c) { if (p.llm.all_categories[c] === 1) catCounts[c]++; });
-        }
-        if (p.human && p.human.decision) { withDecision++; if (p.human.decision === 'Include') humanInclude++; }
-        if (p.benchmark && p.benchmark.agreement === false) divergences++;
+        if (p.human && p.human.decision) withDecision++;
     });
-    const humanExclude = withDecision - humanInclude;
-    const inclPct = withDecision ? Math.round(humanInclude / withDecision * 100) : 0;
-
-    // --- Papers ---
-    const topYears = Object.keys(yearCounts).sort(function(a, b) { return yearCounts[b] - yearCounts[a]; }).slice(0, 5);
-    const yearBars = topYears.map(function(y) {
-        let pct = Math.round(yearCounts[y] / total * 100);
-        return '<div class="tip-bar-row"><span class="tip-bar-label">' + y + '</span>' +
-            '<div class="tip-bar"><div class="tip-bar-fill" style="width:' + pct + '%"></div></div>' +
-            '<span class="tip-bar-val">' + yearCounts[y] + '</span></div>';
-    }).join('');
-
-    const tipPapers = '<div class="tip-title">Korpus-Zusammensetzung</div>' +
-        '<div class="tip-text">Identifiziert via Deep Research (4 KI-Provider) + manuelle Ergaenzung.</div>' +
-        '<div class="tip-section">Jahrgaenge</div>' + yearBars;
-
-    // --- Wissensdokumente ---
-    const tipWD = '<div class="tip-title">Wissensdokument-Abdeckung</div>' +
-        '<div class="tip-pipeline">' +
-            '<span class="tip-step">' + total + ' Korpusrecords</span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
-            '<span class="tip-step tip-step-hl">' + kdCount + ' verknüpft</span> <i class="fas fa-arrow-right tip-arrow"></i> ' +
-            '<span class="tip-step">' + (vaultMeta.distinct_knowledge_docs || '–') + ' Dokumente</span>' +
-        '</div>' +
-        '<div class="tip-text">Verknüpfungen zählen Korpusrecords mit Dokument-Link. Die Dokumentzahl zählt eindeutige veröffentlichte Dateien; mehrere Records können dasselbe Werk referenzieren.</div>';
-
-    const tipHuman = '<div class="tip-title">Duale Bewertung</div>' +
-        '<div class="tip-grid">' +
-            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--success)">' + humanInclude + '</span><span class="tip-stat-lbl">Include (' + inclPct + '%)</span></div>' +
-            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--gray-500)">' + humanExclude + '</span><span class="tip-stat-lbl">Exclude</span></div>' +
-            '<div class="tip-stat"><span class="tip-stat-val" style="color:var(--danger)">' + divergences + '</span><span class="tip-stat-lbl">Divergenzen</span></div>' +
-        '</div>' +
-        '<div class="tip-text">Fachwissenschaftler:innen (Sackl-Sharif, Klinger) bewerten nach identischem 10-Kategorien-Schema wie das LLM.</div>';
-
-    // --- 10 Kategorien ---
-    const catBars = CATEGORIES.map(function(cat, i) {
-        let pct = Math.round(catCounts[cat] / total * 100);
-        let color = CAT_COLORS[cat];
-        const groupLabel = i < 4 ? '' : (i === 4 ? '<div class="tip-section" style="margin-top:0.375rem;">Perspektive</div>' : '');
-        return groupLabel + '<div class="tip-bar-row"><span class="tip-bar-label">' + catLabel(cat) + '</span>' +
-            '<div class="tip-bar"><div class="tip-bar-fill" style="width:' + pct + '%;background:' + color + '"></div></div>' +
-            '<span class="tip-bar-val">' + pct + '%</span></div>';
-    }).join('');
-
-    const tipCats = '<div class="tip-title">10 Bewertungskategorien</div>' +
-        '<div class="tip-section">Gegenstand</div>' + catBars;
 
     // --- Nav buttons ---
     const conceptCount = (conceptData && conceptData.nodes) ? conceptData.nodes.length : null;
@@ -874,10 +802,6 @@ function buildTooltipContent() {
         '<div class="tip-text">Durchsuchbar, filterbar, sortierbar. Detail-Panel mit Assessment-Vergleich.</div>';
 
     return {
-        papers: tipPapers,
-        wissensdok: tipWD,
-        human: tipHuman,
-        kategorien: tipCats,
         chat: tipChat,
         wissensnetz: tipNetz,
         literaturbild: tipLiteraturbild,

@@ -137,7 +137,7 @@ await check('literature landscape displays the current publication policy and de
   if (!doc.querySelector('#literaturbild-root .lit-workspace > .lit-sidebar')) throw new Error('left control rail missing');
   if (doc.querySelectorAll('#literaturbild-root .lit-viz').length !== 1) throw new Error('multiple visualizations visible');
   if (doc.querySelector('#literaturbild-root .lit-stats')) throw new Error('legacy dashboard cards remain');
-  if (doc.querySelector('.header-stats .stat-sep')) throw new Error('inventory separators remain');
+  if (doc.querySelector('.header-stats')) throw new Error('standing inventory counts remain');
   const visibleCopy = doc.querySelector('#literaturbild-root').textContent;
   if (visibleCopy.includes('Die Ansicht verdichtet') || visibleCopy.includes('Mehrfachcodierungen sind zulässig')) {
     throw new Error('removed explanatory copy remains visible');
