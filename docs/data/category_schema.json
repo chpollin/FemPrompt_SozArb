@@ -1,7 +1,7 @@
 {
   "schema": "femprompt-category-schema/1.0",
   "source": "assessment/categories.yaml",
-  "version": "1.3",
+  "version": "1.4",
   "decision_options": [
     "Include",
     "Exclude",

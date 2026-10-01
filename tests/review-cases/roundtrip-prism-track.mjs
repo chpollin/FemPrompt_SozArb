@@ -47,7 +47,10 @@ function main() {
   // A governed transfer explicitly enters the same write mode as the UI.
   // Selecting a stored reviewer must never enable writes by itself.
   tool.setEditMode(true);
-  tool.selectReviewer(reviewerId);
+  // The packet comes from an agent track, so the transfer runs as an agent session,
+  // the actor under which PRISM accepts agent track keys.
+  tool.setRunActor('agent');
+  if (!tool.selectReviewer(reviewerId)) throw new Error(`PRISM refused reviewer ${reviewerId}`);
   const imported = tool.importReviewerPayload(projection, reviewerId, true);
   if (!imported.ok || imported.count !== track.paper_ids.length)
     throw new Error(`PRISM import failed: ${JSON.stringify(imported)}`);

@@ -44,7 +44,11 @@ function buildEvidence(record, timestamp, paper = {}) {
   return evidence;
 }
 
-export function buildPrismRecord(record, reviewerId, timestamp, paper = {}) {
+const VERSION_AWARE_RUNS = new Set(['femprompt-prisma-agent-run/1.3', 'femprompt-prisma-agent-run/1.4']);
+
+// codebookVersion is recorded on every annotation coded under a packet that names
+// it, so fields introduced later derive not_collected instead of reading as absent.
+export function buildPrismRecord(record, reviewerId, timestamp, paper = {}, codebookVersion = null) {
   const categories = Object.fromEntries(
     Object.entries(record.categories)
       .filter(([, value]) => level[value] > 0)
@@ -72,6 +76,7 @@ export function buildPrismRecord(record, reviewerId, timestamp, paper = {}) {
   if (record.decision === 'Include') {
     const { undecidable = {}, ...fields } = record.analysis;
     output.analysis = { fields, undecidable };
+    if (codebookVersion) output.analysis.codebook_version = codebookVersion;
   }
   return output;
 }
@@ -87,9 +92,9 @@ export function buildPrismTrack(runPath, reviewerId, timestamp) {
   const decisions = {};
   const assignments = new Map(run.assignment.papers.map((paper) => [paper.paper_id, paper]));
   for (const id of track.paper_ids)
-    decisions[id] = buildPrismRecord(packet.decisions[id], reviewerId, timestamp, assignments.get(id));
+    decisions[id] = buildPrismRecord(packet.decisions[id], reviewerId, timestamp, assignments.get(id), packet.codebook_version || null);
   return {
-    schema: run.schema === 'femprompt-prisma-agent-run/1.3'
+    schema: VERSION_AWARE_RUNS.has(run.schema)
       ? 'femprompt-prisma-reviewer/0.4'
       : 'femprompt-prisma-reviewer/0.3',
     reviewer: reviewerId,

@@ -33,6 +33,8 @@ function prepared(withAsset = true) {
   };
   fillHashes(run);
   run.baseline.commit = 'b'.repeat(40);
+  run.codebook.version = '1.4';
+  run.isolation.model_diversity = 'same_model';
   run.timestamps.created_at = timestamp;
   run.assignment.complete = true;
   const source = run.assignment.papers[0].source;
@@ -108,10 +110,11 @@ function removeFixture(path, expectedParent) {
 }
 
 try {
-  accepted(prepared(false), 'schema 1.3 without assets remains compatible');
+  accepted(prepared(false), 'the current run schema without assets remains compatible');
   accepted(prepared(), 'prepared run validates PNG bytes without requiring the declared original PDF');
   const historical = prepared(false);
   historical.schema = 'femprompt-prisma-agent-run/1.2';
+  historical.model = { provider: 'fixture', model: 'fixture', model_version: 'fixture' };
   accepted(historical, 'historical 1.2 remains compatible');
   const legacy = prepared(false);
   legacy.schema = 'femprompt-prisma-agent-run/0.2';

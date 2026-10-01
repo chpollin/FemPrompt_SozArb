@@ -14,17 +14,17 @@ const EC = window.EC;
 // are the fallback while the assertion index carries no such field.
 const MAIN_QUESTION = 'Wie können Fachkräfte der Sozialen Arbeit verantwortlich mit LLMs arbeiten, und welche Bias-Formen und welchen Umgang damit zeigt die Literatur?';
 // The ids follow the numbering of 1 October 2026 (SQ1 to SQ5 in the knowledge base).
-// A question without fields has no coding yet and says so instead of showing counts.
+// A question whose fields carry no code for any released work says that it is not
+// yet coded instead of showing counts, and shows its matrices only once codes exist.
 const QUESTIONS = [
     {
         id: '1', name: 'Nutzung',
         text: 'Für welche Aufgaben und Felder der Sozialen Arbeit beschreibt die Literatur den Einsatz von LLMs, und welchen Nutzen berichtet sie?',
-        // A task field follows once the codebook amendment adds it.
-        maps: [{ rows: 'AN_Population', cols: 'AN_Prompting_Role' }],
-        fields: ['AN_Population', 'AN_Prompting_Role'],
+        maps: [{ rows: 'AN_Population', cols: 'AN_Prompting_Role' }, { rows: 'AN_Task', cols: 'AN_Population' }],
+        fields: ['AN_Task', 'AN_Population', 'AN_Prompting_Role'],
         // A work coded only as not specific to social work describes no use in it.
         outside: { field: 'AN_Population', value: 'Not_SW_Specific', label: 'Nicht spezifisch für die Soziale Arbeit' },
-        limits: 'Das Codebuch hat noch kein Feld für Aufgaben, die Nutzung lässt sich deshalb nicht nach Aufgaben abbilden. ' +
+        limits: 'Die Werte des Aufgabenfelds werden pilotiert, und für Werke, die vor Codebuchversion 1.4 codiert wurden, ist es nicht erhoben. ' +
             'Literatur zu Aufgaben ohne Bezug zu Bias ist möglicherweise unterrepräsentiert, weil die Suche auf Bias und Gender ausgerichtet war.',
         topics: [],
     },
@@ -33,8 +33,8 @@ const QUESTIONS = [
         text: 'Welche Bias-Formen thematisiert die ausgewählte Literatur, mit welchen Schadensarten, für welche Gruppen, und welche Formen fehlen?',
         maps: [{ rows: 'AN_Bias_Axes', cols: 'AN_Harm_Types' }, { rows: 'AN_Bias_Axes', cols: 'AN_Population' }],
         fields: ['AN_Bias_Axes', 'AN_Harm_Types', 'AN_Population'],
-        limits: 'Die Definitionen der Bias-Achsen und Schadensarten sind noch nicht geschärft. ' +
-            'Zwei unabhängige Codierungen durch KI-Agenten weichen in beiden Feldern oft voneinander ab. ' +
+        limits: 'Die Codes der Bias-Achsen und Schadensarten stammen bis zur Neucodierung aus Codebuchversion 1.3, deren Definitionen Version 1.4 geschärft hat. ' +
+            'Zwei getrennte Codierungen durch KI-Agenten weichen in beiden Feldern oft voneinander ab. ' +
             'Welche Formen fehlen, lässt sich erst nach vollständiger Codierung bestimmen.',
         topics: [],
     },
@@ -49,9 +49,9 @@ const QUESTIONS = [
     {
         id: '4', name: 'Begriffliche Fundierung',
         text: 'Definiert die Literatur Gender und Bias, welches Verständnis von Gender liegt ihr zugrunde, und auf welche Theorien stützt sie sich?',
-        maps: [],
-        fields: [],
-        limits: 'Die Frage ist nur aus Volltexten beantwortbar. Die Codierfelder dafür sind für das Codebuch vorgeschlagen und noch nicht beschlossen.',
+        maps: [{ rows: 'AN_Gender_Understanding', cols: 'AN_Theory_Reference' }],
+        fields: ['AN_Gender_Definition', 'AN_Bias_Definition', 'AN_Gender_Understanding', 'AN_Theory_Reference'],
+        limits: 'Die Frage ist nur aus Volltexten beantwortbar. Die Theorien selbst stehen als belegte Bezüge bei den Werken, nicht als Codes.',
         topics: [],
     },
     {
@@ -75,15 +75,23 @@ function matrixHref(map, cell) {
     return EC.href(Object.assign({ view: 'matrix', rows: map.rows, cols: map.cols }, cell ? { cell: cell } : {}));
 }
 
-function validMaps(item) { return item.maps.filter(function (map) { return model.dim(map.rows) && model.dim(map.cols); }); }
+// A field counts as coded once any released Include carries a state other than absent.
+function fieldCoded(field) {
+    return Boolean(model.dim(field)) && model.includes.some(function (work) { return model.stateOf(work, field).state !== 'absent'; });
+}
 
-// The coded-share line of a question. A question without coded fields states that
+function questionCoded(item) { return item.fields.some(fieldCoded); }
+
+function validMaps(item) { return item.maps.filter(function (map) { return fieldCoded(map.rows) && fieldCoded(map.cols); }); }
+
+// The coded-share line of a question. A question without any coded field states that
 // instead of a share, so no figure suggests coding that does not exist.
 function summaryHtml(item, prefix) {
-    if (!item.fields.length) {
+    if (!questionCoded(item)) {
         return '<p class="denominator denominator--summary" data-coded="0">' + (prefix ? EC.esc(prefix) + ' · ' : '') + 'Noch nicht codiert</p>';
     }
-    return EC.summaryLine(model.includes, item.fields, false, prefix, { status: true });
+    // A field nobody has coded yet, such as a pilot field, would make every work count as uncoded.
+    return EC.summaryLine(model.includes, item.fields.filter(fieldCoded), false, prefix, { status: true });
 }
 
 function renderStart() {
@@ -174,7 +182,7 @@ function worksSection(item) {
                 }).join('') + '</dl></li>';
         }).join('') + '</ol>';
     };
-    if (!fields.length) return '<p class="empty-state">Für diese Frage ist noch kein Werk codiert.</p>';
+    if (!fields.length || !questionCoded(item)) return '<p class="empty-state">Für diese Frage ist noch kein Werk codiert.</p>';
     const main = works.length
         ? '<p class="worklist-count">' + EC.esc(EC.workCount(works.length)) + ' mit mindestens einem Code in diesen Feldern</p>' + list(works, 3)
         : '<p class="empty-state">Kein veröffentlichtes eingeschlossenes Werk trägt einen Code in diesen Feldern.</p>';
@@ -285,4 +293,5 @@ EC.registerView('methode', {
 EC.questions = QUESTIONS;
 // The start view of docs/index.html labels each question card with its findings.
 EC.findingsFor = function (id) { return model && question(String(id)) ? findingsFor(question(String(id))) : []; };
+EC.questionCoded = function (id) { return Boolean(model && question(String(id)) && questionCoded(question(String(id)))); };
 })();

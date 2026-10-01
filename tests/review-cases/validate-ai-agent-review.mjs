@@ -73,7 +73,8 @@ export function validateAiAgentReview(review, run) {
   }
 
   const virtualPacket = {
-    schema: 'femprompt-prisma-coding-packet/0.1',
+    schema: run.codebook?.version ? 'femprompt-prisma-coding-packet/0.2' : 'femprompt-prisma-coding-packet/0.1',
+    ...(run.codebook?.version ? { codebook_version: run.codebook.version } : {}),
     run_id: run.run_id,
     reviewer: 'ai-agent-review',
     actor: 'agent',

@@ -4,7 +4,7 @@
 The static apps cannot read assessment/categories.yaml directly, and a hand-kept
 second vocabulary list in the JS would be a second source of truth that drifts
 from the frozen schema. This script is the one seam: it reads the frozen
-analysis_fields block from assessment/categories.yaml (v1.3) and writes it to
+analysis_fields block from assessment/categories.yaml and writes it to
 docs/data/analysis_fields.json. The panel's closed selections are fed only from
 this file, so no code path can produce a value outside the frozen vocabulary.
 
@@ -17,10 +17,16 @@ analysis_presentation block. They are presentation only and fail closed: every
 field and value needs an entry, and an entry outside the vocabulary is an error,
 so a label can neither go missing nor describe a code that does not exist.
 
+Fields introduced after v1.3 carry `introduced_in`, and the derived field states
+(analysis_field_states, such as not_collected) travel with their labels, so the apps
+can tell a field nobody was asked to code from coded absence.
+
 Output: docs/data/analysis_fields.json
-  { "meta": {...}, "version": "1.3",
+  { "meta": {...}, "version": "1.4",
     "fields": [ { "name", "label", "definition", "multi", "values",
-                  "value_labels", "value_definitions"[, "optional", "free_text", ...] } ],
+                  "value_labels", "value_definitions"[, "optional", "free_text",
+                  "binding_when", "introduced_in", "pilot"] } ],
+    "field_states": { "not_collected": { "label", "definition" } },
     "study_types": [...],
     "study_type": { "name": "Studientyp", "label", "definition", "multi": false,
                     "values", "value_labels", "value_definitions" } }
@@ -120,7 +126,22 @@ def build_payload(text: str) -> dict:
             out["optional"] = True
         if f.get("binding_when"):
             out["binding_when"] = f["binding_when"]
+        if f.get("introduced_in"):
+            out["introduced_in"] = str(f["introduced_in"])
+        if f.get("pilot"):
+            out["pilot"] = True
         fields.append(out)
+
+    field_states = {}
+    for state, entry in (data.get("analysis_field_states") or {}).items():
+        if not isinstance(entry, dict):
+            raise ValueError(f"analysis_field_states: {state} needs a mapping")
+        field_states[state] = {
+            "label": _text(entry.get("label"), f"analysis_field_states.{state}.label"),
+            "definition": _text(
+                entry.get("definition"), f"analysis_field_states.{state}.definition"
+            ),
+        }
 
     study_type = {
         "name": STUDY_FIELD,
@@ -136,6 +157,7 @@ def build_payload(text: str) -> dict:
         },
         "version": version,
         "fields": fields,
+        "field_states": field_states,
         "study_types": study_types,
         "study_type": study_type,
     }

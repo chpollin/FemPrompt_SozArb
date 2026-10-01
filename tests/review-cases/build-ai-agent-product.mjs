@@ -34,14 +34,14 @@ function main() {
   for (const paper of run.assignment.papers) {
     for (const recordId of paper.record_ids) {
       decisions[recordId] = {
-        ...buildPrismRecord(review.records[paper.paper_id].final_coding, 'ar2', timestamp, paper),
+        ...buildPrismRecord(review.records[paper.paper_id].final_coding, 'ar2', timestamp, paper, run.codebook?.version || null),
         representative_record_id: paper.paper_id,
       };
       if (recordId !== paper.paper_id) decisions[recordId].alias_of = paper.paper_id;
     }
   }
   const product = {
-    schema: run.schema === 'femprompt-prisma-agent-run/1.3'
+    schema: ['femprompt-prisma-agent-run/1.3', 'femprompt-prisma-agent-run/1.4'].includes(run.schema)
       ? 'femprompt-prisma-reviewer/0.4'
       : 'femprompt-prisma-reviewer/0.3',
     reviewer: 'ar2',

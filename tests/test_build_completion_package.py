@@ -312,8 +312,13 @@ def test_sub_question_grouping_follows_the_current_numbering():
             if question.startswith("SQ"):
                 serves.setdefault(question, set()).add(field["name"])
     assert {q: set(names) for q, names in completion.FIELDS.items() if names} == serves
-    # SQ4 Conceptual grounding has no coded field until codebook amendment v1.4.
-    assert completion.FIELDS["SQ4"] == ()
+    # SQ4 Conceptual grounding received its fields with codebook v1.4.
+    assert completion.FIELDS["SQ4"] == (
+        "AN_Gender_Definition",
+        "AN_Bias_Definition",
+        "AN_Gender_Understanding",
+        "AN_Theory_Reference",
+    )
     assert list(completion.FIELDS) == ["SQ1", "SQ2", "SQ3", "SQ4", "SQ5"]
     assert set(completion.QUESTION_TOPICS) == set(completion.FIELDS)
 
@@ -341,7 +346,10 @@ def test_sub_question_grouping_follows_the_current_numbering():
     assert role[("SQ1", "Recommended_Practice")] == role[("SQ5", "Learning_Content")] == 1
     assert ("SQ1", "Learning_Content") not in role
     assert ("SQ5", "Recommended_Practice") not in role
-    assert not any(row["question"] == "SQ4" for row in tables)
+    # A record coded under v1.3 contributes to no SQ4 value.
+    assert all(
+        row["work_count"] == 0 for row in tables if row["question"] == "SQ4"
+    )
     labels = {
         m["matrix"]: m["question"] for m in completion._associations(rows, schema())
     }
@@ -1234,3 +1242,38 @@ def test_full_package_field_states_match_sq_denominators():
         package["agent_track_diagnostics"]["label"]
         == "workflow_diagnostic_not_accuracy"
     )
+
+
+def test_fields_introduced_later_are_not_collected_for_earlier_annotations():
+    """A v1.3 annotation reads not_collected for v1.4 fields, a v1.4 one is coded."""
+    old = coded("A", AN_Bias_Axes=["Gender"])
+    new = coded("B", AN_Bias_Axes=["Gender"], AN_Task=["Research"])
+    new["codebook_version"] = "1.4"
+    two_works = {
+        "record_index": {
+            "A": {"work_id": "work:a", "version_id": "version:a"},
+            "B": {"work_id": "work:b", "version_id": "version:b"},
+        },
+        "works": [
+            {"work_id": "work:a", "canonical_title": "A", "preferred_version_id": "version:a"},
+            {"work_id": "work:b", "canonical_title": "B", "preferred_version_id": "version:b"},
+        ],
+    }
+    rows, _ = completion._work_rows(two_works, [], {"A": [old], "B": [new]}, {})
+    by_id = {row["record_ids"][0]: row for row in rows}
+    assert by_id["A"]["analysis_codebook_versions"] == ["1.3"]
+    assert completion._field_state(by_id["A"], "AN_Task", ["Research"], "1.4") == (
+        "not_collected"
+    )
+    assert completion._field_state(by_id["B"], "AN_Task", ["Research"], "1.4") == (
+        "coded"
+    )
+    # A v1.4 annotation without a value in a v1.4 field is still missing.
+    assert completion._field_state(
+        by_id["B"], "AN_Gender_Definition", ["Explicit"], "1.4"
+    ) == "missing"
+    # Fields of v1.3 keep their state whatever the version.
+    assert completion._field_state(by_id["A"], "AN_Bias_Axes", ["Gender"]) == "coded"
+    states = completion._field_states(rows, schema())
+    task = next(r for r in states if r["track"] == "all" and r["field"] == "AN_Task")
+    assert task["states"]["not_collected"]["count"] >= 1

@@ -7,9 +7,11 @@ description: Führt kontrollierte, operational isolierte PRISM-Agentenreviews f�
 
 Arbeite ausschließlich im SocialAI-Repository und behandle frühere Bewertungen als gesperrt, solange ein Reviewer-Track entsteht.
 
-## Codex-nativer Run-Vertrag
+## Harness-neutraler Run-Vertrag
 
-Künftige Läufe verwenden `femprompt-prisma-agent-run/1.3`. Das verbindliche
+Ein Lauf ist ein AI-Harness-Lauf. Jeder Track kann als Subagent von Claude Code,
+als Codex-Agent oder in einem anderen Harness laufen. Künftige Läufe verwenden
+`femprompt-prisma-agent-run/1.4`. Das verbindliche
 Template liegt unter `tests/review-cases/agent-runs/run-template.json`; vor dem
 Lauf wird es vollständig mit konkreten Werten befüllt und mit
 `node tests/review-cases/validate-run-contract.mjs <run.json>` geprüft. Das
@@ -18,11 +20,17 @@ belegt keine epistemische Unabhängigkeit der Ergebnisse.
 
 Der Vertrag verlangt genau zwei operational isolierte Agent-Tracks. Jeder Track
 trägt eine eigene Reviewer-ID, Actor-ID und den Actor-Typ `ai_agent`, die komplette
-Paper-Zuweisung sowie je Paper den Quellpfad und den SHA-256-Hash. Die
-Isolationserklärung hält getrennte Codex-Kontexte, Reviewer-Identitäten und
-Ausgabepfade fest und setzt `epistemic_independence_claimed` ausdrücklich auf
-`false`. Jeder Track schreibt ein Coding-Paket und einen Bericht. Beide Dateien
-werden im Manifest mit Hash gebunden.
+Paper-Zuweisung, je Paper den Quellpfad und den SHA-256-Hash sowie in
+`execution_environment` Harness, Provider, Modell und Modellkennung. Die
+Isolationserklärung hält getrennte Harness-Kontexte, Arbeitsordner,
+Reviewer-Identitäten und Ausgabepfade fest und setzt
+`epistemic_independence_claimed` ausdrücklich auf `false`. `model_diversity`
+hält fest, ob beide Tracks dasselbe Modell nutzen. Zwei Tracks auf demselben
+Modell sind weniger unabhängig als zwei Tracks auf verschiedenen Modellen.
+`codebook` bindet Pfad, Version und Hash von `assessment/categories.yaml`. Jeder
+Track schreibt ein Coding-Paket und einen Bericht in seinen eigenen Arbeitsordner,
+den der andere Track nicht liest. Der Orchestrator kopiert beide Dateien nach
+Abschluss an die Manifestpfade und bindet sie dort mit Hash.
 
 `execution.mode` lautet
 `blinded_source_review_with_deterministic_prism_roundtrip`. Nach bestandener
@@ -32,9 +40,10 @@ führt sie durch `validateReviewerPayload`, `importReviewerPayload`,
 resultierende Track bleibt ein unverändertes Laufartefakt. Die sichtbare
 Oberfläche ist für diese maschinelle Datenübertragung keine Voraussetzung.
 
-Das Manifest fixiert außerdem Provider, Modell und Modellversion (alternativ
-eine unveränderliche Modellkennung), Prompt-Pfad, Prompt-Version und Prompt-Hash,
+Das Manifest fixiert außerdem Prompt-Pfad, Prompt-Version und Prompt-Hash,
 den Baseline-Commit, UTC-Zeitpunkte sowie alle Track- und Prüfoutputs mit Hash.
+Historische Läufe nach Schema 1.3 und 1.2 tragen ein laufweites Modell und
+bleiben gültig.
 `actors` registriert Reviewer und die separate Prüfinstanz als `ai_agent`,
 jeweils mit einer Rolle. `provenance.activities[]` führt für
 jede Aktivität ID, Typ, Run-ID, Methode, Prompt, Modell und zugehörige Actor-IDs.
@@ -59,18 +68,18 @@ epistemische Eigenschaft der Tracks oder der Prüfung ab.
 
 ## Vor jedem Lauf
 
-1. Lies `prompts/prism-agent-reviewer-v1.2.md` vollständig.
-2. Lies `assessment/categories.yaml` v1.3 sowie `knowledge/update-protocol.md`, Abschnitte „Eligibility“, „Text preparation and source gate“, „Agent-assisted completion“ sowie „Analysis coding“ einschließlich der datierten „Source-review clarification“.
+1. Lies `prompts/prism-agent-reviewer-v1.3.md` vollständig.
+2. Lies `assessment/categories.yaml` v1.4 einschließlich `note`, `rules` und `anchors` der Analysefelder sowie `knowledge/update-protocol.md`, Abschnitte „Eligibility“, „Text preparation and source gate“, „Agent-assisted completion“ sowie „Analysis coding“ einschließlich der datierten „Source-review clarification“.
 3. Lies das konkrete Laufmanifest. Verwende dessen Run-ID, Reviewer-Kürzel, Paper-IDs, Quellpfade und Zielpfade unverändert. Errate keinen Parameter.
 4. Prüfe den im Manifest eingetragenen Prompt-Hash gegen die tatsächlich verwendete Datei. Stoppe bei einer Abweichung.
 
 ## Reviewer-Track
 
-- Bearbeite nur die zugewiesenen Paper-IDs und schreibe nur das eigene Coding-Paket sowie den eigenen Bericht.
+- Bearbeite nur die zugewiesenen Paper-IDs und schreibe nur das eigene Coding-Paket sowie den eigenen Bericht in den eigenen Arbeitsordner.
 - Belege jede positive Kategorie mit einer wörtlichen Passage aus der identitätsgeprüften Paper-Ebene.
 - Öffne keine Wissensdestillate, früheren Bewertungen, produktiven Screeningdateien oder anderen Tracks.
-- Erfasse alle zehn Kategorien und bei Include die vollständige Analyse im Schema `femprompt-prisma-coding-packet/0.1`.
-- Führe `validate-coding-packet.mjs` für den eigenen Track aus. Ein fehlerhaftes Paket bleibt außerhalb des Transfers.
+- Erfasse alle zehn Kategorien und bei Include die vollständige Analyse nach Codebuch 1.4 im Schema `femprompt-prisma-coding-packet/0.2`, mit `codebook_version` und belegten Fundstellen in `analysis_evidence`.
+- Führe `validate-coding-packet.mjs` mit dem Paketpfad im eigenen Arbeitsordner aus. Ein fehlerhaftes Paket bleibt außerhalb des Transfers.
 - Direkte Änderungen an produktiven Forschungs-JSONs und Dateien anderer Tracks sind unzulässig.
 
 ## Deterministischer PRISM-Transfer
@@ -83,7 +92,7 @@ epistemische Eigenschaft der Tracks oder der Prüfung ab.
 
 ## AI Agent Review und Integration
 
-Halte Reviewer-Track, AI Agent Review und produktive Forschungsdaten getrennt. Verwende `prompts/prism-ai-agent-review-v0.3.md` für die separate quellengestützte Prüfung. Eine produktive Übernahme ist nur zulässig, wenn:
+Halte Reviewer-Track, AI Agent Review und produktive Forschungsdaten getrennt. Verwende `prompts/prism-ai-agent-review-v0.4.md` für die separate quellengestützte Prüfung. Die Übereinstimmung beider Tracks je Feld berechnet `python -m src.assess.agent_track_diagnostics <Laufordner> --output <Laufordner>/track-agreement.json`. Sie ist eine Prozessdiagnose. Eine Stichprobe prüfen Domänenexpert:innen am Volltext. Eine produktive Übernahme ist nur zulässig, wenn:
 
 - Zuweisung und exportierte ID-Menge exakt übereinstimmen,
 - Quellenidentität und Textbasis je Paper geprüft sind,

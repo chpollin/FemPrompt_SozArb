@@ -69,7 +69,15 @@ def test_canonical_vocabulary_is_fully_labelled() -> None:
     payload = analysis_fields.build_payload(
         (ROOT / "assessment/categories.yaml").read_text(encoding="utf-8")
     )
-    assert payload["version"] == "1.3"
+    assert payload["version"] == "1.4"
+    introduced = {f["name"]: f.get("introduced_in") for f in payload["fields"]}
+    assert introduced["AN_Gender_Definition"] == introduced["AN_Task"] == "1.4"
+    assert introduced["AN_Bias_Axes"] is None
+    assert next(f for f in payload["fields"] if f["name"] == "AN_Task")["pilot"] is True
+    assert payload["field_states"]["not_collected"]["label"]
+    # YAML 1.1 would turn bare Yes and No into booleans; the codes stay strings.
+    theory = next(f for f in payload["fields"] if f["name"] == "AN_Theory_Reference")
+    assert theory["values"] == ["Yes", "No"]
     for field in payload["fields"]:
         assert field["label"] and field["definition"]
         if not field.get("free_text"):

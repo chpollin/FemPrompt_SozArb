@@ -11,7 +11,9 @@ inter-expert reliability. The builder of generated/completion/ calls
 
 from __future__ import annotations
 
+import argparse
 import json
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
@@ -28,9 +30,15 @@ ANALYSIS_FIELDS = (
     "AN_Mitigation_Stage",
     "AN_Mitigation_Status",
     "AN_Population",
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
     "AN_Coding_Basis",
     "Studientyp",
 )
+VOCABULARY = "docs/data/analysis_fields.json"
 LEVELS = {0: "nein", 1: "teilweise", 2: "ja"}
 UNDECIDABLE = ("<undecidable>",)
 # Outcomes of ai-agent-review/0.1 and ratification-consensus/0.1 that carry a
@@ -346,3 +354,114 @@ def diagnostics_rows(diagnostics: dict) -> list[dict]:
         }
         for row in diagnostics["track_differences"]
     ]
+
+
+def _rate(numerator: int, denominator: int) -> float | None:
+    return round(numerator / denominator, 4) if denominator else None
+
+
+def track_agreement(first: dict, second: dict, multi_fields: set[str]) -> dict:
+    """Agreement of two coding packets per field, for one run.
+
+    Raw agreement is the share of compared works with identical codes, for a
+    multi-value field the identical code set. Positive specific agreement per value
+    is 2a / (2a + b + c), with a the works both tracks code with the value and b, c
+    the works only one track codes with it (Cicchetti and Feinstein 1990). Cohen's
+    kappa is reported descriptively, for single-value fields over the codes and for
+    each value of a multi-value field over its presence; at pilot size its interval
+    spans most of the scale, so no threshold applies. Analysis fields are compared
+    on the works both tracks include. The figures describe the workflow and estimate
+    neither accuracy nor inter-expert reliability.
+    """
+    ids = sorted(set(first) & set(second))
+    pairs = {paper_id: (coding(first[paper_id]), coding(second[paper_id])) for paper_id in ids}
+    both_include = [
+        paper_id
+        for paper_id, (a, b) in pairs.items()
+        if a["decision"] == b["decision"] == "Include"
+    ]
+    rows = []
+    for field in ("decision", *CATEGORIES, *ANALYSIS_FIELDS):
+        analysis = field in ANALYSIS_FIELDS
+        scope = both_include if analysis else ids
+        values = [(paper_id, pairs[paper_id][0][field], pairs[paper_id][1][field]) for paper_id in scope]
+        values = [item for item in values if not (analysis and item[1] is None and item[2] is None)]
+        identical = [paper_id for paper_id, a, b in values if a == b]
+        row = {
+            "field": field,
+            "kind": "analysis" if analysis else "decision" if field == "decision" else "category",
+            "compared_works": len(values),
+            "identical": len(identical),
+            "raw_agreement": _rate(len(identical), len(values)),
+            "different_paper_ids": sorted(paper_id for paper_id, a, b in values if a != b),
+            "label": LABEL,
+        }
+        if field in multi_fields:
+            codes = sorted({code for _, a, b in values for code in (a or ()) + (b or ())})
+            per_value = {}
+            for code in codes:
+                both = sum(1 for _, a, b in values if code in (a or ()) and code in (b or ()))
+                only = sum(1 for _, a, b in values if (code in (a or ())) != (code in (b or ())))
+                per_value[code] = {
+                    "both": both,
+                    "one_track_only": only,
+                    "positive_specific_agreement": _rate(2 * both, 2 * both + only),
+                    "cohens_kappa_descriptive": cohens_kappa(
+                        [code in (a or ()) for _, a, _ in values],
+                        [code in (b or ()) for _, _, b in values],
+                    )
+                    if values
+                    else None,
+                }
+            row["values"] = per_value
+        else:
+            row["cohens_kappa_descriptive"] = (
+                cohens_kappa([str(a) for _, a, _ in values], [str(b) for _, _, b in values])
+                if values
+                else None
+            )
+        rows.append(row)
+    return {
+        "schema": "femprompt-track-agreement/0.1",
+        "label": LABEL,
+        "interpretation": "Agreement between two operationally isolated agent tracks is a workflow diagnostic. Tracks on the same model share more than tracks on different models, so agreement is neither accuracy nor inter-expert reliability. Kappa is descriptive and carries no threshold.",
+        "compared_works": len(ids),
+        "both_include_works": len(both_include),
+        "fields": rows,
+    }
+
+
+def run_agreement(repo: Path, run_dir: Path) -> dict:
+    """Read one run's two coding packets and the vocabulary, return their agreement."""
+    packets = sorted(run_dir.glob("tracks/*-coding.json"))
+    if len(packets) != 2:
+        raise ValueError(f"{run_dir} needs exactly two coding packets")
+    first, second = (_json(path)["decisions"] for path in packets)
+    vocabulary = _json(repo / VOCABULARY)
+    multi = {field["name"] for field in vocabulary["fields"] if field.get("multi")}
+    result = track_agreement(first, second, multi)
+    result["run_id"] = _json(run_dir / "run.json").get("run_id", run_dir.name)
+    result["coding_packets"] = [path.relative_to(repo).as_posix() for path in packets]
+    result["vocabulary_version"] = vocabulary.get("version")
+    return result
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Track agreement of one agent run.")
+    parser.add_argument("run_dir", help="run folder under tests/review-cases/agent-runs")
+    parser.add_argument("--output", help="write the JSON here instead of standard output")
+    args = parser.parse_args(argv)
+    repo = Path(__file__).resolve().parents[2]
+    run_dir = (repo / args.run_dir).resolve()
+    result = run_agreement(repo, run_dir)
+    text = json.dumps(result, indent=2, ensure_ascii=False) + "\n"
+    if args.output:
+        # LF bytes, so the hash a run manifest records survives a Git checkout.
+        (repo / args.output).write_text(text, encoding="utf-8", newline="\n")
+    else:
+        sys.stdout.write(text)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

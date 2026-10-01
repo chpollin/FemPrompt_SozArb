@@ -1,0 +1,44 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v14-pilot-10-20261001",
+  "status": "proposed",
+  "seed": 20261001,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "KNQYFQ6B"
+  ],
+  "disagreeing_works": [
+    "3B87U5LN",
+    "6IU5JG5Y",
+    "G53MCF3W",
+    "H59BNSX8",
+    "LGYFN6JK",
+    "PQC9G5EU",
+    "VFD9ENG6",
+    "WLV8L8PM",
+    "YN9JAREI"
+  ],
+  "drawn": [
+    "KNQYFQ6B",
+    "LGYFN6JK",
+    "PQC9G5EU",
+    "VFD9ENG6",
+    "YN9JAREI"
+  ],
+  "flagged_additions": [
+    "3B87U5LN"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "YN9JAREI": "publication type of a practice guide admitted as scholarly grey literature",
+    "3B87U5LN": "Soziale_Arbeit ja through the target-group clause only, which carries the Include"
+  }
+}

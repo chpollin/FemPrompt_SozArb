@@ -9,7 +9,10 @@
     const EC = window.EC = window.EC || {};
 
     function statusSentence(model) {
-        const fields = model.dims.filter(function (dim) { return dim.id.indexOf('AN_') === 0; })
+        // Only the baseline fields every coded annotation carries decide whether a work
+        // counts as coded, so a field added by a later codebook version, not collected
+        // for earlier annotations, does not turn coded works into uncoded ones.
+        const fields = model.dims.filter(function (dim) { return dim.id.indexOf('AN_') === 0 && !dim.introducedIn; })
             .map(function (dim) { return dim.id; });
         if (!fields.length) return '';
         const summary = model.codedSummary(model.includes, fields, true);
@@ -42,8 +45,8 @@
             if (!line) return;
             const findings = EC.findingsFor(card.dataset.sq);
             // A question without coded fields says so rather than report an empty finding count.
-            const question = (EC.questions || []).find(function (item) { return item.id === card.dataset.sq; });
-            line.textContent = question && !question.fields.length && !findings.length ? 'noch nicht codiert' : findingLine(findings);
+            const uncoded = EC.questionCoded ? !EC.questionCoded(card.dataset.sq) : false;
+            line.textContent = uncoded && !findings.length ? 'noch nicht codiert' : findingLine(findings);
         });
     };
 })();

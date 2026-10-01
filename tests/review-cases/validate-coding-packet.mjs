@@ -25,6 +25,35 @@ const levels = new Map([
 ]);
 const decisions = new Set(['Include', 'Unclear', 'Exclude']);
 const exclusionReasons = new Set(['Duplicate', 'Not_relevant_topic', 'Wrong_publication_type', 'No_full_text', 'Language']);
+// Packet 0.1 predates the recorded codebook version and is read as codebook 1.3.
+// Packet 0.2 names its codebook version, which must match the run manifest.
+const PACKET_SCHEMAS = new Map([
+  ['femprompt-prisma-coding-packet/0.1', false],
+  ['femprompt-prisma-coding-packet/0.2', true],
+]);
+export const BASELINE_CODEBOOK = '1.3';
+// Codes whose source passage the packet must carry in analysis_evidence.
+const PASSAGE_REQUIRED = new Map([
+  ['AN_Gender_Definition', 'Explicit'],
+  ['AN_Bias_Definition', 'Explicit'],
+  ['AN_Theory_Reference', 'Yes'],
+]);
+
+export function compareVersions(left, right) {
+  const a = String(left).split('.').map(Number);
+  const b = String(right).split('.').map(Number);
+  for (let index = 0; index < Math.max(a.length, b.length); index += 1) {
+    const difference = (a[index] || 0) - (b[index] || 0);
+    if (difference) return Math.sign(difference);
+  }
+  return 0;
+}
+
+// A field applies to an annotation when it was introduced at or before the
+// annotation's codebook version; fields without introduced_in belong to v1.3.
+export function fieldApplies(field, codebookVersion) {
+  return compareVersions(field.introduced_in || BASELINE_CODEBOOK, codebookVersion || BASELINE_CODEBOOK) <= 0;
+}
 
 function json(path) {
   return JSON.parse(readFileSync(resolve(root, path), 'utf8'));
@@ -52,7 +81,7 @@ function derivedDecision(codedCategories) {
   return 'Exclude';
 }
 
-function validateAnalysis(analysis, vocabulary, label, errors) {
+function validateAnalysis(analysis, vocabulary, label, errors, codebookVersion) {
   if (!analysis || typeof analysis !== 'object' || Array.isArray(analysis)) {
     errors.push(`${label}.analysis is missing`);
     return;
@@ -60,6 +89,11 @@ function validateAnalysis(analysis, vocabulary, label, errors) {
   const undecidable = analysis.undecidable || {};
   for (const field of vocabulary.fields) {
     const value = analysis[field.name];
+    if (!fieldApplies(field, codebookVersion)) {
+      if (value !== undefined || undecidable[field.name] !== undefined)
+        errors.push(`${label}.analysis.${field.name} was introduced after codebook ${codebookVersion}`);
+      continue;
+    }
     if (field.free_text) {
       if (value !== undefined && typeof value !== 'string') errors.push(`${label}.analysis.${field.name} must be text`);
       continue;
@@ -86,11 +120,67 @@ function validateAnalysis(analysis, vocabulary, label, errors) {
     if (!vocabulary.fields.some((candidate) => candidate.name === field) || undecidable[field] !== true)
       errors.push(`${label}.analysis.undecidable contains an invalid entry`);
   }
+  validateConceptualConsistency(analysis, label, errors);
+}
+
+// Cross-field rules of the SQ4 fields (assessment/categories.yaml v1.4).
+function validateConceptualConsistency(analysis, label, errors) {
+  const definition = analysis.AN_Gender_Definition;
+  const understanding = analysis.AN_Gender_Understanding;
+  if (!Array.isArray(understanding) || definition === undefined) return;
+  const has = (value) => understanding.includes(value);
+  if (has('Binary_Categorical') && has('Non_Binary_Inclusive'))
+    errors.push(`${label}.analysis.AN_Gender_Understanding combines Binary_Categorical with Non_Binary_Inclusive`);
+  for (const alone of ['Unclear', 'Not_Applicable'])
+    if (has(alone) && understanding.length > 1) errors.push(`${label}.analysis.AN_Gender_Understanding combines ${alone} with other values`);
+  if ((definition === 'Not_Applicable') !== has('Not_Applicable'))
+    errors.push(`${label}.analysis.AN_Gender_Definition Not_Applicable must pair with AN_Gender_Understanding Not_Applicable`);
+  if ((definition === 'Absent') !== has('Unclear'))
+    errors.push(`${label}.analysis.AN_Gender_Definition Absent must pair with AN_Gender_Understanding Unclear`);
+}
+
+// Located source passages for analysis codes. Each quote must occur verbatim in the
+// assigned Paper source, and a theory reference names its theory.
+function validateAnalysisEvidence(record, paperText, label, errors) {
+  const evidence = record.analysis_evidence;
+  const entries = evidence && typeof evidence === 'object' && !Array.isArray(evidence) ? evidence : null;
+  if (evidence !== undefined && !entries) {
+    errors.push(`${label}.analysis_evidence must be an object`);
+    return;
+  }
+  for (const [field, items] of Object.entries(entries || {})) {
+    if (!Array.isArray(items) || !items.length) {
+      errors.push(`${label}.analysis_evidence.${field} must be a non-empty array`);
+      continue;
+    }
+    for (const [index, item] of items.entries()) {
+      const where = `${label}.analysis_evidence.${field}[${index}]`;
+      if (!item || typeof item.quote !== 'string' || !String(item.locator || '').trim()) {
+        errors.push(`${where} needs a quote and a locator`);
+        continue;
+      }
+      const quote = normalizedText(item.quote);
+      if (!quote || !paperText.includes(quote)) errors.push(`${where} is absent from its assigned source: ${item.quote.slice(0, 80)}`);
+      if (field === 'AN_Theory_Reference' && !String(item.theory || '').trim()) errors.push(`${where} must name its theory`);
+    }
+  }
+  for (const [field, code] of PASSAGE_REQUIRED) {
+    if (record.analysis?.[field] === code && !(entries?.[field] || []).length)
+      errors.push(`${label}.${field} ${code} needs a located passage in analysis_evidence`);
+  }
 }
 
 export function validateCodingPacket(packet, run, reviewerId) {
   const errors = [];
-  if (packet?.schema !== 'femprompt-prisma-coding-packet/0.1') errors.push('schema must be femprompt-prisma-coding-packet/0.1');
+  if (!PACKET_SCHEMAS.has(packet?.schema)) errors.push('schema must be femprompt-prisma-coding-packet/0.1 or 0.2');
+  const recordsVersion = PACKET_SCHEMAS.get(packet?.schema) === true;
+  const codebookVersion = recordsVersion ? packet?.codebook_version : BASELINE_CODEBOOK;
+  if (recordsVersion) {
+    if (!/^[0-9]+[.][0-9]+$/.test(String(packet?.codebook_version || ''))) errors.push('codebook_version must be recorded as major.minor');
+    else if (packet.codebook_version !== run.codebook?.version) errors.push('codebook_version differs from the run manifest');
+  } else if (packet && 'codebook_version' in packet) {
+    errors.push('packet 0.1 carries no codebook_version');
+  }
   if (packet?.run_id !== run.run_id) errors.push('run_id differs from manifest');
   if (packet?.reviewer !== reviewerId) errors.push('reviewer differs from requested track');
   if (packet?.actor !== 'agent') errors.push('actor must be agent');
@@ -103,6 +193,8 @@ export function validateCodingPacket(packet, run, reviewerId) {
   if (JSON.stringify(actualIds) !== JSON.stringify(expectedIds)) errors.push('decision IDs differ from the complete track assignment');
 
   const vocabulary = json('docs/data/analysis_fields.json');
+  if (recordsVersion && compareVersions(codebookVersion, vocabulary.version) > 0)
+    errors.push(`codebook_version ${codebookVersion} is newer than the built vocabulary ${vocabulary.version}`);
   for (const id of expectedIds) {
     const record = packet?.decisions?.[id];
     const assignment = track.source_assignments.find((source) => source.paper_id === id);
@@ -150,20 +242,28 @@ export function validateCodingPacket(packet, run, reviewerId) {
       }
     }
 
-    if (record.decision === 'Include') validateAnalysis(record.analysis, vocabulary, label, errors);
-    else if ('analysis' in record) errors.push(`${label}.analysis must be absent outside Include`);
+    if (record.decision === 'Include') {
+      validateAnalysis(record.analysis, vocabulary, label, errors, codebookVersion);
+      if (recordsVersion) validateAnalysisEvidence(record, paperText, label, errors);
+      else if ('analysis_evidence' in record) errors.push(`${label}.analysis_evidence requires packet 0.2`);
+    } else {
+      if ('analysis' in record) errors.push(`${label}.analysis must be absent outside Include`);
+      if ('analysis_evidence' in record) errors.push(`${label}.analysis_evidence must be absent outside Include`);
+    }
   }
 
   return { ok: errors.length === 0, errors: [...new Set(errors)] };
 }
 
 function main() {
-  const [runPath, reviewerId] = process.argv.slice(2);
-  if (!runPath || !reviewerId) throw new Error('usage: node tests/review-cases/validate-coding-packet.mjs <run.json> <reviewer-id>');
+  // The optional packet path lets a track validate its packet in its own working
+  // folder before the orchestrator copies it to the manifest path.
+  const [runPath, reviewerId, packetPath] = process.argv.slice(2);
+  if (!runPath || !reviewerId) throw new Error('usage: node tests/review-cases/validate-coding-packet.mjs <run.json> <reviewer-id> [packet.json]');
   const run = json(runPath);
   const track = run.tracks.find((candidate) => candidate.reviewer_id === reviewerId);
   if (!track?.coding_packet) throw new Error(`manifest has no coding packet for ${reviewerId}`);
-  const result = validateCodingPacket(json(track.coding_packet), run, reviewerId);
+  const result = validateCodingPacket(json(packetPath || track.coding_packet), run, reviewerId);
   if (!result.ok) {
     console.error(`FAIL coding packet: ${reviewerId}`);
     for (const error of result.errors) console.error(`- ${error}`);

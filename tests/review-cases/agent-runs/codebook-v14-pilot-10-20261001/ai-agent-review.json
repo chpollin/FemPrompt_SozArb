@@ -1,0 +1,2043 @@
+{
+  "schema": "femprompt-prisma-ai-agent-review/0.1",
+  "run_id": "codebook-v14-pilot-10-20261001",
+  "actor": "agent",
+  "reviewer": "ai-agent-review",
+  "created": "2026-10-01T14:38:38.419Z",
+  "model": {
+    "provider": "Anthropic",
+    "model_id": "claude-opus-5-5",
+    "harness": "Claude Code subagent"
+  },
+  "prompt": {
+    "path": "prompts/prism-ai-agent-review-v0.4.md",
+    "version": "0.4",
+    "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+  },
+  "codebook": {
+    "path": "assessment/categories.yaml",
+    "version": "1.4",
+    "sha256": "c84046379af8e70664216f1559f4fe03f3828fb60476dffc524ee2f3f4903275"
+  },
+  "inputs": {
+    "tracks": [
+      {
+        "reviewer": "ar1",
+        "path": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/tracks/ar1-coding.json",
+        "sha256": "cce2a7e35488ce860fe27bc59789593a4cbf9ffd7984aa8fb6bb67c181128d6c"
+      },
+      {
+        "reviewer": "ar2",
+        "path": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/tracks/ar2-coding.json",
+        "sha256": "7eefcf6b93d5b1a5a93182b3e7d8b1efa8d82add5e4c0e47b6065a33c5762eac"
+      }
+    ],
+    "prism_tracks": [
+      {
+        "reviewer": "ar1",
+        "path": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/tracks/ar1.json",
+        "sha256": "50a980d947744fdefd686d81a0da962b2df889dbb2c48fb7fd465473a48f264d"
+      },
+      {
+        "reviewer": "ar2",
+        "path": "tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/tracks/ar2.json",
+        "sha256": "8e99ab26931b3c0ede552e401b8eb52b65607c0a7e091470ccf6d1b940800da5"
+      }
+    ],
+    "sources": [
+      {
+        "paper_id": "G53MCF3W",
+        "path": "docs/data/fulltext/G53MCF3W.md",
+        "sha256": "de4f8254cca4e86a2776a271a833c801ac747b2d4f69520b2633e3a3a60d4e8d"
+      },
+      {
+        "paper_id": "KNQYFQ6B",
+        "path": "docs/data/fulltext/KNQYFQ6B.md",
+        "sha256": "b2221d0b8ce2f70a66f1425b5994198d3a4311db203a5ca2610276027ce34a5b"
+      },
+      {
+        "paper_id": "WLV8L8PM",
+        "path": "docs/data/fulltext/WLV8L8PM.md",
+        "sha256": "3f656337ef5f5a10cec428bc9b3dc1a95f9fbaa6e10501f0e6bd9d332219a22e"
+      },
+      {
+        "paper_id": "PQC9G5EU",
+        "path": "docs/data/fulltext/PQC9G5EU.md",
+        "sha256": "ea5a3bb3733b9f690e68e89f0f37757ada658507c1238405fed843a9d99ea7dc"
+      },
+      {
+        "paper_id": "VFD9ENG6",
+        "path": "docs/data/fulltext/VFD9ENG6.md",
+        "sha256": "7ba93ef6d1c8371c4538681a38d859014cda2b2eef76d18f081716356fbd45f2"
+      },
+      {
+        "paper_id": "YN9JAREI",
+        "path": "docs/data/fulltext/YN9JAREI.md",
+        "sha256": "cd8198308c8c200a2b2c33eb33e6defb30735196acfe9d0ba9d559a43fff6afe"
+      },
+      {
+        "paper_id": "6IU5JG5Y",
+        "path": "docs/data/fulltext/6IU5JG5Y.md",
+        "sha256": "c070b44d5725e87e90b55da7880740ec201cf7ee739327bdbed5a301dcdb1cfb"
+      },
+      {
+        "paper_id": "LGYFN6JK",
+        "path": "docs/data/fulltext/LGYFN6JK.md",
+        "sha256": "2da4c33f11b25c8dff42f45489deead149cd2198620075e9525e07b6d244f677"
+      },
+      {
+        "paper_id": "H59BNSX8",
+        "path": "docs/data/fulltext/H59BNSX8.md",
+        "sha256": "92c29e185957e89b06c75ab89b53533bd6f95e999bf84244b6873df33b7c53f2"
+      },
+      {
+        "paper_id": "3B87U5LN",
+        "path": "docs/data/fulltext/3B87U5LN.md",
+        "sha256": "4327f44b76717f1d3b10a65cc83eed24b3d1f88df89ce6f1d0d3f8d1040c7229"
+      }
+    ]
+  },
+  "findings": [
+    "knowledge/update-protocol.md (version 0.7) still names assessment/categories.yaml version 1.3 in Eligibility and Analysis coding and describes v1.4 as a proposal not yet adopted; the run manifest and categories.yaml (version 1.4, adopted 2026-10-01) take precedence for this review.",
+    "Both PRISM tracks reproduce the packet categories, decisions and analysis fields without deviation; their evidence items carry origin \"human\" although actor is \"agent\", a projection label to be checked in the transfer function."
+  ],
+  "records": {
+    "G53MCF3W": {
+      "paper_id": "G53MCF3W",
+      "work_id": "work:e71afce5-ff3c-58e5-b8b8-6089b5b46f4d",
+      "version_id": "version:bc43c4bd-7369-561e-9f60-5cbde9219634",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "Prompting",
+          "ar1": "teilweise",
+          "ar2": "ja",
+          "chosen": "ja",
+          "reason": "Prompt variation is the manipulated condition of RQ1 ('RQ1: How do gendered and neu- tral prompts influence ChatGPT's re- sponses?') and the curated prompts are a stated contribution, a central contribution to research question and method."
+        },
+        {
+          "field": "AN_Harm_Types",
+          "ar1": [
+            "Stereotyping",
+            "Exclusionary_Norms"
+          ],
+          "ar2": [
+            "Stereotyping",
+            "Exclusionary_Norms",
+            "Erasure"
+          ],
+          "chosen": [
+            "Stereotyping",
+            "Exclusionary_Norms",
+            "Erasure"
+          ],
+          "reason": "Erasure is shown by the work's own prompt findings: 'P1 and P14 noted the exclusion of non-binary and transgender identities' for the neutral prompts, and the case study shows no non-binary character for 'person' prompts; it has its own passage."
+        },
+        {
+          "field": "AN_Mitigation_Stage",
+          "ar1": [
+            "Pre_Processing",
+            "Intra_Processing",
+            "Organisational_Process"
+          ],
+          "ar2": [
+            "Pre_Processing",
+            "Organisational_Process"
+          ],
+          "chosen": [
+            "Pre_Processing",
+            "Intra_Processing",
+            "Organisational_Process"
+          ],
+          "reason": "Section 5.2.2 specifies a behaviour of the model during application: 'This mechanism would enable the LLM to proactively seek additional user input when it detects vague or ambiguous prompts.' This is a specified intervention at inference, Proposed."
+        }
+      ],
+      "rationale": "Interview and prompt study on how gender-diverse users perceive bias in ChatGPT; Generative_KI, Bias_Ungleichheit, Gender and Diversitaet are central, so Include. Tracks differ on the level of Prompting and on two analysis fields; each is resolved from the cited passages. All quotations of both tracks occur verbatim in the source.",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Bias, Accuracy, and Trust: Gender-Diverse Perspectives on Large Language Models' matches the corpus title; authors Gaba, Wall, Ramkumar Babu, Brun, Hall, Xiong Bearfield and year 2025 stated in the ACM reference format; no DOI in the text (manuscript submitted to ACM, preprint version), no conflict."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "teilweise",
+          "Generative_KI": "ja",
+          "Prompting": "ja",
+          "KI_Sonstige": "nein",
+          "Soziale_Arbeit": "nein",
+          "Bias_Ungleichheit": "ja",
+          "Gender": "ja",
+          "Diversitaet": "ja",
+          "Feministisch": "teilweise",
+          "Fairness": "teilweise"
+        },
+        "evidence": {
+          "AI_Literacies": [
+            "Most participants indicated that they could generally identify when ChatGPT's responses were accurate or not, especially if they were familiar with the subject",
+            "This suggests that familiarity with the topic plays an important role in the ability of a user to assess the accuracy of ChatGPT's responses."
+          ],
+          "Generative_KI": [
+            "This study examines how gender-diverse populations perceive bias, accuracy, and trustworthiness in LLMs, specifically ChatGPT."
+          ],
+          "Prompting": [
+            "we studied how gendered and neutral prompts (e.g., 'man', 'woman', 'nonbinary', 'person') influence the responses generated by ChatGPT and how users interpret those responses.",
+            "we investigate how gendered and neutral prompts influence model responses and how users evaluate these responses"
+          ],
+          "KI_Sonstige": [],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": [
+            "Overall, participants identified significant gender biases in ChatGPT's responses, with men depicted as strong and women as emotional or hesitant.",
+            "Our findings reveal that gendered prompts elicit more identity-specific responses, with non-binary participants particularly susceptible to condescending and stereotypical portrayals."
+          ],
+          "Gender": [
+            "Through 25 in-depth interviews with non-binary/transgender, male, and female participants, we investigate how gendered and neutral prompts influence model responses and how users evaluate these responses.",
+            "Overall, participants identified significant gender biases in ChatGPT's responses, with men depicted as strong and women as emotional or hesitant."
+          ],
+          "Diversitaet": [
+            "This research contributes to the CSCW/HCI field by highlighting the need for gender-diverse perspectives in LLM development in particular and AI in general, to foster more inclusive and trustworthy systems."
+          ],
+          "Feministisch": [
+            "Not only can this collaborative process empower marginalized voices but also ensure that LLMs reflect diverse gender perspectives with authenticity and respect."
+          ],
+          "Fairness": [
+            "Participants also emphasized the importance of responding to men, women, and non-binary individuals with equal depth and consideration to ensure fairness while respecting individual identities."
+          ]
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Sexual_Orientation_Identity"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Exclusionary_Norms",
+            "Erasure"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Intra_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Explicit",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Non_Binary_Inclusive"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Empirisch",
+          "AN_Notes": "Mixed-methods interview study (25 participants) with gendered and neutral story prompts to ChatGPT 3.5 as stimuli; RQ1 asks how gendered and neutral prompts influence the responses and the prompts are offered as a test suite, so Prompting is central. Sexual_Orientation_Identity coded for the gender-identity dimension, because non-binary/transgender participants form an analysed group. Race appears only in single participant remarks. Harm types from the work's own findings: gender stereotypes in generated stories (Stereotyping), a cis-centric default (Exclusionary_Norms) and the absence of non-binary and transgender characters in neutral prompts (Erasure). Mitigation, all proposed: diversified training data (Pre_Processing), clarifying questions when the LLM detects vague or ambiguous prompts as an inference-time behaviour (Intra_Processing), gender-inclusive co-design, prompt test suite and real-time community bias auditing (Organisational_Process). Bias is not defined; its understanding follows from stereotype analysis and participant perception. Grounded theory and reflexive thematic analysis are analysis methods and frame neither gender nor bias. AN_Task None, no professional application task.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Gender_Definition": [
+            {
+              "quote": "Moving forward, we define 'men' as cisgender men, 'women' as cisgender women, and 'non-binary/transgender' as those who do not identify with the gender assigned at birth.",
+              "locator": "1 Introduction"
+            }
+          ],
+          "AN_Gender_Understanding": [
+            {
+              "quote": "To explore gendered perspectives, we used the same prompts but replaced 'person' with specific gender identities: man, woman, and non-binary person.",
+              "locator": "3 A Case Study on ChatGPT Response Patterns"
+            },
+            {
+              "quote": "We study men, women, and non-binary/transgender participants, revealing varying reactions to bias, with non-binary participants particularly susceptible to identity framing.",
+              "locator": "1 Introduction, contributions, line 51"
+            }
+          ],
+          "AN_Harm_Types": [
+            {
+              "quote": "Furthermore, men were associated with careers and assertiveness, women with growth and emotions, and non-binary individuals with inclusivity and advocacy.",
+              "locator": "3.1.4 Person Prompts, closing paragraph"
+            },
+            {
+              "quote": "It would never give a trans character unless explicitly asked for it",
+              "locator": "4.6.2 Prompt Findings, Non-binary/Transgender Perspective, Man prompts"
+            },
+            {
+              "quote": "P3 pointed towards the cis-centric nature of the model",
+              "locator": "4.6.2 Man prompts, line 198 (Exclusionary_Norms)"
+            },
+            {
+              "quote": "P1 and P14 noted the exclusion of non-binary and transgender identities",
+              "locator": "4.6.2 Person prompts, line 202 (Erasure)"
+            }
+          ],
+          "AN_Mitigation_Stage": [
+            {
+              "quote": "This mechanism would enable the LLM to proactively seek additional user input when it detects vague or ambiguous prompts.",
+              "locator": "5.2.2 Contextual Clarification"
+            },
+            {
+              "quote": "we propose a real-time bias auditing mechanism where users can flag, annotate, and suggest corrections for biased or stereotypical responses during live interactions.",
+              "locator": "5.2.4 Real-Time Bias Auditing"
+            },
+            {
+              "quote": "The findings highlight the need for diverse training data, equitable responses across genders, and greater transparency to foster inclusivity and trust in future LLMs.",
+              "locator": "7 Conclusion, line 308 (Pre_Processing)"
+            },
+            {
+              "quote": "To address this, we propose a real-time bias auditing mechanism where users can flag, annotate, and suggest corrections for biased or stereotypical responses during live interactions.",
+              "locator": "5.2.4, line 296 (Organisational_Process)"
+            }
+          ]
+        }
+      }
+    },
+    "KNQYFQ6B": {
+      "paper_id": "KNQYFQ6B",
+      "work_id": "work:cfde9315-c968-5cb3-871c-b78b3feebfb1",
+      "version_id": "version:26d8700f-ecf9-5573-967f-cb8dfc1ba7a0",
+      "result": "agreed",
+      "differences": [],
+      "rationale": "Both tracks agree on all ten categories, the decision and every analysis field, and the source supports them: gender bias in MT with LLMs is measured on WinoMT, Gold BUG and MuST-SHE and mitigated by an evaluated 5-shot anti-stereotypical prompt with short chain-of-thought (Table 2, sections 6.3 and 8). Gender bias is defined in the introduction; gender is analysed only as binary ('we have only focused on the binary male and female genders'). The tracks used different but verbatim evidence passages, which are merged.",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'The power of Prompts: Evaluating and Mitigating Gender Bias in MT with LLMs' matches the corpus title apart from capitalisation; authors Sant, Escolano, Mash, De Luca Fornaciari, Melero (Barcelona Supercomputing Center) stated; year and DOI absent from the converted text, references reach 2024; no title or DOI conflict, metadata gap documented."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "nein",
+          "Generative_KI": "ja",
+          "Prompting": "ja",
+          "KI_Sonstige": "teilweise",
+          "Soziale_Arbeit": "nein",
+          "Bias_Ungleichheit": "ja",
+          "Gender": "ja",
+          "Diversitaet": "nein",
+          "Feministisch": "nein",
+          "Fairness": "teilweise"
+        },
+        "evidence": {
+          "AI_Literacies": [],
+          "Generative_KI": [
+            "This paper studies gender bias in machine translation through the lens of Large Language Models (LLMs)."
+          ],
+          "Prompting": [
+            "To combat this bias, we explore prompting engineering techniques applied to an instructiontuned LLM. We identify a prompt structure that significantly reduces gender bias by up to 12% on the WinoMT evaluation dataset compared to more straightforward prompts.",
+            "We identify a prompt structure that significantly reduces gender bias by up to 12% on the WinoMT evaluation dataset compared to more straightforward prompts."
+          ],
+          "KI_Sonstige": [
+            "comparing their translation quality and gender bias against state-of-the-art Neural Machine Translation (NMT) models",
+            "Our findings reveal pervasive gender bias across all models, with base LLMs exhibiting a higher degree of bias compared to NMT models."
+          ],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": [
+            "Our findings reveal pervasive gender bias across all models, with base LLMs exhibiting a higher degree of bias compared to NMT models.",
+            "Within the domain of machine translation, gender bias is defined as the tendency of MT systems to produce translations that reflect or perpetuate gender stereotypes, inequalities, or assumptions based on cultural and societal biases"
+          ],
+          "Gender": [
+            "Within the domain of machine translation, gender bias is defined as the tendency of MT systems to produce translations that reflect or perpetuate gender stereotypes, inequalities, or assumptions based on cultural and societal biases",
+            "In the absence of gender cues in the source sentence, they tend to generate predominantly male terms, while female terms are generated primarily when encountering female-stereotypical content."
+          ],
+          "Diversitaet": [],
+          "Feministisch": [],
+          "Fairness": [
+            "which indicates the performance difference between correctly predicting male and female terms",
+            "Additionally, we get standard metrics such as ∆ G, which indicates the performance difference between correctly predicting male and female terms"
+          ]
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "ICL",
+            "Thought_Generation",
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Disparate_Performance",
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "Other_Task"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Benchmark of base LLMs against NMT systems (En-Ca, En-Es) on WinoMT, Gold BUG, MuST-SHE, then trial-and-error prompt search on Llama-2-7B-chat. Evaluated intervention: 5-shot invented anti-stereotypical Winograd examples with short chain-of-thought, raising WinoMT gender accuracy by 12.4 (Ca) and 11.7 (Es) points with slight translation-quality loss; own experiment. General_Guidance strategy verbatim: 'Translate the following sentence from English to Catalan while mitigating gender bias' plus context on grammatical gender, which gave no improvement. AN_Task Other_Task: machine translation. Gender understanding binary per ethical statement ('we have only focused on the binary male and female genders'). The representational/allocational harm distinction is cited as motivation only and does not frame the analysis as a theory, hence No.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Bias_Definition": [
+            {
+              "quote": "Within the domain of machine translation, gender bias is defined as the tendency of MT systems to produce translations that reflect or perpetuate gender stereotypes, inequalities, or assumptions based on cultural and societal biases",
+              "locator": "1 Introduction, first paragraph"
+            }
+          ],
+          "AN_Gender_Definition": [
+            {
+              "quote": "In this evaluation, we have only focused on the binary male and female genders, without considering other gender identities.",
+              "locator": "10 Ethical statement"
+            }
+          ],
+          "AN_Harm_Types": [
+            {
+              "quote": "The performance of all studied models correlates with gender stereotypes, achieving better gender metrics for the pro-stereotypical set rather than the anti-stereotypical set",
+              "locator": "5.3 Key takeaways"
+            },
+            {
+              "quote": "In the absence of contextual gender cues, all models predict mostly male terms",
+              "locator": "5.3 Key takeaways"
+            },
+            {
+              "quote": "which indicates the performance difference between correctly predicting male and female terms",
+              "locator": "4.3.2 Gender Bias (metrics)"
+            },
+            {
+              "quote": "Additionally, we get standard metrics such as ∆ G, which indicates the performance difference between correctly predicting male and female terms",
+              "locator": "4.3.2 Gender Bias metrics, line 125 (Disparate_Performance)"
+            }
+          ],
+          "AN_Mitigation_Status": [
+            {
+              "quote": "Fortunately, after identifying our successful prompt, we can confidently affirm that leveraging prompting can indeed serve as an effective method to mitigate gender bias in an instructed LLM",
+              "locator": "8 Discussion"
+            }
+          ],
+          "AN_Prompt_Techniques": [
+            {
+              "quote": "The prompt follows a simplified chain-of-thought approach with 5-shots relying on anti-stereotypical content and increased female representation.",
+              "locator": "9 Conclusions"
+            },
+            {
+              "quote": "In short, this prompt follows a simplified chain-of-thought approach with 5-shots on anti-stereotypical content and increased female representation.",
+              "locator": "6.3 Top-performing prompt, line 223"
+            },
+            {
+              "quote": "Translate the following sentence from English to Catalan while mitigating gender bias.",
+              "locator": "Appendix G, line 548"
+            }
+          ],
+          "AN_Gender_Understanding": [
+            {
+              "quote": "In this evaluation, we have only focused on the binary male and female genders, without considering other gender identities.",
+              "locator": "10 Ethical statement, line 268"
+            }
+          ]
+        }
+      }
+    },
+    "WLV8L8PM": {
+      "paper_id": "WLV8L8PM",
+      "work_id": "work:1019c1dc-be6c-54d5-91eb-257491bec551",
+      "version_id": "version:20de392b-b354-5527-bcba-2f73c506c2a7",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "Prompting",
+          "ar1": "teilweise",
+          "ar2": "ja",
+          "chosen": "ja",
+          "reason": "Both research questions vary the prompt language ('RQ1: How does the emotional content of LLMgenerated responses vary when prompted with heteronormative versus non-heteronormative language?'), so input design is central to question, method and results."
+        },
+        {
+          "field": "Gender",
+          "ar1": "ja",
+          "ar2": "teilweise",
+          "chosen": "teilweise",
+          "reason": "The central object is heteronormativity and queer slang; gender enters as one component ('assumptions of heterosexuality, traditional gender roles, and binary gender norms') and no gender groups are compared, an explicit subordinate aspect."
+        },
+        {
+          "field": "AN_Prompt_Techniques",
+          "ar1": [
+            "None"
+          ],
+          "ar2": [
+            "ICL"
+          ],
+          "chosen": [
+            "None"
+          ],
+          "reason": "The few-shot step ('GPT-4o fed the Vasquez definition of heteronormativity along with three annotated examples') only tags data for Experiment 1.2; the work neither examines nor proposes a prompting technique."
+        },
+        {
+          "field": "AN_Harm_Types",
+          "ar1": [
+            "Exclusionary_Norms"
+          ],
+          "ar2": [
+            "Exclusionary_Norms",
+            "Disparate_Performance"
+          ],
+          "chosen": [
+            "Exclusionary_Norms"
+          ],
+          "reason": "The measured disparity is emotional tone, not accuracy or error rate, and the work states that 'the potential im- pact of LGBTQ+ slang on factual outputs remains unexplored'; the conclusion's 'difficulty in fairly processing' is no quality measurement."
+        },
+        {
+          "field": "AN_Mitigation_Stage",
+          "ar1": [
+            "None"
+          ],
+          "ar2": [
+            "Organisational_Process"
+          ],
+          "chosen": [
+            "None"
+          ],
+          "reason": "'By expanding evaluation frameworks to account for nuanced biases' is a research agenda for evaluation, not a measure against bias; the guardrails are observed, not proposed or tested."
+        },
+        {
+          "field": "AN_Mitigation_Status",
+          "ar1": "None",
+          "ar2": "Proposed",
+          "chosen": "None",
+          "reason": "Follows from the stage decision: the work proposes no mitigation measure."
+        }
+      ],
+      "rationale": "Experimental study of LLM responses to heteronormative language and LGBTQ+ slang; Generative_KI, Bias_Ungleichheit and Diversitaet are central, so Include. Differences concern the levels of Prompting and Gender and four analysis fields; all are resolved from the source. All quotations of both tracks occur verbatim.",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'Guardrails, not Guidance: Understanding Responses to LGBTQ+ Language in Large Language Models' matches the corpus title; single author Joshua Tint (Arizona State University) stated; year and DOI absent from the converted text, references reach 2024; no title or DOI conflict, metadata gap documented."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "nein",
+          "Generative_KI": "ja",
+          "Prompting": "ja",
+          "KI_Sonstige": "nein",
+          "Soziale_Arbeit": "nein",
+          "Bias_Ungleichheit": "ja",
+          "Gender": "teilweise",
+          "Diversitaet": "ja",
+          "Feministisch": "teilweise",
+          "Fairness": "teilweise"
+        },
+        "evidence": {
+          "AI_Literacies": [],
+          "Generative_KI": [
+            "This paper investigates how large language models (LLMs) respond to LGBTQ+ slang and heteronormative language."
+          ],
+          "Prompting": [
+            "The findings reveal that heteronormative prompts can trigger safety mechanisms, leading to neutral or corrective responses, while LGBTQ+ slang elicits more negative emotions."
+          ],
+          "KI_Sonstige": [],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": [
+            "While safety mechanisms neutralize bias in responding to overt heteronormative prompts, they fail to address systemic biases in responses to queer slang, which often elicit disproportionately negative emotional labels.",
+            "We provide evidence that current safety mechanisms in LLMs fail to address deeper systemic biases, highlighting the limitations of existing approaches in achieving inclusivity for marginalized linguistic communities."
+          ],
+          "Gender": [
+            "Heteronormativity is a broad phenomenon which encompasses assumptions of heterosexuality, traditional gender roles, and binary gender norms."
+          ],
+          "Diversitaet": [
+            "To foster truly inclusive NLP systems, future research and development must prioritize the equitable representation of minority linguistic forms.",
+            "By expanding evaluation frameworks to account for nuanced biases, we can ensure that LLMs reflect the diversity of human language and support marginalized voices in digital spaces."
+          ],
+          "Feministisch": [
+            "Bias in language reflects and reinforces social norms, shaping perceptions of identity and inclusivity in both human- and machine-mediated communication.",
+            "cisnormative heteronormativity, or the assumption of cisgenderism as the default"
+          ],
+          "Fairness": [
+            "The findings presented here reveal critical gaps in current fairness approaches."
+          ]
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Sexual_Orientation_Identity",
+            "Language_Culture"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "None"
+          ],
+          "AN_Mitigation_Status": "None",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Social_Construct"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Two experiments on seven LLMs: heteronormative versus non-heteronormative prompts (HeteroCorpus, Quora pairs) and an embedding-distance measure of queer slang, with responses scored by a RoBERTa emotion classifier. Prompt language is the manipulated variable of both research questions, so Prompting is central and the role is Research_Instrument. The GPT-4o tagging prompt with the Vasquez definition and three annotated examples is an auxiliary annotation step, not an object the work examines or proposes, so no technique is coded. Language_Culture coded because queer slang is treated as a minority language variety ('minority slangs and argots'); the AAVE overlap is background and limitation only. Harm: queer language is devalued against a heteronormative standard (Exclusionary_Norms); the work measures emotional tone, not system quality, and leaves factual output explicitly unexplored, so Disparate_Performance is not coded. Existing safety guardrails are observed and criticised, not designed or tested, and the call to expand evaluation frameworks is a research agenda, so mitigation is None. Gender is treated through heteronormativity (gender roles, cisnormativity, binary gender norms) without a definition of gender. Theory: heteronormativity taxonomy of Marchia and Sommer and the Vasquez definition frame the classification.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Theory_Reference": [
+            {
+              "theory": "Heteronormativity taxonomy (Marchia and Sommer 2019)",
+              "quote": "The four categories presented by Marchia and Sommer are gendered heteronormativity, or the assumption of gender roles, cisnormative heteronormativity, or the assumption of cisgenderism as the default, heterosexist heteronormativity, which is the assumption of heterosexuality as the default, and hegemonic heteronormativity",
+              "locator": "2.1.1 Heteronormativity in Language"
+            },
+            {
+              "theory": "Heteronormative speech definition (Vasquez et al. 2022)",
+              "quote": "This categorization is useful because it allows for a clear, binarized, 'heteronormativeor-not' classification, and thus will form the basis of heteronormativity in this work",
+              "locator": "2.1.1 Heteronormativity in Language"
+            },
+            {
+              "theory": "Heteronormativity (taxonomy of Marchia and Sommer)",
+              "quote": "Heteronormativity is a broad phenomenon which encompasses assumptions of heterosexuality, traditional gender roles, and binary gender norms.",
+              "locator": "2.1.1 Heteronormativity in Language, line 48"
+            }
+          ],
+          "AN_Harm_Types": [
+            {
+              "quote": "In fact, these censors may have a disproportionate effect on language used by queer people, which may contain reclaimed slurs",
+              "locator": "5.2 Experiment 2"
+            },
+            {
+              "quote": "This implies that while model manufacturers may have placed guardrails to prevent models from being outwardly homophobic or transphobic, models still display bias when they are presented with more subtle queer language.",
+              "locator": "5.2 Experiment 2, line 247 (Exclusionary_Norms)"
+            }
+          ],
+          "AN_Gender_Understanding": [
+            {
+              "quote": "Heteronormativity is a broad phenomenon which encompasses assumptions of heterosexuality, traditional gender roles, and binary gender norms.",
+              "locator": "2.1.1 Heteronormativity in Language"
+            }
+          ]
+        }
+      }
+    },
+    "PQC9G5EU": {
+      "paper_id": "PQC9G5EU",
+      "work_id": "work:c380f94c-f652-5705-8cd1-2e4a9ad83315",
+      "version_id": "version:59099133-cc3c-5580-b870-e3f779c20b91",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "AN_Harm_Types",
+          "ar1": [
+            "Exclusionary_Norms",
+            "Erasure"
+          ],
+          "ar2": [
+            "Exclusionary_Norms",
+            "Erasure",
+            "Disparate_Performance"
+          ],
+          "chosen": [
+            "Exclusionary_Norms",
+            "Erasure"
+          ],
+          "reason": "The chapter argues its own feedback-loop mechanism through masculine defaults and the gender data gap; the recognition errors appear in a list of cited headline cases ('To name only a few', 'Several studies on computer vision have highlighted'), which the harm rule leaves uncoded."
+        }
+      ],
+      "rationale": "Theoretical book chapter in feminist STS on the gender relations of AI; KI_Sonstige, Bias_Ungleichheit, Gender, Diversitaet and Feministisch are central, so Include. Tracks differ only on Disparate_Performance, which rests on cited studies. Gender definition, bias definition and theory references are supported by verbatim passages in the section on technofeminism and the conclusion. Publication type: scholarly book chapter, admissible.",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'Feminism Confronts AI: The Gender Relations of Digitalisation' (chapter 4 of an edited volume) matches the corpus title; authors Judy Wajcman and Erin Young stated; year, volume and DOI absent from the converted text, references reach 2022; scholarly book chapter with identifiable authorship and source base, admissible under the ratified publication-type rule; no title or DOI conflict."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "teilweise",
+          "Generative_KI": "nein",
+          "Prompting": "nein",
+          "KI_Sonstige": "ja",
+          "Soziale_Arbeit": "nein",
+          "Bias_Ungleichheit": "ja",
+          "Gender": "ja",
+          "Diversitaet": "ja",
+          "Feministisch": "ja",
+          "Fairness": "teilweise"
+        },
+        "evidence": {
+          "AI_Literacies": [
+            "This skills divide is underpinned by a deficit in digital literacies among women, particularly in low- and middle-income countries"
+          ],
+          "Generative_KI": [],
+          "Prompting": [],
+          "KI_Sonstige": [
+            "This chapter will examine the gender relations of digitalisation, with a particular focus on AI and machine learning as the most contemporary feature of this."
+          ],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": [
+            "Mounting evidence suggests that the under-representation of women and marginalised groups in AI and data science results in a feedback loop whereby bias gets built into machine learning systems.",
+            "we argue that the dominance of men working in and designing AI results in a feedback loop whereby bias gets built into machine learning systems."
+          ],
+          "Gender": [
+            "we will argue that there is still insufficient focus on the ways in which gendered power relations are integral to and embedded in technoscience."
+          ],
+          "Diversitaet": [
+            "This stark lack of diversity and inclusion in the field of AI and data science has profound consequences"
+          ],
+          "Feministisch": [
+            "Adopting an intersectional technofeminist approach, we argue that technologies are gendered by association and by design"
+          ],
+          "Fairness": [
+            "Finally, it is important to stress that technical bias mitigation (including algorithmic auditing) and fairness metrics for models and datasets are by no means sufficient to resolve bias and discrimination",
+            "it is important to stress that technical bias mitigation (including algorithmic auditing) and fairness metrics for models and datasets are by no means sufficient to resolve bias and discrimination"
+          ]
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms",
+            "Erasure"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Explicit",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Social_Construct",
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Theoretical book chapter on the gender relations of AI from an intersectional technofeminist and feminist STS perspective, with workforce statistics and a small own look at data science platforms as illustration. Bias axes: gender throughout, race as worked example (feedback loops 'based on gender and race'), intersectional through women of colour as the most under-represented group. Harm types: masculine defaults inscribed in AI (Exclusionary_Norms) and the gender data gap as failure to collect data on women (Erasure); hiring, mask-recognition and translation cases are cited examples and stay uncoded. Mitigation: diverse teams and women in decision-making positions as organisational remedy, proposed; technical mitigation and fairness metrics are criticised as insufficient. AI_Literacies teilweise through the gender digital skills gap. AN_Task None.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Gender_Definition": [
+            {
+              "quote": "In other words, gender relations can be thought of as materialised in technology, and masculinity and femininity in turn acquire their meaning and character through their enrolment and embeddedness in working machines.",
+              "locator": "Feminist STS: From Technofeminism to Data Feminism"
+            },
+            {
+              "quote": "masculinity and femininity in turn acquire their meaning and character through their enrolment and embeddedness in working machines",
+              "locator": "Feminist STS: From Technofeminism to Data Feminism, line 67"
+            }
+          ],
+          "AN_Bias_Definition": [
+            {
+              "quote": "Like the technologies that preceded them, social bias inscribed in AI software is not a glitch or bug in the system, but rather the result of persistent structural inequalities.",
+              "locator": "Conclusion"
+            },
+            {
+              "quote": "social bias inscribed in AI software is not a glitch or bug in the system, but rather the result of persistent structural inequalities",
+              "locator": "Conclusion, line 149"
+            }
+          ],
+          "AN_Gender_Understanding": [
+            {
+              "quote": "Gender intersects with multiple aspects of difference and disadvantage involving race, class, ethnicity, sexuality, ability, age, and so on. For instance, women who are poor or belong to racial minorities experience the negative effects of digitalisation and automation more acutely",
+              "locator": "Feminist STS: From Technofeminism to Data Feminism"
+            },
+            {
+              "quote": "Gender intersects with multiple aspects of difference and disadvantage involving race, class, ethnicity, sexuality, ability, age, and so on.",
+              "locator": "Feminist STS: From Technofeminism to Data Feminism, line 69"
+            }
+          ],
+          "AN_Bias_Axes": [
+            {
+              "quote": "There is a scarcity of intersectional data on the tech sector, but the little data that is available suggests that women of colour are particularly under-represented.",
+              "locator": "The Missing Women in AI"
+            },
+            {
+              "quote": "facial recognition software successfully identifies the faces of white men but more often fails to recognise those of dark-skinned women",
+              "locator": "AI Feedback Loops, line 139 (Intersectional)"
+            }
+          ],
+          "AN_Theory_Reference": [
+            {
+              "theory": "Technofeminism and feminist STS (mutual shaping of gender and technology)",
+              "quote": "Such a mutual shaping approach, in common with technofeminist theory, conceives of technology as both a source and consequence of patriarchal relations",
+              "locator": "Feminist STS: From Technofeminism to Data Feminism"
+            },
+            {
+              "theory": "Intersectional technofeminism",
+              "quote": "An intersectional technofeminist lens is particularly pertinent as attention has expanded beyond the sexism and racism of the internet and digital cultures to the growing body of work on AI systems.",
+              "locator": "Feminist STS: From Technofeminism to Data Feminism"
+            },
+            {
+              "theory": "Data Feminism (D'Ignazio and Klein)",
+              "quote": "In Data Feminism (2020: p.105; see Chapter 12 in this volume), D'Ignazio and Klein not only expose the glaring gender data gap-as we noted before-but also show how the data that feeds algorithms is biased.",
+              "locator": "Feminist STS: From Technofeminism to Data Feminism"
+            }
+          ],
+          "AN_Harm_Types": [
+            {
+              "quote": "If primarily white men are setting AI agendas, it follows that the supposedly 'neutral' technology is bound to be inscribed with masculine preferences.",
+              "locator": "AI Feedback Loops: The Amplification of Gender Bias"
+            },
+            {
+              "quote": "A key example of this is the 'gender data gap'; the failure to collect data on women, that is, gender-disaggregated data.",
+              "locator": "AI Feedback Loops: The Amplification of Gender Bias"
+            }
+          ],
+          "AN_Mitigation_Stage": [
+            {
+              "quote": "Bringing women to positions of parity as coders, developers, and decision makers, with intersectionality in mind, is key.",
+              "locator": "The Skills Gap"
+            }
+          ]
+        }
+      }
+    },
+    "VFD9ENG6": {
+      "paper_id": "VFD9ENG6",
+      "work_id": "work:dc0ed550-b389-5fef-bfbe-1f9f335aa7a9",
+      "version_id": "version:d05b8a44-c2b0-5a04-9cd0-73f6b59f0518",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "AN_Harm_Types",
+          "ar1": [
+            "Disparate_Performance",
+            "Indirect_Discrimination"
+          ],
+          "ar2": [
+            "Disparate_Performance"
+          ],
+          "chosen": [
+            "Disparate_Performance"
+          ],
+          "reason": "The survey cites the four-fifths rule only as a definition of a biased outcome ('declare an outcome as biased if the ratio of probabilities ... is less than 0.8') and never names a neutral criterion or proxy; the work does not classify the discrimination, so Indirect_Discrimination is not supported."
+        },
+        {
+          "field": "AN_Gender_Understanding",
+          "ar1": [
+            "Binary_Categorical",
+            "Intersectional"
+          ],
+          "ar2": [
+            "Intersectional"
+          ],
+          "chosen": [
+            "Binary_Categorical",
+            "Intersectional"
+          ],
+          "reason": "Gender enters only as an unexamined two-valued protected attribute ('Black Females and Black Males', 'male/female for a binary gender'), while the Black-woman example satisfies the Intersectional rule; the codebook does not exclude this pair."
+        }
+      ],
+      "rationale": "Survey of intersectional fairness notions and mitigation methods in ML; KI_Sonstige, Bias_Ungleichheit and Fairness are central, so Include. Differences concern the discrimination code and the understanding of gender, both resolved from the survey's own wording. Evaluated refers to synthesised evaluations (Subramanian et al. 2021, Lahoti et al. 2020), not an own experiment.",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges' matches the corpus title; authors Usman Gohar and Lu Cheng stated; year and DOI absent from the converted text (preprint version), references reach 2022; no title or DOI conflict, metadata gap documented."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "nein",
+          "Generative_KI": "nein",
+          "Prompting": "nein",
+          "KI_Sonstige": "ja",
+          "Soziale_Arbeit": "nein",
+          "Bias_Ungleichheit": "ja",
+          "Gender": "teilweise",
+          "Diversitaet": "teilweise",
+          "Feministisch": "teilweise",
+          "Fairness": "ja"
+        },
+        "evidence": {
+          "AI_Literacies": [],
+          "Generative_KI": [],
+          "Prompting": [],
+          "KI_Sonstige": [
+            "The widespread adoption of Machine Learning systems, especially in more decision-critical applications such as criminal sentencing and bank loans, has led to increased concerns about fairness implications."
+          ],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": [
+            "More recently, works have identified a more challenging form of bias called intersectional bias, which encompasses multiple sensitive attributes, such as race and gender, together."
+          ],
+          "Gender": [
+            "a Black woman's experience of discrimination differs from both women and Black people in general.",
+            "a Black woman's experience of discrimination differs from both women and Black people in general"
+          ],
+          "Diversitaet": [
+            "Hence, it is crucial to involve diverse stakeholders to ensure that the needs and perspectives of different intersectional groups are met."
+          ],
+          "Feministisch": [
+            "However, recent works have identified a more nuanced case of group unfairness that spans multiple subgroups based on Crenshaw's theory of 'intersectionality' [Crenshaw, 1989] called intersectional group fairness .",
+            "recent works have identified a more nuanced case of group unfairness that spans multiple subgroups based on Crenshaw's theory of 'intersectionality'"
+          ],
+          "Fairness": [
+            "In this survey, we review the state-of-the-art in intersectional fairness. Wepresent a taxonomy for intersectional notions of fairness and mitigation.",
+            "In this survey, we review the state-of-the-art in intersectional fairness."
+          ]
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Post_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical",
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Literaturreview",
+          "AN_Notes": "Survey with a taxonomy of intersectional fairness notions (subgroup, calibration-based, metric-based, differential, max-min, probabilistic fairness) and fair-learning methods with and without demographics, plus NLP, ranking and auditing applications. Gender and race are the worked axes through the Black-woman example; other attributes appear only in dataset tables or cited studies. Harm types: subgroup accuracy and worst-case loss disparities (Disparate_Performance). The surveyed outcome-parity notions (statistical parity, the 80-percent rule behind differential fairness) concern allocational disparities, but the work does not classify them as direct or indirect discrimination, so neither discrimination code is assigned. Mitigation stages each with synthesised support: dataset coverage (Pre_Processing), auditing/adversarial reweighting during learning (In_Training), multicalibration and multiaccuracy post-processing (Post_Processing), stakeholder involvement (Organisational_Process, proposed only). Evaluated refers to synthesised evaluations, e.g. Subramanian et al. 2021 evaluating two debiasing techniques with the result that independent-group debiasing is prone to gerrymandering, and Lahoti et al. 2020 reporting improved fairness for some intersectional groups; the survey runs no own experiment. Gender appears as a categorical protected attribute (male/female, Black female) without definition. Feministisch teilweise: intersectionality is adopted as a formal fairness concept, power analysis is limited to the gerrymandering critique.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Bias_Definition": [
+            {
+              "quote": "Anti-discrimination laws [Commission, 1978] in the United States declare an outcome as biased if the ratio of probabilities of a favorable outcome between an advantaged and disadvantaged group is less than 0.8.",
+              "locator": "2.4 Differential Fairness"
+            },
+            {
+              "quote": "At a high level, intersectionality states that interaction along multiple dimensions of identity produces unique and differing levels of discrimination for various possible subgroups",
+              "locator": "1 Introduction"
+            }
+          ],
+          "AN_Theory_Reference": [
+            {
+              "theory": "Intersectionality (Crenshaw 1989)",
+              "quote": "Intersectionality, as opposed to group fairness based on independent protected groups (e.g., gender), postulates that the sum of human experiences with discrimination cannot be limited to individual groups alone [Crenshaw, 1989].",
+              "locator": "2 Notions of Intersectional Fairness"
+            },
+            {
+              "theory": "Rawlsian principle of distributive justice",
+              "quote": "The Max-min (or min-max ) notion of fairness is based on the Rawlsian principle of distributive justice [Rawls, 2001].",
+              "locator": "2.5 Max-Min Fairness"
+            },
+            {
+              "theory": "Intersectionality (Crenshaw)",
+              "quote": "Intersectionality, as opposed to group fairness based on independent protected groups (e.g., gender), postulates that the sum of human experiences with discrimination cannot be limited to individual groups alone",
+              "locator": "2 Notions of Intersectional Fairness, line 45"
+            },
+            {
+              "theory": "Rawlsian principle of distributive justice",
+              "quote": "The Max-min (or min-max ) notion of fairness is based on the Rawlsian principle of distributive justice",
+              "locator": "2.5 Max-Min Fairness, line 99"
+            }
+          ],
+          "AN_Gender_Understanding": [
+            {
+              "quote": "Furthermore, an intersectional identity often amplifies biases that might not exist in its constituent groups (e.g., Black woman vs. Black or Woman), rendering traditional mitigation techniques ineffective.",
+              "locator": "1 Introduction"
+            },
+            {
+              "quote": "Black Females and Black Males might have common structural patterns",
+              "locator": "3.3 Discussion"
+            }
+          ],
+          "AN_Harm_Types": [
+            {
+              "quote": "Specifically, an ML predictor might be fair w.r.t the independent groups but not intersectional groups . For example, [Buolamwini and Gebru, 2018] identified accuracy disparities that were more significant for Black Women in gender classification algorithms, compared to independent groups.",
+              "locator": "1 Introduction"
+            },
+            {
+              "quote": "identified accuracy disparities that were more significant for Black Women in gender classification algorithms, compared to independent groups",
+              "locator": "1 Introduction, line 19 (Disparate_Performance)"
+            }
+          ],
+          "AN_Mitigation_Stage": [
+            {
+              "quote": "A software engineering approach [Jin et al. , 2020] seeks to ensure adequate representation for relevant intersectional groups within the dataset using coverage.",
+              "locator": "4.3 Auditing and Visualization"
+            },
+            {
+              "quote": "They design a minimax game between a learner and adversary : the learner is trained to minimize the expected loss while an adversarial neural network is tasked to learn identifiable regions where the learner has significant errors.",
+              "locator": "3.2 Intersectional Fairness without Demographics"
+            },
+            {
+              "quote": "Instead of auditing during training, [Hebert-Johnson et al. , 2018] use a post-processing iterative boosting algorithm by combining all c ∈ C until the model is α -calibrated.",
+              "locator": "3.1 Intersectional Fairness with Demographics"
+            },
+            {
+              "quote": "Therefore, a concerted effort to create more inclusive datasets is needed.",
+              "locator": "6 Summary and Open Problems, line 200 (Pre_Processing)"
+            },
+            {
+              "quote": "Most of the existing works are inprocessing methods.",
+              "locator": "3.2, line 131 (In_Training)"
+            },
+            {
+              "quote": "use a post-processing iterative boosting algorithm",
+              "locator": "3.1, line 123 (Post_Processing)"
+            },
+            {
+              "quote": "This highlights the need for a broader involvement of stakeholders to design notions and not simply rely on computational methods.",
+              "locator": "2.7 Discussions, line 113 (Organisational_Process)"
+            }
+          ],
+          "AN_Mitigation_Status": [
+            {
+              "quote": "The earliest work by [Subramanian et al. , 2021] evaluates two debiasing techniques and shows that debiasing methods based on independent groups are prone to gerrymandering.",
+              "locator": "4.1 Natural Language Processing, Mitigation"
+            },
+            {
+              "quote": "Although these works target minimizing the worst-case performance of any unknown subgroup of a minimum size, experimental results show that they also improve fairness for some intersectional groups.",
+              "locator": "3.2, line 141"
+            }
+          ]
+        }
+      }
+    },
+    "YN9JAREI": {
+      "paper_id": "YN9JAREI",
+      "work_id": "work:52135c11-ab76-56f6-bbd1-f66138202f4d",
+      "version_id": "version:095d9f8c-6a30-5f67-b67e-bf8a386c7449",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "AN_Bias_Axes",
+          "ar1": [
+            "Gender",
+            "Race_Ethnicity",
+            "Age",
+            "Disability",
+            "Physical_Appearance",
+            "Socioeconomic"
+          ],
+          "ar2": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Age",
+            "Physical_Appearance",
+            "Disability",
+            "Socioeconomic"
+          ],
+          "chosen": [
+            "Gender",
+            "Race_Ethnicity",
+            "Age",
+            "Disability",
+            "Physical_Appearance",
+            "Socioeconomic"
+          ],
+          "reason": "'So werden Frauen und insbesondere Women of Color auf KI-generierten Bildern häufig sexualisiert dargestellt' is a single assertion that the guide does not develop in its own probes (anchor VSZM7CT6); its probes treat gender, skin colour and age separately."
+        },
+        {
+          "field": "AN_Harm_Types",
+          "ar1": [
+            "Stereotyping",
+            "Erasure",
+            "Misrepresentation",
+            "Exclusionary_Norms"
+          ],
+          "ar2": [
+            "Stereotyping",
+            "Erasure",
+            "Misrepresentation",
+            "Exclusionary_Norms",
+            "Indirect_Discrimination"
+          ],
+          "chosen": [
+            "Stereotyping",
+            "Erasure",
+            "Misrepresentation",
+            "Exclusionary_Norms",
+            "Indirect_Discrimination"
+          ],
+          "reason": "Section 4.7 argues the mechanism for the guide's own use case: job-ad language 'die besonders Männer als ansprechend empfinden' reduced women's applications and a model trained on these ads 'kann ... diese Benachteiligung weiterführen', an apparently neutral criterion affecting access to employment."
+        },
+        {
+          "field": "AN_Gender_Understanding",
+          "ar1": [
+            "Binary_Categorical"
+          ],
+          "ar2": [
+            "Intersectional"
+          ],
+          "chosen": [
+            "Binary_Categorical"
+          ],
+          "reason": "Intersectional fails with the axis decision; the analysis categories are women and men ('die gewünschte Darstellung von weiblichen und männlichen Chef*innen'), the gender star does not enter the analysis."
+        },
+        {
+          "field": "AN_Theory_Reference",
+          "ar1": "Yes",
+          "ar2": "No",
+          "chosen": "No",
+          "reason": "The gender data gap is one illustrative bullet among data problems and 'Feministische KI' appears in the outlook ('Ausblick'), with Data Feminism in further reading; neither frames the guide's treatment of gender or bias."
+        }
+      ],
+      "rationale": "Practice guide on fair prompting of generative AI for companies; AI_Literacies, Generative_KI, Prompting, Bias_Ungleichheit, Gender, Diversitaet and Fairness are central, so Include. Publication type was flagged as borderline by both tracks: the guide is published by the BSP Business and Law School within the Mittelstand-Digital Zentrum Zukunftskultur, with a suggested citation naming three authors, an imprint, own exploratory probes and a source list; under the ratified rule and the 5 September 2026 clarification on scholarly grey literature it is admissible, not a commercial blog or unsourced web text. Four analysis differences are resolved from the source.",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Faires KI-Prompting Ein Leitfaden für Unternehmen' matches the corpus title 'Faires KI-Prompting – Ein Leitfaden für Unternehmen'; the suggested citation names Gengler, Kraus, Bodrožić-Brnić (2024), publisher BSP Business and Law School - Hochschule für Management und Recht, project Mittelstand-Digital Zentrum Zukunftskultur; no DOI, none expected for this grey-literature guide. Publication type: practice guide issued by a university of applied sciences within a federally funded transfer project, with identifiable authorship and linked sources; admitted as scholarly grey literature under the ratified rule, borderline noted in the report."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "ja",
+          "Generative_KI": "ja",
+          "Prompting": "ja",
+          "KI_Sonstige": "nein",
+          "Soziale_Arbeit": "nein",
+          "Bias_Ungleichheit": "ja",
+          "Gender": "ja",
+          "Diversitaet": "ja",
+          "Feministisch": "teilweise",
+          "Fairness": "ja"
+        },
+        "evidence": {
+          "AI_Literacies": [
+            "Faires KI-Prompting ist dabei ein neuer Skill, den wir erlernen können, um die Potenziale von KI zu nutzen und gleichzeitig Diskriminierung zu vermeiden."
+          ],
+          "Generative_KI": [
+            "Generative KI-Systeme - Programme, die selbstständig Texte, Bilder und vieles mehr erzeugen können - werden zunehmend zum integralen Bestandteil des Arbeitsalltags auch in kleinen und mittleren Unternehmen (KMU).",
+            "Ziel dieses Leitfadens ist es, Ihnen als Führungskraft einen Wegweiser für den verantwortungsbewussten Umgang mit Generativer KI zu bieten"
+          ],
+          "Prompting": [
+            "Durch die Art und Weise wie wir prompten können wir einen großen Einfluss auf die Ergebnisse der KI haben."
+          ],
+          "KI_Sonstige": [],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": [
+            "KI-Modelle lernen aus Datensätzen, die oft menschliche Vorurteile und Stereotypen widerspiegeln. Dies kann zu diskriminierenden Ergebnissen führen, z.B. bei Stellenausschreibungen oder Darstellungen auf Bildern."
+          ],
+          "Gender": [
+            "Wenn jedoch ein Empfehlungsschreiben für eine Mitarbeiterin generiert werden soll, dann ist es meist gerade nicht empfehlenswert, ihr Gender anzugeben, denn dies birgt die Gefahr von genderstereotypischen Beschreibungen ihrer Leistung und Aufgaben.",
+            "So werden z.B. die Begriffe 'Chefin' und 'Chef' beide zu 'boss' übersetzt, was dazu führen kann, dass keine Frauen abgebildet werden."
+          ],
+          "Diversitaet": [
+            "In einem Prompt das Wort 'divers' zu ergänzen ist in den wenigsten Fällen ausreichend, um faire und diverse Ergebnisse zu erhalten.",
+            "Warum sollten KI-generierte Inhalte Diversität und Inklusivität widerspiegeln?"
+          ],
+          "Feministisch": [
+            "Dem setzt z.B. die sogenannte 'Feministische KI' ein positives Narrativ entgegen. Es gibt bereits einige Beispiele von KI mit feministischem Zweck und für die Stärkung der Rechte marginalisierter Gruppen.",
+            "Dem setzt z.B. die sogenannte 'Feministische KI' ein positives Narrativ entgegen."
+          ],
+          "Fairness": [
+            "Fairness im Kontext von KI bedeutet, dass alle Menschen gleichberechtigt und diskriminierungsfrei von KI-Systemen behandelt werden"
+          ]
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "Recommended_Practice",
+            "Learning_Content",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "ICL",
+            "Role_Persona",
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Age",
+            "Disability",
+            "Physical_Appearance",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Erasure",
+            "Misrepresentation",
+            "Exclusionary_Norms",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice",
+            "Organisational_Process",
+            "Pre_Processing",
+            "In_Training"
+          ],
+          "AN_Mitigation_Status": "Demonstrated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "Other_Task"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Konzept",
+          "AN_Notes": "German practice guide for managers and staff in small and medium enterprises with the KI-FAIRNESS framework (Kontext, Input, Fokus, Ausschnitt, Iterationen, Repertoire, Nachbessern, Eignung, Sprache, Sinn). General_Guidance strategies verbatim: 'Am besten ist es daher, Prompts auf Englisch zu formulieren und in die Beschreibung explizit die gewünschte Darstellung von weiblichen und männlichen Chef*innen aufzunehmen'; 'Es könnte z.B. explizit gefordert werden, dass Frauen und Männer, Menschen unterschiedlicher Hautfarbe und sozialer Schicht dargestellt werden sollen'; gender-neutral prompts and a 'Verwirrungstaktik' for reference letters. ICL: uploading examples of the desired style; Role_Persona: prompt element 'Rolle'. Bias axes from the guide's own DALL-E 2 and Midjourney probes (gender, skin colour, age, slimness, no persons with disability, privileged settings); the sentence on sexualised depiction of 'Women of Color' is a single undeveloped assertion and a cited news case, so Intersectional is not coded. Indirect_Discrimination: job-ad wording that appealed to men and a model trained on such ads can continue to deter women applicants, argued for the guide's own use case. Mitigation_Status Demonstrated: the guide applies prompt variants and reports informal observations (adding 'divers' changed little) without a systematic assessment; data diversity, gender-inclusive training and governance, training and four-eyes review are recommendations. AN_Task Other_Task: drafting job advertisements, reference letters and images for company communication. Gender analysis follows women and men; the gender star and one mention of genderqueer people do not enter the analysis categories. The gender data gap is one illustrative bullet and 'Feministische KI' and Data Feminism appear in outlook and further reading, so no theory frames the treatment (AN_Theory_Reference No). Publication type: practice guide published by a university of applied sciences in a federally funded transfer project, with named authors, imprint and source list; admitted as scholarly grey literature under the 5 September 2026 clarification.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Bias_Definition": [
+            {
+              "quote": "Fairness im Kontext von KI bedeutet, dass alle Menschen gleichberechtigt und diskriminierungsfrei von KI-Systemen behandelt werden",
+              "locator": "4. Weichenstellung innerhalb der Organisation, Fairness im Kontext von Künstlicher Intelligenz"
+            }
+          ],
+          "AN_Harm_Types": [
+            {
+              "quote": "So werden beispielsweise 'Macht' und 'Erfolg' besonders stark mit weißen Männern assoziiert, während 'Schönheit' vor allem mit weißen und teils sexualisierten Frauen assoziiert wird.",
+              "locator": "5.1 Erkenntnisse beim Prompting von Bildern"
+            },
+            {
+              "quote": "Zudem werden keine Personen mit Behinderung, auffälligen Haarschnitten oder Tattoos gezeigt.",
+              "locator": "5.1 Erkenntnisse beim Prompting von Bildern"
+            },
+            {
+              "quote": "Diese Bilder sind nur für wenige Unternehmen, Kontexte und Mitarbeitende repräsentativ.",
+              "locator": "5.1 Erkenntnisse beim Prompting von Bildern"
+            },
+            {
+              "quote": "Das führt dazu, dass die entwickelten KI-Systeme oft die Bedürfnisse und Perspektiven dieser Gruppe bevorzugen und andere Gruppen marginalisieren.",
+              "locator": "3.3 Gründe für problematische KI-Outcomes"
+            },
+            {
+              "quote": "Wird der Kontext (etwas) ausführlicher beschrieben, dann werden in den KI-Ergebnissen Stereotype häufig verstärkt.",
+              "locator": "5.1, line 509 (Stereotyping)"
+            },
+            {
+              "quote": "Diese Darstellungen sind nicht dazu geeignet, um die breite Mitarbeitendenschaft deutscher Unternehmen repräsentativ abzubilden.",
+              "locator": "5.1, line 519 (Misrepresentation)"
+            },
+            {
+              "quote": "Immer noch werden Mitarbeitende in deutschen Unternehmen überwiegend jung und privilegiert abgebildet.",
+              "locator": "5.1, line 519 (Exclusionary_Norms)"
+            },
+            {
+              "quote": "So kann es sein, dass in bisherigen Stellenausschreibungen eine Sprache gewählt worden ist, die besonders Männer als ansprechend empfinden. Dies kann dazu geführt haben, dass sich weniger Frauen beworben haben.",
+              "locator": "4.7, line 455 (Indirect_Discrimination)"
+            }
+          ],
+          "AN_Mitigation_Stage": [
+            {
+              "quote": "Datenvielfalt: Sicherstellen, dass die Daten, die für KI-Modelle verwendet werden, vielfältig und repräsentativ sind",
+              "locator": "4.6 KI-Governance"
+            },
+            {
+              "quote": "Im Beispiel der Generierung von Texten für Stellenausschreibungen könnte eine Generative KI gezielt mit Begrifflichkeiten trainiert werden, die alle Gender ansprechen.",
+              "locator": "4.7 Bedeutung einer klaren Zielsetzung"
+            },
+            {
+              "quote": "Sensibilisierung: Schulung von Mitarbeiter*innen zum Thema Vorurteile und Stereotype in KI-Systemen",
+              "locator": "4.6 KI-Governance"
+            }
+          ],
+          "AN_Mitigation_Status": [
+            {
+              "quote": "Das Hinzufügen des Wortes 'divers' hat wenig an der Darstellung der Menschen durch DALL-E 2 geändert.",
+              "locator": "5.1 Erkenntnisse beim Prompting von Bildern"
+            }
+          ],
+          "AN_Prompt_Techniques": [
+            {
+              "quote": "Rolle - eine Rolle, welche die KI für ihr Ergebnis einnehmen soll.",
+              "locator": "1. Grundlagen, Mögliche Elemente eines KI-Prompts, line 86 (Role_Persona)"
+            },
+            {
+              "quote": "Beispiele für gewünschten Stil oder erwartetes Ergebnis nutzen.",
+              "locator": "Best Practices beim Prompting, line 105 (ICL)"
+            },
+            {
+              "quote": "Es könnte z.B. explizit gefordert werden, dass Frauen und Männer, Menschen unterschiedlicher Hautfarbe und sozialer Schicht dargestellt werden sollen.",
+              "locator": "5.1, line 525 (General_Guidance)"
+            }
+          ],
+          "AN_Gender_Understanding": [
+            {
+              "quote": "Am besten ist es daher, Prompts auf Englisch zu formulieren und in die Beschreibung explizit die gewünschte Darstellung von weiblichen und männlichen Chef*innen aufzunehmen",
+              "locator": "5.2 Im Fokus: Sprache ist Macht"
+            }
+          ]
+        }
+      }
+    },
+    "6IU5JG5Y": {
+      "paper_id": "6IU5JG5Y",
+      "work_id": "work:8cfeffa6-11db-5c5a-bf5f-b89cce40f27f",
+      "version_id": "version:48184406-781b-57f5-8520-3a76a58bc07c",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "AN_Bias_Axes",
+          "ar1": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Nationality_Migration"
+          ],
+          "ar2": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Nationality_Migration",
+            "Socioeconomic"
+          ],
+          "chosen": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Nationality_Migration",
+            "Socioeconomic"
+          ],
+          "reason": "The same opening case that both tracks use for Nationality_Migration names income as well: 'disproportionately flagged individuals from low-income and immigrant backgrounds'; coding one axis of the passage and not the other is inconsistent."
+        },
+        {
+          "field": "AN_Harm_Types",
+          "ar1": [
+            "Disparate_Performance"
+          ],
+          "ar2": [
+            "None"
+          ],
+          "chosen": [
+            "None"
+          ],
+          "reason": "The error-rate finding is a cited study used to motivate the critique of the narrow frame ('The authors found that the AI-based image recognition systems made disproportionately more errors'); the synthesis is organised by recommendation themes, so no harm type structures the work's own object."
+        },
+        {
+          "field": "AN_Gender_Understanding",
+          "ar1": [
+            "Social_Construct",
+            "Intersectional"
+          ],
+          "ar2": [
+            "Intersectional"
+          ],
+          "chosen": [
+            "Social_Construct",
+            "Intersectional"
+          ],
+          "reason": "The work frames discrimination including sexism as structural power relations within Black Feminist intersectionality ('power relations, social justice, and structural inequality'), which is the Social_Construct understanding as power structure."
+        }
+      ],
+      "rationale": "FAccT paper deriving intersectional recommendations for AI experts from a thematic literature analysis and a workshop; KI_Sonstige, Bias_Ungleichheit, Diversitaet, Feministisch and Fairness are central, so Include. Three analysis differences resolved from the source; categories and decision agree and are supported.",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach' matches the corpus title; authors Vethman, Smit, van Liebergen, Veenman; FAccT '25, Athens, 2025; DOI 10.1145/3715275.3732210 given in the ACM reference format; version of record, no conflict."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "teilweise",
+          "Generative_KI": "nein",
+          "Prompting": "nein",
+          "KI_Sonstige": "ja",
+          "Soziale_Arbeit": "teilweise",
+          "Bias_Ungleichheit": "ja",
+          "Gender": "teilweise",
+          "Diversitaet": "ja",
+          "Feministisch": "ja",
+          "Fairness": "ja"
+        },
+        "evidence": {
+          "AI_Literacies": [
+            "Participatory AI projects should begin with AI literacy efforts, as participants need a foundational understanding of what AI is, and what it is not, in order to meaningfully engage in discussions about how such systems may affect their lives",
+            "we dare argue that AI experts do have the duty to invest in educating themselves to the level that they can collaborate within interdisciplinary teams and communities that bring their expertise on power and social context."
+          ],
+          "Generative_KI": [],
+          "Prompting": [],
+          "KI_Sonstige": [
+            "Since the primary focus of AI fairness papers centres around the development and research of machine learning-based AI applications, we adopt this same scope for our study.",
+            "These cases demonstrate how Artificial Intelligence (AI), or broader automated decision-making systems, can reinforce and propagate racism, sexism, and social inequality"
+          ],
+          "Soziale_Arbeit": [
+            "A similar case emerged in France, where an automated fraud detection system used in welfare allocation disproportionately flagged individuals from low-income and immigrant backgrounds, leading to exclusion from vital benefits",
+            "The Dutch childcare benefits scandal, exposed in 2019, starkly illustrates how biased use of algorithmic systems harms marginalized groups."
+          ],
+          "Bias_Ungleichheit": [
+            "Yet in AI research, intersectionality is often reduced to a narrow technical lens, focused on algorithmic bias between subgroups defined by protected attributes and addressed through fairness metrics."
+          ],
+          "Gender": [
+            "Kimberlé Crenshaw coined the term \"intersectionality\" as she advocated that legal protection for discrimination should also be afforded for unique experiences from intersecting identities, in her case Black Women experiencing systemic racism and sexism",
+            "An intersectional question would be: if we have for example women or queer representation in the team or the advisory panel, do we have only the most privileged subgroup of the marginalized group?"
+          ],
+          "Diversitaet": [
+            "We call on AI experts to meet this challenge through interdisciplinary collaboration with diverse communities."
+          ],
+          "Feministisch": [
+            "Yet intersectionality, grounded in Black Feminist thought, offers a much broader framework that can support AI experts in addressing the structural dimensions of unfairness through a social justice lens.",
+            "Intersectionality, rooted in Black Feminist movements, is increasingly used to address the interconnected nature of discrimination such as racism, ableism, and sexism."
+          ],
+          "Fairness": [
+            "This interpretation of intersectional subgroup fairness is criticized for being narrow and primarily technical [59, 73] as it mainly leads to algorithmic solutions, such as defining and optimizing for multidimensional fairness metrics.",
+            "This algorithmic frame sidelines key aspects of intersectionality, such as power relations, social justice, and structural inequality."
+          ]
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Nationality_Migration",
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Social_Construct",
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Literaturreview",
+          "AN_Notes": "Reflexive thematic analysis of FAccT and AIES papers that engage key elements of the intersectional approach, condensed into five recommendation themes for AI experts (collaboration, positionality, community participation, power and social context, data and metrics) and discussed in a workshop with AI experts. Bias axes from the work's own opening cases: the Dutch childcare benefits scandal (dual nationality; Black single mothers of Surinamese descent, Intersectional with gender and race) and the French welfare fraud system (low-income and immigrant backgrounds, Socioeconomic and Nationality_Migration). AN_Harm_Types None: the image-recognition errors and welfare targeting motivate the argument as cited background, and the synthesis is structured by recommendation themes, not harm types. Mitigation: organisational and participatory recommendations, Proposed; the workshop assessed actionability, not effect on bias. Soziale_Arbeit teilweise through welfare-administration cases; AN_Population Not_SW_Specific because the addressees are AI experts. Gender is not defined; the analysis treats sexism as a systemic power relation within Black Feminist intersectionality (Social_Construct, Intersectional). Theories: intersectionality after Collins and Bilge and Crenshaw, Young's structural account of injustice, Kong's weak versus strong fairness.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Bias_Definition": [
+            {
+              "quote": "According to Young, injustice occurs \"when social processes put large groups of persons under systematic threat of domination or deprivation of the means to develop and exercise their capacities\"",
+              "locator": "2.1 Origin of the Intersectional Approach"
+            },
+            {
+              "quote": "We refer here to Iris Marion Young's definition of social justice, which emphasizes our shared responsibility for and the structural nature of (in)justice.",
+              "locator": "2.1 Origin of the Intersectional Approach, line 74"
+            }
+          ],
+          "AN_Theory_Reference": [
+            {
+              "theory": "Intersectionality as critical inquiry and praxis (Collins and Bilge; Crenshaw)",
+              "quote": "One key element is that intersectionality is more than an analysis of discrimination based on intersecting identities; embedded within the concept is the objective of taking action towards social justice, which is often referred to as critical inquiry and praxis",
+              "locator": "2.1 Origin of the Intersectional Approach"
+            },
+            {
+              "theory": "Social justice (Iris Marion Young)",
+              "quote": "We refer here to Iris Marion Young's definition of social justice, which emphasizes our shared responsibility for and the structural nature of (in)justice.",
+              "locator": "2.1 Origin of the Intersectional Approach"
+            },
+            {
+              "theory": "Weak versus strong fairness (Kong)",
+              "quote": "Therefore, she advocates that this \"weak\" approach to fairness should be augmented into a \"strong\" fairness, one that acknowledges the structural nature of unfairness and aligns closely with a broader interpretation of intersectionality.",
+              "locator": "2.2 Intersectionality and AI Fairness Research"
+            },
+            {
+              "theory": "Intersectionality as critical inquiry and praxis (Collins and Bilge; Black feminist thought)",
+              "quote": "One key element is that intersectionality is more than an analysis of discrimination based on intersecting identities; embedded within the concept is the objective of taking action towards social justice",
+              "locator": "2.1 Origin of the Intersectional Approach, line 74"
+            }
+          ],
+          "AN_Gender_Understanding": [
+            {
+              "quote": "Such a contemporary algorithmic bias compounds the discrimination of marginalized communities, such as Black single mothers of Surinamese descent, who have historically been disregarded by the Dutch welfare system",
+              "locator": "1 Introduction"
+            },
+            {
+              "quote": "Keep in mind that forms of discrimination interact such that within one group there can be many different experiences [100].",
+              "locator": "4.5.3, line 189"
+            },
+            {
+              "quote": "This algorithmic frame sidelines key aspects of intersectionality, such as power relations, social justice, and structural inequality.",
+              "locator": "Abstract"
+            }
+          ],
+          "AN_Mitigation_Stage": [
+            {
+              "quote": "Interdisciplinary teams should discuss and document their position in society and reflect which perspectives are heard and which are still left unheard.",
+              "locator": "4.2 Position and Reflection"
+            },
+            {
+              "quote": "Invite people at risk of AI harm to voice priorities and concerns and propose co-ownership in the participation process.",
+              "locator": "4.3 Community and Participation, line 157 (Organisational_Process)"
+            }
+          ],
+          "AN_Bias_Axes": [
+            {
+              "quote": "Such a contemporary algorithmic bias compounds the discrimination of marginalized communities, such as Black single mothers of Surinamese descent, who have historically been disregarded by the Dutch welfare system",
+              "locator": "1 Introduction, line 33 (Intersectional)"
+            },
+            {
+              "quote": "an automated fraud detection system used in welfare allocation disproportionately flagged individuals from low-income and immigrant backgrounds",
+              "locator": "1 Introduction, line 33 (Socioeconomic, Nationality_Migration)"
+            }
+          ]
+        }
+      }
+    },
+    "LGYFN6JK": {
+      "paper_id": "LGYFN6JK",
+      "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
+      "version_id": "version:c9a7b396-f86c-50ed-8808-6dc5c513627b",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "AN_Task",
+          "ar1": [
+            "Research",
+            "Teaching_Further_Education"
+          ],
+          "ar2": [
+            "Research",
+            "Documentation_Recording"
+          ],
+          "chosen": [
+            "Research",
+            "Documentation_Recording",
+            "Teaching_Further_Education"
+          ],
+          "reason": "Each value has its own passage: 'ChatGPT could identify language in case notes and referrals ... that might contain biased or discriminatory language' (case documentation) and 'we anticipate social work scientists may use ChatGPT for education, research, practice' together with the assessment of students' writing (teaching)."
+        }
+      ],
+      "rationale": "Invited commentary on ChatGPT in social work science with five ethical recommendations; Generative_KI and Soziale_Arbeit are central, so Include. The tracks differ only in AN_Task, where both values are supported by separate passages. Publication type: scholarly commentary in a social work research journal with DOI, admissible.",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'ChatGPT for Social Work Science: Ethical Challenges and Opportunities' matches the corpus title; authors Patton, Landau, Mathiyazhagan (University of Pennsylvania); DOI 10.1086/726042 in the keyword line; electronically published 3 August 2023; invited commentary in a scholarly journal with identifiable authorship and references, admissible under the ratified publication-type rule."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "teilweise",
+          "Generative_KI": "ja",
+          "Prompting": "teilweise",
+          "KI_Sonstige": "nein",
+          "Soziale_Arbeit": "ja",
+          "Bias_Ungleichheit": "teilweise",
+          "Gender": "nein",
+          "Diversitaet": "teilweise",
+          "Feministisch": "nein",
+          "Fairness": "nein"
+        },
+        "evidence": {
+          "AI_Literacies": [
+            "social work scientists may gain a deeper understanding of its capabilities and limitations, as well as its potential impact on the",
+            "Through direct engagement with ChatGPT (e.g., free or paid subscription to OpenAI, reading groups, panel discussions, and conference presentations), social work scientists may gain a deeper understanding of its capabilities and limitations"
+          ],
+          "Generative_KI": [
+            "In this invited paper, we describe the potential use of ChatGPT in social work science, exploring opportunities and ethical challenges related to the deployment of large language models (LLMs)",
+            "In this invited paper, we describe the potential use of ChatGPT in social work science, exploring opportunities and ethical challenges related to the deployment of large language models (LLMs),"
+          ],
+          "Prompting": [
+            "social work scientists should adopt an antiracist research framework and approaches (Goings et al., 2023) to develop prompts that explicitly ask to identify the work of BIPOC scholars and resources and perspectives from underrepresented communities",
+            "to develop prompts that explicitly ask to identify the work of BIPOC scholars and resources and perspectives from underrepresented communities"
+          ],
+          "KI_Sonstige": [],
+          "Soziale_Arbeit": [
+            "We offer several preliminary recommendations for the ethical use of ChatGPT in social work science and call on the profession ' s governing organizations to develop a comprehensive ethical framework for the use of LLMs such as ChatGPT in social work research.",
+            "We offer several preliminary recommendations for the ethical use of ChatGPT in social work science"
+          ],
+          "Bias_Ungleichheit": [
+            "Thus, it could amplify and perpetuate existing bias based on race, gender, sexuality, ability, caste, and other identities by selecting words or phrases that only fall within mainstream white English."
+          ],
+          "Gender": [],
+          "Diversitaet": [
+            "This could lead to bias, especially if the text used to train it does not represent diverse perspectives or scholarship by BIPOC, people with disabilities, LGBTQIA 1 individuals, and those with other underrepresented identities.",
+            "Thus, LLMs may be more likely to offer Eurocentric and white-centric content and to ignore literature and other information from BIPOC authors and authors from the Global South."
+          ],
+          "Feministisch": [],
+          "Fairness": []
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity",
+            "Language_Culture"
+          ],
+          "AN_Harm_Types": [
+            "Erasure",
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "General_Social_Work"
+          ],
+          "AN_Task": [
+            "Research",
+            "Documentation_Recording",
+            "Teaching_Further_Education"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Invited commentary on opportunities and ethical challenges of ChatGPT for social work science, with five recommendations (transparency, fact-checking, authorship, attribution, inclusion and social justice). General_Guidance strategy verbatim: 'develop prompts that explicitly ask to identify the work of BIPOC scholars and resources and perspectives from underrepresented communities'; transparency also asks to document how the LLM was used with prompts. Bias axes: race (BIPOC, white-centric content) and language/cultural region (mainstream white English, Eurocentric content, Global South); gender, sexuality, ability and caste appear only in an enumeration and are not coded, so gender is no object (Not_Applicable). Harms argued for the work's own object: exclusion of BIPOC and Global South literature (Erasure) and white-centric/Eurocentric defaults (Exclusionary_Norms). Mitigation proposed: inclusive prompting and an ethical framework from professional bodies. Tasks: research (questions, qualitative themes, transcripts, manuscripts), feedback on case notes and referrals for biased language (Documentation_Recording), and education, including checking students' academic writing (Teaching_Further_Education). Theory reference: an antiracist research framework (Goings et al. 2023) and the bureaucratic-algorithm argument of Caplan and Boyd frame the treatment of bias, borderline because both are invoked briefly.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Theory_Reference": [
+            {
+              "theory": "Antiracist research framework (Goings et al. 2023)",
+              "quote": "Social work scientists must be aware of social justice and antiracist principles when using LLMs.",
+              "locator": "Recommendations, 5. Inclusion and Social Justice"
+            },
+            {
+              "theory": "Algorithms as bureaucrats (Caplan and Boyd 2018)",
+              "quote": "Caplan and Boyd (2018) argued that algorithms like ChatGPT are themselves bureaucrats, leveraging existing oppressive institutional thinking to work",
+              "locator": "Limitations of ChatGPT in Social Work Science"
+            },
+            {
+              "theory": "Antiracist research framework (Goings et al. 2023)",
+              "quote": "social work scientists should adopt an antiracist research framework and approaches (Goings et al., 2023)",
+              "locator": "Recommendations, 5. Inclusion and Social Justice, line 107"
+            }
+          ],
+          "AN_Harm_Types": [
+            {
+              "quote": "Thus, LLMs may be more likely to offer Eurocentric and white-centric content and to ignore literature and other information from BIPOC authors and authors from the Global South.",
+              "locator": "Recommendations, 5. Inclusion and Social Justice"
+            },
+            {
+              "quote": "by selecting words or phrases that only fall within mainstream white English.",
+              "locator": "Addressing Bias"
+            },
+            {
+              "quote": "by selecting words or phrases that only fall within mainstream white English",
+              "locator": "Addressing Bias, line 65 (Exclusionary_Norms)"
+            }
+          ],
+          "AN_Mitigation_Stage": [
+            {
+              "quote": "should develop a comprehensive ethical framework within which social work scientists can agree to use ChatGPT and other LLMs in professional and academic writing and practice.",
+              "locator": "Recommendations, closing paragraph"
+            }
+          ],
+          "AN_Task": [
+            {
+              "quote": "ChatGPT can support social work scientists in generating qualitative themes.",
+              "locator": "Generating Qualitative Themes"
+            },
+            {
+              "quote": "First, ChatGPT could identify language in case notes and referrals (e.g., child welfare/child abuse and neglect) that might contain biased or discriminatory language",
+              "locator": "Social Justice and Antiracist Lens, line 35"
+            },
+            {
+              "quote": "we anticipate social work scientists may use ChatGPT for education, research, practice",
+              "locator": "Introduction, second paragraph"
+            }
+          ]
+        }
+      }
+    },
+    "H59BNSX8": {
+      "paper_id": "H59BNSX8",
+      "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
+      "version_id": "version:2e650cfc-0147-5778-ab55-ed2e17a4f86b",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "AN_Bias_Axes",
+          "ar1": [
+            "Race_Ethnicity",
+            "Disability"
+          ],
+          "ar2": [
+            "Race_Ethnicity",
+            "Disability",
+            "Socioeconomic"
+          ],
+          "chosen": [
+            "Race_Ethnicity",
+            "Disability"
+          ],
+          "reason": "Socioeconomic disadvantage occurs only as a cited claim in the conclusion ('Current evidence suggests that ... groups already experiencing higher levels of discrimination or social-economic disadvantage') and in the question list; the AFST rent and attendance data are discussed as missing context, not as bias along income."
+        },
+        {
+          "field": "AN_Population",
+          "ar1": [
+            "Education_Professional",
+            "Child_Family_Welfare",
+            "Social_Assistance_Admin",
+            "Homelessness_Youth"
+          ],
+          "ar2": [
+            "Education_Professional",
+            "General_Social_Work",
+            "Child_Family_Welfare",
+            "Social_Assistance_Admin",
+            "Homelessness_Youth"
+          ],
+          "chosen": [
+            "Education_Professional",
+            "General_Social_Work",
+            "Child_Family_Welfare",
+            "Social_Assistance_Admin",
+            "Homelessness_Youth"
+          ],
+          "reason": "The work addresses social work as a whole ('This article explores the ways that algorithmic decision-making has become increasingly embedded in social work practice'), in addition to the fields of its cases."
+        },
+        {
+          "field": "Studientyp",
+          "ar1": "Theoretisch",
+          "ar2": "Konzept",
+          "chosen": "Theoretisch",
+          "reason": "The pedagogy is illustrated, not designed: 'While we have not answered the question of what would be considered an 'ideal' unit design'; the work develops the presence/mediation and technique/critique tensions argumentatively."
+        }
+      ],
+      "rationale": "Conceptual article on algorithmic decision-making in social work practice and education; AI_Literacies, KI_Sonstige, Soziale_Arbeit and Bias_Ungleichheit are central, so Include. Three analysis differences resolved from the source. Identity: the cover page spells the second author 'Lal', the contributor note 'Lai'; title, DOI and year agree, so the inconsistency does not block.",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Algorithmic decision-making in social work practice and pedagogy: confronting the competency/critique dilemma' matches the corpus title; authors James, Lal, Liao, Magee, Soldatic; Social Work Education 43:6, 1552-1569 (2024), published online 27 March 2023; DOI 10.1080/02615479.2023.2195425; no conflict. The cover page spells the second author 'Lal', the contributor notes 'Lai', a minor internal inconsistency."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "ja",
+          "Generative_KI": "nein",
+          "Prompting": "nein",
+          "KI_Sonstige": "ja",
+          "Soziale_Arbeit": "ja",
+          "Bias_Ungleichheit": "ja",
+          "Gender": "nein",
+          "Diversitaet": "teilweise",
+          "Feministisch": "nein",
+          "Fairness": "teilweise"
+        },
+        "evidence": {
+          "AI_Literacies": [
+            "students will need the opportunity to develop an algorithmic literacy that centers on understanding the often-critical limitations of such technologies and systems."
+          ],
+          "Generative_KI": [],
+          "Prompting": [],
+          "KI_Sonstige": [
+            "The ADM systems that we explore include the Allegheny Family Screening Tool (AFST), Correctional Offender Management Profiling for Alternative Sanctions (COMPAS), and the Australian National Disability Insurance Scheme (NDIS).",
+            "This article explores the ways that algorithmic decision-making has become increasingly embedded in social work practice."
+          ],
+          "Soziale_Arbeit": [
+            "This article explores the ways that algorithmic decision-making has become increasingly embedded in social work practice.",
+            "Social work education, we argue, increasingly needs to grapple with the tensions between, on the one hand, training future social workers for a technologically driven professional environment, and, on the other, engaging students in critical theories that acknowledge the unequal distribution of social power that technological change both emerges from and reinscribes at a more abstract level."
+          ],
+          "Bias_Ungleichheit": [
+            "ADM systems were designed as ways to reduce bias in decision-making. However, they have been found to accentuate or introduce new biases (Eubanks, 2018; Pasquale, 2017).",
+            "while there is no assurance that ADM will remove practices of racism, disablism, heterosexism, and misogyny in the allocation of resources or assessment of risk (in fact it can introduce new structural biases), used reflexively it can draw attention to such biases."
+          ],
+          "Gender": [],
+          "Diversitaet": [
+            "we argue that the training of social workers in both the technical and critical disciplines is essential to ensure future social work practice, with all its limits, can adequately address diverse client needs.",
+            "What are the social intersectionalities-such as identity, capacity and socio-economic standing-at play in the area covered by the algorithm?"
+          ],
+          "Feministisch": [],
+          "Fairness": [
+            "When there is a low degree of transparency about the algorithmic systems and legal protections not only is the original fairness of the automated decision threatened but people are denied the fundamental right of understanding and challenging a decision."
+          ]
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity",
+            "Disability"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Demonstrated",
+          "AN_Population": [
+            "Education_Professional",
+            "General_Social_Work",
+            "Child_Family_Welfare",
+            "Social_Assistance_Admin",
+            "Homelessness_Youth"
+          ],
+          "AN_Task": [
+            "Case_Assessment_Decision_Support",
+            "Teaching_Further_Education"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Conceptual article on the presence/mediation and technique/critique tensions of algorithmic decision-making in social work, worked through case studies (AFST, COMPAS, NDIS, HEALER, Heat List) and a proposal for a practice-embedded critical-technical pedagogy. Bias axes from the case studies: race (COMPAS error rates, over-policing of African-American communities through Heat List) and disability (practitioner bias toward children with disability, NDIS scores overlooking the impact of disability); misogyny and heterosexism appear only in an enumeration, so gender is no object. Harms: unequal false-negative rates (Disparate_Performance) and risk scores from invalid correlations and assumed group characteristics or network proximity (Indirect_Discrimination). Mitigation: organisational and educational measures (mandatory human screening of high scores, algorithmic literacy, case-study pedagogy); Demonstrated because the authors use the case-study method in their own teaching and report student reasoning, without an assessment. Theory: critical theories of social power and technology, sociology of science and technology, critical race theory in the pedagogy; borderline because they frame the curriculum more than a definition of bias. Socioeconomic disadvantage appears only in a cited finding of the conclusion and in the question list, so it is not coded. AN_Population adds General_Social_Work because the pedagogy addresses social work education and practice across fields. Studientyp Theoretisch: the work argues the two tensions through case studies and sketches pedagogical pathways without designing a curriculum ('we have not answered the question of what would be considered an ideal unit design').",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Theory_Reference": [
+            {
+              "theory": "Critical theories of social power and technology (sociology of science and technology)",
+              "quote": "engaging students in critical theories that acknowledge the unequal distribution of social power that technological change both emerges from and reinscribes at a more abstract level.",
+              "locator": "Introduction"
+            },
+            {
+              "theory": "Critical race theory",
+              "quote": "Here, for example, critical race theory meets knowledge-transfer theory, each with their own presumptions that need to be elaborated.",
+              "locator": "Implications for social work education"
+            },
+            {
+              "theory": "Critical theories of unequal social power in technological change",
+              "quote": "engaging students in critical theories that acknowledge the unequal distribution of social power that technological change both emerges from and reinscribes at a more abstract level",
+              "locator": "Introduction, line 67"
+            }
+          ],
+          "AN_Harm_Types": [
+            {
+              "quote": "Testing of the tool in one community found that African-American populations had a higher falsenegative rate compared to white populations",
+              "locator": "COMPAS: algorithmic decision-making in correctional services"
+            },
+            {
+              "quote": "This occurs when the algorithm creates imprecise risk-predictions based on invalid correlations (Keddell, 2019).",
+              "locator": "The Allegheny Family Screening Tool (AFST)"
+            },
+            {
+              "quote": "The algorithm produces calculations based on proximity to and relationships with known shooters and shooting casualties.",
+              "locator": "Implications for social work education, Heat List, line 155 (Indirect_Discrimination)"
+            },
+            {
+              "quote": "applications of the Heat List algorithm also caused problems such as the over-policing of African-American communities",
+              "locator": "Implications for social work education, Heat List, line 157 (Indirect_Discrimination)"
+            }
+          ],
+          "AN_Bias_Axes": [
+            {
+              "quote": "However, applications of the Heat List algorithm also caused problems such as the over-policing of African-American communities",
+              "locator": "Implications for social work education, Heat List case"
+            },
+            {
+              "quote": "To the extent that the variable individualized impact of a disability may be overlooked by a score, clients will tend not receive the adequate support they need.",
+              "locator": "National Disability Insurance Scheme (NDIS)"
+            }
+          ],
+          "AN_Mitigation_Status": [
+            {
+              "quote": "We have been using the case-study method in our own undergraduate teaching",
+              "locator": "Implications for social work education"
+            }
+          ],
+          "AN_Mitigation_Stage": [
+            {
+              "quote": "However, research also showed how critical thinking is required to get around potential ADM bias.",
+              "locator": "The Allegheny Family Screening Tool, line 103 (Organisational_Process)"
+            }
+          ]
+        }
+      }
+    },
+    "3B87U5LN": {
+      "paper_id": "3B87U5LN",
+      "work_id": "work:c22fb9d9-859a-5f4f-b574-2ec02adaa089",
+      "version_id": "version:de2241b9-7888-5aa5-8395-914b2f63fe56",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "KI_Sonstige",
+          "ar1": "nein",
+          "ar2": "teilweise",
+          "chosen": "teilweise",
+          "reason": "Rule-based chatbots are an explicit comparison object in abstract, discussion and Fig. 4: 'Many of the themes we developed are not new, but rather echo well-established user appreciation of rule-based chatbots'; a subordinate but explicit aspect."
+        },
+        {
+          "field": "AN_Bias_Definition",
+          "ar1": "Not_Applicable",
+          "ar2": "Implicit_Only",
+          "chosen": "Implicit_Only",
+          "reason": "Both tracks code Bias_Ungleichheit teilweise and the harm Exclusionary_Norms, so inequality is an object of the work; its understanding as unequal reach is recognisable from 'may not currently be connecting with the full population who need mental health support' without a definition."
+        }
+      ],
+      "rationale": "Interview study on generative AI chatbots for mental health support; Generative_KI is central, and Soziale_Arbeit ja rests on the target-group clause of the definition (psychosocial support for people with mental health problems), which both tracks flagged. The source supports that reading, since the whole study concerns this addressee group, so the decision stays Include; the reliance on the target-group clause is reported as a codebook finding. Two further differences resolved from the source. The truncated quotation ending in 'bene' is replaced by a complete passage from the same sentence.",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title ''It happened to be the perfect thing': experiences of generative AI chatbots for mental health' matches the corpus title; authors Siddals, Torous, Coxon (King's College London; Beth Israel Deaconess Medical Center and Harvard Medical School); received 20 June 2024, accepted 15 October 2024, (c) 2024; supplementary DOI 10.1038/s44184-024-00097-4 identifies the npj Mental Health Research article; no conflict."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "teilweise",
+          "Generative_KI": "ja",
+          "Prompting": "nein",
+          "KI_Sonstige": "teilweise",
+          "Soziale_Arbeit": "ja",
+          "Bias_Ungleichheit": "teilweise",
+          "Gender": "nein",
+          "Diversitaet": "teilweise",
+          "Feministisch": "nein",
+          "Fairness": "nein"
+        },
+        "evidence": {
+          "AI_Literacies": [
+            "Such research could inform the development of educational tools and guidelines for AI usage in mental health contexts."
+          ],
+          "Generative_KI": [
+            "We interviewed nineteen individuals about their experiences using generative AI chatbots for mental health."
+          ],
+          "Prompting": [],
+          "KI_Sonstige": [
+            "Many of the themes we developed are not new, but rather echo well-established user appreciation of rule-based chatbots"
+          ],
+          "Soziale_Arbeit": [
+            "Participants reported high engagement and positive impacts, including better relationships and healing from trauma and loss.",
+            "Generative AI chatbots may offer mental health support that feels meaningful to users, but further research is needed on safety and effectiveness."
+          ],
+          "Bias_Ungleichheit": [
+            "may not currently be connecting with the full population who need mental health support"
+          ],
+          "Gender": [],
+          "Diversitaet": [
+            "whether to make it more accessible to a less technical or non-English speaking user base"
+          ],
+          "Feministisch": [],
+          "Fairness": []
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Mental_Health"
+          ],
+          "AN_Task": [
+            "Counselling_Client_Communication"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Empirisch",
+          "AN_Notes": "Qualitative interview study (reflexive thematic analysis) with 19 users of generative AI chatbots (mainly Pi and ChatGPT) for mental health; themes emotional sanctuary, insightful guidance, joy of connection, AI therapist. Soziale_Arbeit ja through the target-group clause of the definition: the work centres psychosocial support for people with mental health problems, an addressee group and practice field of social work (Mental_Health), although social work is not named; this reading is recorded as a codebook finding. KI_Sonstige teilweise for the explicit comparison with rule-based chatbots in abstract, introduction, discussion and Fig. 4. Inequality appears only as unequal reach: the well-educated, tech-savvy sample suggests the benefits may not reach the full population in need; coded Exclusionary_Norms (assumption of digitally skilled users, anchor MA3LBJS6) with the proposed digital-navigator role as organisational remedy. Digital skill is no social axis under the codebook, so AN_Bias_Axes None. Bias is not defined, but the understanding of inequality as unequal access is recognisable (AN_Bias_Definition Implicit_Only). Gender appears only in sample demographics. Safety guardrails are a crisis-response issue, not bias mitigation. Prompting is not treated; participants' role-play requests are described usage only. Inductive analysis without theory frame.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Mitigation_Stage": [
+            {
+              "quote": "for example, through the ' digital navigator ' roles proposed to connect users to DMHIs",
+              "locator": "Discussion, paragraph on accessibility"
+            }
+          ],
+          "AN_Task": [
+            {
+              "quote": "Most participants talked about how their experiences of generative AI chatbots contrasted or interacted with human psychotherapy or counselling.",
+              "locator": "Results, The AI therapist?"
+            }
+          ],
+          "AN_Harm_Types": [
+            {
+              "quote": "may not currently be connecting with the full population who need mental health support",
+              "locator": "Discussion, paragraph on accessibility"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "summary": {
+    "records": 10,
+    "resolved_records": 9,
+    "decisions": {
+      "Include": 10,
+      "Unclear": 0,
+      "Exclude": 0
+    }
+  }
+}

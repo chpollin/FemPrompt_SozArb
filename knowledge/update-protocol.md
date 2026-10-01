@@ -8,13 +8,13 @@ method:
   url: https://lisa.gerda-henkel-stiftung.de/digitale_geschichte_pollin
 status: active
 language: en
-version: "0.7"
+version: "0.8"
 created: 2026-06-09
 updated: 2026-10-01
 authors: [Christopher Pollin]
-generated-with: Claude Code, Codex (GPT-5.6)
+generated-with: Claude Code, Codex (GPT-5.6), Claude Code (Claude Opus 5.5)
 topics: ["[[Pre-Registration]]", "[[Coding Scheme]]", "[[AI Agents]]"]
-related: [plan, governance, verification, data, specification, methods, standards, project, analysis-methods]
+related: [plan, governance, verification, data, specification, methods, standards, project, analysis-methods, codebook-v1.4-proposal]
 ---
 
 # Round-Two Update Protocol
@@ -40,11 +40,11 @@ Round-two searches ran under the initial protocol and were documented in `corpus
 
 The methodological question asks how LLMs and AI agents can be integrated into a qualitative literature review with traceable contributions, re-executable processing, and final scholarly authority assigned to domain experts.
 
-The literature analysis originally used three sub-questions on prompting techniques and their evidence status, on the mapping of bias axes and harm types to proposed, demonstrated or evaluated mitigations, and on social-work-specific contexts, constraints and research gaps. On 1 October 2026 the operator made the substantive question primary and reformulated the sub-questions around the tasks of social work. [[project#Research questions]] holds the current wording and the mapping from the earlier questions. The coding vocabularies below remain valid until a codebook amendment is decided. On the same day the operator merged grant questions, the team-meeting grid and the reformulation into five sub-questions SQ1 to SQ5. The `serves` entries of the analysis fields in `assessment/categories.yaml` and the question labels of the generated SQ tables use this numbering.
+The literature analysis originally used three sub-questions on prompting techniques and their evidence status, on the mapping of bias axes and harm types to proposed, demonstrated or evaluated mitigations, and on social-work-specific contexts, constraints and research gaps. On 1 October 2026 the operator made the substantive question primary and reformulated the sub-questions around the tasks of social work. [[project#Research questions]] holds the current wording and the mapping from the earlier questions. On the same day the operator merged grant questions, the team-meeting grid and the reformulation into five sub-questions SQ1 to SQ5 and adopted codebook version 1.4 for them ([[#Analysis coding]]). The `serves` entries of the analysis fields in `assessment/categories.yaml` and the question labels of the generated SQ tables use this numbering.
 
 ## Eligibility
 
-`assessment/categories.yaml` version 1.3 is the vocabulary source. The eligibility scheme has ten categories in two dimensions. PRISM records `nein`, `teilweise`, or `ja` for each category.
+`assessment/categories.yaml` version 1.4 is the vocabulary source. Its eligibility content is unchanged since version 1.2. The eligibility scheme has ten categories in two dimensions. PRISM records `nein`, `teilweise`, or `ja` for each category.
 
 - Include requires at least one `ja` category in each dimension.
 - Unclear requires at least one `teilweise` category in each dimension without meeting the Include rule.
@@ -97,40 +97,62 @@ When text conversion omits figures, an assignment may additionally provide sourc
 
 ### Operationally isolated tracks
 
-Two Codex agents receive the same frozen criteria and Paper source in separate contexts, under distinct reviewer identities and output paths. Each produces a `femprompt-prisma-coding-packet/0.1` bound to the run manifest and source hashes. Operational isolation limits direct cross-track contamination and documents execution conditions. It establishes no epistemic-independence claim.
+A coding run is an AI harness run. Two agent tracks receive the same frozen criteria and Paper sources in separate harness contexts, each with its own working folder, reviewer identity and output paths, and neither reads the other's output. A track may run as a Claude Code subagent, as a Codex agent or in another harness. Each track produces a `femprompt-prisma-coding-packet/0.2` bound to the run manifest, its codebook version and the source hashes, and the orchestrator copies packet and report to the manifest paths after the track has finished. Run schema 1.4 records per track the harness, provider, model and model identifier, and `isolation.model_diversity` states whether both tracks use the same model. Operational isolation limits direct cross-track contamination and documents execution conditions. It establishes no epistemic-independence claim, and two tracks on the same model are less independent than two tracks on different models. Runs under schema 1.3 and earlier keep their run-wide model and their packets 0.1, which read as codebook 1.3.
 
 ### Deterministic PRISM transfer
 
-The orchestrator validates each coding packet and projects it through PRISM's production `validateReviewerPayload`, `importReviewerPayload`, `recordRequirements`, and `reviewerFileText` functions. New schema-0.4 tracks preserve the packet values and bind every decision and Paper evidence item to the assigned `work_id` and `version_id`. Historical schema-0.3 tracks remain valid immutable inputs to AI Agent Review. Run schema 1.3 binds Work and Version assignments, sources, prompts, models, packets, reports, projected tracks, review outputs, and hashes.
+The orchestrator validates each coding packet and projects it through PRISM's production `validateReviewerPayload`, `importReviewerPayload`, `recordRequirements`, and `reviewerFileText` functions. New schema-0.4 tracks preserve the packet values, record the codebook version in each annotation's analysis and bind every decision and Paper evidence item to the assigned `work_id` and `version_id`. Historical schema-0.3 tracks remain valid immutable inputs to AI Agent Review. Run schema 1.4 binds the codebook version and hash, Work and Version assignments, sources, prompts, per-track execution environments, packets, reports, projected tracks, review outputs, and hashes. A run under schema 1.4 may code works that human screening already covers and records that coverage.
 
 Visible PRISM interaction remains the domain-expert verification and correction surface and the basis of browser acceptance tests. Historical visible trial exports retain their original execution provenance.
 
 ### Source-grounded AI Agent Review
 
-A separately commissioned AI agent compares the two tracks with the assigned Paper source. The review checks source identity, quotation fidelity, category support, decision derivation, controlled vocabularies, and Include-analysis completeness. Accepted output reaches `ai-agent-reviewed`. Unsupported evidence, unresolved source identity, incomplete analysis, or a failed contract blocks productive integration.
+A separately commissioned AI agent compares the two tracks with the assigned Paper source. The review checks source identity, quotation fidelity, category support, decision derivation, controlled vocabularies, the field rules and located analysis passages of the codebook version, and Include-analysis completeness. Accepted output reaches `ai-agent-reviewed`. Unsupported evidence, unresolved source identity, incomplete analysis, or a failed contract blocks productive integration.
 
 Agreement between the two AI-agent tracks is a workflow diagnostic. It provides no estimate of inter-expert reliability or model accuracy.
 
 ## Analysis coding
 
-Every Include record captures the fields defined in `assessment/categories.yaml` version 1.3.
+Every Include record captures the fields defined in `assessment/categories.yaml` version 1.4. The analysis fields are coded only by AI agent tracks, and human reviewers screen in PRISM without AI pre-assessment. The field rules (`rules`) and anchor passages (`anchors`) in the YAML are binding for the tracks. [[codebook-v1.4-proposal]] holds the reasons and the corpus patterns behind them.
 
-| Field | Coding rule |
-|---|---|
-| `AN_Prompting_Role` | Role of prompting in the paper, including recommended practice, research instrument, object of critique, or learning content |
-| `AN_Prompt_Techniques` | Named or recognisably described technique; `None` remains valid when prompting is present without a codable technique |
-| `AN_Bias_Axes` | Explicitly addressed axes; `Intersectional` requires interacting axes |
-| `AN_Harm_Types` | Explicit harm mechanism; required when the coding basis is full text |
-| `AN_Mitigation_Stage` | Stage at which the intervention operates |
-| `AN_Mitigation_Status` | Proposed, demonstrated, evaluated, or the applicable controlled status |
-| `AN_Population` | Addressed population or setting, with professional education applied narrowly |
-| `Studientyp` | Controlled study type reused from the project schema |
-| `AN_Coding_Basis` | Paper source used for the coding |
-| `AN_Notes` | Source-linked clarification, concrete strategy behind general guidance, and machine-countable non-decidability notes |
+| Field | Sub-question | Coding rule |
+|---|---|---|
+| `AN_Task` | SQ1 | Task of professional practice for which the work describes, tests or proposes AI use. Pilot field, its values are candidates until the pilot rule below is met |
+| `AN_Population` | SQ1, SQ2 | Addressed population or setting, with professional education applied narrowly |
+| `AN_Prompting_Role` | SQ1, SQ3, SQ5 | Role of prompting in the paper, including recommended practice, research instrument, object of critique, or learning content |
+| `AN_Bias_Axes` | SQ2 | An axis the work analyses, measures, compares or uses as its own worked example. Enumerations, sample demographics, related work and outlook do not count, and `Intersectional` needs a passage whose outcome depends on the combination |
+| `AN_Harm_Types` | SQ2 | A mechanism the work demonstrates, measures or argues for its own object, one passage per value. Discrimination requires an allocation or a decision about persons, and name-based audits count as indirect discrimination. Required when the coding basis is full text |
+| `AN_Prompt_Techniques` | SQ3 | Named or recognisably described technique. `None` remains valid when prompting is present without a codable technique |
+| `AN_Mitigation_Stage` | SQ3, SQ5 | Stage at which the intervention operates |
+| `AN_Mitigation_Status` | SQ3 | Proposed, demonstrated, evaluated, or the applicable controlled status, one value per Work |
+| `AN_Gender_Definition` | SQ4 | Whether the work determines gender explicitly, only implicitly, not at all, or does not treat it. `Explicit` carries its located passage |
+| `AN_Bias_Definition` | SQ4 | The same four values for bias. A technical fairness criterion counts as a determination |
+| `AN_Gender_Understanding` | SQ4 | Understanding of gender underlying the work's own analysis. `Binary_Categorical` excludes `Non_Binary_Inclusive`, `Unclear` and `Not_Applicable` stand alone and pair with `Absent` and `Not_Applicable` of `AN_Gender_Definition` |
+| `AN_Theory_Reference` | SQ4 | `Yes` when a named theory frames the treatment of gender or bias. Each theory is recorded as a located theory reference with name, passage and location |
+| `Studientyp` | | Controlled study type reused from the project schema |
+| `AN_Coding_Basis` | | Paper source used for the coding |
+| `AN_Notes` | | Source-linked clarification, concrete strategy behind general guidance, and machine-countable non-decidability notes |
 
-Every field has an explicit value or a recorded non-decidability state. `None` means the paper does not address the field. A non-decidable field records `Feldname: nicht entscheidbar aus <Basis>` in `AN_Notes`. Review and concept papers may code the technique, harm, and mitigation inventories they synthesise when those inventories are the paper's object.
+Every field has an explicit value or a recorded non-decidability state. `None` means the paper does not address the field. A non-decidable field records `Feldname: nicht entscheidbar aus <Basis>` in `AN_Notes`. Review and concept papers may code the technique, harm, and mitigation inventories they synthesise when those inventories are the paper's object. The coding-packet validator rejects a packet that violates a pairing rule, lacks a located passage for an explicit definition or a theory reference, or codes a field outside its codebook version.
 
-Round-two Includes receive the analysis fields during agent screening. Round-one Includes enter the same vocabulary through a separately manifested backfill run. The final synthesis therefore covers both rounds under one analysis schema while preserving their screening provenance.
+Every annotation records the codebook version under which it was coded. A field introduced after that version derives the state `not_collected`, which no coder enters and which says nothing about the work. An annotation without a recorded version counts as 1.3. `AN_Stage_Status`, the stage-status pairs of the draft, is deferred until a validator enforces its pairing rules ([[codebook-v1.4-proposal#Deferred stage-status pairs]]).
+
+Round-two Includes receive the analysis fields during agent screening. Round-one Includes enter the same vocabulary through separately manifested runs. The final synthesis therefore covers both rounds under one analysis schema while preserving their screening provenance.
+
+### Recoding and coding of the remaining Includes
+
+The works coded under version 1.3 are recoded by the agent tracks for `AN_Bias_Axes` and `AN_Harm_Types` and receive `AN_Task` and the SQ4 fields in the same pass, so each full text is read once. Their other 1.3 fields keep their values, because their definitions did not change. The included works without analysis coding receive the full 1.4 coding. Both passes run as harness runs under schema 1.4 with AI Agent Review and the validation below.
+
+### Validation of the AI coding
+
+The validation replaces the human pilot of the draft. It has two parts.
+
+1. Track agreement. `python -m src.assess.agent_track_diagnostics <run folder> --output <run folder>/track-agreement.json` computes per field the raw agreement over the works both tracks include, the positive specific agreement per value of a multi-value field (Cicchetti and Feinstein 1990) and Cohen's kappa as a descriptive figure without threshold, since its interval at batch size spans most of the scale (Sim and Wright 2005). Agreement between two tracks is a workflow diagnostic and estimates neither accuracy nor inter-expert reliability.
+2. Human spot check against the full text. Domain experts check a sample of the AI-agent-reviewed records of each run, as set out below.
+
+The spot check draws per run a seeded random sample of max(5, 15 percent of the run) works, rounded up, half from the works on which the tracks agreed on every analysis field and the rest from the works with at least one difference. Every work that a track or the AI Agent Review flags for a domain-expert decision joins the sample. The seed and the drawn works stand in `spot-check-sample.json` in the run folder. Each sampled work is checked for `AN_Task`, the four SQ4 fields, `AN_Bias_Axes` and `AN_Harm_Types`. The expert first codes these fields from the full text in the exchange sheet without seeing the AI record. Only then the expert opens the final AI-reviewed record and records per field `accepted`, `corrected` with the supporting passage, or `undecidable`. The blind step gives a human reference that the AI record cannot anchor, and the second step feeds the existing person-attributed verification with field-level differences. The two experts share the sample, and a work is checked by one expert. A field corrected in more than one fifth of the sampled works, or a value that experts and tracks confuse in two or more works, returns to rule revision before the next run, and the revision is recorded with its reason. The figures are reported per field as counts with the sample size. They describe the checked sample and are no corpus estimate.
+
+The pilot rule for `AN_Task` follows the same evidence. Its values become final, and `pilot: true` is removed, when no difference in track agreement or spot check stems from a gap in the value definitions. A value no track uses stays provisionally in the vocabulary, since absence from a small sample is no reason to remove it.
 
 ### Source-review clarification, 5 September 2026
 
@@ -151,18 +173,20 @@ Each assigned stage needs its own source support. Monitoring alone does not esta
 
 The existing two-dimensional eligibility rule includes non-generative algorithmic systems and social dimensions beyond a direct social-work setting. Absence of generative AI or of a direct social-work application is therefore not, by itself, a round-two exclusion. Direct practice relevance and transferability are assessed separately for the earlier SQ3 on social-work contexts, whose content now belongs to SQ1 and SQ5. The publication medium alone does not establish quality. Scholarly grey literature can contribute a conceptual inventory or teaching example when its authorship, source, relevant content and limitations are clear. A withdrawal blocks current synthesis pending an explicit integrity resolution. These clarifications do not overwrite round-one human decisions or invent a missing round-one protocol.
 
-### Proposed codebook amendment v1.4
+### Pilot run of 1 October 2026
 
-A critical methodological review of 1 October 2026 proposed amending the codebook before the full coding run. The proposal has not been adopted. It awaits the operator's decision, and `assessment/categories.yaml` version 1.3 remains the vocabulary in force. The proposal comprises the following changes.
+The run `codebook-v14-pilot-10-20261001` tested codebook 1.4 and the harness-agnostic contract on ten included works with a full text and without coding under 1.3. The sample covers experimental, theoretical, review and empirical works, works with and without a Gender or Feministisch category in the expert assessment, works inside and outside social work and one German practice guide, and it avoids every anchor work of [[codebook-v1.4-proposal]]. Two Claude Code subagents on the same LLM coded the works in separate working folders, and a third subagent performed the AI Agent Review. Packets, PRISM tracks, the review, the track agreement and the proposed spot-check sample stand in `tests/review-cases/agent-runs/codebook-v14-pilot-10-20261001/`. No productive screening file was written and no record was verified.
 
-- Optional intervention-status pairs for Works coded above `Proposed`, because `AN_Mitigation_Status` holds one value per Work and cannot attribute a status to a single technique or stage.
-- A task or activity field distinct from `AN_Population`, because SQ1 asks for tasks and the current field records the population or setting.
-- A state for fields that the coding under version 1.3 did not collect, so that Works coded before the amendment do not appear as coded absence.
-- Fields for SQ4 Conceptual grounding, coded from full texts only, which record whether and how a Work defines gender and bias, which understanding of gender it rests on and which theories it draws on. Their vocabulary is proposed separately and not yet adopted.
-- Sharper definitions and anchor examples for `AN_Harm_Types` and `AN_Bias_Axes`, because the two operationally isolated agent tracks often disagree on these fields ([[#Process diagnostics]]).
-- Recoding of the Works already coded under version 1.3.
+The tracks agreed on every decision and on most categories. Among the analysis fields they diverged most on `AN_Harm_Types`, followed by `AN_Bias_Axes` and `AN_Gender_Understanding`, while the new definition fields and `AN_Task` diverged rarely. The review resolved every difference from the source and never overrode a value both tracks shared. `track-agreement.json` holds the figures. Because both tracks ran on one LLM, their agreement is the upper end of what two tracks show and says nothing about accuracy.
 
-[[analysis-methods#Answering the research questions]] names the analytical limits each change would address.
+The pilot exposed the following points for the full run.
+
+- The protocol text lagged the codebook during the run, and all three agents reported it and followed the manifest. The text above now carries 1.4.
+- The transfer refused the reviewer key `ar2` after ADR-044 had reserved agent keys for human sessions. The governed transfer now runs as an agent session.
+- The harm-type rule needs an anchor that separates the work's own argument from lists of cited cases, a statement that differences in tone are no `Disparate_Performance`, and a decision on allocative disparities that a work does not classify as direct or indirect.
+- `AN_Gender_Understanding` leaves the pair `Binary_Categorical` with `Intersectional` and the threshold for `Social_Construct` open. `AN_Theory_Reference` needs a line between a framing concept and an illustrative mention. `AN_Bias_Definition` could be tied to the `Bias_Ungleichheit` category so that `Not_Applicable` becomes checkable.
+- Whether researchers screening case notes is `Documentation_Recording` remains open for `AN_Task`. The self-help chatbot work was coded consistently as client communication by both tracks.
+- The Soziale_Arbeit target-group clause carried the Include of a mental-health chatbot study that never names social work, and a practice guide passed the publication-type rule as scholarly grey literature. Both go to the domain experts with the spot-check sample.
 
 ## Lifecycle and authority
 
@@ -189,10 +213,10 @@ In the pooled runs the two tracks agree on the decisions and differ most often o
 | Role | Responsibility |
 |---|---|
 | Review lead | Research design, domain verification, interpretation, publication decision |
-| Reviewing domain expert | Domain verification and correction |
+| Reviewing domain expert | Screening without AI pre-assessment, spot check of the AI analysis coding, domain verification and correction |
 | Technical and methodological lead | Run orchestration, deterministic integration, analysis generation |
 | Research assistant | Zotero curation, metadata correction, source management |
-| AI screening agent | Source-grounded annotation and analysis coding |
+| AI screening agent | Source-grounded annotation and the only analysis coding |
 | AI agent reviewer | Source-grounded review of tracks and proposed productive record |
 | Software agent | Deterministic validation and publication checks |
 
@@ -212,5 +236,6 @@ In the pooled runs the two tracks agree on the decisions and differ most often o
 | 2026-09-05 | Original visual reading assets | Allowed optional hash-bound, attributed CC BY 4.0 PNG representations alongside the exact Paper text; assigned reviewers must read every declared asset. Text quotation requirements, decision criteria and scholarly authority remain unchanged. Updated prompt versions repair section references and document the existing AI-review output schema. |
 | 2026-10-01 | Research questions | Made the substantive question primary and reformulated the sub-questions as SQ1 to SQ4 ([[project#Research questions]]). The coding vocabulary and the eligibility rule remain unchanged. A codebook amendment v1.4 is proposed and not adopted. |
 | 2026-10-01 | Research questions | Merged grant questions, team-meeting grid and reformulation into SQ1 to SQ5. SQ4 Competences became SQ5, SQ4 Conceptual grounding is new and has no field under version 1.3. The `serves` entries follow the new numbering, and the vocabulary is unchanged. |
+| 2026-10-01 | Codebook 1.4 and harness runs | Adopted codebook 1.4 with the SQ4 fields, the pilot field `AN_Task`, sharpened rules for bias axes and harm types and the recorded codebook version per annotation, and deferred `AN_Stage_Status`. Analysis fields are coded by AI agent tracks only. The run became harness-agnostic under run schema 1.4 with per-track execution environments. Track agreement and a human spot check replace the human pilot. Eligibility and decision rule unchanged. |
 
 Detailed execution evidence remains in run manifests, the prompt changelog, `corpus/deep-research/round2/LAUFPROTOKOLL.md`, [[journal]], and ADR-026 through ADR-037 in [[specification]].

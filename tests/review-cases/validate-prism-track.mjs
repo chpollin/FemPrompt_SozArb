@@ -105,6 +105,8 @@ export function validatePrismTrack(payload, packet, run, reviewerId) {
       const { undecidable = {}, ...fields } = expected.analysis;
       if (!same(actual.analysis?.fields, fields)) errors.push(`${label}.analysis.fields differ from coding packet`);
       if (!same(actual.analysis?.undecidable || {}, undecidable)) errors.push(`${label}.analysis.undecidable differs from coding packet`);
+      if ((actual.analysis?.codebook_version || null) !== (packet.codebook_version || null))
+        errors.push(`${label}.analysis.codebook_version differs from coding packet`);
     } else if ('analysis' in actual) {
       errors.push(`${label}.analysis must be absent outside Include`);
     }
