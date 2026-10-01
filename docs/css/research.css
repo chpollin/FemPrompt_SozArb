@@ -2720,3 +2720,104 @@ main {
     .papers-table { font-size: 9pt; }
     .view-content { display: block !important; }
 }
+
+/* Start view: the main question, one coverage sentence and four equal question cards */
+.start {
+    max-width: 62rem;
+    margin: var(--space-2xl) auto 3rem;
+}
+
+.start-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.25rem);
+    line-height: 1.25;
+    color: var(--gray-900);
+    max-width: 30ch;
+    margin: 0 0 var(--space-lg);
+}
+
+.start-status {
+    font-size: var(--text-md);
+    color: var(--gray-700);
+    max-width: 62ch;
+    margin: 0 0 var(--space-xl);
+}
+
+.start-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: 2.5rem;
+}
+
+.start-btn {
+    display: inline-block;
+    padding: 0.65rem 1.25rem;
+    border: 1px solid var(--gray-500);
+    border-radius: 8px;
+    background: var(--gray-50);
+    color: var(--gray-800);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.start-btn:hover { border-color: var(--gray-700); }
+
+.start-btn--primary {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: #fff;
+}
+
+.start-btn--primary:hover { background: var(--secondary); border-color: var(--secondary); }
+
+.start-btn:focus-visible,
+.start-card:focus-visible {
+    outline: 2px solid var(--primary-dark);
+    outline-offset: 2px;
+}
+
+.start-cards {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: var(--space-lg);
+}
+
+.start-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: var(--space-xl);
+    background: #fff;
+    border: 1px solid var(--gray-200);
+    border-top: 3px solid var(--card-accent, var(--primary));
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    color: var(--gray-800);
+    text-decoration: none;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.start-card:hover { box-shadow: var(--shadow-md); }
+
+.start-card h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    color: var(--gray-900);
+    margin: 0 0 var(--space-sm);
+}
+
+.start-card p {
+    font-size: var(--text-md);
+    line-height: 1.5;
+    color: var(--gray-700);
+    margin: 0;
+}
+
+.start-card--use { --card-accent: var(--cat-soz-arb); }
+.start-card--risk { --card-accent: var(--cat-bias); }
+.start-card--practice { --card-accent: var(--cat-prompt); }
+.start-card--competence { --card-accent: var(--cat-ai-lit); }

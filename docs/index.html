@@ -32,7 +32,7 @@
                     <p class="header-authors">Pollin, Sackl-Sharif, Klinger &amp; Steiner (2026)</p>
                 </div>
                 <nav class="header-nav" aria-label="Hauptnavigation">
-                    <button class="nav-view-btn active has-tip" id="tab-chat" aria-pressed="true" data-view="chat" data-tip-key="chat">Wissens-Chat</button>
+                    <button class="nav-view-btn has-tip" id="tab-chat" aria-pressed="false" data-view="chat" data-tip-key="chat">Wissens-Chat</button>
                     <button class="nav-view-btn has-tip" id="tab-wissensnetz" aria-pressed="false" data-view="wissensnetz" data-tip-key="wissensnetz">Wissensnetz</button>
                     <button class="nav-view-btn has-tip" id="tab-literaturbild" aria-pressed="false" data-view="literaturbild" data-tip-key="literaturbild">Literaturbild</button>
                     <button class="nav-view-btn has-tip" id="tab-vergleich" aria-pressed="false" data-view="vergleich" data-tip-key="vergleich">Kategorien</button>
@@ -161,8 +161,38 @@
             </div>
         </section>
 
-        <!-- View: Wissens-Chat (Default-Einstieg) -->
-        <section class="content-section view-content active" id="view-chat" aria-labelledby="tab-chat">
+        <!-- View: Start (default entry through the research questions) -->
+        <section class="content-section view-content active" id="view-start" aria-labelledby="start-title">
+            <div class="start">
+                <h2 class="start-title" id="start-title">Wie können Fachkräfte der Sozialen Arbeit verantwortlich mit LLMs arbeiten, und was zeigt die Literatur dazu?</h2>
+                <p class="start-status" id="start-status" role="status"></p>
+                <div class="start-actions">
+                    <a class="start-btn start-btn--primary" href="#view=literaturbild">Literatur erkunden</a>
+                    <a class="start-btn" href="#view=korpus">Korpus durchsuchen</a>
+                </div>
+                <ul class="start-cards" role="list">
+                    <li><a class="start-card start-card--use" href="#view=literaturbild&amp;litView=profile&amp;litProfile=AN_Population">
+                        <h3>Nutzung</h3>
+                        <p>Für welche Aufgaben und Felder der Sozialen Arbeit beschreibt die Literatur den Einsatz von LLMs, und welchen Nutzen berichtet sie?</p>
+                    </a></li>
+                    <li><a class="start-card start-card--risk" href="#view=literaturbild&amp;litView=profile&amp;litProfile=AN_Bias_Axes">
+                        <h3>Risiken</h3>
+                        <p>Welche Bias-Achsen und Schadensarten benennt die Literatur, und für welche Gruppen?</p>
+                    </a></li>
+                    <li><a class="start-card start-card--practice" href="#view=literaturbild&amp;litView=profile&amp;litProfile=AN_Prompt_Techniques">
+                        <h3>Praktiken</h3>
+                        <p>Welche Prompting-Techniken und Schutzmaßnahmen werden vorgeschlagen, demonstriert oder evaluiert, und mit welchen berichteten Wirkungen und Grenzen?</p>
+                    </a></li>
+                    <li><a class="start-card start-card--competence" href="#view=literaturbild&amp;litView=profile&amp;litProfile=AN_Mitigation_Stage">
+                        <h3>Kompetenzen</h3>
+                        <p>Welche Kompetenzen und organisationalen Voraussetzungen nennt die Literatur, und wo greifen allgemeine Prompting-Anleitungen zu kurz?</p>
+                    </a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- View: Wissens-Chat -->
+        <section class="content-section view-content" id="view-chat" aria-labelledby="tab-chat" style="display:none;">
             <div class="chat-window" id="chat-container"></div>
         </section>
 
@@ -207,5 +237,6 @@
     <script src="js/wissensnetz.js"></script>
     <script src="js/literaturbild.js"></script>
     <script src="js/wissenschat.js"></script>
+    <script src="js/startseite.js"></script>
 </body>
 </html>

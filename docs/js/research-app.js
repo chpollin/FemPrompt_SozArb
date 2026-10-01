@@ -78,7 +78,7 @@ const PAGE_SIZE = 50;
 let currentDetailPaper = null;
 let currentDetailList = null;
 let renderedPapers = []; // the list currently shown in the table (for delegated clicks)
-let currentView = 'chat';
+let currentView = 'start';
 let applyingFromUrl = false; // suppresses UI->store sync while a URL is being applied
 
 // Central store for the navigational state the URL serializes: active view, corpus
@@ -87,7 +87,7 @@ let applyingFromUrl = false; // suppresses UI->store sync while a URL is being a
 // shareable, citable link. subscribe/set are the Observer pattern the DH-interface
 // standard prescribes for coordinated framework-free views.
 const DEFAULT_STATE = {
-    view: 'chat', q: '', dec: 'all', hum: 'all', year: 'all', sort: 'relevance', cat: [], paper: null,
+    view: 'start', q: '', dec: 'all', hum: 'all', year: 'all', sort: 'relevance', cat: [], paper: null,
     litView: 'matrix', litYear: 'all', litSource: 'all', litStudy: 'all',
     litProfile: 'AN_Prompting_Role', litSelection: null,
 };
@@ -870,7 +870,7 @@ function highlightActiveRow(paper) {
 
 // URL State (shareable, citable views)
 
-const URL_VIEWS = ['chat', 'wissensnetz', 'literaturbild', 'vergleich', 'korpus'];
+const URL_VIEWS = ['start', 'chat', 'wissensnetz', 'literaturbild', 'vergleich', 'korpus'];
 
 // The navigational state read from the current DOM, categories, view and modal.
 function stateFromUI() {
@@ -925,7 +925,7 @@ function applyStateToUI(s) {
             });
         }
 
-        switchView(s.view || 'chat');
+        switchView(s.view || 'start');
         applyFilters();
 
         if (s.paper) {
@@ -943,7 +943,7 @@ function applyStateToUI(s) {
 // Only the keys that differ from the defaults reach the hash, so a clean view stays a clean URL.
 function serializeState(s) {
     const p = new URLSearchParams();
-    if (s.view && s.view !== 'chat') p.set('view', s.view);
+    if (s.view && s.view !== 'start') p.set('view', s.view);
     if (s.q) p.set('q', s.q);
     if (s.dec && s.dec !== 'all') p.set('dec', s.dec);
     if (s.hum && s.hum !== 'all') p.set('hum', s.hum);
@@ -967,12 +967,12 @@ function deserializeState(hashStr) {
     let h = String(hashStr || '').replace(/^#/, '');
     if (h && h.indexOf('=') < 0) {
         // Back-compat: a bare view hash like #korpus from about/help links.
-        return Object.assign({}, DEFAULT_STATE, { view: URL_VIEWS.indexOf(h) >= 0 ? h : 'chat', cat: [] });
+        return Object.assign({}, DEFAULT_STATE, { view: URL_VIEWS.indexOf(h) >= 0 ? h : 'start', cat: [] });
     }
     const p = new URLSearchParams(h);
     const view = p.get('view');
     return {
-        view: URL_VIEWS.indexOf(view) >= 0 ? view : 'chat',
+        view: URL_VIEWS.indexOf(view) >= 0 ? view : 'start',
         q: p.get('q') || '',
         dec: p.get('dec') || 'all',
         hum: p.get('hum') || 'all',
