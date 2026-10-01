@@ -12,8 +12,17 @@
     "Not_relevant_topic",
     "Wrong_publication_type",
     "No_full_text",
-    "Language"
+    "Language",
+    "Consolidated_expert_exclusion"
   ],
+  "exclusion_reason_labels": {
+    "Duplicate": "Duplikat",
+    "Not_relevant_topic": "Thema nicht einschlägig",
+    "Wrong_publication_type": "Falscher Publikationstyp",
+    "No_full_text": "Kein Volltext",
+    "Language": "Sprache",
+    "Consolidated_expert_exclusion": "Expert:innen-Entscheidung übernommen"
+  },
   "categories": [
     {
       "key": "AI_Literacies",

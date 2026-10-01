@@ -16,6 +16,7 @@ metadata:
     levels: [nein, teilweise, ja]   # 0 / 1 / 2
     derivation: "both dimensions ja => Include; both at least teilweise => Unclear; any dimension entirely nein => Exclude"
   changelog:
+    - "2026-10-01: exclusion reason Consolidated_expert_exclusion added so PRISM can confirm a consolidated expert Exclude without inventing a reason (ADR-042); German display labels for the exclusion reasons; categories, decision rule and analysis vocabulary unchanged."
     - "v1.3 (2026-07-17): analysis_fields block frozen after the pilot and operator study-goal clarification (update-protocol B.1); Studientyp becomes required for Include; eligibility content unchanged from v1.2."
     - "2026-07-01: three-level PRISM screening scale documented (ADR-024); benchmark type stays binary."
     - "v1.2: Beispiele fuer Bias_Ungleichheit, Gender, Diversitaet, Fairness ergaenzt. Doku synchronisiert."
@@ -181,15 +182,23 @@ decision:
 
 exclusion_reasons:
   - code: Duplicate
+    label: Duplikat
     description: Identische Publikation aus anderem Source_Tool
   - code: Not_relevant_topic
+    label: Thema nicht einschlägig
     description: Thematisch nicht passend
   - code: Wrong_publication_type
+    label: Falscher Publikationstyp
     description: Ungeeigneter Publikationstyp (Blogbeitrag, etc.)
   - code: No_full_text
+    label: Kein Volltext
     description: Kein Volltext verfügbar
   - code: Language
+    label: Sprache
     description: Sprache nicht zugänglich
+  - code: Consolidated_expert_exclusion
+    label: Expert:innen-Entscheidung übernommen
+    description: Die konsolidierte Expert:innen-Entscheidung Exclude wird in PRISM bestätigt (ADR-042)
 
 study_types:
   - Empirisch

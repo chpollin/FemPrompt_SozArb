@@ -19,7 +19,12 @@ def test_public_category_schema_matches_canonical_yaml() -> None:
         "Wrong_publication_type",
         "No_full_text",
         "Language",
+        "Consolidated_expert_exclusion",
     ]
+    assert payload["exclusion_reason_labels"]["Consolidated_expert_exclusion"] == (
+        "Expert:innen-Entscheidung übernommen"
+    )
+    assert set(payload["exclusion_reason_labels"]) == set(payload["exclusion_reasons"])
     assert len(payload["categories"]) == 10
     assert payload["groups"]["object"] == [
         "AI_Literacies",

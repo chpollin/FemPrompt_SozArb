@@ -27,6 +27,7 @@ CATEGORY_RE = re.compile(r"^\s{2}-\s+name:\s*(\S+)\s*$")
 GROUP_RE = re.compile(r"^\s{4}group:\s*(\S+)\s*$")
 OPTION_RE = re.compile(r"^\s{4}-\s+(\S+)\s*$")
 REASON_RE = re.compile(r"^\s{2}-\s+code:\s*(\S+)\s*$")
+REASON_LABEL_RE = re.compile(r"^\s{4}label:\s*(\S.*?)\s*$")
 
 PRESENTATION = {
     "AI_Literacies": ("AI Literacies", "#5b8c5a"),
@@ -99,15 +100,20 @@ def build(source: Path = YAML_IN) -> dict[str, Any]:
     )
     section = _section(lines, "categories")
     decision_options = _nested_options(_section(lines, "decision"), "options")
-    exclusion_reasons = [
-        match.group(1)
-        for line in _section(lines, "exclusion_reasons")
-        if (match := REASON_RE.match(line))
-    ]
+    exclusion_reasons: list[str] = []
+    reason_labels: dict[str, str] = {}
+    for line in _section(lines, "exclusion_reasons"):
+        if match := REASON_RE.match(line):
+            exclusion_reasons.append(match.group(1))
+        elif (match := REASON_LABEL_RE.match(line)) and exclusion_reasons:
+            reason_labels[exclusion_reasons[-1]] = match.group(1)
     if decision_options != ["Include", "Exclude", "Unclear"]:
         raise ValueError(f"Unexpected decision vocabulary: {decision_options}")
     if not exclusion_reasons:
         raise ValueError("Missing exclusion reasons")
+    unlabelled = [code for code in exclusion_reasons if code not in reason_labels]
+    if unlabelled:
+        raise ValueError(f"Exclusion reasons without a display label: {unlabelled}")
     categories: list[dict[str, str]] = []
     current: dict[str, str] | None = None
     for index, line in enumerate(section):
@@ -144,6 +150,7 @@ def build(source: Path = YAML_IN) -> dict[str, Any]:
         "version": version,
         "decision_options": decision_options,
         "exclusion_reasons": exclusion_reasons,
+        "exclusion_reason_labels": reason_labels,
         "categories": categories,
         "groups": {
             "object": [item["key"] for item in categories if item["group"] == "technik"],
