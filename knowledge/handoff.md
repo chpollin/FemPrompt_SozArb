@@ -35,10 +35,12 @@ The day's results, each documented at its canonical place, are the following.
 
 On 2 October 2026 the analysis-coding run under codebook 1.4.1 coded the included works with full text that had no 1.4 coding and integrated them into the agent track ([[update-protocol#Coding run of 2 October 2026]]). The UI fixes of the plan and of the independent acceptance review of the result site lie on the unmerged branch `worktree-agent-ad2a266c70c16ddd6`, built and checked green, whose merge into `main` is the operator's ([[plan#UI development]]).
 
+The reviewer path was rebuilt and self-tested on the unmerged branch `prism-folder-guidance`, built and checked green. Reviewers start PRISM with `start-prism.cmd`, which needs Python alone and changes no tracked file, the local server writes their files without a folder step (ADR-047), formal exclusions need no Paper Beleg (ADR-048), the save action sits in the assessment panel, and the `Offen` list puts full texts first. The interface and rule decisions are provisional in [[plan#Decisions taken]], and the self-test is recorded in [[testing#Run of 2 October 2026]]. A parallel session works on the branch `ui-evidence-map` in the worktree `FemPrompt_ui` on top of it, relabelling the reviewers and revising the Wissensnetz, Kategorien and Literaturbild views.
+
 ## Continuation point
 
-1. The two reviewers screen their assigned open papers in PRISM, in a local clone with Chrome or Edge, following the setup in the README and `docs/help.html#prism`.
-2. Merge the UI branch after the operator's review, then the operator review on the phone.
+1. Accept or revise the provisional decisions of 2 October in [[plan#Decisions taken]], take decision 21 on the assigned papers without paper text, give the second reviewer write access to the repository, then merge `prism-folder-guidance`, the UI branch and `ui-evidence-map` and push, so a fresh clone carries the reviewer start.
+2. The two reviewers screen their assigned open papers in PRISM, started with `start-prism.cmd` in a local clone, following the README and `docs/help.html#prism`. A first guided session with each is the remaining usability check. Then the operator review on the phone.
 3. The domain experts take the spot checks in each run's `spot-check-sample.json` and decide the human and agent decision divergences the completion package lists.
 4. Build the partial-recode contract and recode the works coded under 1.3, and resolve the Work duplicates the run reported ([[plan#Analysis tool follow-ups]], [[plan#Source and corpus readiness]]).
 5. Write the answer drafts for SQ2 to SQ5 from the coded fields and continue the SQ1 answer under step 4 of [[plan#Answering the research questions]].
