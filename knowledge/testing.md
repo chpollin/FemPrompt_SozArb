@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-01
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 topics: ["[[Software Testing]]", "[[Research Software]]"]
@@ -188,6 +188,13 @@ Hash-bearing research artifacts use canonical LF text so their checksums remain 
 Run `npm run preview`, which starts `python -X utf8 -m src.publish.serve`, and open [the working application](http://127.0.0.1:8870/index.html), [PRISM](http://127.0.0.1:8870/prisma.html) or, after a build, [the result site](http://127.0.0.1:8870/results/index.html), which is served from `build/site/`. Use `npm run preview -- --port 8871` to select another port.
 
 `.github/workflows/quality.yml` runs the build, `npm run check`, the working-application browser test and the PRISM pilot in continuous integration. The manually dispatched `.github/workflows/pages.yml` runs on `main`, builds and checks the result, and uploads only `build/site/`. It takes effect once GitHub Actions is the repository's Pages source. On 1 October 2026 the repository became private while GitHub Pages stayed public and still served `docs/` from `main` through the branch build, including the working application and its data but not the git-ignored reading layer. Switching the Pages source requires the project owner's authorisation under [[plan]]. A local build does not update the live site, and passing local checks does not establish that either remote workflow has run.
+
+## Automation practice
+
+- Interface behaviour is verified through the jsdom harness or element references and test hooks, never through pixel clicks or screenshots, since clicks in a shared browser are unreliable and element references are independent of resolution.
+- Browser automation never triggers `confirm()` or `alert()` paths, because a blocking dialog stalls the run.
+- A subagent write guard matches file names, not file content, so a brief states every allowed write path and the orchestrator checks the actual changes against it.
+- Agent-written text files are normalised to LF before their hash is recorded, since the repository checks text out with LF.
 
 ## Change gates
 

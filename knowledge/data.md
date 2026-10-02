@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-01
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -32,9 +32,15 @@ Local sources recovered from retired worktrees retain their established relative
 
 The private preservation inventory is under `refactor-preservation/` in the directory returned by `git rev-parse --git-common-dir`. It records original paths, destinations, byte sizes and SHA-256 comparisons. Credentials remain at their original local location and are excluded from the file inventory. The consolidation recorded in [[journal]] preserved source bytes before retiring the worktrees.
 
+## External metadata quality
+
+Zotero exports and other external records can carry HTML markup in titles, unnormalised creator names and missing or wrong years, and a record can bind a text whose authors differ from its metadata. Matching therefore uses the established cascade with stable keys, never a title alone, and a metadata defect is corrected through the hash-bound correction contract, not in a projection.
+
 ## File naming and path length
 
 Every tracked repository-relative path stays at 120 characters or less, so a clone root of up to 139 characters remains below the Windows limit of 260 characters without `core.longpaths`. `tests/test_path_length.py` fails when a tracked path exceeds the limit and runs with `npm run check`.
+
+Python reads and writes text as UTF-8 with explicit encoding, since the Windows default code page CP1252 corrupts non-ASCII titles and quotations.
 
 File names derived from a title or an author-year-title label go through `src/file_naming.py`. Characters Windows forbids become hyphens. A stem of more than 72 characters keeps its prefix up to a word boundary and ends with a hyphen and the first six hexadecimal digits of the SHA-256 of the case-folded full stem. The rule is deterministic, so `generate_docs_data.py` still finds a legacy knowledge document under `docs/vault/Papers/` from the current title, and titles that share a long prefix stay distinct. `generate_vault_v2.py` and `download_zotero_pdfs.py` apply the same rule to paper notes and acquisition stems.
 
