@@ -34652,7 +34652,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:51edf04756bd4db3b9078830e72bf9761c16422454d1584a786c884fd91662a7",
+  "source_fingerprint": "sha256:de68581c59a19bccdc987d6cffa04b665e91c452492112bd149366963457e63e",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -37932,7 +37932,7 @@
     },
     {
       "path": "research-vault/40_output/paper/paper.md",
-      "sha256": "2c2b86926d9a6fe2448b27a2f57adb5505a29f16d89956a350a97c7c09c8aaff"
+      "sha256": "fd3294771bb75b317ab653b2cd093e69b1ae00897c4dacf01fe6b8cfbd335ae9"
     },
     {
       "path": "src/analysis/build_completion_package.py",
