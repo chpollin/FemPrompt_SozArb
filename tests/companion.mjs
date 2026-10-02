@@ -292,17 +292,25 @@ await check('label placement keeps two labels on the same curve apart', async ()
 await check('the tooltip position flips at the viewport edge and avoids a protected box', async () => {
   const size = { w: 200, h: 60 };
   const view = { w: 1000, h: 800 };
-  const corner = EC.wissensnetz.tipPosition({ x: 950, y: 780 }, size, view, []);
+  const corner = EC.wissensnetz.tipPosition({ x: 950, y: 780 }, size, view, [], []);
   const tipBox = { x: corner.left, y: corner.top, w: size.w, h: size.h };
   if (corner.left + size.w > view.w || corner.top + size.h > view.h || EC.wissensnetz.overlapArea(tipBox, { x: 944, y: 774, w: 12, h: 12 })) {
     throw new Error('no flip ' + JSON.stringify(corner));
   }
-  const avoid = EC.wissensnetz.tipPosition({ x: 400, y: 400 }, size, view, [{ x: 410, y: 410, w: 300, h: 100, weight: 1000 }]);
+  const avoid = EC.wissensnetz.tipPosition({ x: 400, y: 400 }, size, view, [{ x: 410, y: 410, w: 300, h: 100 }], []);
   if (EC.wissensnetz.overlapArea({ x: avoid.left, y: avoid.top, w: size.w, h: size.h }, { x: 410, y: 410, w: 300, h: 100 })) throw new Error('covers ' + JSON.stringify(avoid));
+  // A small selected dot outranks a large work list on every other corner.
+  const dot = { x: 640, y: 440, w: 10, h: 10 };
+  const list = [{ x: 0, y: 0, w: 600, h: 800 }, { x: 600, y: 0, w: 400, h: 420 }];
+  const kept = EC.wissensnetz.tipPosition({ x: 600, y: 400, w: 20, h: 20 }, size, view, [dot], list);
+  if (EC.wissensnetz.overlapArea({ x: kept.left, y: kept.top, w: size.w, h: size.h }, dot)) throw new Error('covers the selected node ' + JSON.stringify(kept));
 });
 
 await check('cell text reaches 4.5:1 on every fill of the heat scale', async () => {
   const C = EC.color;
+  // Reference values from WCAG itself, so a wrong luminance formula cannot pass.
+  if (Math.abs(C.contrastRatio([0, 0, 0], [255, 255, 255]) - 21) > 0.01) throw new Error('black on white is not 21:1');
+  if (Math.abs(C.contrastRatio(C.hexRgb('#767676'), [255, 255, 255]) - 4.54) > 0.01) throw new Error('#767676 on white is not 4.54:1');
   const bad = [];
   for (let h = 0; h <= 100; h += 1) {
     const fill = C.mixWithWhite('#2d6364', h / 100);
