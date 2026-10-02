@@ -163,3 +163,7 @@ Versionierte Dokumentation aller Prompts, die in der Pipeline und im Assessment 
 ## 2026-09-05 · PRISM-Verweise nach Wissenskonsolidierung
 
 Reviewer v1.2 und AI Agent Review v0.3 ersetzen die nicht mehr vorhandenen Abschnittsnummern B/B.1/C durch die aktuellen Überschriften des Update-Protokolls. Der Review-Prompt benennt außerdem die bestehenden Validatorfelder `result: agreed|resolved`, Inputs, Hashes und Summary ausdrücklich und trennt sie vom späteren Lifecycle-Ausgang `accepted`. Die Kriterien bleiben unverändert. Run-Template und Skill verwenden den bestehenden Run-Vertrag 1.3 und die bestehende Capture-Projektion 0.4. Frühere Promptdateien und abgeschlossene Laufmanifeste bleiben unverändert.
+
+## 2026-10-02 · Reviewer 1.4 für Codebuch 1.4.1
+
+Reviewer v1.4 nennt in Regelquellen, Arbeitsfolge und Coding-Paket das Codebuch 1.4.1, dessen drei Klarstellungen aus dem Pilotlauf der Operator angenommen hat. Arbeitsfolge, Paketschema 0.2 und Berichtsschema bleiben unverändert. AI Agent Review v0.4 liest die Codebuchversion aus dem Laufmanifest und bleibt in Kraft. Reviewer v1.3 bleibt als hashgebundene Provenienz des Pilotlaufs erhalten.
