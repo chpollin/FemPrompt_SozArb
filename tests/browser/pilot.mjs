@@ -257,7 +257,7 @@ async function screenPaper(paperSpec, decisionSpec) {
   if (decisionSpec.expected_decision === 'Include') {
     check(`${id}: a human Include offers no analysis coding (ADR-045)`, await page.evaluate(() =>
       !document.getElementById('pt-open-analysis') && !/Analysekodierung|Studientyp/.test(document.getElementById('pt-assess-col').textContent) &&
-      !/Analysekodierung/.test(document.getElementById('pt-save-hint')?.textContent || '')));
+      !/Analysekodierung/.test(document.getElementById('pt-actions-hint')?.textContent || '')));
   }
   await page.waitForSelector('#pt-record:not([disabled])', { timeout: 5000 });
   const dock = await page.evaluate(() => {
@@ -383,8 +383,8 @@ try {
   check('reviewer key: trimmed safe key persists and fixes the exact target path', await page.evaluate((key) =>
     window.__PRISMA_TEST__.getState().reviewer === key && document.querySelector('.pt-sync-identity code')?.textContent === `docs/data/screening/${key}.json`, opt.reviewer));
   check('save gate: the disk action stays disabled until the working folder is connected and says why', await page.evaluate(() =>
-    document.getElementById('pt-record')?.disabled && /Arbeitsordner verbinden/.test(document.getElementById('pt-save-hint')?.textContent || '') &&
-      /Arbeitsordner verbinden/.test(document.getElementById('pt-record').getAttribute('aria-label'))));
+    document.getElementById('pt-record')?.disabled && /Arbeitsordner verbinden/.test(document.getElementById('pt-actions-hint')?.textContent || '') &&
+      /Arbeitsordner verbinden/.test(document.getElementById('pt-record').title)));
   check('folder setup: exactly one folder action is offered before connection', (await page.$$('.pt-folder-action')).length === 1);
   await connectFixtureStorage(page, opt.reviewer);
   check('daily storage: compact status replaces setup, with only the secondary folder-change affordance', await page.evaluate(() =>
@@ -406,10 +406,10 @@ try {
   check('edit toggle: opting back in resumes the same draft and connected working folder', await page.evaluate((draft) =>
     window.__PRISMA_TEST__.canEdit() && JSON.stringify(window.__PRISMA_TEST__.getWork()) === draft &&
       !!document.querySelector('.pt-sync-ready') && !!document.querySelector('#pt-record'), draftBeforeReading));
-  check('save action: exactly one accessible disk button sits beside the paper position and none is in the rail', await page.evaluate(() => {
+  check('save action: exactly one labelled save button sits in the assessment dock, described by its hint', await page.evaluate(() => {
     const all = document.querySelectorAll('#pt-record'); const button = all[0];
-    return all.length === 1 && button.closest('.pt-ws-bar') && !document.querySelector('#pt-assess-col #pt-record') &&
-      /speichern/i.test(button.getAttribute('aria-label')) && button.title === button.getAttribute('aria-label') && !!button.querySelector('svg');
+    return all.length === 1 && !!button.closest('#pt-assess-col .pt-action-dock') && button.textContent.trim() === 'Speichern' &&
+      button.getAttribute('aria-describedby') === 'pt-actions-hint' && /Strg\+S/.test(button.title);
   }));
   const readingLayout = await page.evaluate(() => {
     const read = document.querySelector('.pt-read'), surface = document.querySelector('.pt-reading-surface');
@@ -1246,7 +1246,7 @@ try {
     chips: document.querySelectorAll('#pt-assess-col .pt-dim .category-chip').length,
     basis: document.getElementById('pt-text-basis')?.textContent
   }));
-  check('panel in Bearbeiten: all ten toggles and the text basis of the draft', editRail.chips === 10 && editRail.basis === 'Textbasis: Volltext', editRail);
+  check('panel in Bearbeiten: all ten toggles, and a full-text basis needs no mark', editRail.chips === 10 && editRail.basis === undefined, editRail);
   const counter =await reviewPage.evaluate(() => ({ bar: document.querySelector('.pt-nav-tools .pt-ws-bar')?.textContent || '', done: !!document.querySelector('.pt-ws-done') }));
   check('position bar: no "n von N erfasst" counter repeats the Erfasst facet', !counter.done && !/erfasst/.test(counter.bar), counter);
   const closed = await reviewPage.evaluate(() => ({ open: document.getElementById('pt-verdict-edit').open,
@@ -1399,7 +1399,7 @@ try {
     pending: window.__PRISMA_TEST__.readingPending(),
     derived: window.__PRISMA_TEST__.finalDecisionOf(window.__PRISMA_TEST__.getWork().cats, false),
     disabled: document.getElementById('pt-record').disabled,
-    hint: (document.getElementById('pt-save-hint') || {}).textContent
+    hint: (document.getElementById('pt-actions-hint') || {}).textContent
   }));
   check('gate: an Include-deriving state cannot be committed while the text is loading', gated.pending && gated.derived === 'Include' && gated.disabled && /lädt/.test(gated.hint || ''), gated);
   await a.pg.waitForFunction(() => !window.__PRISMA_TEST__.readingPending(), null, { timeout: 8000 });

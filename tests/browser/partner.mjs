@@ -4,15 +4,14 @@
 //
 //   node tests/browser/partner.mjs --clone C:\tmp\fp-partner-<date> --base http://127.0.0.1:<port> --reviewer sabine
 //
-// Everything a reviewer does runs in Chromium against the real build, except the native
-// folder picker and its permission prompt, which need a user gesture that automation
-// cannot give. The script replaces window.showDirectoryPicker with a handle whose reads
-// and writes go to the clone on disk through a bridge confined to the clone directory, so
-// the application's own File System Access write path produces the real reviewer file.
-// It never commits, pushes or deletes anything.
+// Everything a reviewer does runs in Chromium against the real build and the real server,
+// which writes the reviewer file into the clone itself, so no folder picker or browser
+// permission is involved. Writes are read from `git status` of the clone. The script never
+// commits, pushes or deletes anything.
 import { chromium } from 'playwright';
-import { readFileSync, writeFileSync, existsSync, statSync, readdirSync, mkdirSync } from 'node:fs';
-import { resolve, sep, join, dirname } from 'node:path';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
+import { resolve, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const args = process.argv.slice(2);
@@ -28,13 +27,10 @@ const root = resolve(opt.clone);
 const outDir = resolve(opt.out || join(dirname(fileURLToPath(import.meta.url)), 'out', 'partner'));
 mkdirSync(outDir, { recursive: true });
 
-// the bridge resolves every path below the clone root and refuses anything outside it
-const inside = (rel) => {
-  const p = resolve(root, '.' + sep + String(rel).replace(/^\/+/, ''));
-  if (p !== root && !p.startsWith(root + sep)) throw new Error('outside the clone: ' + rel);
-  return p;
-};
-const writes = [];
+// untracked or changed paths of the clone, so the run can name exactly what it wrote
+const changed = () => execFileSync('git', ['-C', root, 'status', '--porcelain', '--untracked-files=all'], { encoding: 'utf8' })
+  .split('\n').filter(Boolean).map((line) => line.slice(3));
+const before = new Set(changed());
 const checks = [];
 let failed = 0;
 function check(name, ok, detail) {
@@ -45,57 +41,6 @@ function check(name, ok, detail) {
 
 const browser = await chromium.launch();
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, locale: 'de-AT' });
-await context.exposeFunction('__fsList', (rel) => readdirSync(inside(rel), { withFileTypes: true })
-  .map((d) => ({ name: d.name, kind: d.isDirectory() ? 'directory' : 'file' })));
-await context.exposeFunction('__fsDir', (rel, create) => {
-  const p = inside(rel);
-  if (existsSync(p)) return statSync(p).isDirectory();
-  if (!create) return false;
-  mkdirSync(p, { recursive: true });
-  return true;
-});
-await context.exposeFunction('__fsFile', (rel, create) => {
-  const p = inside(rel);
-  if (existsSync(p)) return statSync(p).isFile();
-  if (!create) return false;
-  writeFileSync(p, '');
-  writes.push(rel);
-  return true;
-});
-await context.exposeFunction('__fsRead', (rel) => { const p = inside(rel); return existsSync(p) ? readFileSync(p, 'utf8') : null; });
-await context.exposeFunction('__fsWrite', (rel, text) => { writeFileSync(inside(rel), text); writes.push(rel); return true; });
-// Own properties stay plain strings, so the handle survives the structured clone into
-// IndexedDB that connectRepo performs; the methods live on the prototype.
-await context.addInitScript(() => {
-  const notFound = () => new DOMException('not found', 'NotFoundError');
-  class FileH {
-    constructor(path, name) { this.kind = 'file'; this.name = name; this.path = path; }
-    async getFile() {
-      const text = await window.__fsRead(this.path);
-      if (text === null) throw notFound();
-      return { name: this.name, size: text.length, lastModified: Date.now(), text: async () => text };
-    }
-    async createWritable() {
-      let body = '';
-      const path = this.path;
-      return { async write(value) { body = String(value); }, async close() { await window.__fsWrite(path, body); } };
-    }
-    async isSameEntry(other) { return !!other && other.path === this.path; }
-  }
-  class DirH {
-    constructor(path, name) { this.kind = 'directory'; this.name = name; this.path = path; }
-    async getDirectoryHandle(name, o) { if (!(await window.__fsDir(this.path + '/' + name, !!(o && o.create)))) throw notFound(); return new DirH(this.path + '/' + name, name); }
-    async getFileHandle(name, o) { if (!(await window.__fsFile(this.path + '/' + name, !!(o && o.create)))) throw notFound(); return new FileH(this.path + '/' + name, name); }
-    async *values() {
-      for (const e of await window.__fsList(this.path)) yield e.kind === 'file' ? new FileH(this.path + '/' + e.name, e.name) : new DirH(this.path + '/' + e.name, e.name);
-    }
-    async queryPermission() { return 'granted'; }
-    async requestPermission() { return 'granted'; }
-    async isSameEntry(other) { return !!other && other.path === this.path; }
-  }
-  window.showDirectoryPicker = async () => { window.__pickerCalls = (window.__pickerCalls || 0) + 1; return new DirH('', 'fp-partner-clone'); };
-});
-
 const page = await context.newPage();
 const errors = [];
 page.on('pageerror', (e) => errors.push(String(e)));
@@ -109,15 +54,15 @@ try {
 
   await page.getByRole('button', { name: 'Bearbeiten', exact: true }).click();
   await page.waitForFunction(() => window.__PRISMA_TEST__.canEdit());
-  await page.fill('#pt-reviewer-key', key);
-  await page.click('.pt-reviewer-set');
+  await page.click(`.pt-reviewer-choice [data-reviewer="${key}"]`);
   await page.waitForFunction((k) => window.__PRISMA_TEST__.getState().reviewer === k, key);
-  check('2 Bearbeiten: the reviewer key is set', (await page.evaluate(() => window.__PRISMA_TEST__.getState().reviewer)) === key);
+  check('2 Bearbeiten: the reviewer is chosen by name from the assignment, without typing a key',
+    (await page.evaluate(() => window.__PRISMA_TEST__.getState().reviewer)) === key);
 
-  await page.click('.pt-folder-action');
-  await page.waitForFunction(() => /verbunden/.test(document.getElementById('pt-save-status')?.textContent || ''), null, { timeout: 15000 });
-  check('3 folder: the folder action calls the picker once and connects the clone root (picker and permission prompt stubbed)',
-    (await page.evaluate(() => window.__pickerCalls)) === 1, await page.textContent('#pt-save-status'));
+  await page.waitForFunction(() => !!window.__PRISMA_TEST__.screeningHandle(), null, { timeout: 15000 });
+  check('3 folder: the clone server is the working folder, with no folder action or picker offered',
+    await page.evaluate(() => window.__PRISMA_TEST__.screeningHandle().server === true &&
+      !document.querySelector('.pt-folder-action, .pt-change-folder')));
 
   await page.click('.pt-status-seg [data-status="offen"]');
   await page.click(`.pt-assignee-seg [data-assignee="${key}"]`);
@@ -152,7 +97,7 @@ try {
   await page.keyboard.press('Control+S');
   await page.waitForFunction(() => /Gespeichert in/.test(document.getElementById('pt-save-status')?.textContent || ''), null, { timeout: 15000 });
   await page.screenshot({ path: join(outDir, 'partner-after-save.png') });
-  check('5 assess: one pinned Paper Beleg and a reason, saved with Ctrl+S', /Gespeichert in docs\/data\/screening\//.test(await page.textContent('#pt-save-status')), { paperId, term, status: await page.textContent('#pt-save-status') });
+  check('5 assess: one pinned Paper Beleg and a reason, saved with Ctrl+S', /Gespeichert in .+\/docs\/data\/screening\//.test(await page.textContent('#pt-save-status')), { paperId, term, status: await page.textContent('#pt-save-status') });
 
   const file = join(root, 'docs/data/screening', key + '.json');
   const written = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : null;
@@ -161,8 +106,8 @@ try {
     written && written.schema === 'femprompt-prisma-reviewer/0.5' && written.reviewer === key && rec && rec.decision === 'Exclude' &&
       rec.reason === 'Not_relevant_topic' && (rec.evidence.Soziale_Arbeit || []).length === 1 && rec.actor === 'human',
     { schema: written && written.schema, reviewer: written && written.reviewer, rec });
-  const distinct = Array.from(new Set(writes));
-  check('7 writes: the application wrote only the reviewer file', distinct.length === 1 && distinct[0] === `/docs/data/screening/${key}.json`, distinct);
+  const writtenPaths = changed().filter((path) => !before.has(path));
+  check('7 writes: the run changed only the reviewer file', writtenPaths.length === 1 && writtenPaths[0] === `docs/data/screening/${key}.json`, writtenPaths);
   // the saved paper leaves Offen; under Erfasst it is listed with the PRISM capture mark
   await page.click('.pt-status-seg [data-status="erfasst"]');
   check('8 list: the saved paper moves from Offen to Erfasst with its capture mark', await page.evaluate((id) => {
@@ -177,7 +122,7 @@ try {
   console.error('driver exception:', e);
   try { await page.screenshot({ path: join(outDir, 'partner-error.png') }); } catch (_) {}
 } finally {
-  writeFileSync(join(outDir, 'partner-trace.json'), JSON.stringify({ clone: root, base: opt.base, reviewer: key, paperId, writes, checks }, null, 2) + '\n');
+  writeFileSync(join(outDir, 'partner-trace.json'), JSON.stringify({ clone: root, base: opt.base, reviewer: key, paperId, checks }, null, 2) + '\n');
   await browser.close();
 }
 console.log(`\n${failed ? 'FAIL' : 'PASS'} partner run: ${checks.filter((c) => c.ok).length}/${checks.length} checks, paper ${paperId}, out: ${outDir}`);

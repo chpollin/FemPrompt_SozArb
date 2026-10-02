@@ -231,6 +231,7 @@ const lastDiskText = {};       // reviewerKey -> file text last read or written 
 let agentTrack = { reviewer: null, records: {} };
 let servedAgentEnvelope = null; // HTTP-served agent track, used while no folder supplies one
 let assignment = null;          // { reviewers: [{ key, label }], byPaper: { paperId -> key } } or null
+let localServer = null;         // { name, path, reviewers } of the clone serving this page, null elsewhere
 const verificationRecords = {}; // reviewerKey -> verification events this reviewer recorded
 // Unsaved drafts per paper. A draft starts as a copy of the current annotation and is
 // kept (and persisted in the browser) only once the reviewer changes something.
@@ -611,7 +612,8 @@ function reservedKey(key) {
 
 function reviewerPath(key) {
     if (!key) return 'Kürzel festlegen';
-    return trialMode ? 'isolierter Testlauf/' + key + '.json' : 'docs/data/screening/' + key + '.json';
+    if (trialMode) return 'isolierter Testlauf/' + key + '.json';
+    return (localServer ? localServer.name + '/' : '') + 'docs/data/screening/' + key + '.json';
 }
 
 // The target path already names docs/data/screening; beside it only the clone or the
@@ -657,7 +659,7 @@ function selectReviewer(key) {
             ? 'Isolierter Testlauf bereit. Ergebnisse bleiben in diesem Browser-Ursprung.'
             : (screeningHandle
                 ? 'Bereit: ' + reviewerPath(normalized) + ' ist verbunden.'
-                : 'Arbeitsordner wählen.'))));
+                : (localServer ? 'Projektordner wird verbunden.' : 'Arbeitsordner wählen.')))));
     return true;
 }
 
@@ -896,7 +898,9 @@ async function reconnectRepo() {
 }
 
 async function restoreRepoConnection() {
-    if (!canEdit() || !fsSupported()) return;
+    if (!canEdit()) return;
+    if (localServer) return connectLocalServer();
+    if (!fsSupported()) return;
     try {
         const handle = await idbGet('dir');
         if (!handle || !canEdit()) return;
@@ -1213,7 +1217,82 @@ function loadFulltextManifest() {
 // Editing writes into a local clone through File System Access. The published copy
 // has neither, so it renders read-only without a mode switch.
 function localEditingAvailable() {
-    return fsSupported() && manifestReachable;
+    return (fsSupported() || !!localServer) && manifestReachable;
+}
+
+// src/publish/serve.py runs inside the clone and writes the reviewer files itself, so a
+// reviewer never picks a folder or grants the browser access. It marks its responses,
+// so GitHub Pages and other static servers are recognised without a failing request,
+// and the folder picker stays the fallback there.
+function loadLocalServer() {
+    if (acceptanceMode || typeof fetch !== 'function') return Promise.resolve(null);
+    return fetch('prisma.html', { method: 'HEAD', cache: 'no-store' })
+        .then(function(r) { return r.headers.get('X-Prism-Clone') ? fetch('/__prism/clone', { cache: 'no-store' }) : null; })
+        .then(function(r) { return r && r.ok ? r.json() : null; })
+        .catch(function() { return null; })
+        .then(function(info) {
+            localServer = info && typeof info.name === 'string' && Array.isArray(info.reviewers) ? info : null;
+            return localServer;
+        });
+}
+
+// The surface of a File System Access directory handle that the read, merge and write
+// path uses, backed by the server, so that path runs unchanged.
+function serverFolderHandle(info) {
+    const base = '/__prism/screening/';
+    function fileHandle(name) {
+        return {
+            kind: 'file',
+            name: name,
+            getFile: function() {
+                return fetch(base + encodeURIComponent(name), { cache: 'no-store' }).then(function(r) {
+                    // an absent file reads as empty, which the readers treat as absent
+                    if (r.status === 404) return '';
+                    if (!r.ok) throw new Error(name + ' ist nicht lesbar (' + r.status + ').');
+                    return r.text();
+                }).then(function(text) { return { text: function() { return Promise.resolve(text); } }; });
+            },
+            createWritable: function() {
+                let body = '';
+                return Promise.resolve({
+                    write: function(value) { body = String(value); return Promise.resolve(); },
+                    close: function() {
+                        return fetch(base + encodeURIComponent(name), {
+                            method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: body
+                        }).then(function(r) {
+                            if (r.ok) return;
+                            return r.text().then(function(message) { throw new Error(message || ('Server antwortet ' + r.status + '.')); });
+                        }, function() { throw new Error('Der lokale Server ist nicht erreichbar. Läuft das Terminalfenster noch?'); });
+                    }
+                });
+            }
+        };
+    }
+    return {
+        kind: 'directory',
+        name: info.name,
+        server: true,
+        getFileHandle: function(name) { return Promise.resolve(fileHandle(name)); },
+        values: async function*() {
+            const r = await fetch(base, { cache: 'no-store' });
+            if (!r.ok) throw new Error('Der Ordner docs/data/screening ist nicht lesbar.');
+            const names = await r.json();
+            for (const name of names) yield fileHandle(name);
+        },
+        isSameEntry: function(other) { return Promise.resolve(!!other && other.server === true && other.name === info.name); }
+    };
+}
+
+async function connectLocalServer() {
+    if (!canEdit() || !localServer) return;
+    try {
+        await connectHandle(serverFolderHandle(localServer));
+    } catch (e) {
+        console.warn('[PRISMA] local server connect failed:', e);
+        screeningHandle = null;
+        setSaveStatus('error', 'Projektordner nicht lesbar: ' + (e.message || e) + '. Browser-Zwischenstand bleibt erhalten.');
+        renderData(document.getElementById('pt-data-inline'));
+    }
 }
 
 function hasFullText(p) {
@@ -1929,7 +2008,7 @@ window.initializePrisma = function() {
     }
     // The first paint waits for the manifest and the served agent track: the manifest
     // decides whether editing is offered, the track which annotation a paper shows.
-    Promise.all([loadFulltextManifest(), loadServedAgentTracks(), loadAssignment()]).then(function() {
+    Promise.all([loadFulltextManifest(), loadServedAgentTracks(), loadAssignment(), loadLocalServer()]).then(function() {
         // Trial and agent URLs explicitly select an authoring workflow. ?verify=1 is the
         // former verification entry and opens Bearbeiten where editing is available.
         // Ordinary links, including paper deep links and cached reviewer profiles,
@@ -2415,19 +2494,24 @@ function renderScreening() {
 
 // ---- left: corpus navigator with filters and full-text search ----
 
+// The left column keeps the bar as a slot; the save action moved into the assessment
+// dock beside the decision it writes.
 function positionBarHtml() {
-    let html = '<div class="pt-ws-bar">';
-    if (canEdit() && !acceptanceMode) {
-        const gate = saveGate(papers[state.index]);
-        html += '<span class="pt-spacer"></span>';
-        if (gate.storage) html += '<span class="pt-save-hint" id="pt-save-hint">' + EC.escapeHtml(gate.storage) + '</span>';
-        const label = gate.ok ? gate.label : 'Speichern nicht möglich: ' + (gate.storage || gate.reasons[0] || gate.label);
-        html += '<button class="pt-save-icon" id="pt-record" type="button" aria-keyshortcuts="Control+S" aria-label="' + EC.escapeHtml(label) +
-            '" title="' + EC.escapeHtml(label) + '"' + (gate.ok ? '' : ' disabled') + '>' +
-            '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 3h12l2 2v16H5V3Zm2 2v5h9V5H7Zm1 9v5h8v-5H8Z"></path></svg></button>';
-    }
-    html += '</div>';
-    return html;
+    return '<div class="pt-ws-bar"></div>';
+}
+
+// The one save action (ADR-029 as revised): a labelled button in the dock. The missing
+// precondition stands in the dock hint, which the button names as its description.
+function saveButtonHtml(p) {
+    const gate = saveGate(p);
+    const title = gate.ok ? gate.label : 'Speichern nicht möglich: ' + (gate.storage || gate.reasons[0] || gate.label);
+    return '<button class="pt-save-btn" id="pt-record" type="button" aria-keyshortcuts="Control+S" aria-describedby="pt-actions-hint" title="' +
+        EC.escapeHtml(title + ' (Strg+S)') + '"' + (gate.ok ? '' : ' disabled') + '>Speichern</button>';
+}
+
+function dockHintText(p) {
+    const gate = saveGate(p);
+    return (gate.storage ? [gate.storage] : []).concat(gate.reasons).join('. ');
 }
 
 function filtersHtml() {
@@ -2541,9 +2625,6 @@ function refreshCorpusList() {
     }
     const nav = document.querySelector('.pt-nav-tools .pt-ws-bar');
     if (nav) nav.outerHTML = positionBarHtml();
-    const bar = document.querySelector('.pt-nav-tools .pt-ws-bar');
-    const record = bar && bar.querySelector('#pt-record');
-    if (record) record.addEventListener('click', saveCurrent);
     const filters = document.querySelector('.pt-nav .pt-list-filters');
     if (filters) { filters.outerHTML = filtersHtml(); bindFilters(); }
 }
@@ -3749,7 +3830,8 @@ function textBasisHtml(subject, editable, record) {
     let label = null;
     if (editable) label = readingPending ? 'Text lädt' : TEXT_SOURCE_LABELS[currentTextSource];
     else if (subject.kind === 'own' && record) label = TEXT_SOURCE_LABELS[record.text_source];
-    return label ? '<p class="pt-text-basis" id="pt-text-basis">Textbasis: ' + label + '</p>' : '';
+    // the full text is the normal case; only a weaker basis is marked
+    return label && label !== TEXT_SOURCE_LABELS.raw ? '<p class="pt-text-basis" id="pt-text-basis">Textbasis: ' + label + '</p>' : '';
 }
 
 function reasonChipsHtml(record, editable) {
@@ -3802,12 +3884,17 @@ function railHtml(p) {
     if (record && !(subject.kind === 'empty' && !work.dirty)) h += decisionBadgeHtml(record, subject.kind === 'own' || (editable && work.dirty));
     const draft = drafts[p.id];
     let provenance = provenanceLine(p, subject);
-    if (editable && work.dirty) provenance = subject.kind === 'empty' ? 'Neue Bewertung, nicht gespeichert' : provenance + ', geändert, nicht gespeichert';
+    // in Bearbeiten the mark beside the decision states the unsaved draft, so the line
+    // keeps only who decided; an empty draft has no one yet
+    if (editable && work.dirty && subject.kind === 'empty') provenance = '';
     else if (!editable && canEditAvailableDraft(draft)) provenance += ', Änderungen in Bearbeiten nicht gespeichert';
+    if (editable && work.dirty) h += '<span class="pt-save-mark is-dirty" role="img" aria-label="Nicht gespeichert" title="Nicht gespeichert"></span>';
+    else if (subject.kind === 'own' && !acceptanceMode) h += '<span class="pt-save-mark is-saved" role="img" aria-label="Gespeichert" title="Gespeichert">' +
+        '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span>';
     h += '</div>';
     const verdict = expertAdoptedExclusion(record);
     if (verdict) h += verdictLineHtml(record);
-    h += '<p class="pt-provenance" id="pt-provenance">' + EC.escapeHtml(provenance) + '</p>';
+    if (provenance) h += '<p class="pt-provenance" id="pt-provenance">' + EC.escapeHtml(provenance) + '</p>';
     h += textBasisHtml(subject, editable, record);
     h += '<div class="pt-rail-body">';
     const cats = record ? (record.categories || {}) : {};
@@ -3838,13 +3925,12 @@ function railHtml(p) {
 
 function dockHtml(p, subject, editable) {
     let h = '<div class="pt-action-dock">';
-    if (editable) {
-        const gate = saveGate(p);
-        h += '<p class="pt-actions-hint" id="pt-actions-hint">' + EC.escapeHtml(gate.reasons.join('. ')) + '</p>';
-    }
+    const saving = canEdit() && !acceptanceMode;
+    if (saving) h += '<p class="pt-actions-hint" id="pt-actions-hint">' + EC.escapeHtml(dockHintText(p)) + '</p>';
     h += '<div class="pt-actions">';
-    if (editable && work.dirty) h += '<button type="button" class="pt-link-btn" id="pt-discard">Änderungen verwerfen</button>';
+    if (editable && work.dirty) h += '<button type="button" class="pt-link-btn" id="pt-discard" aria-label="Änderungen verwerfen" title="Änderungen verwerfen">Verwerfen</button>';
     h += '<span class="pt-spacer"></span>';
+    if (saving) h += saveButtonHtml(p);
     h += '<button type="button" class="pt-next-btn" id="pt-next">' + (acceptanceMode ? 'Anderer Abnahmefall' : 'Nächstes offen') + ' &rarr;</button></div>';
     return h + '</div>';
 }
@@ -3950,12 +4036,15 @@ function refreshAssess() {
     }
 }
 
-// The position bar carries the save action; it is refreshed without re-rendering the list.
+// The dock carries the save action; it is refreshed without re-rendering the rail.
 function refreshSaveGate() {
-    const bar = document.querySelector('.pt-nav-tools .pt-ws-bar');
-    if (!bar) return;
-    const hadFocus = document.activeElement && document.activeElement.id === 'pt-record';
-    bar.outerHTML = positionBarHtml();
+    const current = document.getElementById('pt-record');
+    const p = papers[state.index];
+    if (!current || !p) return;
+    const hadFocus = document.activeElement === current;
+    current.outerHTML = saveButtonHtml(p);
+    const hint = document.getElementById('pt-actions-hint');
+    if (hint) hint.textContent = dockHintText(p);
     const record = document.getElementById('pt-record');
     if (record) {
         record.addEventListener('click', saveCurrent);
@@ -4152,7 +4241,7 @@ function bindAssess(p) {
 // Typing keeps the caret: only the hint and the save gate are refreshed.
 function syncDockHint(p) {
     const hint = document.getElementById('pt-actions-hint');
-    if (hint) hint.textContent = saveGate(p).reasons.join('. ');
+    if (hint) hint.textContent = dockHintText(p);
     refreshSaveGate();
 }
 
@@ -4414,6 +4503,21 @@ function reviewerKeyFormHtml(value) {
         '<span class="pt-reviewer-error" id="pt-reviewer-error" role="status"></span></form>';
 }
 
+// The local server writes only files of assigned reviewers, so the choice is offered as
+// those names instead of a free key a typo would turn into a file nobody reads.
+function rosterKeys() {
+    if (!localServer || !assignment) return [];
+    return assignment.reviewers.filter(function(r) { return localServer.reviewers.indexOf(r.key) !== -1 && !reservedKey(r.key); });
+}
+
+function reviewerChoiceHtml() {
+    return '<div class="pt-reviewer-choice" role="group" aria-label="Wer bewertet?">' +
+        rosterKeys().map(function(r) {
+            return '<button type="button" class="pt-btn" data-reviewer="' + EC.escapeHtml(r.key) + '"' +
+                (state.reviewer === r.key ? ' aria-pressed="true"' : '') + '>' + EC.escapeHtml(r.label) + '</button>';
+        }).join('') + '</div>';
+}
+
 // ready states need no standing line; dirty, error, saving and saved states do
 function saveStatusShown(kind) { return ['dirty', 'error', 'saving', 'saved'].indexOf(kind) !== -1; }
 
@@ -4443,6 +4547,27 @@ function renderData(targetEl) {
     }
     if (!canEdit()) { el.innerHTML = ''; el.hidden = true; return; }
     el.hidden = false;
+    // a key remembered from another setup that the server would refuse is chosen again
+    const roster = rosterKeys();
+    const unassigned = roster.length && !roster.some(function(r) { return r.key === state.reviewer; });
+    if ((!state.reviewer || changingKey || unassigned) && roster.length) {
+        el.innerHTML = reviewerChoiceHtml() + statusLineHtml();
+        const group = el.querySelector('.pt-reviewer-choice');
+        if (changingKey) {
+            group.insertAdjacentHTML('beforeend', '<button type="button" class="pt-link-btn pt-key-cancel">Abbrechen</button>');
+            group.querySelector('.pt-key-cancel').addEventListener('click', function() { changingKey = false; renderData(el); });
+        }
+        group.querySelectorAll('[data-reviewer]').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                if (!selectReviewer(btn.dataset.reviewer)) return;
+                changingKey = false;
+                if (screeningHandle) setConnectedSaveStatus();
+                renderData(el);
+                renderScreening();
+            });
+        });
+        return;
+    }
     if (!state.reviewer || changingKey) {
         el.innerHTML = reviewerKeyFormHtml(changingKey ? state.reviewer : '') + statusLineHtml();
         const form = el.querySelector('#pt-reviewer-setup');
@@ -4471,15 +4596,26 @@ function renderData(targetEl) {
         return;
     }
 
-    const identity = '<span class="pt-sync-identity"><strong>' + EC.escapeHtml(state.reviewer) + '</strong>' +
-        '<code>' + EC.escapeHtml(reviewerPath(state.reviewer)) + '</code></span>' +
-        (trialMode ? '' : '<button type="button" class="pt-link-btn pt-change-key">Kürzel ändern</button>');
+    // with the server as folder the person is the whole setup; the target file stays one
+    // hover away and is named again by every save result
+    const person = roster.find(function(r) { return r.key === state.reviewer; });
+    const identity = person
+        ? '<span class="pt-sync-identity" title="' + EC.escapeHtml(reviewerPath(state.reviewer)) + '"><strong>' + EC.escapeHtml(person.label) + '</strong></span>' +
+            '<button type="button" class="pt-link-btn pt-change-key">Wechseln</button>'
+        : '<span class="pt-sync-identity"><strong>' + EC.escapeHtml(state.reviewer) + '</strong>' +
+            '<code>' + EC.escapeHtml(reviewerPath(state.reviewer)) + '</code></span>' +
+            (trialMode ? '' : '<button type="button" class="pt-link-btn pt-change-key">Kürzel ändern</button>');
     let h;
     if (trialMode) {
         h = '<div class="pt-sync-ready pt-trial-ready">' + identity +
             '<span class="pt-folder-status">Agentischer Testlauf, isolierter Browser-Zwischenstand</span>' + statusLineHtml() +
             '<button class="pt-btn pt-trial-export" type="button">Testdaten exportieren</button>' +
             '<span class="pt-trial-note">Keine Forschungsdaten werden geschrieben.</span></div>';
+    } else if (localServer) {
+        // the server is the folder; nothing to choose, only a failed read to retry
+        h = '<div class="pt-sync-ready">' + identity +
+            (screeningHandle || connecting ? '' : '<button class="pt-btn pt-server-retry" type="button">Erneut verbinden</button>') +
+            statusLineHtml() + '</div>';
     } else if (screeningHandle) {
         h = '<div class="pt-sync-ready">' + identity +
             '<span class="pt-folder-status">' + EC.escapeHtml(folderNameLabel()) +
@@ -4505,6 +4641,8 @@ function renderData(targetEl) {
     });
     const change = el.querySelector('.pt-change-folder');
     if (change) change.addEventListener('click', connectRepo);
+    const retry = el.querySelector('.pt-server-retry');
+    if (retry) retry.addEventListener('click', connectLocalServer);
     const folderAction = el.querySelector('.pt-folder-action');
     if (folderAction) folderAction.addEventListener('click', storedHandleAvailable ? reconnectRepo : connectRepo);
     const changeKey = el.querySelector('.pt-change-key');

@@ -115,17 +115,17 @@ The automated suites cover the following contracts.
 
 ## Manual acceptance boundary
 
-The native browser permission dialogue for the File System Access API remains a manual environment check because headless automation cannot grant the browser-owned permission. `tests/manual-checklist.md` defines that check, and the [partner acceptance run](#partner-acceptance-run) covers everything after the picker. The independent acceptance review of the result site, the project owner's review on a phone and the later acceptance session with the domain experts are manual procedures. Domain-expert usability and scholarly verification are research activities and therefore remain outside technical test success. A green `npm run check` establishes none of them.
+The native browser permission dialogue for the File System Access API, which since ADR-047 serves only as the fallback for a static server, remains a manual environment check because headless automation cannot grant the browser-owned permission. `tests/manual-checklist.md` defines that check, and the [partner acceptance run](#partner-acceptance-run) covers the reviewer path through the local server. The independent acceptance review of the result site, the project owner's review on a phone and the later acceptance session with the domain experts are manual procedures. Domain-expert usability and scholarly verification are research activities and therefore remain outside technical test success. A green `npm run check` establishes none of them.
 
 ## Partner acceptance run
 
-The run reproduces the workflow of the two domain reviewers in a fresh clone of the private repository, from the build to the reviewer file that GitHub Desktop would commit. It clones from a local repository path into a short directory outside the working tree, so nothing leaves the machine, builds there, serves the clone with `python -X utf8 -m src.publish.serve --port <port>` and then runs
+The run reproduces the workflow of the two domain reviewers in a fresh clone of the private repository, from the build to the reviewer file that GitHub Desktop would commit. It clones into a short directory outside the working tree, builds there, serves the clone with `python -X utf8 -m src.publish.serve --port <port>` and then runs
 
 ```sh
-node tests/browser/partner.mjs --clone C:\tmp\fp-partner-<date> --base http://127.0.0.1:<port> --reviewer sabine
+node tests/browser/partner.mjs --clone C:	mpp-partner-<date> --base http://127.0.0.1:<port> --reviewer sabine
 ```
 
-The script drives Chromium through the real build. It opens `prisma.html`, switches to `Bearbeiten`, sets the reviewer key, connects the working folder, narrows the list to `Offen` and the reviewer's `Zuteilung`, pins one Paper Beleg from the in-text search, chooses an exclusion reason, saves with Ctrl+S and reads the reviewer file back from disk. The native folder picker and its permission prompt need a user gesture that automation cannot give, so the script replaces `window.showDirectoryPicker` with a handle whose reads and writes reach the clone on disk through a bridge confined to the clone directory. Everything after the picker, including the resolution of `docs/data/screening` below the picked root and the write through `createWritable`, is the application's own code. The script never commits, pushes or deletes, and it records every write.
+The script drives Chromium through the real build and the real server. It opens `prisma.html`, switches to `Bearbeiten`, chooses the reviewer by name, checks that the server is the working folder without a folder action, narrows the list to `Offen` and the reviewer's `Zuteilung`, pins one Paper Beleg from the in-text search, chooses an exclusion reason, saves with Ctrl+S and reads the reviewer file back from disk. Since ADR-047 the server writes the file, so nothing in the browser is stubbed, and the written paths are read from `git status` of the clone. The script never commits, pushes or deletes.
 
 ### Run of 1 October 2026
 
@@ -146,9 +146,9 @@ Clone of the branch with the provisional PRISM fixes of the same day, made from 
 | `git status` | pass | `git status --short --untracked-files=all` shows exactly `?? docs/data/screening/sabine.json` |
 | List state | pass | the saved paper leaves `Offen` and appears under `Erfasst` with the PRISM capture mark |
 
-Two observations concern the hand-over. A reviewer who builds on Windows sees the four drifted data files as changed in GitHub Desktop, and the safe action is to discard them, as [Clean-checkout verification](#clean-checkout-verification) describes. A pushed reviewer file is an input of the build manifest, so `npm run check` on `main` reports a stale build until the next `npm run build`, which is an integration step for the operator and not for the reviewers.
+The run of 1 October predates ADR-047 and stubbed the folder picker. The run of 2 October, in a fresh clone from GitHub with the ADR-047 changes copied in, passed every step without a stub. The same clone showed that `npm install` rewrites `package-lock.json` and with it the build manifest, which is why the setup now uses `npm ci`. Two observations of the first run concern the hand-over. A reviewer who builds on Windows sees the four drifted data files as changed in GitHub Desktop, and the safe action is to discard them, as [Clean-checkout verification](#clean-checkout-verification) describes. A pushed reviewer file is an input of the build manifest, so `npm run check` on `main` reports a stale build until the next `npm run build`, which is an integration step for the operator and not for the reviewers.
 
-What stays manual for the reviewers is the native folder picker with the choice of the clone root and the browser's permission prompt for editing that folder, the renewed permission after the browser was closed ("Arbeitsordner einmal freigeben"), which the stubbed handle cannot reproduce after a reload, the commit and push in GitHub Desktop, and the visual and scholarly judgement of the assessment itself. `tests/manual-checklist.md` covers the native permission dialogue.
+What stays manual for the reviewers is starting the server, the commit and push in GitHub Desktop, and the visual and scholarly judgement of the assessment itself. The native folder picker remains only as the fallback for a static server, and `tests/manual-checklist.md` covers its permission dialogue.
 
 ## Independent acceptance review of the result site
 
@@ -169,7 +169,7 @@ Use Python 3.11 or later and Node.js 22. From the repository root, install the b
 
 ```sh
 python -m pip install -r requirements-build.txt
-npm install
+npm ci
 npx playwright install chromium
 npm run build
 npm run check

@@ -186,19 +186,18 @@
             <h3 id="prism"><i class="fas fa-list-check"></i> Prüfen in PRISM</h3>
             <p>PRISM öffnet im Modus &bdquo;Lesen&ldquo;. Der Umschalter &bdquo;Lesen | Bearbeiten&ldquo; steht oben
             in der linken Spalte, ältere Links mit <code>?verify=1</code> öffnen &bdquo;Bearbeiten&ldquo;. Bearbeiten
-            setzt eine lokale Projektkopie voraus, die veröffentlichte Seite zeigt PRISM nur zum Lesen.</p>
+            setzt den lokalen Server im eigenen Klon voraus, die veröffentlichte Seite zeigt PRISM nur zum Lesen.</p>
 
             <h4>Einrichtung</h4>
             <ol>
-                <li>Klone das Repositorium mit GitHub Desktop und wähle dessen Wurzelordner als Arbeitsordner. Die
-                    Volltexte legt die Projektleitung beim gemeinsamen Einrichten in den Klon.</li>
-                <li>Öffne PRISM in einem Chromium-Browser, denn das Speichern nutzt die File System Access API, und
-                    wähle &bdquo;Bearbeiten&ldquo;.</li>
-                <li>Lege einmal dein Kürzel fest, zwei bis zwölf Zeichen aus Buchstaben, Ziffern, Unterstrich und
-                    Bindestrich, beginnend mit einem Buchstaben. PRISM speichert es klein geschrieben und weist
-                    Kürzel von Agentenspuren wie <code>ar2</code> ab. &bdquo;Kürzel ändern&ldquo; ersetzt es.</li>
-                <li>Wähle einmal den Wurzelordner des lokalen Klons. PRISM schreibt ausschließlich
-                    <code>docs/data/screening/&lt;kürzel&gt;.json</code>.</li>
+                <li>Klone das Repositorium mit GitHub Desktop in einen kurzen Pfad wie <code>C:emprompt</code>.</li>
+                <li>Richte den Klon einmal ein und baue ihn, wie die README beschreibt. Der Build erzeugt die
+                    Volltexte für PRISM aus dem Repositorium.</li>
+                <li>Starte im Klon den lokalen Server mit <code>npm run preview</code> und öffne
+                    <code>http://127.0.0.1:8870/prisma.html</code>. Der Server läuft im Klon und schreibt deine
+                    Bewertungen dort hinein, einen Ordner wählst du nicht.</li>
+                <li>Wähle &bdquo;Bearbeiten&ldquo; und dann deinen Namen. PRISM schreibt ausschließlich
+                    <code>docs/data/screening/sabine.json</code> bzw. <code>susi.json</code>.</li>
             </ol>
 
             <h4>Arbeiten</h4>
@@ -218,12 +217,13 @@
             <p>Die offenen Dokumente sind zwischen Sabine und Susi aufgeteilt. Der Filter &bdquo;Zuteilung&ldquo;
             neben dem Statusfilter zeigt &bdquo;Alle&ldquo; oder nur die Dokumente einer Bearbeiterin und lässt sich
             mit Status und Kategorien kombinieren. Unter &bdquo;Erfasst&ldquo; entfällt er, weil die Zuteilung nur
-            offene Dokumente betrifft. Unter &bdquo;Alle&ldquo; nennt jeder Listeneintrag die Bearbeiterin. Als Kürzel gilt <code>sabine</code> bzw. <code>susi</code>.</p>
+            offene Dokumente betrifft. Unter &bdquo;Alle&ldquo; nennt jeder Listeneintrag die Bearbeiterin.</p>
             <p>Das Panel &bdquo;Bewertung&ldquo; zeigt die aktuelle Annotation mit einer Herkunftszeile, etwa
             &bdquo;Vorbelegt: Expert:innen-Entscheidung&ldquo;, &bdquo;Noch keine Bewertung&ldquo; oder
             &bdquo;Deine Bewertung, gespeichert &lt;Datum&gt;&ldquo;. Die aus den Kategorien abgeleitete
-            Entscheidung (Include, Exclude, Unclear) steht im Kopf des Panels, darunter die Textbasis der eigenen
-            Bewertung, Volltext oder nur Abstract. Im Modus &bdquo;Lesen&ldquo; nennt das Panel nur die vergebenen
+            Entscheidung (Include, Exclude, Unclear) steht im Kopf des Panels. Ein Punkt daneben heißt nicht
+            gespeichert, ein Haken gespeichert. Beruht die Bewertung nur auf dem Abstract oder auf keinem Papertext,
+            steht das als Warnung darunter. Im Modus &bdquo;Lesen&ldquo; nennt das Panel nur die vergebenen
             Kategorien. Im Modus &bdquo;Bearbeiten&ldquo; sind alle zehn Kategorien farbige Schalter in den Gruppen
             Gegenstand und Perspektive. Hat ein Schalter den Fokus oder steht der Mauszeiger darauf, erscheinen
             darunter die Definition aus dem Codebuch und was nicht zählt. Ein Klick setzt eine Kategorie auf ja oder
@@ -249,11 +249,12 @@
             Textfassung bleibt unverändert.</p>
             <p>PRISM zeigt keine KI-Vorbewertung. In PRISM vergibst du die Kategorien und entscheidest über Einschluss
             oder Ausschluss. Die Analysefelder eingeschlossener Dokumente kodieren ausschließlich KI-Agenten.</p>
-            <p>Gespeichert wird mit dem Diskettensymbol über der Dokumentliste oder mit Strg+S. Bei einer vorbelegten oder leeren
-            Bewertung schreibt es deine eigene Bewertung. Nicht gespeicherte Änderungen behält der Browser je
-            Dokument.</p>
+            <p>Gespeichert wird mit &bdquo;Speichern&ldquo; unten im Panel oder mit Strg+S. Was noch fehlt, steht
+            darüber. Bei einer vorbelegten oder leeren Bewertung schreibt es deine eigene Bewertung. Nicht
+            gespeicherte Änderungen behält der Browser je Dokument.</p>
             <p>Nach der Arbeit committest du in GitHub Desktop deine Datei
-            <code>docs/data/screening/&lt;kürzel&gt;.json</code> und pushst sie. PRISM führt keine Git-Aktion aus.</p>
+            <code>docs/data/screening/sabine.json</code> bzw. <code>susi.json</code> und pushst sie. Andere
+            geänderte Dateien committest du nicht. PRISM führt keine Git-Aktion aus.</p>
         </article>
     </main>
 

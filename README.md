@@ -22,18 +22,18 @@ Human reviewers screen in PRISM, the project's screening tool, with ten categori
 
 ## Working with the repository
 
-The repository is private. Full texts stay in it, and a local build turns them into the reading layer of PRISM. Editing in PRISM works only in a local clone opened in Chrome or Edge, because saving uses the browser's File System Access interface.
+The repository is private. Full texts stay in it, and a local build turns them into the reading layer of PRISM. Editing in PRISM works only in a local clone served by its own server, which writes the reviewer files into that clone, so any current browser works and no folder needs to be chosen.
 
 On Windows, clone into a short path such as `C:\femprompt`, for example with GitHub Desktop, because some paths come close to the Windows path limit. Install Python 3.11 or later from python.org and make sure `python` does not resolve to the Microsoft Store alias (Settings, Apps, Advanced app settings, App execution aliases). Node.js 22 is needed for the build and tests.
 
 ```sh
 python -m pip install -r requirements-build.txt
-npm install
+npm ci
 npm run build
 python -X utf8 -m src.publish.serve
 ```
 
-`npm run preview` starts the same server. PRISM then opens at http://127.0.0.1:8870/prisma.html and the working application at http://127.0.0.1:8870/index.html. Reviewers start from the PRISM section of the help page, `docs/help.html#prism`. Developers run `npm run check` after the build, and the full test setup is in [`knowledge/testing.md`](knowledge/testing.md).
+`npm ci` installs the locked dependencies without rewriting `package-lock.json`, which `npm install` may do and which would then show as a change in GitHub Desktop. `npm run preview` starts the same server. PRISM then opens at http://127.0.0.1:8870/prisma.html and the working application at http://127.0.0.1:8870/index.html. Reviewers start from the PRISM section of the help page, `docs/help.html#prism`. Developers run `npm run check` after the build, and the full test setup is in [`knowledge/testing.md`](knowledge/testing.md).
 
 GitHub Pages currently serves `docs/` from `main` at https://chpollin.github.io/FemPrompt_SozArb/. The public result site, the Evidence Companion, is built into `build/site/`, and switching Pages to it is an open decision.
 
