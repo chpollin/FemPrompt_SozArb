@@ -1830,6 +1830,9 @@ button.detail-action {
 .lk-row-head .category-chip { align-self: flex-start; }
 
 .lk-table .category-chip { white-space: normal; text-align: start; }
+/* Every column chip is as tall as a two-line label, so headers align whether or not a
+   label wraps. */
+.lk-col .category-chip { min-height: calc(2.4em + 0.2rem + 2px); }
 .lk-table th.is-cross .category-chip:not([aria-pressed="true"]) { border-color: var(--gray-700); background: var(--gray-100); }
 
 /* Marginal bar of a header: the category alone under the same lens. */
@@ -1881,15 +1884,12 @@ button.detail-action {
     border: 1px solid var(--gray-200);
     border-radius: var(--radius-sm);
     background: color-mix(in srgb, var(--primary-dark) var(--heat), #fff);
-    color: var(--gray-900);
+    /* --ink is chosen per cell by EC.color.inkOnHeat for 4.5:1 against the computed fill. */
+    color: var(--ink, var(--gray-900));
     font: inherit;
     cursor: pointer;
     transition: background-color 0.5s ease var(--delay, 0ms), color 0.5s ease var(--delay, 0ms), border-color 0.12s, box-shadow 0.12s;
 }
-
-/* The value is set large and bold, so either text colour meets the large-text contrast
-   on the fill it is switched against. */
-.lk-cell.is-dark { color: #fff; }
 
 .lk-val {
     font-size: 1.2rem;
@@ -2070,6 +2070,25 @@ button.detail-action {
 
 .lk-item-meta { font-size: var(--text-xs); color: var(--gray-500); }
 .lk-dec { font-weight: 600; color: var(--gray-700); }
+.lk-prism { margin-inline-start: var(--space-xs); color: var(--primary-dark); }
+
+/* Work lists grouped by decision (EC.workGroupsHtml): each group is headed by its
+   decision and count, and the heading stays in view while its group scrolls. */
+.lk-group-title {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+    padding: var(--space-sm) 0 0.2rem;
+    border-bottom: 1px solid var(--gray-200);
+    background: #fff;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--gray-800);
+}
+
+.lk-group-count { margin-inline-start: 0.3rem; font-weight: 400; color: var(--gray-600); font-variant-numeric: tabular-nums; }
+.lk-group { margin: 0 0 var(--space-xs); padding: 0; list-style: none; }
 
 .lk-side {
     display: inline-block;
@@ -2295,14 +2314,12 @@ button.detail-action {
     border: 1px solid var(--gray-200);
     border-radius: var(--radius-sm);
     background: color-mix(in srgb, var(--primary-dark) var(--heat), #fff);
-    color: var(--gray-900);
+    /* --ink is chosen per cell by EC.color.inkOnHeat for 4.5:1 against the computed fill. */
+    color: var(--ink, var(--gray-900));
     font: inherit;
     cursor: pointer;
     transition: background-color 0.3s ease, border-color 0.12s, box-shadow 0.12s;
 }
-
-/* The count is set large and bold, so either text colour meets the large-text contrast. */
-.lb-cell.is-dark { color: #fff; }
 .lb-val { font-size: 1.1rem; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 .lb-cell--none { border-style: dashed; color: var(--gray-700); }

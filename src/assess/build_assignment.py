@@ -28,9 +28,11 @@ REPO = Path(__file__).resolve().parents[2]
 SCHEMA = "femprompt-prisma-assignment/1.0"
 REVIEWER_SCHEMA_PREFIX = "femprompt-prisma-reviewer/"
 ASSIGNMENT_FILE = "assignment.json"
+# The labels are what the published pages show, so they name a role, not a person.
+# The keys stay as stored identifiers of the reviewer files and the assignee links.
 REVIEWERS = (
-    {"key": "sabine", "label": "Sabine"},
-    {"key": "susi", "label": "Susi"},
+    {"key": "sabine", "label": "Expertin A"},
+    {"key": "susi", "label": "Expertin B"},
 )
 RULE = (
     "Every paper that is open in PRISM (no decision of the consolidated expert "

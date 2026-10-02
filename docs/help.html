@@ -196,8 +196,8 @@
                 <li>Starte PRISM mit einem Doppelklick auf <code>start-prism.cmd</code> im Klon. Das Fenster baut die
                     Volltexte, öffnet PRISM im Browser und muss offen bleiben, solange du arbeitest. Bewertungen
                     landen direkt im Klon, einen Ordner wählst du nicht.</li>
-                <li>Wähle &bdquo;Bearbeiten&ldquo; und dann deinen Namen. PRISM schreibt ausschließlich
-                    <code>docs/data/screening/sabine.json</code> bzw. <code>susi.json</code>.</li>
+                <li>Wähle &bdquo;Bearbeiten&ldquo; und dann die Bezeichnung, unter der du zugeteilt bist, Expertin A oder Expertin B. PRISM schreibt ausschließlich
+                    <code>docs/data/screening/&lt;Kennung&gt;.json</code> mit der Kennung aus deinem Zuteilungslink.</li>
             </ol>
 
             <h4>Arbeiten</h4>
@@ -214,7 +214,7 @@
                 <li>Ein grauer Haken heißt erfasst durch die Expert:innen-Entscheidung.</li>
                 <li>Ein farbiger Haken heißt erfasst in PRISM.</li>
             </ul>
-            <p>Die offenen Dokumente sind zwischen Sabine und Susi aufgeteilt. Der Filter &bdquo;Zuteilung&ldquo;
+            <p>Die offenen Dokumente sind zwischen Expertin A und Expertin B aufgeteilt. Der Filter &bdquo;Zuteilung&ldquo;
             neben dem Statusfilter zeigt &bdquo;Alle&ldquo; oder nur die Dokumente einer Bearbeiterin und lässt sich
             mit Status und Kategorien kombinieren. Unter &bdquo;Erfasst&ldquo; entfällt er, weil die Zuteilung nur
             offene Dokumente betrifft. Unter &bdquo;Alle&ldquo; nennt jeder Listeneintrag die Bearbeiterin. Unter &bdquo;Offen&ldquo; stehen die Dokumente mit Volltext vorn, dann die mit nur einem Abstract, zuletzt die ohne Papertext. Die beiden letzten Gruppen sind im Listeneintrag benannt.</p>
@@ -259,7 +259,7 @@
             offenen Stelle. Bei einer vorbelegten oder leeren Bewertung schreibt es deine eigene Bewertung. Nicht
             gespeicherte Änderungen behält der Browser je Dokument.</p>
             <p>Nach der Arbeit committest du in GitHub Desktop deine Datei
-            <code>docs/data/screening/sabine.json</code> bzw. <code>susi.json</code> und pushst sie. Andere
+            <code>docs/data/screening/&lt;Kennung&gt;.json</code> mit der Kennung aus deinem Zuteilungslink und pushst sie. Andere
             geänderte Dateien committest du nicht. PRISM führt keine Git-Aktion aus.</p>
         </article>
     </main>

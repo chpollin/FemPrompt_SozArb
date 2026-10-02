@@ -462,7 +462,7 @@ try {
   check('clicking an edge lists the works coded with both categories', await edgeItems.count() === top.n, `${await edgeItems.count()} vs ${top.n}`);
   check('the selected edge states its exact count in the figure', (await page.locator('#wn-graph .wn-pill text').allTextContents()).includes(String(top.n)));
   const itemLinks = await edgeItems.evaluateAll((items) => items.map((item) => [
-    item.querySelector('.lk-item-title').getAttribute('href'), item.querySelector('.wn-prism').getAttribute('href'),
+    item.querySelector('.lk-item-title').getAttribute('href'), item.querySelector('.lk-prism').getAttribute('href'),
     item.querySelector('.lk-dec').textContent]));
   const expectedIds = new Set(withDecision.filter((p) => top.set.every((c) => (p.human.all_categories || {})[c] === 1)).map((p) => p.id));
   check('each listed work links to its Korpus detail and to PRISM and names its decision', itemLinks.every(([korpus, prism, dec]) => {
@@ -500,9 +500,10 @@ try {
     await page.locator('#wn-detail .lk-item').count() === netCount(llmDone, 'l', [nodeCat]));
   await page.locator('#wn-root .lk-lens[data-basis="agree"]').click();
   await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('basis') === 'agree');
-  const netSides = await page.locator('#wn-detail .lk-item').evaluateAll((items) => items.map((i) => i.dataset.side));
-  check('under Übereinstimmung the works name the side that coded them, divergent ones first',
-    netSides.length > 0 && netSides.every((s, i) => i === 0 || ['expert', 'llm', 'both'].indexOf(s) >= ['expert', 'llm', 'both'].indexOf(netSides[i - 1])), netSides.join());
+  // The list is grouped by decision; inside each group the divergent works come first.
+  const netSides = await page.locator('#wn-detail .lk-group').evaluateAll((groups) => groups.map((g) => [...g.querySelectorAll('.lk-item')].map((i) => i.dataset.side)));
+  check('under Übereinstimmung the works name the side that coded them, divergent ones first in each decision group',
+    netSides.length > 0 && netSides.every((sides) => sides.every((s, i) => i === 0 || ['expert', 'llm', 'both'].indexOf(s) >= ['expert', 'llm', 'both'].indexOf(sides[i - 1]))), JSON.stringify(netSides));
   await page.reload({ waitUntil: 'networkidle' });
   await page.waitForSelector('#wn-graph');
   check('the basis survives a reload', await page.locator('#wn-root .lk-lens[data-basis="agree"]').getAttribute('aria-pressed') === 'true');
@@ -614,6 +615,10 @@ try {
   const lensValue = (lensKey, cats) => {
     const expertSet = assessedWorks.filter((p) => cats.every((c) => (p.human.all_categories || {})[c] === 1));
     if (lensKey === 'werke') return expertSet.length;
+    if (lensKey === 'anteil') {
+      const base = cats.length === 2 ? lensValue('werke', [cats[1]]) : assessedWorks.length;
+      return ratio(expertSet.length, base);
+    }
     if (lensKey === 'einschluss') return ratio(expertSet.filter((p) => p.human.decision === 'Include').length, expertSet.length);
     if (lensKey === 'aktualitaet') {
       const dated = expertSet.filter((p) => typeof p.year === 'number');
@@ -626,7 +631,7 @@ try {
     const both = h.filter((p) => l.includes(p)).length;
     return ratio(both, h.length + l.length - both);
   };
-  const lensKeys = ['werke', 'einschluss', 'uebereinstimmung', 'aktualitaet'];
+  const lensKeys = ['werke', 'anteil', 'einschluss', 'uebereinstimmung', 'aktualitaet'];
   const fmt = (lensKey, v) => (lensKey === 'werke' ? String(v) : `${Math.round(v * 100)} %`);
   const near = (shown, v) => (v === null ? shown === '' : Math.abs(Number(shown) - v) < 1e-3);
 
@@ -720,11 +725,12 @@ try {
 
   await page.locator('#landkarte .lk-lens[data-lens="uebereinstimmung"]').click();
   await page.locator('#landkarte button.lk-cell[data-row="Generative_KI"][data-col="Gender"]').click();
-  const sides = await page.evaluate(() => [...document.querySelectorAll('#landkarte-detail .lk-item')].map((li) => [li.dataset.side, li.querySelector('.lk-side [aria-hidden]').textContent]));
+  const sideGroups = await page.evaluate(() => [...document.querySelectorAll('#landkarte-detail .lk-group')].map((g) =>
+    [...g.querySelectorAll('.lk-item')].map((li) => [li.dataset.side, li.querySelector('.lk-side [aria-hidden]').textContent])));
   const order = { expert: 0, llm: 1, both: 2 };
-  check('under Übereinstimmung the panel lists divergent works first, each marked H, L or H+L',
-    sides.length > 0 && sides.every(([side, mark], i) => mark === ({ expert: 'H', llm: 'L', both: 'H+L' })[side] &&
-      (i === 0 || order[sides[i - 1][0]] <= order[side])) && sides.some(([side]) => side !== 'both'), JSON.stringify(sides.slice(0, 3)));
+  check('under Übereinstimmung the panel lists divergent works first in each decision group, each marked H, L or H+L',
+    sideGroups.length > 0 && sideGroups.every((sides) => sides.every(([side, mark], i) => mark === ({ expert: 'H', llm: 'L', both: 'H+L' })[side] &&
+      (i === 0 || order[sides[i - 1][0]] <= order[side]))) && sideGroups.flat().some(([side]) => side !== 'both'), JSON.stringify(sideGroups.map((g) => g.slice(0, 2))));
   await page.locator('#landkarte button.lk-cell[data-row="Generative_KI"][data-col="Gender"]').hover();
   check('hovering a cell crosses its row and column headers', await page.evaluate(() =>
     document.querySelector('#landkarte th.lk-row[data-cat="Generative_KI"]').classList.contains('is-cross') &&
