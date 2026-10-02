@@ -213,9 +213,14 @@ try {
   }
   await page.goto(`${base}/index.html#view=frage&sq=4`, { waitUntil: 'networkidle' });
   await page.waitForSelector('#frage-root .answer[data-sq="4"]');
-  check('the conceptual-grounding page states that it is not yet coded and shows no count',
-    (await page.locator('#frage-root h1 + .denominator--summary').innerText()).endsWith('Noch nicht codiert') &&
-    await page.locator('#frage-root .matrix-wrap').count() === 0);
+  // the page states "Noch nicht codiert" exactly while no released Include carries a
+  // conceptual-grounding field, which the coding runs decide, not this test
+  const sq4Coded = ['AN_Gender_Definition', 'AN_Bias_Definition', 'AN_Gender_Understanding', 'AN_Theory_Reference']
+    .some((key) => cov.fields[key] && cov.fields[key].value + cov.fields[key].none + cov.fields[key].undecidable > 0);
+  const sq4Summary = await page.locator('#frage-root h1 + .denominator--summary').innerText();
+  check('the conceptual-grounding page says "Noch nicht codiert" exactly while none of its fields is coded',
+    sq4Summary.endsWith('Noch nicht codiert') === !sq4Coded &&
+    (sq4Coded || await page.locator('#frage-root .matrix-wrap').count() === 0), { sq4Coded, sq4Summary });
   check('no navigation tab is pressed on an answer page', await page.locator('.nav-view-btn[aria-pressed="true"]').count() === 0);
 
   // Literaturbild, the evidence-and-gap map of literaturbild.js. The expected counts of
@@ -264,8 +269,13 @@ try {
   check('the active basis shows in its control', await page.locator('#lb-root [data-basis="alle"][aria-pressed="true"]').count() === 1 &&
     (await page.locator('#lb-denom .lb-denom-main').innerText()).includes('identifizierten Werken'));
   const offered = await page.locator('#lb-rows option').evaluateAll((options) => options.map((o) => o.value));
-  check('only dimensions with coverage are offered, codebook 1.4 fields not yet',
-    offered.includes('kategorie') && offered.includes('AN_Bias_Axes') && !offered.includes('AN_Task') && !offered.includes('AN_Coding_Basis'), offered.join());
+  // an analysis field is offered only where some agent record codes it, and the coding
+  // basis and notes never, since they describe the coding rather than the work
+  const agentFields = new Set(Object.values(JSON.parse(readFileSync(resolve(docs, 'data', 'screening', 'ar2.json'))).decisions)
+    .flatMap((d) => Object.keys((d.analysis && d.analysis.fields) || {})));
+  check('only dimensions with coverage are offered, never the coding basis or notes',
+    offered.includes('kategorie') && offered.includes('AN_Bias_Axes') && !offered.includes('AN_Coding_Basis') && !offered.includes('AN_Notes') &&
+      offered.filter((key) => key.startsWith('AN_')).every((key) => agentFields.has(key)), offered.join());
 
   await page.locator('#lb-rows').selectOption('AN_Bias_Axes');
   await page.waitForFunction(() => new URLSearchParams(location.hash.slice(1)).get('rows') === 'AN_Bias_Axes');
@@ -1151,10 +1161,23 @@ try {
   check('each row carries four stage marks with accessible names',
     marks.length === 4 && marks.every(([role], i) => role === 'img' && marks[i][1] === expectedMarks[i]), JSON.stringify(marks));
   await page.locator(`#gap-list button[data-stage="${exportKey}"]`).click();
-  const forms = await page.evaluate(() => Object.fromEntries(['is-include', 'is-exclude', 'is-open'].map((cls) => {
-    const node = document.querySelector('.st-mark--dec.' + cls);
-    return [cls, node ? getComputedStyle(node, '::before').content + ' ' + getComputedStyle(node).borderTopStyle : null];
-  })));
+  // each decision state is rendered from a corpus work in that state, so the check does
+  // not depend on which states the filtered list happens to hold
+  const forms = await page.evaluate(() => {
+    const stages = window.EC.korpusStages;
+    const wanted = { 'is-include': 'include', 'is-exclude': 'exclude', 'is-open': 'open' };
+    return Object.fromEntries(Object.entries(wanted).map(([cls, state]) => {
+      const paper = window.EC.getAllPapers().find((p) => stages.decision(p) === state);
+      if (!paper) return [cls, null];
+      const box = document.createElement('div');
+      box.innerHTML = stages.trackHtml(paper);
+      document.body.appendChild(box);
+      const node = box.querySelector('.st-mark--dec.' + cls);
+      const form = node ? getComputedStyle(node, '::before').content + ' ' + getComputedStyle(node).borderTopStyle : null;
+      box.remove();
+      return [cls, form];
+    }));
+  });
   check('the decision mark differs in form, not only in colour',
     forms['is-include'] === '"+" solid' && forms['is-exclude'] === '"−" solid' && forms['is-open'] === 'none dashed', JSON.stringify(forms));
 

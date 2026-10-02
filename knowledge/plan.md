@@ -175,7 +175,6 @@ The accepted scope is defined in [[governance#Verification scope decision, 22 Se
 
 - Confirm the native Chromium directory-permission path in a disposable clone. Since ADR-047 it is only the fallback for a static server, and the operator's own test of 2 October 2026 connected a clone through it.
 - Exercise the setup path of the README with a person who did not build PRISM before, on a fresh Windows clone, and correct the documentation where it fails.
-- Update three checks of `tests/browser/companion.mjs` that fail on `main` as well: two still expect the codebook 1.4 fields and the conceptual-grounding page to be uncoded, which the coding run of 2 October 2026 changed, and one expects a form for the open decision mark in the Korpus track. `npm run check` does not run this suite.
 
 ## Waiting on the project owner
 
