@@ -68,17 +68,32 @@ function href(params) { return host ? host.href(params) : hashOf(params); }
 function statusMark(status, options) {
     const verified = status === 'verified';
     const label = verified ? 'fachlich verifiziert' : (model ? model.publicLabel : 'KI-quellengeprüft');
-    const extra = options && options.full && !verified ? ' · nicht fachlich verifiziert' : '';
+    const extra = options && options.full && !verified ? ', nicht fachlich verifiziert' : '';
     return '<span class="status-mark status-mark--' + (verified ? 'verified' : 'ki') + '">' +
         '<span class="mark-glyph" aria-hidden="true">' + (verified ? '●' : '◆') + '</span> ' + esc(label + extra) + '</span>';
 }
 
+// The fields of one line stand apart by spacing rather than a separator glyph.
+function metaLine(parts) {
+    return parts.filter(Boolean).map(function (part) { return '<span class="meta-part">' + part + '</span>'; }).join(' ');
+}
+
 function workCount(count) { return count + (count === 1 ? ' Werk' : ' Werke'); }
 
+// The work-version contract labels some publication stages with their English terms;
+// the public pages name them in German and take every other label from the contract.
+const VERSION_LABELS = {
+    accepted_manuscript: 'akzeptiertes Manuskript', version_of_record: 'Verlagsfassung',
+    corrected_version_of_record: 'korrigierte Verlagsfassung', enhanced_version_of_record: 'erweiterte Verlagsfassung',
+};
 function versionLabel(value) {
     const labels = (model && model.landscape.version_type_labels) || {};
-    return labels[value] || (value ? String(value).replace(/_/g, ' ') : '');
+    return VERSION_LABELS[value] || labels[value] || (value ? String(value).replace(/_/g, ' ') : '');
 }
+
+// Screening decisions stay English codes in the data and the URL.
+const DECISION_LABELS = { Include: 'eingeschlossen', Exclude: 'ausgeschlossen', Unclear: 'unklar' };
+function decisionLabel(value) { return DECISION_LABELS[value] || String(value || ''); }
 
 function germanDate(value) {
     const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(value || ''));
@@ -100,7 +115,8 @@ function agentRole(agentId) {
 // matrix, the work lists and the Werk page; the canonical look lives in research.css
 // under "Category chip (shared)". category is { key, label, color }. A chip is a
 // toggle button when options.pressed is a boolean and a static label otherwise.
-const CHIP_GROUP_LABELS = { object: 'Gegenstand', perspective: 'Perspektive' };
+// options.levelShown means the caller prints the level beside the chip, so the chip
+// does not announce it a second time.
 const CHIP_LEVEL_LABELS = { 1: 'teilweise', 2: 'ja' };
 
 function categoryChip(category, options) {
@@ -111,7 +127,7 @@ function categoryChip(category, options) {
         (toggle ? ' type="button" aria-pressed="' + opts.pressed + '"' : '') +
         ' data-cat="' + esc(category.key) + '"' + level + ' style="--chip-color:' + esc(category.color || 'var(--gray-500)') + '"';
     const body = '<span class="chip-dot" aria-hidden="true"></span>' + esc(category.label || category.key) +
-        (level ? '<span class="sr-only">, teilweise</span>' : '') + (opts.extra || '');
+        (level && !opts.levelShown ? '<span class="sr-only">, teilweise</span>' : '') + (opts.extra || '');
     return toggle ? '<button' + attrs + '>' + body + '</button>' : '<span' + attrs + '>' + body + '</span>';
 }
 
@@ -125,7 +141,7 @@ function categoryChipRow(items, groups) {
         const chips = groups[group].filter(function (key) { return byKey[key]; }).map(function (key) {
             return categoryChip(byKey[key].category, byKey[key].options);
         });
-        return chips.length ? '<span class="chip-group-label">' + esc(CHIP_GROUP_LABELS[group] || group) + '</span>' + chips.join('') : '';
+        return chips.length ? '<span class="chip-group-label">' + esc((EC.CATEGORY_GROUP_LABELS || {})[group] || group) + '</span>' + chips.join('') : '';
     }).filter(Boolean).join('<span class="chip-group-sep" aria-hidden="true"></span>');
 }
 
@@ -141,9 +157,18 @@ function highlight(text, term) {
     return esc(body.slice(0, start)) + '<mark>' + esc(body.slice(start, end)) + '</mark>' + esc(body.slice(end));
 }
 
+// Assertion topics are recorded in English in the research vault, which has no German
+// label for them; the public page shows German labels and an unknown topic as recorded.
+const TOPIC_LABELS = {
+    'AI Literacy': 'KI-Kompetenz',
+    'Generative AI in Social Work': 'Generative KI in der Sozialen Arbeit',
+    'Prompting and Bias Mitigation': 'Prompting und Bias-Minderung',
+};
+function topicLabel(topic) { return TOPIC_LABELS[topic] || topic; }
+
 function screeningLabel(work) {
     if (!work || !work.record) return 'nicht gescreent';
-    return 'Screening ' + work.record.decision;
+    return 'im Screening ' + decisionLabel(work.record.decision);
 }
 
 function renderAssertion(assertion, options) {
@@ -156,20 +181,20 @@ function renderAssertion(assertion, options) {
         const workLink = work ? '<a href="' + esc(href({ view: 'werk', id: work.id })) + '">' + esc(item.author_year || item.title) + '</a>'
             : esc(item.author_year || item.title);
         return '<li class="evidence-item"><blockquote class="evidence-quote">' + esc(item.quote) + '</blockquote>' +
-            '<p class="evidence-locator">' + workLink + ' · ' + esc(item.locator) +
-            ' · <span class="screening-state">' + esc(screeningLabel(work)) + '</span>' +
-            (item.version_type ? ' · ' + esc(versionLabel(item.version_type)) : '') +
-            (url ? ' · <a href="' + esc(url) + '" target="_blank" rel="noopener">Quelle öffnen</a>' : '') + '</p></li>';
+            '<p class="evidence-locator">' + metaLine([workLink, esc(item.locator),
+                '<span class="screening-state">' + esc(screeningLabel(work)) + '</span>',
+                item.version_type ? esc(versionLabel(item.version_type)) : '',
+                url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">Quelle öffnen</a>' : '']) + '</p></li>';
     }).join('');
     return '<article class="assertion" data-assertion-id="' + esc(assertion.id) + '">' +
         '<h' + level + ' class="assertion-statement">' + esc(assertion.statement) + '</h' + level + '>' +
-        '<p class="assertion-meta">' + statusMark(status) +
-        (assertion.topics && assertion.topics.length ? ' · ' + esc(assertion.topics.join(', ')) : '') + '</p>' +
+        '<p class="assertion-meta">' + metaLine([statusMark(status),
+            esc((assertion.topics || []).map(topicLabel).join(', '))]) + '</p>' +
         '<ul class="evidence-list" role="list">' + evidence + '</ul>' +
         '<details class="assertion-review"><summary>Prüfnachweis</summary>' +
-        '<p class="review-line">' + esc(agentRole(review.agent_id)) + ' · Modell ' + esc(review.model) +
-        ' · geprüft am ' + esc(germanDate(review.reviewed_at)) + '</p><p>' + esc(review.findings) + '</p>' +
-        '<p class="review-line">Agentenkennung ' + esc(review.agent_id) + ' · Aussage ' + esc(assertion.id) + '</p></details></article>';
+        '<p class="review-line">' + metaLine([esc(agentRole(review.agent_id)), 'Modell ' + esc(review.model),
+            'geprüft am ' + esc(germanDate(review.reviewed_at))]) + '</p><p>' + esc(review.findings) + '</p>' +
+        '<p class="review-line">' + metaLine(['Agentenkennung ' + esc(review.agent_id), 'Aussage ' + esc(assertion.id)]) + '</p></details></article>';
 }
 
 function registerView(name, view) { views[name] = view; }
@@ -204,7 +229,7 @@ function render() {
     const heading = visibleHeading();
     // The tab title repeats the page heading.
     const headingText = heading ? heading.textContent.trim() : '';
-    document.title = (headingText ? headingText + ' · ' : '') + SITE_TITLE;
+    document.title = (headingText ? headingText + ' -- ' : '') + SITE_TITLE;
     settleFocus(document.querySelector('[data-view-root="' + params.view + '"]'),
         { changed: changed, external: external, focusHeading: booted });
 }
@@ -220,6 +245,9 @@ function settleFocus(root, ctx) {
         list.focus({ preventScroll: true });
         list.scrollIntoView({ block: 'start' });
     } else if (ctx.changed && ctx.focusHeading && heading) {
+        focusHeading(heading);
+    } else if (ctx.external && ctx.focusHeading && heading && !root.contains(document.activeElement)) {
+        // Back or Forward removed the list that held focus, which would otherwise fall to the body.
         focusHeading(heading);
     }
 }
@@ -248,7 +276,7 @@ if (!host) registerView('aussagen', {
         if (input.value !== query) input.value = query;
         const words = EC.fold(query).split(/\s+/).filter(Boolean);
         const selected = model.assertions.filter(function (assertion) {
-            const text = EC.fold(JSON.stringify(assertion));
+            const text = EC.fold(JSON.stringify(assertion) + ' ' + (assertion.topics || []).map(topicLabel).join(' '));
             return words.every(function (word) { return text.indexOf(word) >= 0; });
         });
         const count = document.getElementById('assertion-count');
@@ -282,8 +310,8 @@ if (!host) document.addEventListener('click', function (event) {
 
 Object.assign(EC, {
     esc: esc, safeUrl: safeUrl, go: go, href: href, parseHash: parseHash,
-    statusMark: statusMark, workCount: workCount, versionLabel: versionLabel, highlight: highlight,
-    germanDate: germanDate, agentRole: agentRole, screeningLabel: screeningLabel,
+    statusMark: statusMark, metaLine: metaLine, workCount: workCount, versionLabel: versionLabel, highlight: highlight,
+    germanDate: germanDate, agentRole: agentRole, screeningLabel: screeningLabel, decisionLabel: decisionLabel,
     renderAssertion: renderAssertion, registerView: registerView,
     categoryChip: categoryChip, categoryChipRow: categoryChipRow,
 });

@@ -33,7 +33,7 @@
         const parts = [];
         if (reviewed) parts.push(reviewed + (reviewed === 1 ? ' KI-geprüfter Befund' : ' KI-geprüfte Befunde'));
         if (verified) parts.push(verified + (verified === 1 ? ' fachlich verifizierter Befund' : ' fachlich verifizierte Befunde'));
-        return parts.join(' · ');
+        return parts.join(', ');
     }
 
     EC.renderStart = function (model) {

@@ -12,7 +12,9 @@ const WIDE_QUERY = '(min-width: 64rem)';
 const COLOUR_CLASSES = 10;
 const SHAPE_COUNT = 6;
 const TAU = Math.PI * 2;
-// Estimated glyph widths in SVG user units for the 13px label and 12px count text; they only size the viewBox.
+// Estimated glyph widths in SVG user units for the 13px label and 12px count text. They lay out
+// the figure; the viewBox is then fitted to the rendered labels, since an estimate cut off long
+// labels once the figure scales into a narrow column.
 const LABEL_CHAR = 7.2;
 const COUNT_CHAR = 7.5;
 const EDGE_MIN = 1.5;
@@ -195,6 +197,16 @@ function radialFigure(ego, neighbours, selected) {
         '" height="' + pillH + '" rx="15"/><text text-anchor="middle" dy=".35em">' + EC.esc(egoLabel) + '</text></g></svg>';
 }
 
+// The svg clips at its viewBox, so the box follows the measured extent of what was drawn.
+// Without layout (a hidden view, a DOM without SVG geometry) the estimated box stays.
+function fitViewBox(svg) {
+    let box = null;
+    try { box = svg && typeof svg.getBBox === 'function' ? svg.getBBox() : null; } catch (error) { box = null; }
+    if (!box || !box.width || !box.height) return;
+    const pad = 8;
+    svg.setAttribute('viewBox', [box.x - pad, box.y - pad, box.width + 2 * pad, box.height + 2 * pad].map(round).join(' '));
+}
+
 function workGlyph(work) { return work.status === 'verified' ? '●' : '◆'; }
 
 function bipartiteFigure(ego, neighbours, selected) {
@@ -310,11 +322,18 @@ function render(params) {
     // The hidden comma keeps term and field apart in the heading's accessible name.
     heading.innerHTML = EC.esc(labelOf(ego)) + '<span class="sr-only">, </span><span class="netz-heading-dim">' +
         EC.esc(model.dim(ego.dimId).label) + '</span>';
-    root.querySelector('#netz-summary').innerHTML = EC.summaryLine(model.includes, [ego.dimId].concat(state.fields), false);
+    // A field no released work carries beyond ohne Angabe, such as a pilot field or one not
+    // collected under the coding's codebook, would count every work as uncoded, so the line
+    // names only fields that carry codes, as the answer pages do.
+    const summaryFields = [ego.dimId].concat(state.fields).filter(function (id) {
+        return model.includes.some(function (work) { return model.isCoded(work, id); });
+    });
+    root.querySelector('#netz-summary').innerHTML = EC.summaryLine(model.includes, summaryFields, false);
     const key = model.token(ego.dimId, ego.key) + '|' + (bipartite ? 'works' : 'radial');
     const scroll = figure.dataset.key === key ? figure.scrollLeft : null;
     if (neighbours.length) {
         figure.innerHTML = bipartite ? bipartiteFigure(ego, neighbours, selected) : radialFigure(ego, neighbours, selected);
+        fitViewBox(figure.querySelector('svg'));
         resetRoving(figure, selected);
     } else {
         figure.innerHTML = '<p class="empty-state">Kein gemeinsam codierter Begriff in den gewählten Feldern.</p>';

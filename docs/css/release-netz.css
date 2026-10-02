@@ -12,11 +12,6 @@
 
 .netz-controls { align-items: flex-start; }
 
-/* Long term options set the select's intrinsic width; without a cap it pushes the page
-   wider than a phone viewport in fonts wider than the local ones (CI runs on Linux). */
-.netz-controls > label { min-inline-size: 0; max-inline-size: 100%; }
-.netz-controls select#netz-term { max-inline-size: 100%; min-inline-size: 0; }
-
 .netz-fields {
     border: 1px solid var(--gray-300);
     border-radius: var(--radius-md);
@@ -110,8 +105,8 @@
 .netz-item:focus { outline: none; }
 
 .netz-line {
-    stroke: var(--dim);
-    stroke-opacity: 0.7;
+    /* Darkened toward the text colour, so even the light category colours keep 3:1 against the page. */
+    stroke: color-mix(in oklch, var(--dim) 55%, var(--gray-900));
     stroke-linecap: round;
 }
 
@@ -122,9 +117,7 @@
 .netz-edge:hover .netz-ring { stroke: var(--gray-400); }
 .netz-edge:focus-visible .netz-ring { stroke: var(--gray-900); }
 
-.netz-edge.is-selected .netz-line { stroke-opacity: 1; }
-
-.netz-count-box { fill: Canvas; stroke: var(--gray-400); stroke-width: 1; }
+.netz-count-box { fill: Canvas; stroke: var(--gray-500); stroke-width: 1; }
 .netz-count { font-size: 12px; font-weight: 600; fill: var(--gray-900); }
 .netz-edge:hover .netz-count-box { stroke: var(--gray-700); }
 .netz-edge:focus-visible .netz-count-box { stroke: var(--gray-900); stroke-width: 2.5; }
@@ -247,7 +240,7 @@ rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
 .wn-node .wn-hit { fill: transparent; pointer-events: all; }
 .wn-item { cursor: pointer; outline: none; }
 
-.wn-dot { fill: var(--node); stroke: #fff; stroke-width: 1.5; }
+.wn-dot { fill: var(--node); stroke: var(--gray-50); stroke-width: 1.5; }
 .wn-dot--union { fill-opacity: .35; stroke: var(--node); }
 .wn-dot-both { fill: var(--node); }
 /* A residual category (Sonstige) recedes: muted fill and a dashed outline in its colour. */
@@ -273,7 +266,7 @@ rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
 .wn-pill { pointer-events: none; }
 /* Narrower than the navigation tooltip, so one fits between nodes, labels and the work list. */
 .wn-tip { min-width: 0; max-width: 15rem; }
-.wn-pill rect { fill: #fff; stroke: var(--primary-dark); stroke-width: 1.2; }
+.wn-pill rect { fill: var(--gray-50); stroke: var(--primary-dark); stroke-width: 1.2; }
 .wn-pill text { fill: var(--gray-900); font-weight: 600; font-variant-numeric: tabular-nums; }
 
 .wn-legend { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); margin: var(--space-sm) 0 0; padding: 0; list-style: none; font-size: var(--text-xs); color: var(--gray-700); }
@@ -285,7 +278,7 @@ rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
 .wn-detail { border-bottom: 1px solid var(--gray-200); padding-bottom: var(--space-md); }
 .wn-detail[hidden] { display: none; }
 .wn-detail-head { display: flex; align-items: start; justify-content: space-between; gap: var(--space-sm); }
-.wn-clear { flex: none; inline-size: 1.75rem; block-size: 1.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); background: #fff; color: var(--gray-700); font-size: 1.1rem; line-height: 1; cursor: pointer; }
+.wn-clear { flex: none; inline-size: 1.75rem; block-size: 1.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); background: var(--gray-50); color: var(--gray-700); font-size: 1.1rem; line-height: 1; cursor: pointer; }
 .wn-clear:hover { background: var(--gray-100); }
 .wn-list { max-height: 24rem; }
 .wn-root .lk-mark--none { border: 1px dashed var(--gray-400); }
@@ -294,7 +287,7 @@ rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
 .wn-table { inline-size: 100%; border-collapse: collapse; font-size: var(--text-sm); }
 .wn-table caption { text-align: start; font-weight: 600; color: var(--gray-800); padding-block-end: var(--space-xs); }
 .wn-table th, .wn-table td { padding: .3rem var(--space-xs); border-bottom: 1px solid var(--gray-100); text-align: start; vertical-align: middle; }
-.wn-table thead th { position: sticky; top: 0; background: #fff; font-weight: 500; color: var(--gray-600); font-size: var(--text-xs); }
+.wn-table thead th { position: sticky; top: 0; background: var(--gray-50); font-weight: 500; color: var(--gray-600); font-size: var(--text-xs); }
 .wn-pair { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; font-weight: 400; }
 .wn-table tr.is-selected { background: var(--gray-100); }
 .wn-table .wn-num { text-align: end; font-variant-numeric: tabular-nums; color: var(--gray-700); white-space: nowrap; }

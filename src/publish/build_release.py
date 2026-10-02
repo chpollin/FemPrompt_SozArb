@@ -84,6 +84,24 @@ def _text_asset(path: Path) -> bytes:
     return path.read_bytes().replace(b"\r\n", b"\n")
 
 
+# categories.yaml marks a coding instruction inside a category definition with WICHTIG.
+# The coders keep it in docs/data/category_schema.json; the public schema carries the
+# definition without it and without the negative coding examples. categories.yaml is
+# hash-bound by coding runs, so the split happens here rather than in the source.
+CODING_NOTE_RE = re.compile(r"\s*WICHTIG:.*$", re.DOTALL)
+
+
+def public_category_schema(schema: dict) -> dict:
+    categories = []
+    for category in schema["categories"]:
+        public = {key: value for key, value in category.items() if key != "examples_negative"}
+        public["definition"] = CODING_NOTE_RE.sub("", category["definition"]).strip()
+        if not public["definition"]:
+            raise ValueError(f"Category {category['key']} has no public definition")
+        categories.append(public)
+    return {**schema, "categories": categories}
+
+
 def _source_note(paper: dict, assertions: list[dict], records: list[dict]) -> bytes:
     lines = [f"# {paper['title']}", "", paper.get("author_year", ""), "",
              f"Work: `{paper['work_id']}`", f"Version: `{paper['version_id']}`", ""]
@@ -156,6 +174,10 @@ def build_files(repo: Path = ROOT) -> dict[str, bytes]:
     files = {}
     for name in PUBLIC_FILES:
         if name in {"data/assertion_index.json", "data/literature_landscape.json"}:
+            continue
+        if name == "data/category_schema.json":
+            schema = json.loads((repo / "docs" / name).read_text(encoding="utf-8"))
+            files[name] = json_bytes(public_category_schema(schema))
             continue
         files[name] = _text_asset(repo / "docs" / name)
     font_root = repo / "docs/vendor/fontawesome/webfonts"

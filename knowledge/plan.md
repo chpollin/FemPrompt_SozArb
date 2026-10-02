@@ -73,14 +73,10 @@ The sub-questions are answered in the following order. Steps that depend on an o
 
 The public Evidence Companion is specified in [[specification#Public Evidence Companion]].
 
-1. Emit German display labels for analysis fields and values from `assessment/categories.yaml` through `build_analysis_fields.py`, and let the site read them.
-2. Add an explicit sub-question field to the Assertion schema and `build_assertion_index.py`, replacing the topic table in `release-fragen.js` ([[specification#Open interface questions]]). Assertions already carry the frontmatter field `research-questions`, which the validator checks against SQ1 to SQ5 ([[research-vault#Assertions]]). The schema field would carry it into the released index.
-3. Replace the long internal agent coding notes in the public work list by field-level evidence once it exists. Until then the note stays collapsed and labelled as the rationale of the coding agent, never as evidence.
-4. Let the site read `analysis.field_states`, so that it shows absent fields apart from fields not yet coded instead of folding both together.
-5. Fix the clipped labels of the Netz view at 390 px. Its public visibility follows decision 12.
-6. Run the [[testing#Independent acceptance review of the result site]], which recomputes every displayed figure from the released data and checks display rules, keyboard operation, zoom, contrast and content fitness. Its findings are recorded in this plan. An operator review on the phone follows, and an acceptance session with the domain experts comes later.
-7. Switch Pages to `build/site/` under [[#Deployment]] once decision 3 is taken. Until then Pages serves `docs/` including internal working data.
-8. Keep the internal working application `docs/index.html` local. Its Kategorien view still lists concepts from the historical concept graph ([[data#Historical concept graph and divergence classification]]).
+1. Replace the long internal agent coding notes in the public work list by field-level evidence once it exists. Until then the note stays collapsed and labelled as the rationale of the coding agent, never as evidence.
+2. Run the [[testing#Independent acceptance review of the result site]], which recomputes every displayed figure from the released data and checks display rules, keyboard operation, zoom, contrast and content fitness. Its findings are recorded in this plan. The first review of 2 October 2026 found reflow, contrast, label, focus and naming defects, which are fixed and covered by `tests/browser/release.mjs`. Left to the operator from it are the publication of `source_path` in the released records, the language of the Assertion statements and the Kubes item. An operator review on the phone follows, and an acceptance session with the domain experts comes later.
+3. Switch Pages to `build/site/` under [[#Deployment]] once decision 3 is taken. Until then Pages serves `docs/` including internal working data.
+4. Keep the internal working application `docs/index.html` local. Its Kategorien view still lists concepts from the historical concept graph ([[data#Historical concept graph and divergence classification]]).
 
 ## Deployment
 

@@ -335,7 +335,7 @@ await check('model answer carries provenance header, local notice is set apart',
     await waitFor(() => h.document.querySelector('.chat-references'));
     const answer = h.document.querySelectorAll('.chat-msg-model')[1];
     assert.ok(!answer.classList.contains('chat-msg-local'));
-    assert.match(answer.querySelector('.chat-msg-head').textContent, /^KI-Antwort, Vorschlag · gemini-3-flash-preview · \d{2}:\d{2}$/);
+    assert.match(answer.querySelector('.chat-msg-head').textContent, /^KI-Antwort, Vorschlag, gemini-3-flash-preview, \d{2}:\d{2}$/);
   } finally { h.close(); }
 });
 
@@ -369,8 +369,8 @@ await check('reference list: work link, readable review line, identifiers only i
       assert.ok(details.textContent.includes(value), value);
       assert.ok(!visible.textContent.includes(value), 'identifier outside details: ' + value);
     }
-    assert.ok(visible.textContent.includes('Author (2026) · AI Literacy in Social Work'));
-    assert.ok(visible.textContent.includes('KI-Prüfung fixture-model · 05.09.2026'));
+    assert.ok(visible.textContent.includes('Author (2026), AI Literacy in Social Work'));
+    assert.ok(visible.textContent.includes('KI-Prüfung fixture-model am 05.09.2026'));
     assert.ok(details.textContent.includes(review.reviewed_at));
   } finally { h.close(); }
 });
