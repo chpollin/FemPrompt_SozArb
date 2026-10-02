@@ -1,0 +1,627 @@
+{
+  "schema": "femprompt-prisma-ai-agent-review/0.1",
+  "run_id": "codebook-v141-includes-03-3-20261002",
+  "actor": "agent",
+  "reviewer": "ai-agent-review",
+  "created": "2026-10-02T06:39:49Z",
+  "prompt": {
+    "path": "prompts/prism-ai-agent-review-v0.4.md",
+    "version": "0.4",
+    "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+  },
+  "codebook": {
+    "path": "assessment/categories.yaml",
+    "version": "1.4.1",
+    "sha256": "7b95295702c0ec4054e018a95327371f927a526256d2fea7060f54d0e8d47acd"
+  },
+  "inputs": {
+    "tracks": [
+      {
+        "reviewer": "ar1",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar1-coding.json",
+        "sha256": "9ba57d0208668cb7382e1cb3b47f8ffbe92eca788e524252ea6def7068adf3fa"
+      },
+      {
+        "reviewer": "ar2",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar2-coding.json",
+        "sha256": "a2acf799bc4e6c60a40d31ae0c38e8c17de2f2b74538b22012bcdb67035e2e68"
+      }
+    ],
+    "sources": [
+      {
+        "paper_id": "GJF776AY",
+        "path": "docs/data/fulltext/GJF776AY.md",
+        "sha256": "140d4344338218f7788047720d27afde3ad1a3a05de7fcdb7e491d78b08a7e20"
+      },
+      {
+        "paper_id": "KQ5A8D6E",
+        "path": "docs/data/fulltext/KQ5A8D6E.md",
+        "sha256": "fa7adc6650e67bf8a1c5afd5755d6644109e1297d899187f169401c79b20605d"
+      },
+      {
+        "paper_id": "MS3CNU3S",
+        "path": "docs/data/fulltext/MS3CNU3S.md",
+        "sha256": "61c2fcbd8af45a8504afcf7caeb1142e96085b658a28069633793352de2319c8"
+      }
+    ]
+  },
+  "records": {
+    "GJF776AY": {
+      "paper_id": "GJF776AY",
+      "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+      "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "AN_Bias_Axes",
+          "ar1": [
+            "Race_Ethnicity",
+            "Gender"
+          ],
+          "ar2": [
+            "Race_Ethnicity",
+            "Gender",
+            "Sexual_Orientation_Identity"
+          ],
+          "chosen": [
+            "Race_Ethnicity",
+            "Gender"
+          ],
+          "reason": "Gender identity appears only in the single sentence reporting Keyes (2018) on automatic gender recognition; the essay does not develop it as its own worked example, so the axis rule leaves it uncoded, while race and gender are carried by the essay's own sentences on light skin as the norm and on societal definitions of race and gender."
+        },
+        {
+          "field": "AN_Gender_Definition",
+          "ar1": "Absent",
+          "ar2": "Implicit_Only",
+          "chosen": "Absent",
+          "reason": "Follows the pairing rule from the resolved AN_Gender_Understanding value Unclear; the essay determines gender nowhere and no category, measurement or theory statement of its own reveals an understanding of gender."
+        },
+        {
+          "field": "AN_Gender_Understanding",
+          "ar1": [
+            "Unclear"
+          ],
+          "ar2": [
+            "Social_Construct"
+          ],
+          "chosen": [
+            "Unclear"
+          ],
+          "reason": "Codebook 1.4.1 requires an explicit statement that gender is socially produced, a relation or a power structure; the only candidate sentence says a face-detection system fails on faces outside 'the societal definitions of race and gender that were fed into it', which describes a cited case of system training and does not state the essay's own understanding of gender, so the threshold is not met."
+        }
+      ],
+      "rationale": "Identity verified against title, author, journal citation and DOI 10.3389/fcomm.2025.1380252 printed in the source; peer-reviewed journal essay, admissible. Both tracks agree on all ten categories and the Include derivation (KI_Sonstige ja, Bias_Ungleichheit ja, Feministisch ja), which the abstract, the methodological framing in intersectional feminist thought and the findings section carry. Three analysis differences concern the threshold between the essay's own argument and reported cases; each is resolved from the source and the 1.4.1 rules. Category evidence for Gender uses the essay's own sentence rather than the reported Keyes finding. All agreed analysis values (Exclusionary_Norms, Erasure, Organisational_Process, Proposed, Explicit bias definition, theory references to intersectional feminist thought, hermeneutic reverse engineering and boundary objects) are supported by located passages.",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Corpus title and text title agree (Investigating AI systems: examining data and algorithmic bias through hermeneutic reverse engineering). Citation block names Shukla N (2025), Front. Commun. 10:1380252, doi: 10.3389/fcomm.2025.1380252. Source hash matches the manifest. Publication type: peer-reviewed journal article (Frontiers in Communication, editor and reviewer named)."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "nein",
+          "Generative_KI": "nein",
+          "Prompting": "nein",
+          "KI_Sonstige": "ja",
+          "Soziale_Arbeit": "nein",
+          "Bias_Ungleichheit": "ja",
+          "Gender": "teilweise",
+          "Diversitaet": "teilweise",
+          "Feministisch": "ja",
+          "Fairness": "teilweise"
+        },
+        "evidence": {
+          "AI_Literacies": [],
+          "Generative_KI": [],
+          "Prompting": [],
+          "KI_Sonstige": [
+            "It concentrates on the critical analysis of data and algorithms as two core parts of AI systems by operationalizing hermeneutic reverse engineering.",
+            "The field of critical algorithm studies identifies that another way in which AI produces and reproduces power and politics is through the politics of machine learning algorithms which lie in the realities they create."
+          ],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": [
+            "It argues that examining each part related to the building and working of AI systems is essential for unpacking the political play and potential insert points of biases in them.",
+            "The research perspectives presented in this article include critical examination of biases and politics within different elements of AI systems, and the impact of these biases on different social groups."
+          ],
+          "Gender": [
+            "It fails to recognize any face that does not belong to the societal definitions of race and gender that were fed into it during its creation and re-enacts the default social discrimination"
+          ],
+          "Diversitaet": [
+            "It helps us to understand the politics of representation within data and how the privilege of different societal groups is reflected in that.",
+            "The main results obtained by this method on AI systems is using cultural consideration and technological imagination to unpack existing meanings created by AI and design innovative approaches for AI to exert alternate/ inclusive meanings."
+          ],
+          "Feministisch": [
+            "Hermeneutic reverse engineering for AI involves using technological imagination to reconstruct AI that is based in intersectional feminist thought of acknowledging and understanding interlocking systems of structural oppression as stated by the 'Combahee River Collective Statement'",
+            "builds a non-technosolutionist narrative of code from a non-hegemonic and intersectional feminist standpoint to question algorithmic bias acting within it."
+          ],
+          "Fairness": [
+            "Investigate Participatory Design: Examine how involving end-users in the design process of AI systems can help minimize biases and promote fairness by organizing co-design workshops.",
+            "To understand these alternative realities, it is important to pay attention to the tensions of fairness at the intersection of individual and group needs (Binns, 2020) and to explore ways to improve fairness in machine learning systems by mitigating discrimination without collecting sensitive data (Veale and Binns, 2017)."
+          ]
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity",
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms",
+            "Erasure"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Absent",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Unclear"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Theoretical essay that proposes hermeneutic reverse engineering (Balsamo 2011) to examine data and algorithmic bias in AI systems, framed by boundary objects and intersectional feminist thought. AN_Bias_Axes: race and gender are coded from the essay's own sentences that develop the face-detection example (light skin as the norm, 'societal definitions of race and gender'); the opening list of race, gender, ability, language, class, economic background and religion is an enumeration. Sexual_Orientation_Identity is not coded, because gender identity appears only in the single cited Keyes (2018) sentence on automatic gender recognition, which the essay reports and does not develop. Intersectional is not coded, no passage makes an outcome depend on a combination of axes. AN_Harm_Types: Exclusionary_Norms from the essay's own argument on exclusion through hegemonic narration and light skin as the norm, and from its conclusion on questioning what is normal and who falls outside; Erasure from its own finding that questioning data reveals whose cultural narrative is missing. The cited cases of Buolamwini, Noble and Gebru are not coded as harm types. AN_Mitigation_Stage Organisational_Process and AN_Mitigation_Status Proposed: participatory co-design workshops and actionable AI audits are research perspectives, nothing is demonstrated or evaluated. AN_Gender_Understanding Unclear and AN_Gender_Definition Absent: the essay states no understanding of gender of its own; the phrase 'societal definitions of race and gender' attributes the categories to the training of a face-detection system within a cited case and does not state that gender is socially produced, so the Social_Construct threshold of codebook 1.4.1 is not met. AN_Prompting_Role None: observing outputs for different prompts appears once as a cited interrogation idea. AN_Task None: AI is the object of critique, no professional task of AI use is described.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Bias_Definition": [
+            {
+              "quote": "Bias based on race, gender, ability, language, class, economic background, and religion, among many other indicators, perpetuating in the AI systems are not just a glitch or an error, but systemic coding of the dominant social fabric (Gebru, 2020; Broussard, 2023).",
+              "locator": "Introduction, paragraph 1"
+            }
+          ],
+          "AN_Theory_Reference": [
+            {
+              "theory": "Intersectional feminist thought (Combahee River Collective Statement)",
+              "quote": "Hermeneutic reverse engineering for AI involves using technological imagination to reconstruct AI that is based in intersectional feminist thought of acknowledging and understanding interlocking systems of structural oppression as stated by the 'Combahee River Collective Statement'",
+              "locator": "Section Hermeneutic reverse engineering, paragraph 2"
+            },
+            {
+              "theory": "Hermeneutic reverse engineering (Balsamo, Designing Culture)",
+              "quote": "But one way in which the biases of technologies can be  understood, identified and examined is by using hermeneutic reverse engineering (Balsamo, 2011, p. 13-17).",
+              "locator": "Introduction, paragraph 4"
+            },
+            {
+              "theory": "Boundary objects (Star) within critical data, algorithm and code studies and feminist science and technology studies",
+              "quote": "This investigation of AI systems can be conducted considering them as boundary objects (Star, 2015) in the fields of critical data studies, critical algorithm studies, critical code studies, and feminist science and technology studies",
+              "locator": "Introduction, paragraph 4"
+            }
+          ],
+          "AN_Bias_Axes": [
+            {
+              "quote": "Such errors are possible when the system is trained and coded with data and algorithms that consider light skin as the norm",
+              "locator": "Introduction, paragraph 2 (Race_Ethnicity)"
+            },
+            {
+              "quote": "It fails to recognize any face that does not belong to the societal definitions of race and gender that were fed into it during its creation and re-enacts the default social discrimination (Benjamin, 2019; Buolamwini, 2023; Gebru, 2020).",
+              "locator": "Introduction, paragraph 2 (Race_Ethnicity, Gender)"
+            }
+          ],
+          "AN_Harm_Types": [
+            {
+              "quote": "Two ways in which this exclusion is practiced is through a lack of documentation and the domination of hegemonic narration in expert discourses around AI systems.",
+              "locator": "Introduction, second paragraph (Exclusionary_Norms)"
+            },
+            {
+              "quote": "It involves questioning what is normal within a particular system, and who falls outside that norm",
+              "locator": "Conclusion, paragraph 2 (Exclusionary_Norms)"
+            },
+            {
+              "quote": "Questioning the data makes it possible to interpret what data and whose cultural narrative is missing and the reasons behind that.",
+              "locator": "Section Findings and research perspectives, paragraph 1 (Erasure)"
+            }
+          ],
+          "AN_Mitigation_Stage": [
+            {
+              "quote": "(iv) Investigate Participatory Design: Examine how involving end-users in the design process of AI systems can help minimize biases and promote fairness by organizing co-design workshops.",
+              "locator": "Section Findings and research perspectives, paragraph 4"
+            },
+            {
+              "quote": "Some practices that can be employed with the speculative imagination of hermeneutic reverse engineering include actionable AI audits that lead to the reduction of biased results in industrial AI applications",
+              "locator": "Findings and research perspectives, second paragraph"
+            }
+          ]
+        }
+      }
+    },
+    "KQ5A8D6E": {
+      "paper_id": "KQ5A8D6E",
+      "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+      "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "Bias_Ungleichheit",
+          "ar1": "ja",
+          "ar2": "teilweise",
+          "chosen": "teilweise",
+          "reason": "Non-discrimination is one of six ethical principles and recurs as learning content (data biases lab, critique of AI-amplified biases, anti-bias measures in section 2.4), but the framework's contribution is a competency structure for school curricula in which bias is one explicit concern beside privacy, human agency and environmental sustainability; this is an explicit subordinate aspect. The Include decision is unaffected, because Diversitaet ja (section 2.4 as key principle) carries the social dimension."
+        },
+        {
+          "field": "AN_Task",
+          "ar1": [
+            "None"
+          ],
+          "ar2": [
+            "Other_Task"
+          ],
+          "chosen": [
+            "None"
+          ],
+          "reason": "AN_Task records a task of professional practice for which AI use is described, tested or proposed. The framework treats AI as curriculum content; the passage on students using AI tools to practise writing describes a learning activity of students, and teachers' AI-supported assessment appears only as a supplementary outlook in section 5.8, so no professional task of AI use is described."
+        }
+      ],
+      "rationale": "Identity verified from title, UNESCO imprint 2024, ISBN 978-92-3-100709-5, named drafting authors and named peer reviewers; documented policy and curriculum framework of an intergovernmental organisation, admissible under the ratified publication-type rule. Both tracks agree on Include through AI_Literacies ja, KI_Sonstige ja and Diversitaet ja, which the framework's twelve competency blocks and the inclusivity principle of section 2.4 carry. The level of Bias_Ungleichheit and the pilot field AN_Task are resolved from the source without effect on the decision. The agreed analysis values (no analysed bias axis, no harm type, proposed Pre_Processing, In_Training and Organisational_Process measures, Not_Applicable gender fields, Implicit_Only bias definition, no theory reference) are supported by the source.",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Corpus title and text title agree (AI competency framework for students). Imprint names UNESCO 2024, ISBN 978-92-3-100709-5, drafted by named authors of the UNESCO Unit for Technology and AI in Education with named peer reviewers. No DOI in the text, the ISBN serves as stable identifier. Source hash matches the manifest; manifest version type is unknown. Publication type: documented policy report and framework of an intergovernmental organisation with identifiable authorship and peer review, admissible under the ratified publication-type rule."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "ja",
+          "Generative_KI": "teilweise",
+          "Prompting": "nein",
+          "KI_Sonstige": "ja",
+          "Soziale_Arbeit": "nein",
+          "Bias_Ungleichheit": "teilweise",
+          "Gender": "nein",
+          "Diversitaet": "ja",
+          "Feministisch": "nein",
+          "Fairness": "teilweise"
+        },
+        "evidence": {
+          "AI_Literacies": [
+            "The UNESCO AI competency framework for students aims to help educators in this integration, outlining 12 competencies across four dimensions: Human-centred mindset, Ethics of AI, AI techniques and applications, and AI system design.",
+            "Governments acknowledged the urgent need to develop AI literacy and more advanced AI competencies as early as 2019, when they adopted the UNESCO Beijing Consensus on AI and Education ."
+          ],
+          "Generative_KI": [
+            "Explain what AI algorithms are used and integrated by a given generative AI system.",
+            "Co-create ethical guidance for yourself and your peers on the use of video-recommendation platforms or generative AI systems."
+          ],
+          "Prompting": [],
+          "KI_Sonstige": [
+            "AI foundations: Students are expected to be able to build basic knowledge and skills on AI, particularly with respect to data and algorithms",
+            "Explain how supervised learning, unsupervised learning and reinforcement learning work on a basic level.",
+            "help students to develop an age-appropriate understanding of the three types of AI algorithms, namely, supervised learning, unsupervised learning and reinforcement learning."
+          ],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": [
+            "Non-discrimination: Students are aware of and are able to detect gender, ethnic, cultural and other biases embedded in AI tools or their outputs.",
+            "When recommending specific AI tools for educational purposes, rigorous public validation mechanisms must be applied to avoid algorithms with bias(es) related to gender, ability, socio-economic status, language, ethnicity and/or culture."
+          ],
+          "Gender": [],
+          "Diversitaet": [
+            "All students should have inclusive access to the environments required for learning about AI at the basic level, and they should be supported to learn how to embed the principle of inclusivity into the design of AI and be prepared to contribute to an inclusive AI society.",
+            "AI tools that are designed to support individuals with disabilities and promote linguistic and cultural diversity should be given priority.",
+            "the competencies outlined in this framework are based on principles of inclusivity, the centrality of human agency, nondiscrimination, and respect for linguistic and cultural diversity."
+          ],
+          "Feministisch": [],
+          "Fairness": [
+            "This covers the selection of representative data, the choice of biasagnostic algorithms and anti-discrimination training methods, the design of accessible functionalities, testing for the inclusiveness of AI outputs, and impact assessment of the use of AI on social inclusion."
+          ]
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Konzept",
+          "AN_Notes": "UNESCO reference framework of twelve AI competency blocks for school students (four aspects by three progression levels) with curricular goals, pedagogical methods, learning environments and assessment items. Inclusivity is one of five key principles with its own section (2.4), hence Diversitaet ja. Bias enters as the non-discrimination principle, as anti-bias measures within section 2.4, the data biases lab and the competency to critique AI-amplified biases; it recurs as learning content beside privacy, human agency and environmental sustainability and is not the framework's central contribution, hence Bias_Ungleichheit teilweise. AN_Bias_Axes None: gender, ethnicity, culture, ability, socio-economic status and language appear only in enumerations of bias types or disaggregation variables. AN_Harm_Types None: no harm mechanism is established for the framework's own object. AN_Mitigation_Stage: Pre_Processing (representative data, data engineering to remove identifiable biases in the data biases lab), In_Training (anti-discrimination and discrimination-free training methods), Organisational_Process (public validation before recommending AI tools, inclusive testing and auditing); all are recommended as curricular content or policy, hence Proposed. AN_Bias_Definition Implicit_Only. AN_Gender_Definition and AN_Gender_Understanding Not_Applicable: gender occurs only in enumerations. AN_Population Not_SW_Specific: school students in general education. AN_Task None: AI is the learning object of a school curriculum; students' own use of AI tools to practise writing is learning activity, not a task of professional practice, and AI-supported assessment by teachers appears only as a supplementary outlook in section 5.8. School teaching lies outside Teaching_Further_Education, which addresses professionals. AN_Prompting_Role None: prompts appear only in a privacy assessment item.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Mitigation_Stage": [
+            {
+              "quote": "Guide students to learn age-appropriate skills in data engineering to remove identifiable biases and compare the results.",
+              "locator": "Table 3, 4.2.3 Application skills, Data biases lab (Pre_Processing)"
+            },
+            {
+              "quote": "This covers the selection of representative data, the choice of biasagnostic algorithms and anti-discrimination training methods, the design of accessible functionalities, testing for the inclusiveness of AI outputs, and impact assessment of the use of AI on social inclusion.",
+              "locator": "Section 2.4, paragraph 2 (Pre_Processing, In_Training)"
+            },
+            {
+              "quote": "When recommending specific AI tools for educational purposes, rigorous public validation mechanisms must be applied to avoid algorithms with bias(es) related to gender, ability, socio-economic status, language, ethnicity and/or culture.",
+              "locator": "Section 2.4, paragraph 3 (Organisational_Process)"
+            },
+            {
+              "quote": "anti-bias measures in data collection and engineering, discrimination-free methods for training machine learning",
+              "locator": "Table 4, CG4.3.2.1 Ethics by design (In_Training)"
+            }
+          ]
+        }
+      }
+    },
+    "MS3CNU3S": {
+      "paper_id": "MS3CNU3S",
+      "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+      "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
+      "result": "resolved",
+      "differences": [
+        {
+          "field": "identity_check.status",
+          "ar1": "verified",
+          "ar2": "provisional",
+          "chosen": "provisional",
+          "reason": "Title, full author list and submission and acceptance dates agree with the corpus record and nothing conflicts, but the source prints no DOI or other stable identifier of the article itself; under the reviewer prompt a metadata gap other than a title or DOI conflict permits provisional coding and is documented in identity_check, so the status records the unchecked DOI rather than a verification."
+        }
+      ],
+      "rationale": "Peer-reviewed survey with named journal action editor, admissible. Both tracks agree on every category, the Include derivation (Generative_KI ja, Bias_Ungleichheit ja, Fairness ja) and every analysis value. The source carries them: the harm types are the rows of the survey's own Table 1 and the bias-issue columns of Table 4 (codebook anchor for this work), the axes are the targeted-social-group columns of Table 4 plus the dialect axis developed throughout, the six mitigation stages follow the survey's own taxonomy in Section 5 and the participatory and governance proposals of Section 6, Evaluated rests on synthesised evaluations reported in Sections 5.1.6 and 5.2.4, Definition 7 gives an explicit bias determination, and the representational and allocational harms framework and group fairness frame the treatment of bias. Social_Construct rests on the survey's own statement that social groups, which by Definition 3 include gender identity and sex, are socially constructed and tied to power imbalances, together with its recommendation to revise frameworks that require binary social groups; the statement concerns social groups generally and is a boundary case. The only difference is the identity status.",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Corpus title 'Bias and fairness in large language models: A survey' matches the text title (conversion form 'ASurvey'). Authors Gallegos, Rossi, Barrow, Tanjim, Kim, Dernoncourt, Yu, Zhang, Ahmed; submission received 8 March 2024, accepted 8 May 2024, journal action editor named. The text prints no DOI or other stable identifier of the article, so the DOI could not be checked against the source; title, authors and dates show no conflict. Source hash matches the manifest; the Work carries the second record ID WNY526GN. Publication type: peer-reviewed survey article. A DOI check against the corpus metadata remains open for the orchestrator."
+      },
+      "final_coding": {
+        "categories": {
+          "AI_Literacies": "nein",
+          "Generative_KI": "ja",
+          "Prompting": "teilweise",
+          "KI_Sonstige": "nein",
+          "Soziale_Arbeit": "nein",
+          "Bias_Ungleichheit": "ja",
+          "Gender": "teilweise",
+          "Diversitaet": "teilweise",
+          "Feministisch": "teilweise",
+          "Fairness": "ja"
+        },
+        "evidence": {
+          "AI_Literacies": [],
+          "Generative_KI": [
+            "In this article, we present a comprehensive survey of bias evaluation and mitigation techniques for LLMs."
+          ],
+          "Prompting": [
+            "Textual instructions or triggers may be added to a prompt to generate an unbiased output.",
+            "Provide a phrase to a generative LLM to condition text completion"
+          ],
+          "KI_Sonstige": [],
+          "Soziale_Arbeit": [],
+          "Bias_Ungleichheit": [
+            "Despite this success, these models can learn, perpetuate, and amplify harmful social biases.",
+            "Social bias broadly encompasses disparate treatment or outcomes between social groups that arise from historical and structural power asymmetries."
+          ],
+          "Gender": [
+            "Machine translators may default to masculine words in the case of ambiguity, a form of an exclusionary norm",
+            "We illustrate one type of social group substitution (gender) for two different tasks, namely, question-answering and text completion."
+          ],
+          "Diversitaet": [
+            "Participatory approaches can integrate community members into the research process to better understand and represent their needs.",
+            "Researchers and practitioners should not merely react to bias in the systems they create, but instead design these technologies with the needs of vulnerable groups in mind from the start",
+            "Curation of additional language resources should value inclusivity over convenience"
+          ],
+          "Feministisch": [
+            "Language can also exclude, subtly reinforcing norms that can further marginalize groups that do not conform, through linguistic practices like 'male-asnorm,' which orients feminine words as less important opposites derived from default masculine terms. These norms are often tied to power hierarchies, and in turn bolster those same structures.",
+            "which orients feminine words as less important opposites derived from default masculine terms. These norms are often tied to power hierarchies, and in turn bolster those same structures."
+          ],
+          "Fairness": [
+            "We shift fairness frameworks typically applied to machine learning classification problems towards NLP and introduce several fairness desiderata that begin to operationalize various fairness notions for LLMs.",
+            "Given a set of social groups G , group fairness requires (approximate) parity across all groups G ∈ G",
+            "Instead of suggesting a single fairness constraint, we provide a number of possible fairness desiderata for LLMs."
+          ]
+        },
+        "decision": "Include",
+        "reason": null,
+        "analysis": {
+          "AN_Prompting_Role": [
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Religion",
+            "Age",
+            "Nationality_Migration",
+            "Physical_Appearance",
+            "Sexual_Orientation_Identity",
+            "Language_Culture"
+          ],
+          "AN_Harm_Types": [
+            "Derogatory_Language",
+            "Disparate_Performance",
+            "Erasure",
+            "Exclusionary_Norms",
+            "Misrepresentation",
+            "Stereotyping",
+            "Toxicity",
+            "Direct_Discrimination",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Intra_Processing",
+            "Post_Processing",
+            "Prompt_Practice",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Social_Construct"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Literaturreview",
+          "AN_Notes": "Survey of bias evaluation metrics, evaluation datasets and mitigation techniques for LLMs with three taxonomies and a harm taxonomy (Table 1). AN_Harm_Types: all nine values structure the survey's own synthesis as rows of Table 1 (representational harms and allocational harms) and, for six of them, as coded columns of Table 4; the Derogatory_Language row label is lost in the conversion of Table 1, so its passage comes from section 2.4.2. AN_Bias_Axes: coded from the targeted-social-group columns of Table 4 (age, gender identity, nationality, physical appearance, race, religion, sexual orientation) and from dialect as the survey's own worked example (African-American English, linguistic profiling); disability and socioeconomic status appear only in dataset enumerations and the 'Other' footnote and are not coded. Intersectional is not coded: the survey argues that group fairness can hold for each group while failing for intersectional subgroups, but names no axis combination whose result it develops. AN_Prompting_Role Research_Instrument: prompt datasets (sentence completions, question answering) are a class of the evaluation taxonomy; modified prompting language is reviewed as a mitigation technique, not recommended. AN_Prompt_Techniques General_Guidance, concrete strategy as synthesised: 'prompting language with different levels of abstraction to instruct the model to avoid using stereotypes' and prepending positive adjectives or phrases to a prompt (section 5.1.4). AN_Mitigation_Stage: the four technical stages are the survey's own taxonomy; Prompt_Practice from modified prompting language; Organisational_Process from participatory research designs, reporting standards and data governance proposed in section 6. AN_Mitigation_Status Evaluated as a synthesised evaluation, not the survey's own experiment: the survey reports that Borchers et al. (2022) found instructions prompting diversity or gender equality unsuccessful for bias removal, and that pruning 10-20% of parameters increased resistance to jailbreaking (Hasan, Rugina and Wang 2024); other techniques are inventoried without assessment. AN_Gender_Understanding Social_Construct: the survey states that social groups, which by Definition 3 include gender identity and sex, are socially constructed, contested and tied to power imbalances, and it adopts the critique that binary and immutable gender modelling erases trans, nonbinary and intersex people; its own Figure 1 example uses a male and female substitution. AN_Gender_Definition Implicit_Only because gender itself is not defined. AN_Task None: general LLM bias survey without an application task.",
+          "undecidable": {}
+        },
+        "analysis_evidence": {
+          "AN_Bias_Definition": [
+            {
+              "quote": "Social bias broadly encompasses disparate treatment or outcomes between social groups that arise from historical and structural power asymmetries. In the context of NLP, this entails representational harms (misrepresentation, stereotyping, disparate system performance, derogatory language, and exclusionary norms) and allocational harms (direct discrimination and indirect discrimination), taxonomized and defined in Table 1.",
+              "locator": "Section 2.2.1, Definition 7 (Social bias)"
+            }
+          ],
+          "AN_Theory_Reference": [
+            {
+              "theory": "Representational and allocational harms (Barocas, Hardt and Narayanan 2019; Blodgett et al. 2020; Crawford 2017)",
+              "quote": "The taxonomy of bias issues synthesizes and consolidates those similarly defined by Barocas, Hardt, and Narayanan (2019), Blodgett et al. (2020), Blodgett (2021), and Crawford (2017).",
+              "locator": "Section 2.2.1, after Definition 7"
+            },
+            {
+              "theory": "Sociolinguistic research on language, stereotypes and social categories",
+              "quote": "following extensive (socio)linguistic research in this area by Beukeboom and Burgers (2019), Craft et al. (2020), Loudermilk (2015), Maass (1999), and others.",
+              "locator": "Section 2.2.1, paragraph 2"
+            },
+            {
+              "theory": "Group and individual fairness",
+              "quote": "The primary emphasis of bias evaluation and mitigation efforts for LLMs focus on group notions of fairness, which center on disparities between social groups , following group fairness definitions in the literature (Chouldechova 2017; Hardt, Price, and Srebro 2016; Kamiran and Calders 2012).",
+              "locator": "Section 2.2.1, before Definition 3"
+            }
+          ],
+          "AN_Gender_Understanding": [
+            {
+              "quote": "We highlight that social groups are often socially constructed, a form of classification with delineations that are not static and may be contested (Hanna et al. 2020).",
+              "locator": "Section 2.2.1, after Definition 4"
+            },
+            {
+              "quote": "argue that modeling gender as binary and immutable erases the identities of trans, nonbinary, and intersex people.",
+              "locator": "Section 6.2, Rethinking Social Group Definitions"
+            }
+          ],
+          "AN_Harm_Types": [
+            {
+              "quote": "Taxonomy of social biases in NLP. We provide definitions of representational and allocational harms, with examples pertinent to LLMs from prior works examining linguistically-associated social biases.",
+              "locator": "Table 1 caption (all harm types)"
+            },
+            {
+              "quote": "Degraded understanding, diversity, or richness in language processing or generation between social groups or linguistic variations",
+              "locator": "Table 1, Disparate system performance"
+            },
+            {
+              "quote": "Omission or invisibility of the language and experiences of a social group",
+              "locator": "Table 1, Erasure"
+            },
+            {
+              "quote": "Reinforced normativity of the dominant social group and implicit ex- clusion or devaluation of other groups",
+              "locator": "Table 1, Exclusionary norms"
+            },
+            {
+              "quote": "An incomplete or non-representative distribution of the sample popu- lation generalized to a social group",
+              "locator": "Table 1, Misrepresentation"
+            },
+            {
+              "quote": "Denigrating and subordinating attitudes towards a social group",
+              "locator": "Table 1, first representational row (Derogatory language, row label lost in conversion)"
+            },
+            {
+              "quote": "Negative, generally immutable abstractions about a labeled social group",
+              "locator": "Table 1, Stereotyping"
+            },
+            {
+              "quote": "Offensive language that attacks, threatens, or incites hate or violence against a social group",
+              "locator": "Table 1, Toxicity"
+            },
+            {
+              "quote": "Disparate treatment due explicitly to membership of a social group",
+              "locator": "Table 1, Direct discrimination"
+            },
+            {
+              "quote": "Disparate treatment despite facially neutral consideration towards so- cial groups, due to proxies or other implicit factors",
+              "locator": "Table 1, Indirect discrimination"
+            },
+            {
+              "quote": "Bias evaluation datasets can assess specific harms, such as stereotyping or derogatory language, that target particular social groups, such as gender or race groups.",
+              "locator": "Section 2.4.2 (Derogatory_Language)"
+            }
+          ],
+          "AN_Bias_Axes": [
+            {
+              "quote": "Toxicity detection models misclassify African-American English tweets as negative more often than those written in Standard American English",
+              "locator": "Section 2.2.2, Classification (Language_Culture)"
+            },
+            {
+              "quote": "Datasets should be selected to provide exhaustive coverage over a range of biases for multidimensional evaluation that extends beyond the most common axes of gender (identity) and stereotyping.",
+              "locator": "Section 4.3, recommendation 2 (Table 4 targeted social groups)"
+            }
+          ],
+          "AN_Mitigation_Status": [
+            {
+              "quote": "Borchers et al. (2022), for example, find instructions that prompt diversity or gender equality to be unsuccessful for bias removal in outputs.",
+              "locator": "Section 5.1.6, paragraph 3"
+            }
+          ],
+          "AN_Prompt_Techniques": [
+            {
+              "quote": "Mattern et al. (2022) propose prompting language with different levels of abstraction to instruct the model to avoid using stereotypes.",
+              "locator": "Section 5.1.4, Modified Prompting Language"
+            }
+          ],
+          "AN_Mitigation_Stage": [
+            {
+              "quote": "We classify an extensive range of bias mitigation methods by their intervention stage: pre-processing (modifying model inputs), in-training (modifying the optimization process), intra-processing (modifying inference behavior), and post-processing (modifying model outputs).",
+              "locator": "Section 1, contribution 4"
+            },
+            {
+              "quote": "This participatory approach can be expanded beyond dataset curation to include community voices in motivating mitigation techniques and improving evaluation strategies.",
+              "locator": "Section 6.1, Developing Participatory Research Designs (Organisational_Process)"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "domain_expert_flags": {
+    "GJF776AY": "Threshold of Social_Construct for the sentence on 'societal definitions of race and gender', and whether reported cases such as Keyes (2018) count as the essay's own worked examples for AN_Bias_Axes.",
+    "KQ5A8D6E": "AN_Task value gap for school education outside Teaching_Further_Education, and the boundary between ja and teilweise for Bias_Ungleichheit in a broad competency framework.",
+    "MS3CNU3S": "Social_Construct derived from a statement on social groups generally rather than on gender alone, and the DOI check left open by the provisional identity status."
+  },
+  "summary": {
+    "records": 3,
+    "resolved_records": 3,
+    "decisions": {
+      "Include": 3,
+      "Unclear": 0,
+      "Exclude": 0
+    }
+  }
+}

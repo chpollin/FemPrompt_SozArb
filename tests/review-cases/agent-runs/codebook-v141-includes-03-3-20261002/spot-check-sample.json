@@ -1,0 +1,35 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-03-3-20261002",
+  "status": "proposed",
+  "seed": 20261005,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "MS3CNU3S"
+  ],
+  "disagreeing_works": [
+    "GJF776AY",
+    "KQ5A8D6E"
+  ],
+  "drawn": [
+    "GJF776AY",
+    "KQ5A8D6E",
+    "MS3CNU3S"
+  ],
+  "flagged_additions": [],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "GJF776AY": "Social_Construct threshold and whether cited cases count as own examples for AN_Bias_Axes",
+    "KQ5A8D6E": "AN_Task has no value for school education, and the ja/teilweise boundary of Bias_Ungleichheit",
+    "MS3CNU3S": "Social_Construct rests on a statement about social groups in general, DOI match against corpus metadata pending"
+  },
+  "track_agreement_sha256": "66a645899c9ec4614b91057c8882496300404d4792b98b3f3f39a58b41a3b417"
+}

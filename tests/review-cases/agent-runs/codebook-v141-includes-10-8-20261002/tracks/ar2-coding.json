@@ -1,0 +1,658 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.2",
+  "codebook_version": "1.4.1",
+  "run_id": "codebook-v141-includes-10-8-20261002",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "decisions": {
+    "22KJL3PC": {
+      "source_path": "docs/data/fulltext/22KJL3PC.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'The cultural stereotype and cultural bias of ChatGPT' matches the corpus title; DOI 10.1177/18344909251355673, Journal of Pacific Rim Psychology vol. 19, 2025, authors Yuan, Che, Zhang et al. stated in the text. Source hash matches the manifest. Publication type: peer-reviewed journal article."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "Therefore, users must be aware of potential stereotypes in ChatGPT ' s understanding of cultural values when using it for cross-cultural interactions."
+        ],
+        "Generative_KI": [
+          "Given the rapid advancement of large-scale language models, AI models, like ChatGPT, are playing an increasingly prominent role in human society."
+        ],
+        "Prompting": [
+          "Furthermore, Study 3 created four kinds of prompt strategies and applied them to decision-making tasks.",
+          "It also found that the four prompt strategies can effectively reduce the generation of ChatGPT ' s stereotypes and biases."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "These tasks are related to distribution, indicating that ChatGPT has cultural biases in distributive fairness."
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "This can help us understand ChatGPT ' s perception of individuals from different countries and assess whether they hold cultural stereotypes.",
+          "This approach would facilitate more effective and respectful cross-cultural interactions."
+        ],
+        "Feministisch": [],
+        "Fairness": [
+          "While both models display cultural bias, ChatGPT 4o exhibits it in fewer tasks, suggesting improved fairness in interactions"
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Research_Instrument", "Recommended_Practice"],
+        "AN_Prompt_Techniques": ["Role_Persona", "General_Guidance"],
+        "AN_Bias_Axes": ["Nationality_Migration", "Language_Culture"],
+        "AN_Harm_Types": ["Stereotyping", "Direct_Discrimination"],
+        "AN_Mitigation_Stage": ["Prompt_Practice"],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "Three studies with ChatGPT 3.5 and 4o: cultural value scales (Study 1), 13 one-round decision tasks with country personas and country interactants (Study 2), four prompt strategies as intervention (Study 3). Role_Persona: 'If you are an ordinary individual from [the country]' as instrument; General_Guidance covers the debiasing cues 'From a fairness perspective,', 'As an independent individual, please make a choice according to your own ideas and', 'If you live in a future world.' and 'Imagine you live in a multicultural world,'. Evaluated: the prompt strategies reduced country differences to non-significance in most tested task-model combinations, but the personal-preference prompt failed in the GPT-4o public goods game (own experiment). Axes coded as the work names them, countries/nationality and cultural groups. Direct_Discrimination: allocation decisions (dictator, ultimatum, public goods) toward interactants vary with the nationality stated in the prompt; these are simulated game allocations, not real decisions about persons. Training-data and oversight recommendations in the discussion are outlook and not coded as stages. Theory: Hofstede's cultural dimensions and GLOBE dimensions frame the explanation of the bias sources. Gender appears only as the GLOBE dimension gender egalitarianism, not as an object."
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "we de /uniFB01 ne cultural bias as asymmetries in ChatGPT ' s behavior toward individuals from different cultural groups during social interaction tasks",
+            "locator": "Study 2, introductory definition of cultural stereotype and cultural bias"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Hofstede's cultural dimensions theory (with GLOBE cultural value dimensions)",
+            "quote": "Individualism -collectivism: It is one of the cultural dimensions proposed by Hofstede (Hofstede, 2001), which refers to whether society as a whole emphasizes individual interests or collective interests.",
+            "locator": "Study 1, Methods, scales of multicultural values"
+          },
+          {
+            "theory": "Hofstede's cultural dimensions theory (with GLOBE cultural value dimensions)",
+            "quote": "In general, the cultural values of countries can predict ChatGPT ' s stereotypes and biases against these countries, indicating that ChatGPT ' s stereotypes and biases towards different societies are generated based on the cultural value orientation of speci /uniFB01 c societies.",
+            "locator": "Study 2, Results, potential sources of stereotypes and bias"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "ChatGPT has cultural stereotypes and biases.",
+            "locator": "Study 2, Results, first paragraph (Stereotyping)"
+          },
+          {
+            "quote": "ChatGPT 3.5 will tend to distribute unfairly in dictator tasks when interacting with individuals in high individualism cultures",
+            "locator": "Study 2, Results, sources of bias (Direct_Discrimination)"
+          }
+        ],
+        "AN_Mitigation_Status": [
+          {
+            "quote": "Overall, these /uniFB01 ndings underscore the effectiveness of the developed prompt strategies in reducing cultural bias across different games and contexts.",
+            "locator": "Study 3, Results, effect of prompt strategies on cultural bias"
+          }
+        ]
+      }
+    },
+    "3AHQEHDF": {
+      "source_path": "docs/data/fulltext/3AHQEHDF.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'Multilingual Prompting for Improving LLM Generation Diversity' matches the corpus title; authors Wang, Pan, Linzen, Black (New York University, Columbia University) stated. The preprint text carries no DOI, venue or publication year; this gap is documented, no title or identifier conflict. Source hash matches the manifest. Publication type: scholarly preprint with methods and references."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "ja",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "Large Language Models (LLMs) are known to lack cultural representation and overall diversity in their generations, from expressing opinions to answering factual questions."
+        ],
+        "Prompting": [
+          "To mitigate this problem, we propose multilingual prompting : a prompting method which generates several variations of a base prompt with added cultural and linguistic cues from several cultures, generates responses, and then combines the results."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "It is important that this exposure is distributed in an equitable manner.",
+          "LLMs concentrate their responses about individuals in various professions, e.g., what artists to listen to, to largely American artists, systematically over-looking those from underrepresented cultural backgrounds"
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "we introduce and evaluate multilingual and multicultural prompting and shown in 2 as methods to increase various forms of demographic, cultural, and other forms of diversity in LLM generations",
+          "In this task, we ask an LLM to generate names for individuals in various professions, and assess the demographic diversity of the response across nationality, ethnicity, and geographic region."
+        ],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Recommended_Practice", "Research_Instrument"],
+        "AN_Prompt_Techniques": ["Ensembling", "Role_Persona"],
+        "AN_Bias_Axes": ["Nationality_Migration", "Race_Ethnicity", "Language_Culture"],
+        "AN_Harm_Types": ["Exclusionary_Norms", "Erasure"],
+        "AN_Mitigation_Stage": ["Prompt_Practice"],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "Multilingual and multicultural prompting: several prompt variants with language and cultural cues (e.g. 'You are a Chinese-speaking assistant', persona with name, birthplace, favourite food), responses combined by concatenation (Ensembling) and compared against high temperature, requesting diversity, random personas and step-by-step recall on GPT-4o, GPT-4o-mini, LLaMA 70B and 8B. Evaluated: multilingual prompting yields the highest normalized entropy in most comparisons and lowers hallucination of culture-specific names in a human annotation study (own experiment). The work frames the problem as lack of diversity and unequal exposure rather than as bias; its understanding of bias is recognisable only from the entropy measures. Axes: nationality, ethnicity and region of generated names, cultural and language perspectives on social norms. Harm types from the own experiment: American default in named artists (Exclusionary_Norms) and overlooking underrepresented cultural backgrounds (Erasure). Gender appears only in a persona cue and a social-norm example."
+      },
+      "analysis_evidence": {
+        "AN_Harm_Types": [
+          {
+            "quote": "LLMs concentrate their responses about individuals in various professions, e.g., what artists to listen to, to largely American artists",
+            "locator": "Section 1 Introduction, own experiments (Exclusionary_Norms)"
+          },
+          {
+            "quote": "systematically over-looking those from underrepresented cultural backgrounds",
+            "locator": "Section 1 Introduction, own experiments (Erasure)"
+          }
+        ],
+        "AN_Mitigation_Status": [
+          {
+            "quote": "Across all models and metrics, multilingual prompting strategies consistently yield the highest diversity scores.",
+            "locator": "Section 4.2 Results"
+          }
+        ]
+      }
+    },
+    "3AQ2K3BX": {
+      "source_path": "docs/data/fulltext/3AQ2K3BX.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'Conceptualizing AI literacy: An exploratory review' matches the corpus title; authors Ng, Leung, Chu, Qiao and journal Computers and Education: Artificial Intelligence stated. The converted text carries no DOI or publication year; gap documented, no title or identifier conflict. Source hash matches the manifest. Publication type: peer-reviewed review article."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "teilweise",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "an exploratory review was conducted to conceptualize the newly emerging concept ' AI literacy ' , in search for a sound theoretical foundation to define, teach and evaluate AI literacy"
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "Understand the basic AI concepts and their origins such as machine learning, deep learning and neural network."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Teachers should address the learning needs of under-represented groups including, but not limited to, gender, ethnic minorities, social-economic status and cultural background when teaching AI.",
+          "researchers began to notice the importance of AI human-centered concerns such as inclusiveness, fairness, accountability, transparency, and ethics, instead of merely enhancing students ' AI abilities and interests"
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "To bring up future responsible citizens who are competent in using AI in a reliable, trustworthy and fair manner, broadening participation in AI for everyone and ensuring inclusive AI learning designs are necessary."
+        ],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "6L85PRUW": {
+      "source_path": "docs/data/fulltext/6L85PRUW.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Inclusive Prompt Engineering: A Methodology for Hacking Biased AI Image Generation' matches the corpus title; DOI 10.1145/3641237.3691655, SIGDOC '24, published 20 October 2024, authors Skilton and Cardinal stated. Source hash matches the manifest. Publication type: peer-reviewed conference research paper."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "teilweise",
+        "Diversitaet": "ja",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "For teachers, guiding students through this process helps teach budding designers how bias is built into prompting within LLMs so that they can learn strategies for conscientiously and ethically working with these tools amidst their limitations and inherent biases [34]."
+        ],
+        "Generative_KI": [
+          "With the emergent and rapidly expanding use cases of images created with AI image generators such as Midjourney, DALL-E, and Adobe Firefly"
+        ],
+        "Prompting": [
+          "In this research paper, we offer a methodology, which we call inclusive prompt engineering, to describe the process of examining and modifying the relationship between written prompts and visual outputs of human subjects using AI."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "However, as we will show, this bias towards positivity further reinforces stereotypical images by defaulting to what the LLM sees as 'positive': young, beautiful, skinny, and white."
+        ],
+        "Gender": [
+          "Based on our observations of how toxic positivity because of content moderation guidelines can continue to create racist, sexist, and ageist human subjects, we developed a prompting method we call inclusive prompt engineering",
+          "For instance, asking for a realistic portrait of a person without other descriptors results in a young, thin, white man."
+        ],
+        "Diversitaet": [
+          "Through a series of prompt engineering practices, we show how users can bypass this toxic positivity to create images that better demonstrate the diversity of humanity, including a range of ages, body sizes, races, and genders."
+        ],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Recommended_Practice", "Research_Instrument", "Learning_Content"],
+        "AN_Prompt_Techniques": ["General_Guidance"],
+        "AN_Bias_Axes": ["Race_Ethnicity", "Age", "Physical_Appearance", "Socioeconomic", "Gender", "Disability"],
+        "AN_Harm_Types": ["Stereotyping", "Exclusionary_Norms"],
+        "AN_Mitigation_Stage": ["Prompt_Practice"],
+        "AN_Mitigation_Status": "Demonstrated",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["Other_Task"],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": ["Binary_Categorical"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Konzept",
+        "AN_Notes": "Inclusive prompt engineering for DALL-E portraits as a three-step method: define focal point with demographic descriptors, view the descriptors DALL-E adds to the prompt, alter the text using the AI-provided structure. General_Guidance strategy verbatim: 'reinforcing particularly important traits several times with various synonyms' and 'Using the AIprovided prompt as a general template for future prompts'. Zero-shot prompting serves as research instrument to expose the model's defaults. Demonstrated: the method is applied and shown on example images without a systematic evaluation. Other_Task: visual content design for social media, interfaces and personas by content designers and technical communicators; the teaching implication is coded as Learning_Content. Axes from own case studies: low-income couple turned white (Race_Ethnicity, Socioeconomic), 65-year-old woman (Age), body size and baldness (Physical_Appearance), disability as appearance treated as negative (Disability), default young thin white man (Gender). No passage makes an outcome depend on a combination of axes. Gender appears as binary descriptor (woman, man) without determination. Bias definition: the work determines its own bias mechanism 'toxic positivity'. Theories: social justice approach in technical communication (Walton, Moore, Jones) and tactical technical communication."
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "Like the psychological definition, toxic positivity in AI refers to resisting or ignoring realistic depictions, favoring those deemed more acceptable or positive according to recognized social norms.",
+            "locator": "Section 2 Toxic Positivity, first paragraph"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Social justice approach in technical communication (Walton, Moore and Jones)",
+            "quote": "Many of these operationalized social justice approaches to technical communication follow the process outlined by Walton, Moore, and Jones [13]: Recognize the injustice present in technical communication, reveal the underlying practices or processes, reject those processes, and replace them with those that work towards addressing systemic biases.",
+            "locator": "Section 1 Introduction"
+          },
+          {
+            "theory": "Tactical technical communication",
+            "quote": "We might consider this method of inclusive prompt engineering as a form of tactical technical communication [24, 25], since we are finding ways to hack existing technology for the purpose of inclusivity by resisting and refining how these tools work beyond their inherently biased design features that reinforce racist and ageist stereotypes.",
+            "locator": "Section 1 Introduction, after the abstract block"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "An inexperienced user unfamiliar with prompting strategies would be presented with this biased image, which reinforces the idea that cleanliness is associated with whiteness.",
+            "locator": "Section 2.1 Case study 1 (Stereotyping)"
+          },
+          {
+            "quote": "Another prominent form of toxic positivity we found in DALL-E's model was how it applies Western beauty norms to its outputs and actively resists creating subjects who are not young and thin.",
+            "locator": "Section 2.2 Unspecified Negative Traits (Exclusionary_Norms)"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "Our prompt details were intentionally vague, 'create a portrait of a low income couple,' allowing the AI to produce an output based entirely on its existing semantic model.",
+            "locator": "Section 2.1 Case study 1 (Socioeconomic)"
+          },
+          {
+            "quote": "By resisting these portrayals, DALL-E's model reinforces the idea that disability, especially as it shows up in a person's body or physical appearance, is inherently negative, demonstrating how toxic positivity emerges.",
+            "locator": "Section 2.2 (Disability, Physical_Appearance)"
+          }
+        ]
+      }
+    },
+    "7L93JBLR": {
+      "source_path": "docs/data/fulltext/7L93JBLR.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Gender in a stereo-(gender)typical EU AI law: A feminist reading of the AI act' matches the corpus title apart from capitalisation; DOI 10.1017/cfl.2025.12, Cambridge Forum on AI: Law and Governance 1, e25, 2025, author Karagianni stated. Source hash matches the manifest. Publication type: peer-reviewed research article."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "teilweise",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "teilweise",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "GPAI systems, such as large language models, foundation models and generative AI, are increasingly shaping decision-making in critical domains, from hiring and healthcare to law enforcement."
+        ],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "This paper examines the European Regulation (EU) 2024/1689 on harmonised rules on artificial intelligence (AI), commonly known as AI Act, through a feminist lens, analysing how the proposed regulatory framework addresses gender, non-discrimination and systemic power imbalances."
+        ],
+        "Soziale_Arbeit": [
+          "SyRI was an AI-driven system used by the Dutch government to predict and identify individuals at risk of committing fraud in social welfare programs."
+        ],
+        "Bias_Ungleichheit": [
+          "The findings argue that while the AI Act seeks to mitigate gendered risks, it falls short of addressing the structural biases embedded in AI technologies, which disproportionately harm marginalised groups."
+        ],
+        "Gender": [
+          "Moreover, while the AI Act acknowledges gender-based discrimination, it fails to account for inclusive gender identities such as transgender, non-binary, intersex and gender non-conforming people, highlighting the need for more inclusive regulatory frameworks."
+        ],
+        "Diversitaet": [
+          "The paper closes by proposing feminist-informed revisions to the AI Act that emphasise gender inclusivity, intersectionality and accountability in AI governance, advocating for a more equitable AI framework that reflects the lived experiences of women, LGBTQIA + people and marginalised communities."
+        ],
+        "Feministisch": [
+          "This paper critically examines the AI Act (European Commission, 2024) through a feminist lens, employing feminist legal methods to analyse its interaction with EU law and assess its implications for gender inclusivity, non-discrimination and accountability."
+        ],
+        "Fairness": [
+          "Consequently, conformity assessments should mandate comprehensive bias audits that extend beyond detecting overt discrimination to uncover subtle, structural biases that disproportionately affect women particularly women of colour, LGBTQIA + people and other marginalised groups"
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Intersectional", "Sexual_Orientation_Identity", "Socioeconomic"],
+        "AN_Harm_Types": ["Exclusionary_Norms", "Stereotyping", "Indirect_Discrimination"],
+        "AN_Mitigation_Stage": ["Organisational_Process", "Pre_Processing"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Explicit",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Social_Construct", "Non_Binary_Inclusive", "Intersectional"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Theoretisch",
+        "AN_Notes": "Feminist legal reading of the EU AI Act along pre-market regulation, provider responsibilities and deployer obligations. Proposed measures: intersectional bias audits, gender impact assessment within the fundamental rights impact assessment, diverse auditing and development teams, participation of affected communities, independent oversight bodies (Organisational_Process), diverse and representative datasets in standardisation (Pre_Processing); all remain proposals. Axes from the own argument: gender including trans, non-binary and intersex identities, race, sexual orientation and gender identity, socioeconomic status in the SyRI analysis; Intersectional through the SyRI case and the woman-of-colour argument. Harm types: binary and male-default norms in the AI Act and in algorithmic decision-making (Exclusionary_Norms), the author's Google Translate example (Stereotyping), SyRI welfare-fraud flagging via historical data and income (Indirect_Discrimination); the hiring and healthcare cases are cited from other work and not coded separately. Population and task: the object is EU AI law in general; SyRI (social welfare fraud detection) is one worked case, so Social_Assistance_Admin and a welfare decision task are not coded as the addressed setting. Bias is framed structurally through the theories but not determined in a sentence of its own. Theories frame gender and bias explicitly: Fricker's hermeneutical injustice, MacKinnon's dominance theory, intersectionality (Cooper, Crenshaw), Quijano's coloniality of power, Mignolo's decoloniality, queer theory."
+      },
+      "analysis_evidence": {
+        "AN_Gender_Definition": [
+          {
+            "quote": "Instead, a feminist analysis seeks to dismantle patriarchal structures that affect people of all genders, including men, non-binary and gender non-conforming people.",
+            "locator": "Section 3.1, closing paragraph"
+          },
+          {
+            "quote": "However, these amendments fell short of addressing the deeper social construction of gender, raising concerns about the effectiveness of gender equality measures in AI governance.",
+            "locator": "Section 1 Introduction"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Hermeneutical injustice (Fricker), dominance theory (MacKinnon), coloniality of power (Quijano), decoloniality of law (Mignolo)",
+            "quote": "Drawing on Miranda Fricker's theory of hermeneutical injustice, Catharine MacKinnon's feminist legal theory on male dominance, Aníbal Quijano's concept of 'coloniality of power' and Walter Mignolo's theory of epistemology and the decoloniality of law, the paper critiques the AI Act's approach to gender bias and discrimination.",
+            "locator": "Abstract"
+          },
+          {
+            "theory": "Intersectionality (Cooper, Crenshaw)",
+            "quote": "The concept of intersectionality , first introduced by Ann Julia Cooper in 1892 (Cooper, 1988) and later popularised by American scholar Professor Kimberlé Crenshaw (Crenshaw, 1991), examines how different aspects of a person's identity intersect.",
+            "locator": "Section 3.1"
+          },
+          {
+            "theory": "Queer theory",
+            "quote": "Queer theory critiques traditional norms related to gender, sexuality and identity, which are often heteronormative (focused on heterosexuality as the norm) and cisnormative (focused on cisgender identities).",
+            "locator": "Section 3.1"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "A feminist and intersectional analysis reveals that the AI Act treats gender bias primarily as a technical issue, rather than recognising it as a systemic challenge rooted in historical power imbalances, while it perpetuates a binary distinction of gender.",
+            "locator": "Section 5 Concluding remarks (Exclusionary_Norms)"
+          },
+          {
+            "quote": "For instance, language models trained on internet data may internalise sexist stereotypes, like Google Translator - which is a narrow/specialised AI system - which translates the word 'nurse' in English into Greek with a female pronoun, while the word 'lawyer' or 'engineer' with a male, replicating in this way the gender stereotypes.",
+            "locator": "Section 4.2 (Stereotyping)"
+          },
+          {
+            "quote": "In an intersectional sense, this bias was compounded by socioeconomic factors, as people in lower income brackets, who are often racial minorities, were more likely to be flagged by SyRI for welfare fraud investigations",
+            "locator": "Section 4 (Indirect_Discrimination, Intersectional)"
+          }
+        ]
+      }
+    },
+    "ERTJZW5M": {
+      "source_path": "docs/data/fulltext/ERTJZW5M.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Trust in Artificial Intelligence-Based Clinical Decision Support Systems Among Health Care Workers: Systematic Review' matches the corpus title; DOI 10.2196/69678, J Med Internet Res 2025;27:e69678, authors Tun, Rahman, Naing, Malik stated. Source hash matches the manifest. Publication type: peer-reviewed systematic review."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "To address these challenges, training programs should educate health care workers on how AI systems are developed, including their capabilities, limitations, and potential pitfalls."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "Artificial intelligence-based clinical decision support systems (AI-CDSSs) have enhanced personalized medicine and improved the efficiency of health care workers.",
+          "This systematic review aims to identify and synthesize key factors that influence health care workers' trust in AI-CDSSs"
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Lastly, trust was further undermined by unresolved issues related to medical liability, potential algorithmic biases, and broader ethical risks."
+        ],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "K3YCLBXK": {
+      "source_path": "docs/data/fulltext/K3YCLBXK.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology' matches the corpus title; authors Mills, Ruiz, Lee, Coenraad, Fusco, Roschelle, Weisgrau, Digital Promise, 2024, DOI 10.51388/20.500.12265/218 given in the suggested citation (dots lost in conversion). Source hash matches the manifest. Publication type: research-based policy and practice report with identifiable authorship, expert review and reference list, admissible under the ratified publication-type rule."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "teilweise",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "teilweise",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "teilweise",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "AI literacy includes the knowledge and skills that enable people to critically understand, evaluate, and use AI systems and tools to safely and effectively participate in an increasingly digital world."
+        ],
+        "Generative_KI": [
+          "Generative AI (GenAI) systems and tools are entering the classroom at a rapid pace"
+        ],
+        "Prompting": [
+          "The skill of GenAI prompting involves creating good questions or commands that get the system to produce something that humans consider to be a quality output"
+        ],
+        "KI_Sonstige": [
+          "Interacting with AI systems is engaging with adaptive technology in multiple modalities that adjusts to data collected, such as when learners use adaptive tutors in math or reading to receive content at their level of understanding"
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Underscoring our framework is human judgment and justice, which are core values for applying AI in appropriate contexts and mitigating the harmful effects of algorithms",
+          "AI systems are impacting the lives of nearly everyone within modern society, but their results do not equally represent the interests of all people They can and have exacerbated existing oppression and prejudice within society"
+        ],
+        "Gender": [
+          "In order to promote AI literacy for all students, particularly females and students of color, it is essential to integrate AI Literacy Practices into core subject areas like math and ELA"
+        ],
+        "Diversitaet": [
+          "Inclusivity Elevate the needs, interest, and voice of marginalized communities in the development of policy and guidance in order to ensure AI tools are accessible to all students and do not perpetuate harmful biases"
+        ],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Learning_Content", "Recommended_Practice"],
+        "AN_Prompt_Techniques": ["General_Guidance"],
+        "AN_Bias_Axes": ["Race_Ethnicity", "Gender"],
+        "AN_Harm_Types": ["Stereotyping"],
+        "AN_Mitigation_Stage": ["Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["Teaching_Further_Education"],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Binary_Categorical"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Konzept",
+        "AN_Notes": "AI literacy framework for K-12 education with three modes of engagement (Understand, Evaluate, Use), six AI literacy practices, core values Centering Human Judgment and Centering Justice, three types of use, and five strategies for school systems. Prompting is a learning practice ('Distinguish between essential and nonessential components of a prompt to produce an appropriate output') and a classroom practice (AI prompt organizer in a special education class). General_Guidance strategy verbatim: 'Effectively prompting a GenAI system or tool takes time and often requires clear communication, specificity, experimentation, and patience'. Axes from the own worked example of a GenAI image of a doctor as a white male; the race, age and gender examples of children's findings and the proxy-variable example (zip code) are cited from other work and not coded. Harm: Stereotyping from the doctor example; Indirect_Discrimination via proxies is attributed to cited work and left uncoded. Mitigation: AI literacy, professional learning, adoption guidance, inclusive policy and human oversight (Organisational_Process), proposed; district case examples illustrate AI literacy programmes, not a bias-mitigation evaluation. Population: K-12 students, teachers and families, outside social work. Task: AI use for lesson planning, content creation, grading and scaffolded writing. Gender appears as binary categories (females, white male) without determination. The justice perspective cites literature on algorithmic bias and 'tech justice' but names no theory that frames bias."
+      },
+      "analysis_evidence": {
+        "AN_Harm_Types": [
+          {
+            "quote": "For example if asked to generate an image of a doctor, a GenAI model might be more likely to generate a white male",
+            "locator": "Using AI, Creating with AI, risks (Stereotyping)"
+          }
+        ],
+        "AN_Task": [
+          {
+            "quote": "Teachers need to be literate in using AI tools for both teaching and learning For teaching, they may focus on lesson planning, smart content creation, or grading",
+            "locator": "Strategy 3: Facilitate Ongoing, Just-In-Time Professional Learning"
+          }
+        ],
+        "AN_Prompt_Techniques": [
+          {
+            "quote": "Effectively prompting a GenAI system or tool takes time and often requires clear communication, specificity, experimentation, and patience",
+            "locator": "Using AI, Creating with AI"
+          }
+        ]
+      }
+    },
+    "QY6P4RGQ": {
+      "source_path": "docs/data/fulltext/QY6P4RGQ.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'BBQ: A Hand-Built Bias Benchmark for Question Answering' matches the corpus title; authors Parrish, Chen, Nangia, Padmakumar, Phang, Thompson, Htut, Bowman (New York University) stated. The converted text carries no DOI, venue or publication year; gap documented, no title or identifier conflict. Source hash matches the manifest. Publication type: scholarly research paper with dataset, validation and references."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "teilweise",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "Large language models (LMs) learn social biases present in the world, and the increased use of these systems across different contexts increases the cases where these biases can lead to harm."
+        ],
+        "Prompting": [
+          "We match each context with questions and answer options that test if a model systematically relies on social biases.",
+          "UnifiedQA is trained on eight datasets and accepts multiple input string formats, so we include results for inputs with RACE-style (Lai et al., 2017) and ARC-style (Clark et al., 2018) formats."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "We find that models often rely on stereotypes when the context is under-informative, meaning the model's outputs consistently reproduce harmful biases in this setting."
+        ],
+        "Gender": [
+          "they still rely on stereotypes and average up to 3.4 percentage points higher accuracy when the correct answer aligns with a social bias than when it conflicts, with this difference widening to over 5 points on examples targeting gender for most models tested"
+        ],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": [
+          "Because accuracy alone fails to capture response patterns within inaccurate answers, we introduce a bias score to quantify the degree to which a model systematically answers questions in a biased way."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Research_Instrument"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Age", "Disability", "Gender", "Nationality_Migration", "Physical_Appearance", "Race_Ethnicity", "Religion", "Socioeconomic", "Sexual_Orientation_Identity", "Intersectional"],
+        "AN_Harm_Types": ["Stereotyping"],
+        "AN_Mitigation_Stage": ["None"],
+        "AN_Mitigation_Status": "None",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": ["Binary_Categorical", "Intersectional"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "Hand-built QA bias benchmark with ambiguous and disambiguated contexts for nine social dimensions and two intersectional categories (race by gender, race by SES), tested zero-shot on UnifiedQA, RoBERTa and DeBERTaV3. The templated contexts and questions serve as input instruments to elicit bias; no prompting technique is named. Generative_KI coded ja because the work frames its object as large language models; RoBERTa and DeBERTaV3 are encoder models fine-tuned for multiple choice, UnifiedQA generates strings. All nine axes are measured; Intersectional rests on the race-by-SES and race-by-gender breakdowns, which the authors describe as mixed and suggestive. Harm: Stereotyping (stereotype reinforcement and attribution); the accuracy gap between bias-aligned and non-aligned answers is a stereotype effect, not a quality difference between groups, so Disparate_Performance is not coded. No mitigation: 'This work does not directly contribute to debiasing or other harm reduction measures'. Gender categories man/woman, girl/boy and census male/female names. Bias definition adopted explicitly from Crawford's representational harms; this definition is not counted again as a theory reference."
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "In defining bias for this study, our design aligns most closely with the definition of representational harms by Crawford (2017) as harms that 'occur when systems reinforce the subordination of some groups along the lines of identity.'",
+            "locator": "Section 2 Related Work, Measuring Bias in NLP"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "The model uses some systematic intersectional biases when the bias target is identified as being either Black/African American or Hispanic/Latinx and having low SES, but results for the other labels are more mixed.",
+            "locator": "Appendix H, Figure 10 caption (Intersectional)"
+          },
+          {
+            "quote": "The model appears to use systematic intersectional biases in responses when that bias targets Middle-Eastern women and Asian men, but results in all other labels are more mixed.",
+            "locator": "Appendix H, Figure 9 caption (Intersectional, gender by race)"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "Table 2 shows the full pattern of results for one such set of examples (all from a single template) when tested on UnifiedQA that demonstrates a very strong bias associating obese individuals with sloppiness.",
+            "locator": "Section 7 Discussion (Stereotyping)"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "taking the top 20 most common names for people who identified themselves as male or female",
+            "locator": "Section 3.3 Proper Names"
+          }
+        ]
+      }
+    }
+  }
+}

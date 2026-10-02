@@ -1,0 +1,1019 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.4",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "status": "ai-agent-reviewed",
+  "updated": "2026-10-02T07:15:42Z",
+  "review_context": {
+    "run_id": "codebook-v141-includes-05-6-20261002",
+    "provenance_method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+    "run_manifest": "tests/review-cases/agent-runs/codebook-v141-includes-05-6-20261002/run.json",
+    "review_path": "tests/review-cases/agent-runs/codebook-v141-includes-05-6-20261002/ai-agent-review.json",
+    "review_sha256": "1620706f3d4309d4c6044db97ae850e3898a4e5385d9d30e44d5af887cf2601a",
+    "ai_agent_reviewer_actor_id": "codebook-v141-includes-05-6-20261002-ai-agent-review",
+    "input_tracks": [
+      {
+        "reviewer": "ar1",
+        "actor_id": "codebook-v141-includes-05-6-20261002-ar1",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-05-6-20261002/tracks/ar1.json",
+        "sha256": "ceb8a500a809542d6ca000e4947f091d758a62e24108a7a11757a51970cbef8b",
+        "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-05-6-20261002/tracks/ar1-coding.json",
+        "coding_packet_sha256": "8a7279056a5e4dd8cab412174ddcee367185ce61ed1044bc94c30950e3c676a1"
+      },
+      {
+        "reviewer": "ar2",
+        "actor_id": "codebook-v141-includes-05-6-20261002-ar2",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-05-6-20261002/tracks/ar2.json",
+        "sha256": "c5df6278879c0983ed83c929adbed6fb887d07d64520824d7532fd363b13411e",
+        "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-05-6-20261002/tracks/ar2-coding.json",
+        "coding_packet_sha256": "dc51175cb64cea4e67bfc60961e3d0f74867a9ad39270c4b26db0ebde66713ac"
+      }
+    ],
+    "paper_sources": {
+      "3XMBE43Z": {
+        "path": "docs/data/fulltext/3XMBE43Z.md",
+        "sha256": "0786e31d31575f8e54e1530e888907a31d730470e63e335c44ea3ac8405bba14",
+        "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+        "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3",
+        "version_type": "version_of_record",
+        "representative_record_id": "3XMBE43Z"
+      },
+      "6L6WSDC8": {
+        "path": "docs/data/fulltext/6L6WSDC8.md",
+        "sha256": "b7566908fa90a3e35a840add6415dd09bc476d23f7537c3075e3e60868789db8",
+        "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+        "version_id": "version:17389a55-6900-5576-8575-da09fb577910",
+        "version_type": "unknown",
+        "representative_record_id": "6L6WSDC8"
+      },
+      "HLBXNWAZ": {
+        "path": "docs/data/fulltext/HLBXNWAZ.md",
+        "sha256": "41716867d95cc48adc92792c558caf09d734634492504c3d440f9961dcd82bb9",
+        "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+        "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
+        "version_type": "version_of_record",
+        "representative_record_id": "HLBXNWAZ"
+      },
+      "JZN2I6J5": {
+        "path": "docs/data/fulltext/JZN2I6J5.md",
+        "sha256": "20bf9b763216babac278b4bf8cb53932d35e4e32d376bcd6a7bb30f8735506eb",
+        "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+        "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db",
+        "version_type": "unknown",
+        "representative_record_id": "JZN2I6J5"
+      },
+      "P82X89Q4": {
+        "path": "docs/data/fulltext/P82X89Q4.md",
+        "sha256": "698b4dc8fa30892ecd2fc9f94cb2f2a36c0c9cfb4c9dfe2691cc7e3bf945a6bb",
+        "work_id": "work:78d01fb9-cb8c-50d0-9f8a-bed8ae548fa4",
+        "version_id": "version:8df6d0ac-f0b8-5427-8f89-cd8e32438327",
+        "version_type": "version_of_record",
+        "representative_record_id": "P82X89Q4"
+      },
+      "YMABYPKF": {
+        "path": "docs/data/fulltext/YMABYPKF.md",
+        "sha256": "d7ab17bd0d762f60c122c80e550191656aa12223296ff7cdfde215b8863be57d",
+        "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+        "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
+        "version_type": "preprint",
+        "representative_record_id": "YMABYPKF"
+      }
+    },
+    "work_assignments": [
+      {
+        "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+        "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3",
+        "representative_record_id": "3XMBE43Z",
+        "record_ids": [
+          "3XMBE43Z"
+        ]
+      },
+      {
+        "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+        "version_id": "version:17389a55-6900-5576-8575-da09fb577910",
+        "version_type": "unknown",
+        "preferred_version_id": "version:17389a55-6900-5576-8575-da09fb577910",
+        "representative_record_id": "6L6WSDC8",
+        "record_ids": [
+          "6L6WSDC8"
+        ]
+      },
+      {
+        "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+        "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
+        "representative_record_id": "HLBXNWAZ",
+        "record_ids": [
+          "HLBXNWAZ"
+        ]
+      },
+      {
+        "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+        "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db",
+        "version_type": "unknown",
+        "preferred_version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db",
+        "representative_record_id": "JZN2I6J5",
+        "record_ids": [
+          "JZN2I6J5"
+        ]
+      },
+      {
+        "work_id": "work:78d01fb9-cb8c-50d0-9f8a-bed8ae548fa4",
+        "version_id": "version:8df6d0ac-f0b8-5427-8f89-cd8e32438327",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:8df6d0ac-f0b8-5427-8f89-cd8e32438327",
+        "representative_record_id": "P82X89Q4",
+        "record_ids": [
+          "P82X89Q4"
+        ]
+      },
+      {
+        "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+        "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
+        "version_type": "preprint",
+        "preferred_version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
+        "representative_record_id": "YMABYPKF",
+        "record_ids": [
+          "YMABYPKF"
+        ]
+      }
+    ]
+  },
+  "decisions": {
+    "3XMBE43Z": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "We tested these experiments in two different AI tools, namely ChatGPT (GPT-4) an",
+            "snippet": "We tested these experiments in two different AI tools, namely ChatGPT (GPT-4) and Microsoft Copilot.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Each scenario includes a gender-neutral prompt, a male-specific version, and a f",
+            "snippet": "Each scenario includes a gender-neutral prompt, a male-specific version, and a female-specific version and a non-binary-specific version.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          },
+          {
+            "term": "This contrast suggests that ChatGPT adapts its responses to perceived gender-bas",
+            "snippet": "This contrast suggests that ChatGPT adapts its responses to perceived gender-based risks only when explicitly mentioned, reinforcing the importance of demographic framing in prompt design.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          },
+          {
+            "term": "Crucially, gender-specific considerations are largely omitted unless explicitly ",
+            "snippet": "Crucially, gender-specific considerations are largely omitted unless explicitly prompted, underscoring the importance of precise, inclusive language in AI-assisted design and policy applications.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Across all four experiments, the AI tools consistently reflected underlying stru",
+            "snippet": "Across all four experiments, the AI tools consistently reflected underlying structural gender biases.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "This study examines whether AI systems inherently consider gender in policy prop",
+            "snippet": "This study examines whether AI systems inherently consider gender in policy proposals, both when gender is explicitly mentioned in prompts and when it is not.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "These recommendations suggest that when explicitly prompted, AI tools are capabl",
+            "snippet": "These recommendations suggest that when explicitly prompted, AI tools are capable of generating thoughtful and inclusive designs that better serve non-binary individuals and other gender-diverse users.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          },
+          {
+            "term": "The aim was to evaluate the inclusivity",
+            "snippet": "The aim was to evaluate the inclusivity",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          },
+          {
+            "term": "In addition, for the first and fourth prompts, we included variations that refer",
+            "snippet": "In addition, for the first and fourth prompts, we included variations that referenced non-binary individuals.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "This reveals that the supposed neutrality of AI tools actually reproduces an and",
+            "snippet": "This reveals that the supposed neutrality of AI tools actually reproduces an androcentric norm, which in this case excludes bodies and needs not aligned with the gendered definition of the 'typical worker'.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          },
+          {
+            "term": "Feminist theory has pointed out how seemingly neutral technical standards, like ",
+            "snippet": "Feminist theory has pointed out how seemingly neutral technical standards, like office temperature, can produce bodily inequalities and disproportionately affect women [45].",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Our findings offer insights into the limitations of current AI tools as policy a",
+            "snippet": "Our findings offer insights into the limitations of current AI tools as policy advisors and contribute to ongoing discussions on algorithmic fairness, implicit gender bias, and the need for gender-aware AI governance.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          },
+          {
+            "term": "This underscores a broader concern in algorithmic governance: as Mehrabi et al. ",
+            "snippet": "This underscores a broader concern in algorithmic governance: as Mehrabi et al. emphasize [52], fairness interventions must align with real-world harm mitigation and not merely with metric optimization.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:42Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+      "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Sexual_Orientation_Identity"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms",
+            "Erasure",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Prompt_Practice",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "Other_Task"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Social_Construct",
+            "Non_Binary_Inclusive"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Prompt experiment with ChatGPT (GPT-4) and Microsoft Copilot on four policy scenarios (restrooms, snow removal, office temperature, business-trip expenses), each prompt variant submitted 50 times in neutral, male, female and partly non-binary or new-mother versions; themes retained at a 70 percent threshold. Prompting is the research instrument and the object of the central finding. General_Guidance, verbatim strategy: 'the importance of precise, inclusive language in AI-assisted design and policy applications', i.e. naming the gendered target group explicitly in the prompt; the work adds that equity principles must be embedded 'not just in prompts'. Other_Task: drafting workplace and municipal policy recommendations, outside social work. Bias_Axes: gender is varied in every scenario, and non-binary employees are an analysed group of their own (restroom and business-trip prompts), coded as Sexual_Orientation_Identity under the codebook label for gender identity; race, class and ability appear only as intersecting factors in the discussion, so Intersectional is not coded. Harm types from the work's own results: male default (Exclusionary_Norms), omission of women's and non-binary needs in unspecified prompts (Erasure), baby-changing facilities only in women's restrooms read as care stereotype (Stereotyping). Mitigation only proposed: curated gender-balanced and intersectional datasets (Pre_Processing), fine-tuning (In_Training), equity principles in prompts (Prompt_Practice), audits, Human-in-the-Loop oversight and multidisciplinary teams (Organisational_Process). Social_Construct rests on the applied statement after Connell that gender relations are institutionally embedded in everyday practices; the work also uses metabolic differences between women and men as a factual premise. Theory frame: Tronto's ethics of care, Young's justice as inclusion, capabilities approach, Connell, Grosz, feminist spatial planning, design justice."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "3XMBE43Z"
+    },
+    "6L6WSDC8": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 1,
+        "Diversitaet": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "In this study, we explore LLMs' capacity of generating diverse perspectives and ",
+            "snippet": "In this study, we explore LLMs' capacity of generating diverse perspectives and rationales on subjective topics such as social norms and argumentative texts.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L6WSDC8",
+            "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+            "version_id": "version:17389a55-6900-5576-8575-da09fb577910"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Motivated by how humans form opinions based on values, we propose a criteria-bas",
+            "snippet": "Motivated by how humans form opinions based on values, we propose a criteria-based prompting technique to ground diverse opinions.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L6WSDC8",
+            "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+            "version_id": "version:17389a55-6900-5576-8575-da09fb577910"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Instead of providing a single viewpoint, an ideal NLP model should accommodate v",
+            "snippet": "Instead of providing a single viewpoint, an ideal NLP model should accommodate various perspectives to avoid any bias towards a dominant one.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L6WSDC8",
+            "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+            "version_id": "version:17389a55-6900-5576-8575-da09fb577910"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Yet, can LLMs reflect this diversity when generating text, or do they tend to fa",
+            "snippet": "Yet, can LLMs reflect this diversity when generating text, or do they tend to favor majority opinions?",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L6WSDC8",
+            "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+            "version_id": "version:17389a55-6900-5576-8575-da09fb577910"
+          },
+          {
+            "term": "Joshi et al. (2020) argue that NLP research is biased toward Western perspective",
+            "snippet": "Joshi et al. (2020) argue that NLP research is biased toward Western perspectives. Thus, diverse perspectives from minority populations are relatively overlooked. Our work is important to uncover the extent to which perspective diversity can be extracted from ",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L6WSDC8",
+            "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+            "version_id": "version:17389a55-6900-5576-8575-da09fb577910"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:42Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+      "version_id": "version:17389a55-6900-5576-8575-da09fb577910",
+      "version_type": "unknown",
+      "preferred_version_id": "version:17389a55-6900-5576-8575-da09fb577910",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "6L6WSDC8"
+    },
+    "HLBXNWAZ": {
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Artists who are using vGenAI need more knowledge and resources that can inform t",
+            "snippet": "Artists who are using vGenAI need more knowledge and resources that can inform the critical use of these tools.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "In this paper, we critically analyze Stable Diffusion (SD), a widely used open-s",
+            "snippet": "In this paper, we critically analyze Stable Diffusion (SD), a widely used open-source vGenAI tool, through visual and intersectional analysis.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "When it came to the visual images, we used a specific prompting strategy to prod",
+            "snippet": "When it came to the visual images, we used a specific prompting strategy to produce a dataset comprising 180 images using SDXL.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          },
+          {
+            "term": "By keeping prompts minimal, we aimed to observe the default outputs and hegemoni",
+            "snippet": "By keeping prompts minimal, we aimed to observe the default outputs and hegemonic aesthetics in the imagery.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "We demonstrate how imagery produced through SD perpetuates pre-existing power sy",
+            "snippet": "We demonstrate how imagery produced through SD perpetuates pre-existing power systems such as sexism, racism, heteronormativity, and ableism, and assumes a default individual as white, able-bodied, and masculine-presenting.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Across various images, gender assignments were automatically applied by SDXL, re",
+            "snippet": "Across various images, gender assignments were automatically applied by SDXL, resulting in aesthetics that excluded feminine or non-binary representations.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Consequently, unless specifically prompted for diversity, the AI-generated image",
+            "snippet": "Consequently, unless specifically prompted for diversity, the AI-generated imagery lacks diversity to a significant extent, perpetuating ableist norms by portraying stereotypical bodies with uniform characteristics as the visual standard, based on what we witn",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Our methodological approach draws primarily from feminist Science and Technology",
+            "snippet": "Our methodological approach draws primarily from feminist Science and Technology Studies (STS) (e.g. Wajcman 2010; D'Ignazio and Klein 2020; Adkins et al. 1999; Lury 2020), intersectional critical theory (Crenshaw 1989; Sharma et al. 2023), and feminist media ",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          },
+          {
+            "term": "Through this, we urge reflection on embedding anti-oppressive, anti-structural f",
+            "snippet": "Through this, we urge reflection on embedding anti-oppressive, anti-structural forces in technology design, and suggest potential ways forward through an intersectional feminist approach requiring dialogue between academia, industry, creative practitioners, an",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:42Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+      "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Disability",
+            "Age",
+            "Socioeconomic",
+            "Language_Culture",
+            "Sexual_Orientation_Identity",
+            "Physical_Appearance",
+            "Nationality_Migration"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Erasure",
+            "Exclusionary_Norms",
+            "Misrepresentation"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Prompt_Practice",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Explicit",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Social_Construct",
+            "Non_Binary_Inclusive",
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Empirisch",
+          "AN_Notes": "Interpretative qualitative visual and intersectional analysis of 180 Stable Diffusion XL images from 18 deliberately minimal prompts (privilege and discrimination, ideology, everyday scenarios) on micro, meso and macro levels, complemented by a review of online and academic sources. Prompts serve as research instrument; minimal prompts simulate everyday internet users without prompt-engineering knowledge. General_Guidance, verbatim strategy: users 'being more conscious of how they are generating images-e.g. what kind of prompts they use, and what kind of aesthetics they pick into the images'. AN_Task = None: the work audits default image outputs of the tool for everyday users and tests no professional application task; creative and design practice of artists appears as context and addressee of recommendations in the discussion. Axes from the own image analysis: gender, skin tone and ethnicity, disability, body size, age, wealth and class, immigrant/refugee versus citizen, Global North cultural hegemony, heteronormativity and absent non-binary representations; Intersectional from the micro-level analysis of the white, adult, able-bodied, heteronormative masculine default and single-axis diversification. Religion was excluded from the scope by the authors. Harm types: stereotyping, exclusion of feminine, non-binary and disabled representations (Erasure), white able-bodied masculine and Global North default (Exclusionary_Norms), reductionist portrayal of cultures and the Global South as poor (Misrepresentation). The confederate-flag finding concerns imagery, not language, so Toxicity is not coded. Mitigation only proposed within algorithmic reparation: curated training data (Pre_Processing), conscious prompting by users (Prompt_Practice), responsible designers, diverse teams, regulation and criminal culpability (Organisational_Process). Gender definition from footnote 2, which defines the binary gender norm and replaces man/woman by heteronormative feminine/masculine representations; it is a terminological determination rather than a definition of gender in the narrow sense."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "HLBXNWAZ"
+    },
+    "JZN2I6J5": {
+      "categories": {
+        "Generative_KI": 1,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Large language models (LLMs) have claimed stateof-the-art performance on most of",
+            "snippet": "Large language models (LLMs) have claimed stateof-the-art performance on most of the classical natural language processing (NLP) tasks in recent years while facilitating new frontiers in language generation.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          },
+          {
+            "term": "Large language models are prone to internalize social biases due to the characte",
+            "snippet": "Large language models are prone to internalize social biases due to the characteristics of the data used for their self-supervised training scheme.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "We present a novel prompt-tuning method for reducing biases in encoder models su",
+            "snippet": "We present a novel prompt-tuning method for reducing biases in encoder models such as BERT or RoBERTa. Unlike other methods, we only train a small set of additional reusable token embeddings that can be concatenated to any input sequence to reduce bias in the ",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Considering their recent emergence and wide availability to the general public, ",
+            "snippet": "Considering their recent emergence and wide availability to the general public, it is mandatory to identify and alleviate these biases to avoid perpetuating stereotypes towards underrepresented groups.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "We particularize this method to gender bias by providing a set of templates used",
+            "snippet": "We particularize this method to gender bias by providing a set of templates used for training the prompts",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "We evaluate our method for mitigating gender bias in BERT and RoBERTa on the gen",
+            "snippet": "We evaluate our method for mitigating gender bias in BERT and RoBERTa on the gender tests from SEAT (May et al., 2019) and StereoSet (Nadeem et al., 2021).",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          },
+          {
+            "term": "For StereoSet, a stereotype score (SS) closer to 50% indicates a less biased mod",
+            "snippet": "For StereoSet, a stereotype score (SS) closer to 50% indicates a less biased model.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          },
+          {
+            "term": "in the form of compact prompt embeddings, which could enable it to implicitly in",
+            "snippet": "in the form of compact prompt embeddings, which could enable it to implicitly infer a latent concept encompassing the desired behaviour: generating a fair and unbiased output.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          },
+          {
+            "term": "Evaluations on two benchmarks show that our method is on par with the state of t",
+            "snippet": "Evaluations on two benchmarks show that our method is on par with the state of the art while having a limited impact on language modeling ability.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:42Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+      "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db",
+      "version_type": "unknown",
+      "preferred_version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Religion"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Intra_Processing",
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Prompt tuning (trainable soft prompt embeddings concatenated to the input of frozen BERT and RoBERTa) as a debiasing method, trained on 159 gender-profession templates with a KL-divergence loss towards the average distribution across groups, evaluated on SEAT and StereoSet with language-modelling score and pseudo-perplexity against CDA, Dropout, INLP, SentenceDebias and Self-Debias. Generative_KI is teilweise: the work frames its object as large language models and language generation, but its method and experiments concern encoder-only masked language models. Prompting is the proposed mitigation practice; soft prompt tuning belongs to none of the technique families, and in-context learning appears only as motivation, so AN_Prompt_Techniques = None. Mitigation stage: the work places its intervention at inference ('additional information at inference') with model weights frozen, coded Intra_Processing; the trained parameters are prompt embeddings, not the model, so In_Training is not coded. The intervention changes the model input, coded Prompt_Practice. Evaluated with mixed results (on par with the state of the art, second to INLP on BERT). Axes: gender is the target; race and religion are measured as side effects on StereoSet. Harm type: stereotyping measured by the StereoSet stereotype score; the Gallegos harm list in the introduction is background and not coded. Gender is operationalised as he/she and male/female name pairs without a definition. Bias is determined technically by the stereotype score near 50 percent and by the reference distribution averaged across groups. AN_Task None: benchmark study without an application task."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "JZN2I6J5"
+    },
+    "P82X89Q4": {
+      "categories": {
+        "AI_Literacies": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "This study aims to develop a comprehensive competency framework for artificial i",
+            "snippet": "This study aims to develop a comprehensive competency framework for artificial intelligence (AI) literacy, delineating essential competencies and sub- competencies.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "P82X89Q4",
+            "work_id": "work:78d01fb9-cb8c-50d0-9f8a-bed8ae548fa4",
+            "version_id": "version:8df6d0ac-f0b8-5427-8f89-cd8e32438327"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:42Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:78d01fb9-cb8c-50d0-9f8a-bed8ae548fa4",
+      "version_id": "version:8df6d0ac-f0b8-5427-8f89-cd8e32438327",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:8df6d0ac-f0b8-5427-8f89-cd8e32438327",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "P82X89Q4"
+    },
+    "YMABYPKF": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "We employ an audit design to investigate biases in state-of-the-art large langua",
+            "snippet": "We employ an audit design to investigate biases in state-of-the-art large language models, including GPT-4.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "While providing numerical, decision-relevant anchors in the prompt can successfu",
+            "snippet": "While providing numerical, decision-relevant anchors in the prompt can successfully counteract the biases, qualitative details have inconsistent effects and may even increase disparities.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          },
+          {
+            "term": "Our approach also allows us to assess the sensitivity of biases to certain desig",
+            "snippet": "Our approach also allows us to assess the sensitivity of biases to certain design features of the prompt.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "We find that the advice systematically disadvantages names that are commonly ass",
+            "snippet": "We find that the advice systematically disadvantages names that are commonly associated with racial minorities and women.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Similarly, female-perceived names yield systematically worse outcomes than male-",
+            "snippet": "Similarly, female-perceived names yield systematically worse outcomes than male-perceived names.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "But because names strongly correlate with race/gender, any disparities we observ",
+            "snippet": "But because names strongly correlate with race/gender, any disparities we observe may constitute bias in the form of disparate impact.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          },
+          {
+            "term": "The audit we conducted is cost-effective to implement, and thus could be recomme",
+            "snippet": "The audit we conducted is cost-effective to implement, and thus could be recommended as part of a routine due diligence process before models are released.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:42Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+      "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
+      "version_type": "preprint",
+      "preferred_version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional"
+          ],
+          "AN_Harm_Types": [
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "Other_Task"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical",
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Audit study with 42 prompt templates in five scenarios (purchase, chess, public office, sports, hiring) and 40 first names perceived as Black or white and male or female, 100 repetitions each, on GPT-4, GPT-4o, GPT-3.5, Llama-3-70B, Mistral Large and PaLM-2. Prompts are the research instrument, and the three context levels test prompt design. General_Guidance, verbatim strategy: 'providing the model with a numeric anchor' (decision-relevant numeric information in the prompt), which the work's own experiment shows to remove name-based disparities in most scenarios, while qualitative context has inconsistent effects (Prompt_Practice, Evaluated); routine audits at deployment and implementation are recommended (Organisational_Process, Proposed). Other_Task: advice to laypeople in negotiation, hiring salary offers, election and sports predictions, outside social work. Intersectional is coded under the AN_Bias_Axes rule because Black female-perceived names yield the worst outcomes compared with Black and with female names, although the authors state that this analysis does not equate to an evaluation of intersectionality. Harm type: Indirect_Discrimination following the codebook anchor, since names act as proxies in numeric advice about persons (offers, salaries, chances) and the work interprets the disparities as disparate impact. The outputs are allocative decisions, not depictions of groups, and the encoded stereotypes are the authors' explanation of the mechanism; Stereotyping is therefore not coded as a separate representational harm. Gender is operationalised through male- and female-perceived names without definition. Bias is defined through the legal pair of disparate treatment and disparate impact, which also frames the interpretation (theory reference, a boundary case between legal doctrine and theory)."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "YMABYPKF"
+    }
+  }
+}

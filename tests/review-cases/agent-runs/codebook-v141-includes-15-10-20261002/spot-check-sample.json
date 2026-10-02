@@ -1,0 +1,49 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-15-10-20261002",
+  "status": "proposed",
+  "seed": 20261017,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "7W3RGSSG",
+    "ACDF4FL9",
+    "MT54YHER"
+  ],
+  "disagreeing_works": [
+    "EXVG7MQR",
+    "H7E3N6VR",
+    "ST9UCTJE",
+    "YRBP6IEJ",
+    "Z9BIKVS3"
+  ],
+  "drawn": [
+    "7W3RGSSG",
+    "ACDF4FL9",
+    "EXVG7MQR",
+    "H7E3N6VR",
+    "MT54YHER"
+  ],
+  "flagged_additions": [
+    "DZ39L7GC",
+    "LBLF9BCW",
+    "Z9BIKVS3"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "Z9BIKVS3": "Social_Construct threshold under 1.4.1, tracks split",
+    "EXVG7MQR": "AN_Harm_Types undecidable for an argued but unclassified allocative disadvantage",
+    "DZ39L7GC": "agent Unclear against the human Include",
+    "LBLF9BCW": "agent Exclude against the human Include, title variant in corpus metadata",
+    "7W3RGSSG": "same title and authors as ACDF4FL9 under a separate Work",
+    "ACDF4FL9": "extended version of 7W3RGSSG under a separate Work"
+  },
+  "track_agreement_sha256": "7011bf809d0c1cf60c0bf15a25c74358180202cea20c82b1d621ec19e27a68e8"
+}

@@ -1,0 +1,459 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.4",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "status": "ai-agent-reviewed",
+  "updated": "2026-10-02T07:15:41Z",
+  "review_context": {
+    "run_id": "codebook-v141-includes-01-1-20261002",
+    "provenance_method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+    "run_manifest": "tests/review-cases/agent-runs/codebook-v141-includes-01-1-20261002/run.json",
+    "review_path": "tests/review-cases/agent-runs/codebook-v141-includes-01-1-20261002/ai-agent-review.json",
+    "review_sha256": "e66ecff00fc16ada9f0c296165c51098399b0774c95299e8e40ea6a209fafb59",
+    "ai_agent_reviewer_actor_id": "codebook-v141-includes-01-1-20261002-ai-agent-review",
+    "input_tracks": [
+      {
+        "reviewer": "ar1",
+        "actor_id": "codebook-v141-includes-01-1-20261002-ar1",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-01-1-20261002/tracks/ar1.json",
+        "sha256": "784a86eded877f93b01097b41d0f85196d33e944a866d6e160dd8d486f243a47",
+        "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-01-1-20261002/tracks/ar1-coding.json",
+        "coding_packet_sha256": "7f8eab1a4f7ef87ce1d5e7f7ecf9e9be886fe7aa5626025f00040fe9bed93fd0"
+      },
+      {
+        "reviewer": "ar2",
+        "actor_id": "codebook-v141-includes-01-1-20261002-ar2",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-01-1-20261002/tracks/ar2.json",
+        "sha256": "391c7b5576a7ee15d2f53bba66f5f7387feeef88cd07f3aaf28eb74312272836",
+        "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-01-1-20261002/tracks/ar2-coding.json",
+        "coding_packet_sha256": "178d142099b2868189bd301c9c9628651abbd9350b6c346828008da1bd42f1d5"
+      }
+    ],
+    "paper_sources": {
+      "L6PH7GDL": {
+        "path": "docs/data/fulltext/L6PH7GDL.md",
+        "sha256": "1f1fc4eb12a881f8eee1975285da07a2cdbe5ff881601e60432aad26f2e75552",
+        "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+        "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85",
+        "version_type": "unknown",
+        "representative_record_id": "L6PH7GDL"
+      }
+    },
+    "work_assignments": [
+      {
+        "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+        "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85",
+        "version_type": "unknown",
+        "preferred_version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85",
+        "representative_record_id": "L6PH7GDL",
+        "record_ids": [
+          "L6PH7GDL"
+        ]
+      }
+    ]
+  },
+  "decisions": {
+    "L6PH7GDL": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Ein zentrales Anliegen ist die Entwicklung von KI-Kompetenz in Studium, Praxis u",
+            "snippet": "Ein zentrales Anliegen ist die Entwicklung von KI-Kompetenz in Studium, Praxis und Organisationen.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Das vorliegende Buch versteht sich -so der Anspruch der Autor:innen -als Beitrag",
+            "snippet": "Das vorliegende Buch versteht sich -so der Anspruch der Autor:innen -als Beitrag zur Vermittlung von KI-Kompetenz in der Sozialen Arbeit",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Eine wesentliche Voraussetzung für die erfolgreiche Implementierung von KI-Syste",
+            "snippet": "Eine wesentliche Voraussetzung für die erfolgreiche Implementierung von KI-Systemen ist die Förderung von 'AI Literacy' -der Fähigkeit von Fachkräften, die Funktionsweise und die Auswirkungen von KI zu verstehen und kritisch zu hinterfragen.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Ein besonderes Augenmerk liegt auf Large Language Models (LLM), da die natürlich",
+            "snippet": "Ein besonderes Augenmerk liegt auf Large Language Models (LLM), da die natürliche Sprache im professionellen Handeln der Sozialen Arbeit eine zentrale Rolle spielt.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Im Rahmen eines Mixed-Method-Forschungsprojekts wurde ein Prototyp entwickelt, d",
+            "snippet": "Im Rahmen eines Mixed-Method-Forschungsprojekts wurde ein Prototyp entwickelt, der mittels Speech-to-Text und Large Language Models unstrukturierte Sprachaufnahmen in strukturierte Aktennotizen umwandelt.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Kommunikative Kompetenzen wie Prompting (zum Bedienen von KI) oder Kommunikation",
+            "snippet": "Kommunikative Kompetenzen wie Prompting (zum Bedienen von KI) oder Kommunikationsstrategien im Kontext von humanoiden Robotern könnten so zu einem neuen Arbeitsfeld der Sozialen Arbeit werden.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Prompting Attacks nutzen die Eingabeaufforderungen (Prompt), durch die diese Mod",
+            "snippet": "Prompting Attacks nutzen die Eingabeaufforderungen (Prompt), durch die diese Modelle gesteuert werden, um unerwünschte oder schädliche Reaktionen von der KI zu provozieren.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Basierend auf realen und erfundenen Aktennotizen wurde die KI nach einer konkret",
+            "snippet": "Basierend auf realen und erfundenen Aktennotizen wurde die KI nach einer konkreten Struktur instruiert",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Basierend auf realen und erfundenen Aktennotizen wurde die KI nach einer konkret",
+            "snippet": "Basierend auf realen und erfundenen Aktennotizen wurde die KI nach einer konkreten Struktur instruiert:",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "So könnten etwa Prompts, die Studierende zur Erzeugung von Texten genutzt haben,",
+            "snippet": "So könnten etwa Prompts, die Studierende zur Erzeugung von Texten genutzt haben, verpflichtend dokumentiert werden.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Risikoerkennung : Auf Grundlage der sogenannten Predictive Analytics können vorh",
+            "snippet": "Risikoerkennung : Auf Grundlage der sogenannten Predictive Analytics können vorhandene Daten KI-gestützt analysiert und zur Früherkennung von Risikokonstellationen genutzt werden.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Die Betrachtung konzentriert sich dabei auf klassische Verfahren der Künstlichen",
+            "snippet": "Die Betrachtung konzentriert sich dabei auf klassische Verfahren der Künstlichen Intelligenz (KI) und Sprachverarbeitung (Natural Language Processing, NLP)",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "So z.B. Predictive Analytics zur Verbesserung von Diagnostik, Indikationsgüte un",
+            "snippet": "So z.B. Predictive Analytics zur Verbesserung von Diagnostik, Indikationsgüte und Risikoerkennung, Multimodale Textgenerierung von Berichten, Protokollen und Dokumentationen, Entscheidungsunterstützung, virtuelle Beratung durch Chatbots und Unterstützung von a",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Die Betrachtung konzentriert sich dabei auf klassische Verfahren der Künstlichen",
+            "snippet": "Die Betrachtung konzentriert sich dabei auf klassische Verfahren der Künstlichen Intelligenz (KI) und Sprachverarbeitung (Natural Language Processing, NLP), da diese im Gegensatz zu neueren KI-Techniken wie Large Language Models (LLM) den Nutzenden ein erhöhte",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "Dieser Sammelband soll Fachkräften, Studierenden und Interessierten einen fundie",
+            "snippet": "Dieser Sammelband soll Fachkräften, Studierenden und Interessierten einen fundierten Einblick in das Thema KI in der Sozialen Arbeit geben und dazu beitragen, einen reflektierten und verantwortungsvollen Umgang mit diesen Technologien zu ermöglichen.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Die Einführung des Sammelbandes verortet Künstliche Intelligenz (KI) im Kontext ",
+            "snippet": "Die Einführung des Sammelbandes verortet Künstliche Intelligenz (KI) im Kontext gesellschaftlicher und professioneller Herausforderungen der Sozialen Arbeit.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Eine der wohl größten Herausforderungen in Bezug auf den Einsatz von KI in der S",
+            "snippet": "Eine der wohl größten Herausforderungen in Bezug auf den Einsatz von KI in der Sozialen Arbeit ist der Umgang mit Verzerrungen und Voreingenommenheiten verschiedenster Ausprägung.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "KI-Systeme in der Sozialen Arbeit sind fehleranfällig, weil sie auf Daten basier",
+            "snippet": "KI-Systeme in der Sozialen Arbeit sind fehleranfällig, weil sie auf Daten basieren, die gesellschaftliche Verzerrungen enthalten.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Anhand von Beispielen wie Data Bias, Automation Bias und Explainable AI wird dar",
+            "snippet": "Anhand von Beispielen wie Data Bias, Automation Bias und Explainable AI wird dargelegt, dass KI nicht neutral ist, sondern soziale Ungleichheiten reproduzieren kann.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Deutlich werden die Folgen dieser Diskriminierungen z.B. in den Forschungen rund",
+            "snippet": "Deutlich werden die Folgen dieser Diskriminierungen z.B. in den Forschungen rund um das Thema Gender und KI.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Studien haben gezeigt, dass ältere Männer häufiger Zugang zum Internet haben und",
+            "snippet": "Studien haben gezeigt, dass ältere Männer häufiger Zugang zum Internet haben und eine größere Bandbreite an Online-Aktivitäten ausüben als ältere Frauen",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Der Beitrag befasst sich mit den Potenzialen, Herausforderungen und Risiken, die",
+            "snippet": "Der Beitrag befasst sich mit den Potenzialen, Herausforderungen und Risiken, die sich aus der Entwicklung und Verbreitung von Künstlicher Intelligenz für die Inklusion marginalisierter und benachteiligter Menschen ergeben.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "KI kann unterstützen, aber nur wenn sie transparent, diversitätssensibel und kri",
+            "snippet": "KI kann unterstützen, aber nur wenn sie transparent, diversitätssensibel und kritisch reflektiert eingesetzt wird.",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Wie schneidet das System für verschiedene Gruppen ab (z. B. Kinder mit Migration",
+            "snippet": "Wie schneidet das System für verschiedene Gruppen ab (z. B. Kinder mit Migrationsgeschichte versus ohne)?",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Möglich wäre das z.B. durch einen Bias-Audit (vgl. Heuer et al. 2021).",
+            "snippet": "Möglich wäre das z.B. durch einen Bias-Audit (vgl. Heuer et al. 2021).",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Die Soziale Arbeit muss KI-Systeme kritisch prüfen: Wer wird wie repräsentiert? ",
+            "snippet": "Die Soziale Arbeit muss KI-Systeme kritisch prüfen: Wer wird wie repräsentiert? Welche Annahmen stecken in Daten und Code? Und wie können Bias und Diskriminierung reduziert werden?",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          },
+          {
+            "term": "Sollte es nicht möglich sein, vorurteilsfreie Daten für das Training zu bekommen",
+            "snippet": "Sollte es nicht möglich sein, vorurteilsfreie Daten für das Training zu bekommen, kann es notwendig sein, bestimmte Daten auszuschließen oder synthetische Daten herzustellen (vgl. Shah/Sureja 2025).",
+            "ts": "2026-10-02T07:15:41Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "L6PH7GDL",
+            "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+            "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:41Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:d92d100d-01b0-5690-a919-cadd11c5dd17",
+      "version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85",
+      "version_type": "unknown",
+      "preferred_version_id": "version:5c3b176d-e69a-5eea-812f-d7f7c1422b85",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Learning_Content",
+            "Object_of_Critique",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Disability",
+            "Age",
+            "Socioeconomic",
+            "Language_Culture",
+            "Nationality_Migration"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms",
+            "Erasure",
+            "Disparate_Performance"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "General_Social_Work",
+            "Child_Family_Welfare",
+            "Mental_Health",
+            "Health_Care",
+            "Social_Assistance_Admin",
+            "Education_Professional"
+          ],
+          "AN_Task": [
+            "Documentation_Recording",
+            "Case_Assessment_Decision_Support",
+            "Counselling_Client_Communication",
+            "Administration",
+            "Research",
+            "Teaching_Further_Education"
+          ],
+          "AN_Gender_Definition": "Absent",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Unclear"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Edited volume (introduction, sixteen chapters, outlook) coded as one Work; codes collect what individual chapters carry as their own argument or result. Studientyp Theoretisch after the predominantly conceptual chapters; Plafky et al. report own usability tests and a focus group on an LLM case-note prototype, Holz et al. demonstrate classical NLP on a synthetic case, Schlomann draws on the KI-Alter field study. General_Guidance strategy: Plafky et al. instruct a local Mistral 7B with a fixed case-note structure (Wer, Wann, Wo, Grund, Ablauf, Diskussionsinhalte, Vereinbarungen, fachliche Interpretation, Entscheidung, naechster Termin; Tabelle 1), and testers ask for selectable templates per note type; Botzum et al. propose mandatory documentation of the prompts students used. AN_Prompting_Role: Learning_Content from Beranek (prompting as communicative competence), Recommended_Practice from Plafky et al. and Botzum et al., Object_of_Critique from Pelzl's analysis of prompting attacks as a manipulation practice. AN_Bias_Axes: Gender (Beranek's own example list, Schlomann's gendered digital divide), Race_Ethnicity (Steiner on the AFST and ethnically marginalised children), Disability (Steiner's chapter makes AI-related exclusion of disabled people its object and demands models that do not reinforce exclusion 'vor allem im Bereich Behinderung'), Age (Schlomann, age discrimination as own argument), Socioeconomic (editors' Allegheny poverty example, Schlomann on education), Language_Culture (Plafky et al., own observation that Swiss German dialect recognition depends on proximity to Standard German), Nationality_Migration (editors' bias-audit example and the Dutch child-benefit case). Sexual orientation appears only in enumerations. Intersectional not coded: the BIPoC-women facial-recognition result is cited from Buolamwini/Gebru without an own argument that depends on the combination. AN_Harm_Types: Exclusionary_Norms (editors: addressees deviate from the norm dominating internet training data), Erasure (Steiner: data selection and weighting under-represent marginalised discourses and groups; Tappe: AI-generated visual narratives decide which cultural references remain invisible), Disparate_Performance (own observation on dialect recognition, a quality difference between language varieties). Amazon hiring, Dutch child benefit, Allegheny risk scores, UNESCO images and Gender Shades are cited cases and stay uncoded under rule 1.4.1. AN_Mitigation_Status Proposed: training-data analysis, exclusion or synthetic data (Pre_Processing) and bias audit, diverse developer teams, ethics boards, human-in-the-loop and staff training (Organisational_Process) are recommended; the AFST evaluation reported by Steiner concerns a decision-support tool's side effect on ethnic disparities, not a tested bias mitigation. AN_Gender_Definition Absent and AN_Gender_Understanding Unclear: gender appears only in short discrimination examples, the cited gender gap of older women and men, and enumerations that also name LGBTQIA+ and queer people; no chapter determines gender, and these signals do not settle a binary or any other understanding. AN_Bias_Definition Explicit (Loehe; Dummann footnote 6; also Rottkemper). AN_Theory_Reference: Steiner frames under-representation and exclusion through a critical conception of inclusion and exclusion (Luhmann, Stichweh) with critical theory and Rojas' radical inclusion concept; Staub-Bernasconi, Media Equation and CASA frame ethics or communication, not gender or bias. Feministisch nein: no feminist theory or method and no structural gender critique."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "L6PH7GDL"
+    }
+  }
+}

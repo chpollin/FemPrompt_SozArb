@@ -1,0 +1,39 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-05-6-20261002",
+  "status": "proposed",
+  "seed": 20261007,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [],
+  "disagreeing_works": [
+    "3XMBE43Z",
+    "HLBXNWAZ",
+    "JZN2I6J5",
+    "YMABYPKF"
+  ],
+  "drawn": [
+    "3XMBE43Z",
+    "HLBXNWAZ",
+    "JZN2I6J5",
+    "YMABYPKF"
+  ],
+  "flagged_additions": [
+    "6L6WSDC8",
+    "P82X89Q4"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "6L6WSDC8": "agent Unclear against the human Include, whether opinion diversity counts as Diversitaet ja",
+    "P82X89Q4": "agent Exclude against the human Include, whether ethics competence carries Bias_Ungleichheit teilweise",
+    "YMABYPKF": "AN_Theory_Reference via US legal doctrine and AN_Harm_Types without Stereotyping"
+  },
+  "track_agreement_sha256": "ab3b38019b2040b1b46139a591c97a01ca592fea7d593efae174e1f09e21ac0b"
+}

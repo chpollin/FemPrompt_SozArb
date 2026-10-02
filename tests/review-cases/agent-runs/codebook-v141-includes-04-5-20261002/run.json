@@ -1,0 +1,430 @@
+{
+  "schema": "femprompt-prisma-agent-run/1.4",
+  "run_id": "codebook-v141-includes-04-5-20261002",
+  "status": "completed",
+  "lifecycle": {
+    "baseline": "identified",
+    "state": "completed",
+    "target": "ai-agent-reviewed",
+    "events": [
+      {
+        "event_id": "codebook-v141-includes-04-5-20261002:started",
+        "event_type": "run_started",
+        "from": "prepared",
+        "to": "running",
+        "activity_id": "codebook-v141-includes-04-5-20261002:source-coding",
+        "at": "2026-10-02T06:30:59Z",
+        "actor_ids": [
+          "codebook-v141-includes-04-5-20261002-ar1",
+          "codebook-v141-includes-04-5-20261002-ar2"
+        ]
+      },
+      {
+        "event_id": "codebook-v141-includes-04-5-20261002:completed",
+        "event_type": "run_completed_after_review_and_integration",
+        "from": "running",
+        "to": "completed",
+        "activity_id": "codebook-v141-includes-04-5-20261002:deterministic-integration",
+        "at": "2026-10-02T06:41:06Z",
+        "actor_ids": [
+          "codebook-v141-includes-04-5-20261002-ai-agent-review"
+        ]
+      }
+    ]
+  },
+  "codebook": {
+    "path": "assessment/categories.yaml",
+    "version": "1.4.1",
+    "sha256": "7b95295702c0ec4054e018a95327371f927a526256d2fea7060f54d0e8d47acd"
+  },
+  "prompt": {
+    "path": "prompts/prism-agent-reviewer-v1.4.md",
+    "version": "1.4",
+    "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+  },
+  "baseline": {
+    "commit": "e73cbc3f1dd534cad602819becebfdfc7d43967d"
+  },
+  "assignment": {
+    "complete": true,
+    "papers": [
+      {
+        "paper_id": "22XEFRWP",
+        "title": "Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups",
+        "work_id": "work:818283f6-92ba-562d-b678-b415cb3ae0b9",
+        "version_id": "version:ec5bdb92-683c-5da5-a2e8-97ca5fe7df16",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:ec5bdb92-683c-5da5-a2e8-97ca5fe7df16",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "22XEFRWP"
+        ],
+        "human_coverage": true,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/22XEFRWP.md",
+          "sha256": "29994ba9a1d5c240175ed90751e2c744f1d73839d4550fe1f6de250fa8d1363e",
+          "version_id": "version:ec5bdb92-683c-5da5-a2e8-97ca5fe7df16"
+        }
+      },
+      {
+        "paper_id": "3QUWCYVW",
+        "title": "Assessing trustworthy AI: Technical and legal perspectives of fairness in AI",
+        "work_id": "work:3feda9e5-1823-50e7-ba69-45171a68314d",
+        "version_id": "version:d955da6b-a771-5f23-86b0-46c1a95087e3",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:d955da6b-a771-5f23-86b0-46c1a95087e3",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "3QUWCYVW"
+        ],
+        "human_coverage": true,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/3QUWCYVW.md",
+          "sha256": "ce5c329055e6c87a2da862abebcfb35aed422a3ccb56570b5cf06de30cce998e",
+          "version_id": "version:d955da6b-a771-5f23-86b0-46c1a95087e3"
+        }
+      },
+      {
+        "paper_id": "7G78SADI",
+        "title": "AI literacy for users – A comprehensive review and future research directions of learning methods, components, and effects",
+        "work_id": "work:1a3134a5-7cab-528c-b832-9fc4c875d809",
+        "version_id": "version:b1631371-6931-59a7-a10b-6c4cd5f8a592",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:b1631371-6931-59a7-a10b-6c4cd5f8a592",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "7G78SADI"
+        ],
+        "human_coverage": true,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/7G78SADI.md",
+          "sha256": "436519c115620ac1c461ccd959078dbe88c5a2de27678c7e579d3e2a27c75dd0",
+          "version_id": "version:b1631371-6931-59a7-a10b-6c4cd5f8a592"
+        }
+      },
+      {
+        "paper_id": "KNQYFQ6B",
+        "title": "The power of prompts: Evaluating and mitigating gender bias in MT with LLMs",
+        "work_id": "work:cfde9315-c968-5cb3-871c-b78b3feebfb1",
+        "version_id": "version:26d8700f-ecf9-5573-967f-cb8dfc1ba7a0",
+        "version_type": "unknown",
+        "preferred_version_id": "version:26d8700f-ecf9-5573-967f-cb8dfc1ba7a0",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "KNQYFQ6B"
+        ],
+        "human_coverage": true,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/KNQYFQ6B.md",
+          "sha256": "b2221d0b8ce2f70a66f1425b5994198d3a4311db203a5ca2610276027ce34a5b",
+          "version_id": "version:26d8700f-ecf9-5573-967f-cb8dfc1ba7a0"
+        }
+      },
+      {
+        "paper_id": "PYN6HB3E",
+        "title": "Social work in the age of artificial intelligence: A rights-based framework for evidence-based practice through social psychology, group dynamics, and institutional analysis",
+        "work_id": "work:332127f6-30b4-5b23-82f3-8e1730ab0254",
+        "version_id": "version:3ded7397-ec94-56cf-8703-a7269908ae2e",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:3ded7397-ec94-56cf-8703-a7269908ae2e",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "PYN6HB3E"
+        ],
+        "human_coverage": true,
+        "ai_agent_review_coverage": false,
+        "source": {
+          "path": "docs/data/fulltext/PYN6HB3E.md",
+          "sha256": "26d5ee3c4f0b50bb6967e476377d4f1bd186682ddbbdad8c449d969c5019c017",
+          "version_id": "version:3ded7397-ec94-56cf-8703-a7269908ae2e"
+        }
+      }
+    ]
+  },
+  "isolation": {
+    "mode": "operational",
+    "epistemic_independence_claimed": false,
+    "model_diversity": "same_model",
+    "explanation": "Each agent track runs in its own harness context with its own working folder, reviewer identity, coding packet, report and output path, and reads the same frozen criteria and Paper sources. Operational separation records execution conditions and establishes no epistemic independence. Two tracks on the same model are less independent than two tracks on different models."
+  },
+  "actors": [
+    {
+      "id": "codebook-v141-includes-04-5-20261002-ar1",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar1"
+    },
+    {
+      "id": "codebook-v141-includes-04-5-20261002-ar2",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar2"
+    },
+    {
+      "id": "codebook-v141-includes-04-5-20261002-ai-agent-review",
+      "type": "ai_agent",
+      "role": "ai_agent_reviewer"
+    }
+  ],
+  "timestamps": {
+    "created_at": "2026-10-02T06:29:26Z",
+    "started_at": "2026-10-02T06:30:59Z",
+    "completed_at": "2026-10-02T06:41:06Z"
+  },
+  "execution": {
+    "mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+    "reason": "Operationally isolated agents create source-grounded coding packets in a harness-agnostic AI harness run. The orchestrator transfers validated packets deterministically through the production PRISM functions.",
+    "required_controls": [
+      "Reviewer agents may read only the frozen rules, manifest and assigned Paper sources, and write only to their own working folder.",
+      "Reviewer agents may not inspect previous judgments, knowledge distillates, the other track, or productive screening data.",
+      "The orchestrator projects validated values mechanically and may not resolve substantive ambiguity during transfer."
+    ],
+    "coding_packet_validation": {
+      "command": "node tests/review-cases/validate-coding-packet.mjs tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/run.json <reviewer-id>",
+      "result": "pass",
+      "records": 10
+    },
+    "frontend_roundtrip": {
+      "method": "deterministic_projection_with_prism_frontend_roundtrip",
+      "command": "node tests/review-cases/roundtrip-prism-track.mjs tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/run.json <reviewer-id> tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/tracks/<reviewer-id>-projection.json tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/tracks/<reviewer-id>.json",
+      "result": "pass",
+      "records": 10,
+      "production_functions": [
+        "validateReviewerPayload",
+        "importReviewerPayload",
+        "recordRequirements",
+        "reviewerFileText"
+      ],
+      "transfer_actor": "agent"
+    },
+    "protocol_basis": "knowledge/update-protocol.md#Agent-assisted completion",
+    "purpose": "Analysis coding under codebook 1.4.1 of included works with full text, batch 4 of 16, packed by reading-text size. Works of the 1.4 pilot are recoded under 1.4.1.",
+    "track_agreement": {
+      "command": "python -m src.assess.agent_track_diagnostics tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002 --output tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/track-agreement.json",
+      "path": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/track-agreement.json",
+      "sha256": "1f2cc8adefb4642ae80b6f619f3a334741e32087407679d40e97933076f7e360",
+      "label": "workflow_diagnostic_not_accuracy"
+    },
+    "observations": [
+      "The orchestrator copied each packet and report from the track working folder under tmp/agent-runs/ to the manifest paths after the track finished, and derived each track start from the creation time of that folder.",
+      "The report schema of prompts/prism-agent-reviewer-v1.4.md prescribes a middle-dot separator that the operator's style rules exclude, so tracks followed one or the other. No coding depends on it."
+    ]
+  },
+  "tracks": [
+    {
+      "reviewer_id": "ar1",
+      "actor_id": "codebook-v141-includes-04-5-20261002-ar1",
+      "actor_type": "ai_agent",
+      "execution_environment": {
+        "harness": "Claude Code subagent",
+        "provider": "Anthropic",
+        "model": "opus",
+        "model_id": "claude-opus-5-5"
+      },
+      "paper_ids": [
+        "22XEFRWP",
+        "3QUWCYVW",
+        "7G78SADI",
+        "KNQYFQ6B",
+        "PYN6HB3E"
+      ],
+      "source_assignments": [
+        {
+          "paper_id": "22XEFRWP",
+          "version_id": "version:ec5bdb92-683c-5da5-a2e8-97ca5fe7df16",
+          "source_path": "docs/data/fulltext/22XEFRWP.md",
+          "source_sha256": "29994ba9a1d5c240175ed90751e2c744f1d73839d4550fe1f6de250fa8d1363e"
+        },
+        {
+          "paper_id": "3QUWCYVW",
+          "version_id": "version:d955da6b-a771-5f23-86b0-46c1a95087e3",
+          "source_path": "docs/data/fulltext/3QUWCYVW.md",
+          "source_sha256": "ce5c329055e6c87a2da862abebcfb35aed422a3ccb56570b5cf06de30cce998e"
+        },
+        {
+          "paper_id": "7G78SADI",
+          "version_id": "version:b1631371-6931-59a7-a10b-6c4cd5f8a592",
+          "source_path": "docs/data/fulltext/7G78SADI.md",
+          "source_sha256": "436519c115620ac1c461ccd959078dbe88c5a2de27678c7e579d3e2a27c75dd0"
+        },
+        {
+          "paper_id": "KNQYFQ6B",
+          "version_id": "version:26d8700f-ecf9-5573-967f-cb8dfc1ba7a0",
+          "source_path": "docs/data/fulltext/KNQYFQ6B.md",
+          "source_sha256": "b2221d0b8ce2f70a66f1425b5994198d3a4311db203a5ca2610276027ce34a5b"
+        },
+        {
+          "paper_id": "PYN6HB3E",
+          "version_id": "version:3ded7397-ec94-56cf-8703-a7269908ae2e",
+          "source_path": "docs/data/fulltext/PYN6HB3E.md",
+          "source_sha256": "26d5ee3c4f0b50bb6967e476377d4f1bd186682ddbbdad8c449d969c5019c017"
+        }
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/tracks/ar1-coding.json",
+      "coding_packet_sha256": "3f0f80c72595e1fee955353e64f57ae1bb0183f518d01e72ca723442b2b5f735",
+      "report": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/reports/ar1.md",
+      "report_sha256": "c5ea418388dbf7c26edd0ac34469ecedb08b6b892ead53202e0276b47082feb7",
+      "started_at": "2026-10-02T06:30:59Z",
+      "completed_at": "2026-10-02T06:36:01Z",
+      "output": {
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/tracks/ar1.json",
+        "sha256": "9d602aac5113a1ea9f014fd136f232143bed6f33e157696ab327afa40775eeb7"
+      }
+    },
+    {
+      "reviewer_id": "ar2",
+      "actor_id": "codebook-v141-includes-04-5-20261002-ar2",
+      "actor_type": "ai_agent",
+      "execution_environment": {
+        "harness": "Claude Code subagent",
+        "provider": "Anthropic",
+        "model": "opus",
+        "model_id": "claude-opus-5-5"
+      },
+      "paper_ids": [
+        "22XEFRWP",
+        "3QUWCYVW",
+        "7G78SADI",
+        "KNQYFQ6B",
+        "PYN6HB3E"
+      ],
+      "source_assignments": [
+        {
+          "paper_id": "22XEFRWP",
+          "version_id": "version:ec5bdb92-683c-5da5-a2e8-97ca5fe7df16",
+          "source_path": "docs/data/fulltext/22XEFRWP.md",
+          "source_sha256": "29994ba9a1d5c240175ed90751e2c744f1d73839d4550fe1f6de250fa8d1363e"
+        },
+        {
+          "paper_id": "3QUWCYVW",
+          "version_id": "version:d955da6b-a771-5f23-86b0-46c1a95087e3",
+          "source_path": "docs/data/fulltext/3QUWCYVW.md",
+          "source_sha256": "ce5c329055e6c87a2da862abebcfb35aed422a3ccb56570b5cf06de30cce998e"
+        },
+        {
+          "paper_id": "7G78SADI",
+          "version_id": "version:b1631371-6931-59a7-a10b-6c4cd5f8a592",
+          "source_path": "docs/data/fulltext/7G78SADI.md",
+          "source_sha256": "436519c115620ac1c461ccd959078dbe88c5a2de27678c7e579d3e2a27c75dd0"
+        },
+        {
+          "paper_id": "KNQYFQ6B",
+          "version_id": "version:26d8700f-ecf9-5573-967f-cb8dfc1ba7a0",
+          "source_path": "docs/data/fulltext/KNQYFQ6B.md",
+          "source_sha256": "b2221d0b8ce2f70a66f1425b5994198d3a4311db203a5ca2610276027ce34a5b"
+        },
+        {
+          "paper_id": "PYN6HB3E",
+          "version_id": "version:3ded7397-ec94-56cf-8703-a7269908ae2e",
+          "source_path": "docs/data/fulltext/PYN6HB3E.md",
+          "source_sha256": "26d5ee3c4f0b50bb6967e476377d4f1bd186682ddbbdad8c449d969c5019c017"
+        }
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/tracks/ar2-coding.json",
+      "coding_packet_sha256": "c1572f183899fcdee16e032d38ee2eb96d76d22021aaf653b13d0b236cb89ac5",
+      "report": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/reports/ar2.md",
+      "report_sha256": "7530d922888cdfadd968dad8ef2687f6309503e52ec7f393f5940d0f1d5040b0",
+      "started_at": "2026-10-02T06:31:02Z",
+      "completed_at": "2026-10-02T06:36:22Z",
+      "output": {
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/tracks/ar2.json",
+        "sha256": "73a0334f601e13b720fdcd294467f70a4331407ffb61fdb6a66102c2f8df5c66"
+      }
+    }
+  ],
+  "provenance": {
+    "activities": [
+      {
+        "id": "codebook-v141-includes-04-5-20261002:ai-agent-review",
+        "type": "ai_agent_review",
+        "run_id": "codebook-v141-includes-04-5-20261002",
+        "method": "source_grounded_ai_agent_review",
+        "prompt": {
+          "path": "prompts/prism-ai-agent-review-v0.4.md",
+          "version": "0.4",
+          "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+        },
+        "model": {
+          "provider": "Anthropic",
+          "model": "opus",
+          "immutable_model_id": "claude-opus-5-5"
+        },
+        "execution_environment": {
+          "harness": "Claude Code subagent",
+          "provider": "Anthropic",
+          "model": "opus",
+          "model_id": "claude-opus-5-5"
+        },
+        "associated_actor_ids": [
+          "codebook-v141-includes-04-5-20261002-ai-agent-review"
+        ],
+        "status": "completed",
+        "actor_id": "codebook-v141-includes-04-5-20261002-ai-agent-review",
+        "actor_type": "ai_agent",
+        "input_track_ids": [
+          "ar1",
+          "ar2"
+        ],
+        "source_basis": "assigned paper/source records",
+        "started_at": "2026-10-02T06:42:24Z",
+        "completed_at": "2026-10-02T06:41:06Z",
+        "outputs": [
+          {
+            "kind": "ai_agent_review",
+            "path": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/ai-agent-review.json",
+            "sha256": "4e94b8d576ce5682eac3b597f7ff075fea9331535925e98e597cd401f67b537e"
+          },
+          {
+            "kind": "ai_agent_review_report",
+            "path": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/reports/ai-agent-review.md",
+            "sha256": "2e5988065079bd2bc9ea18c5fd38f8989f4c41145c28de1f5dff14243b8d7bc0"
+          }
+        ]
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar1",
+      "path": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/tracks/ar1.json",
+      "sha256": "9d602aac5113a1ea9f014fd136f232143bed6f33e157696ab327afa40775eeb7"
+    },
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar2",
+      "path": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/tracks/ar2.json",
+      "sha256": "73a0334f601e13b720fdcd294467f70a4331407ffb61fdb6a66102c2f8df5c66"
+    },
+    {
+      "kind": "ai_agent_review",
+      "path": "tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/ai-agent-review.json",
+      "sha256": "4e94b8d576ce5682eac3b597f7ff075fea9331535925e98e597cd401f67b537e"
+    }
+  ],
+  "integration": {
+    "status": "integrated",
+    "method": "append_only_validated_product_merge",
+    "target": "docs/data/screening/ar2.json",
+    "integrated_at": "2026-10-02T07:15:42Z",
+    "base_commit": "253e6d559db8fba4e9fed9ad8d40acefa007178c",
+    "base_sha256": "sha256:dc8e9889d24c07b8df4affbeed297be4e2ddbe5f4b1de39764b6a07a114c551b",
+    "preexisting_record_count": 40,
+    "preexisting_records_preserved": true,
+    "new_record_ids": [
+      "22XEFRWP",
+      "3QUWCYVW",
+      "7G78SADI",
+      "KNQYFQ6B",
+      "PYN6HB3E"
+    ],
+    "resulting_sha256_at_merge": "sha256:95e75004d4a28ccee46c1fcb54f173f0ed52766ac57f628ab2245b3bbc9d9c2e",
+    "merge_command": "python -m src.assess.merge_ai_agent_product docs/data/screening/ar2.json tests/review-cases/agent-runs/codebook-v141-includes-04-5-20261002/product-v0.5.json docs/data/screening/ar2.json",
+    "id": "codebook-v141-includes-04-5-20261002:deterministic-integration",
+    "actor_id": "orchestrator"
+  }
+}

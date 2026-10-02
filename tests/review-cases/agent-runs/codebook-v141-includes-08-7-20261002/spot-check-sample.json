@@ -1,0 +1,44 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-08-7-20261002",
+  "status": "proposed",
+  "seed": 20261010,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [],
+  "disagreeing_works": [
+    "8MDXCTA6",
+    "G53MCF3W",
+    "IDW7QSYG",
+    "XXCDL3A3",
+    "Y8J3HI9J",
+    "ZLMLP53P"
+  ],
+  "drawn": [
+    "8MDXCTA6",
+    "G53MCF3W",
+    "IDW7QSYG",
+    "Y8J3HI9J",
+    "ZLMLP53P"
+  ],
+  "flagged_additions": [
+    "J9IZDVTW",
+    "XXCDL3A3"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "IDW7QSYG": "co-occurrence of gender and race as Intersectional, and one phrase as explicit gender definition",
+    "J9IZDVTW": "agent Unclear against the human Include, socio-educational sample as social-work link",
+    "XXCDL3A3": "adopted power definition as AN_Gender_Definition Explicit",
+    "Y8J3HI9J": "own argument versus cited cases for Erasure and Stereotyping",
+    "ZLMLP53P": "Evaluated for organisational measures against exclusion"
+  },
+  "track_agreement_sha256": "33f54e483a61f6388712566385af22b85832308db8a12525492b761b7d40b5fc"
+}

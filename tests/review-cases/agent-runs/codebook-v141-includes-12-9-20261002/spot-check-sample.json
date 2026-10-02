@@ -1,0 +1,47 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-12-9-20261002",
+  "status": "proposed",
+  "seed": 20261014,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "V4GTLMED"
+  ],
+  "disagreeing_works": [
+    "CYZQ6XPK",
+    "LT3D3ZQ2",
+    "LXKXPD5H",
+    "MTMU9UPJ"
+  ],
+  "drawn": [
+    "CYZQ6XPK",
+    "LT3D3ZQ2",
+    "LXKXPD5H",
+    "MTMU9UPJ",
+    "V4GTLMED"
+  ],
+  "flagged_additions": [
+    "C325Y32P",
+    "KRUQB7L2",
+    "N7J2ZRFP",
+    "VP6SXQHY"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "C325Y32P": "agent Unclear against the human Include, whether social innovators count under Soziale_Arbeit",
+    "KRUQB7L2": "agent Exclude against the human Include, no social category",
+    "N7J2ZRFP": "agent Unclear against the human Include, bias only in cited studies",
+    "VP6SXQHY": "agent Unclear against the human Include, bias only within ethical AI literacy",
+    "LT3D3ZQ2": "AN_Bias_Axes None versus AN_Gender_Understanding Intersectional in a research agenda",
+    "LXKXPD5H": "conference handout without named author, publication type to confirm"
+  },
+  "track_agreement_sha256": "f1778c2349874383564db71146376702fed32b50dc2d769cf090e0429e24b229"
+}

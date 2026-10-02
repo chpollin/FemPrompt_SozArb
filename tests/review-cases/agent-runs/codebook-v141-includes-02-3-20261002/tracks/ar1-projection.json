@@ -1,0 +1,544 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.4",
+  "reviewer": "ar1",
+  "actor": "agent",
+  "updated": "2026-10-02T06:36:22.310Z",
+  "transcription": {
+    "run_id": "codebook-v141-includes-02-3-20261002",
+    "source_packet": "tests/review-cases/agent-runs/codebook-v141-includes-02-3-20261002/tracks/ar1-coding.json",
+    "source_packet_sha256": "f599f2cba89b868daefe5eed48fd1eaa2091ebfaeebf47c318aa05e664427155",
+    "method": "deterministic_packet_projection_pending_prism_roundtrip"
+  },
+  "decisions": {
+    "AXEIVEW3": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 1,
+        "Prompting": 1,
+        "KI_Sonstige": 1,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 1,
+        "Gender": 1,
+        "Diversitaet": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "This study aims to advance knowledge on the specific competencies required by yo",
+            "snippet": "This study aims to advance knowledge on the specific competencies required by youth workers to integrate AI effectively into their professional activities and to picture the current knowledge, skills, and attitudes owned by youth professionals.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AXEIVEW3",
+            "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+            "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Applications like Canva AI, ChatGPT, and Quillbot can generate engaging social m",
+            "snippet": "Applications like Canva AI, ChatGPT, and Quillbot can generate engaging social media posts, design visually appealing materials, and create multimedia content, thereby enhancing outreach and engagement efforts.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AXEIVEW3",
+            "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+            "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Linked to the previous purpose, participants also mentioned prompt engineering a",
+            "snippet": "Linked to the previous purpose, participants also mentioned prompt engineering as an essential skill for writing clear and detailed prompts and generating relevant and personalised content.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AXEIVEW3",
+            "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+            "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Machine learning is a subset of AI that focuses on algorithms that enable system",
+            "snippet": "Machine learning is a subset of AI that focuses on algorithms that enable systems to learn from and make predictions based on data.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AXEIVEW3",
+            "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+            "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "RQ2 What challenges and opportunities do youth work professionals face when inte",
+            "snippet": "RQ2 What challenges and opportunities do youth work professionals face when integrating AI into their practice?",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AXEIVEW3",
+            "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+            "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f"
+          },
+          {
+            "term": "Professionals working with youth play a fundamental role in bridging the knowled",
+            "snippet": "Professionals working with youth play a fundamental role in bridging the knowledge gap about AI, especially considering the limited understanding of this technology in the European youth sector.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AXEIVEW3",
+            "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+            "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Ethical Responsibility: Awareness of ethical implications, such as privacy conce",
+            "snippet": "Ethical Responsibility: Awareness of ethical implications, such as privacy concerns and bias, ensuring AI tools are used to protect and respect young people's rights.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AXEIVEW3",
+            "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+            "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f"
+          },
+          {
+            "term": "Bias/Error: AI solutions often reflect the biases present in their training data",
+            "snippet": "Bias/Error: AI solutions often reflect the biases present in their training data.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AXEIVEW3",
+            "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+            "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "The Chapter has also highlighted the cultural and gender differences in AI usage",
+            "snippet": "The Chapter has also highlighted the cultural and gender differences in AI usage and perceptions, as well as the multi-dimensional impact of AI on youth, affecting education, social interactions and psychological well-being.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AXEIVEW3",
+            "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+            "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Inclusivity / Cultural Sensitivity : Understanding and respecting cultural norms",
+            "snippet": "Inclusivity / Cultural Sensitivity : Understanding and respecting cultural norms, customs, and etiquette is very important.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AXEIVEW3",
+            "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+            "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f"
+          },
+          {
+            "term": "Customisable interfaces and adaptive technologies are particularly beneficial fo",
+            "snippet": "Customisable interfaces and adaptive technologies are particularly beneficial for neurodiverse learners and those with different physical abilities.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AXEIVEW3",
+            "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+            "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:36:22.310Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:5f910040-fa9a-5297-aa53-65c958b59861",
+      "version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:0f436c17-fbd1-52e7-ba26-b2b9ee7f708f",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Learning_Content",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Language_Culture"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Education_Professional",
+            "Homelessness_Youth"
+          ],
+          "AN_Task": [
+            "Teaching_Further_Education",
+            "Administration",
+            "Counselling_Client_Communication"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Empirisch",
+          "AN_Notes": "General_Guidance strategy verbatim: 'Writing clear and detailed prompts to generate relevant and personalised content for youth.' and 'Training youth workers to divide information clearly and into defined blocks - prompts - will make it easier for AI systems to understand and process their input.' (4.2.4.4 Portugal, Q4 and Q5). Prompting appears as a competence to be trained (Learning_Content) and as recommended practice. Language_Culture rests on the focus-group finding that most AI tools are available primarily in English, which limits usability for Greek-speaking youth and youth workers (4.2.4.3, 4.2.5); the same passage carries Exclusionary_Norms (English as default). Bias is otherwise named only generically (training-data bias, ethical responsibility) without an analysed axis. Gender enters only through reported survey differences in AI use between male and female young adults (3.2, Microsoft survey), so the understanding is binary and implicit. Mitigation is limited to proposed training and competence development of youth workers. AN_Population: youth work has no own value; Homelessness_Youth is used for the youth-work field together with Education_Professional for the professional AI-literacy setting. Studientyp Empirisch because the focus groups with youth work professionals are the work's own data; it also contains a desk review of competence frameworks."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "LXDG4KQK": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Provide caseworkers with additional training and capacity building to address an",
+            "snippet": "Provide caseworkers with additional training and capacity building to address and prevent issues such as automation bias, discrimination and the violation of welfare recipients' dignity and privacy when assessing their eligibility for benefits.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXDG4KQK",
+            "work_id": "work:db3c7a39-98f0-5760-b4a8-26959d4d229b",
+            "version_id": "version:fd71ec94-14f0-513e-986d-2f518dfc58bf"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "UDK uses profiling models (which analyse aspects of an individual's personality,",
+            "snippet": "UDK uses profiling models (which analyse aspects of an individual's personality, behaviours, interests and habits to make predictions or decisions about them) to analyse this data in order to identify persons who supposedly have an increased risk of receiving ",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXDG4KQK",
+            "work_id": "work:db3c7a39-98f0-5760-b4a8-26959d4d229b",
+            "version_id": "version:fd71ec94-14f0-513e-986d-2f518dfc58bf"
+          },
+          {
+            "term": "This report investigates the use of Artificial Intelligence (AI) powered fraud c",
+            "snippet": "This report investigates the use of Artificial Intelligence (AI) powered fraud control algorithms in Denmark's Welfare system.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXDG4KQK",
+            "work_id": "work:db3c7a39-98f0-5760-b4a8-26959d4d229b",
+            "version_id": "version:fd71ec94-14f0-513e-986d-2f518dfc58bf"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "UDK's use of fraud-control algorithms, which we argue are surveillance tools, to",
+            "snippet": "UDK's use of fraud-control algorithms, which we argue are surveillance tools, to inform the distribution of social benefits and the impact this has on low-income and racialized groups, people with disabilities, and people with refugee status and migrants.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXDG4KQK",
+            "work_id": "work:db3c7a39-98f0-5760-b4a8-26959d4d229b",
+            "version_id": "version:fd71ec94-14f0-513e-986d-2f518dfc58bf"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Amnesty International has found that categorization based on 'othering' or diffe",
+            "snippet": "Amnesty International has found that categorization based on 'othering' or difference risks indirectly and directly discriminating against low-income groups, racialized groups, migrants, refugees, ethnic minorities, people with disabilities, and older people.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXDG4KQK",
+            "work_id": "work:db3c7a39-98f0-5760-b4a8-26959d4d229b",
+            "version_id": "version:fd71ec94-14f0-513e-986d-2f518dfc58bf"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Moreover, it has found that the system creates a barrier to accessing social ben",
+            "snippet": "Moreover, it has found that the system creates a barrier to accessing social benefits for some marginalized groups including women in crisis centres and people with disabilities and, as a result, risks restricting their right to social security and discriminat",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXDG4KQK",
+            "work_id": "work:db3c7a39-98f0-5760-b4a8-26959d4d229b",
+            "version_id": "version:fd71ec94-14f0-513e-986d-2f518dfc58bf"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "The norms that underlie the predictions made by UDK/ATP's fraud control algorith",
+            "snippet": "The norms that underlie the predictions made by UDK/ATP's fraud control algorithms fail to consider differing and evolving cultural norms based on the diverse cultural differences present in Denmark that inform living arrangements and household composition.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXDG4KQK",
+            "work_id": "work:db3c7a39-98f0-5760-b4a8-26959d4d229b",
+            "version_id": "version:fd71ec94-14f0-513e-986d-2f518dfc58bf"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Although there is an ongoing debate within the academic community regarding how ",
+            "snippet": "Although there is an ongoing debate within the academic community regarding how best to measure bias and fairness statistically, the deployment of only one metric is an insufficient and inadequate process for testing, and thus for identifying, the potential fo",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXDG4KQK",
+            "work_id": "work:db3c7a39-98f0-5760-b4a8-26959d4d229b",
+            "version_id": "version:fd71ec94-14f0-513e-986d-2f518dfc58bf"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:36:22.310Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:db3c7a39-98f0-5760-b4a8-26959d4d229b",
+      "version_id": "version:fd71ec94-14f0-513e-986d-2f518dfc58bf",
+      "version_type": "unknown",
+      "preferred_version_id": "version:fd71ec94-14f0-513e-986d-2f518dfc58bf",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Nationality_Migration",
+            "Race_Ethnicity",
+            "Socioeconomic",
+            "Disability",
+            "Age",
+            "Gender",
+            "Other_Axis"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Indirect_Discrimination",
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Social_Assistance_Admin"
+          ],
+          "AN_Task": [
+            "Case_Assessment_Decision_Support"
+          ],
+          "AN_Gender_Definition": "Absent",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Unclear"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Empirisch",
+          "AN_Notes": "Other_Axis: marital or relationship status and non-traditional household or family form, which the work names as a ground of indirect discrimination by the 'Really Single' model (chapter 8.2). Nationality_Migration and Race_Ethnicity are both coded because the work uses both for the 'Model Abroad' citizenship input. Socioeconomic rests on chapter 8.4 (income and salary inputs). Disability, Age and Gender rest on the digital-exclusion findings of chapter 9 (focus groups at Dansk Handicap Foundation, survey with LOKK women's shelters, older people). Intersectional is not coded because intersectional discrimination appears only in recommendations without a combination-dependent result. Harm types: Direct_Discrimination for citizenship as model input, Indirect_Discrimination for proxies such as household and residency patterns, Exclusionary_Norms for dominant-group household norms embedded in the models and for digital-only access. Mitigation is proposed only: ban on citizenship and foreign-affiliation inputs (Pre_Processing), and training against automation bias, human rights and data protection impact assessments, audits and independent oversight (Organisational_Process). UDK's existing equalisation of the true positive rate is described and criticised by the work, not evaluated with a result. Gender is treated as women in crisis centres facing digital exclusion without a determination of gender. AN_Task: algorithmic risk flagging of benefit recipients for fraud investigation."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "Y6M97SWQ": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "These strategies can enhance algorithm literacy and support social workers in co",
+            "snippet": "These strategies can enhance algorithm literacy and support social workers in correctly interpreting the output of the model, thus making informed decisions.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Y6M97SWQ",
+            "work_id": "work:a8f897e9-c177-5304-b3c0-1cc5ffd86dd7",
+            "version_id": "version:a95d2f59-0433-52d2-be61-b4af47026725"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Algorithmic-assisted decision-making tools are increasingly used in child welfar",
+            "snippet": "Algorithmic-assisted decision-making tools are increasingly used in child welfare services, yet key factors and challenges for successful and ethical implementation remain underexplored.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Y6M97SWQ",
+            "work_id": "work:a8f897e9-c177-5304-b3c0-1cc5ffd86dd7",
+            "version_id": "version:a95d2f59-0433-52d2-be61-b4af47026725"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "To enhance the ethical use of these tools in aiding caseworkers in making high-s",
+            "snippet": "To enhance the ethical use of these tools in aiding caseworkers in making high-stakes decisions that impact families involved in the CW system, this study reviews articles reporting the use case of algorithmic-assisted decision-making tools in CW with an adapt",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Y6M97SWQ",
+            "work_id": "work:a8f897e9-c177-5304-b3c0-1cc5ffd86dd7",
+            "version_id": "version:a95d2f59-0433-52d2-be61-b4af47026725"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Although a major advantage of algorithmic tools lies in their use of existing da",
+            "snippet": "Although a major advantage of algorithmic tools lies in their use of existing data to reduce redundancy and burden on frontline workers, certain groups are often overrepresented in CW administrative data, particularly along lines of race and socioeconomic stat",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Y6M97SWQ",
+            "work_id": "work:a8f897e9-c177-5304-b3c0-1cc5ffd86dd7",
+            "version_id": "version:a95d2f59-0433-52d2-be61-b4af47026725"
+          },
+          {
+            "term": "These outcomes rely on professional decisions rather than direct measures of ris",
+            "snippet": "These outcomes rely on professional decisions rather than direct measures of risk, potentially amplifying subjectivity and racial disparities",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Y6M97SWQ",
+            "work_id": "work:a8f897e9-c177-5304-b3c0-1cc5ffd86dd7",
+            "version_id": "version:a95d2f59-0433-52d2-be61-b4af47026725"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "3. How did CW agencies address algorithmic fairness, equity, and ethics issues f",
+            "snippet": "3. How did CW agencies address algorithmic fairness, equity, and ethics issues from model development to deployment?",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Y6M97SWQ",
+            "work_id": "work:a8f897e9-c177-5304-b3c0-1cc5ffd86dd7",
+            "version_id": "version:a95d2f59-0433-52d2-be61-b4af47026725"
+          },
+          {
+            "term": "This review shows that fairness can beaddressedatmultiplestages ofmodel developm",
+            "snippet": "This review shows that fairness can beaddressedatmultiplestages ofmodel development -through feature selection, model choice, subgroup performance analysis, and threshold adjustments.",
+            "ts": "2026-10-02T06:36:22.310Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Y6M97SWQ",
+            "work_id": "work:a8f897e9-c177-5304-b3c0-1cc5ffd86dd7",
+            "version_id": "version:a95d2f59-0433-52d2-be61-b4af47026725"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:36:22.310Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:a8f897e9-c177-5304-b3c0-1cc5ffd86dd7",
+      "version_id": "version:a95d2f59-0433-52d2-be61-b4af47026725",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:a95d2f59-0433-52d2-be61-b4af47026725",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Post_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Child_Family_Welfare"
+          ],
+          "AN_Task": [
+            "Case_Assessment_Decision_Support"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Literaturreview",
+          "AN_Notes": "Systematic review of nine implementation studies of predictive risk tools in child welfare, synthesised with CFIR and the ethical frameworks of Russell (2015) and Drake et al. (2020). AN_Mitigation_Status Evaluated is a synthesised evaluation, not the review's own experiment: the review reports that the post-processing fairness correction of Purdy and Glass (2023), group-specific risk thresholds, reduced false positive and false negative error rates among four subgroups; it also reports the racial equity report of Putnam-Hornstein et al. (2022) finding comparable accuracy across racial and ethnic groups. Other mitigation stages remain at the level of description or recommendation: exclusion of bias-prone variables after community consultation (Pre_Processing) and stakeholder consensus, training, external ethics reviews (Organisational_Process). Race_Ethnicity is the axis of the synthesised subgroup analyses and thresholds; gender is mentioned once as a subgroup dimension of accuracy checks and socioeconomic status only in a cited discussion sentence, so both stay uncoded. AN_Bias_Definition Explicit rests on the adopted equity criterion of Russell (2015). CFIR frames implementation, not bias, so AN_Theory_Reference is No; feminist and other critical theories appear only as a future-research suggestion."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    }
+  }
+}

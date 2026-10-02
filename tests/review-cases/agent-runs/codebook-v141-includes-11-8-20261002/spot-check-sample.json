@@ -1,0 +1,45 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-11-8-20261002",
+  "status": "proposed",
+  "seed": 20261013,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "Q4LK53XW"
+  ],
+  "disagreeing_works": [
+    "9Y7ZFGI5",
+    "EN6GNKL3",
+    "HJ7BHX8J",
+    "JI24FQPV",
+    "UJ7DXK8Y"
+  ],
+  "drawn": [
+    "9Y7ZFGI5",
+    "EN6GNKL3",
+    "HJ7BHX8J",
+    "Q4LK53XW",
+    "UJ7DXK8Y"
+  ],
+  "flagged_additions": [
+    "2SNYUZG4",
+    "5ERYSQCK"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "2SNYUZG4": "agent Unclear against the human Include",
+    "5ERYSQCK": "agent Unclear against the human Include, rests on Gender teilweise from a regression variable",
+    "EN6GNKL3": "framing concept versus theory reference, Demonstrated versus Evaluated for an evaluated course",
+    "HJ7BHX8J": "whether gendered and racialised maintenance work grounds a bias axis",
+    "Q4LK53XW": "Direct_Discrimination for a hiring algorithm the work does not classify, open since the pilot"
+  },
+  "track_agreement_sha256": "f35afac2bcc02f02e2c458706c7e65bb95b39ebb671ed7dd4178253bae2c8794"
+}

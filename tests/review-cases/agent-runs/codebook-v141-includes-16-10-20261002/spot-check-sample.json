@@ -1,0 +1,50 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-16-10-20261002",
+  "status": "proposed",
+  "seed": 20261018,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "5G2QTZYD",
+    "6N2E242K",
+    "LGYFN6JK"
+  ],
+  "disagreeing_works": [
+    "4GYXUS9Y",
+    "79TL6HSB",
+    "7G73H3KM",
+    "7IVS7X63",
+    "X7ZGW6CN",
+    "YTDMY5W4"
+  ],
+  "drawn": [
+    "5G2QTZYD",
+    "6N2E242K",
+    "7IVS7X63",
+    "LGYFN6JK",
+    "X7ZGW6CN"
+  ],
+  "flagged_additions": [
+    "79TL6HSB",
+    "KPSF8EZE",
+    "YTDMY5W4"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "KPSF8EZE": "agent Unclear against the human Include",
+    "5G2QTZYD": "data provenance not reported, Table 4 arithmetically inconsistent",
+    "YTDMY5W4": "internal university framework version 0.1 admitted as grey literature",
+    "79TL6HSB": "ethics approval number as placeholder, percentages from a qualitative interview study",
+    "7IVS7X63": "Feministisch with an intersectional lens without gender, Soziale_Arbeit nein",
+    "X7ZGW6CN": "AN_Task Other_Task for artistic practice, Non_Binary_Inclusive and Social_Construct in a conceptual essay"
+  },
+  "track_agreement_sha256": "b8442042e7634aaec12ef2f73b7853170b3671d6a1ca8e0a69d4130cb077d28e"
+}

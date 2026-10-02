@@ -1,0 +1,508 @@
+{
+  "schema": "femprompt-track-agreement/0.1",
+  "label": "workflow_diagnostic_not_accuracy",
+  "interpretation": "Agreement between two operationally isolated agent tracks is a workflow diagnostic. Tracks on the same model share more than tracks on different models, so agreement is neither accuracy nor inter-expert reliability. Kappa is descriptive and carries no threshold.",
+  "compared_works": 7,
+  "both_include_works": 6,
+  "fields": [
+    {
+      "field": "decision",
+      "kind": "decision",
+      "compared_works": 7,
+      "identical": 7,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "AI_Literacies",
+      "kind": "category",
+      "compared_works": 7,
+      "identical": 6,
+      "raw_agreement": 0.8571,
+      "different_paper_ids": [
+        "XXCDL3A3"
+      ],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 0.7667
+    },
+    {
+      "field": "Generative_KI",
+      "kind": "category",
+      "compared_works": 7,
+      "identical": 7,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "Prompting",
+      "kind": "category",
+      "compared_works": 7,
+      "identical": 7,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "KI_Sonstige",
+      "kind": "category",
+      "compared_works": 7,
+      "identical": 6,
+      "raw_agreement": 0.8571,
+      "different_paper_ids": [
+        "J9IZDVTW"
+      ],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 0.6818
+    },
+    {
+      "field": "Soziale_Arbeit",
+      "kind": "category",
+      "compared_works": 7,
+      "identical": 7,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "Bias_Ungleichheit",
+      "kind": "category",
+      "compared_works": 7,
+      "identical": 7,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "Gender",
+      "kind": "category",
+      "compared_works": 7,
+      "identical": 7,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "Diversitaet",
+      "kind": "category",
+      "compared_works": 7,
+      "identical": 7,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "Feministisch",
+      "kind": "category",
+      "compared_works": 7,
+      "identical": 7,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "Fairness",
+      "kind": "category",
+      "compared_works": 7,
+      "identical": 7,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "AN_Prompting_Role",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 6,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "values": {
+        "None": {
+          "both": 5,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Research_Instrument": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        }
+      }
+    },
+    {
+      "field": "AN_Prompt_Techniques",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 6,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "values": {
+        "None": {
+          "both": 6,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        }
+      }
+    },
+    {
+      "field": "AN_Bias_Axes",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 4,
+      "raw_agreement": 0.6667,
+      "different_paper_ids": [
+        "IDW7QSYG",
+        "ZLMLP53P"
+      ],
+      "label": "workflow_diagnostic_not_accuracy",
+      "values": {
+        "Disability": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Gender": {
+          "both": 5,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Intersectional": {
+          "both": 2,
+          "one_track_only": 1,
+          "positive_specific_agreement": 0.8,
+          "cohens_kappa_descriptive": 0.6667
+        },
+        "Nationality_Migration": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Other_Axis": {
+          "both": 0,
+          "one_track_only": 1,
+          "positive_specific_agreement": 0.0,
+          "cohens_kappa_descriptive": 0.0
+        },
+        "Race_Ethnicity": {
+          "both": 4,
+          "one_track_only": 1,
+          "positive_specific_agreement": 0.8889,
+          "cohens_kappa_descriptive": 0.5714
+        },
+        "Sexual_Orientation_Identity": {
+          "both": 2,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Socioeconomic": {
+          "both": 3,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        }
+      }
+    },
+    {
+      "field": "AN_Harm_Types",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 4,
+      "raw_agreement": 0.6667,
+      "different_paper_ids": [
+        "8MDXCTA6",
+        "Y8J3HI9J"
+      ],
+      "label": "workflow_diagnostic_not_accuracy",
+      "values": {
+        "Direct_Discrimination": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Disparate_Performance": {
+          "both": 1,
+          "one_track_only": 1,
+          "positive_specific_agreement": 0.6667,
+          "cohens_kappa_descriptive": 0.5714
+        },
+        "Erasure": {
+          "both": 2,
+          "one_track_only": 1,
+          "positive_specific_agreement": 0.8,
+          "cohens_kappa_descriptive": 0.6667
+        },
+        "Exclusionary_Norms": {
+          "both": 3,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Indirect_Discrimination": {
+          "both": 2,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Misrepresentation": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "None": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Stereotyping": {
+          "both": 1,
+          "one_track_only": 1,
+          "positive_specific_agreement": 0.6667,
+          "cohens_kappa_descriptive": 0.5714
+        }
+      }
+    },
+    {
+      "field": "AN_Mitigation_Stage",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 5,
+      "raw_agreement": 0.8333,
+      "different_paper_ids": [
+        "G53MCF3W"
+      ],
+      "label": "workflow_diagnostic_not_accuracy",
+      "values": {
+        "In_Training": {
+          "both": 2,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Intra_Processing": {
+          "both": 0,
+          "one_track_only": 1,
+          "positive_specific_agreement": 0.0,
+          "cohens_kappa_descriptive": 0.0
+        },
+        "Organisational_Process": {
+          "both": 6,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Post_Processing": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Pre_Processing": {
+          "both": 4,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        }
+      }
+    },
+    {
+      "field": "AN_Mitigation_Status",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 5,
+      "raw_agreement": 0.8333,
+      "different_paper_ids": [
+        "ZLMLP53P"
+      ],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 0.7143
+    },
+    {
+      "field": "AN_Population",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 6,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "values": {
+        "Child_Family_Welfare": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Health_Care": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Not_SW_Specific": {
+          "both": 4,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        }
+      }
+    },
+    {
+      "field": "AN_Task",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 6,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "values": {
+        "Case_Assessment_Decision_Support": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "None": {
+          "both": 4,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Other_Task": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        }
+      }
+    },
+    {
+      "field": "AN_Gender_Definition",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 4,
+      "raw_agreement": 0.6667,
+      "different_paper_ids": [
+        "IDW7QSYG",
+        "XXCDL3A3"
+      ],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 0.5385
+    },
+    {
+      "field": "AN_Bias_Definition",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 6,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "AN_Gender_Understanding",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 5,
+      "raw_agreement": 0.8333,
+      "different_paper_ids": [
+        "IDW7QSYG"
+      ],
+      "label": "workflow_diagnostic_not_accuracy",
+      "values": {
+        "Binary_Categorical": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Intersectional": {
+          "both": 2,
+          "one_track_only": 1,
+          "positive_specific_agreement": 0.8,
+          "cohens_kappa_descriptive": 0.6667
+        },
+        "Non_Binary_Inclusive": {
+          "both": 2,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Not_Applicable": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Social_Construct": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        },
+        "Unclear": {
+          "both": 1,
+          "one_track_only": 0,
+          "positive_specific_agreement": 1.0,
+          "cohens_kappa_descriptive": 1.0
+        }
+      }
+    },
+    {
+      "field": "AN_Theory_Reference",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 6,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "AN_Coding_Basis",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 6,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    },
+    {
+      "field": "Studientyp",
+      "kind": "analysis",
+      "compared_works": 6,
+      "identical": 6,
+      "raw_agreement": 1.0,
+      "different_paper_ids": [],
+      "label": "workflow_diagnostic_not_accuracy",
+      "cohens_kappa_descriptive": 1.0
+    }
+  ],
+  "run_id": "codebook-v141-includes-08-7-20261002",
+  "coding_packets": [
+    "tests/review-cases/agent-runs/codebook-v141-includes-08-7-20261002/tracks/ar1-coding.json",
+    "tests/review-cases/agent-runs/codebook-v141-includes-08-7-20261002/tracks/ar2-coding.json"
+  ],
+  "vocabulary_version": "1.4.1"
+}

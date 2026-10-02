@@ -1,0 +1,1158 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.4",
+  "reviewer": "ar1",
+  "actor": "agent",
+  "updated": "2026-10-02T06:50:38.533Z",
+  "transcription": {
+    "run_id": "codebook-v141-includes-15-10-20261002",
+    "source_packet": "tests/review-cases/agent-runs/codebook-v141-includes-15-10-20261002/tracks/ar1-coding.json",
+    "source_packet_sha256": "aa44c90b79c793a2de2a69c6c8dd5b16d5ed14128881a558ae1a17d804b56ad5",
+    "method": "deterministic_packet_projection_pending_prism_roundtrip"
+  },
+  "decisions": {
+    "7W3RGSSG": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "We explore the effects of 12 different prompting techniques including CoT, Syste",
+            "snippet": "We explore the effects of 12 different prompting techniques including CoT, System 1, System 2, and Persona, across nine distinct social bias categories (ageism, beauty, beauty with profession, gender, institutional, nationality, profession, race, religion) in ",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7W3RGSSG",
+            "work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
+            "version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "We compare zero-shot, CoT, and a variety of dual process theory-based prompting ",
+            "snippet": "We compare zero-shot, CoT, and a variety of dual process theory-based prompting strategies on two bias datasets spanning nine different social bias categories.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7W3RGSSG",
+            "work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
+            "version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "We find that a human persona, System 2, and CoT prompting all tend to reduce soc",
+            "snippet": "We find that a human persona, System 2, and CoT prompting all tend to reduce social biases in LLMs",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7W3RGSSG",
+            "work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
+            "version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "We also observe a gender bias improvement of up to 9 percent across various mode",
+            "snippet": "We also observe a gender bias improvement of up to 9 percent across various models.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7W3RGSSG",
+            "work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
+            "version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:50:38.533Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
+      "version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
+      "version_type": "preprint",
+      "preferred_version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "Thought_Generation",
+            "Role_Persona",
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Age",
+            "Religion",
+            "Physical_Appearance",
+            "Nationality_Migration"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Absent",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Unclear"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Experiment mit fünf LLMs auf StereoSet und GenAssocBias, Messgröße ist die Rate stereotyper Antworten. General_Guidance steht für die System-2-Anweisung 'You answer questions slowly and thoughtfully. Your answers are effortful and reliable.', Thought_Generation für 'Let's think step-by-step', Role_Persona für 'Adopt the identity of a person/machine'. Evaluiert wird die eigene Prompt-Intervention, Human Persona mit System 2 senkt stereotype Antworten im Mittel am stärksten, CoT erhöht sie in jedem Minimalpaar. Bias-Achsen nach den gemessenen Kategorien, Beauty als Physical_Appearance. Die Kategorien profession, beauty in profession und institutional bleiben uncodiert, weil Beruf und Institution keine Achse sozialer Benachteiligung im Sinne der Liste sind und Other_Axis keine nicht-soziale Variable aufnimmt. Gender ist eine von neun Messkategorien ohne Bestimmung des Begriffs. Theoriebezug ist die Dual-Process-Theorie, die die Entstehung sozialer Bias im Modell rahmt."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "ACDF4FL9": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "We explore the effects of 12 different prompting techniques including CoT, Syste",
+            "snippet": "We explore the effects of 12 different prompting techniques including CoT, System 1, System 2, and Persona, across nine distinct social bias categories (ageism, beauty, beauty with profession, gender, institutional, nationality, profession, race, religion) in ",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ACDF4FL9",
+            "work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400",
+            "version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "We compare zero-shot CoT, debiasing, and a variety of dual process theory-based ",
+            "snippet": "We compare zero-shot CoT, debiasing, and a variety of dual process theory-based prompting strategies on two bias datasets spanning nine different social bias categories.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ACDF4FL9",
+            "work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400",
+            "version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "We find that a human persona, debiasing, System 2, and CoT prompting all tend to",
+            "snippet": "We find that a human persona, debiasing, System 2, and CoT prompting all tend to reduce social biases in LLMs",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ACDF4FL9",
+            "work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400",
+            "version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "We see no consistent prompt setting that best reduces gender bias, but the best ",
+            "snippet": "We see no consistent prompt setting that best reduces gender bias, but the best setting leads to consistent bias reductions.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ACDF4FL9",
+            "work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400",
+            "version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:50:38.533Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400",
+      "version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583",
+      "version_type": "preprint",
+      "preferred_version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "Thought_Generation",
+            "Role_Persona",
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Age",
+            "Religion",
+            "Physical_Appearance",
+            "Nationality_Migration"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Absent",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Unclear"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Experiment mit fünf LLMs auf StereoSet und GenAssocBias, Messgröße ist die Rate stereotyper Antworten, ergänzt um sechs Debiasing-Prompts. General_Guidance steht für die System-2-Anweisung 'You answer questions slowly and thoughtfully.' und die Debiasing-Anweisung 'The response should be unbiased and does not rely on stereotypes', Thought_Generation für 'Let's think step-by-step', Role_Persona für 'Adopt the identity of a person/machine'. Evaluiert wird die eigene Prompt-Intervention, HP Debias schneidet im Mittel am besten ab, CoT erhöht stereotype Antworten in jedem Minimalpaar. Bias-Achsen nach den gemessenen Kategorien, Beauty als Physical_Appearance. Profession, beauty in profession und institutional bleiben als nicht-soziale Variablen uncodiert. Gender ist eine von neun Messkategorien ohne Bestimmung des Begriffs. Theoriebezug ist die Dual-Process-Theorie, die die Entstehung sozialer Bias im Modell rahmt."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "DZ39L7GC": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "We propose an AI curriculum to cultivate students' AI literacy to answer the que",
+            "snippet": "We propose an AI curriculum to cultivate students' AI literacy to answer the question of 'why and what to teach' on AI.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "DZ39L7GC",
+            "work_id": "work:caf34135-d970-5f51-9836-2de1c34f317c",
+            "version_id": "version:4fdec451-c22b-503f-8213-064f6d515fac"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "The sixth module covers the concepts of supervised and unsupervised machine lear",
+            "snippet": "The sixth module covers the concepts of supervised and unsupervised machine learning.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "DZ39L7GC",
+            "work_id": "work:caf34135-d970-5f51-9836-2de1c34f317c",
+            "version_id": "version:4fdec451-c22b-503f-8213-064f6d515fac"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Students are further presented with the topic of biased data and discuss the con",
+            "snippet": "Students are further presented with the topic of biased data and discuss the consequences of data bias.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "DZ39L7GC",
+            "work_id": "work:caf34135-d970-5f51-9836-2de1c34f317c",
+            "version_id": "version:4fdec451-c22b-503f-8213-064f6d515fac"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:50:38.533Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:caf34135-d970-5f51-9836-2de1c34f317c",
+      "version_id": "version:4fdec451-c22b-503f-8213-064f6d515fac",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:4fdec451-c22b-503f-8213-064f6d515fac",
+      "selected_version_is_preferred": true
+    },
+    "EXVG7MQR": {
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 1,
+        "Diversitaet": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Social workers must be trained to give appropriate weight to AI tools to supplem",
+            "snippet": "Social workers must be trained to give appropriate weight to AI tools to supplement-and not replace-their professional judgement.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "EXVG7MQR",
+            "work_id": "work:5611657b-9caf-528c-aba7-b27719e34b25",
+            "version_id": "version:b1f3c8de-a38d-5088-a9f3-c18b41742ee8"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "For example, social workers may use ChatGPT to produce content that may be usefu",
+            "snippet": "For example, social workers may use ChatGPT to produce content that may be useful in grant applications, program evaluations, advocacy efforts, and fundraising appeals.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "EXVG7MQR",
+            "work_id": "work:5611657b-9caf-528c-aba7-b27719e34b25",
+            "version_id": "version:b1f3c8de-a38d-5088-a9f3-c18b41742ee8"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "At the programmatic level, predictive analytics, or the use of data for forecast",
+            "snippet": "At the programmatic level, predictive analytics, or the use of data for forecasting service successes and challenges, can help agencies understand how best to allocate scarce resources.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "EXVG7MQR",
+            "work_id": "work:5611657b-9caf-528c-aba7-b27719e34b25",
+            "version_id": "version:b1f3c8de-a38d-5088-a9f3-c18b41742ee8"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "The purpose of this article is to examine ethical issues related to social worke",
+            "snippet": "The purpose of this article is to examine ethical issues related to social workers' use of AI; apply relevant ethical standards; and outline elements of a strategy for social workers' ethical use of AI.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "EXVG7MQR",
+            "work_id": "work:5611657b-9caf-528c-aba7-b27719e34b25",
+            "version_id": "version:b1f3c8de-a38d-5088-a9f3-c18b41742ee8"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "comes with a risk that algorithms used to assess clients and develop interventio",
+            "snippet": "comes with a risk that algorithms used to assess clients and develop interventions and treatment plans will incorporate significant bias related to race, ethnicity, gender, sexual orientation, gender expression, and other vulnerable or protected categories.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "EXVG7MQR",
+            "work_id": "work:5611657b-9caf-528c-aba7-b27719e34b25",
+            "version_id": "version:b1f3c8de-a38d-5088-a9f3-c18b41742ee8"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Focus groups that include individuals from the diverse populations from whom dat",
+            "snippet": "Focus groups that include individuals from the diverse populations from whom datasets used in AI may be collected can help reduce and prevent algorithmic bias.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "EXVG7MQR",
+            "work_id": "work:5611657b-9caf-528c-aba7-b27719e34b25",
+            "version_id": "version:b1f3c8de-a38d-5088-a9f3-c18b41742ee8"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:50:38.533Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:5611657b-9caf-528c-aba7-b27719e34b25",
+      "version_id": "version:b1f3c8de-a38d-5088-a9f3-c18b41742ee8",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:b1f3c8de-a38d-5088-a9f3-c18b41742ee8",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "General_Social_Work"
+          ],
+          "AN_Task": [
+            "Case_Assessment_Decision_Support",
+            "Counselling_Client_Communication",
+            "Administration"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Ethische Erörterung ohne eigene Daten, gestützt auf NASW-Code und Technologiestandards. Bias ist einer von neun ethischen Problemkreisen. Race, ethnicity, gender, sexual orientation und gender expression stehen nur in Aufzählungen geschützter Merkmale, daher AN_Bias_Axes None. AN_Harm_Types: nicht entscheidbar aus Fulltext. Das Werk argumentiert eine verzerrte Einschätzung von Klient:innen durch nicht repräsentative Daten, also eine Entscheidung über Personen, ordnet sie aber weder als unmittelbare noch als mittelbare Diskriminierung ein und nennt kein Kriterium oder Proxy. Maßnahmen als Vorschläge: Datenbehandlung zur Bias-Reduktion (Pre_Processing), Ethik-Steuerungskomitee, diverse Fokusgruppen, Peer Review, Simulationen, Schulung und Testprotokoll (Organisational_Process). AN_Task nach den im Werk beschriebenen Einsatzfeldern Risikoeinschätzung und Diagnostik, Kommunikation mit Klient:innen über Chatbots und KI sowie Anträge und Fundraising mit ChatGPT. Bias wird über das Zitat zu unterschiedlich behandelten gleichgestellten Personen gerahmt, aber nicht selbst bestimmt."
+        },
+        "undecidable": {
+          "AN_Harm_Types": true
+        },
+        "codebook_version": "1.4.1"
+      }
+    },
+    "H7E3N6VR": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Um eine Sensibilisierung für mögliche Diskriminierung zu erreichen und Diskrimin",
+            "snippet": "Um eine Sensibilisierung für mögliche Diskriminierung zu erreichen und Diskriminierungsrisiken zu mindern (vgl. u.a. Knaus 2024), plädieren wir für eine stärkere Unterstützung der KI-bezogenen Medienkompetenzaneignung.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "H7E3N6VR",
+            "work_id": "work:5e332779-1c0f-5453-b27c-c62b11e97045",
+            "version_id": "version:56b93a3f-fb1b-5e99-ad40-74145084f9a9"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Die Ursachen für algorithmen-basierte Diskriminierung können sowohl (1) in den v",
+            "snippet": "Die Ursachen für algorithmen-basierte Diskriminierung können sowohl (1) in den verwendeten Daten, (2) im Algorithmus selbst als auch (3) in der Art und Weise, wie dieser verwendet wird, liegen.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "H7E3N6VR",
+            "work_id": "work:5e332779-1c0f-5453-b27c-c62b11e97045",
+            "version_id": "version:56b93a3f-fb1b-5e99-ad40-74145084f9a9"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Ziel des Beitrags ist es aufzuzeigen, wie digitaler Ungleichheit ausgesetzte Gru",
+            "snippet": "Ziel des Beitrags ist es aufzuzeigen, wie digitaler Ungleichheit ausgesetzte Gruppen für algorithmen-basierte Diskriminierung sensibilisiert und zu einem kompetenten Umgang ermächtigt werden können.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "H7E3N6VR",
+            "work_id": "work:5e332779-1c0f-5453-b27c-c62b11e97045",
+            "version_id": "version:56b93a3f-fb1b-5e99-ad40-74145084f9a9"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Zudem sind Informationen und Wissen von und über Minderheiten oft seltener in Da",
+            "snippet": "Zudem sind Informationen und Wissen von und über Minderheiten oft seltener in Datensätzen vertreten.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "H7E3N6VR",
+            "work_id": "work:5e332779-1c0f-5453-b27c-c62b11e97045",
+            "version_id": "version:56b93a3f-fb1b-5e99-ad40-74145084f9a9"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:50:38.533Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:5e332779-1c0f-5453-b27c-c62b11e97045",
+      "version_id": "version:56b93a3f-fb1b-5e99-ad40-74145084f9a9",
+      "version_type": "unknown",
+      "preferred_version_id": "version:56b93a3f-fb1b-5e99-ad40-74145084f9a9",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Nationality_Migration",
+            "Language_Culture"
+          ],
+          "AN_Harm_Types": [
+            "Indirect_Discrimination",
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Medienpädagogischer Beitrag zu algorithmenbasierter Diskriminierung und KI-bezogenen Kompetenzen, gestützt auf Literatur und die eigene Fokusgruppenstudie der Autorinnen mit Menschen mit Migrationsgeschichte. Kein Bezug auf Soziale Arbeit, Zielgruppe ist die allgemeine Bevölkerung mit Fokus auf digital benachteiligte Gruppen. Achsen: Alter als eigenes Beispiel für Proxy-Diskriminierung im Bewerbungsverfahren, Migration und kulturelle Zugehörigkeit aus der eigenen Fokusgruppenstudie. Geschlecht, Einkommen, Bildung, Religion stehen nur in Aufzählungen, der Satz zur Kombination von Geschlechtsidentität und Herkunft ist allgemein und zeigt kein kombinationsabhängiges Ergebnis. Schadensarten: Indirect_Discrimination über Proxy-Variablen im eigenen Ursachenschema, Exclusionary_Norms über die Zuordnung zu einem Mehrheitssprachensystem und die Autokorrektur ausländisch klingender Namen. Die Gesichtserkennung, die weiße Männer besser erkennt, ist ein zitiertes Beispiel und bleibt uncodiert. Maßnahmen als Vorschläge: Medienkompetenzförderung, Austauschforen, Meldesysteme, Beratungsstrukturen und regulatorische Anpassung des AGG. 'Automation Bias' und 'digitale Resignation' werden als Begriffe genutzt, rahmen die Behandlung von Bias aber nicht als Theorie, daher AN_Theory_Reference No."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "LBLF9BCW": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "In this work, we propose DIPPER, a novel, training-free LLM ensemble framework w",
+            "snippet": "In this work, we propose DIPPER, a novel, training-free LLM ensemble framework where a single LLM model type is fed an optimized, diverse set of reasoning prompts in parallel, effectively producing an ensemble at inference time to improve performance in reason",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LBLF9BCW",
+            "work_id": "work:3665f03e-6832-52bd-9cfe-c1cbb3ab0f74",
+            "version_id": "version:e2492957-f995-5e88-a188-d5353c888a95"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "This leads to the interesting question of how we could design ensemble methods t",
+            "snippet": "This leads to the interesting question of how we could design ensemble methods that rely on just prompt diversity to produce significant performance boost for a given LLM.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LBLF9BCW",
+            "work_id": "work:3665f03e-6832-52bd-9cfe-c1cbb3ab0f74",
+            "version_id": "version:e2492957-f995-5e88-a188-d5353c888a95"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:50:38.533Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:3665f03e-6832-52bd-9cfe-c1cbb3ab0f74",
+      "version_id": "version:e2492957-f995-5e88-a188-d5353c888a95",
+      "version_type": "unknown",
+      "preferred_version_id": "version:e2492957-f995-5e88-a188-d5353c888a95",
+      "selected_version_is_preferred": true
+    },
+    "MT54YHER": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 1,
+        "KI_Sonstige": 1,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Results show that interactive simulations effectively enhance AI literacy across",
+            "snippet": "Results show that interactive simulations effectively enhance AI literacy across topics, supporting greater knowledge transfer and self-reported confidence, though engagement alone does not predict learning.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MT54YHER",
+            "work_id": "work:370aa2bd-ee09-51cb-ba06-4b6d70ffd322",
+            "version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Notably, the LLM topic showed mixed results, with all three conditions experienc",
+            "snippet": "Notably, the LLM topic showed mixed results, with all three conditions experiencing some declines in performance.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MT54YHER",
+            "work_id": "work:370aa2bd-ee09-51cb-ba06-4b6d70ffd322",
+            "version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "illustrating how datasets shape AI outputs",
+            "snippet": "illustrating how datasets shape AI outputs",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MT54YHER",
+            "work_id": "work:370aa2bd-ee09-51cb-ba06-4b6d70ffd322",
+            "version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "In a controlled study with 605 participants, we assess how interactive AI tutori",
+            "snippet": "In a controlled study with 605 participants, we assess how interactive AI tutorials impact learning of key concepts such as fairness, dataset representativeness, and bias in language models.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MT54YHER",
+            "work_id": "work:370aa2bd-ee09-51cb-ba06-4b6d70ffd322",
+            "version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "The Diversity topic showed a significant improvement in 'Propose solutions'",
+            "snippet": "The Diversity topic showed a significant improvement in 'Propose solutions'",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MT54YHER",
+            "work_id": "work:370aa2bd-ee09-51cb-ba06-4b6d70ffd322",
+            "version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "addressing bias and algorithmic equity",
+            "snippet": "addressing bias and algorithmic equity",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MT54YHER",
+            "work_id": "work:370aa2bd-ee09-51cb-ba06-4b6d70ffd322",
+            "version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c"
+          },
+          {
+            "term": "Fairness improved consistently across all measures",
+            "snippet": "Fairness improved consistently across all measures",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MT54YHER",
+            "work_id": "work:370aa2bd-ee09-51cb-ba06-4b6d70ffd322",
+            "version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:50:38.533Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:370aa2bd-ee09-51cb-ba06-4b6d70ffd322",
+      "version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c",
+      "version_type": "unknown",
+      "preferred_version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "None"
+          ],
+          "AN_Mitigation_Status": "None",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Präregistrierte, randomisierte Online-Studie mit Prolific-Teilnehmenden in den USA zu vier Google-PAIR-Explorables (Worldview, Diversity, Fairness, LLM) gegenüber statischem Tutorial und Kontrollgruppe. Bias ist Lerninhalt der Tutorials, das Werk analysiert selbst keinen Bias entlang einer Achse. Der Amazon-Fall 'Female Applicants Down-Ranked' dient nur als Szenario eines Testitems, Geschlecht steht sonst nur in den Stichprobenangaben, daher Gender nein, AN_Bias_Axes None und Gender Not_Applicable. Schadensarten werden nur zitiert oder als Lerninhalt vermittelt, daher None. Mitigation ist Lerninhalt, die Teilnehmenden wählen Gegenstrategien in Testitems, das Werk selbst schlägt keine Maßnahme gegen Bias vor und evaluiert keine, daher None. Bias wird über nicht neutrale Datensätze gerahmt, aber nicht bestimmt. SDL und ICAP rahmen das Lernen, nicht Bias, daher kein Theoriebezug."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "ST9UCTJE": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "All of the models are CNNs trained with cross entropy loss against the binary to",
+            "snippet": "All of the models are CNNs trained with cross entropy loss against the binary toxicity label.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ST9UCTJE",
+            "work_id": "work:921a4ede-1a03-55c3-bfda-003bfcc066df",
+            "version_id": "version:87f597e4-4ea2-5c84-9e8e-da91e9acad42"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Toxicity classifiers demonstrate a counterfactual fairness issue by predicting t",
+            "snippet": "Toxicity classifiers demonstrate a counterfactual fairness issue by predicting that 'Some people are gay' is toxic while 'Some people are straight' is nontoxic.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ST9UCTJE",
+            "work_id": "work:921a4ede-1a03-55c3-bfda-003bfcc066df",
+            "version_id": "version:87f597e4-4ea2-5c84-9e8e-da91e9acad42"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "We offer a metric, counterfactual token fairness (CTF), for measuring this parti",
+            "snippet": "We offer a metric, counterfactual token fairness (CTF), for measuring this particular form of fairness in text classifiers, and describe its relationship with group fairness.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ST9UCTJE",
+            "work_id": "work:921a4ede-1a03-55c3-bfda-003bfcc066df",
+            "version_id": "version:87f597e4-4ea2-5c84-9e8e-da91e9acad42"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:50:38.533Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:921a4ede-1a03-55c3-bfda-003bfcc066df",
+      "version_id": "version:87f597e4-4ea2-5c84-9e8e-da91e9acad42",
+      "version_type": "unknown",
+      "preferred_version_id": "version:87f597e4-4ea2-5c84-9e8e-da91e9acad42",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Sexual_Orientation_Identity",
+            "Religion",
+            "Race_Ethnicity"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "Other_Task"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Experiment zu Toxizitätsklassifikation mit CNNs auf Kaggle-Wikipedia-Kommentaren und einem privaten Forendatensatz. AN_Task Other_Task: Moderation von Forenkommentaren durch Toxizitätsklassifikation, keine Aufgabe der Sozialen Arbeit. Achsen nach den eigenen Gegenfaktenbeispielen und Ergebnissen: sexuelle Orientierung ('gay'/'straight'), Religion ('Jewish', 'Muslim', 'Christian' in Tabelle 5), Rassifizierung ('Asian' als Substitution, 'black power'/'white power' als eigenes asymmetrisches Beispiel). Schadensart Disparate_Performance über die eigene Messung ungleicher True-Positive- und True-Negative-Raten zwischen Identitätsgruppen, die Klassifikation betrifft Kommentare und keine Entscheidung über Personen. Maßnahmen evaluiert: Blindness und Counterfactual Augmentation verändern die Trainingsdaten (Pre_Processing), Counterfactual Logit Pairing ergänzt die Trainingsverlustfunktion (In_Training). CLP mit lambda ab 1 erreicht eine nahezu null betragende CTF-Lücke ohne AUC-Verlust, mit Zielkonflikten bei der Gruppenfairness. Bias wird technisch über Counterfactual Fairness bestimmt, Theoriebezug ist Counterfactual Fairness aus der kausalen Inferenz nach Kusner et al. als rahmendes Konzept."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "YRBP6IEJ": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "KI_Sonstige": 1,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "this article recommends the establishment of a new Educational Policy and Accred",
+            "snippet": "this article recommends the establishment of a new Educational Policy and Accreditation Standard (EPAS) competency indicator: Social workers demonstrate the knowledge, skills, and understanding to responsibly use generative artificial intelligence tools",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YRBP6IEJ",
+            "work_id": "work:62a3a084-ae6f-55f4-98c7-79730686bc1f",
+            "version_id": "version:1e32bee9-ce88-5522-b3b7-80a21933e0b8"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "LLMs fall within this broader umbrella of GenAI and are arguably the most releva",
+            "snippet": "LLMs fall within this broader umbrella of GenAI and are arguably the most relevant to social work among the various types of GenAI models.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YRBP6IEJ",
+            "work_id": "work:62a3a084-ae6f-55f4-98c7-79730686bc1f",
+            "version_id": "version:1e32bee9-ce88-5522-b3b7-80a21933e0b8"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Prompt engineering is the central skill for interacting with GenAI models and ge",
+            "snippet": "Prompt engineering is the central skill for interacting with GenAI models and getting desired outputs for a given task (Wang, Shi, et al., 2023).",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YRBP6IEJ",
+            "work_id": "work:62a3a084-ae6f-55f4-98c7-79730686bc1f",
+            "version_id": "version:1e32bee9-ce88-5522-b3b7-80a21933e0b8"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Narrow AI systems have been deployed in social work practice for over a decade, ",
+            "snippet": "Narrow AI systems have been deployed in social work practice for over a decade, including predictive analytics to assist in clinical decision making (Cariceo et al., 2018) and simulation-based training for workers and clients",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YRBP6IEJ",
+            "work_id": "work:62a3a084-ae6f-55f4-98c7-79730686bc1f",
+            "version_id": "version:1e32bee9-ce88-5522-b3b7-80a21933e0b8"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "GenAI holds some promise for improving social work practice, primarily through i",
+            "snippet": "GenAI holds some promise for improving social work practice, primarily through its ability to ease resource constraints for writing-oriented tasks",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YRBP6IEJ",
+            "work_id": "work:62a3a084-ae6f-55f4-98c7-79730686bc1f",
+            "version_id": "version:1e32bee9-ce88-5522-b3b7-80a21933e0b8"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Social work courses should investigate how outputs generated by these systems co",
+            "snippet": "Social work courses should investigate how outputs generated by these systems could perpetuate this bias and what mitigation is possible.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YRBP6IEJ",
+            "work_id": "work:62a3a084-ae6f-55f4-98c7-79730686bc1f",
+            "version_id": "version:1e32bee9-ce88-5522-b3b7-80a21933e0b8"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:50:38.533Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:62a3a084-ae6f-55f4-98c7-79730686bc1f",
+      "version_id": "version:1e32bee9-ce88-5522-b3b7-80a21933e0b8",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:1e32bee9-ce88-5522-b3b7-80a21933e0b8",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Learning_Content",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "Thought_Generation",
+            "Role_Persona",
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Education_Professional",
+            "General_Social_Work"
+          ],
+          "AN_Task": [
+            "Documentation_Recording",
+            "Administration",
+            "Teaching_Further_Education"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Konzept",
+          "AN_Notes": "Curriculumvorschlag für eine neue EPAS-Kompetenz zum verantwortlichen GenAI-Einsatz im MSW-Studium mit vier Fertigkeiten, darunter Prompting. Techniken als vermittelte Inhalte: Chain-of-Thought (Thought_Generation), Personas aus dem Prompt-Katalog von White et al. (Role_Persona), General_Guidance für das iterative Wechselspiel von Prompting und Output-Validierung ('The tasks of prompting and validating are often iterative'). Die Beispiele zu Geschlechter- und Rassifizierungsbias (Bildgeneratoren, race-based medicine) sind zitierte Befunde anderer Arbeiten, daher AN_Bias_Axes und AN_Harm_Types None. Maßnahme gegen Bias ist die Behandlung von Bias und Output-Validierung in Lehrveranstaltungen, vorgeschlagen. AN_Task nach den beschriebenen Einsatzfeldern Behandlungspläne und Fallnotizen, Anträge und Fundraising, Schulungsmaterialien für Fachkräfte. Bias wird über die Trainingsdaten gerahmt, aber nicht bestimmt."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "Z9BIKVS3": {
+      "categories": {
+        "Generative_KI": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 2,
+        "Feministisch": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "This is evident in the 'character training' involved in Claude 3.0, where develo",
+            "snippet": "This is evident in the 'character training' involved in Claude 3.0, where developers made a list of traits they wanted the model to have, leading it to generate and rank responses in accordance with these traits",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Z9BIKVS3",
+            "work_id": "work:9738a74e-8acd-588d-9f08-444aa0295540",
+            "version_id": "version:be42765e-8aaf-557f-9326-0e9164a9c700"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "This working paper utilizes a feminist policy analysis framework centred around ",
+            "snippet": "This working paper utilizes a feminist policy analysis framework centred around five thematic areas - intersectionality, context, neutrality, control and power - to analyze global initiatives for AI safety governance.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Z9BIKVS3",
+            "work_id": "work:9738a74e-8acd-588d-9f08-444aa0295540",
+            "version_id": "version:be42765e-8aaf-557f-9326-0e9164a9c700"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "As AI systems regularly replicate broader social biases and power dynamics, it i",
+            "snippet": "As AI systems regularly replicate broader social biases and power dynamics, it is important to address how an intersectional perspective views future impacts as distinctly connected to current harms being faced by marginalized groups.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Z9BIKVS3",
+            "work_id": "work:9738a74e-8acd-588d-9f08-444aa0295540",
+            "version_id": "version:be42765e-8aaf-557f-9326-0e9164a9c700"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "In 2003, McPhail devised the Feminist Policy Analysis Framework, a qualitative a",
+            "snippet": "In 2003, McPhail devised the Feminist Policy Analysis Framework, a qualitative action-oriented model that utilizes 13 categories to examine how public policy reifies gendered systems of oppression.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Z9BIKVS3",
+            "work_id": "work:9738a74e-8acd-588d-9f08-444aa0295540",
+            "version_id": "version:be42765e-8aaf-557f-9326-0e9164a9c700"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "When there is an ongoing lack of diverse perspectives, the narratives surroundin",
+            "snippet": "When there is an ongoing lack of diverse perspectives, the narratives surrounding what constitutes an existential threat become insular.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Z9BIKVS3",
+            "work_id": "work:9738a74e-8acd-588d-9f08-444aa0295540",
+            "version_id": "version:be42765e-8aaf-557f-9326-0e9164a9c700"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "This research is grounded in a feminist account of the hegemonic impacts of AI.",
+            "snippet": "This research is grounded in a feminist account of the hegemonic impacts of AI.",
+            "ts": "2026-10-02T06:50:38.533Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "Z9BIKVS3",
+            "work_id": "work:9738a74e-8acd-588d-9f08-444aa0295540",
+            "version_id": "version:be42765e-8aaf-557f-9326-0e9164a9c700"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:50:38.533Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:9738a74e-8acd-588d-9f08-444aa0295540",
+      "version_id": "version:be42765e-8aaf-557f-9326-0e9164a9c700",
+      "version_type": "unknown",
+      "preferred_version_id": "version:be42765e-8aaf-557f-9326-0e9164a9c700",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Socioeconomic"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Absent",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Unclear"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Empirisch",
+          "AN_Notes": "Dokumentanalyse von sieben internationalen AI-Safety-Initiativen mit einem eigenen feministischen AI-Policy-Framework (vier Ziele mit je drei Fragen, Punktwerte je Initiative). Achse Socioeconomic über das eigene Argumentbeispiel einer einkommensschwachen Familie, die durch einen diskriminierenden Algorithmus Sozialleistungen verliert. Die Aufzählung sozialer Identitäten im Intersektionalitätsbegriff, die zitierten Befunde zu Race, Sexualität, Klasse und Gender und das Beispiel ländlicher und indigener Gemeinschaften beim Wasserverbrauch von Rechenzentren begründen keine weitere Achse. Intersectional bleibt uncodiert, weil kein Ergebnis von einer bestimmten Achsenkombination abhängt. Schadensart Exclusionary_Norms über die eigene Analyse vermeintlicher Neutralität und universeller Benevolenz, die Erfahrungen marginalisierter Gruppen ausblendet. Das Wohlfahrtsbeispiel ist eine allokative Benachteiligung, die das Werk weder als unmittelbare noch als mittelbare Diskriminierung einordnet, und bleibt daher ohne Diskriminierungscode. Maßnahmen als Vorschläge: Audits mit dem Framework, Rechenschaftspflichten, Beteiligung marginalisierter Gemeinschaften (Organisational_Process). Gender ist Teil des feministischen und intersektionalen Rahmens, das Werk bestimmt Geschlecht aber nicht und sagt nicht ausdrücklich, dass Geschlecht sozial hergestellt ist, daher Absent und Unclear. Bias wird über die übernommene Bestimmung intersektionaler Diskriminierung nach Crenshaw bestimmt."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-07-7-20261002",
+  "status": "proposed",
+  "seed": 20261009,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [],
+  "disagreeing_works": [
+    "9MDIBETZ",
+    "GPSB87RN",
+    "ZNHUCA4B"
+  ],
+  "drawn": [
+    "9MDIBETZ",
+    "GPSB87RN",
+    "ZNHUCA4B"
+  ],
+  "flagged_additions": [
+    "6JAZXKEB",
+    "JMAWNUEV",
+    "MQJEES7J",
+    "T9KEZN3G"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "T9KEZN3G": "Bias_Ungleichheit ja or teilweise decides Include versus Unclear, tracks split, review chose Unclear against the human Include",
+    "ZNHUCA4B": "publication type of a UNESCO recommendation admitted as norm-setting policy document",
+    "9MDIBETZ": "codebook does not separate Gender and Sexual_Orientation_Identity for trans and non-binary groups",
+    "GPSB87RN": "Non_Binary_Inclusive from a review criterion and AN_Task from a practice example",
+    "6JAZXKEB": "agent Unclear against the human Include",
+    "JMAWNUEV": "agent Unclear against the human Include",
+    "MQJEES7J": "agent Unclear against the human Include"
+  },
+  "track_agreement_sha256": "4ee2cb9d8218bde35ff44e23aa0bf5ea0467e7287c2e88de254cce7de3887910"
+}

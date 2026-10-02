@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.8"
 created: 2026-06-09
-updated: 2026-10-01
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-5.6), Claude Code (Claude Opus 5.5)
 topics: ["[[Pre-Registration]]", "[[Coding Scheme]]", "[[AI Agents]]"]
@@ -187,6 +187,20 @@ The pilot exposed the following points for the full run.
 - `AN_Gender_Understanding` leaves the pair `Binary_Categorical` with `Intersectional` and the threshold for `Social_Construct` open. `AN_Theory_Reference` needs a line between a framing concept and an illustrative mention. `AN_Bias_Definition` could be tied to the `Bias_Ungleichheit` category so that `Not_Applicable` becomes checkable.
 - Whether researchers screening case notes is `Documentation_Recording` remains open for `AN_Task`. The self-help chatbot work was coded consistently as client communication by both tracks.
 - The Soziale_Arbeit target-group clause carried the Include of a mental-health chatbot study that never names social work, and a practice guide passed the publication-type rule as scholarly grey literature. Both go to the domain experts with the spot-check sample.
+
+### Coding run of 2 October 2026
+
+The runs `codebook-v141-includes-<batch>-<works>-20261002` coded under codebook 1.4.1 every effective Include with a full text of its preferred Version that carried no 1.4 coding, together with the ten pilot works, which were recoded because the harm-type and `Social_Construct` rules changed after the pilot. The operator chose Claude Code subagents on Claude Opus 5.5 for both tracks and the review (decision 10). `src.assess.prepare_coding_run` writes each manifest from the run template, `src.assess.complete_coding_run` performs packet transfer, review completion, the spot-check draw and the append-only integration into `docs/data/screening/ar2.json`, and `src.assess.review_integrated_records` lets a separate agent issue the record receipts that the completion package requires for every productive record. Reviewer prompt 1.4 names codebook 1.4.1, the AI Agent Review prompt 0.4 stays in force. Each run folder holds its manifest, packets, PRISM tracks, reports, review, track agreement, spot-check sample and products.
+
+The run exposed the following points.
+
+- Agent tracks derived Unclear or Exclude for part of the human Includes, mostly AI-literacy frameworks, reviews and practice texts whose social dimension stays secondary. The completion package records each as `human_agent_decision_divergence`, the human decision stays effective, and the work carries no analysis coding until the domain experts decide. Every such work stands in the spot-check sample of its run.
+- The open questions of the pilot recurred across runs. They concern allocative disparities a work does not classify as direct or indirect, the pair `Binary_Categorical` with `Intersectional`, the threshold of `Social_Construct`, the line between a framing concept and a theory reference, `AN_Task` values for school education and artistic practice, and the separation of `Gender` and `Sexual_Orientation_Identity` for trans and non-binary groups. They wait for a rule revision under [[#Validation of the AI coding]].
+- The tracks reported source and identity problems, among them two Works bound to one text (`UFJ7ERFF`, `GP4JDSI8`), a published and an extended version under separate Works (`7W3RGSSG`, `ACDF4FL9`), title variants (`DUV4TUG3`, `LBLF9BCW`) and works with doubtful reference lists or data reporting (`PAZJHB8J`, `SS5HTYY6`, `5G2QTZYD`, `79TL6HSB`). The flags stand in the spot-check samples.
+- The anchor work `7L93JBLR` of [[codebook-v1.4-proposal]] was coded by the run it anchors.
+- The first manifests listed records of other Versions of the same Work as aliases, and agent-written files carried CRLF line endings under hashes that an LF checkout would break. Both were corrected before the commit and recorded in the affected manifests, and the scripts now prevent them.
+
+The works coded under 1.3 still await their recode. The coding packet requires all ten categories and every analysis field, and the merge refuses a divergent record without a `supersedes` path, so a partial recode has no contract yet.
 
 ## Lifecycle and authority
 

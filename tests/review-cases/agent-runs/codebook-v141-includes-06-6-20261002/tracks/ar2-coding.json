@@ -1,0 +1,818 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.2",
+  "codebook_version": "1.4.1",
+  "run_id": "codebook-v141-includes-06-6-20261002",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "decisions": {
+    "6IU5JG5Y": {
+      "source_path": "docs/data/fulltext/6IU5JG5Y.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title matches the corpus title verbatim. ACM Reference Format gives DOI 10.1145/3715275.3732210, authors Vethman, Smit, van Liebergen and Veenman, FAccT '25, year 2025. No conflict."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "teilweise",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "teilweise",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "ja"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "we dare argue that AI experts do have the duty to invest in educating themselves to the level that they can collaborate within interdisciplinary teams and communities that bring their expertise on power and social context."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "Since the primary focus of AI fairness papers centres around the development and research of machine learning-based AI applications, we adopt this same scope for our study."
+        ],
+        "Soziale_Arbeit": [
+          "The Dutch childcare benefits scandal, exposed in 2019, starkly illustrates how biased use of algorithmic systems harms marginalized groups."
+        ],
+        "Bias_Ungleichheit": [
+          "Yet in AI research, intersectionality is often reduced to a narrow technical lens, focused on algorithmic bias between subgroups defined by protected attributes and addressed through fairness metrics."
+        ],
+        "Gender": [
+          "An intersectional question would be: if we have for example women or queer representation in the team or the advisory panel, do we have only the most privileged subgroup of the marginalized group?"
+        ],
+        "Diversitaet": [
+          "We call on AI experts to meet this challenge through interdisciplinary collaboration with diverse communities."
+        ],
+        "Feministisch": [
+          "Yet intersectionality, grounded in Black Feminist thought, offers a much broader framework that can support AI experts in addressing the structural dimensions of unfairness through a social justice lens."
+        ],
+        "Fairness": [
+          "Much of the AI fairness community currently engages with intersectionality through a narrow, technical lens that focuses on data, model and outputs, also known as the algorithmic frame."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "None"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Race_Ethnicity",
+          "Intersectional"
+        ],
+        "AN_Harm_Types": [
+          "None"
+        ],
+        "AN_Mitigation_Stage": [
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "None"
+        ],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": [
+          "Intersectional"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Literaturreview",
+        "AN_Notes": "Reflexive thematic analysis of FAccT and AIES papers on intersectionality, evaluated in a workshop with AI experts; the result is a set of recommendations for AI experts. The workshop assessed perceived actionability, not the effect of a mitigation on bias, so the status stays Proposed. Harm types: the welfare fraud cases (Netherlands, France), Gender Shades and COMPAS are cited cases and illustrations from other work; the work's own argument concerns the narrow algorithmic frame of AI fairness and establishes no harm mechanism of its own, hence None. Bias axes: Gender, Race_Ethnicity and Intersectional from the work's own worked example of Black women (introduction) and its intersectional subgroup argument (4.2.2); dual nationality and low-income or immigrant background appear only in the cited welfare cases and stay uncoded. Gender understanding: the work states race as socially constructed (footnote 1, 4.4.3) but makes no such statement about gender, so Social_Construct is not coded. Soziale_Arbeit teilweise rests on the welfare benefits cases used as opening motivation. AN_Task None: the work addresses AI development practice, not a task in which AI is used.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "We refer here to Iris Marion Young's definition of social justice, which emphasizes our shared responsibility for and the structural nature of (in)justice.",
+            "locator": "Section 2.1 Origin of the Intersectional Approach"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Intersectionality, Black Feminist theory (Crenshaw; Collins and Bilge)",
+            "quote": "Their work acknowledges the many definitions and interpretations of intersectionality and puts forward the key elements of the intersectional approach.",
+            "locator": "Section 2.1 Origin of the Intersectional Approach"
+          },
+          {
+            "theory": "Social justice as structural responsibility (Young)",
+            "quote": "According to Young, injustice occurs \"when social processes put large groups of persons under systematic threat of domination or deprivation of the means to develop and exercise their capacities\" [110, p.52].",
+            "locator": "Section 2.1 Origin of the Intersectional Approach"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "On top of that, would a racially profiled Black woman care about more equal errors if she has limited opportunity to contest the errors that occur?",
+            "locator": "Section 1 Introduction"
+          },
+          {
+            "quote": "An intersectional question would be: if we have for example women or queer representation in the team or the advisory panel, do we have only the most privileged subgroup of the marginalized group?",
+            "locator": "Section 4.2.2"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Stand your ground that considerations around fair use of AI requires interdisciplinary collaboration throughout the lifecycle",
+            "locator": "Section 4.1.3"
+          }
+        ]
+      }
+    },
+    "GP4JDSI8": {
+      "source_path": "docs/data/fulltext/GP4JDSI8.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Data Feminism for AI' matches the corpus title. Text gives DOI 10.1145/3630106.3658543, authors Klein and D'Ignazio, FAccT '24, published 3 June 2024. The manifest records version_type unknown. The assigned file is byte-identical to the source of UFJ7ERFF (same SHA-256)."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "teilweise",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "We need to provide holistic AI education that integrates social and ethical concerns with a healthy dose of history-and crucially, taught by historians and other humanities scholars-so that we stop graduating CS students who are overconfident and underprepared for the complexities of the real world."
+        ],
+        "Generative_KI": [
+          "This combination of \"features\" means that both predictive and generative AI are status quo machines -truly excellent at reproducing existing conditions and shaping the future in the image of the racist, sexist, ableist, transphobic past."
+        ],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "This paper presents a set of intersectional feminist principles for conducting equitable, ethical, and sustainable AI research.",
+          "In terms of predictive AI, in the housing sector, for example, we have seen how automated tenant screening 'services' rely on eviction records, arrest records, and credit scores in order to rate tenants on their predicted ability to pay rent."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Relying on them disproportionately impacts people of color, and systematically furthers rather than mitigates structural oppressions."
+        ],
+        "Gender": [
+          "Data feminism requires us to challenge the gender binary, along with other systems of counting and classification that perpetuate oppression."
+        ],
+        "Diversitaet": [
+          "Put simply: the field of AI needs to develop more participatory, more responsible, and more humble methods for being in dialogue with impacted communities."
+        ],
+        "Feministisch": [
+          "Here, we present a rationale for why feminism remains deeply relevant for AI research, rearticulate the original principles of data feminism with respect to AI, and introduce two potential new principles related to environmental impact and consent."
+        ],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "None"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Race_Ethnicity",
+          "Intersectional",
+          "Socioeconomic",
+          "Sexual_Orientation_Identity",
+          "Other_Axis"
+        ],
+        "AN_Harm_Types": [
+          "Exclusionary_Norms",
+          "Erasure",
+          "Indirect_Discrimination"
+        ],
+        "AN_Mitigation_Stage": [
+          "Pre_Processing",
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "None"
+        ],
+        "AN_Gender_Definition": "Explicit",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": [
+          "Social_Construct",
+          "Non_Binary_Inclusive",
+          "Intersectional"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Konzept",
+        "AN_Notes": "Conceptual paper that rearticulates the seven data feminism principles for AI research and proposes two further principles (environment, consent); the appendix calls it primarily a literature review and theory contribution, coded Konzept because the principles form a framework. Other_Axis: colonial Global North/Global South position, argued in Principle 7 (labour hierarchy) and 5.1 (environmental impact). Harm types: Exclusionary_Norms for the gender binary operationalised in AI research (4.3), Erasure for missing data on groups and the erasure of trans and non-binary people (4.1, 4.3), Indirect_Discrimination for tenant screening on eviction records, arrest records and credit scores that disproportionately impacts people of color (4.1); harms such as Gender Shades, LAION misogyny or anti-Muslim LLM bias are cited from other work and left uncoded. Mitigation: collection of missing data on underrepresented people (Pre_Processing) and participatory methods, AI education, regulation and collective action (Organisational_Process), all proposed. Bias is not determined in a sentence of its own; the understanding of bias as a product of unequal social relations is recognisable from the frame (Implicit_Only). Fairness nein: the paper frames its argument as justice and power, not as algorithmic fairness criteria or metrics.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Gender_Definition": [
+          {
+            "quote": "There is a near-universal failure to understand that neither sex nor gender are essential, \"natural\", or fixed properties, and they certainly cannot be \"detected.\"",
+            "locator": "Section 4.3 Principle 3: Rethink Binaries and Hierarchies"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "The third principle of data feminism derives from the false binary that Western culture has constructed between the category of 'man' and the category of 'woman.' There are more than two genders, of course, and a fundamental commitment of feminist thought is to equality for all genders.",
+            "locator": "Section 4.3"
+          },
+          {
+            "quote": "These are systems in which wage gaps, property laws, gender norms, debt structures, and the lack of reproductive rights conspire to maintain women and genderqueer people as a global economic underclass, with additional repercussions for those who are also Black and brown.",
+            "locator": "Section 4.1 Principle 1: Examine Power"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Intersectional feminism (Combahee River Collective, Collins' matrix of domination, Crenshaw)",
+            "quote": "Intersectional feminism offers models (in the conceptual sense, not the machine learning sense) that explain the causal mechanisms of complex systems of power and guide action to transform them towards justice.",
+            "locator": "Section 2.1 What is Feminism?"
+          },
+          {
+            "theory": "Data feminism",
+            "quote": "The seven principles of data feminism-examine power, challenge power, rethink binaries and hierarchies, elevate emotion and embodiment, consider context, embrace pluralism, and make labor visible-were intended to operationalize what we saw as the most relevant tenets of feminist thinking for data science.",
+            "locator": "Section 1 Introduction"
+          },
+          {
+            "theory": "Racial and gendered capitalism (Marxist feminism)",
+            "quote": "Racial capitalism is also always gendered capitalism , as work by Angela Davis [42], Silvia Federici [57], Verónica Gago [61] and other Marxist feminists have shown.",
+            "locator": "Section 4.1 Principle 1: Examine Power"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "We also observed how this professional hierarchy could be mapped onto gendered, raced, and ultimately colonial hierarchies, with those in the Global North occupying the high-status and highcompensation roles, and those in the Global South occupying those at the bottom.",
+            "locator": "Section 4.7 Principle 7: Make Labor Visible"
+          },
+          {
+            "quote": "Given this, it is clear that examining power in AI must also centrally involve examining economic power, and the capitalist systems that facilitate the extraction, aggregation, and consolidation of financial resources.",
+            "locator": "Section 4.1"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "It is also important to recognize the very real ways the gender binary has been operationalized and even weaponized in AI research.",
+            "locator": "Section 4.3 (Exclusionary_Norms)"
+          },
+          {
+            "quote": "how to create a world where technologies cease to erase and harm trans and non-binary people.",
+            "locator": "Section 4.3 (Erasure)"
+          },
+          {
+            "quote": "they determine which issues (or groups of people) are worth collecting data about, and which issues (or people) can be ignored.",
+            "locator": "Section 4.1 (Erasure)"
+          },
+          {
+            "quote": "Relying on them disproportionately impacts people of color, and systematically furthers rather than mitigates structural oppressions.",
+            "locator": "Section 4.1, tenant screening (Indirect_Discrimination)"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "We still need to respond to political demands to collect missing data about underrepresented people and understudied issues.",
+            "locator": "Section 4.2 Principle 2: Challenge Power (Pre_Processing)"
+          },
+          {
+            "quote": "Put simply: the field of AI needs to develop more participatory, more responsible, and more humble methods for being in dialogue with impacted communities.",
+            "locator": "Section 4.5 Principle 5: Embrace Pluralism (Organisational_Process)"
+          }
+        ]
+      }
+    },
+    "UENFDPH9": {
+      "source_path": "docs/data/fulltext/UENFDPH9.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title matches the corpus title (case differs only). Authors Garkisch and Goldkind, accepted 15 June 2024, published online 10 October 2024, Springer open access. The text carries no DOI or journal name for the article itself, so the stable identifier could not be checked from the text."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "ja",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "It is imperative to enhance computational thinking, AI, and data literacy and develop skills for evaluating automated systems for social workers."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "Next, where scholars are attempting to use machine learning or predictive analytics as a research method, the content area or population under investigation is most frequently child welfare."
+        ],
+        "Soziale_Arbeit": [
+          "We propose an integrated model of Artificial Intelligence Enhanced Social Work (or 'Artificial Social Work'), which proposes a marriage of social work practice and artificial intelligence tools."
+        ],
+        "Bias_Ungleichheit": [
+          "There are population groups that tend to be under- or over-represented in the data (Walter et al., 2021)",
+          "Applying nondiscrimination in an Artificial Intelligence Enhanced Social Work context calls for inclusive data sets, inclusion, and representation across decision makers and AI creators as well as inviting a range of affected population members in the review and refinement process of AI tools."
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "Nondiscriminatory, rights-based social work practice ensures access to professionals, services, and resources for all people, including marginalized and under-represented populations."
+        ],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "None"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "None"
+        ],
+        "AN_Harm_Types": [
+          "Erasure"
+        ],
+        "AN_Mitigation_Stage": [
+          "Pre_Processing",
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": [
+          "General_Social_Work"
+        ],
+        "AN_Task": [
+          "Case_Assessment_Decision_Support",
+          "Administration",
+          "Research"
+        ],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": [
+          "Not_Applicable"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Literaturreview",
+        "AN_Notes": "Systematic review of social work and AI scholarship with qualitative content analysis, structured by Staub-Bernasconi's triple mandate, and a proposed Unified Model for AI Enhanced Social Work. Bias axes None: indigenous peoples, younger people and the poor appear only as a one-sentence enumeration from cited studies in the synthesis theme 'Data and Algorithmic Injustice'. Harm types: Erasure is coded because that synthesis theme of the review rests on under-representation that makes groups invisible; the other consequences listed there (exclusion, stigmatization, discrimination) are named from cited studies without a mechanism, and no allocation-based discrimination is established. Mitigation: inclusive data sets (Pre_Processing) and governance, participation, interdisciplinary teams and training (Organisational_Process), proposed. Tasks synthesised: decision support and risk assessment, organisational quality control and resource allocation, research use of text mining. Bias is not determined; the understanding as discrimination contrary to human rights is recognisable from the nondiscrimination frame (Implicit_Only). Gender is not treated.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Theory_Reference": [
+          {
+            "theory": "Triple mandate (Staub-Bernasconi) and data justice framework (Taylor), human rights-based social work",
+            "quote": "Three elements of the client mandate echoed by both Staub-Bernasconi and Taylor's data justice framework are critical elements in the Artificial Intelligence Enhanced Social Work Model.",
+            "locator": "Discussion, The Client Mandate"
+          },
+          {
+            "theory": "Human rights-based nondiscrimination principle of social work",
+            "quote": "As a human rights profession, nondiscrimination in social work practice has a long tradition",
+            "locator": "Discussion, The Client Mandate, Nondiscrimination and Inclusion"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "There are population groups that tend to be under- or over-represented in the data (Walter et al., 2021)",
+            "locator": "Results, Risks at the Client Level, Data and Algorithmic Injustice (Erasure)"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Applying nondiscrimination in an Artificial Intelligence Enhanced Social Work context calls for inclusive data sets",
+            "locator": "Discussion, Nondiscrimination and Inclusion (Pre_Processing)"
+          },
+          {
+            "quote": "AI governance in social work involves the development and implementation of policies and procedures to ensure that the use of AI technologies meets ethical standards and privacy regulations.",
+            "locator": "Discussion, The Social Agency Mandate (Organisational_Process)"
+          }
+        ],
+        "AN_Task": [
+          {
+            "quote": "Employees thus receive digital support in their decision-making process (Gillingham, 2019b)",
+            "locator": "Results, Decision Support"
+          },
+          {
+            "quote": "AI can be used to monitor the quality of social work services and ensure that organizations are using best practices.",
+            "locator": "Results, Quality Control and Improvement"
+          },
+          {
+            "quote": "Unstructured data can be harnessed and made available for research through text mining and machine learning (Victor et al., 2021).",
+            "locator": "Results, Possibilities at the Profession Level"
+          }
+        ]
+      }
+    },
+    "UFE85SCV": {
+      "source_path": "docs/data/fulltext/UFE85SCV.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title matches the corpus title. Supplementary information link gives DOI 10.1186/s40594-023-00418-7; authors Casal-Otero, Catala, Fernández-Morante, Taboada, Cebreiro and Barro; copyright 2023, accepted 30 March 2023. No conflict."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "teilweise",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "teilweise",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "This study aimed to understand how AI is being integrated into K-12 education worldwide.",
+          "AI literacy can be defined as a set of skills that enable a solid understanding of AI through three priority axes: learning about AI, learning about how AI works, and learning for life with AI"
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "These experiences are mainly focused on teaching AI subfields such as ML or AI algorithms applied to robotics."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "For example, the increase in socio-economic inequality between countries and within countries, resulting from the increasing automation of employment, is of particular concern."
+        ],
+        "Gender": [
+          "Due to the gender gap in issues related to computer science, it is also necessary to address the gender perspective."
+        ],
+        "Diversitaet": [
+          "AI education, as a broad branch of computer science, also needs to address the issue of gender diversity. Lack of gender diversity can impact the lives of the people for whom AI-based systems are developed."
+        ],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "UFJ7ERFF": {
+      "source_path": "docs/data/fulltext/UFJ7ERFF.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'Data Feminism for AI' matches the corpus title; text gives DOI 10.1145/3630106.3658543, authors Klein and D'Ignazio, 2024. No title or DOI conflict. The manifest labels this Version as preprint, but the assigned text is the ACM FAccT '24 published version and is byte-identical to the source of GP4JDSI8, which belongs to a different work_id. Version type and possible duplicate Work need operator clarification; coding is identical to GP4JDSI8 because the text is identical."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "teilweise",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "We need to provide holistic AI education that integrates social and ethical concerns with a healthy dose of history-and crucially, taught by historians and other humanities scholars-so that we stop graduating CS students who are overconfident and underprepared for the complexities of the real world."
+        ],
+        "Generative_KI": [
+          "This combination of \"features\" means that both predictive and generative AI are status quo machines -truly excellent at reproducing existing conditions and shaping the future in the image of the racist, sexist, ableist, transphobic past."
+        ],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "This paper presents a set of intersectional feminist principles for conducting equitable, ethical, and sustainable AI research.",
+          "In terms of predictive AI, in the housing sector, for example, we have seen how automated tenant screening 'services' rely on eviction records, arrest records, and credit scores in order to rate tenants on their predicted ability to pay rent."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Relying on them disproportionately impacts people of color, and systematically furthers rather than mitigates structural oppressions."
+        ],
+        "Gender": [
+          "Data feminism requires us to challenge the gender binary, along with other systems of counting and classification that perpetuate oppression."
+        ],
+        "Diversitaet": [
+          "Put simply: the field of AI needs to develop more participatory, more responsible, and more humble methods for being in dialogue with impacted communities."
+        ],
+        "Feministisch": [
+          "Here, we present a rationale for why feminism remains deeply relevant for AI research, rearticulate the original principles of data feminism with respect to AI, and introduce two potential new principles related to environmental impact and consent."
+        ],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "None"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Race_Ethnicity",
+          "Intersectional",
+          "Socioeconomic",
+          "Sexual_Orientation_Identity",
+          "Other_Axis"
+        ],
+        "AN_Harm_Types": [
+          "Exclusionary_Norms",
+          "Erasure",
+          "Indirect_Discrimination"
+        ],
+        "AN_Mitigation_Stage": [
+          "Pre_Processing",
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "None"
+        ],
+        "AN_Gender_Definition": "Explicit",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": [
+          "Social_Construct",
+          "Non_Binary_Inclusive",
+          "Intersectional"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Konzept",
+        "AN_Notes": "Conceptual paper that rearticulates the seven data feminism principles for AI research and proposes two further principles (environment, consent); the appendix calls it primarily a literature review and theory contribution, coded Konzept because the principles form a framework. Other_Axis: colonial Global North/Global South position, argued in Principle 7 (labour hierarchy) and 5.1 (environmental impact). Harm types: Exclusionary_Norms for the gender binary operationalised in AI research (4.3), Erasure for missing data on groups and the erasure of trans and non-binary people (4.1, 4.3), Indirect_Discrimination for tenant screening on eviction records, arrest records and credit scores that disproportionately impacts people of color (4.1); harms such as Gender Shades, LAION misogyny or anti-Muslim LLM bias are cited from other work and left uncoded. Mitigation: collection of missing data on underrepresented people (Pre_Processing) and participatory methods, AI education, regulation and collective action (Organisational_Process), all proposed. Bias is not determined in a sentence of its own; the understanding of bias as a product of unequal social relations is recognisable from the frame (Implicit_Only). Fairness nein: the paper frames its argument as justice and power, not as algorithmic fairness criteria or metrics.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Gender_Definition": [
+          {
+            "quote": "There is a near-universal failure to understand that neither sex nor gender are essential, \"natural\", or fixed properties, and they certainly cannot be \"detected.\"",
+            "locator": "Section 4.3 Principle 3: Rethink Binaries and Hierarchies"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "The third principle of data feminism derives from the false binary that Western culture has constructed between the category of 'man' and the category of 'woman.' There are more than two genders, of course, and a fundamental commitment of feminist thought is to equality for all genders.",
+            "locator": "Section 4.3"
+          },
+          {
+            "quote": "These are systems in which wage gaps, property laws, gender norms, debt structures, and the lack of reproductive rights conspire to maintain women and genderqueer people as a global economic underclass, with additional repercussions for those who are also Black and brown.",
+            "locator": "Section 4.1 Principle 1: Examine Power"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Intersectional feminism (Combahee River Collective, Collins' matrix of domination, Crenshaw)",
+            "quote": "Intersectional feminism offers models (in the conceptual sense, not the machine learning sense) that explain the causal mechanisms of complex systems of power and guide action to transform them towards justice.",
+            "locator": "Section 2.1 What is Feminism?"
+          },
+          {
+            "theory": "Data feminism",
+            "quote": "The seven principles of data feminism-examine power, challenge power, rethink binaries and hierarchies, elevate emotion and embodiment, consider context, embrace pluralism, and make labor visible-were intended to operationalize what we saw as the most relevant tenets of feminist thinking for data science.",
+            "locator": "Section 1 Introduction"
+          },
+          {
+            "theory": "Racial and gendered capitalism (Marxist feminism)",
+            "quote": "Racial capitalism is also always gendered capitalism , as work by Angela Davis [42], Silvia Federici [57], Verónica Gago [61] and other Marxist feminists have shown.",
+            "locator": "Section 4.1 Principle 1: Examine Power"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "We also observed how this professional hierarchy could be mapped onto gendered, raced, and ultimately colonial hierarchies, with those in the Global North occupying the high-status and highcompensation roles, and those in the Global South occupying those at the bottom.",
+            "locator": "Section 4.7 Principle 7: Make Labor Visible"
+          },
+          {
+            "quote": "Given this, it is clear that examining power in AI must also centrally involve examining economic power, and the capitalist systems that facilitate the extraction, aggregation, and consolidation of financial resources.",
+            "locator": "Section 4.1"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "It is also important to recognize the very real ways the gender binary has been operationalized and even weaponized in AI research.",
+            "locator": "Section 4.3 (Exclusionary_Norms)"
+          },
+          {
+            "quote": "how to create a world where technologies cease to erase and harm trans and non-binary people.",
+            "locator": "Section 4.3 (Erasure)"
+          },
+          {
+            "quote": "they determine which issues (or groups of people) are worth collecting data about, and which issues (or people) can be ignored.",
+            "locator": "Section 4.1 (Erasure)"
+          },
+          {
+            "quote": "Relying on them disproportionately impacts people of color, and systematically furthers rather than mitigates structural oppressions.",
+            "locator": "Section 4.1, tenant screening (Indirect_Discrimination)"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "We still need to respond to political demands to collect missing data about underrepresented people and understudied issues.",
+            "locator": "Section 4.2 Principle 2: Challenge Power (Pre_Processing)"
+          },
+          {
+            "quote": "Put simply: the field of AI needs to develop more participatory, more responsible, and more humble methods for being in dialogue with impacted communities.",
+            "locator": "Section 4.5 Principle 5: Embrace Pluralism (Organisational_Process)"
+          }
+        ]
+      }
+    },
+    "YLAKP7Z2": {
+      "source_path": "docs/data/fulltext/YLAKP7Z2.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title matches the corpus title (case differs only). Authors Jääskeläinen, Sharma, Pallett and Åsberg; received 29 April 2024, accepted 23 January 2025, published online 17 March 2025, Springer open access. The text carries no DOI or journal name for the article itself, so the stable identifier could not be checked from the text."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "Artists who are using vGenAI need more knowledge and resources that can inform the critical use of these tools."
+        ],
+        "Generative_KI": [
+          "In this paper, we critically analyze Stable Diffusion (SD), a widely used open-source vGenAI tool, through visual and intersectional analysis."
+        ],
+        "Prompting": [
+          "When it came to the visual images, we used a specific prompting strategy to produce a dataset comprising 180 images using SDXL.",
+          "By keeping prompts minimal, we aimed to observe the default outputs and hegemonic aesthetics in the imagery."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "We demonstrate how imagery produced through SD perpetuates pre-existing power systems such as sexism, racism, heteronormativity, and ableism, and assumes a default individual as white, able-bodied, and masculine-presenting."
+        ],
+        "Gender": [
+          "Across various images, gender assignments were automatically applied by SDXL, resulting in aesthetics that excluded feminine or non-binary representations."
+        ],
+        "Diversitaet": [
+          "Consequently, unless specifically prompted for diversity, the AI-generated imagery lacks diversity to a significant extent, perpetuating ableist norms by portraying stereotypical bodies with uniform characteristics as the visual standard"
+        ],
+        "Feministisch": [
+          "Our methodological approach draws primarily from feminist Science and Technology Studies (STS)"
+        ],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "Research_Instrument",
+          "Recommended_Practice"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Race_Ethnicity",
+          "Intersectional",
+          "Disability",
+          "Age",
+          "Socioeconomic",
+          "Language_Culture",
+          "Sexual_Orientation_Identity",
+          "Physical_Appearance",
+          "Nationality_Migration"
+        ],
+        "AN_Harm_Types": [
+          "Stereotyping",
+          "Exclusionary_Norms",
+          "Erasure",
+          "Misrepresentation"
+        ],
+        "AN_Mitigation_Stage": [
+          "Pre_Processing",
+          "Prompt_Practice",
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "None"
+        ],
+        "AN_Gender_Definition": "Explicit",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": [
+          "Social_Construct",
+          "Non_Binary_Inclusive",
+          "Intersectional"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Empirisch",
+        "AN_Notes": "Qualitative interpretative visual analysis of 180 Stable Diffusion XL images from minimal prompts along privilege and disadvantage, ideology and everyday scenarios, followed by a micro, meso and macro intersectional analysis. Prompting is the research instrument; the only prompting recommendation is that users be more conscious of what kind of prompts they use, with no codable technique (AN_Prompt_Techniques None). Religion was deliberately excluded from the prompts and is not coded. Harm types from the work's own image analysis: Stereotyping (darker skin tones tied to criminality, own named harm), Exclusionary_Norms (white, able-bodied, heteronormative masculine default), Erasure (absence of non-binary and disabled representations), Misrepresentation (reductionist portrayal of cultural contexts, Global South shown only as impoverished). The less accurate depiction of dishes such as fufu concerns cultural items rather than a quality difference between social groups and is not coded as Disparate_Performance. Gender definition Explicit rests on footnote 2, which determines the binary gender norm and replaces man and woman by heteronormative feminine and masculine representations. Mitigation: better training data curation, more conscious prompting by users, regulation, criminal culpability, team diversity and algorithmic reparation, all proposed. AN_Task None: the work audits a general image generator without an application task of professional practice.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Gender_Definition": [
+          {
+            "quote": "By simplistically interpreting the images using terms such as 'man' and 'woman', we are at danger of reinforcing the binary gender norm (the assumption that people of a certain gender should be associated with a certain set of visual features).",
+            "locator": "Section 2.1, footnote 2"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "Power systems are essentially beliefs, cultural norms, and practices (Guillaumin 2002) that reinforce certain ideologies, such as heteronormativity, patriarchy, racism, and ableism.",
+            "locator": "Section 5.3"
+          },
+          {
+            "quote": "Furthermore, non-binary gender representations were absent due to the strong binary gender aesthetics",
+            "locator": "Section 6"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Intersectionality (Crenshaw; Collins) and the three-lens intersectional framework of Sharma et al.",
+            "quote": "Our intersectional approach builds on Sharma et al. (2023)'s analytical framework, which encompasses 3 key lenses of intersectionality: (1) the micro (individual) lens; (2) the meso (institutional) lens; and the macro (power systems) lens.",
+            "locator": "Section 2.2"
+          },
+          {
+            "theory": "Feminist Science and Technology Studies and feminist visual cultural studies",
+            "quote": "Our methodological approach draws primarily from feminist Science and Technology Studies (STS)",
+            "locator": "Section 1 Introduction"
+          },
+          {
+            "theory": "Algorithmic reparation (Davis et al.)",
+            "quote": "Thus, we structure our recommendations around Davis et al. (2021)'s concept of 'algorithmic reparation'",
+            "locator": "Section 6"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "Thus, SD inadvertently excludes specific representations of individuals, such as wealthy people of color, economically disadvantaged white individuals, transmasculine/cismasculine feminists, and notably, feminists of color across all genders.",
+            "locator": "Section 5.1 (Intersectional)"
+          },
+          {
+            "quote": "These age representations exhibited ageist tendencies by largely excluding both older individuals and younger people, including children.",
+            "locator": "Section 4.1 (Age)"
+          },
+          {
+            "quote": "a notable absence of individuals with larger or smaller body sizes",
+            "locator": "Section 4.1 (Physical_Appearance)"
+          },
+          {
+            "quote": "The immigrants, again, featured only darker skin tones, whereas the citizens had a wider variety of representation.",
+            "locator": "Section 4.1 (Nationality_Migration)"
+          },
+          {
+            "quote": "Our investigation revealed a significant influence of Global North hegemony in the imagery, with much of it depicting US settings.",
+            "locator": "Section 4.3 (Language_Culture)"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "An exception to this was the material presented above, in which the privilege (such as wealth or citizenship status) was attributed to the white skin color, and the disadvantage (such as criminality) was connected with darker skin tones.",
+            "locator": "Section 4.1 (Stereotyping)"
+          },
+          {
+            "quote": "in many cases the hegemonic representation that is constructed through the SD imagery is a figure who is white, adult, able-bodied, and heteronormative masculine presenting.",
+            "locator": "Section 5.1 (Exclusionary_Norms)"
+          },
+          {
+            "quote": "Notably, there were no representations of disabilities, such as prosthetics",
+            "locator": "Section 4.1 (Erasure)"
+          },
+          {
+            "quote": "Thus, a stark dichotomy emerges where the Global South is consistently portrayed as impoverished, and masculine figures of Global North as wealthy.",
+            "locator": "Section 4.1 (Misrepresentation)"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Such interventions could include efforts to curate training data better",
+            "locator": "Section 6 (Pre_Processing)"
+          },
+          {
+            "quote": "Users of vGenAI (such as artists and creators) can also contribute to a more reparative approach by being more conscious of how they are generating images-e.g. what kind of prompts they use",
+            "locator": "Section 6 (Prompt_Practice)"
+          },
+          {
+            "quote": "It also shows the need to continually fight for more diversity in the teams developing and maintaining such technical systems",
+            "locator": "Section 6 (Organisational_Process)"
+          }
+        ]
+      }
+    }
+  }
+}

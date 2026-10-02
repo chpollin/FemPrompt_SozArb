@@ -1,0 +1,48 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-10-8-20261002",
+  "status": "proposed",
+  "seed": 20261012,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "22KJL3PC"
+  ],
+  "disagreeing_works": [
+    "3AHQEHDF",
+    "6L85PRUW",
+    "7L93JBLR",
+    "K3YCLBXK",
+    "QY6P4RGQ"
+  ],
+  "drawn": [
+    "22KJL3PC",
+    "3AHQEHDF",
+    "7L93JBLR",
+    "K3YCLBXK",
+    "QY6P4RGQ"
+  ],
+  "flagged_additions": [
+    "3AQ2K3BX",
+    "6L85PRUW",
+    "ERTJZW5M"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "3AQ2K3BX": "agent Unclear against the human Include",
+    "ERTJZW5M": "agent Unclear against the human Include, AI_Literacies ja/teilweise boundary",
+    "7L93JBLR": "codebook anchor work coded by the agents it anchors, SyRI own case versus cited, Explicit versus Implicit_Only",
+    "K3YCLBXK": "policy report, axes and harms None despite Bias_Ungleichheit ja, binary coding on few mentions",
+    "6L85PRUW": "gender fields on a thin text basis",
+    "QY6P4RGQ": "benchmark inputs as Prompting, Crawford definition as theory, Generative_KI on encoder models",
+    "22KJL3PC": "Direct_Discrimination from simulated allocations in games"
+  },
+  "track_agreement_sha256": "4dd0f5a1f60373a324f161311145d1e2b57b8e27c9722730002a2e1ca0e07e3c"
+}

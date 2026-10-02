@@ -1,0 +1,865 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.2",
+  "codebook_version": "1.4.1",
+  "run_id": "codebook-v141-includes-16-10-20261002",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "decisions": {
+    "4GYXUS9Y": {
+      "source_path": "docs/data/fulltext/4GYXUS9Y.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'The End of the World as We Know It? ChatGPT and Social Work' matches the corpus title. Authors Goldkind, Wolf, Glennon, Rios, Nissen; commentary in Social Work, accepted March 2023, advance access November 2023. No DOI printed in the text; title and author match carry identity. Publication type: scholarly commentary with identifiable authorship and references, admissible."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "nein",
+        "KI_Sonstige": "teilweise",
+        "Soziale_Arbeit": "ja",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "Social work educators might consider the role ChatGPT will play in their classrooms and how to teach students to ethically use these tools.",
+          "Few practitioners have access to training that would position them to interrogate the use of ChatGPT or its implications."
+        ],
+        "Generative_KI": [
+          "ChatGPT offers us an opportunity to consider how AI will disrupt social work practice in the near term"
+        ],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "Evidence shows that the existing use of advanced technological tools-in arenas like sentencing or risk assessment in child welfare-has exerted disproportionate impact upon marginalized populations"
+        ],
+        "Soziale_Arbeit": [
+          "Social workers can produce treatment plans, generate psychoeducation materials, and rapidly document client contact or progress."
+        ],
+        "Bias_Ungleichheit": [
+          "The extant texts training these language models are generally not inclusive of diverse perspectives and frequently reflect larger biases of society."
+        ],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["None"],
+        "AN_Harm_Types": ["None"],
+        "AN_Mitigation_Stage": ["Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["General_Social_Work", "Education_Professional"],
+        "AN_Task": ["Documentation_Recording", "Administration", "Teaching_Further_Education"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Theoretisch",
+        "AN_Notes": "Commentary. Bias appears as societal bias reflected in training text and as disproportionate impact on marginalized populations; the risk-assessment harm is cited from Gillingham (2019), so no harm type is coded. Mitigation: ethics training, organisational policies and an educational activity on impacts across populations, all proposed. Tasks: case notes and progress documentation, grant writing and fundraising, teaching. The prompts the commentary offers are reflection questions for readers, not prompting.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Every example of ChatGPT in practice should be paired with an activity that asks learners to conceptualize the reality of its impact across populations, institutions, and culture.",
+            "locator": "ChatGPT in Action, paragraph on social work education"
+          }
+        ],
+        "AN_Task": [
+          {
+            "quote": "Figure 1 illustrates a ChatGPT-generated case note for a client diagnosed with anxiety.",
+            "locator": "ChatGPT in Action, first paragraph"
+          },
+          {
+            "quote": "speeding the production of grant writing and fundraising activity, easing documentation demands",
+            "locator": "ChatGPT in Action, paragraph on practice"
+          }
+        ]
+      }
+    },
+    "5G2QTZYD": {
+      "source_path": "docs/data/fulltext/5G2QTZYD.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Feminist Perspectives on AI: Ethical Considerations in Algorithmic DecisionMaking' matches the corpus title. Author Uzair Ahmed, Hazara University; Journal of Gender, Power and (title truncated in conversion), Vol. 1 No. 3, 2024. No DOI printed; title and author match. Journal article, admissible."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "While most AI developers acknowledge fairness concerns in AI, 20% report low or no awareness, indicating gaps in ethical AI education and training."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "By analyzing AI-driven hiring systems, facial recognition technologies, and algorithmic governance structures, this research identifies patterns of discrimination that disproportionately impact women and marginalized communities."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "This paper explores the ethical implications of AI decision-making from a feminist standpoint, examining issues such as data bias, discrimination in automated systems, and the underrepresentation of women in AI development."
+        ],
+        "Gender": [
+          "The regression model indicates that gender is a significant predictor of AI hiring scores (p=0.001). Male candidates receive higher scores than female candidates with similar qualifications, highlighting gender bias in the hiring algorithm."
+        ],
+        "Diversitaet": [
+          "This study underscores the importance of participatory AI design and calls for greater diversity in the AI workforce to mitigate bias and ensure ethical algorithmic decision-making."
+        ],
+        "Feministisch": [
+          "The conceptual framework for this research is grounded in feminist ethics, algorithmic bias analysis, and inclusive AI governance."
+        ],
+        "Fairness": [
+          "The adoption of AI fairness metrics and automated bias detection techniques can help mitigate discriminatory outcomes in AI applications"
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Intersectional"],
+        "AN_Harm_Types": ["Direct_Discrimination", "Disparate_Performance"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["Other_Task"],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Binary_Categorical", "Intersectional"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Empirisch",
+        "AN_Notes": "Other_Task: hiring decisions (resume scoring) and facial recognition, both outside social work. Gender enters the regression as a binary dummy (Male=1, Female=0); nonbinary individuals are named only as stakeholders for participatory design, so the analysis stays Binary_Categorical. Intersectional rests on Table 2, where Black women show error rates that differ from both White women and Black men. Direct_Discrimination: the paper's own regression reports gender itself as a predictor of hiring scores. Mitigation (inclusive datasets, bias audits, participatory design, diverse teams) is recommended only; the announced assessment of transparency and fairness interventions reports perceptions, not an evaluated intervention. Source-quality flag for domain experts: the data sources of the hiring and facial-recognition analyses are not identified, and Table 4 reports 10 of 130 respondents as 4 percent.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Axes": [
+          {
+            "quote": "Black women have the highest error rates, underscoring the racial and gender biases embedded in facial recognition systems.",
+            "locator": "SPSS Data Analysis Tables, interpretation of Table 2"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "The regression model indicates that gender is a significant predictor of AI hiring scores (p=0.001).",
+            "locator": "SPSS Data Analysis Tables, interpretation of Table 1 (Direct_Discrimination)"
+          },
+          {
+            "quote": "ANOVA results show a statistically significant difference in error rates across demographic groups.",
+            "locator": "SPSS Data Analysis Tables, interpretation of Table 2 (Disparate_Performance)"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Ethical AI requires inclusive datasets, continuous bias audits, and the active involvement of marginalized communities in AI policymaking.",
+            "locator": "Findings and Conclusion, third paragraph"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "Gender (Male=1, Female=0)",
+            "locator": "Table 1"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Feminist ethics",
+            "quote": "The conceptual framework for this research is grounded in feminist ethics, algorithmic bias analysis, and inclusive AI governance.",
+            "locator": "Conceptual Structure"
+          },
+          {
+            "theory": "Feminist theory of power in technology",
+            "quote": "Feminist theory encourages a deeper examination of power dynamics in AI, questioning who controls technological development and whose interests are prioritized.",
+            "locator": "Introduction, sixth paragraph"
+          }
+        ]
+      }
+    },
+    "6N2E242K": {
+      "source_path": "docs/data/fulltext/6N2E242K.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Akzeptanz von KI und organisationale Rahmenbedingungen in der Sozialen Arbeit' with subtitle 'Eine empirische Untersuchung aus der Perspektive von Berufseinsteiger:innen' matches the corpus title. Author Anna-Lena Schönauer, Hochschule Emden/Leer; received 2024, published online 27 May 2025, open access CC BY 4.0. No DOI printed; title and author match. Journal article, admissible."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "teilweise",
+        "Prompting": "nein",
+        "KI_Sonstige": "teilweise",
+        "Soziale_Arbeit": "ja",
+        "Bias_Ungleichheit": "nein",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "Die Akzeptanz von KI und digitalen Technologien hängt von den digitalen Kompetenzen und den Erfahrungen der Fachkräfte beim Einsatz digitaler Technologien im beruflichen Kontext ab, die in diesem Bereich noch ausbaufähig sind.",
+          "Mandl und Dreisiebner unterscheiden für Künstliche Intelligenz die vier Kompetenzfelder Programmierung, Data Literacy, Machine Learning und KI-Ethik"
+        ],
+        "Generative_KI": [
+          "LLMs wie ChatGPT, Gemini, Llama oder Copilot sind zunehmend dazu in der Lage auch komplexere Interaktionen durchzuführen"
+        ],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "Im Falle von KI würde dies zum Beispiel bedeuten, dass eine Organisation den Mitarbeitenden eine KI-Anwendung zur Verfügung stellt, die ihnen dabei helfen soll, einen Fall zu bewerten und eine Entscheidung zum weiteren Vorgehen zu treffen."
+        ],
+        "Soziale_Arbeit": [
+          "Die empirische Untersuchung unter Berufseinsteiger:innen zeigt, dass der Einsatz von KI im beruflichen Kontext kritisch bewertet wird."
+        ],
+        "Bias_Ungleichheit": [],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["None"],
+        "AN_Harm_Types": ["None"],
+        "AN_Mitigation_Stage": ["None"],
+        "AN_Mitigation_Status": "None",
+        "AN_Population": ["General_Social_Work"],
+        "AN_Task": ["Administration", "Counselling_Client_Communication"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Not_Applicable",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Empirisch",
+        "AN_Notes": "Survey of early-career social workers on acceptance of AI and organisational conditions. Bias is not an object; discrimination appears only in a reference title. The recommended further training and participatory technology design target acceptance and competence, not bias, so the mitigation fields stay None. Gender appears only as sample demography (79 percent female). Tasks: respondents locate AI potential in administrative work and the article discusses future LLM use in direct client work; the case-assessment example only illustrates the acceptance concept. Technology acceptance theory frames neither gender nor bias.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Task": [
+          {
+            "quote": "Potenziale von KI werden von den Befragten ebenfalls vor allem im Bereich administrativer Tätigkeiten verortet.",
+            "locator": "Fazit & Ausblick, first paragraph (Administration)"
+          },
+          {
+            "quote": "Dabei könnten LLMs wie ChatGPT zukünftig auch in der direkten Arbeit mit Klient:innen eingesetzt werden.",
+            "locator": "Fazit & Ausblick, first paragraph (Counselling_Client_Communication)"
+          }
+        ]
+      }
+    },
+    "79TL6HSB": {
+      "source_path": "docs/data/fulltext/79TL6HSB.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Social Work and Artificial Intelligence: Collaboration and Challenges' matches the corpus title. Authors Yih-Chang Chen and Chia-Ching Lin, Chang Jung Christian University; Journals of Business & Managment Studies Vol. 1 Issue 2, pp. 23-33, published 22 July 2025. No DOI printed; title and author match. Journal article, admissible."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "ja",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "This study identifies a significant gap in current training systems to adequately prepare social workers for AI integration challenges.",
+          "Furthermore, the study emphasizes the critical need for enhanced AI literacy among social workers."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "90% of social work professionals believed AI could significantly improve practice efficiency, particularly in case screening, risk prediction, and resource matching."
+        ],
+        "Soziale_Arbeit": [
+          "This study investigates the application potential and challenges of artificial intelligence (AI) technology in the field of social work."
+        ],
+        "Bias_Ungleichheit": [
+          "Furthermore, when AI models fail to account for cultural differences, social contexts, or individual variations, they risk producing biased conclusions that further erode system acceptance and trustworthiness.",
+          "Incorporate essential AI knowledge (machine learning fundamentals, data ethics, algorithmic bias recognition) into core social work curricula"
+        ],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["None"],
+        "AN_Harm_Types": ["None"],
+        "AN_Mitigation_Stage": ["Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["General_Social_Work", "Education_Professional"],
+        "AN_Task": ["Case_Assessment_Decision_Support", "Documentation_Recording"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Absent",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Empirisch",
+        "AN_Notes": "Qualitative interview and focus-group study with social workers (child welfare, elderly care, mental health), AI developers and policymakers. Bias appears as a risk of biased conclusions and as a training topic, without a named axis, mechanism or determination, hence Bias_Definition Absent and harm types None. Mitigation: algorithmic bias recognition in curricula and cross-sector oversight of equity, proposed. Tasks: case screening, risk prediction and resource matching; case progress tracking and documentation. Source-quality flag: the IRB approval number is a placeholder (XXXXXX) and the qualitative study reports percentages as survey data.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Interdisciplinary Oversight : Cross-sector regulatory bodies to monitor compliance and equity in AI deployment",
+            "locator": "Discussion 3.3, fourth proposed direction"
+          }
+        ],
+        "AN_Task": [
+          {
+            "quote": "Furthermore, AI-driven automation of administrative tasks (e.g., case progress tracking, documentation) substantially reduces practitioners' bureaucratic burdens",
+            "locator": "Discussion 3.1, third paragraph (Documentation_Recording)"
+          }
+        ]
+      }
+    },
+    "7G73H3KM": {
+      "source_path": "docs/data/fulltext/7G73H3KM.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Generative AI and Opportunities for Feminist Classroom Assignments' matches the corpus title. Author Sarah F. Small, University of Utah; Feminist Pedagogy Vol. 3 Iss. 5, Article 10, August 2023, stable URL digitalcommons.calpoly.edu/feministpedagogy/vol3/iss5/10. Critical commentary with peer review acknowledgement and references, admissible."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "ja",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "Students will use ChatGPT, so it is up to educators to encourage them to use it critically: highlighting data and algorithmic biases within AI is one step toward minimizing reproduction of bias knowledge hierarchies."
+        ],
+        "Generative_KI": [
+          "I share two processes for educators to intentionally engage with ChatGPT and adopt feminist assignments."
+        ],
+        "Prompting": [
+          "Students could enter such a prompt, or experiment with rephrased prompts as in Figure 2, then critically examine ChatGPT's generated paragraphs"
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Ultimately, encouraging students to critically cite ChatGPT's work has the potential to demonstrate the program's imbedded biases and nip amplification of such biases in the bud."
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "it may challenge us to introduce plurality and diversify our syllabi"
+        ],
+        "Feministisch": [
+          "educators can see this improved accessibility of generative AI as an opportunity to reshape their class assignments in feminist ways."
+        ],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Learning_Content"],
+        "AN_Prompt_Techniques": ["General_Guidance"],
+        "AN_Bias_Axes": ["None"],
+        "AN_Harm_Types": ["None"],
+        "AN_Mitigation_Stage": ["Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Education_Professional"],
+        "AN_Task": ["Teaching_Further_Education"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Konzept",
+        "AN_Notes": "Feminist-pedagogy commentary proposing two ChatGPT assignments for higher-education economics. General_Guidance strategy, verbatim: 'Students could enter such a prompt, or experiment with rephrased prompts as in Figure 2, then critically examine ChatGPT's generated paragraphs'. The bias the work treats is epistemic, a bias of definitions toward mainstream economic thinking; gender bias in generative models is cited from Bolukbasi et al. (2016) and gender otherwise appears only in an enumeration of social locations, so Gender stays nein and no axis is coded. No harm type is established for a social group by the work's own argument. Mitigation: the critical-citation assignment as an educational measure, proposed.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Theory_Reference": [
+          {
+            "theory": "Feminist epistemology and standpoint theory",
+            "quote": "Instructors may use this as an opportunity to challenge their students to be more explicit about knowledge creation and more aware of feminist epistemology and standpoint theory",
+            "locator": "Section 1, second paragraph"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "highlighting data and algorithmic biases within AI is one step toward minimizing reproduction of bias knowledge hierarchies.",
+            "locator": "Section 1, last paragraph"
+          }
+        ]
+      }
+    },
+    "7IVS7X63": {
+      "source_path": "docs/data/fulltext/7IVS7X63.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'Assessing GPT's Bias Towards Stigmatized Social Groups: An Intersectional Case Study on Nationality Prejudice and Psychophobia' matches the corpus title. Authors Afifah Kashif and Heer Patel, University of Washington. Manifest version type preprint; the text prints no year, venue or DOI, so these metadata stay unverified from the text. Research paper with method, results and references, admissible."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "This research investigates the ethical implications of these biases intersecting with outputs of widely-used GPT-3.5/4/4o LLMS."
+        ],
+        "Prompting": [
+          "Through structured prompt series, we evaluate model responses to several scenarios involving American and North Korean nationalities with various mental disabilities."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "GPT models do present bias towards intersectional stigmatized identities. Across all models, on average, there is greater bias towards North Koreans than Americans."
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "Our findings advocate for diverse cultural integration into LLM design and extensive prompt testing."
+        ],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Research_Instrument"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Nationality_Migration", "Disability", "Intersectional"],
+        "AN_Harm_Types": ["Stereotyping", "Exclusionary_Norms", "Misrepresentation"],
+        "AN_Mitigation_Stage": ["Pre_Processing"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "Prompt audit of GPT-3.5, GPT-4 and GPT-4o with Likert-scale and flipped-scale prompts on willingness to rent, work with, marry into, live next to or entrust children to American or North Korean persons with six mental-disability conditions. Disability here is mental illness (bipolar disorder, depression, schizophrenia). The everyday scenarios elicit attitudes, not decisions about persons, so no discrimination type is coded. Bias is measured as rating differences and the authors call its interpretation subjective, hence Implicit_Only. The intersectional lens combines nationality and mental disability without a power or gender analysis, so Feministisch stays nein. The mitigation is a future-work recommendation at the level of training data.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Axes": [
+          {
+            "quote": "Findings reveal significant discrepancies in empathy levels with North Koreans facing greater negative bias, particularly when mental disability is also a factor.",
+            "locator": "Abstract (Intersectional)"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "GPT-4o made the assumption that they are different from a North Korean individual, but not from an American, and holds inherent ideals regarding mental disabilities.",
+            "locator": "Discussion, Limitations, Future Work, second paragraph (Stereotyping)"
+          },
+          {
+            "quote": "We have found that GPT LLMs (1) usually exhibit a US-centric bias, often citing 'cultural differences' with North Koreans",
+            "locator": "Conclusion (Exclusionary_Norms)"
+          },
+          {
+            "quote": "It discusses schizophrenia more absolutely than as a nuanced spectrum.",
+            "locator": "Analyzing GPT's Explanations (Misrepresentation)"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "account for a spectrum of mental disability symptoms at data training and model engineering levels.",
+            "locator": "Discussion, Limitations, Future Work, second paragraph"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Intersectionality",
+            "quote": "In this paper, we apply a novel approach in using an intersectional lens towards nationality prejudice and psychophobia.",
+            "locator": "Conclusion"
+          }
+        ]
+      }
+    },
+    "KPSF8EZE": {
+      "source_path": "docs/data/fulltext/KPSF8EZE.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'AI literacy and competency: definitions, frameworks, development and future research directions' matches the corpus title. Author Thomas K. F. Chiu; Interactive Learning Environments 33:5, 3225-3229 (2025), DOI 10.1080/10494820.2025.2514372. Editorial with identifiable authorship and references, admissible."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "teilweise",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "teilweise",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "AI literacy refers to a foundational conceptual understanding of AI. It focuses on knowledge, critical thinking, and ethical awareness rather than technical skill"
+        ],
+        "Generative_KI": [
+          "where AI tools -such as translators, ChatGPT, or image generators -can enhance outcomes."
+        ],
+        "Prompting": [
+          "Continuously test outputs, adjust prompts, and troubleshoot errors"
+        ],
+        "KI_Sonstige": [
+          "AI-literate individuals can explain what AI systems are (e.g., machine learning, neural networks), identify their real-world applications (like recommendation engines or facial recognition)"
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "How do disparities in foundational literacies (e.g., mathematical, data, linguistic, and computational access) create barriers to developing AI literacy and, subsequently, AI competency?"
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "What are the most effective strategies for mitigating these barriers and ensuring equitable pathways to AI competency across diverse populations (socioeconomic, cultural, linguistic)?"
+        ],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "LGYFN6JK": {
+      "source_path": "docs/data/fulltext/LGYFN6JK.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'ChatGPT for Social Work Science: Ethical Challenges and Opportunities' matches the corpus title. Authors Patton, Landau, Mathiyazhagan, University of Pennsylvania; DOI 10.1086/726042, accepted 4 May 2023, published 3 August 2023. Invited paper with revision history and references, admissible."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "ja",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "social work scientists may gain a deeper understanding of its capabilities and limitations"
+        ],
+        "Generative_KI": [
+          "We offer several preliminary recommendations for the ethical use of ChatGPT in social work science"
+        ],
+        "Prompting": [
+          "develop prompts that explicitly ask to identify the work of BIPOC scholars and resources and perspectives from underrepresented communities"
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [
+          "call on the profession ' s governing organizations to develop a comprehensive ethical framework for the use of LLMs such as ChatGPT in social work research."
+        ],
+        "Bias_Ungleichheit": [
+          "Thus, LLMs may be more likely to offer Eurocentric and white-centric content and to ignore literature and other information from BIPOC authors and authors from the Global South. If so, this practice would perpetuate existing social and academic exclusions."
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "This could lead to bias, especially if the text used to train it does not represent diverse perspectives or scholarship by BIPOC, people with disabilities, LGBTQIA 1 individuals, and those with other underrepresented identities."
+        ],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Recommended_Practice"],
+        "AN_Prompt_Techniques": ["General_Guidance"],
+        "AN_Bias_Axes": ["Race_Ethnicity", "Language_Culture"],
+        "AN_Harm_Types": ["Erasure", "Exclusionary_Norms"],
+        "AN_Mitigation_Stage": ["Prompt_Practice", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["General_Social_Work"],
+        "AN_Task": ["Research"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Theoretisch",
+        "AN_Notes": "Invited paper on ChatGPT in social work research. General_Guidance strategy, verbatim: 'develop prompts that explicitly ask to identify the work of BIPOC scholars and resources and perspectives from underrepresented communities'. Axes: race through white-centric content and BIPOC authors; Language_Culture through mainstream white English and Eurocentric content versus the Global South as cultural region. Gender, sexuality, ability and caste appear only in an enumeration and stay uncoded. Harm types rest on the work's own argument about scraping and ranking of sources. Mitigation: inclusive prompting and an ethical framework by professional organisations, proposed. The antiracist research framework frames the treatment of bias.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Axes": [
+          {
+            "quote": "Thus, it could amplify and perpetuate existing bias based on race, gender, sexuality, ability, caste, and other identities by selecting words or phrases that only fall within mainstream white English.",
+            "locator": "Addressing Bias (Language_Culture, Race_Ethnicity)"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "to ignore literature and other information from BIPOC authors and authors from the Global South",
+            "locator": "Recommendation 5, Inclusion and Social Justice (Erasure)"
+          },
+          {
+            "quote": "Thus, LLMs may be more likely to offer Eurocentric and white-centric content",
+            "locator": "Recommendation 5, Inclusion and Social Justice (Exclusionary_Norms)"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "which will enable ChatGPT to offer more inclusive and social-justice-driven responses to research inquiries.",
+            "locator": "Recommendation 5, Inclusion and Social Justice (Prompt_Practice)"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Antiracist research framework",
+            "quote": "social work scientists should adopt an antiracist research framework and approaches (Goings et al., 2023)",
+            "locator": "Recommendation 5, Inclusion and Social Justice"
+          }
+        ]
+      }
+    },
+    "X7ZGW6CN": {
+      "source_path": "docs/data/fulltext/X7ZGW6CN.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'Intersectional Artificial Intelligence Is Essential: Polyvocal, Multimodal, Experimental Methods to Save AI' matches the corpus title. Author Sarah Ciston, University of Southern California. The text prints no venue, year or DOI, so these metadata stay unverified from the text. Scholarly essay with references, admissible."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "An intersectional framework can be used to analyze the biases and problems built into existing Artificial Intelligence, as well as to uncover alternative ethics from its counterhistories."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Although it promises parity and efficiency, its computational processes mirror biases of existing power even as oftenproprietary data practices and cultural perceptions of computational magic obscure those influences."
+        ],
+        "Gender": [
+          "reading AI through intersectional queer theory can push back on assumptions in AI about gender-and using queer strategies to disorient those categories can also push back on assumptions about technologies themselves."
+        ],
+        "Diversitaet": [
+          "Thus, a combination of inclusive and reserved spaces best supports a variety of communities and intersecting identities, in order to create safety and access, to share and prioritize resources and techniques as needed."
+        ],
+        "Feministisch": [
+          "Because intersectional theory owes its roots to Black feminist thought, the strategies employed by women of color are at the core of an intersectional critical praxis."
+        ],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Sexual_Orientation_Identity", "Intersectional"],
+        "AN_Harm_Types": ["Exclusionary_Norms"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Explicit",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Social_Construct", "Non_Binary_Inclusive", "Intersectional"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Theoretisch",
+        "AN_Notes": "Theoretical essay calling for intersectional strategies across data, design and implementation of AI. Race is developed through the risk-assessment example the work frames as the New Jim Code and through Black feminist and POC community strategies; trans, bisexual and femme communities enter as categories of the argument. The harm the work's own argument establishes is normative categorisation in algorithmic practice; the ImageNet and COMPAS harms are cited from other work and stay uncoded. Mitigation: data-collection practice (Data Nutrition Label as inspiration) and polyvocal community design, proposed. Bias is understood as mirroring existing power without a determining sentence. The work also names critical race theory and feminist data visualisation principles.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Gender_Definition": [
+          {
+            "quote": "queer theory troubles presumptions about a clearly defined, natural category called female",
+            "locator": "Section 4, fourth paragraph"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "They help frame how intersectional AI might instrumentalize precarious orientations, rework stereotypes of passing, and utilize instability in order to reprogram technologies of gender and agency.",
+            "locator": "Section 5, first paragraph (Social_Construct)"
+          },
+          {
+            "quote": "strategies from mixed race, trans, bisexual, and femme communities-whose identities are not easily categorized, who sometimes maneuver by passing within systems-may also help engage and subvert normative algorithmic practices",
+            "locator": "Section 4, third paragraph (Non_Binary_Inclusive, Intersectional)"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "operating on multiple valences of infrastructural power and intersectional disenfranchisement",
+            "locator": "Section 4, third paragraph (Intersectional)"
+          },
+          {
+            "quote": "This exemplifies what Ruha Benjamin (2019) calls 'the New Jim Code.'",
+            "locator": "Section 2, first paragraph (Race_Ethnicity)"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "may also help engage and subvert normative algorithmic practices",
+            "locator": "Section 4, third paragraph (Exclusionary_Norms)"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "This paper calls for the application of intersectional strategies to Artificial Intelligence at every level, from data to design to implementation, from technologist to user.",
+            "locator": "Abstract"
+          },
+          {
+            "quote": "addresses bias at the point of data collection",
+            "locator": "Section 7, first paragraph (Pre_Processing)"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Intersectionality",
+            "quote": "An intersectional framework can be used to analyze the biases and problems built into existing Artificial Intelligence",
+            "locator": "Abstract"
+          },
+          {
+            "theory": "Queer theory",
+            "quote": "reading AI through intersectional queer theory can push back on assumptions in AI about gender",
+            "locator": "Section 4, fourth paragraph"
+          },
+          {
+            "theory": "Black feminist thought",
+            "quote": "Because intersectional theory owes its roots to Black feminist thought, the strategies employed by women of color are at the core of an intersectional critical praxis.",
+            "locator": "Section 4, first paragraph"
+          }
+        ]
+      }
+    },
+    "YTDMY5W4": {
+      "source_path": "docs/data/fulltext/YTDMY5W4.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'A framework for the Learning and Teaching of Critical AI Literacy skills', Spring 2025 version 0.1, matches the corpus title. Open University framework with named authors, reviewers, editor and advisor and a reference list. No DOI; stable identity rests on title and version. Publication type: institutional framework with identifiable authorship and source basis, admitted as a documented policy report; domain experts may wish to confirm this grey-literature classification."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "nein",
+        "Diversitaet": "ja",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "Being AI-literate in this critical sense means having the tools and strategies to critically evaluate AI-generated outputs using EDIA principles and being able to engage in equitable and inclusive prompting when required."
+        ],
+        "Generative_KI": [
+          "Staff need to develop their AI literacy so that they can safely and effectively employ AI, and GenAI in particular, to support students' learning and achievement of their individual goals.",
+          "Critical AI Literacy examines how Large Language Models (LLMs) -AI tools which generate human-like responses -contribute to ongoing epistemic injustices."
+        ],
+        "Prompting": [
+          "Use the same/different prompt(s) several times with the same/different tool(s) and compare the outputs to identify and mitigate potential (cultural) bias.",
+          "Offer guidance and examples on prompt creation and adaptation with a focus on EDIA principles."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Be mindful of biases in AI outputs, such as gender, cultural, disability, racial or cultural bias, and address them by analysing outputs, cross-referencing sources, and prompting for inclusivity.",
+          "Advanced Critical AI Literacy explores how AI contributes to those inequalities and considers ways in which it could help redress power balances."
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "Critical AI Literacy applies the lens of equality, diversity, inclusion and accessibility (EDIA) to the use of AI."
+        ],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Recommended_Practice", "Learning_Content"],
+        "AN_Prompt_Techniques": ["General_Guidance"],
+        "AN_Bias_Axes": ["None"],
+        "AN_Harm_Types": ["None"],
+        "AN_Mitigation_Stage": ["Prompt_Practice", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Education_Professional"],
+        "AN_Task": ["Teaching_Further_Education"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Konzept",
+        "AN_Notes": "Higher-education framework of the Open University for staff and students. General_Guidance strategies, verbatim: 'Use the same/different prompt(s) several times with the same/different tool(s) and compare the outputs to identify and mitigate potential (cultural) bias.' and 'Engage in a conversation with AI to challenge detected biases.' and 'prompting for inclusivity'. The comparison of outputs is used for bias detection, not combined into one answer, so Ensembling is not coded. Bias axes appear only in an enumeration (gender, cultural, disability, racial), so no axis is coded. Epistemic injustice and the non-inclusive nature of outputs are asserted as premises without a mechanism the framework itself develops, so no harm type is coded. Mitigation: inclusive prompting and embedding Critical AI Literacy in curricula and staff development, proposed.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Engage in a conversation with AI to challenge detected biases.",
+            "locator": "The framework, AI creativity (Prompt_Practice)"
+          },
+          {
+            "quote": "They should also embed Critical AI Literacy skills development into materials and content whenever opportunities arise, across the curriculum and at all levels.",
+            "locator": "Working with the framework (Organisational_Process)"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Critical Digital Literacy",
+            "quote": "Critical AI Literacy shares common ground with Critical Digital Literacy, which highlights the influence of power in digital spaces",
+            "locator": "What is Critical AI Literacy?, first paragraph"
+          },
+          {
+            "theory": "Epistemic injustice",
+            "quote": "These injustices can lead to significant social and personal harm by undermining an individual's ability to fully participate in knowledge -sharing and decisionmaking processes.",
+            "locator": "What is Critical AI Literacy?, second paragraph"
+          }
+        ]
+      }
+    }
+  }
+}

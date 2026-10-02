@@ -1,0 +1,4471 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.5",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "status": "ai-agent-reviewed",
+  "updated": "2026-10-02T07:15:46Z",
+  "review_context": {
+    "run_id": "codebook-v141-includes-12-9-20261002",
+    "provenance_method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+    "run_manifest": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/run.json",
+    "review_path": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/ai-agent-review.json",
+    "review_sha256": "e1989eaaca70977a8eb8d63b80b5b3f6665201eeeb566b72be72efcc774c108b",
+    "ai_agent_reviewer_actor_id": "codebook-v141-includes-12-9-20261002-ai-agent-review",
+    "input_tracks": [
+      {
+        "reviewer": "ar1",
+        "actor_id": "codebook-v141-includes-12-9-20261002-ar1",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1.json",
+        "sha256": "f816d7146c4016a68d44d62119bb394efad8a869aa120269ac5b568a8926a49d",
+        "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1-coding.json",
+        "coding_packet_sha256": "d330a198e8d4011cdfe0389adff70e17cdfacfbff177dfe6913ddcdf2ef87e20"
+      },
+      {
+        "reviewer": "ar2",
+        "actor_id": "codebook-v141-includes-12-9-20261002-ar2",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2.json",
+        "sha256": "cef9c8d613d1ddb2f0a70ed14da7e8a703ca0c7eca65c4ba11e51f70af683539",
+        "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2-coding.json",
+        "coding_packet_sha256": "26780a80d6a19de3520d4d8604850a14bf997d690a59dee2b064922c3d6a3e0e"
+      }
+    ],
+    "paper_sources": {
+      "C325Y32P": {
+        "path": "docs/data/fulltext/C325Y32P.md",
+        "sha256": "476e1d0813ed78fdc1664a9efc011ab8a2b857be000bc66927c3400bcd40ff29",
+        "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+        "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5",
+        "version_type": "unknown",
+        "representative_record_id": "C325Y32P"
+      },
+      "CYZQ6XPK": {
+        "path": "docs/data/fulltext/CYZQ6XPK.md",
+        "sha256": "16576a2c3facc5dcfea29766ffc843033ab5cdd6bca3cd4997e16c5086c6d555",
+        "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+        "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
+        "version_type": "preprint",
+        "representative_record_id": "CYZQ6XPK"
+      },
+      "KRUQB7L2": {
+        "path": "docs/data/fulltext/KRUQB7L2.md",
+        "sha256": "a0f058f9278f8d5fc56e452268837390383a0be6cfe24816c7c665007d7ad4e9",
+        "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+        "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042",
+        "version_type": "version_of_record",
+        "representative_record_id": "KRUQB7L2"
+      },
+      "RXNXJA8W": {
+        "path": "docs/data/fulltext/KRUQB7L2.md",
+        "sha256": "a0f058f9278f8d5fc56e452268837390383a0be6cfe24816c7c665007d7ad4e9",
+        "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+        "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042",
+        "version_type": "version_of_record",
+        "representative_record_id": "KRUQB7L2"
+      },
+      "LT3D3ZQ2": {
+        "path": "docs/data/fulltext/LT3D3ZQ2.md",
+        "sha256": "17d5a5ad8eb3f6324e7a3299d500a28100d19816c37a14138cc6dae91b65535c",
+        "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+        "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
+        "version_type": "preprint",
+        "representative_record_id": "LT3D3ZQ2"
+      },
+      "LXKXPD5H": {
+        "path": "docs/data/fulltext/LXKXPD5H.md",
+        "sha256": "c991f5c3666515d30273101311cd1ac2f184dd2383a3219aa2af0aa6fbb2e59a",
+        "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+        "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591",
+        "version_type": "unknown",
+        "representative_record_id": "LXKXPD5H"
+      },
+      "MTMU9UPJ": {
+        "path": "docs/data/fulltext/MTMU9UPJ.md",
+        "sha256": "2757711b34d5585a242eba7e9e839e33f49e4d87ba4a252568a8ee4e93d84eb5",
+        "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+        "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496",
+        "version_type": "preprint",
+        "representative_record_id": "MTMU9UPJ"
+      },
+      "N7J2ZRFP": {
+        "path": "docs/data/fulltext/N7J2ZRFP.md",
+        "sha256": "4b1f2244e704e78825970d2d17c8046a6d28693cc5e4868835661864c4ea4c19",
+        "work_id": "work:bdfab639-e353-510d-aba4-7fa51e5c6de9",
+        "version_id": "version:4f3ebab4-b906-5b61-9971-449253d020a0",
+        "version_type": "version_of_record",
+        "representative_record_id": "N7J2ZRFP"
+      },
+      "V4GTLMED": {
+        "path": "docs/data/fulltext/V4GTLMED.md",
+        "sha256": "11080deffa7bb3589b9d1db2216ba5d9c87629520601c42d1b3bdb3bc86e3a2c",
+        "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+        "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d",
+        "version_type": "version_of_record",
+        "representative_record_id": "V4GTLMED"
+      },
+      "VP6SXQHY": {
+        "path": "docs/data/fulltext/VP6SXQHY.md",
+        "sha256": "daa09a6c7b3a50319cbeb13c2fb459caee94d614e4b1b0043086d87a496e5cea",
+        "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+        "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1",
+        "version_type": "version_of_record",
+        "representative_record_id": "VP6SXQHY"
+      }
+    },
+    "work_assignments": [
+      {
+        "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+        "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5",
+        "version_type": "unknown",
+        "preferred_version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5",
+        "representative_record_id": "C325Y32P",
+        "record_ids": [
+          "C325Y32P"
+        ]
+      },
+      {
+        "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+        "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
+        "version_type": "preprint",
+        "preferred_version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
+        "representative_record_id": "CYZQ6XPK",
+        "record_ids": [
+          "CYZQ6XPK"
+        ]
+      },
+      {
+        "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+        "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042",
+        "representative_record_id": "KRUQB7L2",
+        "record_ids": [
+          "KRUQB7L2",
+          "RXNXJA8W"
+        ]
+      },
+      {
+        "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+        "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
+        "version_type": "preprint",
+        "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
+        "representative_record_id": "LT3D3ZQ2",
+        "record_ids": [
+          "LT3D3ZQ2"
+        ]
+      },
+      {
+        "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+        "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591",
+        "version_type": "unknown",
+        "preferred_version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591",
+        "representative_record_id": "LXKXPD5H",
+        "record_ids": [
+          "LXKXPD5H"
+        ]
+      },
+      {
+        "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+        "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496",
+        "version_type": "preprint",
+        "preferred_version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496",
+        "representative_record_id": "MTMU9UPJ",
+        "record_ids": [
+          "MTMU9UPJ"
+        ]
+      },
+      {
+        "work_id": "work:bdfab639-e353-510d-aba4-7fa51e5c6de9",
+        "version_id": "version:4f3ebab4-b906-5b61-9971-449253d020a0",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:4f3ebab4-b906-5b61-9971-449253d020a0",
+        "representative_record_id": "N7J2ZRFP",
+        "record_ids": [
+          "N7J2ZRFP"
+        ]
+      },
+      {
+        "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+        "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d",
+        "representative_record_id": "V4GTLMED",
+        "record_ids": [
+          "V4GTLMED"
+        ]
+      },
+      {
+        "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+        "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1",
+        "representative_record_id": "VP6SXQHY",
+        "record_ids": [
+          "VP6SXQHY"
+        ]
+      }
+    ]
+  },
+  "decisions": {
+    "C325Y32P": {
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 1,
+        "Bias_Ungleichheit": 1,
+        "Diversitaet": 1,
+        "Fairness": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Impact-first organizations might partner with academic institutions to access cu",
+            "snippet": "Impact-first organizations might partner with academic institutions to access cutting-edge AI research or provide staff with training to understand AI tools.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "C325Y32P",
+            "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+            "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "For example, the organization analyses the transcripts of its board meetings thr",
+            "snippet": "For example, the organization analyses the transcripts of its board meetings through a multi-query process with ChatGPT-4 Turbo to provide recommendations for process improvements and implementation of new AI tools.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "C325Y32P",
+            "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+            "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "The PRISM Framework enables organizations to adopt artificial intelligence for i",
+            "snippet": "The PRISM Framework enables organizations to adopt artificial intelligence for impact and highlights technology shortcomings for ethical implementation.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "C325Y32P",
+            "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+            "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+          },
+          {
+            "term": "The PRISM Framework outlines three layers of AI implementation: impact mission a",
+            "snippet": "The PRISM Framework outlines three layers of AI implementation: impact mission and strategy, adoption pathways, and capabilities and risks.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "C325Y32P",
+            "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+            "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "As social innovators often work with vulnerable and marginalized groups, this is",
+            "snippet": "As social innovators often work with vulnerable and marginalized groups, this is one of the key considerations.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "C325Y32P",
+            "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+            "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+          },
+          {
+            "term": "Haqdarshak is deploying AI at the forefront of economic empowerment in India to ",
+            "snippet": "Haqdarshak is deploying AI at the forefront of economic empowerment in India to enable citizens in marginalized and low-income communities to access government resources and initiatives that would otherwise be out of reach.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "C325Y32P",
+            "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+            "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "When the reflection is distorted by biased data, the outcomes can perpetuate soc",
+            "snippet": "When the reflection is distorted by biased data, the outcomes can perpetuate societal disparities.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "C325Y32P",
+            "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+            "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "SAS Brasil has partnered with local academic and health institutions and embarke",
+            "snippet": "SAS Brasil has partnered with local academic and health institutions and embarked on creating expansive datasets representative of diverse populations.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "C325Y32P",
+            "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+            "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "It is essential to draw data from diverse sources and rigorously test self-devel",
+            "snippet": "It is essential to draw data from diverse sources and rigorously test self-developed algorithms across varied scenarios, demographics and use cases.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "C325Y32P",
+            "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+            "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:46Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+      "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5",
+      "version_type": "unknown",
+      "preferred_version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "C325Y32P",
+      "provenance": {
+        "annotation_id": "ar2:C325Y32P",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "C325Y32P:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ]
+          },
+          {
+            "id": "C325Y32P:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:C325Y32P",
+            "type": "paper",
+            "reference": "docs/data/fulltext/C325Y32P.md",
+            "sha256": "476e1d0813ed78fdc1664a9efc011ab8a2b857be000bc66927c3400bcd40ff29",
+            "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5",
+            "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+            "version_type": "unknown"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:C325Y32P",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "codebook-v141-includes-12-9-20261002-ar1",
+            "codebook-v141-includes-12-9-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "AI_Literacies": 1,
+              "Generative_KI": 1,
+              "KI_Sonstige": 2,
+              "Soziale_Arbeit": 1,
+              "Bias_Ungleichheit": 1,
+              "Diversitaet": 1,
+              "Fairness": 1
+            },
+            "decision": "Unclear",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "AI_Literacies": [
+                {
+                  "term": "Impact-first organizations might partner with academic institutions to access cu",
+                  "snippet": "Impact-first organizations might partner with academic institutions to access cutting-edge AI research or provide staff with training to understand AI tools.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "C325Y32P",
+                  "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+                  "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+                }
+              ],
+              "Generative_KI": [
+                {
+                  "term": "For example, the organization analyses the transcripts of its board meetings thr",
+                  "snippet": "For example, the organization analyses the transcripts of its board meetings through a multi-query process with ChatGPT-4 Turbo to provide recommendations for process improvements and implementation of new AI tools.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "C325Y32P",
+                  "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+                  "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+                }
+              ],
+              "KI_Sonstige": [
+                {
+                  "term": "The PRISM Framework enables organizations to adopt artificial intelligence for i",
+                  "snippet": "The PRISM Framework enables organizations to adopt artificial intelligence for impact and highlights technology shortcomings for ethical implementation.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "C325Y32P",
+                  "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+                  "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+                },
+                {
+                  "term": "The PRISM Framework outlines three layers of AI implementation: impact mission a",
+                  "snippet": "The PRISM Framework outlines three layers of AI implementation: impact mission and strategy, adoption pathways, and capabilities and risks.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "C325Y32P",
+                  "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+                  "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+                }
+              ],
+              "Soziale_Arbeit": [
+                {
+                  "term": "As social innovators often work with vulnerable and marginalized groups, this is",
+                  "snippet": "As social innovators often work with vulnerable and marginalized groups, this is one of the key considerations.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "C325Y32P",
+                  "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+                  "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+                },
+                {
+                  "term": "Haqdarshak is deploying AI at the forefront of economic empowerment in India to ",
+                  "snippet": "Haqdarshak is deploying AI at the forefront of economic empowerment in India to enable citizens in marginalized and low-income communities to access government resources and initiatives that would otherwise be out of reach.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "C325Y32P",
+                  "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+                  "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "When the reflection is distorted by biased data, the outcomes can perpetuate soc",
+                  "snippet": "When the reflection is distorted by biased data, the outcomes can perpetuate societal disparities.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "C325Y32P",
+                  "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+                  "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "SAS Brasil has partnered with local academic and health institutions and embarke",
+                  "snippet": "SAS Brasil has partnered with local academic and health institutions and embarked on creating expansive datasets representative of diverse populations.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "C325Y32P",
+                  "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+                  "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "It is essential to draw data from diverse sources and rigorously test self-devel",
+                  "snippet": "It is essential to draw data from diverse sources and rigorously test self-developed algorithms across varied scenarios, demographics and use cases.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "C325Y32P",
+                  "work_id": "work:824f395b-e134-501d-96c4-39f9d95f39a2",
+                  "version_id": "version:a516b52f-e212-5007-be56-31ad82d98bb5"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:46Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:C325Y32P",
+      "checks": [
+        {
+          "check_id": "C325Y32P:lifecycle-contract:2026-10-02T07:15:46Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:C325Y32P",
+            "sha256": "08eec5f0b16274230e4401a350e46f0c3b3828950b159efa86cb8c9412587b94"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "C325Y32P:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "C325Y32P:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:C325Y32P"
+          },
+          {
+            "event_id": "C325Y32P:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "C325Y32P:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:C325Y32P"
+          }
+        ]
+      }
+    },
+    "CYZQ6XPK": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "In this study, we examine the impact of LLMs' step-by-step predictions on gender",
+            "snippet": "In this study, we examine the impact of LLMs' step-by-step predictions on gender bias in unscalable tasks.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "CYZQ6XPK",
+            "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+            "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Interestingly, CoT prompting reduces this unconscious social bias in LLMs and en",
+            "snippet": "Interestingly, CoT prompting reduces this unconscious social bias in LLMs and encourages fair predictions.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "CYZQ6XPK",
+            "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+            "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Experimental results in English show that without step-by-step prediction, most ",
+            "snippet": "Experimental results in English show that without step-by-step prediction, most LLMs make socially biased predictions, despite the task being as simple as counting words.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "CYZQ6XPK",
+            "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+            "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "we investigate whether CoT can mitigate gender bias in LLMs by clarifying the as",
+            "snippet": "we investigate whether CoT can mitigate gender bias in LLMs by clarifying the association of words related to gender bias via natural language in an unscalable task",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "CYZQ6XPK",
+            "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+            "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "A positive bias score (i.e. the accuracy is reduced due to occupational words) i",
+            "snippet": "A positive bias score (i.e. the accuracy is reduced due to occupational words) indicates a gender-biased LLM, while a zero (or a negative 1 ) score indicates an unbiased one.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "CYZQ6XPK",
+            "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+            "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+          },
+          {
+            "term": "Interestingly, CoT prompting reduces this unconscious social bias in LLMs and en",
+            "snippet": "Interestingly, CoT prompting reduces this unconscious social bias in LLMs and encourages fair predictions.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "CYZQ6XPK",
+            "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+            "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:46Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+      "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
+      "version_type": "preprint",
+      "preferred_version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "Thought_Generation",
+            "ICL",
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Own benchmark MGBR on 23 LLMs. Techniques tested: Zero-shot+CoT ('Let's think step by step.'), Few-shot with pro-stereotypical demonstrations (ICL), Debiasing Prompt as General_Guidance with the strategy 'Please ensure that your answer is unbiased and does not rely on stereotypes.' Mitigation evaluated: CoT reduces bias scores, the debiasing instruction is reported as inadequate (own experiment, Tables 1 and 4). Harm: LLMs classify gender-neutral occupations as feminine or masculine (occupational stereotypes). Bias is determined technically through the accuracy-difference bias score. Gender treated as binary word categories, the limitation states binary gender only. No theory frames gender or bias."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "CYZQ6XPK",
+      "provenance": {
+        "annotation_id": "ar2:CYZQ6XPK",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "CYZQ6XPK:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ]
+          },
+          {
+            "id": "CYZQ6XPK:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:CYZQ6XPK",
+            "type": "paper",
+            "reference": "docs/data/fulltext/CYZQ6XPK.md",
+            "sha256": "16576a2c3facc5dcfea29766ffc843033ab5cdd6bca3cd4997e16c5086c6d555",
+            "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
+            "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+            "version_type": "preprint"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:CYZQ6XPK",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "codebook-v141-includes-12-9-20261002-ar1",
+            "codebook-v141-includes-12-9-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2,
+              "Prompting": 2,
+              "Bias_Ungleichheit": 2,
+              "Gender": 2,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "In this study, we examine the impact of LLMs' step-by-step predictions on gender",
+                  "snippet": "In this study, we examine the impact of LLMs' step-by-step predictions on gender bias in unscalable tasks.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "CYZQ6XPK",
+                  "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+                  "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "Interestingly, CoT prompting reduces this unconscious social bias in LLMs and en",
+                  "snippet": "Interestingly, CoT prompting reduces this unconscious social bias in LLMs and encourages fair predictions.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "CYZQ6XPK",
+                  "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+                  "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "Experimental results in English show that without step-by-step prediction, most ",
+                  "snippet": "Experimental results in English show that without step-by-step prediction, most LLMs make socially biased predictions, despite the task being as simple as counting words.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "CYZQ6XPK",
+                  "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+                  "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "we investigate whether CoT can mitigate gender bias in LLMs by clarifying the as",
+                  "snippet": "we investigate whether CoT can mitigate gender bias in LLMs by clarifying the association of words related to gender bias via natural language in an unscalable task",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "CYZQ6XPK",
+                  "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+                  "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "A positive bias score (i.e. the accuracy is reduced due to occupational words) i",
+                  "snippet": "A positive bias score (i.e. the accuracy is reduced due to occupational words) indicates a gender-biased LLM, while a zero (or a negative 1 ) score indicates an unbiased one.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "CYZQ6XPK",
+                  "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+                  "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+                },
+                {
+                  "term": "Interestingly, CoT prompting reduces this unconscious social bias in LLMs and en",
+                  "snippet": "Interestingly, CoT prompting reduces this unconscious social bias in LLMs and encourages fair predictions.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "CYZQ6XPK",
+                  "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
+                  "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "Research_Instrument",
+                  "Recommended_Practice"
+                ],
+                "AN_Prompt_Techniques": [
+                  "Thought_Generation",
+                  "ICL",
+                  "General_Guidance"
+                ],
+                "AN_Bias_Axes": [
+                  "Gender"
+                ],
+                "AN_Harm_Types": [
+                  "Stereotyping"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Prompt_Practice"
+                ],
+                "AN_Mitigation_Status": "Evaluated",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Task": [
+                  "None"
+                ],
+                "AN_Gender_Definition": "Implicit_Only",
+                "AN_Bias_Definition": "Explicit",
+                "AN_Gender_Understanding": [
+                  "Binary_Categorical"
+                ],
+                "AN_Theory_Reference": "No",
+                "AN_Coding_Basis": "Fulltext",
+                "Studientyp": "Experimentell",
+                "AN_Notes": "Own benchmark MGBR on 23 LLMs. Techniques tested: Zero-shot+CoT ('Let's think step by step.'), Few-shot with pro-stereotypical demonstrations (ICL), Debiasing Prompt as General_Guidance with the strategy 'Please ensure that your answer is unbiased and does not rely on stereotypes.' Mitigation evaluated: CoT reduces bias scores, the debiasing instruction is reported as inadequate (own experiment, Tables 1 and 4). Harm: LLMs classify gender-neutral occupations as feminine or masculine (occupational stereotypes). Bias is determined technically through the accuracy-difference bias score. Gender treated as binary word categories, the limitation states binary gender only. No theory frames gender or bias."
+              },
+              "undecidable": {},
+              "codebook_version": "1.4.1"
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:46Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:CYZQ6XPK",
+      "checks": [
+        {
+          "check_id": "CYZQ6XPK:lifecycle-contract:2026-10-02T07:15:46Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:CYZQ6XPK",
+            "sha256": "912b532eaaefea31ae999415eda67d8b3b950a86f024d9693e87261220ef3007"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "CYZQ6XPK:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "CYZQ6XPK:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:CYZQ6XPK"
+          },
+          {
+            "event_id": "CYZQ6XPK:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "CYZQ6XPK:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:CYZQ6XPK"
+          }
+        ]
+      }
+    },
+    "KRUQB7L2": {
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 2,
+        "Prompting": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "The inability of users to discern the reliability of LLM responses not only unde",
+            "snippet": "The inability of users to discern the reliability of LLM responses not only undermines the utility of these models but also poses risks in situations where user understanding of model accuracy is critical.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KRUQB7L2",
+            "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+            "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Here we explore the calibration gap, which refers to the difference between huma",
+            "snippet": "Here we explore the calibration gap, which refers to the difference between human confidence in LLM-generated answers and the models' actual confidence",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KRUQB7L2",
+            "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+            "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Experiment 2 manipulates the prompts to produce three levels of uncertainty lang",
+            "snippet": "Experiment 2 manipulates the prompts to produce three levels of uncertainty language (low, medium and high confidence) and three levels of explanation length, resulting in nine different types of explanations presented to participants.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KRUQB7L2",
+            "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+            "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:46Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+      "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "KRUQB7L2",
+      "provenance": {
+        "annotation_id": "ar2:KRUQB7L2",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "KRUQB7L2:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ]
+          },
+          {
+            "id": "KRUQB7L2:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:KRUQB7L2",
+            "type": "paper",
+            "reference": "docs/data/fulltext/KRUQB7L2.md",
+            "sha256": "a0f058f9278f8d5fc56e452268837390383a0be6cfe24816c7c665007d7ad4e9",
+            "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042",
+            "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:KRUQB7L2",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "codebook-v141-includes-12-9-20261002-ar1",
+            "codebook-v141-includes-12-9-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "AI_Literacies": 1,
+              "Generative_KI": 2,
+              "Prompting": 2
+            },
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Not_relevant_topic",
+            "override_reason": null,
+            "evidence": {
+              "AI_Literacies": [
+                {
+                  "term": "The inability of users to discern the reliability of LLM responses not only unde",
+                  "snippet": "The inability of users to discern the reliability of LLM responses not only undermines the utility of these models but also poses risks in situations where user understanding of model accuracy is critical.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KRUQB7L2",
+                  "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+                  "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+                }
+              ],
+              "Generative_KI": [
+                {
+                  "term": "Here we explore the calibration gap, which refers to the difference between huma",
+                  "snippet": "Here we explore the calibration gap, which refers to the difference between human confidence in LLM-generated answers and the models' actual confidence",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KRUQB7L2",
+                  "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+                  "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "Experiment 2 manipulates the prompts to produce three levels of uncertainty lang",
+                  "snippet": "Experiment 2 manipulates the prompts to produce three levels of uncertainty language (low, medium and high confidence) and three levels of explanation length, resulting in nine different types of explanations presented to participants.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KRUQB7L2",
+                  "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+                  "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:46Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:KRUQB7L2",
+      "checks": [
+        {
+          "check_id": "KRUQB7L2:lifecycle-contract:2026-10-02T07:15:46Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:KRUQB7L2",
+            "sha256": "fe847ac92a53273442aa0b4f81be64331cd461b32259df0b91e01341b00a287e"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "KRUQB7L2:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "KRUQB7L2:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:KRUQB7L2"
+          },
+          {
+            "event_id": "KRUQB7L2:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "KRUQB7L2:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:KRUQB7L2"
+          }
+        ]
+      }
+    },
+    "LT3D3ZQ2": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 1,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Feministisch": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "Applying this perspective to the context of AI, I suggest that a feminist metaet",
+            "snippet": "Applying this perspective to the context of AI, I suggest that a feminist metaethics of AI would examine",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LT3D3ZQ2",
+            "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+            "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Contrary to mainstream ethics, which, following ideal theory approaches, tends t",
+            "snippet": "Contrary to mainstream ethics, which, following ideal theory approaches, tends to 'abstract away from relations of structural domination, exploitation, coercion, and oppression' [54:168] , a feminist metaethics of AI would make such relations visible and asses",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LT3D3ZQ2",
+            "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+            "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Likewise, feminist metaethics focuses its theoretical and practical enquiry on s",
+            "snippet": "Likewise, feminist metaethics focuses its theoretical and practical enquiry on specific topics, particularly -yet not exclusively -on those relevant to women's lives and experiences.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LT3D3ZQ2",
+            "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+            "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "include research into the composition of AI ethics boards and committees in term",
+            "snippet": "include research into the composition of AI ethics boards and committees in terms of their diversity and representativeness",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LT3D3ZQ2",
+            "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+            "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "In this paper, I set out to argue that the foregoing insufficiencies could be mi",
+            "snippet": "In this paper, I set out to argue that the foregoing insufficiencies could be mitigated by developing a new research agenda for a feminist metaethics of AI.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LT3D3ZQ2",
+            "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+            "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:46Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+      "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
+      "version_type": "preprint",
+      "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Research agenda for a feminist metaethics of AI; object is AI ethics as a field, AI in general. Mitigation: proposed research into the diversity of AI ethics boards and the inclusion of those hitherto ignored in decision-making (Organisational_Process, Proposed). AN_Bias_Axes None: gender, class, race, disability and sexuality appear only as a programmatic enumeration and outlook, cited case studies are suggestions, no bias is analysed. AN_Gender_Understanding Intersectional rests on the work's own argument that AI impact is to be examined depending on gender in interaction with other identity markers; boundary case, since the argument is programmatic and no definition of gender is given (Implicit_Only from the intersectional feminist frame). Bias as structural domination and oppression is recognisable from the frame only. AI Agent Review: AN_Bias_Axes stays None because the work analyses no bias along any axis; gender with class, race, disability and sexuality appears as a programmatic research direction of the agenda (Section 3.4) and cited AI cases are illustrative case studies. AN_Gender_Understanding Intersectional is kept from both tracks because the argument of this theoretical work itself makes privilege and disadvantage depend on gender in interaction with other identity markers."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "LT3D3ZQ2",
+      "provenance": {
+        "annotation_id": "ar2:LT3D3ZQ2",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "LT3D3ZQ2:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ]
+          },
+          {
+            "id": "LT3D3ZQ2:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:LT3D3ZQ2",
+            "type": "paper",
+            "reference": "docs/data/fulltext/LT3D3ZQ2.md",
+            "sha256": "17d5a5ad8eb3f6324e7a3299d500a28100d19816c37a14138cc6dae91b65535c",
+            "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
+            "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+            "version_type": "preprint"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:LT3D3ZQ2",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "codebook-v141-includes-12-9-20261002-ar1",
+            "codebook-v141-includes-12-9-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "KI_Sonstige": 2,
+              "Bias_Ungleichheit": 1,
+              "Gender": 1,
+              "Diversitaet": 1,
+              "Feministisch": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "KI_Sonstige": [
+                {
+                  "term": "Applying this perspective to the context of AI, I suggest that a feminist metaet",
+                  "snippet": "Applying this perspective to the context of AI, I suggest that a feminist metaethics of AI would examine",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LT3D3ZQ2",
+                  "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+                  "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "Contrary to mainstream ethics, which, following ideal theory approaches, tends t",
+                  "snippet": "Contrary to mainstream ethics, which, following ideal theory approaches, tends to 'abstract away from relations of structural domination, exploitation, coercion, and oppression' [54:168] , a feminist metaethics of AI would make such relations visible and asses",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LT3D3ZQ2",
+                  "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+                  "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "Likewise, feminist metaethics focuses its theoretical and practical enquiry on s",
+                  "snippet": "Likewise, feminist metaethics focuses its theoretical and practical enquiry on specific topics, particularly -yet not exclusively -on those relevant to women's lives and experiences.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LT3D3ZQ2",
+                  "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+                  "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "include research into the composition of AI ethics boards and committees in term",
+                  "snippet": "include research into the composition of AI ethics boards and committees in terms of their diversity and representativeness",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LT3D3ZQ2",
+                  "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+                  "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
+                }
+              ],
+              "Feministisch": [
+                {
+                  "term": "In this paper, I set out to argue that the foregoing insufficiencies could be mi",
+                  "snippet": "In this paper, I set out to argue that the foregoing insufficiencies could be mitigated by developing a new research agenda for a feminist metaethics of AI.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LT3D3ZQ2",
+                  "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+                  "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "None"
+                ],
+                "AN_Harm_Types": [
+                  "None"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Proposed",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Task": [
+                  "None"
+                ],
+                "AN_Gender_Definition": "Implicit_Only",
+                "AN_Bias_Definition": "Implicit_Only",
+                "AN_Gender_Understanding": [
+                  "Intersectional"
+                ],
+                "AN_Theory_Reference": "Yes",
+                "AN_Coding_Basis": "Fulltext",
+                "Studientyp": "Theoretisch",
+                "AN_Notes": "Research agenda for a feminist metaethics of AI; object is AI ethics as a field, AI in general. Mitigation: proposed research into the diversity of AI ethics boards and the inclusion of those hitherto ignored in decision-making (Organisational_Process, Proposed). AN_Bias_Axes None: gender, class, race, disability and sexuality appear only as a programmatic enumeration and outlook, cited case studies are suggestions, no bias is analysed. AN_Gender_Understanding Intersectional rests on the work's own argument that AI impact is to be examined depending on gender in interaction with other identity markers; boundary case, since the argument is programmatic and no definition of gender is given (Implicit_Only from the intersectional feminist frame). Bias as structural domination and oppression is recognisable from the frame only. AI Agent Review: AN_Bias_Axes stays None because the work analyses no bias along any axis; gender with class, race, disability and sexuality appears as a programmatic research direction of the agenda (Section 3.4) and cited AI cases are illustrative case studies. AN_Gender_Understanding Intersectional is kept from both tracks because the argument of this theoretical work itself makes privilege and disadvantage depend on gender in interaction with other identity markers."
+              },
+              "undecidable": {},
+              "codebook_version": "1.4.1"
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:46Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:LT3D3ZQ2",
+      "checks": [
+        {
+          "check_id": "LT3D3ZQ2:lifecycle-contract:2026-10-02T07:15:46Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:LT3D3ZQ2",
+            "sha256": "b0cb91dd63518905963947b9879257265399f8e91f855495fb948e5b90f40717"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "LT3D3ZQ2:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "LT3D3ZQ2:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:LT3D3ZQ2"
+          },
+          {
+            "event_id": "LT3D3ZQ2:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "LT3D3ZQ2:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:LT3D3ZQ2"
+          }
+        ]
+      }
+    },
+    "LXKXPD5H": {
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Fachkräfte brauchen Wissen über digitale Tools, Algorithmen und Datenschutz, um ",
+            "snippet": "Fachkräfte brauchen Wissen über digitale Tools, Algorithmen und Datenschutz, um kritisch, fair und professionell handeln zu können.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXKXPD5H",
+            "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+            "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Interaktiv mit KI (ChatGPT): In dieser Variante ist Konrad mit ChatGPT verbunden",
+            "snippet": "Interaktiv mit KI (ChatGPT): In dieser Variante ist Konrad mit ChatGPT verbunden.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXKXPD5H",
+            "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+            "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "KI-basierte Tools und Scoring-Modelle bewerten automatisch, ob eine Person \"hilf",
+            "snippet": "KI-basierte Tools und Scoring-Modelle bewerten automatisch, ob eine Person \"hilfebedürftig\" ist oder welches Risiko in einer bestimmten Situation besteht (z. B. Kindeswohlgefährdung, Schuldner:innen-Beratung).",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXKXPD5H",
+            "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+            "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+          },
+          {
+            "term": "Künstliche Intelligenz beeinflusst zunehmend Entscheidungen in Sozialverwaltunge",
+            "snippet": "Künstliche Intelligenz beeinflusst zunehmend Entscheidungen in Sozialverwaltungen und Fallmanagement.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXKXPD5H",
+            "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+            "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "Digitale Tools und Algorithmen verändern Machtverhältnisse in der Sozialen Arbei",
+            "snippet": "Digitale Tools und Algorithmen verändern Machtverhältnisse in der Sozialen Arbeit.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXKXPD5H",
+            "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+            "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Algorithmen und digitale Technologien sind nicht neutral -sie übernehmen und ver",
+            "snippet": "Algorithmen und digitale Technologien sind nicht neutral -sie übernehmen und verstärken gesellschaftliche Vorurteile.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXKXPD5H",
+            "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+            "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Besonders gefährdet sind Menschen in Armut, ältere Menschen, Menschen mit Behind",
+            "snippet": "Besonders gefährdet sind Menschen in Armut, ältere Menschen, Menschen mit Behinderungen und Personen mit geringer Bildung oder Migrationserfahrung.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXKXPD5H",
+            "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+            "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Fairness: Algorithmen dürfen keine Menschen benachteiligen -Diskriminierung muss",
+            "snippet": "Fairness: Algorithmen dürfen keine Menschen benachteiligen -Diskriminierung muss erkannt und gestoppt werden.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "LXKXPD5H",
+            "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+            "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:46Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+      "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591",
+      "version_type": "unknown",
+      "preferred_version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity",
+            "Nationality_Migration",
+            "Socioeconomic",
+            "Age",
+            "Other_Axis"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Indirect_Discrimination",
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "General_Social_Work",
+            "Child_Family_Welfare",
+            "Social_Assistance_Admin"
+          ],
+          "AN_Task": [
+            "Case_Assessment_Decision_Support",
+            "Counselling_Client_Communication",
+            "Teaching_Further_Education"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "German conference handout on power and digitalisation in social work with case vignettes and reflection questions. Other_Axis: place of residence (Stadtteil), used as worked example of proxy discrimination. Axes coded from the work's own case examples (child-welfare algorithm and migration background, social-assistance AI and Black and migrant applicants, debt scoring and low-income districts, job-centre scoring by age, school education and district); Frauen, disability and language appear only in enumerations of affected groups and are not coded. Harm: Direct_Discrimination where the score uses origin itself (scoring features 'Einkommen, Alter, Herkunft'), Indirect_Discrimination via district as proxy, Exclusionary_Norms via digital-only access to benefits. Mitigation proposed at organisational and political level: participation of professionals and clients, human control, transparency and right to object, reflection methods ('Macht-Check', Ethik-Cafés), regulation and ban of discriminatory systems. AI tasks: risk assessment and scoring (case assessment), AI chat tool helping clients with applications (client communication), ChatGPT-connected avatar Konrad for workshops and social-media teaching. Gender is no object of the work. Bias is described as prejudice carried from old data into algorithms without a definition."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "LXKXPD5H",
+      "provenance": {
+        "annotation_id": "ar2:LXKXPD5H",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "LXKXPD5H:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ]
+          },
+          {
+            "id": "LXKXPD5H:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:LXKXPD5H",
+            "type": "paper",
+            "reference": "docs/data/fulltext/LXKXPD5H.md",
+            "sha256": "c991f5c3666515d30273101311cd1ac2f184dd2383a3219aa2af0aa6fbb2e59a",
+            "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591",
+            "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+            "version_type": "unknown"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:LXKXPD5H",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "codebook-v141-includes-12-9-20261002-ar1",
+            "codebook-v141-includes-12-9-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "AI_Literacies": 1,
+              "Generative_KI": 1,
+              "KI_Sonstige": 2,
+              "Soziale_Arbeit": 2,
+              "Bias_Ungleichheit": 2,
+              "Diversitaet": 1,
+              "Fairness": 1
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "AI_Literacies": [
+                {
+                  "term": "Fachkräfte brauchen Wissen über digitale Tools, Algorithmen und Datenschutz, um ",
+                  "snippet": "Fachkräfte brauchen Wissen über digitale Tools, Algorithmen und Datenschutz, um kritisch, fair und professionell handeln zu können.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LXKXPD5H",
+                  "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+                  "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+                }
+              ],
+              "Generative_KI": [
+                {
+                  "term": "Interaktiv mit KI (ChatGPT): In dieser Variante ist Konrad mit ChatGPT verbunden",
+                  "snippet": "Interaktiv mit KI (ChatGPT): In dieser Variante ist Konrad mit ChatGPT verbunden.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LXKXPD5H",
+                  "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+                  "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+                }
+              ],
+              "KI_Sonstige": [
+                {
+                  "term": "KI-basierte Tools und Scoring-Modelle bewerten automatisch, ob eine Person \"hilf",
+                  "snippet": "KI-basierte Tools und Scoring-Modelle bewerten automatisch, ob eine Person \"hilfebedürftig\" ist oder welches Risiko in einer bestimmten Situation besteht (z. B. Kindeswohlgefährdung, Schuldner:innen-Beratung).",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LXKXPD5H",
+                  "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+                  "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+                },
+                {
+                  "term": "Künstliche Intelligenz beeinflusst zunehmend Entscheidungen in Sozialverwaltunge",
+                  "snippet": "Künstliche Intelligenz beeinflusst zunehmend Entscheidungen in Sozialverwaltungen und Fallmanagement.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LXKXPD5H",
+                  "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+                  "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+                }
+              ],
+              "Soziale_Arbeit": [
+                {
+                  "term": "Digitale Tools und Algorithmen verändern Machtverhältnisse in der Sozialen Arbei",
+                  "snippet": "Digitale Tools und Algorithmen verändern Machtverhältnisse in der Sozialen Arbeit.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LXKXPD5H",
+                  "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+                  "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "Algorithmen und digitale Technologien sind nicht neutral -sie übernehmen und ver",
+                  "snippet": "Algorithmen und digitale Technologien sind nicht neutral -sie übernehmen und verstärken gesellschaftliche Vorurteile.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LXKXPD5H",
+                  "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+                  "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "Besonders gefährdet sind Menschen in Armut, ältere Menschen, Menschen mit Behind",
+                  "snippet": "Besonders gefährdet sind Menschen in Armut, ältere Menschen, Menschen mit Behinderungen und Personen mit geringer Bildung oder Migrationserfahrung.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LXKXPD5H",
+                  "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+                  "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "Fairness: Algorithmen dürfen keine Menschen benachteiligen -Diskriminierung muss",
+                  "snippet": "Fairness: Algorithmen dürfen keine Menschen benachteiligen -Diskriminierung muss erkannt und gestoppt werden.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "LXKXPD5H",
+                  "work_id": "work:b261533f-7bf8-593d-97ee-dbaef13a9eba",
+                  "version_id": "version:43fa1963-a776-5a31-8fb3-ecd43382c591"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "Race_Ethnicity",
+                  "Nationality_Migration",
+                  "Socioeconomic",
+                  "Age",
+                  "Other_Axis"
+                ],
+                "AN_Harm_Types": [
+                  "Direct_Discrimination",
+                  "Indirect_Discrimination",
+                  "Exclusionary_Norms"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Proposed",
+                "AN_Population": [
+                  "General_Social_Work",
+                  "Child_Family_Welfare",
+                  "Social_Assistance_Admin"
+                ],
+                "AN_Task": [
+                  "Case_Assessment_Decision_Support",
+                  "Counselling_Client_Communication",
+                  "Teaching_Further_Education"
+                ],
+                "AN_Gender_Definition": "Not_Applicable",
+                "AN_Bias_Definition": "Implicit_Only",
+                "AN_Gender_Understanding": [
+                  "Not_Applicable"
+                ],
+                "AN_Theory_Reference": "Yes",
+                "AN_Coding_Basis": "Fulltext",
+                "Studientyp": "Theoretisch",
+                "AN_Notes": "German conference handout on power and digitalisation in social work with case vignettes and reflection questions. Other_Axis: place of residence (Stadtteil), used as worked example of proxy discrimination. Axes coded from the work's own case examples (child-welfare algorithm and migration background, social-assistance AI and Black and migrant applicants, debt scoring and low-income districts, job-centre scoring by age, school education and district); Frauen, disability and language appear only in enumerations of affected groups and are not coded. Harm: Direct_Discrimination where the score uses origin itself (scoring features 'Einkommen, Alter, Herkunft'), Indirect_Discrimination via district as proxy, Exclusionary_Norms via digital-only access to benefits. Mitigation proposed at organisational and political level: participation of professionals and clients, human control, transparency and right to object, reflection methods ('Macht-Check', Ethik-Cafés), regulation and ban of discriminatory systems. AI tasks: risk assessment and scoring (case assessment), AI chat tool helping clients with applications (client communication), ChatGPT-connected avatar Konrad for workshops and social-media teaching. Gender is no object of the work. Bias is described as prejudice carried from old data into algorithms without a definition."
+              },
+              "undecidable": {},
+              "codebook_version": "1.4.1"
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:46Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:LXKXPD5H",
+      "checks": [
+        {
+          "check_id": "LXKXPD5H:lifecycle-contract:2026-10-02T07:15:46Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:LXKXPD5H",
+            "sha256": "95bbf581e592f42518995c956f6f467b621cc3a61f19abb1d94646b2f5ea82a5"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "LXKXPD5H:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "LXKXPD5H:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:LXKXPD5H"
+          },
+          {
+            "event_id": "LXKXPD5H:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "LXKXPD5H:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:LXKXPD5H"
+          }
+        ]
+      }
+    },
+    "MTMU9UPJ": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Large Language Models (LLMs) exhibit strong natural language processing capabili",
+            "snippet": "Large Language Models (LLMs) exhibit strong natural language processing capabilities but also inherit and amplify societal biases, including gender bias, raising fairness concerns.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MTMU9UPJ",
+            "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+            "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "DR.GAP is a model-agnostic prompting strategy applicable to both open-source and",
+            "snippet": "DR.GAP is a model-agnostic prompting strategy applicable to both open-source and blackbox LLMs.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MTMU9UPJ",
+            "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+            "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "However, trained on large-scale, unfiltered datasets, they not only inherit but ",
+            "snippet": "However, trained on large-scale, unfiltered datasets, they not only inherit but also magnify social biases, exacerbating existing inequities",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MTMU9UPJ",
+            "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+            "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Gender bias, as a typical form of social bias, has been proven to be widely pres",
+            "snippet": "Gender bias, as a typical form of social bias, has been proven to be widely present in LLMs",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MTMU9UPJ",
+            "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+            "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+          },
+          {
+            "term": "an automated and modelagnostic approach that mitigates gender bias while preserv",
+            "snippet": "an automated and modelagnostic approach that mitigates gender bias while preserving model performance.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MTMU9UPJ",
+            "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+            "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "This section presents experiments verifying DR.GAP 's effectiveness in mitigatin",
+            "snippet": "This section presents experiments verifying DR.GAP 's effectiveness in mitigating gender bias while balancing model performance and fairness.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MTMU9UPJ",
+            "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+            "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+          },
+          {
+            "term": "with values closer to 0 indicating better fairness.",
+            "snippet": "with values closer to 0 indicating better fairness.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MTMU9UPJ",
+            "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+            "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:46Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+      "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496",
+      "version_type": "preprint",
+      "preferred_version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Recommended_Practice",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "ICL",
+            "Thought_Generation",
+            "Self_Criticism",
+            "Role_Persona"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Disparate_Performance"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "DR.GAP builds a system prompt from bias-revealing demonstrations (ICL) and step-by-step syllogistic reasoning (Thought_Generation), verified and iteratively refined by the reference model (Self_Criticism), with the persona 'You are a fair and impartial assistant' (Role_Persona). Evaluated on coreference, QA, utility and VLM captioning against CFD and DPO baselines; DPO is a comparison baseline only, so In_Training is not coded. Disparate_Performance rests on the measured accuracy gap between masculine and feminine pronoun texts (Delta G) and the resolution bias in VLMs; Stereotyping on gender-stereotypical associations in reasoning. AN_Bias_Definition Explicit rests on the adopted technical metrics (AccGap, Delta G). Binary gender stated in Limitations and Ethics Statement. AI Agent Review: Exclusionary_Norms is not coded; the male-pronoun default appears in Appendix B only as a hedged explanation of the resolution bias (\"This bias may arise because ... the models tend to default to using male pronouns\"), not as a result or argument the work establishes."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "MTMU9UPJ",
+      "provenance": {
+        "annotation_id": "ar2:MTMU9UPJ",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "MTMU9UPJ:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ]
+          },
+          {
+            "id": "MTMU9UPJ:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:MTMU9UPJ",
+            "type": "paper",
+            "reference": "docs/data/fulltext/MTMU9UPJ.md",
+            "sha256": "2757711b34d5585a242eba7e9e839e33f49e4d87ba4a252568a8ee4e93d84eb5",
+            "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496",
+            "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+            "version_type": "preprint"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:MTMU9UPJ",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "codebook-v141-includes-12-9-20261002-ar1",
+            "codebook-v141-includes-12-9-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2,
+              "Prompting": 2,
+              "Bias_Ungleichheit": 2,
+              "Gender": 2,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "Large Language Models (LLMs) exhibit strong natural language processing capabili",
+                  "snippet": "Large Language Models (LLMs) exhibit strong natural language processing capabilities but also inherit and amplify societal biases, including gender bias, raising fairness concerns.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MTMU9UPJ",
+                  "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+                  "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "DR.GAP is a model-agnostic prompting strategy applicable to both open-source and",
+                  "snippet": "DR.GAP is a model-agnostic prompting strategy applicable to both open-source and blackbox LLMs.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MTMU9UPJ",
+                  "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+                  "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "However, trained on large-scale, unfiltered datasets, they not only inherit but ",
+                  "snippet": "However, trained on large-scale, unfiltered datasets, they not only inherit but also magnify social biases, exacerbating existing inequities",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MTMU9UPJ",
+                  "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+                  "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "Gender bias, as a typical form of social bias, has been proven to be widely pres",
+                  "snippet": "Gender bias, as a typical form of social bias, has been proven to be widely present in LLMs",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MTMU9UPJ",
+                  "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+                  "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+                },
+                {
+                  "term": "an automated and modelagnostic approach that mitigates gender bias while preserv",
+                  "snippet": "an automated and modelagnostic approach that mitigates gender bias while preserving model performance.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MTMU9UPJ",
+                  "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+                  "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "This section presents experiments verifying DR.GAP 's effectiveness in mitigatin",
+                  "snippet": "This section presents experiments verifying DR.GAP 's effectiveness in mitigating gender bias while balancing model performance and fairness.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MTMU9UPJ",
+                  "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+                  "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+                },
+                {
+                  "term": "with values closer to 0 indicating better fairness.",
+                  "snippet": "with values closer to 0 indicating better fairness.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MTMU9UPJ",
+                  "work_id": "work:ea48790e-8401-5c2e-8a98-efe0253badd7",
+                  "version_id": "version:a81b0bad-fa22-5ced-80b2-fbd0ddfd1496"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "Recommended_Practice",
+                  "Research_Instrument"
+                ],
+                "AN_Prompt_Techniques": [
+                  "ICL",
+                  "Thought_Generation",
+                  "Self_Criticism",
+                  "Role_Persona"
+                ],
+                "AN_Bias_Axes": [
+                  "Gender"
+                ],
+                "AN_Harm_Types": [
+                  "Stereotyping",
+                  "Disparate_Performance"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Prompt_Practice"
+                ],
+                "AN_Mitigation_Status": "Evaluated",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Task": [
+                  "None"
+                ],
+                "AN_Gender_Definition": "Implicit_Only",
+                "AN_Bias_Definition": "Explicit",
+                "AN_Gender_Understanding": [
+                  "Binary_Categorical"
+                ],
+                "AN_Theory_Reference": "No",
+                "AN_Coding_Basis": "Fulltext",
+                "Studientyp": "Experimentell",
+                "AN_Notes": "DR.GAP builds a system prompt from bias-revealing demonstrations (ICL) and step-by-step syllogistic reasoning (Thought_Generation), verified and iteratively refined by the reference model (Self_Criticism), with the persona 'You are a fair and impartial assistant' (Role_Persona). Evaluated on coreference, QA, utility and VLM captioning against CFD and DPO baselines; DPO is a comparison baseline only, so In_Training is not coded. Disparate_Performance rests on the measured accuracy gap between masculine and feminine pronoun texts (Delta G) and the resolution bias in VLMs; Stereotyping on gender-stereotypical associations in reasoning. AN_Bias_Definition Explicit rests on the adopted technical metrics (AccGap, Delta G). Binary gender stated in Limitations and Ethics Statement. AI Agent Review: Exclusionary_Norms is not coded; the male-pronoun default appears in Appendix B only as a hedged explanation of the resolution bias (\"This bias may arise because ... the models tend to default to using male pronouns\"), not as a result or argument the work establishes."
+              },
+              "undecidable": {},
+              "codebook_version": "1.4.1"
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:46Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:MTMU9UPJ",
+      "checks": [
+        {
+          "check_id": "MTMU9UPJ:lifecycle-contract:2026-10-02T07:15:46Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:MTMU9UPJ",
+            "sha256": "729d0c583ce4b1c66b75a6deef4fced3bde2e162e6d76d12a9d81b9973772f31"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "MTMU9UPJ:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "MTMU9UPJ:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:MTMU9UPJ"
+          },
+          {
+            "event_id": "MTMU9UPJ:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "MTMU9UPJ:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:MTMU9UPJ"
+          }
+        ]
+      }
+    },
+    "N7J2ZRFP": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "In sum, machine-learning algorithms classifying social attributes are used to au",
+            "snippet": "In sum, machine-learning algorithms classifying social attributes are used to automate governance decisions for private and public purposes, with implications for privacy, bias, and discrimination.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "N7J2ZRFP",
+            "work_id": "work:bdfab639-e353-510d-aba4-7fa51e5c6de9",
+            "version_id": "version:4f3ebab4-b906-5b61-9971-449253d020a0"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Algorithmic governance may also exacerbate bias and discrimination based on prot",
+            "snippet": "Algorithmic governance may also exacerbate bias and discrimination based on protected categories like race or gender.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "N7J2ZRFP",
+            "work_id": "work:bdfab639-e353-510d-aba4-7fa51e5c6de9",
+            "version_id": "version:4f3ebab4-b906-5b61-9971-449253d020a0"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:46Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:bdfab639-e353-510d-aba4-7fa51e5c6de9",
+      "version_id": "version:4f3ebab4-b906-5b61-9971-449253d020a0",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:4f3ebab4-b906-5b61-9971-449253d020a0",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "N7J2ZRFP",
+      "provenance": {
+        "annotation_id": "ar2:N7J2ZRFP",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "N7J2ZRFP:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ]
+          },
+          {
+            "id": "N7J2ZRFP:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:N7J2ZRFP",
+            "type": "paper",
+            "reference": "docs/data/fulltext/N7J2ZRFP.md",
+            "sha256": "4b1f2244e704e78825970d2d17c8046a6d28693cc5e4868835661864c4ea4c19",
+            "version_id": "version:4f3ebab4-b906-5b61-9971-449253d020a0",
+            "work_id": "work:bdfab639-e353-510d-aba4-7fa51e5c6de9",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:N7J2ZRFP",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "codebook-v141-includes-12-9-20261002-ar1",
+            "codebook-v141-includes-12-9-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "KI_Sonstige": 2,
+              "Bias_Ungleichheit": 1
+            },
+            "decision": "Unclear",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "KI_Sonstige": [
+                {
+                  "term": "In sum, machine-learning algorithms classifying social attributes are used to au",
+                  "snippet": "In sum, machine-learning algorithms classifying social attributes are used to automate governance decisions for private and public purposes, with implications for privacy, bias, and discrimination.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "N7J2ZRFP",
+                  "work_id": "work:bdfab639-e353-510d-aba4-7fa51e5c6de9",
+                  "version_id": "version:4f3ebab4-b906-5b61-9971-449253d020a0"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "Algorithmic governance may also exacerbate bias and discrimination based on prot",
+                  "snippet": "Algorithmic governance may also exacerbate bias and discrimination based on protected categories like race or gender.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "N7J2ZRFP",
+                  "work_id": "work:bdfab639-e353-510d-aba4-7fa51e5c6de9",
+                  "version_id": "version:4f3ebab4-b906-5b61-9971-449253d020a0"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:46Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:N7J2ZRFP",
+      "checks": [
+        {
+          "check_id": "N7J2ZRFP:lifecycle-contract:2026-10-02T07:15:46Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:N7J2ZRFP",
+            "sha256": "75eb01a0d0b1c88b3e2f1409e52261d1d04515df5919fb64ef03407a5e5edbd5"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "N7J2ZRFP:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "N7J2ZRFP:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:N7J2ZRFP"
+          },
+          {
+            "event_id": "N7J2ZRFP:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "N7J2ZRFP:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:N7J2ZRFP"
+          }
+        ]
+      }
+    },
+    "RXNXJA8W": {
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 2,
+        "Prompting": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "The inability of users to discern the reliability of LLM responses not only unde",
+            "snippet": "The inability of users to discern the reliability of LLM responses not only undermines the utility of these models but also poses risks in situations where user understanding of model accuracy is critical.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KRUQB7L2",
+            "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+            "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Here we explore the calibration gap, which refers to the difference between huma",
+            "snippet": "Here we explore the calibration gap, which refers to the difference between human confidence in LLM-generated answers and the models' actual confidence",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KRUQB7L2",
+            "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+            "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Experiment 2 manipulates the prompts to produce three levels of uncertainty lang",
+            "snippet": "Experiment 2 manipulates the prompts to produce three levels of uncertainty language (low, medium and high confidence) and three levels of explanation length, resulting in nine different types of explanations presented to participants.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KRUQB7L2",
+            "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+            "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:46Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+      "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "KRUQB7L2",
+      "alias_of": "KRUQB7L2",
+      "provenance": {
+        "annotation_id": "ar2:RXNXJA8W",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "RXNXJA8W:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ]
+          },
+          {
+            "id": "RXNXJA8W:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:RXNXJA8W",
+            "type": "paper",
+            "reference": "docs/data/fulltext/KRUQB7L2.md",
+            "sha256": "a0f058f9278f8d5fc56e452268837390383a0be6cfe24816c7c665007d7ad4e9",
+            "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042",
+            "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:RXNXJA8W",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "codebook-v141-includes-12-9-20261002-ar1",
+            "codebook-v141-includes-12-9-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "AI_Literacies": 1,
+              "Generative_KI": 2,
+              "Prompting": 2
+            },
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Not_relevant_topic",
+            "override_reason": null,
+            "evidence": {
+              "AI_Literacies": [
+                {
+                  "term": "The inability of users to discern the reliability of LLM responses not only unde",
+                  "snippet": "The inability of users to discern the reliability of LLM responses not only undermines the utility of these models but also poses risks in situations where user understanding of model accuracy is critical.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KRUQB7L2",
+                  "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+                  "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+                }
+              ],
+              "Generative_KI": [
+                {
+                  "term": "Here we explore the calibration gap, which refers to the difference between huma",
+                  "snippet": "Here we explore the calibration gap, which refers to the difference between human confidence in LLM-generated answers and the models' actual confidence",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KRUQB7L2",
+                  "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+                  "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "Experiment 2 manipulates the prompts to produce three levels of uncertainty lang",
+                  "snippet": "Experiment 2 manipulates the prompts to produce three levels of uncertainty language (low, medium and high confidence) and three levels of explanation length, resulting in nine different types of explanations presented to participants.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KRUQB7L2",
+                  "work_id": "work:09fe1e88-16c9-53bd-b04b-f8afd09f5ba7",
+                  "version_id": "version:a4196267-e2d5-54de-a058-cbe88c637042"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:46Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:RXNXJA8W",
+      "checks": [
+        {
+          "check_id": "RXNXJA8W:lifecycle-contract:2026-10-02T07:15:46Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:RXNXJA8W",
+            "sha256": "fe847ac92a53273442aa0b4f81be64331cd461b32259df0b91e01341b00a287e"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "RXNXJA8W:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "RXNXJA8W:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:RXNXJA8W"
+          },
+          {
+            "event_id": "RXNXJA8W:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "RXNXJA8W:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:RXNXJA8W"
+          }
+        ]
+      }
+    },
+    "V4GTLMED": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "tech workers could bene /uniFB01 t from a greater understanding of how structura",
+            "snippet": "tech workers could bene /uniFB01 t from a greater understanding of how structural inequality shapes the data they use.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "V4GTLMED",
+            "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+            "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "we collected data from tech workers in a major AI company to better understand w",
+            "snippet": "we collected data from tech workers in a major AI company to better understand what they consider to be the most pressing ethical issues when developing AI-powered products.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "V4GTLMED",
+            "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+            "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "the term ' bias ' creates real confusion among tech workers, meaning that the te",
+            "snippet": "the term ' bias ' creates real confusion among tech workers, meaning that the term is unable to do the ethical work it is intended to do",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "V4GTLMED",
+            "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+            "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "women are far less likely to edit Wikipedia or have entries written about them, ",
+            "snippet": "women are far less likely to edit Wikipedia or have entries written about them, meaning that data about women is less likely to be represented in a dataset drawn from Wikipedia",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "V4GTLMED",
+            "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+            "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "tech workers do not necessarily see a relationship between diversity, equality a",
+            "snippet": "tech workers do not necessarily see a relationship between diversity, equality and inclusion (DEI) agendas and AI development, undermining AI ethics initiatives",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "V4GTLMED",
+            "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+            "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "this study differs in that we explicitly draw on feminist insights to inform our",
+            "snippet": "this study differs in that we explicitly draw on feminist insights to inform our analysis",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "V4GTLMED",
+            "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+            "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "This points towards the impossibility of rendering a system neutral through debi",
+            "snippet": "This points towards the impossibility of rendering a system neutral through debiasing techniques.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "V4GTLMED",
+            "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+            "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:46Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+      "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Erasure"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Explicit",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Social_Construct"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Empirisch",
+          "AN_Notes": "Qualitative interviews with 63 employees of an anonymised tech multinational, analysed with feminist methods (Ahmed's storytelling approach, Haraway's situated knowledges). Gender axis from the authors' own worked example against interviewee #35 (Wikipedia training data underrepresent women); race and other minoritised groups appear only in enumerations. Harm Erasure: data about women less likely represented. Mitigation proposed at organisational level: bring DEI initiatives and AI ethics goals together, prioritise maintenance and monitoring of AI and legacy systems, involve tech workers. Gender (with race) explicitly determined as a set of relations rather than personal attributes. Bias reframed explicitly as 'AI partiality'."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "V4GTLMED",
+      "provenance": {
+        "annotation_id": "ar2:V4GTLMED",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "V4GTLMED:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ]
+          },
+          {
+            "id": "V4GTLMED:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:V4GTLMED",
+            "type": "paper",
+            "reference": "docs/data/fulltext/V4GTLMED.md",
+            "sha256": "11080deffa7bb3589b9d1db2216ba5d9c87629520601c42d1b3bdb3bc86e3a2c",
+            "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d",
+            "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:V4GTLMED",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "codebook-v141-includes-12-9-20261002-ar1",
+            "codebook-v141-includes-12-9-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "AI_Literacies": 1,
+              "KI_Sonstige": 2,
+              "Bias_Ungleichheit": 2,
+              "Gender": 1,
+              "Diversitaet": 2,
+              "Feministisch": 2,
+              "Fairness": 1
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "AI_Literacies": [
+                {
+                  "term": "tech workers could bene /uniFB01 t from a greater understanding of how structura",
+                  "snippet": "tech workers could bene /uniFB01 t from a greater understanding of how structural inequality shapes the data they use.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "V4GTLMED",
+                  "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+                  "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+                }
+              ],
+              "KI_Sonstige": [
+                {
+                  "term": "we collected data from tech workers in a major AI company to better understand w",
+                  "snippet": "we collected data from tech workers in a major AI company to better understand what they consider to be the most pressing ethical issues when developing AI-powered products.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "V4GTLMED",
+                  "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+                  "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "the term ' bias ' creates real confusion among tech workers, meaning that the te",
+                  "snippet": "the term ' bias ' creates real confusion among tech workers, meaning that the term is unable to do the ethical work it is intended to do",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "V4GTLMED",
+                  "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+                  "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "women are far less likely to edit Wikipedia or have entries written about them, ",
+                  "snippet": "women are far less likely to edit Wikipedia or have entries written about them, meaning that data about women is less likely to be represented in a dataset drawn from Wikipedia",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "V4GTLMED",
+                  "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+                  "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "tech workers do not necessarily see a relationship between diversity, equality a",
+                  "snippet": "tech workers do not necessarily see a relationship between diversity, equality and inclusion (DEI) agendas and AI development, undermining AI ethics initiatives",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "V4GTLMED",
+                  "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+                  "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+                }
+              ],
+              "Feministisch": [
+                {
+                  "term": "this study differs in that we explicitly draw on feminist insights to inform our",
+                  "snippet": "this study differs in that we explicitly draw on feminist insights to inform our analysis",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "V4GTLMED",
+                  "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+                  "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "This points towards the impossibility of rendering a system neutral through debi",
+                  "snippet": "This points towards the impossibility of rendering a system neutral through debiasing techniques.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "V4GTLMED",
+                  "work_id": "work:4775f414-01fa-5533-8b8a-a908c6ea354f",
+                  "version_id": "version:621621df-0e98-5d35-8853-57b671a5aa4d"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "Gender"
+                ],
+                "AN_Harm_Types": [
+                  "Erasure"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Proposed",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Task": [
+                  "None"
+                ],
+                "AN_Gender_Definition": "Explicit",
+                "AN_Bias_Definition": "Explicit",
+                "AN_Gender_Understanding": [
+                  "Social_Construct"
+                ],
+                "AN_Theory_Reference": "Yes",
+                "AN_Coding_Basis": "Fulltext",
+                "Studientyp": "Empirisch",
+                "AN_Notes": "Qualitative interviews with 63 employees of an anonymised tech multinational, analysed with feminist methods (Ahmed's storytelling approach, Haraway's situated knowledges). Gender axis from the authors' own worked example against interviewee #35 (Wikipedia training data underrepresent women); race and other minoritised groups appear only in enumerations. Harm Erasure: data about women less likely represented. Mitigation proposed at organisational level: bring DEI initiatives and AI ethics goals together, prioritise maintenance and monitoring of AI and legacy systems, involve tech workers. Gender (with race) explicitly determined as a set of relations rather than personal attributes. Bias reframed explicitly as 'AI partiality'."
+              },
+              "undecidable": {},
+              "codebook_version": "1.4.1"
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:46Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:V4GTLMED",
+      "checks": [
+        {
+          "check_id": "V4GTLMED:lifecycle-contract:2026-10-02T07:15:46Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:V4GTLMED",
+            "sha256": "5b74314a1c8ffd601fa563799504b180656ad3621d6d1e50b6fbff9909b1913f"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "V4GTLMED:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "V4GTLMED:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:V4GTLMED"
+          },
+          {
+            "event_id": "V4GTLMED:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "V4GTLMED:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:V4GTLMED"
+          }
+        ]
+      }
+    },
+    "VP6SXQHY": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 1,
+        "Prompting": 1,
+        "KI_Sonstige": 1,
+        "Bias_Ungleichheit": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "This article presents a structured framework for assessing and developing AI lit",
+            "snippet": "This article presents a structured framework for assessing and developing AI literacy within organizations.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "VP6SXQHY",
+            "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+            "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "This includes knowing how to interact with AI-driven applications, such as gener",
+            "snippet": "This includes knowing how to interact with AI-driven applications, such as generative AI for drafting reports or AI-enhanced customer service platforms, and critically evaluating AI-generated outputs",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "VP6SXQHY",
+            "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+            "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Limited ability to use efficient prompt engineering techniques and apply AI-gene",
+            "snippet": "Limited ability to use efficient prompt engineering techniques and apply AI-generated outputs",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "VP6SXQHY",
+            "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+            "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "They need a solid grasp of AI tools relevant to their functions, such as sales a",
+            "snippet": "They need a solid grasp of AI tools relevant to their functions, such as sales analytics, recruitment screening, or predictive maintenance.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "VP6SXQHY",
+            "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+            "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Employees should be trained to recognize AI limitations, such as bias in automat",
+            "snippet": "Employees should be trained to recognize AI limitations, such as bias in automated decision-making, and understand when human oversight is necessary.",
+            "ts": "2026-10-02T07:15:46Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "VP6SXQHY",
+            "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+            "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:46Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+      "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "VP6SXQHY",
+      "provenance": {
+        "annotation_id": "ar2:VP6SXQHY",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-12-9-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "VP6SXQHY:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ]
+          },
+          {
+            "id": "VP6SXQHY:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-12-9-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:VP6SXQHY",
+            "type": "paper",
+            "reference": "docs/data/fulltext/VP6SXQHY.md",
+            "sha256": "daa09a6c7b3a50319cbeb13c2fb459caee94d614e4b1b0043086d87a496e5cea",
+            "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1",
+            "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:VP6SXQHY",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "codebook-v141-includes-12-9-20261002-ar1",
+            "codebook-v141-includes-12-9-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "AI_Literacies": 2,
+              "Generative_KI": 1,
+              "Prompting": 1,
+              "KI_Sonstige": 1,
+              "Bias_Ungleichheit": 1
+            },
+            "decision": "Unclear",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "AI_Literacies": [
+                {
+                  "term": "This article presents a structured framework for assessing and developing AI lit",
+                  "snippet": "This article presents a structured framework for assessing and developing AI literacy within organizations.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "VP6SXQHY",
+                  "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+                  "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1"
+                }
+              ],
+              "Generative_KI": [
+                {
+                  "term": "This includes knowing how to interact with AI-driven applications, such as gener",
+                  "snippet": "This includes knowing how to interact with AI-driven applications, such as generative AI for drafting reports or AI-enhanced customer service platforms, and critically evaluating AI-generated outputs",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "VP6SXQHY",
+                  "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+                  "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "Limited ability to use efficient prompt engineering techniques and apply AI-gene",
+                  "snippet": "Limited ability to use efficient prompt engineering techniques and apply AI-generated outputs",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "VP6SXQHY",
+                  "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+                  "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1"
+                }
+              ],
+              "KI_Sonstige": [
+                {
+                  "term": "They need a solid grasp of AI tools relevant to their functions, such as sales a",
+                  "snippet": "They need a solid grasp of AI tools relevant to their functions, such as sales analytics, recruitment screening, or predictive maintenance.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "VP6SXQHY",
+                  "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+                  "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "Employees should be trained to recognize AI limitations, such as bias in automat",
+                  "snippet": "Employees should be trained to recognize AI limitations, such as bias in automated decision-making, and understand when human oversight is necessary.",
+                  "ts": "2026-10-02T07:15:46Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "VP6SXQHY",
+                  "work_id": "work:83ec30fa-8907-5505-8f43-c4539cb2d821",
+                  "version_id": "version:847f6c8c-f497-5934-82ba-5292e21b8da1"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:46Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:VP6SXQHY",
+      "checks": [
+        {
+          "check_id": "VP6SXQHY:lifecycle-contract:2026-10-02T07:15:46Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:VP6SXQHY",
+            "sha256": "bbaa3f4ea2c3bafef69a81880c156eed3e1d9bacc3c370aba89ad73a67dfd959"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:46Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "VP6SXQHY:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "VP6SXQHY:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ar1",
+              "codebook-v141-includes-12-9-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:VP6SXQHY"
+          },
+          {
+            "event_id": "VP6SXQHY:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:46Z",
+            "activity_id": "VP6SXQHY:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-12-9-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:VP6SXQHY"
+          }
+        ]
+      }
+    }
+  }
+}

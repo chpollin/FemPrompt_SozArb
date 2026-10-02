@@ -16,8 +16,8 @@
     "canonical_records": 463,
     "canonical_works": 361,
     "direct_human_annotated_records": 302,
-    "direct_ai_agent_reviewed_without_human": 24,
-    "unannotated_alias_records_covered_at_work_level": 27,
+    "direct_ai_agent_reviewed_without_human": 29,
+    "unannotated_alias_records_covered_at_work_level": 22,
     "queued_records": 110,
     "queued_works": 101,
     "ready_works": 57,
@@ -7722,16 +7722,6 @@
       ]
     },
     {
-      "work_id": "work:5611657b-9caf-528c-aba7-b27719e34b25",
-      "record_id": "WTLVG29I",
-      "covered_by_human_records": [
-        "EXVG7MQR",
-        "HN7KKNYV",
-        "IUN7Z56I"
-      ],
-      "covered_by_ai_agent_reviewed_records": []
-    },
-    {
       "work_id": "work:56d6f68e-55d4-5741-85f5-014faceedd04",
       "record_id": "FKJH2278",
       "covered_by_human_records": [],
@@ -7746,14 +7736,6 @@
       "covered_by_ai_agent_reviewed_records": [
         "EQV4DNQR"
       ]
-    },
-    {
-      "work_id": "work:5f49f95b-dcfe-5778-8376-a313cb039d4d",
-      "record_id": "QI5AYE4V",
-      "covered_by_human_records": [
-        "H59BNSX8"
-      ],
-      "covered_by_ai_agent_reviewed_records": []
     },
     {
       "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
@@ -7789,14 +7771,6 @@
       "covered_by_ai_agent_reviewed_records": [
         "EXRF5629"
       ]
-    },
-    {
-      "work_id": "work:8cfeffa6-11db-5c5a-bf5f-b89cce40f27f",
-      "record_id": "6IU5JG5Y",
-      "covered_by_human_records": [
-        "Y6SAPNT2"
-      ],
-      "covered_by_ai_agent_reviewed_records": []
     },
     {
       "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
@@ -7837,24 +7811,6 @@
       "covered_by_ai_agent_reviewed_records": [
         "BDI6XU5A"
       ]
-    },
-    {
-      "work_id": "work:c54f89d4-e79b-5fd8-9426-6b51b36669e2",
-      "record_id": "ZITLBM8A",
-      "covered_by_human_records": [
-        "LGYFN6JK"
-      ],
-      "covered_by_ai_agent_reviewed_records": []
-    },
-    {
-      "work_id": "work:e1ca8a4c-5cc2-5e35-b3cc-375950a07405",
-      "record_id": "AMYZFAPH",
-      "covered_by_human_records": [
-        "4PK8UN82",
-        "9YYPYEGY",
-        "U3AJIXAJ"
-      ],
-      "covered_by_ai_agent_reviewed_records": []
     },
     {
       "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",

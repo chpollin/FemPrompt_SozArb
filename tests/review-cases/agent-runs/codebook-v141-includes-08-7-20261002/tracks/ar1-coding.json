@@ -1,0 +1,874 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.2",
+  "codebook_version": "1.4.1",
+  "run_id": "codebook-v141-includes-08-7-20261002",
+  "reviewer": "ar1",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "decisions": {
+    "8MDXCTA6": {
+      "source_path": "docs/data/fulltext/8MDXCTA6.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Paper-ID and corpus title match the text title 'A Systematic Review of Sophisticated Predictive and Prescriptive Analytics in Child Welfare: Accuracy, Equity, and Bias'; authors Hall, Sage, Scott, Joseph; accepted and published May 2023 (Springer). The text carries no DOI and no journal name, so the identity rests on title, authors and year."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "ja",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "ja"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "child welfare systems must build more internal knowledge of this type",
+          "These partnerships could offer internships to students in CS or health informatics to help design algorithms and train child welfare practitioners."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "Child welfare agencies increasingly use machine learning models to predict outcomes and inform decisions."
+        ],
+        "Soziale_Arbeit": [
+          "This systematic review of the published literature aims to advance knowledge on current use cases of algorithmic decision-making in child welfare for predictive and prescriptive purposes."
+        ],
+        "Bias_Ungleichheit": [
+          "These tools are intended to increase accuracy and fairness but can also amplify bias."
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "asset-based approaches focus on strengths and view diversity, culture, and sociodemographic characteristics as positive assets"
+        ],
+        "Feministisch": [],
+        "Fairness": [
+          "Researchers seeking to avoid bias may choose strategies that reduce the accuracy of their models but increase fairness (e.g., optimizing for racial equity).",
+          "They also evaluated their models for racial equity by comparing AUC across racial subgroups"
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "None"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Race_Ethnicity",
+          "Socioeconomic"
+        ],
+        "AN_Harm_Types": [
+          "Indirect_Discrimination"
+        ],
+        "AN_Mitigation_Stage": [
+          "Pre_Processing",
+          "In_Training",
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": [
+          "Child_Family_Welfare"
+        ],
+        "AN_Task": [
+          "Case_Assessment_Decision_Support"
+        ],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": [
+          "Not_Applicable"
+        ],
+        "AN_Theory_Reference": "No",
+        "Studientyp": "Literaturreview",
+        "AN_Notes": "Systematischer Review von 15 ML-Studien zur Risikoprognose in der Kinder- und Jugendhilfe. Bias-Achsen aus dem eigenen Codierschema des Reviews (racial and socioeconomic equity, Maori-Kinder, low-income families). Indirect_Discrimination: der Review ordnet die Disparitaet nicht selbst als direkt oder indirekt ein; codiert wird der eigene Befund, dass Daten mit eingebetteten Verzerrungen ueber Ueberwachung marginalisierter Familien (Vorkontakt mit Hilfesystemen als Proxy) Ungleichheit reproduzieren. Evaluated bezieht sich allein auf die synthetisierte Evaluation von Wilson et al. (2015), getrennte Modelle fuer Maori-Kinder, Ergebnis negativ ('did not achieve the desired effect'); keine eigene Evaluation des Reviews. Pre_Processing: Ausschluss von Variablen und Schutzfaktoren als Praediktoren; Organisational_Process: unabhaengige Ethikpruefung, Nicht-Offenlegung der Risikowerte, partizipatives Design, einheitliches Berichtsprotokoll. AN_Bias_Definition: der Review definiert bias eng als Einfluss persoenlicher Ueberzeugungen von Fachkraeften, equity separat.",
+        "AN_Coding_Basis": "Fulltext",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "and bias as the influence of caseworkers' personal beliefs and attitudes on decisionmaking practices",
+            "locator": "Method, Ethics, Equity, and Bias"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "if data are patterned in a way that embeds existing biases, the algorithm may accurately predict these biases, ultimately reproducing institutionalized inequalities",
+            "locator": "Discussion, Summary and Contextualization of Findings"
+          },
+          {
+            "quote": "problems related to oversurveillance of marginalized communities",
+            "locator": "Method, Ethics, Equity, and Bias"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "excluding variables that might reinforce racial inequality",
+            "locator": "Method, Ethics, Equity, and Bias"
+          },
+          {
+            "quote": "The researchers attempted to correct this problem by building two separate algorithms:",
+            "locator": "Results, Ethics, Equity, and Bias"
+          },
+          {
+            "quote": "advised the county not to disclose predicted risk scores to workers investigating screened-in calls to prevent bias from being introduced into investigations",
+            "locator": "Results, Ethics, Equity, and Bias"
+          }
+        ],
+        "AN_Mitigation_Status": [
+          {
+            "quote": "This approach did not achieve the desired effect.",
+            "locator": "Results, Ethics, Equity, and Bias"
+          }
+        ]
+      }
+    },
+    "G53MCF3W": {
+      "source_path": "docs/data/fulltext/G53MCF3W.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Paper-ID and corpus title match the text title 'Bias, Accuracy, and Trust: Gender-Diverse Perspectives on Large Language Models'; authors Gaba, Wall, Ramkumar Babu, Brun, Hall, Xiong Bearfield; 2025; text marked 'Manuscript submitted to ACM', consistent with the manifest version type preprint. No DOI in the text. Publication type: scholarly research article (preprint), admissible."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "teilweise",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "This suggests that familiarity with the topic plays an important role in the ability of a user to assess the accuracy of ChatGPT's responses."
+        ],
+        "Generative_KI": [
+          "This study examines how gender-diverse populations perceive bias, accuracy, and trustworthiness in LLMs, specifically ChatGPT."
+        ],
+        "Prompting": [
+          "we investigate how gendered and neutral prompts influence model responses and how users evaluate these responses."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Our findings reveal that gendered prompts elicit more identity-specific responses, with non-binary participants particularly susceptible to condescending and stereotypical portrayals."
+        ],
+        "Gender": [
+          "By exploring these gender categories, we investigate how gender affects user perceptions of bias, accuracy, and trustworthiness in LLMs."
+        ],
+        "Diversitaet": [
+          "This research contributes to the CSCW/HCI field by highlighting the need for gender-diverse perspectives in LLM development in particular and AI in general, to foster more inclusive and trustworthy systems."
+        ],
+        "Feministisch": [
+          "Our findings corroborate similar themes in [43, 63] where GPT reinforces gender stereotypes and representation biases in storytelling, identifying systemic biases that disproportionately favor traditional gender norms."
+        ],
+        "Fairness": [
+          "Participants also emphasized the importance of responding to men, women, and non-binary individuals with equal depth and consideration to ensure fairness while respecting individual identities."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "Research_Instrument"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Sexual_Orientation_Identity"
+        ],
+        "AN_Harm_Types": [
+          "Stereotyping",
+          "Exclusionary_Norms",
+          "Misrepresentation"
+        ],
+        "AN_Mitigation_Stage": [
+          "Pre_Processing",
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "None"
+        ],
+        "AN_Gender_Definition": "Explicit",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": [
+          "Non_Binary_Inclusive"
+        ],
+        "AN_Theory_Reference": "No",
+        "Studientyp": "Empirisch",
+        "AN_Notes": "Interviewstudie (25 Teilnehmende) mit vorab erzeugten ChatGPT-Antworten auf vier Prompts, in denen 'person' durch man, woman, non-binary person ersetzt wird. Prompts dienen als Forschungsinstrument; die Ersetzung des Personenbegriffs ist keine Technik der Prompt-Report-Familien, daher AN_Prompt_Techniques None. Sexual_Orientation_Identity codiert, weil nicht-binaere und trans Personen als eigene Analysegruppe gefuehrt werden (Geschlechtsidentitaet); das Werk nennt die Achse Gender, daher beide Werte. Tonunterschiede zwischen Gruppen nicht als Disparate_Performance codiert (Codebuch 1.4.1); wahrgenommene Genauigkeit gleich ueber Gruppen. Massnahmen nur vorgeschlagen: diversere Trainingsdaten (Pre_Processing), Co-Design, Prompt-Testsuite und Echtzeit-Bias-Auditing (Organisational_Process). Grounded Theory und reflexive thematische Analyse sind Methoden, keine Theorie, die Gender oder Bias rahmt.",
+        "AN_Coding_Basis": "Fulltext",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Gender_Definition": [
+          {
+            "quote": "Moving forward, we define 'men' as cisgender men, 'women' as cisgender women, and 'non-binary/transgender' as those who do not identify with the gender assigned at birth.",
+            "locator": "1 Introduction"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "Among them, 9 identified as non-binary/transgender",
+            "locator": "4.1 Participant recruitment and selection"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "Furthermore, men were associated with careers and assertiveness, women with growth and emotions, and non-binary individuals with inclusivity and advocacy.",
+            "locator": "3.1 RQ1"
+          },
+          {
+            "quote": "criticizing its responses as lacking nuance , condescending , cis-centric , and stereotypical",
+            "locator": "4.6.2 Prompt Findings, Non-binary/Transgender Perspective"
+          },
+          {
+            "quote": "Non-binary characters were often reduced to identity struggles, which many found reductive.",
+            "locator": "4.6.2 Prompt Findings, summary"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Additionally, participants suggested improving the LLMs by diversifying training data, ensuring equal depth in gendered responses, and incorporating clarifying questions.",
+            "locator": "Abstract"
+          },
+          {
+            "quote": "we propose a real-time bias auditing mechanism where users can flag, annotate, and suggest corrections for biased or stereotypical responses during live interactions.",
+            "locator": "5.2.4 Real-Time Bias Auditing"
+          }
+        ]
+      }
+    },
+    "IDW7QSYG": {
+      "source_path": "docs/data/fulltext/IDW7QSYG.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Paper-ID and corpus title match the text title 'Female perspectives on algorithmic bias: implications for AI researchers and practitioners'; DOI 10.1108/MD-04-2024-0884; authors Fraile-Rojas, De-Pablos-Heredero, Mendez-Suarez; Management Decision 63(9), 2025."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "In this context, we advocate for the importance of exploring public awareness around gendered AI technologies."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "This article explores the use of natural language processing (NLP) techniques and machine learning (ML) models to discover underlying concepts of gender inequality applied to artificial intelligence (AI) technologies in female social media conversations."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "H1. Algorithmic bias impacts female user behaviours in response to injustice and inequality in algorithmic outcomes."
+        ],
+        "Gender": [
+          "Gender bias in AI-based decision-making systems is a socio-technical problem that requires a combination of technological, organizational and societal approaches."
+        ],
+        "Diversitaet": [
+          "Their role is vital in addressing this male-dominated industry and promoting diversity among AI researchers, encompassing both gender and racial perspectives."
+        ],
+        "Feministisch": [
+          "this research upholds the argument that feminist critical thought is indispensable in the development of balanced AI systems.",
+          "Intersectional feminist approaches are paramount in the design, development and deployment of AI systems."
+        ],
+        "Fairness": [
+          "To avoid algorithmic discrimination and improve fairness, we propose three recommendations for concrete actions."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "None"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Race_Ethnicity",
+          "Intersectional"
+        ],
+        "AN_Harm_Types": [
+          "None"
+        ],
+        "AN_Mitigation_Stage": [
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "None"
+        ],
+        "AN_Gender_Definition": "Explicit",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": [
+          "Binary_Categorical",
+          "Intersectional"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "Studientyp": "Empirisch",
+        "AN_Notes": "Social Opinion Mining von 172.041 Tweets (2022) zu AI und Gender, Fokus auf weibliche Nutzerinnen. Intersectional in AN_Bias_Axes: das Werk testet als H4 die Konvergenz von Gender und Race und deutet den Chi-Quadrat-Befund ausdruecklich mit Collins' matrix of domination; Grenzfall, weil gemessen wird, ob Gender- und Race-Bezuege gemeinsam auftreten, nicht ein von der Kombination abhaengiges Bias-Ergebnis. AN_Harm_Types None: Schadensmechanismen (maskuline Technikkultur, Stereotype) stehen nur im zitierten Theorieteil, das eigene Ergebnis betrifft Diskursmerkmale. AN_Gender_Understanding folgt der Analyse: Nutzerinnen werden ueber gender-guesser und she/her-he/him binaer klassifiziert; die Aussage 'gender as a narrow social construct' wird von der Analyse nicht eingeloest und steht daher nur hier und in AN_Gender_Definition. Massnahmen nur empfohlen: Paritaet in Entwicklungsteams, Rechtsrahmen, Foerderung von Frauen in STEM und KI-Gruendungen. AN_Task None: NLP dient als Forschungsmethode des Werks, nicht als vorgeschlagene Praxisaufgabe.",
+        "AN_Coding_Basis": "Fulltext",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Gender_Definition": [
+          {
+            "quote": "Finally, we conclude with a reflection on how a feminist framework enables a much more profound, complex, in-depth analysis of gender-neutral technologies: which account for the nuances of gender as a narrow social construct.",
+            "locator": "1. Introduction"
+          }
+        ],
+        "AN_Bias_Definition": [
+          {
+            "quote": "'Algorithmic bias phenomenon' is 'a systematic deviation from equality that emerges in the outputs of an algorithm' (Kordzadeh and Ghasemaghaei, 2022, p. 8).",
+            "locator": "2. Theoretical background and hypotheses"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Matrix of domination (Black feminist thought, Patricia Hill Collins)",
+            "quote": "These results support black feminist scholar Patricia Hill Collins' matrix of domination conceptual model: which holds that differing axes of social division such as race, gender, class, sexual orientation, age and ability do not exist independently of each other.",
+            "locator": "4.2 Topics of discussion"
+          },
+          {
+            "theory": "Feminist standpoint theory (Sandra Harding)",
+            "quote": "The standpoint theory coined by Sandra Harding (1986) suggests that individuals in marginalized positions, whether by gender or other categories such as race and class, form a distinctive perspective due to their experiences of oppression.",
+            "locator": "2. Theoretical background and hypotheses"
+          },
+          {
+            "theory": "Intersectionality (Crenshaw)",
+            "quote": "Building on Black feminist thought, Crenshaw (2017) developed the concept of 'intersectionality'.",
+            "locator": "4.2 Topics of discussion"
+          },
+          {
+            "theory": "Feminist technology studies (Wajcman)",
+            "quote": "Building on Wajcman (2007), this study contributes to evidence that feminine theory, knowledge and methods are critical if algorithm development teams are to ensure that what they create is sensitive to gender considerations.",
+            "locator": "5. Conclusions"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "After the first classification, a second one made use of the 'she/her' and 'he/him' keywords if available on the user description: overriding the result of the previous classification.",
+            "locator": "3. Methodology"
+          },
+          {
+            "quote": "The analyses here confirm Hypothesis 4: Gender and race affiliations tend to converge in collective conversations.",
+            "locator": "4.2 Topics of discussion"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Corporations and academic institutions should adopt a more committed plan and strengthen legal frameworks which mandate a certain level of parity in algorithm development and researcher teams.",
+            "locator": "5. Conclusions"
+          }
+        ]
+      }
+    },
+    "J9IZDVTW": {
+      "source_path": "docs/data/fulltext/J9IZDVTW.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Paper-ID and corpus title match the text title 'Less knowledge, more trust? Exploring potentially uncritical attitudes towards AI in higher education'; DOI 10.17471/2499-4324/1337; authors Biagini, Cuomo, Ranieri; Italian Journal of Educational Technology 32(1), 2024."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "this paper presents the results of a study aimed at assessing students' AI literacy in the context of higher education, focusing on doctoral students."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "highlights that educational initiatives need to emphasise not only AI's capabilities but also their limitations and potential biases",
+          "For equity and fairness, 41.67% of respondents feel that AI's impact will leave this aspect about the same"
+        ],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "XXCDL3A3": {
+      "source_path": "docs/data/fulltext/XXCDL3A3.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Paper-ID and corpus title match the text title 'Factoring the Matrix of Domination: A Critical Review and Reimagination of Intersectionality in AI Fairness'; DOI 10.1145/3600211.3604705; authors Ovalle, Subramonian, Gautam, Gee, Chang; AIES '23, published 8 August 2023."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "teilweise",
+        "Diversitaet": "teilweise",
+        "Feministisch": "ja",
+        "Fairness": "ja"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "Through a critical review of how intersectionality is discussed in 30 papers from the AI fairness literature, we deductively and inductively: 1) map how intersectionality tenets operate within the AI fairness paradigm and 2) uncover gaps between the conceptualization and operationalization of intersectionality."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Overall, intersectionality enables the creation of new forms of knowledge which are informed by a critical examination of how AI systems reproduce inequalities."
+        ],
+        "Gender": [
+          "Our finding substantiates the concerns of intersectionality scholars that intersectionality is diluted to a 'two-by-two analysis of gender by race' rather than 'constituting a structural analysis or a political critique' [51]"
+        ],
+        "Diversitaet": [
+          "we invite a widening of AI fairness practice by centering marginalized people and valorizing critical knowledge production that makes room for their voices."
+        ],
+        "Feministisch": [
+          "Intersectionality is a critical framework that, through inquiry and praxis, allows us to examine how social inequalities persist through domains of structure and discipline."
+        ],
+        "Fairness": [
+          "We find that researchers overwhelmingly reduce intersectionality to optimizing for fairness metrics over demographic subgroups."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "None"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Race_Ethnicity",
+          "Intersectional"
+        ],
+        "AN_Harm_Types": [
+          "Erasure",
+          "Exclusionary_Norms"
+        ],
+        "AN_Mitigation_Stage": [
+          "Pre_Processing",
+          "In_Training",
+          "Post_Processing",
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "None"
+        ],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": [
+          "Social_Construct",
+          "Intersectional"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "Studientyp": "Literaturreview",
+        "AN_Notes": "Kritischer Review von 30 AI-Fairness-Papers entlang der sechs Intersektionalitaets-Tenets nach Collins und Bilge. Bias-Achsen: Race und Gender in ihrer Verschraenkung als eigenes Argument (Black women, Kritik an Subgruppen-Fairness als 'two-by-two analysis'). Schadensarten aus dem eigenen Argument ueber die Fairness-Forschung selbst: Erasure der Marginalisierten und westlicher Default-Kontext (Exclusionary_Norms). AN_Mitigation_Stage codiert das Pipeline-Inventar (pre-, in-, post-processing), das die Synthese als Tagging-Kategorie strukturiert, sowie die eigenen organisatorischen Empfehlungen (Reflexivitaet, Zitierintegritaet, Community-Einbindung); der Review bewertet Engagement mit Intersektionalitaet, nicht die Wirksamkeit der Interventionen, daher Proposed. Gender wird nicht eigens definiert; Social_Construct aus der uebernommenen Bestimmung, dass Macht soziale Teilungen wie gender hervorbringt.",
+        "AN_Coding_Basis": "Fulltext",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "Intersectionality posits that unequal outcomes reflect a systemic reproduction of existing power relations [28]. Systemic descriptions of bias concern structures and oppressive forces which subsequently permeate sociotechnical",
+            "locator": "4.3.2 Source of bias"
+          },
+          {
+            "quote": "In contrast, statistical descriptions limit sources of bias to the model or data.",
+            "locator": "4.3.2 Source of bias"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Intersectionality, six core tenets (Collins and Bilge)",
+            "quote": "To ground our review methodology and analysis in the following sections, we base our evaluations on Collins and Bilge [29].",
+            "locator": "3 Intersectionality overview"
+          },
+          {
+            "theory": "Intersectionality (Crenshaw)",
+            "quote": "Crenshaw uses the term intersectionality as a metaphor to speak on how 'different systems of oppression overlap,'",
+            "locator": "1 Introduction"
+          },
+          {
+            "theory": "Critical legal studies",
+            "quote": "AI fairness researchers must heed the warnings of critical legal studies: indifference to the social and historical context of groups and their intersections risks reproducing histories of discrimination.",
+            "locator": "6 Inductive analysis"
+          },
+          {
+            "theory": "Decolonial theory",
+            "quote": "We position ourselves within a social justice ethos informed by decolonial theory, and that champions equity over equality as well as reparations to correct historical injustices.",
+            "locator": "1 Introduction, Positionality Statement"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "Intersectionality uses relationality to tie 'intersecting power relations' to how power 'produce[s] social divisions of race, class, gender, etc.' [29].",
+            "locator": "3 Intersectionality overview, Social Power"
+          },
+          {
+            "quote": "In the context of violence against Black women, these works study the interactions of race and gender, as well as racism and patriarchy as systems of subordination.",
+            "locator": "3 Intersectionality overview"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "Consequently, people already at the margins are erased, even in these contexts that ostensibly address fairness, oppression, and complexity.",
+            "locator": "6 Inductive analysis, AI social justice praxis varies"
+          },
+          {
+            "quote": "This privileges western contexts as the 'default' context, resulting in western prototypicality (c.f., white prototypicality [50]).",
+            "locator": "6 Inductive analysis, AI fairness misses critical reflexivity"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Papers are tagged as pre-processing (i.e., pre-training interventions), in-processing (i.e., training-time modeling choices), post-processing (i.e., test-time interventions of model predictions), full pipeline, or processes.",
+            "locator": "4.3.1 Operationalization of intersectionality"
+          },
+          {
+            "quote": "Researchers bridge social justice inquiry and praxis by investing in and valuing the knowledge from communities that their AI systems harm.",
+            "locator": "6 Inductive analysis, Recommendation"
+          }
+        ]
+      }
+    },
+    "Y8J3HI9J": {
+      "source_path": "docs/data/fulltext/Y8J3HI9J.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Paper-ID and corpus title match the text title 'Artificial Intelligence in a Structurally Unjust Society'; authors Ting-An Lin and Po-Hsuan Cameron Chen; 2022; acknowledgements name referees of Feminist Philosophy Quarterly. The text carries no DOI, so the identity rests on title, authors and year."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "teilweise",
+        "Diversitaet": "teilweise",
+        "Feministisch": "ja",
+        "Fairness": "ja"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "Using AI in health care as a case study, we argue that AI bias is a form of structural injustice that exists when AI systems interact with other social factors to exacerbate existing social inequalities"
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Increasing concerns have been raised regarding artificial intelligence (AI) bias, and in response, efforts have been made to pursue AI fairness."
+        ],
+        "Gender": [
+          "When a comprehensive self-tracking app failed to include a menstruation tracking function (Eveleth 2014), it conveyed the message that women's health experiences were not important."
+        ],
+        "Diversitaet": [
+          "This process should engage members of diverse groups, especially marginalized groups, in identifying and deciding on problems to address."
+        ],
+        "Feministisch": [
+          "In the case of AI in health care, several structural gender, race, and class inequalities influence the development and application of AI systems, exacerbating existing health disparities.",
+          "As feminist scholars have long argued, oppressed individuals, through being situated in marginalized positions, have distinct access to knowledge regarding oppression (Collins 1990; hooks 1990)."
+        ],
+        "Fairness": [
+          "the structural-injustice perspective highlights that ensuring the statistical parity of a model's performance may be insufficient to achieve AI fairness"
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "None"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Race_Ethnicity",
+          "Socioeconomic",
+          "Gender"
+        ],
+        "AN_Harm_Types": [
+          "Disparate_Performance",
+          "Direct_Discrimination",
+          "Indirect_Discrimination"
+        ],
+        "AN_Mitigation_Stage": [
+          "Pre_Processing",
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": [
+          "Health_Care"
+        ],
+        "AN_Task": [
+          "Other_Task"
+        ],
+        "AN_Gender_Definition": "Absent",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": [
+          "Unclear"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "Studientyp": "Theoretisch",
+        "AN_Notes": "Philosophischer Beitrag: AI bias als strukturelle Ungerechtigkeit nach Iris Marion Young, Fallbeispiel Gesundheitsversorgung entlang von vier Entwicklungsstufen. Schadensarten aus der eigenen Stufenanalyse in Abschnitt 3.2, die zitierte Faelle als Belege des eigenen Arguments ausfuehrt: Disparate_Performance (schiefe Daten, bessere Leistung fuer hellhaeutige Personen), Direct_Discrimination (Race als Input des VBAC-Scores), Indirect_Discrimination (Gesundheitskosten als Proxy fuer Bedarf, ZIP-Code). Repraesentations- und Anerkennungsschaeden in 4.1 (Menstruations-App, Suchmaschine) sind nur illustrierend zitiert und nicht codiert. Evaluated beschraenkt sich auf die synthetisierte Studie von Pierson et al. (2021): Wahl patientenberichteter Schmerzwerte als Label und diverser Datensatz (Pre_Processing) senkt unerklaerte Schmerzdisparitaeten; keine eigene Evaluation. Uebrige Empfehlungen (Table 1, Minipublics, Beteiligung Marginalisierter, Monitoring) bleiben Vorschlaege. AN_Task Other_Task: klinische Diagnose und Bedarfsschaetzung in der Medizin. Gender als teilweiser Gegenstand ohne bestimmbares Verstaendnis, daher Absent und Unclear.",
+        "AN_Coding_Basis": "Fulltext",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "We suggest understanding AI bias as a form of structural injustice that exists when AI systems interact with other social factors to exacerbate existing social inequalities, making some groups of people more vulnerable to undeserved burdens",
+            "locator": "1. Introduction"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Structural injustice (Iris Marion Young)",
+            "quote": "originally proposed by Iris Marion Young (2011), can serve as a helpful framework for clarifying the ethical concerns surrounding AI bias",
+            "locator": "1. Introduction"
+          },
+          {
+            "theory": "Social connection model of responsibility (Young)",
+            "quote": "Drawing on Young's (2011) social connection model (SCM) of responsibility, we argue that a broader group of people beyond software engineers are responsible for pursuing AI fairness",
+            "locator": "1. Introduction"
+          },
+          {
+            "theory": "Feminist standpoint epistemology (Collins, hooks)",
+            "quote": "As feminist scholars have long argued, oppressed individuals, through being situated in marginalized positions, have distinct access to knowledge regarding oppression (Collins 1990; hooks 1990).",
+            "locator": "6.2 Recommendations"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "Such skewed data distributions produce AI systems with better performance for lightskinned individuals than for people of color.",
+            "locator": "3.2 How Health Disparities May Be Exacerbated"
+          },
+          {
+            "quote": "By directly using VBAC scores as part of its training information, the developed algorithm would replicate the pattern of racial disparity, predict a lower success rate of trial of childbirth labor for Black and Hispanic women, and thus further exacerbate existing health inequalities.",
+            "locator": "3.2 How Health Disparities May Be Exacerbated"
+          },
+          {
+            "quote": "As a result, the choice of health-care costs as a proxy for health needs fails to genuinely reflect health needs and intensifies racial disparities.",
+            "locator": "3.2 How Health Disparities May Be Exacerbated"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Instead, they chose to train the algorithm based on a dataset of knee X-ray images with high racial and socioeconomic diversity, using patients' reported pain scores as labels.",
+            "locator": "6.2 Recommendations"
+          },
+          {
+            "quote": "Second, attention should be paid to power dynamics throughout the decision-making process.",
+            "locator": "6.2 Recommendations"
+          }
+        ],
+        "AN_Mitigation_Status": [
+          {
+            "quote": "The resulting AI system predicted pain scores with a much lower percentage of unexplained pain disparities than the diagnoses made by physicians following standard clinical guidelines.",
+            "locator": "6.2 Recommendations"
+          }
+        ]
+      }
+    },
+    "ZLMLP53P": {
+      "source_path": "docs/data/fulltext/ZLMLP53P.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Paper-ID and corpus title match the text title 'Queer In AI: A Case Study in Community-Led Participatory AI'; DOI 10.1145/3593013.3594134; authors Organizers of QueerInAI with named co-authors; FAccT '23, 2023."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "teilweise",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "LLMs also overwhelmingly fail to account for non-binary genders and pronouns, contributing to erasure of these identities [17, 32]."
+        ],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "In this paper, we present Queer in AI as a case study for community-led participatory design in AI."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "These technologies have caused numerous harms to queer people, including privacy violations, censoring and downranking queer content, exposing queer people and spaces to harassment by making them hypervisible, deadnaming and outing queer people."
+        ],
+        "Gender": [
+          "The framing and use of common AI systems that interact with gender are thus often problematic, and inherently cisnormative and heteronormative, so that even well-meaning, purportedly inclusive AI projects are prone to 'designing out' certain queer lives [58]."
+        ],
+        "Diversitaet": [
+          "fostering cultures of participation in AI, welcoming and empowering marginalized participants, critiquing poor or exploitative participatory practices"
+        ],
+        "Feministisch": [
+          "Queer in AI uses the lens of intersectionality as a means of critical inquiry to identify how interlocking forms of oppression, such as racism and sexism, co-construct and exacerbate social and structural disparities [26]."
+        ],
+        "Fairness": [
+          "computational techniques generally encode narrow conceptualizations of fairness where queer identities are assumed to be known, observable, measurable, discrete, and static [80]."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "None"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Sexual_Orientation_Identity",
+          "Race_Ethnicity",
+          "Socioeconomic",
+          "Nationality_Migration",
+          "Disability",
+          "Intersectional",
+          "Other_Axis"
+        ],
+        "AN_Harm_Types": [
+          "Exclusionary_Norms",
+          "Erasure"
+        ],
+        "AN_Mitigation_Stage": [
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "None"
+        ],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": [
+          "Non_Binary_Inclusive",
+          "Intersectional"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "Studientyp": "Empirisch",
+        "AN_Notes": "Fallstudie der Organisation Queer in AI mit eigenen Mitglieder- und Empfaengerbefragungen. Achsen beziehen sich auf Marginalisierung in der AI-Forschungsgemeinschaft und werden ueber eigene Gruppenvergleiche und das eigene Argument gefuehrt; Other_Axis = Kaste ('class or caste'). Gender und Sexual_Orientation_Identity, weil das Werk Diskriminierung nach 'gender and sexual orientation' benennt und trans sowie nicht-binaere Personen als eigene Kategorien fuehrt. Intersectional: Belastungen 'compounded for those marginalized based on intersecting identities'. Schadensarten aus eigenen Beobachtungen: exklusive Geschlechtsabfragen bei Konferenzregistrierung (Exclusionary_Norms), Chat-Software blockiert queere Begriffe (Erasure); die in Abschnitt 2 gelisteten AI-Schaeden (Outing, Hassrede, Zensur) sind zitiert und nicht codiert. Evaluated beschraenkt sich auf die organisatorischen Massnahmen der Organisation (Stipendienprogramm, Workshops, Konferenzleitfaden) mit berichteten Befragungsergebnissen und Adoptionsstand; es handelt sich um Massnahmen gegen Ausschluss aus der AI-Forschung, nicht um technische Bias-Mitigation. Kein ausdrueckliches Gender- oder Bias-Verstaendnis formuliert.",
+        "AN_Coding_Basis": "Fulltext",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Theory_Reference": [
+          {
+            "theory": "Intersectionality as critical inquiry (Collins and Bilge)",
+            "quote": "Queer in AI uses the lens of intersectionality as a means of critical inquiry to identify how interlocking forms of oppression, such as racism and sexism, co-construct and exacerbate social and structural disparities [26].",
+            "locator": "3.2 Participation and Intersectionality"
+          },
+          {
+            "theory": "Community-based participatory action research as decolonizing epistemology",
+            "quote": "Community-based participatory action research thus also serves as a decolonizing epistemological framework which inherently interrogates power and privilege [47].",
+            "locator": "3.3.1 Research"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "This disproportionately impacts disabled and neurodivergent members, and is compounded for those marginalized based on intersecting identities.",
+            "locator": "5.2 Accessibility"
+          },
+          {
+            "quote": "Barriers to acceptance are only amplified for queer individuals also marginalized on intersecting axes like class or caste.",
+            "locator": "2 Marginalization of queer people in STEM and AI"
+          },
+          {
+            "quote": "For example, 61% of the aid recipients identify as Black, Latinx, indigenous, or a person of color, compared to 43% for the organizers and 35% for the community.",
+            "locator": "4.1.2 People helped"
+          },
+          {
+            "quote": "As in any public space, queer conference-goers might face discrimination based on their gender and sexual orientation.",
+            "locator": "4.3 Inclusive Conference Guide, Part 1"
+          },
+          {
+            "quote": "While tests like the GRE claim to level the playing field for applicants, they institute barriers to individuals from the Global South and reify colonialism under a veneer of fairness.",
+            "locator": "4.1.3 Critical reflection"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "creating forms with inclusive gender categories and disclosing the data usage [105]",
+            "locator": "4.3 Inclusive Conference Guide, Part 1"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "discussion around exclusionary gender collection practices on conference registration forms led to the creation of an inclusive conference guide",
+            "locator": "4 Queer in AI initiatives"
+          },
+          {
+            "quote": "virtual chat software blocked common queer terms such as 'queer' or 'lesbian', thus preventing queer attendees from communicating freely.",
+            "locator": "4.3 Inclusive Conference Guide"
+          }
+        ],
+        "AN_Mitigation_Status": [
+          {
+            "quote": "When prompted to rate how welcome they felt at these workshops, the response was overwhelmingly positive",
+            "locator": "4.2.1 Workshop Organizing"
+          },
+          {
+            "quote": "Most significantly, despite organizers' efforts the guide has seen relatively modest adoption.",
+            "locator": "4.3.1 Critical Reflection"
+          }
+        ]
+      }
+    }
+  }
+}

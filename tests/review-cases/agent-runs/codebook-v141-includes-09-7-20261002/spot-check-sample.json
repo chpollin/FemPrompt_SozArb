@@ -1,0 +1,43 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-09-7-20261002",
+  "status": "proposed",
+  "seed": 20261011,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [],
+  "disagreeing_works": [
+    "8WBUGXRR",
+    "DUV4TUG3",
+    "PAZJHB8J",
+    "VVEEL68I"
+  ],
+  "drawn": [
+    "8WBUGXRR",
+    "DUV4TUG3",
+    "PAZJHB8J",
+    "VVEEL68I"
+  ],
+  "flagged_additions": [
+    "BBLJ4RG3",
+    "JJLSMEQA",
+    "JKF6VAQB"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "DUV4TUG3": "corpus and text titles differ, Work-Version binding to confirm, Binary_Categorical with residual other",
+    "PAZJHB8J": "several short citations do not match the reference list, weakens cited cases",
+    "VVEEL68I": "Indirect_Discrimination from a bracketed example, theory reference via critical participatory design",
+    "BBLJ4RG3": "agent Unclear against the human Include",
+    "JJLSMEQA": "agent Unclear against the human Include",
+    "JKF6VAQB": "agent Exclude against the human Include"
+  },
+  "track_agreement_sha256": "0e050a7e3f50a65a7f57ba79c66753bd47f69f2437e189157eb77fb888a44787"
+}

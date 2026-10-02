@@ -1,0 +1,50 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-14-10-20261002",
+  "status": "proposed",
+  "seed": 20261016,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "4PK8UN82",
+    "DGLWM93D",
+    "UDZLIJWX"
+  ],
+  "disagreeing_works": [
+    "AK7K4P97",
+    "HMDFMBV3",
+    "JPUCNHNU",
+    "K6JQ7SVA",
+    "MIT8HTC6",
+    "WLV8L8PM",
+    "YN9JAREI"
+  ],
+  "drawn": [
+    "4PK8UN82",
+    "DGLWM93D",
+    "HMDFMBV3",
+    "K6JQ7SVA",
+    "UDZLIJWX"
+  ],
+  "flagged_additions": [
+    "AK7K4P97",
+    "WLV8L8PM",
+    "YN9JAREI"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "YN9JAREI": "publication type between practice report and general guide, Evaluated from an informal single test",
+    "HMDFMBV3": "whether political orientation is a disadvantage axis under Other_Axis",
+    "WLV8L8PM": "Social_Construct only from the heteronormativity framing",
+    "K6JQ7SVA": "Disparate_Performance from a formal derivation without measurement",
+    "AK7K4P97": "decolonisation of AI between framing concept and policy demand"
+  },
+  "track_agreement_sha256": "6ec9d9c471d1068de349f0a334af723844a7ad2029377d5a9224e6ffc7265838"
+}

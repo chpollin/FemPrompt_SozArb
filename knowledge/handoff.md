@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-01
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Claude Code (Claude Opus 5.5)
 related: [INDEX, plan, journal, project, analysis-methods, governance, verification, testing, standards]
@@ -20,7 +20,7 @@ related: [INDEX, plan, journal, project, analysis-methods, governance, verificat
 
 ## Current result
 
-State of 1 October 2026, evening. `main` is the integration branch and carries all work of the day, including the merged branch `companion-redesign`, and `origin/main` equals it. The GitHub repository has been private since 1 October 2026. GitHub Pages stays public at https://chpollin.github.io/FemPrompt_SozArb/ and serves `docs/` from `main` as a legacy build, which exposes the internal working surfaces but not the git-ignored reading layer. The switch to `build/site/` is decision 3 in [[plan#Open decisions]].
+State of 2 October 2026. `main` is the integration branch and is ahead of `origin/main` by the unpushed commits of 2 October. The GitHub repository has been private since 1 October 2026. GitHub Pages stays public at https://chpollin.github.io/FemPrompt_SozArb/ and serves `docs/` from `main` as a legacy build, which exposes the internal working surfaces but not the git-ignored reading layer. The switch to `build/site/` is decision 3 in [[plan#Open decisions]].
 
 The full texts stay in the private repository by operator decision of 1 October 2026, which supersedes the plan of 29 September to remove protected texts. The laptop branch `prepare-expert-verification`, which carried that removal, is not merged. A clone obtains the PRISM reading layer by running `npm run build` from the tracked `generated/markdown_clean/`.
 
@@ -33,23 +33,15 @@ The day's results, each documented at its canonical place, are the following.
 - Bounded file names and the 120-character limit for tracked paths ([[data#File naming and path length]]).
 - The draft codebook amendment v1.4 ([[codebook-v1.4-proposal]]) and an answer draft for SQ1 over grounded Assertions in [sq1-use.md](../research-vault/40_output/literature-report/sq1-use.md).
 
-A parallel change adopts codebook v1.4 and makes the coding run harness-agnostic. It owns [[update-protocol]], [[codebook-v1.4-proposal]], `assessment/` and the coding parts of [[analysis-methods]] and [[data]], and its state is recorded there once it lands.
+On 2 October 2026 the analysis-coding run under codebook 1.4.1 coded the included works with full text that had no 1.4 coding and integrated them into the agent track ([[update-protocol#Coding run of 2 October 2026]]). The UI fixes of the plan and of the independent acceptance review of the result site lie on the unmerged branch `worktree-agent-ad2a266c70c16ddd6`, built and checked green, whose merge into `main` is the operator's ([[plan#UI development]]).
 
 ## Continuation point
 
 1. The two reviewers screen their assigned open papers in PRISM, in a local clone with Chrome or Edge, following the setup in the README and `docs/help.html#prism`.
-2. Integrate the codebook v1.4 adoption and run the analysis-coding agents with the separate AI Agent Review once the run model is chosen (decision 10).
-3. Obtain the binding-rule permission (decision 1) and bind the prepared 2026 reading texts.
-4. Continue the SQ1 answer under step 4 of [[plan#Answering the research questions]].
-5. Start the independent acceptance review of the Evidence Companion under [[plan#UI development]].
-
-## Decisions to preserve
-
-- The review delivers the evidence base. Recommendations found in the literature are reported as recommendations of their sources ([[project#Project goal]]).
-- Human reviewers see no AI pre-assessment. A record seeded from the expert decision confirms that decision and is never a second independent human track (ADR-042, ADR-044).
-- Human verification may cover an individual statement or field and applies only to the named content and its evidence basis. It is accepted but not implemented, and PRISM offers no verification action ([[governance#Verification scope decision, 22 September 2026]]).
-- The public Evidence Companion is the allowlisted result site from `build/site/` ([[governance#Publication boundary]]). Deployment, push and merge remain operator-gated.
-- Additive Zotero writes are authorised under [[governance#Authorised additive Zotero import]]. Existing-item corrections need their own scoped operation.
+2. Merge the UI branch after the operator's review, then the operator review on the phone.
+3. The domain experts take the spot checks in each run's `spot-check-sample.json` and decide the human and agent decision divergences the completion package lists.
+4. Build the partial-recode contract and recode the works coded under 1.3, and resolve the Work duplicates the run reported ([[plan#Analysis tool follow-ups]], [[plan#Source and corpus readiness]]).
+5. Write the answer drafts for SQ2 to SQ5 from the coded fields and continue the SQ1 answer under step 4 of [[plan#Answering the research questions]].
 
 ## Checkout and local material
 

@@ -1,0 +1,34 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-02-3-20261002",
+  "status": "proposed",
+  "seed": 20261004,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "LXDG4KQK"
+  ],
+  "disagreeing_works": [
+    "AXEIVEW3",
+    "Y6M97SWQ"
+  ],
+  "drawn": [
+    "AXEIVEW3",
+    "LXDG4KQK",
+    "Y6M97SWQ"
+  ],
+  "flagged_additions": [],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "AXEIVEW3": "Include depends on whether general youth work counts as a field of social work, no AN_Population value for youth work",
+    "Y6M97SWQ": "AN_Theory_Reference boundary, whether ethical evaluation frameworks count as theory"
+  },
+  "track_agreement_sha256": "b4970abd43ff4bc3582204994bc4fcb54c90458dcf7d47cda99424a169cf832c"
+}

@@ -1,0 +1,722 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.2",
+  "codebook_version": "1.4.1",
+  "run_id": "codebook-v141-includes-05-6-20261002",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "decisions": {
+    "3XMBE43Z": {
+      "source_path": "docs/data/fulltext/3XMBE43Z.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Algorithmic Governance: Gender Bias in AI-Generated Policymaking?' matches the corpus title. Authors Dialekti Athina Voutyrakou and Constantine Skordoulis, National and Kapodistrian University of Athens, research article published online 1 August 2025 under CC BY 4.0. The text carries no DOI; the stable source identifier is the manifest version binding with matching SHA-256."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "We tested these experiments in two different AI tools, namely ChatGPT (GPT-4) and Microsoft Copilot."
+        ],
+        "Prompting": [
+          "Crucially, gender-specific considerations are largely omitted unless explicitly prompted, underscoring the importance of precise, inclusive language in AI-assisted design and policy applications."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Across all four experiments, the AI tools consistently reflected underlying structural gender biases."
+        ],
+        "Gender": [
+          "This study examines whether AI systems inherently consider gender in policy proposals, both when gender is explicitly mentioned in prompts and when it is not."
+        ],
+        "Diversitaet": [
+          "The aim was to evaluate the inclusivity",
+          "In addition, for the first and fourth prompts, we included variations that referenced non-binary individuals."
+        ],
+        "Feministisch": [
+          "This reveals that the supposed neutrality of AI tools actually reproduces an androcentric norm, which in this case excludes bodies and needs not aligned with the gendered definition of the 'typical worker'. Feminist theory has pointed out how seemingly neutral technical standards, like office temperature, can produce bodily inequalities and disproportionately affect women [45]."
+        ],
+        "Fairness": [
+          "This underscores a broader concern in algorithmic governance: as Mehrabi et al. emphasize [52], fairness interventions must align with real-world harm mitigation and not merely with metric optimization."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "Research_Instrument"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Sexual_Orientation_Identity"
+        ],
+        "AN_Harm_Types": [
+          "Exclusionary_Norms",
+          "Erasure",
+          "Stereotyping"
+        ],
+        "AN_Mitigation_Stage": [
+          "Pre_Processing",
+          "In_Training",
+          "Prompt_Practice",
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "Other_Task"
+        ],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": [
+          "Social_Construct",
+          "Non_Binary_Inclusive"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "Four policy prompts (restrooms, snow removal, office temperature, business-trip expenses), each submitted 50 times to ChatGPT (GPT-4) and Microsoft Copilot in neutral, male, female and partly non-binary or young-mother variants; themes retained at a 70 percent threshold. Prompts serve as research instrument; the role framing of the prompts ('If you were the city mayor') is not described as a technique, so AN_Prompt_Techniques = None. Other_Task: AI as policy advisor for workplace and municipal policy design, outside social work. Non-binary employees are an analysed group, coded as Sexual_Orientation_Identity; intersectionality is invoked in the discussion but not analysed. Harm types from the work's own results: male default (Exclusionary_Norms), omission of women's and non-binary needs in neutral prompts (Erasure), baby-changing only in women's restrooms read as care stereotype (Stereotyping). Mitigation only proposed in the conclusion: audits, Human-in-the-Loop and multidisciplinary teams (Organisational_Process), curated gender-balanced datasets (Pre_Processing), fine-tuning (In_Training), equity principles 'not just in prompts' (Prompt_Practice). Gender understanding: the analysis carries non-binary variants as own categories; Connell's view of gender relations as institutionally embedded is applied to restroom design. Theory frame: Tronto's ethics of care, Young's justice as inclusion, capabilities approach, Connell, Grosz, feminist spatial planning, design justice.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "Bias in AI refers to persistent inaccuracies or skewed outcomes that systematically favor certain groups or viewpoints. Gender bias in AI, in particular, arises when systems consistently advantage or disadvantage individuals based on gender",
+            "locator": "Section 2 Literature Review, first paragraph"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Ethics of care (Tronto) and justice as inclusion (Young), capabilities approach (Sen, Nussbaum)",
+            "quote": "Drawing on Joan Tronto's ethics of care [53] and Iris Marion Young's concept of justice as inclusion [54], this perspective argues that fair governance must recognize and respond to differentiated social positions, embodied needs, and the lived experiences of marginalized groups.",
+            "locator": "Section 5 Discussion"
+          },
+          {
+            "theory": "Gender relations theory (Connell) and feminist spatial planning",
+            "quote": "As Connell highlights [40], gender relations are institutionally embedded in everyday practices, such as restroom design. Feminist spatial planning suggests a shift from 'biological normalcy' to socially just accessibility inclusive of everyone [41, 42].",
+            "locator": "Section 5 Discussion, restroom scenario"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "In addition, for the first and fourth prompts, we included variations that referenced non-binary individuals.",
+            "locator": "Section 3 Methodology"
+          },
+          {
+            "quote": "As Connell highlights [40], gender relations are institutionally embedded in everyday practices, such as restroom design.",
+            "locator": "Section 5 Discussion"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "This reveals that the supposed neutrality of AI tools actually reproduces an androcentric norm, which in this case excludes bodies and needs not aligned with the gendered definition of the 'typical worker'.",
+            "locator": "Section 5 Discussion, Exclusionary_Norms"
+          },
+          {
+            "quote": "Across all four policy scenarios, the AI tools consistently failed to incorporate gender-specific needs unless explicitly prompted to do so.",
+            "locator": "Section 5 Discussion, Erasure"
+          },
+          {
+            "quote": "Installing baby changing facilities solely in women's restrooms reflects gender stereotypes linking childcare exclusively with the role of the mother.",
+            "locator": "Section 5 Discussion, Stereotyping"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Fine-tuning models with carefully curated, gender-balanced, and intersectional datasets is essential to counteract androcentric defaults.",
+            "locator": "Section 6 Conclusion"
+          },
+          {
+            "quote": "This includes embedding equity principles not just in prompts but in model training, evaluation criteria, and institutional oversight, to avoid the unintended harm of biased policymaking that undermines democratic values and social equity.",
+            "locator": "Section 5 Discussion"
+          },
+          {
+            "quote": "Moreover, integrating Human-in-the-Loop mechanisms allows for continuous human oversight during both training and deployment, enabling experts to intervene when biased or exclusionary outputs arise [62].",
+            "locator": "Section 6 Conclusion"
+          }
+        ]
+      }
+    },
+    "6L6WSDC8": {
+      "source_path": "docs/data/fulltext/6L6WSDC8.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'How Far Can We Extract Diverse Perspectives from Large Language Models?' matches the corpus title. Authors partly listed (Shirley Anugrah Hayati, Minhwa Lee; University of Minnesota and Google DeepMind affiliations, further authors only recoverable from the e-mail line), year and venue are not printed in the converted text and no DOI is given; the version type in the manifest is unknown. The stable source identifier is the manifest version binding with matching SHA-256. No title or DOI conflict."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "ja",
+        "Feministisch": "nein",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "In this study, we explore LLMs' capacity of generating diverse perspectives and rationales on subjective topics such as social norms and argumentative texts."
+        ],
+        "Prompting": [
+          "Motivated by how humans form opinions based on values, we propose a criteria-based prompting technique to ground diverse opinions.",
+          "Second, we introduce criteria-based diversity prompting to extract and ground diverse perspectives from LLMs."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Instead of providing a single viewpoint, an ideal NLP model should accommodate various perspectives to avoid any bias towards a dominant one."
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "Joshi et al. (2020) argue that NLP research is biased toward Western perspectives. Thus, diverse perspectives from minority populations are relatively overlooked. Our work is important to uncover the extent to which perspective diversity can be extracted from LLMs.",
+          "First, we propose perspective diversity as a new focus for generative LLMs, distinct from lexical, syntactical, and semantic diver- sity mainly explored in previous studies."
+        ],
+        "Feministisch": [],
+        "Fairness": [
+          "Our work aligns closely with Lahoti et al. (2023) by advocating for fairness in LLM outputs through perspective diversity, which goes beyond semantic variability."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "Recommended_Practice",
+          "Research_Instrument"
+        ],
+        "AN_Prompt_Techniques": [
+          "ICL",
+          "Thought_Generation"
+        ],
+        "AN_Bias_Axes": [
+          "None"
+        ],
+        "AN_Harm_Types": [
+          "None"
+        ],
+        "AN_Mitigation_Stage": [
+          "Prompt_Practice"
+        ],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "Other_Task"
+        ],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": [
+          "Not_Applicable"
+        ],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "Maximum perspective diversity extraction from GPT-4, GPT-4o, GPT-3.5, GPT-3, Llama3-70b-chat and Mixtral on Social-Chem-101, Change My View, a hate-speech dataset and Moral Stories, compared with crowd-worker opinions. The proposed criteria-based diversity prompting (generate stance, criteria words, then reasons) is coded Thought_Generation; one-shot and five-shot demonstrations are ICL; the step-by-step recall prompting iteratively extends the opinion list and has no separate family. Prompting is both the proposed practice and the instrument. Diversitaet rests on perspective diversity as the central object, linked by the authors to overlooked minority perspectives; no social group is analysed, so AN_Bias_Axes = None (crowd-worker race and education appear only as sample demographics in the limitations and appendix). Bias appears only as bias towards a dominant viewpoint, hence Bias_Ungleichheit teilweise and AN_Bias_Definition Implicit_Only. Mitigation: criteria-based prompting against a single dominant opinion, evaluated by semantic and perspective diversity scores and a human preference study (AN_Mitigation_Status Evaluated, limited to this intervention). Other_Task: generation of diverse opinions and data for subjective NLP tasks such as annotation and data augmentation, outside social work. The values theory (Rokeach) frames opinion formation, not gender or bias, so AN_Theory_Reference = No.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Figure 4 shows that criteria-based prompting consistently outperforms free-form prompting across datasets.",
+            "locator": "Section 4.1"
+          }
+        ],
+        "AN_Prompt_Techniques": [
+          {
+            "quote": "Our primary prompting setup uses in-context learning with one example of ten opinions per statement.",
+            "locator": "Section 3.1 Models and Prompting"
+          },
+          {
+            "quote": "Our criteria-guided prompting is as follows: 'Given a statement , generate a Stance and explain its Reasons with a list of Criteria that affect a model's perspective'.",
+            "locator": "Section 2.2 Step 1: Think of Your Criteria First before Making Opinions"
+          }
+        ]
+      }
+    },
+    "HLBXNWAZ": {
+      "source_path": "docs/data/fulltext/HLBXNWAZ.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Intersectional analysis of visual generative AI: the case of stable diffusion' matches the corpus title. Authors Petra Jääskeläinen, Nickhil Kumar Sharma, Helen Pallett and Cecilia Åsberg; received 29 April 2024, accepted 23 January 2025, published online 17 March 2025 under CC BY 4.0 (Springer, main paper). The text carries no DOI; the stable source identifier is the manifest version binding (version of record) with matching SHA-256."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "Artists who are using vGenAI need more knowledge and resources that can inform the critical use of these tools."
+        ],
+        "Generative_KI": [
+          "In this paper, we critically analyze Stable Diffusion (SD), a widely used open-source vGenAI tool, through visual and intersectional analysis."
+        ],
+        "Prompting": [
+          "When it came to the visual images, we used a specific prompting strategy to produce a dataset comprising 180 images using SDXL.",
+          "By keeping prompts minimal, we aimed to observe the default outputs and hegemonic aesthetics in the imagery."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "We demonstrate how imagery produced through SD perpetuates pre-existing power systems such as sexism, racism, heteronormativity, and ableism, and assumes a default individual as white, able-bodied, and masculine-presenting."
+        ],
+        "Gender": [
+          "Across various images, gender assignments were automatically applied by SDXL, resulting in aesthetics that excluded feminine or non-binary representations."
+        ],
+        "Diversitaet": [
+          "Consequently, unless specifically prompted for diversity, the AI-generated imagery lacks diversity to a significant extent, perpetuating ableist norms by portraying stereotypical bodies with uniform characteristics as the visual standard, based on what we witnessed with the 180 samples gathered for this study."
+        ],
+        "Feministisch": [
+          "Through this, we urge reflection on embedding anti-oppressive, anti-structural forces in technology design, and suggest potential ways forward through an intersectional feminist approach requiring dialogue between academia, industry, creative practitioners, and policymakers."
+        ],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "Research_Instrument",
+          "Recommended_Practice"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Race_Ethnicity",
+          "Intersectional",
+          "Disability",
+          "Age",
+          "Socioeconomic",
+          "Language_Culture",
+          "Sexual_Orientation_Identity",
+          "Physical_Appearance",
+          "Nationality_Migration"
+        ],
+        "AN_Harm_Types": [
+          "Stereotyping",
+          "Erasure",
+          "Exclusionary_Norms",
+          "Misrepresentation"
+        ],
+        "AN_Mitigation_Stage": [
+          "Pre_Processing",
+          "Prompt_Practice",
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "None"
+        ],
+        "AN_Gender_Definition": "Explicit",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": [
+          "Social_Construct",
+          "Non_Binary_Inclusive",
+          "Intersectional"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Empirisch",
+        "AN_Notes": "Interpretative qualitative visual and intersectional analysis of 180 SDXL images from 18 deliberately minimal prompts (privilege and discrimination, ideology, everyday scenarios) on micro, meso and macro levels, complemented by a review of online and academic sources. Prompts serve as research instrument; minimal prompts were chosen on purpose, no technique is used or recommended, so AN_Prompt_Techniques = None; the discussion recommends that users be conscious of the prompts they use (Recommended_Practice). AN_Task = None: the work audits default image outputs without a professional application task; creative and design use is context only. Axes are coded from the own image analysis: gender, skin tone and ethnicity, disability and body size, age, wealth and class, immigrant/refugee versus citizen, Global North cultural hegemony, heteronormativity and absent non-binary representations; Intersectional from the micro-level analysis of the white, adult, able-bodied, heteronormative masculine default and single-axis diversification. Religion was excluded from the scope by the authors. Harm types: stereotyping, exclusion of feminine, non-binary and disabled representations (Erasure), white able-bodied masculine default (Exclusionary_Norms), reductionist portrayal of cultures and Global South as poor (Misrepresentation). The violent-symbol finding (confederate flag) concerns imagery, not language, so Toxicity is not coded. Mitigation only proposed within algorithmic reparation: curated training data (Pre_Processing), conscious prompting by users (Prompt_Practice), responsible designers, diverse teams, regulation and criminal culpability (Organisational_Process). Fairness = nein, since fairness research is mentioned only in passing and the work frames its proposals as reparation rather than fairness criteria. Gender definition from footnote 2, which replaces man/woman by heteronormative feminine/masculine representations to avoid reinforcing the binary norm.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Gender_Definition": [
+          {
+            "quote": "By simplistically interpreting the images using terms such as 'man' and 'woman', we are at danger of reinforcing the binary gender norm (the assumption that people of a certain gender should be associated with a certain set of visual features). Thus, throughout this paper we use the terms \"hetero-normative feminine/masculine representations\" in discussing heteronormative gender norms in visual aesthetics.",
+            "locator": "Section 2.1, footnote 2"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "Power systems are essentially beliefs, cultural norms, and practices (Guillaumin 2002) that reinforce certain ideologies, such as heteronormativity, patriarchy, racism, and ableism.",
+            "locator": "Section 5.3"
+          },
+          {
+            "quote": "Thus, SD inadvertently excludes specific representations of individuals, such as wealthy people of color, economically disadvantaged white individuals, transmasculine/cismasculine feminists, and notably, feminists of color across all genders.",
+            "locator": "Section 5.1"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "Perhaps most fundamentally, what our intersectional approach reveals-which would not necessarily be so apparent if we had chosen to focus on, for example, gender or ethnicity alone-is that in many cases the hegemonic representation that is constructed through the SD imagery is a figure who is white, adult, able-bodied, and heteronormative masculine presenting.",
+            "locator": "Section 5.1, Intersectional"
+          },
+          {
+            "quote": "The immigrants, again, featured only darker skin tones, whereas the citizens had a wider variety of representation.",
+            "locator": "Section 4.1, Nationality_Migration"
+          },
+          {
+            "quote": "Notably, there were no representations of disabilities, such as prosthetics, and a notable absence of individuals with larger or smaller body sizes.",
+            "locator": "Section 4.1, Disability and Physical_Appearance"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "This absence was particularly notable in categories of criminality, law enforcement, citizenship, and immigration, where stereotypes of masculine figures were consistently depicted.",
+            "locator": "Section 4.1, Stereotyping"
+          },
+          {
+            "quote": "Across various images, gender assignments were automatically applied by SDXL, resulting in aesthetics that excluded feminine or non-binary representations.",
+            "locator": "Section 4.1, Erasure"
+          },
+          {
+            "quote": "Our investigation revealed a significant influence of Global North hegemony in the imagery, with much of it depicting US settings.",
+            "locator": "Section 4.3, Exclusionary_Norms"
+          },
+          {
+            "quote": "Thus, our results illustrate traces of both digital cultural colonization wherein imagery is transformed to align with hegemonic cultural aesthetics, and cultural appropriation where imagery fails to capture the complexity of cultural contexts and instead presents a reductionist portrayal.",
+            "locator": "Section 4.3, Misrepresentation"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Such interventions could include efforts to curate training data better, and involve designers",
+            "locator": "Section 6, Pre_Processing and Organisational_Process"
+          },
+          {
+            "quote": "Users of vGenAI (such as artists and creators) can also contribute to a more reparative approach by being more conscious of how they are generating images-e.g. what kind of prompts they use, and what kind of aesthetics they pick into the images that are used in their work and further distributed in the society.",
+            "locator": "Section 6, Prompt_Practice"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Intersectionality (Crenshaw, Collins) in the micro-meso-macro framework of Sharma et al. (2023)",
+            "quote": "Our intersectional approach builds on Sharma et al. (2023)'s analytical framework, which encompasses 3 key lenses of intersectionality: (1) the micro (individual) lens; (2) the meso (institutional) lens; and the macro (power systems) lens.",
+            "locator": "Section 2.2"
+          },
+          {
+            "theory": "Feminist STS, intersectional critical theory and feminist media and visual cultural studies",
+            "quote": "Our methodological approach draws primarily from feminist Science and Technology Studies (STS) (e.g. Wajcman 2010; D'Ignazio and Klein 2020; Adkins et al. 1999; Lury 2020), intersectional critical theory (Crenshaw 1989; Sharma et al. 2023), and feminist media and visual cultural studies (Evans 1999; Hall 1997).",
+            "locator": "Section 1 Introduction"
+          },
+          {
+            "theory": "Algorithmic reparation (Davis et al. 2021)",
+            "quote": "Thus, we structure our recommendations around Davis et al. (2021)'s concept of 'algorithmic reparation'",
+            "locator": "Section 6"
+          }
+        ]
+      }
+    },
+    "JZN2I6J5": {
+      "source_path": "docs/data/fulltext/JZN2I6J5.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'Prompting Fairness: Learning Prompts for Debiasing Large Language Models' matches the corpus title. Authors Andrei-Victor Chisca, Andrei-Cristian Rad and Camelia Lemnaru, Technical University of Cluj-Napoca. Year, venue and DOI are not printed in the converted text and the manifest version type is unknown. The stable source identifier is the manifest version binding with matching SHA-256. No title or DOI conflict."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "ja"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "Large language models are prone to internalize social biases due to the characteristics of the data used for their self-supervised training scheme."
+        ],
+        "Prompting": [
+          "We present a novel prompt-tuning method for reducing biases in encoder models such as BERT or RoBERTa. Unlike other methods, we only train a small set of additional reusable token embeddings that can be concatenated to any input sequence to reduce bias in the outputs."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Considering their recent emergence and wide availability to the general public, it is mandatory to identify and alleviate these biases to avoid perpetuating stereotypes towards underrepresented groups."
+        ],
+        "Gender": [
+          "We particularize this method to gender bias by providing a set of templates used for training the prompts"
+        ],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": [
+          "in the form of compact prompt embeddings, which could enable it to implicitly infer a latent concept encompassing the desired behaviour: generating a fair and unbiased output.",
+          "Evaluations on two benchmarks show that our method is on par with the state of the art while having a limited impact on language modeling ability."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "Recommended_Practice"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Race_Ethnicity",
+          "Religion"
+        ],
+        "AN_Harm_Types": [
+          "Stereotyping"
+        ],
+        "AN_Mitigation_Stage": [
+          "Intra_Processing",
+          "Prompt_Practice"
+        ],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "None"
+        ],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": [
+          "Binary_Categorical"
+        ],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "Prompt tuning (trainable soft prompt embeddings concatenated to the input of frozen BERT and RoBERTa) as a debiasing method, trained on 159 gender-profession templates with a KL-divergence loss towards the average distribution across groups, evaluated on SEAT and StereoSet with language-modelling score and pseudo-perplexity. Prompting is the proposed mitigation practice; soft prompt tuning belongs to none of the technique families, and in-context learning appears only as motivation, so AN_Prompt_Techniques = None. Mitigation stage: the work places its intervention at inference ('additional information at inference') with model weights frozen, coded Intra_Processing, and the intervention is a change to the prompt input, coded Prompt_Practice; it is evaluated with mixed results (on par with state of the art, second to INLP on BERT). Axes: gender is the target; race and religion are measured as side effects on StereoSet. Harm type: stereotyping measured by the StereoSet stereotype score; the Gallegos harm list in the introduction is background and not coded. Gender is operationalised as he/she and male/female name pairs without a definition. Bias is determined technically by the stereotype score near 50 percent and by the reference distribution averaged across groups. Generative_KI = ja because the work frames its object as large language models, although the tested models are encoder-only. Fairness = ja because the work is a debiasing method with a fair and unbiased output as target and bias metrics as evaluation.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "For StereoSet, a stereotype score (SS) closer to 50% indicates a less biased model.",
+            "locator": "Section 4 Results"
+          },
+          {
+            "quote": "Probability-based methods, such as StereoSet (Nadeem et al., 2021), quantify bias by measuring how frequently a model chooses a stereotypical word to fill in a masked token.",
+            "locator": "Section 2.1 Bias Quantification Benchmarks"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "We evaluate our gender debiased models on the profession , race and religion tests in StereoSet and report the stereotype scores in Table 4.",
+            "locator": "Section 4, Effect on other types of biases"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "As opposed to removing or hiding information from the model, either at training or at inference time, we aim to give the model additional information at inference,",
+            "locator": "Section 3"
+          },
+          {
+            "quote": "Instead, we base our approach on 'prompt tuning' (Lester et al., 2021), which involves concatenating a set of trainable embeddings to the embedded input of the model while keeping the other parameters frozen.",
+            "locator": "Section 3"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "For example, for gender bias, we could have a bias slot which can be replaced by either 'he' or 'she', another one which could be replaced by either 'his' or 'her' and so on.",
+            "locator": "Section 3, Templates"
+          }
+        ]
+      }
+    },
+    "P82X89Q4": {
+      "source_path": "docs/data/fulltext/P82X89Q4.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'A Competency Framework for AI Literacy: Variations by Different Learner Groups and an Implied Learning Pathway' matches the corpus title. DOI 10.1111/bjet.13556 printed in the header and in the citation line; authors Hyunkyung Chee, Solmoe Ahn and Jihyun Lee; British Journal of Educational Technology 56, 2146-2182, 2025, review article. Manifest version of record with matching SHA-256."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "nein",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "This study aims to develop a comprehensive competency framework for artificial intelligence (AI) literacy, delineating essential competencies and sub- competencies."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Exclude",
+      "reason": "Not_relevant_topic"
+    },
+    "YMABYPKF": {
+      "source_path": "docs/data/fulltext/YMABYPKF.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'What's in a Name? Auditing Large Language Models for Race and Gender Bias' matches the corpus title apart from apostrophe typography. Authors Alejandro Salinas, Amit Haim and Julian Nyarko, Stanford Law School, dated January 27, 2025. The text is a preprint (manifest version type preprint) without DOI; the stable source identifier is the manifest version binding with matching SHA-256."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "ja"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "We employ an audit design to investigate biases in state-of-the-art large language models, including GPT-4."
+        ],
+        "Prompting": [
+          "While providing numerical, decision-relevant anchors in the prompt can successfully counteract the biases, qualitative details have inconsistent effects and may even increase disparities.",
+          "Our approach also allows us to assess the sensitivity of biases to certain design features of the prompt."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "We find that the advice systematically disadvantages names that are commonly associated with racial minorities and women."
+        ],
+        "Gender": [
+          "Similarly, female-perceived names yield systematically worse outcomes than male-perceived names."
+        ],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": [
+          "But because names strongly correlate with race/gender, any disparities we observe may constitute bias in the form of disparate impact.",
+          "The audit we conducted is cost-effective to implement, and thus could be recommended as part of a routine due diligence process before models are released."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": [
+          "Research_Instrument"
+        ],
+        "AN_Prompt_Techniques": [
+          "None"
+        ],
+        "AN_Bias_Axes": [
+          "Gender",
+          "Race_Ethnicity",
+          "Intersectional"
+        ],
+        "AN_Harm_Types": [
+          "Indirect_Discrimination",
+          "Stereotyping"
+        ],
+        "AN_Mitigation_Stage": [
+          "Prompt_Practice",
+          "Organisational_Process"
+        ],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": [
+          "Not_SW_Specific"
+        ],
+        "AN_Task": [
+          "Other_Task"
+        ],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": [
+          "Binary_Categorical",
+          "Intersectional"
+        ],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "Audit study with 42 prompt templates in five scenarios (purchase, chess, public office, sports, hiring) and 40 first names perceived as Black or white and male or female, 100 repetitions each, on GPT-4, GPT-4o, GPT-3.5, Llama-3-70B, Mistral Large and PaLM-2. Prompts are the research instrument; the three context levels (low, qualitative, numeric anchor) are prompt-design variations, not a named technique family, so AN_Prompt_Techniques = None. Mitigation: the numeric anchor in the prompt is evaluated and removes name-based disparities in most scenarios, qualitative context has inconsistent effects (Prompt_Practice, Evaluated); audits at deployment and implementation are recommended (Organisational_Process, Proposed). Intersectional is coded under the AN_Bias_Axes rule because Black female-perceived names yield the worst outcomes, although the authors state that their analysis does not equate to an evaluation of intersectionality. Harm types: Indirect_Discrimination because names act as proxies in advice on offers, salaries and chances (the codebook anchor), and Stereotyping because the authors attribute the disparities to encoded stereotypes, including the reversed basketball case. Other_Task: advice to laypeople in negotiation, hiring salary offers, election and sports predictions, outside social work. Gender is operationalised through male- and female-perceived names without definition. Bias is defined through the legal pair of disparate treatment and disparate impact, which also frames the interpretation (theory reference). Feministisch = nein because the work explicitly declines an intersectional analysis and offers no structural gender critique.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "U.S. anti-discrimination laws generally encompass two distinct types of discriminatory conduct. First, there is 'disparate treatment', which refers to policies or actions that intentionally impose differential treatment due to protected characteristics like race or gender.",
+            "locator": "Section 2.1 Defining Bias in Audit Studies"
+          },
+          {
+            "quote": "Generally speaking, disparate impact refers to decisions and policies that, while not conditioned on race, have differential effects on members of the minority vis-` a-vis the majority group, while lacking a sound justification.",
+            "locator": "Section 2.1 Defining Bias in Audit Studies"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "U.S. anti-discrimination doctrine of disparate treatment and disparate impact",
+            "quote": "Connecting this legal framework to audit studies, it becomes apparent that audit designs are not directed at assessing bias in the form of disparate treatment.",
+            "locator": "Section 2.1"
+          },
+          {
+            "theory": "U.S. anti-discrimination doctrine of disparate treatment and disparate impact",
+            "quote": "Thus, our preferred interpretation of the findings is that they provide evidence for adverse impact, and may thus contribute to a showing of disparate impact along racial and gender lines.",
+            "locator": "Section 5 Discussion"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "Figure 4 suggests Black, female-perceived names yield by far the worst response among all minority groups.",
+            "locator": "Section 4 Results, Intersectional"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "Next, we examine biases for Black/white-associated, male/female-associated names separately.",
+            "locator": "Section 4 Results"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "But because names strongly correlate with race/gender, any disparities we observe may constitute bias in the form of disparate impact.",
+            "locator": "Section 2.1, Indirect_Discrimination"
+          },
+          {
+            "quote": "Overall, the results suggest that the model implicitly encodes common stereotypes, which in turn affects the model's response.",
+            "locator": "Section 4 Results, Stereotyping"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "However, providing the model with a numeric anchor often successfully reduces model reliance on stereotypes, in turn avoiding disparities to materialize.",
+            "locator": "Section 4 Results, Prompt_Practice"
+          },
+          {
+            "quote": "Our findings underscore the importance of conducting audits at the point of LLM deployment and implementation to mitigate their potential for harm against marginalized communities.",
+            "locator": "Abstract, Organisational_Process"
+          }
+        ]
+      }
+    }
+  }
+}

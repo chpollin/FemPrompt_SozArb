@@ -1,0 +1,1687 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.4",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "status": "ai-agent-reviewed",
+  "updated": "2026-10-02T07:15:45Z",
+  "review_context": {
+    "run_id": "codebook-v141-includes-10-8-20261002",
+    "provenance_method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+    "run_manifest": "tests/review-cases/agent-runs/codebook-v141-includes-10-8-20261002/run.json",
+    "review_path": "tests/review-cases/agent-runs/codebook-v141-includes-10-8-20261002/ai-agent-review.json",
+    "review_sha256": "5d84b609dc5266a6e1ac65ea1b3b3746790f7c18c3c19ae490f11cbb63628b2a",
+    "ai_agent_reviewer_actor_id": "codebook-v141-includes-10-8-20261002-ai-agent-review",
+    "input_tracks": [
+      {
+        "reviewer": "ar1",
+        "actor_id": "codebook-v141-includes-10-8-20261002-ar1",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-10-8-20261002/tracks/ar1.json",
+        "sha256": "c683a14400f41341bbe38cdb86b03c8858943b4b28a73d76f8c16721457ad63d",
+        "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-10-8-20261002/tracks/ar1-coding.json",
+        "coding_packet_sha256": "091aedb8917fdb23aec88830688d13eef522f48844e597e8f941f4ed847d1c4f"
+      },
+      {
+        "reviewer": "ar2",
+        "actor_id": "codebook-v141-includes-10-8-20261002-ar2",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-10-8-20261002/tracks/ar2.json",
+        "sha256": "cea643237feaf26d0c29f12d9824193a18d7db8e9cf7fb31fad374e227dea25e",
+        "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-10-8-20261002/tracks/ar2-coding.json",
+        "coding_packet_sha256": "1630a3472e6b17f763e31fbfe79442cba5e129304fc322130dbac61b6943ceef"
+      }
+    ],
+    "paper_sources": {
+      "22KJL3PC": {
+        "path": "docs/data/fulltext/22KJL3PC.md",
+        "sha256": "c6b739f7fa0d3104c71d3d99580ee57901b65f2d0cd4e114c6cb3312a4742ce8",
+        "work_id": "work:43443814-3f53-51e1-af1a-7a3fa57091cc",
+        "version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4",
+        "version_type": "version_of_record",
+        "representative_record_id": "22KJL3PC"
+      },
+      "3AHQEHDF": {
+        "path": "docs/data/fulltext/3AHQEHDF.md",
+        "sha256": "cb83c91015e2601504d2b3b476ed1c1f464dec8c76d7763344097fd9c977a9ce",
+        "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+        "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
+        "version_type": "preprint",
+        "representative_record_id": "3AHQEHDF"
+      },
+      "6BZ5353S": {
+        "path": "docs/data/fulltext/3AHQEHDF.md",
+        "sha256": "cb83c91015e2601504d2b3b476ed1c1f464dec8c76d7763344097fd9c977a9ce",
+        "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+        "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
+        "version_type": "preprint",
+        "representative_record_id": "3AHQEHDF"
+      },
+      "3AQ2K3BX": {
+        "path": "docs/data/fulltext/3AQ2K3BX.md",
+        "sha256": "155b9636f68a2f807705aee9ee9d2296ebe6e3bd72509cf8801f1b573972c4aa",
+        "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+        "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+        "version_type": "version_of_record",
+        "representative_record_id": "3AQ2K3BX"
+      },
+      "CLADZZKS": {
+        "path": "docs/data/fulltext/3AQ2K3BX.md",
+        "sha256": "155b9636f68a2f807705aee9ee9d2296ebe6e3bd72509cf8801f1b573972c4aa",
+        "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+        "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+        "version_type": "version_of_record",
+        "representative_record_id": "3AQ2K3BX"
+      },
+      "SE579V7B": {
+        "path": "docs/data/fulltext/3AQ2K3BX.md",
+        "sha256": "155b9636f68a2f807705aee9ee9d2296ebe6e3bd72509cf8801f1b573972c4aa",
+        "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+        "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+        "version_type": "version_of_record",
+        "representative_record_id": "3AQ2K3BX"
+      },
+      "6L85PRUW": {
+        "path": "docs/data/fulltext/6L85PRUW.md",
+        "sha256": "d062f4e631ebe3964e810a0510318d66ef6572ff9a8dcf1c928397a080087d9a",
+        "work_id": "work:4be22e9f-c3e2-5871-bb6a-c75011374e59",
+        "version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2",
+        "version_type": "unknown",
+        "representative_record_id": "6L85PRUW"
+      },
+      "7L93JBLR": {
+        "path": "docs/data/fulltext/7L93JBLR.md",
+        "sha256": "47eb629f94ea5d277929082a97e830fa9ae54dd84c1c26c2b14d1808ec9dae8a",
+        "work_id": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
+        "version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b",
+        "version_type": "version_of_record",
+        "representative_record_id": "7L93JBLR"
+      },
+      "ERTJZW5M": {
+        "path": "docs/data/fulltext/ERTJZW5M.md",
+        "sha256": "cab54cc1c04889be7872688cf621c2d8a5a99bd60db83920df52d3453fe7c2e7",
+        "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+        "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c",
+        "version_type": "version_of_record",
+        "representative_record_id": "ERTJZW5M"
+      },
+      "GFHALQS2": {
+        "path": "docs/data/fulltext/ERTJZW5M.md",
+        "sha256": "cab54cc1c04889be7872688cf621c2d8a5a99bd60db83920df52d3453fe7c2e7",
+        "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+        "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c",
+        "version_type": "version_of_record",
+        "representative_record_id": "ERTJZW5M"
+      },
+      "K3YCLBXK": {
+        "path": "docs/data/fulltext/K3YCLBXK.md",
+        "sha256": "6499afc6fd13931e8db723359960410a1e783c4c9c807043fdb39edb97adcfd1",
+        "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
+        "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12",
+        "version_type": "unknown",
+        "representative_record_id": "K3YCLBXK"
+      },
+      "QY6P4RGQ": {
+        "path": "docs/data/fulltext/QY6P4RGQ.md",
+        "sha256": "c1fbaec8a715d812351497d4ce52bff932699a68a1265e45f4555157aca2d0ae",
+        "work_id": "work:7234e1cb-ec61-58a9-88e9-b662ee78616d",
+        "version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4",
+        "version_type": "unknown",
+        "representative_record_id": "QY6P4RGQ"
+      }
+    },
+    "work_assignments": [
+      {
+        "work_id": "work:43443814-3f53-51e1-af1a-7a3fa57091cc",
+        "version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4",
+        "representative_record_id": "22KJL3PC",
+        "record_ids": [
+          "22KJL3PC"
+        ]
+      },
+      {
+        "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+        "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
+        "version_type": "preprint",
+        "preferred_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
+        "representative_record_id": "3AHQEHDF",
+        "record_ids": [
+          "3AHQEHDF",
+          "6BZ5353S"
+        ]
+      },
+      {
+        "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+        "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+        "representative_record_id": "3AQ2K3BX",
+        "record_ids": [
+          "3AQ2K3BX",
+          "CLADZZKS",
+          "SE579V7B"
+        ]
+      },
+      {
+        "work_id": "work:4be22e9f-c3e2-5871-bb6a-c75011374e59",
+        "version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2",
+        "version_type": "unknown",
+        "preferred_version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2",
+        "representative_record_id": "6L85PRUW",
+        "record_ids": [
+          "6L85PRUW"
+        ]
+      },
+      {
+        "work_id": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
+        "version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b",
+        "representative_record_id": "7L93JBLR",
+        "record_ids": [
+          "7L93JBLR"
+        ]
+      },
+      {
+        "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+        "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c",
+        "representative_record_id": "ERTJZW5M",
+        "record_ids": [
+          "ERTJZW5M",
+          "GFHALQS2"
+        ]
+      },
+      {
+        "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
+        "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12",
+        "version_type": "unknown",
+        "preferred_version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12",
+        "representative_record_id": "K3YCLBXK",
+        "record_ids": [
+          "K3YCLBXK"
+        ]
+      },
+      {
+        "work_id": "work:7234e1cb-ec61-58a9-88e9-b662ee78616d",
+        "version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4",
+        "version_type": "unknown",
+        "preferred_version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4",
+        "representative_record_id": "QY6P4RGQ",
+        "record_ids": [
+          "QY6P4RGQ"
+        ]
+      }
+    ]
+  },
+  "decisions": {
+    "22KJL3PC": {
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Therefore, users must be aware of potential stereotypes in ChatGPT ' s understan",
+            "snippet": "Therefore, users must be aware of potential stereotypes in ChatGPT ' s understanding of cultural values when using it for cross-cultural interactions.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "22KJL3PC",
+            "work_id": "work:43443814-3f53-51e1-af1a-7a3fa57091cc",
+            "version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Given the rapid advancement of large-scale language models, AI models, like Chat",
+            "snippet": "Given the rapid advancement of large-scale language models, AI models, like ChatGPT, are playing an increasingly prominent role in human society.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "22KJL3PC",
+            "work_id": "work:43443814-3f53-51e1-af1a-7a3fa57091cc",
+            "version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Furthermore, Study 3 created four kinds of prompt strategies and applied them to",
+            "snippet": "Furthermore, Study 3 created four kinds of prompt strategies and applied them to decision-making tasks.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "22KJL3PC",
+            "work_id": "work:43443814-3f53-51e1-af1a-7a3fa57091cc",
+            "version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4"
+          },
+          {
+            "term": "It also found that the four prompt strategies can effectively reduce the generat",
+            "snippet": "It also found that the four prompt strategies can effectively reduce the generation of ChatGPT ' s stereotypes and biases.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "22KJL3PC",
+            "work_id": "work:43443814-3f53-51e1-af1a-7a3fa57091cc",
+            "version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "These tasks are related to distribution, indicating that ChatGPT has cultural bi",
+            "snippet": "These tasks are related to distribution, indicating that ChatGPT has cultural biases in distributive fairness.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "22KJL3PC",
+            "work_id": "work:43443814-3f53-51e1-af1a-7a3fa57091cc",
+            "version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "This can help us understand ChatGPT ' s perception of individuals from different",
+            "snippet": "This can help us understand ChatGPT ' s perception of individuals from different countries and assess whether they hold cultural stereotypes.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "22KJL3PC",
+            "work_id": "work:43443814-3f53-51e1-af1a-7a3fa57091cc",
+            "version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4"
+          },
+          {
+            "term": "This approach would facilitate more effective and respectful cross-cultural inte",
+            "snippet": "This approach would facilitate more effective and respectful cross-cultural interactions.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "22KJL3PC",
+            "work_id": "work:43443814-3f53-51e1-af1a-7a3fa57091cc",
+            "version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "While both models display cultural bias, ChatGPT 4o exhibits it in fewer tasks, ",
+            "snippet": "While both models display cultural bias, ChatGPT 4o exhibits it in fewer tasks, suggesting improved fairness in interactions",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "22KJL3PC",
+            "work_id": "work:43443814-3f53-51e1-af1a-7a3fa57091cc",
+            "version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:43443814-3f53-51e1-af1a-7a3fa57091cc",
+      "version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:a351cf13-2fbc-530f-b085-c81667ad36d4",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "Role_Persona",
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Nationality_Migration",
+            "Language_Culture"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Direct_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Three studies with ChatGPT 3.5 and 4o: cultural value scales (Study 1), 13 one-round decision tasks with country personas and country interactants (Study 2), four prompt strategies as intervention (Study 3). Role_Persona: 'If you are an ordinary individual from [the country]' as instrument; General_Guidance covers the debiasing cues 'From a fairness perspective,', 'As an independent individual, please make a choice according to your own ideas and', 'If you live in a future world.' and 'Imagine you live in a multicultural world,'. Evaluated: the prompt strategies reduced country differences to non-significance in most tested task-model combinations, but the personal-preference prompt failed in the GPT-4o public goods game (own experiment). Axes coded as the work names them, countries/nationality and cultural groups. Direct_Discrimination: allocation decisions (dictator, ultimatum, public goods) toward interactants vary with the nationality stated in the prompt; these are simulated game allocations, not real decisions about persons. Training-data and oversight recommendations in the discussion are outlook and not coded as stages. Theory: Hofstede's cultural dimensions and GLOBE dimensions frame the explanation of the bias sources. Gender appears only as the GLOBE dimension gender egalitarianism, not as an object. Review: Diversitaet teilweise, weil das Werk die Wahrnehmung von Personen aus 20 Laendern und einen respektvollen interkulturellen Umgang als nachgeordneten Teilaspekt behandelt. Direct_Discrimination beruht auf simulierten Zuteilungen im Spiel und bleibt ein Grenzfall fuer die Fachpruefung."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "22KJL3PC"
+    },
+    "3AHQEHDF": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 1,
+        "Diversitaet": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Large Language Models (LLMs) are known to lack cultural representation and overa",
+            "snippet": "Large Language Models (LLMs) are known to lack cultural representation and overall diversity in their generations, from expressing opinions to answering factual questions.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "To mitigate this problem, we propose multilingual prompting : a prompting method",
+            "snippet": "To mitigate this problem, we propose multilingual prompting : a prompting method which generates several variations of a base prompt with added cultural and linguistic cues from several cultures, generates responses, and then combines the results.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "It is important that this exposure is distributed in an equitable manner.",
+            "snippet": "It is important that this exposure is distributed in an equitable manner.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          },
+          {
+            "term": "LLMs concentrate their responses about individuals in various professions, e.g.,",
+            "snippet": "LLMs concentrate their responses about individuals in various professions, e.g., what artists to listen to, to largely American artists, systematically over-looking those from underrepresented cultural backgrounds",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "we introduce and evaluate multilingual and multicultural prompting and shown in ",
+            "snippet": "we introduce and evaluate multilingual and multicultural prompting and shown in 2 as methods to increase various forms of demographic, cultural, and other forms of diversity in LLM generations",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          },
+          {
+            "term": "In this task, we ask an LLM to generate names for individuals in various profess",
+            "snippet": "In this task, we ask an LLM to generate names for individuals in various professions, and assess the demographic diversity of the response across nationality, ethnicity, and geographic region.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+      "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
+      "version_type": "preprint",
+      "preferred_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Recommended_Practice",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "Ensembling",
+            "Role_Persona"
+          ],
+          "AN_Bias_Axes": [
+            "Nationality_Migration",
+            "Race_Ethnicity",
+            "Language_Culture"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms",
+            "Erasure"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Multilingual and multicultural prompting: several prompt variants with language and cultural cues (e.g. 'You are a Chinese-speaking assistant', persona with name, birthplace, favourite food), responses combined by concatenation (Ensembling) and compared against high temperature, requesting diversity, random personas and step-by-step recall on GPT-4o, GPT-4o-mini, LLaMA 70B and 8B. Evaluated: multilingual prompting yields the highest normalized entropy in most comparisons and lowers hallucination of culture-specific names in a human annotation study (own experiment). The work frames the problem as lack of diversity and unequal exposure rather than as bias; its understanding of bias is recognisable only from the entropy measures. Axes: nationality, ethnicity and region of generated names, cultural and language perspectives on social norms. Harm types from the own experiment: American default in named artists (Exclusionary_Norms) and overlooking underrepresented cultural backgrounds (Erasure). Gender appears only in a persona cue and a social-norm example."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "3AHQEHDF"
+    },
+    "3AQ2K3BX": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 1,
+        "Bias_Ungleichheit": 1,
+        "Diversitaet": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "an exploratory review was conducted to conceptualize the newly emerging concept ",
+            "snippet": "an exploratory review was conducted to conceptualize the newly emerging concept ' AI literacy ' , in search for a sound theoretical foundation to define, teach and evaluate AI literacy.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "The democratization of current AI technologies encourages students to make intel",
+            "snippet": "The democratization of current AI technologies encourages students to make intelligent agents and machine learning models without needing to program such as ML-for-kids and Teachable Machine",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Any technology as potent as AI would also bring new risks due to algorithmic bia",
+            "snippet": "Any technology as potent as AI would also bring new risks due to algorithmic bias and malicious uses of AI (Brundage et al., 2018).",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "broadening participation in AI for everyone and ensuring inclusive AI learning d",
+            "snippet": "broadening participation in AI for everyone and ensuring inclusive AI learning designs are necessary.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+      "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "3AQ2K3BX"
+    },
+    "6BZ5353S": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 1,
+        "Diversitaet": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Large Language Models (LLMs) are known to lack cultural representation and overa",
+            "snippet": "Large Language Models (LLMs) are known to lack cultural representation and overall diversity in their generations, from expressing opinions to answering factual questions.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "To mitigate this problem, we propose multilingual prompting : a prompting method",
+            "snippet": "To mitigate this problem, we propose multilingual prompting : a prompting method which generates several variations of a base prompt with added cultural and linguistic cues from several cultures, generates responses, and then combines the results.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "It is important that this exposure is distributed in an equitable manner.",
+            "snippet": "It is important that this exposure is distributed in an equitable manner.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          },
+          {
+            "term": "LLMs concentrate their responses about individuals in various professions, e.g.,",
+            "snippet": "LLMs concentrate their responses about individuals in various professions, e.g., what artists to listen to, to largely American artists, systematically over-looking those from underrepresented cultural backgrounds",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "we introduce and evaluate multilingual and multicultural prompting and shown in ",
+            "snippet": "we introduce and evaluate multilingual and multicultural prompting and shown in 2 as methods to increase various forms of demographic, cultural, and other forms of diversity in LLM generations",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          },
+          {
+            "term": "In this task, we ask an LLM to generate names for individuals in various profess",
+            "snippet": "In this task, we ask an LLM to generate names for individuals in various professions, and assess the demographic diversity of the response across nationality, ethnicity, and geographic region.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AHQEHDF",
+            "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+            "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
+      "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
+      "version_type": "preprint",
+      "preferred_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Recommended_Practice",
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "Ensembling",
+            "Role_Persona"
+          ],
+          "AN_Bias_Axes": [
+            "Nationality_Migration",
+            "Race_Ethnicity",
+            "Language_Culture"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms",
+            "Erasure"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Multilingual and multicultural prompting: several prompt variants with language and cultural cues (e.g. 'You are a Chinese-speaking assistant', persona with name, birthplace, favourite food), responses combined by concatenation (Ensembling) and compared against high temperature, requesting diversity, random personas and step-by-step recall on GPT-4o, GPT-4o-mini, LLaMA 70B and 8B. Evaluated: multilingual prompting yields the highest normalized entropy in most comparisons and lowers hallucination of culture-specific names in a human annotation study (own experiment). The work frames the problem as lack of diversity and unequal exposure rather than as bias; its understanding of bias is recognisable only from the entropy measures. Axes: nationality, ethnicity and region of generated names, cultural and language perspectives on social norms. Harm types from the own experiment: American default in named artists (Exclusionary_Norms) and overlooking underrepresented cultural backgrounds (Erasure). Gender appears only in a persona cue and a social-norm example."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "3AHQEHDF",
+      "alias_of": "3AHQEHDF"
+    },
+    "6L85PRUW": {
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "For teachers, guiding students through this process helps teach budding designer",
+            "snippet": "For teachers, guiding students through this process helps teach budding designers how bias is built into prompting within LLMs so that they can learn strategies for conscientiously and ethically working with these tools amidst their limitations and inherent bi",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L85PRUW",
+            "work_id": "work:4be22e9f-c3e2-5871-bb6a-c75011374e59",
+            "version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "In this research paper, we offer a methodology, which we call inclusive prompt e",
+            "snippet": "In this research paper, we offer a methodology, which we call inclusive prompt engineering, to describe the process of examining and modifying the relationship between written prompts and visual outputs of human subjects using AI.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L85PRUW",
+            "work_id": "work:4be22e9f-c3e2-5871-bb6a-c75011374e59",
+            "version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Through a series of prompt engineering practices, we show how users can bypass t",
+            "snippet": "Through a series of prompt engineering practices, we show how users can bypass this toxic positivity to create images that better demonstrate the diversity of humanity, including a range of ages, body sizes, races, and genders.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L85PRUW",
+            "work_id": "work:4be22e9f-c3e2-5871-bb6a-c75011374e59",
+            "version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "However, as we will show, this bias towards positivity further reinforces stereo",
+            "snippet": "However, as we will show, this bias towards positivity further reinforces stereotypical images by defaulting to what the LLM sees as 'positive': young, beautiful, skinny, and white.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L85PRUW",
+            "work_id": "work:4be22e9f-c3e2-5871-bb6a-c75011374e59",
+            "version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "For instance, asking for a realistic portrait of a person without other descript",
+            "snippet": "For instance, asking for a realistic portrait of a person without other descriptors results in a young, thin, white man.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L85PRUW",
+            "work_id": "work:4be22e9f-c3e2-5871-bb6a-c75011374e59",
+            "version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Our goal in this method is to help designers and technical communicators produce",
+            "snippet": "Our goal in this method is to help designers and technical communicators produce visuals that accurately reflect the diverse range of human experiences, including variations in age, body type, ethnicity, and gender.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L85PRUW",
+            "work_id": "work:4be22e9f-c3e2-5871-bb6a-c75011374e59",
+            "version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:4be22e9f-c3e2-5871-bb6a-c75011374e59",
+      "version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2",
+      "version_type": "unknown",
+      "preferred_version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Prompting_Role": [
+            "Recommended_Practice",
+            "Research_Instrument",
+            "Learning_Content"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity",
+            "Age",
+            "Physical_Appearance",
+            "Socioeconomic",
+            "Gender",
+            "Disability"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Demonstrated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "Other_Task"
+          ],
+          "AN_Gender_Definition": "Absent",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Unclear"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "Studientyp": "Konzept",
+          "AN_Notes": "General_Guidance: den von DALL-E zurueckgegebenen Prompt als Vorlage nutzen, wichtige Merkmale mehrfach mit Synonymen verstaerken und negative Merkmale positiv formulieren ('reinforcing particularly important traits several times with various synonyms'); Zero-Shot-Prompts dienen als Basislinie. Other_Task: Erstellung von Bildern fuer Content Design und technische Kommunikation (Social-Media-Kampagnen, Interfaces, Personas). Achsen aus eigenen Fallbeispielen: Low-Income-Paar (Socioeconomic, Race_Ethnicity), aeltere Frau (Age), Koerpergewicht und Glatze (Physical_Appearance), Disability im eigenen Argument zur toxic positivity, maennlicher Default (Gender). Demonstrated: Methode an Beispielen vorgefuehrt, ohne abgeschlossene Pruefung. Gender erscheint nur als Diversitaetsmerkmal ohne erkennbares Verstaendnis. Review: Gender bleibt Absent und Unclear, weil das Werk keine Passage enthaelt, die Geschlecht auf zwei Kategorien festlegt. Mann und Frau erscheinen nur als einzelne Bildbeschreibungen, und das Ziel nennt offen \"a range of ages, body sizes, races, and genders\"."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "6L85PRUW"
+    },
+    "7L93JBLR": {
+      "categories": {
+        "Generative_KI": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "GPAI systems, such as large language models, foundation models and generative AI",
+            "snippet": "GPAI systems, such as large language models, foundation models and generative AI, are increasingly shaping decision-making in critical domains, from hiring and healthcare to law enforcement.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7L93JBLR",
+            "work_id": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
+            "version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "The main section critically examines specific articles of the AI Act with gender",
+            "snippet": "The main section critically examines specific articles of the AI Act with gendered implications, demonstrating how existing provisions either reinforce or fail to challenge algorithmic discrimination.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7L93JBLR",
+            "work_id": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
+            "version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "SyRI was an AI-driven system used by the Dutch government to predict and identif",
+            "snippet": "SyRI was an AI-driven system used by the Dutch government to predict and identify individuals at risk of committing fraud in social welfare programs.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7L93JBLR",
+            "work_id": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
+            "version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "The findings argue that while the AI Act seeks to mitigate gendered risks, it fa",
+            "snippet": "The findings argue that while the AI Act seeks to mitigate gendered risks, it falls short of addressing the structural biases embedded in AI technologies, which disproportionately harm marginalised groups.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7L93JBLR",
+            "work_id": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
+            "version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "This paper examines the European Regulation (EU) 2024/1689 on harmonised rules o",
+            "snippet": "This paper examines the European Regulation (EU) 2024/1689 on harmonised rules on artificial intelligence (AI), commonly known as AI Act, through a feminist lens, analysing how the proposed regulatory framework addresses gender, non-discrimination and systemic",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7L93JBLR",
+            "work_id": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
+            "version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "The paper closes by proposing feminist-informed revisions to the AI Act that emp",
+            "snippet": "The paper closes by proposing feminist-informed revisions to the AI Act that emphasise gender inclusivity, intersectionality and accountability in AI governance, advocating for a more equitable AI framework that reflects the lived experiences of women, LGBTQIA",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7L93JBLR",
+            "work_id": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
+            "version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Drawing on Miranda Fricker's theory of hermeneutical injustice, Catharine MacKin",
+            "snippet": "Drawing on Miranda Fricker's theory of hermeneutical injustice, Catharine MacKinnon's feminist legal theory on male dominance, Aníbal Quijano's concept of 'coloniality of power' and Walter Mignolo's theory of epistemology and the decoloniality of law, the pape",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7L93JBLR",
+            "work_id": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
+            "version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Consequently, conformity assessments should mandate comprehensive bias audits th",
+            "snippet": "Consequently, conformity assessments should mandate comprehensive bias audits that extend beyond detecting overt discrimination to uncover subtle, structural biases that disproportionately affect women particularly women of colour, LGBTQIA + people and other m",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7L93JBLR",
+            "work_id": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
+            "version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:e029e392-2ee3-5af1-bac3-1cbf39cdd23a",
+      "version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:ba0758f8-c414-5206-baf4-543b76c7490b",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Sexual_Orientation_Identity",
+            "Race_Ethnicity",
+            "Socioeconomic",
+            "Intersectional"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms",
+            "Stereotyping",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process",
+            "Pre_Processing"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Social_Construct",
+            "Non_Binary_Inclusive",
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Gegenstand ist die EU-KI-Verordnung, keine Aufgabe der Berufspraxis (AN_Task None). AN_Population Not_SW_Specific, die Sozialhilfe erscheint nur im Fallbeispiel SyRI. Achsen aus der eigenen Analyse: Gender, trans und nicht-binaere Identitaeten (Sexual_Orientation_Identity), Rassifizierung und sozioökonomische Lage im SyRI-Beispiel, Intersectional ueber die Verschraenkung von Race und Einkommen. Exclusionary_Norms: maennliche Normen und Binaritaet in Recht und Daten; Stereotyping: eigenes Beispiel Google Translate. Indirect_Discrimination: in der eigenen feministischen und intersektionalen Fallanalyse von SyRI fuehren historische Daten und Einkommen als scheinbar neutrale Kriterien zur Markierung fuer Betrugsermittlungen in der Sozialhilfe. Arbeitsmarkt- und Gesundheitsfaelle sind zitierte Faelle und bleiben uncodiert. Massnahmen vorgeschlagen: Gender Impact Assessment, intersektionale Bias-Audits, diverse Pruefteams, Beteiligung Betroffener (Organisational_Process) sowie diverse Datensaetze und Pruefung der Trainingsdaten (Pre_Processing). Gender wird nicht in einem eigenen Satz bestimmt, das Verstaendnis folgt aus Queer Theory, sozialer Konstruktion und Intersektionalitaet. Bias wird strukturell gerahmt, ohne eigene Bestimmung. Review: Gender-Definition Implicit_Only, weil das Werk Geschlecht in keinem eigenen Satz bestimmt, sein Verstaendnis aber aus Queer Theory, intersektionalem Feminismus und der Rede von der sozialen Konstruktion erkennbar ist."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "7L93JBLR"
+    },
+    "CLADZZKS": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 1,
+        "Bias_Ungleichheit": 1,
+        "Diversitaet": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "an exploratory review was conducted to conceptualize the newly emerging concept ",
+            "snippet": "an exploratory review was conducted to conceptualize the newly emerging concept ' AI literacy ' , in search for a sound theoretical foundation to define, teach and evaluate AI literacy.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "The democratization of current AI technologies encourages students to make intel",
+            "snippet": "The democratization of current AI technologies encourages students to make intelligent agents and machine learning models without needing to program such as ML-for-kids and Teachable Machine",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Any technology as potent as AI would also bring new risks due to algorithmic bia",
+            "snippet": "Any technology as potent as AI would also bring new risks due to algorithmic bias and malicious uses of AI (Brundage et al., 2018).",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "broadening participation in AI for everyone and ensuring inclusive AI learning d",
+            "snippet": "broadening participation in AI for everyone and ensuring inclusive AI learning designs are necessary.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+      "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "3AQ2K3BX",
+      "alias_of": "3AQ2K3BX"
+    },
+    "ERTJZW5M": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "To address these challenges, training programs should educate health care worker",
+            "snippet": "To address these challenges, training programs should educate health care workers on how AI systems are developed, including their capabilities, limitations, and potential pitfalls.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ERTJZW5M",
+            "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+            "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Artificial intelligence-based clinical decision support systems (AI-CDSSs) have ",
+            "snippet": "Artificial intelligence-based clinical decision support systems (AI-CDSSs) have enhanced personalized medicine and improved the efficiency of health care workers.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ERTJZW5M",
+            "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+            "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c"
+          },
+          {
+            "term": "This systematic review aims to identify and synthesize key factors that influenc",
+            "snippet": "This systematic review aims to identify and synthesize key factors that influence health care workers' trust in AI-CDSSs",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ERTJZW5M",
+            "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+            "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Lastly, trust was further undermined by unresolved issues related to medical lia",
+            "snippet": "Lastly, trust was further undermined by unresolved issues related to medical liability, potential algorithmic biases, and broader ethical risks.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ERTJZW5M",
+            "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+            "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+      "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "ERTJZW5M"
+    },
+    "GFHALQS2": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "To address these challenges, training programs should educate health care worker",
+            "snippet": "To address these challenges, training programs should educate health care workers on how AI systems are developed, including their capabilities, limitations, and potential pitfalls.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ERTJZW5M",
+            "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+            "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Artificial intelligence-based clinical decision support systems (AI-CDSSs) have ",
+            "snippet": "Artificial intelligence-based clinical decision support systems (AI-CDSSs) have enhanced personalized medicine and improved the efficiency of health care workers.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ERTJZW5M",
+            "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+            "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c"
+          },
+          {
+            "term": "This systematic review aims to identify and synthesize key factors that influenc",
+            "snippet": "This systematic review aims to identify and synthesize key factors that influence health care workers' trust in AI-CDSSs",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ERTJZW5M",
+            "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+            "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Lastly, trust was further undermined by unresolved issues related to medical lia",
+            "snippet": "Lastly, trust was further undermined by unresolved issues related to medical liability, potential algorithmic biases, and broader ethical risks.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "ERTJZW5M",
+            "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+            "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:17d0c962-403d-530b-b2e2-afe16ce4ca3d",
+      "version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:603d1ae1-351d-5774-9749-3732b19ae57c",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "ERTJZW5M",
+      "alias_of": "ERTJZW5M"
+    },
+    "K3YCLBXK": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 1,
+        "Prompting": 1,
+        "KI_Sonstige": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "AI literacy includes the knowledge and skills that enable people to critically u",
+            "snippet": "AI literacy includes the knowledge and skills that enable people to critically understand, evaluate, and use AI systems and tools to safely and effectively participate in an increasingly digital world.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "K3YCLBXK",
+            "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
+            "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Generative AI (GenAI) systems and tools are entering the classroom at a rapid pa",
+            "snippet": "Generative AI (GenAI) systems and tools are entering the classroom at a rapid pace",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "K3YCLBXK",
+            "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
+            "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "The skill of GenAI prompting involves creating good questions or commands that g",
+            "snippet": "The skill of GenAI prompting involves creating good questions or commands that get the system to produce something that humans consider to be a quality output",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "K3YCLBXK",
+            "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
+            "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Interacting with AI systems is engaging with adaptive technology in multiple mod",
+            "snippet": "Interacting with AI systems is engaging with adaptive technology in multiple modalities that adjusts to data collected, such as when learners use adaptive tutors in math or reading to receive content at their level of understanding",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "K3YCLBXK",
+            "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
+            "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Underscoring our framework is human judgment and justice, which are core values ",
+            "snippet": "Underscoring our framework is human judgment and justice, which are core values for applying AI in appropriate contexts and mitigating the harmful effects of algorithms",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "K3YCLBXK",
+            "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
+            "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12"
+          },
+          {
+            "term": "AI systems are impacting the lives of nearly everyone within modern society, but",
+            "snippet": "AI systems are impacting the lives of nearly everyone within modern society, but their results do not equally represent the interests of all people They can and have exacerbated existing oppression and prejudice within society",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "K3YCLBXK",
+            "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
+            "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "For example if asked to generate an image of a doctor, a GenAI model might be mo",
+            "snippet": "For example if asked to generate an image of a doctor, a GenAI model might be more likely to generate a white male",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "K3YCLBXK",
+            "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
+            "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Inclusivity Elevate the needs, interest, and voice of marginalized communities i",
+            "snippet": "Inclusivity Elevate the needs, interest, and voice of marginalized communities in the development of policy and guidance in order to ensure AI tools are accessible to all students and do not perpetuate harmful biases",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "K3YCLBXK",
+            "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
+            "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:5cc857bf-4bda-58c7-bee1-8fdfb4423836",
+      "version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12",
+      "version_type": "unknown",
+      "preferred_version_id": "version:c2c32fa6-26f7-55d2-8db6-ebb37aa68b12",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Prompting_Role": [
+            "Learning_Content",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Education_Professional",
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "Teaching_Further_Education"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical"
+          ],
+          "AN_Theory_Reference": "No",
+          "Studientyp": "Konzept",
+          "AN_Notes": "General_Guidance: 'Effectively prompting a GenAI system or tool takes time and often requires clear communication, specificity, experimentation, and patience' sowie 'Distinguish between essential and nonessential components of a prompt to produce an appropriate output'; Prompt Organizer im Fallbeispiel einer Foerderklasse. AN_Bias_Axes None: Achsen erscheinen in zitierten Beispielen (Druga et al., O'Neil, Buolamwini) und in einem einzelnen, nicht ausgefuehrten Arztbild-Beispiel; Grenzfall nach Anker VSZM7CT6. AN_Harm_Types None: Schadensmechanismen nur aus zitierter Literatur, nicht aus eigenem Argument oder Ergebnis. Organisational_Process: Richtlinien zu Adoption und Evaluation mit Inklusivitaet, professionelles Lernen, Bewusstsein fuer algorithmischen Bias, alles vorgeschlagen. Education_Professional fuer die Fortbildung von Lehrkraeften, Not_SW_Specific fuer K-12-Schueler:innen. Gender erscheint in der eigenen Argumentation nur binaer (\"particularly females and students of color\" gegenueber \"disproportionately enroll white males\"), ohne Bestimmung, daher Implicit_Only und Binary_Categorical. Teaching_Further_Education: KI-Nutzung fuer Unterrichtsplanung und Schreibfoerderung."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "K3YCLBXK"
+    },
+    "QY6P4RGQ": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Large language models (LMs) learn social biases present in the world, and the in",
+            "snippet": "Large language models (LMs) learn social biases present in the world, and the increased use of these systems across different contexts increases the cases where these biases can lead to harm.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "QY6P4RGQ",
+            "work_id": "work:7234e1cb-ec61-58a9-88e9-b662ee78616d",
+            "version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "We match each context with questions and answer options that test if a model sys",
+            "snippet": "We match each context with questions and answer options that test if a model systematically relies on social biases.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "QY6P4RGQ",
+            "work_id": "work:7234e1cb-ec61-58a9-88e9-b662ee78616d",
+            "version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4"
+          },
+          {
+            "term": "UnifiedQA is trained on eight datasets and accepts multiple input string formats",
+            "snippet": "UnifiedQA is trained on eight datasets and accepts multiple input string formats, so we include results for inputs with RACE-style (Lai et al., 2017) and ARC-style (Clark et al., 2018) formats.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "QY6P4RGQ",
+            "work_id": "work:7234e1cb-ec61-58a9-88e9-b662ee78616d",
+            "version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "We introduce the Bias Benchmark for QA (BBQ), a dataset of question sets constru",
+            "snippet": "We introduce the Bias Benchmark for QA (BBQ), a dataset of question sets constructed by the authors that highlight attested social biases against people belonging to protected classes along nine social dimensions relevant for U.S. English-speaking contexts.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "QY6P4RGQ",
+            "work_id": "work:7234e1cb-ec61-58a9-88e9-b662ee78616d",
+            "version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "with this difference widening to over 5 points on examples targeting gender for ",
+            "snippet": "with this difference widening to over 5 points on examples targeting gender for most models tested",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "QY6P4RGQ",
+            "work_id": "work:7234e1cb-ec61-58a9-88e9-b662ee78616d",
+            "version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "we introduce a bias score to quantify the degree to which a model systematically",
+            "snippet": "we introduce a bias score to quantify the degree to which a model systematically answers questions in a biased way",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "QY6P4RGQ",
+            "work_id": "work:7234e1cb-ec61-58a9-88e9-b662ee78616d",
+            "version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:7234e1cb-ec61-58a9-88e9-b662ee78616d",
+      "version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4",
+      "version_type": "unknown",
+      "preferred_version_id": "version:2490c8fb-5495-56b5-9e5d-499dd3675df4",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Coding_Basis": "Fulltext",
+          "AN_Prompting_Role": [
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Age",
+            "Disability",
+            "Gender",
+            "Nationality_Migration",
+            "Physical_Appearance",
+            "Race_Ethnicity",
+            "Religion",
+            "Socioeconomic",
+            "Sexual_Orientation_Identity",
+            "Intersectional"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "None"
+          ],
+          "AN_Mitigation_Status": "None",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical",
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Benchmark mit Evaluation von UnifiedQA, RoBERTa und DeBERTaV3; Generative_KI ueber die Rahmung als Sprachmodelle und das generative UnifiedQA. Die handgeschriebenen Kontexte und Fragen sind Eingaben, die Modellverhalten als Bias-Test hervorrufen, mit kontrollierter Variation von Reihenfolge, Eingabeformat und UNKNOWN-Formulierungen (Research_Instrument), eine Prompting-Technik wird nicht benannt. Neun Achsen plus zwei intersektionale Kategorien (race by gender, race by SES); die intersektionalen Ergebnisse sind gemischt, die Kombination bestimmt aber Design und Auswertung. Keine Massnahme: 'This work does not directly contribute to debiasing'. Gender erscheint mit den Labels man/woman, girl/boy und Zensusnamen male/female, ohne Pruefung dieser Setzung. Theoriebezug: Begriff der representational harms nach Crawford (2017) rahmt die Bias-Bestimmung. Review: Der Theoriebezug Crawford dient zugleich als ausdrueckliche Bias-Definition, Grenzfall zwischen uebernommener Definition und rahmendem Konzept."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "QY6P4RGQ"
+    },
+    "SE579V7B": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 1,
+        "Bias_Ungleichheit": 1,
+        "Diversitaet": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "an exploratory review was conducted to conceptualize the newly emerging concept ",
+            "snippet": "an exploratory review was conducted to conceptualize the newly emerging concept ' AI literacy ' , in search for a sound theoretical foundation to define, teach and evaluate AI literacy.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "The democratization of current AI technologies encourages students to make intel",
+            "snippet": "The democratization of current AI technologies encourages students to make intelligent agents and machine learning models without needing to program such as ML-for-kids and Teachable Machine",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Any technology as potent as AI would also bring new risks due to algorithmic bia",
+            "snippet": "Any technology as potent as AI would also bring new risks due to algorithmic bias and malicious uses of AI (Brundage et al., 2018).",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "broadening participation in AI for everyone and ensuring inclusive AI learning d",
+            "snippet": "broadening participation in AI for everyone and ensuring inclusive AI learning designs are necessary.",
+            "ts": "2026-10-02T07:15:45Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3AQ2K3BX",
+            "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+            "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:45Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:ed020b30-3c7f-5c98-baa7-aa6071a7a02b",
+      "version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:d115eadc-8716-5c8e-9255-0c7a684d2e89",
+      "selected_version_is_preferred": true,
+      "representative_record_id": "3AQ2K3BX",
+      "alias_of": "3AQ2K3BX"
+    }
+  }
+}

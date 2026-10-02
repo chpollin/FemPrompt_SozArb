@@ -1,0 +1,44 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-06-6-20261002",
+  "status": "proposed",
+  "seed": 20261008,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "6IU5JG5Y"
+  ],
+  "disagreeing_works": [
+    "GP4JDSI8",
+    "UENFDPH9",
+    "UFJ7ERFF",
+    "YLAKP7Z2"
+  ],
+  "drawn": [
+    "6IU5JG5Y",
+    "GP4JDSI8",
+    "UENFDPH9",
+    "UFJ7ERFF",
+    "YLAKP7Z2"
+  ],
+  "flagged_additions": [
+    "UFE85SCV"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "UFE85SCV": "agent Unclear against the human Include, social dimension only partial",
+    "GP4JDSI8": "boundary between adopted power definition and bias definition, level of Generative_KI",
+    "UFJ7ERFF": "possible duplicate Work of GP4JDSI8, bound text is the ACM version although the version type says preprint",
+    "YLAKP7Z2": "AN_Bias_Definition boundary, Fairness via algorithmic reparation, Gender Explicit from a footnote",
+    "UENFDPH9": "reach of the review rule for AN_Harm_Types",
+    "6IU5JG5Y": "AN_Bias_Definition Explicit via Young, consistency with the Implicit_Only resolutions"
+  },
+  "track_agreement_sha256": "c47f5551c02e0e9ffabe5a35dec5fdc43dbc3931e4a8155ae752ea9d470b0444"
+}

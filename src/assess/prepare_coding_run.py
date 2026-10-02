@@ -69,7 +69,10 @@ def paper_entry(paper_id: str, registry: dict, works: dict) -> dict:
         "version_type": version.get("version_type", "unknown"),
         "preferred_version_id": preferred,
         "selected_version_is_preferred": True,
-        "record_ids": sorted(work["record_ids"]),
+        # Records of another Version keep their own source identity and never inherit this coding.
+        "record_ids": sorted(
+            rid for rid in work["record_ids"] if registry["record_index"].get(rid, {}).get("version_id") == preferred
+        ),
         "human_coverage": work.get("decision_authority") == "legacy_human",
         "ai_agent_review_coverage": False,
         "source": {"path": rel, "sha256": digest, "version_id": preferred},

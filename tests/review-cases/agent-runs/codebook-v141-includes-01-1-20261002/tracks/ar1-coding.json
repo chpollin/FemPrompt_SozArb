@@ -1,0 +1,182 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.2",
+  "codebook_version": "1.4.1",
+  "run_id": "codebook-v141-includes-01-1-20261002",
+  "reviewer": "ar1",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "decisions": {
+    "L6PH7GDL": {
+      "source_path": "docs/data/fulltext/L6PH7GDL.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Source SHA-256 matches the manifest (1f1fc4eb...2552). Corpus title and text title agree: 'Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen für Theorie und Praxis'. Stable identifier DOI 10.3262/978-3-7799-8562-4 (ISBN 978-3-7799-8562-4 E-Book), editors Gesa Linnemann, Julian Löhe, Beate Rottkemper, 1st edition 2025, Beltz Juventa, Open Access CC BY 4.0. No title or DOI conflict. Publication type: scholarly edited volume with identifiable authorship and source base, admissible under the ratified publication-type rule. The whole volume (introduction, sixteen chapters, outlook) is coded as one Work."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "ja",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "teilweise",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "Ein zentrales Anliegen ist die Entwicklung von KI-Kompetenz in Studium, Praxis und Organisationen.",
+          "Das vorliegende Buch versteht sich -so der Anspruch der Autor:innen -als Beitrag zur Vermittlung von KI-Kompetenz in der Sozialen Arbeit"
+        ],
+        "Generative_KI": [
+          "Ein besonderes Augenmerk liegt auf Large Language Models (LLM), da die natürliche Sprache im professionellen Handeln der Sozialen Arbeit eine zentrale Rolle spielt.",
+          "Im Rahmen eines Mixed-Method-Forschungsprojekts wurde ein Prototyp entwickelt, der mittels Speech-to-Text und Large Language Models unstrukturierte Sprachaufnahmen in strukturierte Aktennotizen umwandelt."
+        ],
+        "Prompting": [
+          "Kommunikative Kompetenzen wie Prompting (zum Bedienen von KI) oder Kommunikationsstrategien im Kontext von humanoiden Robotern könnten so zu einem neuen Arbeitsfeld der Sozialen Arbeit werden.",
+          "Prompting Attacks nutzen die Eingabeaufforderungen (Prompt), durch die diese Modelle gesteuert werden, um unerwünschte oder schädliche Reaktionen von der KI zu provozieren.",
+          "Basierend auf realen und erfundenen Aktennotizen wurde die KI nach einer konkreten Struktur instruiert"
+        ],
+        "KI_Sonstige": [
+          "Risikoerkennung : Auf Grundlage der sogenannten Predictive Analytics können vorhandene Daten KI-gestützt analysiert und zur Früherkennung von Risikokonstellationen genutzt werden.",
+          "Die Betrachtung konzentriert sich dabei auf klassische Verfahren der Künstlichen Intelligenz (KI) und Sprachverarbeitung (Natural Language Processing, NLP)"
+        ],
+        "Soziale_Arbeit": [
+          "Dieser Sammelband soll Fachkräften, Studierenden und Interessierten einen fundierten Einblick in das Thema KI in der Sozialen Arbeit geben und dazu beitragen, einen reflektierten und verantwortungsvollen Umgang mit diesen Technologien zu ermöglichen."
+        ],
+        "Bias_Ungleichheit": [
+          "Eine der wohl größten Herausforderungen in Bezug auf den Einsatz von KI in der Sozialen Arbeit ist der Umgang mit Verzerrungen und Voreingenommenheiten verschiedenster Ausprägung.",
+          "KI-Systeme in der Sozialen Arbeit sind fehleranfällig, weil sie auf Daten basieren, die gesellschaftliche Verzerrungen enthalten."
+        ],
+        "Gender": [
+          "Deutlich werden die Folgen dieser Diskriminierungen z.B. in den Forschungen rund um das Thema Gender und KI.",
+          "Studien haben gezeigt, dass ältere Männer häufiger Zugang zum Internet haben und eine größere Bandbreite an Online-Aktivitäten ausüben als ältere Frauen"
+        ],
+        "Diversitaet": [
+          "Der Beitrag befasst sich mit den Potenzialen, Herausforderungen und Risiken, die sich aus der Entwicklung und Verbreitung von Künstlicher Intelligenz für die Inklusion marginalisierter und benachteiligter Menschen ergeben.",
+          "KI kann unterstützen, aber nur wenn sie transparent, diversitätssensibel und kritisch reflektiert eingesetzt wird."
+        ],
+        "Feministisch": [],
+        "Fairness": [
+          "Wie schneidet das System für verschiedene Gruppen ab (z. B. Kinder mit Migrationsgeschichte versus ohne)?",
+          "Möglich wäre das z.B. durch einen Bias-Audit (vgl. Heuer et al. 2021)."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Learning_Content", "Object_of_Critique", "Recommended_Practice"],
+        "AN_Prompt_Techniques": ["General_Guidance"],
+        "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Age", "Socioeconomic", "Language_Culture", "Nationality_Migration"],
+        "AN_Harm_Types": ["Exclusionary_Norms", "Erasure", "Disparate_Performance"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["General_Social_Work", "Child_Family_Welfare", "Mental_Health", "Health_Care", "Social_Assistance_Admin", "Education_Professional"],
+        "AN_Task": ["Documentation_Recording", "Case_Assessment_Decision_Support", "Counselling_Client_Communication", "Administration", "Research", "Teaching_Further_Education"],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": ["Binary_Categorical"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Theoretisch",
+        "AN_Notes": "Edited volume coded as one Work. Studientyp Theoretisch follows the predominantly conceptual and argumentative chapters; two chapters carry own data (Plafky et al. usability tests and focus group of an LLM-based case-note prototype; Schlomann draws on the KI-Alter field study), and Holz et al. demonstrate classical NLP on a synthetic case. General_Guidance: Plafky et al. instruct a local Mistral 7B with a fixed case-note structure (Wer, Wann, Wo, Grund, Ablauf, Diskussionsinhalte, Vereinbarungen, fachliche Interpretation, Entscheidung, nächster Termin) and recommend selectable templates per note type. Object_of_Critique rests on Pelzl's analysis of prompting attacks; Learning_Content on Beranek's call to treat prompting as a communicative competence. Bias axes: Age (Schlomann, age discrimination as own chapter argument), Race_Ethnicity (Steiner, AFST and ethnically marginalised children), Socioeconomic (editors' outlook, Allegheny poverty example), Nationality_Migration (editors' bias-audit example and the Dutch child-benefit case), Language_Culture (Swiss German dialect recognition in Plafky et al.), Gender (Beranek's worked example and Schlomann's digital gender gap). Intersectional not coded: the BIPoC-women facial-recognition result is cited from Buolamwini/Gebru without the volume's own combination argument. Harm types: Exclusionary_Norms (editors: addressees deviate from the norm dominating training data), Erasure (Steiner: marginalised groups underrepresented through selection and weighting), Disparate_Performance (own observation that dialects closer to Standard German are recognised better). Discrimination cases (Amazon, Dutch child benefit, Allegheny risk scores, gender-shades) are cited from other work and left uncoded as harm types. Mitigation: training-data analysis, exclusion or synthetic data (Pre_Processing) and bias audit, diverse developer teams, ethics boards, human-in-the-loop and staff training (Organisational_Process), all recommended; AFST evaluation reported by Steiner concerns the tool's side effect on ethnic disparities, not a tested bias mitigation, so status stays Proposed. Bias defined explicitly (Rottkemper, Dummann footnote 6, Löhe). Gender appears only as binary comparison of older men and women and in cited examples. Theory reference: Steiner frames exclusion of marginalised groups through Luhmann's systems-theoretical inclusion/exclusion concept, critical theory and a radical, resistance-oriented concept of inclusion (Rojas).",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "Verzerrungen sind systematische Fehler oder einseitige Gewichtungen in den Ergebnissen der KI, die durch unausgewogene Trainingsdaten oder algorithmische Strukturen entstehen können",
+            "locator": "Löhe, 'Mensch, Maschine und Management', Abschnitt 3 Herausforderungen"
+          },
+          {
+            "quote": "Data Bias beschreibt Verzerrungen, die in den zugrunde liegenden Daten von KI-Systemen enthalten sind und sich auf die Ergebnisse und Entscheidungen solcher Systeme auswirken können.",
+            "locator": "Dummann, 'Bedeutung von KI für Disziplin und Profession', Fußnote 6 in Abschnitt 5"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Systemtheoretische Fassung von Inklusion und Exklusion (Luhmann)",
+            "quote": "Damit ist dem Inklusionsbegriff eine Machtdimension eingeschrieben",
+            "locator": "Steiner, 'Künstliche Intelligenz und Inklusion', Abschnitt 2 Zur Grundlegung"
+          },
+          {
+            "theory": "Kritische Theorie und radikales Inklusionsverständnis (Rojas)",
+            "quote": "ganz im Sinne einer kritischen Theorie, die nicht jeden Einsatz von Technologie für ein oftmals kaum expliziertes Ziel als erstrebenswert ansieht (Park 2023)",
+            "locator": "Steiner, 'Künstliche Intelligenz und Inklusion', Abschnitt 2 Zur Grundlegung"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "Studien haben gezeigt, dass ältere Männer häufiger Zugang zum Internet haben und eine größere Bandbreite an Online-Aktivitäten ausüben als ältere Frauen",
+            "locator": "Schlomann, 'KI und Alter', Abschnitt 4.1 Digitale Spaltung"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "Altersdiskriminierung durch KI ist ein wachsendes Problem, da KI-gestützte Technologien häufig auf Daten basieren, die Altersstereotype und Vorurteile widerspiegeln (Chu et al. 2022).",
+            "locator": "Schlomann, 'KI und Alter', Abschnitt 4.2 (Age)"
+          },
+          {
+            "quote": "Kinder, die z.B. aufgrund ihrer ethnischen Herkunft ohnehin schon marginalisiert sind",
+            "locator": "Steiner, 'Künstliche Intelligenz und Inklusion', Abschnitt 3 b) (Race_Ethnicity)"
+          },
+          {
+            "quote": "weil er Familien in Armut systematisch höheren Risiken in Bezug auf Kindeswohlgefährdung zuordnete",
+            "locator": "Linnemann/Löhe/Rottkemper, 'Ausblick und Perspektiven', Einleitung (Socioeconomic)"
+          },
+          {
+            "quote": "Die Erkennung des schweizerdeutschen Dialekts funktioniert teilweise. Dies ist vom Dialekt abhängig, wobei ein Dialekt, der dem Hochdeutschen ähnlicher ist, besser erkannt wird.",
+            "locator": "Plafky et al., 'Aktennotizerstellung', Abschnitt 3 Ergebnisse der Usability-Tests (Language_Culture)"
+          },
+          {
+            "quote": "Wie schneidet das System für verschiedene Gruppen ab (z. B. Kinder mit Migrationsgeschichte versus ohne)?",
+            "locator": "Linnemann/Löhe/Rottkemper, 'Ausblick und Perspektiven', Bias-Audit (Nationality_Migration)"
+          },
+          {
+            "quote": "Deutlich werden die Folgen dieser Diskriminierungen z.B. in den Forschungen rund um das Thema Gender und KI.",
+            "locator": "Beranek, 'KI und Theorie(bildung)', Abschnitt 4 KI und Soziale Probleme (Gender)"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "Hinzu kommt, dass die Adressat:innen Sozialer Arbeit oftmals nicht der ,Norm' entsprechen -also jenem Bild, das in den im Internet verfügbaren Daten vorherrscht und damit die Grundlage für viele KI-Systeme bildet.",
+            "locator": "Linnemann/Löhe/Rottkemper, Einführung (Exclusionary_Norms)"
+          },
+          {
+            "quote": "Selektion und Gewichtung gesellschaftlich-normative Kernbestände soziomaterieller Phänomene, sozialer Handlungen und Werte überrepräsentieren und hierdurch marginalisierte Diskurse oder soziale Gruppen unterrepräsentieren.",
+            "locator": "Steiner, 'Künstliche Intelligenz und Inklusion', Abschnitt 3 a) (Erasure)"
+          },
+          {
+            "quote": "Dies ist vom Dialekt abhängig, wobei ein Dialekt, der dem Hochdeutschen ähnlicher ist, besser erkannt wird.",
+            "locator": "Plafky et al., 'Aktennotizerstellung', Abschnitt 3 Ergebnisse der Usability-Tests (Disparate_Performance)"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Sollte es nicht möglich sein, vorurteilsfreie Daten für das Training zu bekommen, kann es notwendig sein, bestimmte Daten auszuschließen oder synthetische Daten herzustellen (vgl. Shah/Sureja 2025).",
+            "locator": "Linnemann/Löhe/Rottkemper, Einführung (Pre_Processing)"
+          },
+          {
+            "quote": "Andere Methoden zur kritischen Überprüfung von KI-Systemen sind Diversität in Entwickler:innenteams oder Ethikboards in Sozialen Organisationen.",
+            "locator": "Linnemann/Löhe/Rottkemper, 'Ausblick und Perspektiven', Bias-Audit (Organisational_Process)"
+          }
+        ],
+        "AN_Prompting_Role": [
+          {
+            "quote": "Kommunikative Kompetenzen wie Prompting (zum Bedienen von KI) oder Kommunikationsstrategien im Kontext von humanoiden Robotern könnten so zu einem neuen Arbeitsfeld der Sozialen Arbeit werden.",
+            "locator": "Beranek, Abschnitt 5 (VI) Interkulturelle Kompetenz (Learning_Content)"
+          },
+          {
+            "quote": "Bei einem Prompting-Angriff gibt ein Angreifer sorgfältig konstruierte Eingaben an ein KI-System, mit dem Ziel, das System zu manipulieren oder auszunutzen oder verbotene Inhalte ausgeben zu lassen",
+            "locator": "Pelzl, 'IT-Sicherheit und Datenschutz', Abschnitt 3.2 (Object_of_Critique)"
+          },
+          {
+            "quote": "Die Fachkräfte fänden eine Auswahl verschiedener Aktennotiztypen mit unterschiedlichen Vorlagen hilfreich",
+            "locator": "Plafky et al., Abschnitt 3 und Tabelle 1 Strukturvorgabe für die KI-Anwendung (Recommended_Practice)"
+          }
+        ]
+      }
+    }
+  }
+}

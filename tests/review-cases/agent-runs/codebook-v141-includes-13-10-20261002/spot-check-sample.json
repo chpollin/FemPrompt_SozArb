@@ -1,0 +1,48 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-13-10-20261002",
+  "status": "proposed",
+  "seed": 20261015,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "3B87U5LN",
+    "CY5IMM6G",
+    "PQC9G5EU"
+  ],
+  "disagreeing_works": [
+    "BJZYGNEE",
+    "H59BNSX8",
+    "MJDTRLAI",
+    "SS5HTYY6",
+    "VFD9ENG6"
+  ],
+  "drawn": [
+    "3B87U5LN",
+    "BJZYGNEE",
+    "CY5IMM6G",
+    "PQC9G5EU",
+    "SS5HTYY6"
+  ],
+  "flagged_additions": [
+    "7AMRV4DT",
+    "I78CL6R5",
+    "VFD9ENG6"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "3B87U5LN": "Soziale_Arbeit ja and the Include rest only on the target-group clause",
+    "SS5HTYY6": "reference list with placeholder URLs and implausible entries, integrity check needed",
+    "VFD9ENG6": "Binary_Categorical with Intersectional, Feministisch ja for a technical survey framed by Crenshaw",
+    "7AMRV4DT": "agent Exclude against the human Include",
+    "I78CL6R5": "agent Unclear against the human Include"
+  },
+  "track_agreement_sha256": "012e2d6f8f2be4425ccecd745634b19f971a96facc161fa555ef50320faaa954"
+}

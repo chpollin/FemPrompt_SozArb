@@ -1,0 +1,28 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-01-1-20261002",
+  "status": "proposed",
+  "seed": 20261003,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [],
+  "disagreeing_works": [
+    "L6PH7GDL"
+  ],
+  "drawn": [
+    "L6PH7GDL"
+  ],
+  "flagged_additions": [],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "L6PH7GDL": "edited volume coded as one work, several analysis values rest on single chapters"
+  },
+  "track_agreement_sha256": "35ca0670d72f3332931d85849d7cacaaef5450956b5b9d111a35c08a52f0b589"
+}

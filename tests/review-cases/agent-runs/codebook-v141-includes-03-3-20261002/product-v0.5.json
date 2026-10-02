@@ -1,0 +1,2771 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.5",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "status": "ai-agent-reviewed",
+  "updated": "2026-10-02T07:15:42Z",
+  "review_context": {
+    "run_id": "codebook-v141-includes-03-3-20261002",
+    "provenance_method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+    "run_manifest": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/run.json",
+    "review_path": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/ai-agent-review.json",
+    "review_sha256": "23616ab1620ebffa2fd683006218aefd74af73a70adaddfefddca7491d50a96c",
+    "ai_agent_reviewer_actor_id": "codebook-v141-includes-03-3-20261002-ai-agent-review",
+    "input_tracks": [
+      {
+        "reviewer": "ar1",
+        "actor_id": "codebook-v141-includes-03-3-20261002-ar1",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar1.json",
+        "sha256": "fae1107e2a06b0d8e8044659ec1baa0b115e31b2e7042b96e7134266fec384dd",
+        "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar1-coding.json",
+        "coding_packet_sha256": "9ba57d0208668cb7382e1cb3b47f8ffbe92eca788e524252ea6def7068adf3fa"
+      },
+      {
+        "reviewer": "ar2",
+        "actor_id": "codebook-v141-includes-03-3-20261002-ar2",
+        "path": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar2.json",
+        "sha256": "0b966ad4838ad4f06c18c8593c3e6d35c54836d9ead6d989db8f49504a5ef3b3",
+        "coding_packet": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar2-coding.json",
+        "coding_packet_sha256": "a2acf799bc4e6c60a40d31ae0c38e8c17de2f2b74538b22012bcdb67035e2e68"
+      }
+    ],
+    "paper_sources": {
+      "GJF776AY": {
+        "path": "docs/data/fulltext/GJF776AY.md",
+        "sha256": "140d4344338218f7788047720d27afde3ad1a3a05de7fcdb7e491d78b08a7e20",
+        "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+        "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec",
+        "version_type": "version_of_record",
+        "representative_record_id": "GJF776AY"
+      },
+      "KQ5A8D6E": {
+        "path": "docs/data/fulltext/KQ5A8D6E.md",
+        "sha256": "fa7adc6650e67bf8a1c5afd5755d6644109e1297d899187f169401c79b20605d",
+        "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+        "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015",
+        "version_type": "unknown",
+        "representative_record_id": "KQ5A8D6E"
+      },
+      "MS3CNU3S": {
+        "path": "docs/data/fulltext/MS3CNU3S.md",
+        "sha256": "61c2fcbd8af45a8504afcf7caeb1142e96085b658a28069633793352de2319c8",
+        "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+        "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
+        "version_type": "version_of_record",
+        "representative_record_id": "MS3CNU3S"
+      },
+      "WNY526GN": {
+        "path": "docs/data/fulltext/MS3CNU3S.md",
+        "sha256": "61c2fcbd8af45a8504afcf7caeb1142e96085b658a28069633793352de2319c8",
+        "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+        "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
+        "version_type": "version_of_record",
+        "representative_record_id": "MS3CNU3S"
+      }
+    },
+    "work_assignments": [
+      {
+        "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+        "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec",
+        "representative_record_id": "GJF776AY",
+        "record_ids": [
+          "GJF776AY"
+        ]
+      },
+      {
+        "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+        "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015",
+        "version_type": "unknown",
+        "preferred_version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015",
+        "representative_record_id": "KQ5A8D6E",
+        "record_ids": [
+          "KQ5A8D6E"
+        ]
+      },
+      {
+        "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+        "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
+        "representative_record_id": "MS3CNU3S",
+        "record_ids": [
+          "MS3CNU3S",
+          "WNY526GN"
+        ]
+      }
+    ]
+  },
+  "decisions": {
+    "GJF776AY": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Feministisch": 2,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "KI_Sonstige": [
+          {
+            "term": "It concentrates on the critical analysis of data and algorithms as two core part",
+            "snippet": "It concentrates on the critical analysis of data and algorithms as two core parts of AI systems by operationalizing hermeneutic reverse engineering.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "GJF776AY",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+          },
+          {
+            "term": "The field of critical algorithm studies identifies that another way in which AI ",
+            "snippet": "The field of critical algorithm studies identifies that another way in which AI produces and reproduces power and politics is through the politics of machine learning algorithms which lie in the realities they create.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "GJF776AY",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "It argues that examining each part related to the building and working of AI sys",
+            "snippet": "It argues that examining each part related to the building and working of AI systems is essential for unpacking the political play and potential insert points of biases in them.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "GJF776AY",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+          },
+          {
+            "term": "The research perspectives presented in this article include critical examination",
+            "snippet": "The research perspectives presented in this article include critical examination of biases and politics within different elements of AI systems, and the impact of these biases on different social groups.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "GJF776AY",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "It fails to recognize any face that does not belong to the societal definitions ",
+            "snippet": "It fails to recognize any face that does not belong to the societal definitions of race and gender that were fed into it during its creation and re-enacts the default social discrimination",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "GJF776AY",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "It helps us to understand the politics of representation within data and how the",
+            "snippet": "It helps us to understand the politics of representation within data and how the privilege of different societal groups is reflected in that.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "GJF776AY",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+          },
+          {
+            "term": "The main results obtained by this method on AI systems is using cultural conside",
+            "snippet": "The main results obtained by this method on AI systems is using cultural consideration and technological imagination to unpack existing meanings created by AI and design innovative approaches for AI to exert alternate/ inclusive meanings.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "GJF776AY",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Hermeneutic reverse engineering for AI involves using technological imagination ",
+            "snippet": "Hermeneutic reverse engineering for AI involves using technological imagination to reconstruct AI that is based in intersectional feminist thought of acknowledging and understanding interlocking systems of structural oppression as stated by the 'Combahee River",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "GJF776AY",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+          },
+          {
+            "term": "builds a non-technosolutionist narrative of code from a non-hegemonic and inters",
+            "snippet": "builds a non-technosolutionist narrative of code from a non-hegemonic and intersectional feminist standpoint to question algorithmic bias acting within it.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "GJF776AY",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Investigate Participatory Design: Examine how involving end-users in the design ",
+            "snippet": "Investigate Participatory Design: Examine how involving end-users in the design process of AI systems can help minimize biases and promote fairness by organizing co-design workshops.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "GJF776AY",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+          },
+          {
+            "term": "To understand these alternative realities, it is important to pay attention to t",
+            "snippet": "To understand these alternative realities, it is important to pay attention to the tensions of fairness at the intersection of individual and group needs (Binns, 2020) and to explore ways to improve fairness in machine learning systems by mitigating discrimina",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "GJF776AY",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:42Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+      "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity",
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms",
+            "Erasure"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Absent",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Unclear"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Theoretical essay that proposes hermeneutic reverse engineering (Balsamo 2011) to examine data and algorithmic bias in AI systems, framed by boundary objects and intersectional feminist thought. AN_Bias_Axes: race and gender are coded from the essay's own sentences that develop the face-detection example (light skin as the norm, 'societal definitions of race and gender'); the opening list of race, gender, ability, language, class, economic background and religion is an enumeration. Sexual_Orientation_Identity is not coded, because gender identity appears only in the single cited Keyes (2018) sentence on automatic gender recognition, which the essay reports and does not develop. Intersectional is not coded, no passage makes an outcome depend on a combination of axes. AN_Harm_Types: Exclusionary_Norms from the essay's own argument on exclusion through hegemonic narration and light skin as the norm, and from its conclusion on questioning what is normal and who falls outside; Erasure from its own finding that questioning data reveals whose cultural narrative is missing. The cited cases of Buolamwini, Noble and Gebru are not coded as harm types. AN_Mitigation_Stage Organisational_Process and AN_Mitigation_Status Proposed: participatory co-design workshops and actionable AI audits are research perspectives, nothing is demonstrated or evaluated. AN_Gender_Understanding Unclear and AN_Gender_Definition Absent: the essay states no understanding of gender of its own; the phrase 'societal definitions of race and gender' attributes the categories to the training of a face-detection system within a cited case and does not state that gender is socially produced, so the Social_Construct threshold of codebook 1.4.1 is not met. AN_Prompting_Role None: observing outputs for different prompts appears once as a cited interrogation idea. AN_Task None: AI is the object of critique, no professional task of AI use is described."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "GJF776AY",
+      "provenance": {
+        "annotation_id": "ar2:GJF776AY",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "GJF776AY:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-03-3-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ar1",
+              "codebook-v141-includes-03-3-20261002-ar2"
+            ]
+          },
+          {
+            "id": "GJF776AY:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-03-3-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:GJF776AY",
+            "type": "paper",
+            "reference": "docs/data/fulltext/GJF776AY.md",
+            "sha256": "140d4344338218f7788047720d27afde3ad1a3a05de7fcdb7e491d78b08a7e20",
+            "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec",
+            "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:GJF776AY",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_ids": [
+            "codebook-v141-includes-03-3-20261002-ar1",
+            "codebook-v141-includes-03-3-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "KI_Sonstige": 2,
+              "Bias_Ungleichheit": 2,
+              "Gender": 1,
+              "Diversitaet": 1,
+              "Feministisch": 2,
+              "Fairness": 1
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "KI_Sonstige": [
+                {
+                  "term": "It concentrates on the critical analysis of data and algorithms as two core part",
+                  "snippet": "It concentrates on the critical analysis of data and algorithms as two core parts of AI systems by operationalizing hermeneutic reverse engineering.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "GJF776AY",
+                  "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+                  "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+                },
+                {
+                  "term": "The field of critical algorithm studies identifies that another way in which AI ",
+                  "snippet": "The field of critical algorithm studies identifies that another way in which AI produces and reproduces power and politics is through the politics of machine learning algorithms which lie in the realities they create.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "GJF776AY",
+                  "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+                  "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "It argues that examining each part related to the building and working of AI sys",
+                  "snippet": "It argues that examining each part related to the building and working of AI systems is essential for unpacking the political play and potential insert points of biases in them.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "GJF776AY",
+                  "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+                  "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+                },
+                {
+                  "term": "The research perspectives presented in this article include critical examination",
+                  "snippet": "The research perspectives presented in this article include critical examination of biases and politics within different elements of AI systems, and the impact of these biases on different social groups.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "GJF776AY",
+                  "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+                  "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "It fails to recognize any face that does not belong to the societal definitions ",
+                  "snippet": "It fails to recognize any face that does not belong to the societal definitions of race and gender that were fed into it during its creation and re-enacts the default social discrimination",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "GJF776AY",
+                  "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+                  "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "It helps us to understand the politics of representation within data and how the",
+                  "snippet": "It helps us to understand the politics of representation within data and how the privilege of different societal groups is reflected in that.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "GJF776AY",
+                  "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+                  "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+                },
+                {
+                  "term": "The main results obtained by this method on AI systems is using cultural conside",
+                  "snippet": "The main results obtained by this method on AI systems is using cultural consideration and technological imagination to unpack existing meanings created by AI and design innovative approaches for AI to exert alternate/ inclusive meanings.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "GJF776AY",
+                  "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+                  "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+                }
+              ],
+              "Feministisch": [
+                {
+                  "term": "Hermeneutic reverse engineering for AI involves using technological imagination ",
+                  "snippet": "Hermeneutic reverse engineering for AI involves using technological imagination to reconstruct AI that is based in intersectional feminist thought of acknowledging and understanding interlocking systems of structural oppression as stated by the 'Combahee River",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "GJF776AY",
+                  "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+                  "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+                },
+                {
+                  "term": "builds a non-technosolutionist narrative of code from a non-hegemonic and inters",
+                  "snippet": "builds a non-technosolutionist narrative of code from a non-hegemonic and intersectional feminist standpoint to question algorithmic bias acting within it.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "GJF776AY",
+                  "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+                  "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "Investigate Participatory Design: Examine how involving end-users in the design ",
+                  "snippet": "Investigate Participatory Design: Examine how involving end-users in the design process of AI systems can help minimize biases and promote fairness by organizing co-design workshops.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "GJF776AY",
+                  "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+                  "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+                },
+                {
+                  "term": "To understand these alternative realities, it is important to pay attention to t",
+                  "snippet": "To understand these alternative realities, it is important to pay attention to the tensions of fairness at the intersection of individual and group needs (Binns, 2020) and to explore ways to improve fairness in machine learning systems by mitigating discrimina",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "GJF776AY",
+                  "work_id": "work:5c3003ba-8bad-5e46-862a-cc3b31138368",
+                  "version_id": "version:d5a41d9b-1c5c-5946-b9fe-4b7f2ad79bec"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "Race_Ethnicity",
+                  "Gender"
+                ],
+                "AN_Harm_Types": [
+                  "Exclusionary_Norms",
+                  "Erasure"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Proposed",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Task": [
+                  "None"
+                ],
+                "AN_Gender_Definition": "Absent",
+                "AN_Bias_Definition": "Explicit",
+                "AN_Gender_Understanding": [
+                  "Unclear"
+                ],
+                "AN_Theory_Reference": "Yes",
+                "AN_Coding_Basis": "Fulltext",
+                "Studientyp": "Theoretisch",
+                "AN_Notes": "Theoretical essay that proposes hermeneutic reverse engineering (Balsamo 2011) to examine data and algorithmic bias in AI systems, framed by boundary objects and intersectional feminist thought. AN_Bias_Axes: race and gender are coded from the essay's own sentences that develop the face-detection example (light skin as the norm, 'societal definitions of race and gender'); the opening list of race, gender, ability, language, class, economic background and religion is an enumeration. Sexual_Orientation_Identity is not coded, because gender identity appears only in the single cited Keyes (2018) sentence on automatic gender recognition, which the essay reports and does not develop. Intersectional is not coded, no passage makes an outcome depend on a combination of axes. AN_Harm_Types: Exclusionary_Norms from the essay's own argument on exclusion through hegemonic narration and light skin as the norm, and from its conclusion on questioning what is normal and who falls outside; Erasure from its own finding that questioning data reveals whose cultural narrative is missing. The cited cases of Buolamwini, Noble and Gebru are not coded as harm types. AN_Mitigation_Stage Organisational_Process and AN_Mitigation_Status Proposed: participatory co-design workshops and actionable AI audits are research perspectives, nothing is demonstrated or evaluated. AN_Gender_Understanding Unclear and AN_Gender_Definition Absent: the essay states no understanding of gender of its own; the phrase 'societal definitions of race and gender' attributes the categories to the training of a face-detection system within a cited case and does not state that gender is socially produced, so the Social_Construct threshold of codebook 1.4.1 is not met. AN_Prompting_Role None: observing outputs for different prompts appears once as a cited interrogation idea. AN_Task None: AI is the object of critique, no professional task of AI use is described."
+              },
+              "undecidable": {},
+              "codebook_version": "1.4.1"
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:42Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:GJF776AY",
+      "checks": [
+        {
+          "check_id": "GJF776AY:lifecycle-contract:2026-10-02T07:15:42Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:GJF776AY",
+            "sha256": "55a156ee3a871a8c2872e269da262a4caaeec74f4d8719573e79381ff2e9ee13"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "GJF776AY:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:42Z",
+            "activity_id": "GJF776AY:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ar1",
+              "codebook-v141-includes-03-3-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:GJF776AY"
+          },
+          {
+            "event_id": "GJF776AY:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:42Z",
+            "activity_id": "GJF776AY:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:GJF776AY"
+          }
+        ]
+      }
+    },
+    "KQ5A8D6E": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 1,
+        "Diversitaet": 2,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "The UNESCO AI competency framework for students aims to help educators in this i",
+            "snippet": "The UNESCO AI competency framework for students aims to help educators in this integration, outlining 12 competencies across four dimensions: Human-centred mindset, Ethics of AI, AI techniques and applications, and AI system design.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          },
+          {
+            "term": "Governments acknowledged the urgent need to develop AI literacy and more advance",
+            "snippet": "Governments acknowledged the urgent need to develop AI literacy and more advanced AI competencies as early as 2019, when they adopted the UNESCO Beijing Consensus on AI and Education .",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Explain what AI algorithms are used and integrated by a given generative AI syst",
+            "snippet": "Explain what AI algorithms are used and integrated by a given generative AI system.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          },
+          {
+            "term": "Co-create ethical guidance for yourself and your peers on the use of video-recom",
+            "snippet": "Co-create ethical guidance for yourself and your peers on the use of video-recommendation platforms or generative AI systems.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "AI foundations: Students are expected to be able to build basic knowledge and sk",
+            "snippet": "AI foundations: Students are expected to be able to build basic knowledge and skills on AI, particularly with respect to data and algorithms",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          },
+          {
+            "term": "Explain how supervised learning, unsupervised learning and reinforcement learnin",
+            "snippet": "Explain how supervised learning, unsupervised learning and reinforcement learning work on a basic level.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          },
+          {
+            "term": "help students to develop an age-appropriate understanding of the three types of ",
+            "snippet": "help students to develop an age-appropriate understanding of the three types of AI algorithms, namely, supervised learning, unsupervised learning and reinforcement learning.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Non-discrimination: Students are aware of and are able to detect gender, ethnic,",
+            "snippet": "Non-discrimination: Students are aware of and are able to detect gender, ethnic, cultural and other biases embedded in AI tools or their outputs.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          },
+          {
+            "term": "When recommending specific AI tools for educational purposes, rigorous public va",
+            "snippet": "When recommending specific AI tools for educational purposes, rigorous public validation mechanisms must be applied to avoid algorithms with bias(es) related to gender, ability, socio-economic status, language, ethnicity and/or culture.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "All students should have inclusive access to the environments required for learn",
+            "snippet": "All students should have inclusive access to the environments required for learning about AI at the basic level, and they should be supported to learn how to embed the principle of inclusivity into the design of AI and be prepared to contribute to an inclusive",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          },
+          {
+            "term": "AI tools that are designed to support individuals with disabilities and promote ",
+            "snippet": "AI tools that are designed to support individuals with disabilities and promote linguistic and cultural diversity should be given priority.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          },
+          {
+            "term": "the competencies outlined in this framework are based on principles of inclusivi",
+            "snippet": "the competencies outlined in this framework are based on principles of inclusivity, the centrality of human agency, nondiscrimination, and respect for linguistic and cultural diversity.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "This covers the selection of representative data, the choice of biasagnostic alg",
+            "snippet": "This covers the selection of representative data, the choice of biasagnostic algorithms and anti-discrimination training methods, the design of accessible functionalities, testing for the inclusiveness of AI outputs, and impact assessment of the use of AI on s",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "KQ5A8D6E",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:42Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+      "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015",
+      "version_type": "unknown",
+      "preferred_version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "None"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Konzept",
+          "AN_Notes": "UNESCO reference framework of twelve AI competency blocks for school students (four aspects by three progression levels) with curricular goals, pedagogical methods, learning environments and assessment items. Inclusivity is one of five key principles with its own section (2.4), hence Diversitaet ja. Bias enters as the non-discrimination principle, as anti-bias measures within section 2.4, the data biases lab and the competency to critique AI-amplified biases; it recurs as learning content beside privacy, human agency and environmental sustainability and is not the framework's central contribution, hence Bias_Ungleichheit teilweise. AN_Bias_Axes None: gender, ethnicity, culture, ability, socio-economic status and language appear only in enumerations of bias types or disaggregation variables. AN_Harm_Types None: no harm mechanism is established for the framework's own object. AN_Mitigation_Stage: Pre_Processing (representative data, data engineering to remove identifiable biases in the data biases lab), In_Training (anti-discrimination and discrimination-free training methods), Organisational_Process (public validation before recommending AI tools, inclusive testing and auditing); all are recommended as curricular content or policy, hence Proposed. AN_Bias_Definition Implicit_Only. AN_Gender_Definition and AN_Gender_Understanding Not_Applicable: gender occurs only in enumerations. AN_Population Not_SW_Specific: school students in general education. AN_Task None: AI is the learning object of a school curriculum; students' own use of AI tools to practise writing is learning activity, not a task of professional practice, and AI-supported assessment by teachers appears only as a supplementary outlook in section 5.8. School teaching lies outside Teaching_Further_Education, which addresses professionals. AN_Prompting_Role None: prompts appear only in a privacy assessment item."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "KQ5A8D6E",
+      "provenance": {
+        "annotation_id": "ar2:KQ5A8D6E",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "KQ5A8D6E:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-03-3-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ar1",
+              "codebook-v141-includes-03-3-20261002-ar2"
+            ]
+          },
+          {
+            "id": "KQ5A8D6E:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-03-3-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:KQ5A8D6E",
+            "type": "paper",
+            "reference": "docs/data/fulltext/KQ5A8D6E.md",
+            "sha256": "fa7adc6650e67bf8a1c5afd5755d6644109e1297d899187f169401c79b20605d",
+            "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015",
+            "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+            "version_type": "unknown"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:KQ5A8D6E",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_ids": [
+            "codebook-v141-includes-03-3-20261002-ar1",
+            "codebook-v141-includes-03-3-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "AI_Literacies": 2,
+              "Generative_KI": 1,
+              "KI_Sonstige": 2,
+              "Bias_Ungleichheit": 1,
+              "Diversitaet": 2,
+              "Fairness": 1
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "AI_Literacies": [
+                {
+                  "term": "The UNESCO AI competency framework for students aims to help educators in this i",
+                  "snippet": "The UNESCO AI competency framework for students aims to help educators in this integration, outlining 12 competencies across four dimensions: Human-centred mindset, Ethics of AI, AI techniques and applications, and AI system design.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                },
+                {
+                  "term": "Governments acknowledged the urgent need to develop AI literacy and more advance",
+                  "snippet": "Governments acknowledged the urgent need to develop AI literacy and more advanced AI competencies as early as 2019, when they adopted the UNESCO Beijing Consensus on AI and Education .",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                }
+              ],
+              "Generative_KI": [
+                {
+                  "term": "Explain what AI algorithms are used and integrated by a given generative AI syst",
+                  "snippet": "Explain what AI algorithms are used and integrated by a given generative AI system.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                },
+                {
+                  "term": "Co-create ethical guidance for yourself and your peers on the use of video-recom",
+                  "snippet": "Co-create ethical guidance for yourself and your peers on the use of video-recommendation platforms or generative AI systems.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                }
+              ],
+              "KI_Sonstige": [
+                {
+                  "term": "AI foundations: Students are expected to be able to build basic knowledge and sk",
+                  "snippet": "AI foundations: Students are expected to be able to build basic knowledge and skills on AI, particularly with respect to data and algorithms",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                },
+                {
+                  "term": "Explain how supervised learning, unsupervised learning and reinforcement learnin",
+                  "snippet": "Explain how supervised learning, unsupervised learning and reinforcement learning work on a basic level.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                },
+                {
+                  "term": "help students to develop an age-appropriate understanding of the three types of ",
+                  "snippet": "help students to develop an age-appropriate understanding of the three types of AI algorithms, namely, supervised learning, unsupervised learning and reinforcement learning.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "Non-discrimination: Students are aware of and are able to detect gender, ethnic,",
+                  "snippet": "Non-discrimination: Students are aware of and are able to detect gender, ethnic, cultural and other biases embedded in AI tools or their outputs.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                },
+                {
+                  "term": "When recommending specific AI tools for educational purposes, rigorous public va",
+                  "snippet": "When recommending specific AI tools for educational purposes, rigorous public validation mechanisms must be applied to avoid algorithms with bias(es) related to gender, ability, socio-economic status, language, ethnicity and/or culture.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "All students should have inclusive access to the environments required for learn",
+                  "snippet": "All students should have inclusive access to the environments required for learning about AI at the basic level, and they should be supported to learn how to embed the principle of inclusivity into the design of AI and be prepared to contribute to an inclusive",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                },
+                {
+                  "term": "AI tools that are designed to support individuals with disabilities and promote ",
+                  "snippet": "AI tools that are designed to support individuals with disabilities and promote linguistic and cultural diversity should be given priority.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                },
+                {
+                  "term": "the competencies outlined in this framework are based on principles of inclusivi",
+                  "snippet": "the competencies outlined in this framework are based on principles of inclusivity, the centrality of human agency, nondiscrimination, and respect for linguistic and cultural diversity.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "This covers the selection of representative data, the choice of biasagnostic alg",
+                  "snippet": "This covers the selection of representative data, the choice of biasagnostic algorithms and anti-discrimination training methods, the design of accessible functionalities, testing for the inclusiveness of AI outputs, and impact assessment of the use of AI on s",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "KQ5A8D6E",
+                  "work_id": "work:e7825e2f-1c0f-51a8-ac20-ac4c620a393d",
+                  "version_id": "version:8ab3e2cf-c398-5f9a-831a-dd93a9f60015"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "None"
+                ],
+                "AN_Prompt_Techniques": [
+                  "None"
+                ],
+                "AN_Bias_Axes": [
+                  "None"
+                ],
+                "AN_Harm_Types": [
+                  "None"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Pre_Processing",
+                  "In_Training",
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Proposed",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Task": [
+                  "None"
+                ],
+                "AN_Gender_Definition": "Not_Applicable",
+                "AN_Bias_Definition": "Implicit_Only",
+                "AN_Gender_Understanding": [
+                  "Not_Applicable"
+                ],
+                "AN_Theory_Reference": "No",
+                "AN_Coding_Basis": "Fulltext",
+                "Studientyp": "Konzept",
+                "AN_Notes": "UNESCO reference framework of twelve AI competency blocks for school students (four aspects by three progression levels) with curricular goals, pedagogical methods, learning environments and assessment items. Inclusivity is one of five key principles with its own section (2.4), hence Diversitaet ja. Bias enters as the non-discrimination principle, as anti-bias measures within section 2.4, the data biases lab and the competency to critique AI-amplified biases; it recurs as learning content beside privacy, human agency and environmental sustainability and is not the framework's central contribution, hence Bias_Ungleichheit teilweise. AN_Bias_Axes None: gender, ethnicity, culture, ability, socio-economic status and language appear only in enumerations of bias types or disaggregation variables. AN_Harm_Types None: no harm mechanism is established for the framework's own object. AN_Mitigation_Stage: Pre_Processing (representative data, data engineering to remove identifiable biases in the data biases lab), In_Training (anti-discrimination and discrimination-free training methods), Organisational_Process (public validation before recommending AI tools, inclusive testing and auditing); all are recommended as curricular content or policy, hence Proposed. AN_Bias_Definition Implicit_Only. AN_Gender_Definition and AN_Gender_Understanding Not_Applicable: gender occurs only in enumerations. AN_Population Not_SW_Specific: school students in general education. AN_Task None: AI is the learning object of a school curriculum; students' own use of AI tools to practise writing is learning activity, not a task of professional practice, and AI-supported assessment by teachers appears only as a supplementary outlook in section 5.8. School teaching lies outside Teaching_Further_Education, which addresses professionals. AN_Prompting_Role None: prompts appear only in a privacy assessment item."
+              },
+              "undecidable": {},
+              "codebook_version": "1.4.1"
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:42Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:KQ5A8D6E",
+      "checks": [
+        {
+          "check_id": "KQ5A8D6E:lifecycle-contract:2026-10-02T07:15:42Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:KQ5A8D6E",
+            "sha256": "9dccfdcf28b8f791021a628eae7f4aeedd22e2eff85cb8200c2d1284ad6771ad"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "KQ5A8D6E:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:42Z",
+            "activity_id": "KQ5A8D6E:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ar1",
+              "codebook-v141-includes-03-3-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:KQ5A8D6E"
+          },
+          {
+            "event_id": "KQ5A8D6E:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:42Z",
+            "activity_id": "KQ5A8D6E:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:KQ5A8D6E"
+          }
+        ]
+      }
+    },
+    "MS3CNU3S": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Feministisch": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "In this article, we present a comprehensive survey of bias evaluation and mitiga",
+            "snippet": "In this article, we present a comprehensive survey of bias evaluation and mitigation techniques for LLMs.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Textual instructions or triggers may be added to a prompt to generate an unbiase",
+            "snippet": "Textual instructions or triggers may be added to a prompt to generate an unbiased output.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Provide a phrase to a generative LLM to condition text completion",
+            "snippet": "Provide a phrase to a generative LLM to condition text completion",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Despite this success, these models can learn, perpetuate, and amplify harmful so",
+            "snippet": "Despite this success, these models can learn, perpetuate, and amplify harmful social biases.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Social bias broadly encompasses disparate treatment or outcomes between social g",
+            "snippet": "Social bias broadly encompasses disparate treatment or outcomes between social groups that arise from historical and structural power asymmetries.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Machine translators may default to masculine words in the case of ambiguity, a f",
+            "snippet": "Machine translators may default to masculine words in the case of ambiguity, a form of an exclusionary norm",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "We illustrate one type of social group substitution (gender) for two different t",
+            "snippet": "We illustrate one type of social group substitution (gender) for two different tasks, namely, question-answering and text completion.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Participatory approaches can integrate community members into the research proce",
+            "snippet": "Participatory approaches can integrate community members into the research process to better understand and represent their needs.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Researchers and practitioners should not merely react to bias in the systems the",
+            "snippet": "Researchers and practitioners should not merely react to bias in the systems they create, but instead design these technologies with the needs of vulnerable groups in mind from the start",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Curation of additional language resources should value inclusivity over convenie",
+            "snippet": "Curation of additional language resources should value inclusivity over convenience",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Language can also exclude, subtly reinforcing norms that can further marginalize",
+            "snippet": "Language can also exclude, subtly reinforcing norms that can further marginalize groups that do not conform, through linguistic practices like 'male-asnorm,' which orients feminine words as less important opposites derived from default masculine terms. These n",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "which orients feminine words as less important opposites derived from default ma",
+            "snippet": "which orients feminine words as less important opposites derived from default masculine terms. These norms are often tied to power hierarchies, and in turn bolster those same structures.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "We shift fairness frameworks typically applied to machine learning classificatio",
+            "snippet": "We shift fairness frameworks typically applied to machine learning classification problems towards NLP and introduce several fairness desiderata that begin to operationalize various fairness notions for LLMs.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Given a set of social groups G , group fairness requires (approximate) parity ac",
+            "snippet": "Given a set of social groups G , group fairness requires (approximate) parity across all groups G ∈ G",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Instead of suggesting a single fairness constraint, we provide a number of possi",
+            "snippet": "Instead of suggesting a single fairness constraint, we provide a number of possible fairness desiderata for LLMs.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:42Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+      "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Religion",
+            "Age",
+            "Nationality_Migration",
+            "Physical_Appearance",
+            "Sexual_Orientation_Identity",
+            "Language_Culture"
+          ],
+          "AN_Harm_Types": [
+            "Derogatory_Language",
+            "Disparate_Performance",
+            "Erasure",
+            "Exclusionary_Norms",
+            "Misrepresentation",
+            "Stereotyping",
+            "Toxicity",
+            "Direct_Discrimination",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Intra_Processing",
+            "Post_Processing",
+            "Prompt_Practice",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Social_Construct"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Literaturreview",
+          "AN_Notes": "Survey of bias evaluation metrics, evaluation datasets and mitigation techniques for LLMs with three taxonomies and a harm taxonomy (Table 1). AN_Harm_Types: all nine values structure the survey's own synthesis as rows of Table 1 (representational harms and allocational harms) and, for six of them, as coded columns of Table 4; the Derogatory_Language row label is lost in the conversion of Table 1, so its passage comes from section 2.4.2. AN_Bias_Axes: coded from the targeted-social-group columns of Table 4 (age, gender identity, nationality, physical appearance, race, religion, sexual orientation) and from dialect as the survey's own worked example (African-American English, linguistic profiling); disability and socioeconomic status appear only in dataset enumerations and the 'Other' footnote and are not coded. Intersectional is not coded: the survey argues that group fairness can hold for each group while failing for intersectional subgroups, but names no axis combination whose result it develops. AN_Prompting_Role Research_Instrument: prompt datasets (sentence completions, question answering) are a class of the evaluation taxonomy; modified prompting language is reviewed as a mitigation technique, not recommended. AN_Prompt_Techniques General_Guidance, concrete strategy as synthesised: 'prompting language with different levels of abstraction to instruct the model to avoid using stereotypes' and prepending positive adjectives or phrases to a prompt (section 5.1.4). AN_Mitigation_Stage: the four technical stages are the survey's own taxonomy; Prompt_Practice from modified prompting language; Organisational_Process from participatory research designs, reporting standards and data governance proposed in section 6. AN_Mitigation_Status Evaluated as a synthesised evaluation, not the survey's own experiment: the survey reports that Borchers et al. (2022) found instructions prompting diversity or gender equality unsuccessful for bias removal, and that pruning 10-20% of parameters increased resistance to jailbreaking (Hasan, Rugina and Wang 2024); other techniques are inventoried without assessment. AN_Gender_Understanding Social_Construct: the survey states that social groups, which by Definition 3 include gender identity and sex, are socially constructed, contested and tied to power imbalances, and it adopts the critique that binary and immutable gender modelling erases trans, nonbinary and intersex people; its own Figure 1 example uses a male and female substitution. AN_Gender_Definition Implicit_Only because gender itself is not defined. AN_Task None: general LLM bias survey without an application task."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "MS3CNU3S",
+      "provenance": {
+        "annotation_id": "ar2:MS3CNU3S",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "MS3CNU3S:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-03-3-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ar1",
+              "codebook-v141-includes-03-3-20261002-ar2"
+            ]
+          },
+          {
+            "id": "MS3CNU3S:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-03-3-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:MS3CNU3S",
+            "type": "paper",
+            "reference": "docs/data/fulltext/MS3CNU3S.md",
+            "sha256": "61c2fcbd8af45a8504afcf7caeb1142e96085b658a28069633793352de2319c8",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:MS3CNU3S",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_ids": [
+            "codebook-v141-includes-03-3-20261002-ar1",
+            "codebook-v141-includes-03-3-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2,
+              "Prompting": 1,
+              "Bias_Ungleichheit": 2,
+              "Gender": 1,
+              "Diversitaet": 1,
+              "Feministisch": 1,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "In this article, we present a comprehensive survey of bias evaluation and mitiga",
+                  "snippet": "In this article, we present a comprehensive survey of bias evaluation and mitigation techniques for LLMs.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "Textual instructions or triggers may be added to a prompt to generate an unbiase",
+                  "snippet": "Textual instructions or triggers may be added to a prompt to generate an unbiased output.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Provide a phrase to a generative LLM to condition text completion",
+                  "snippet": "Provide a phrase to a generative LLM to condition text completion",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "Despite this success, these models can learn, perpetuate, and amplify harmful so",
+                  "snippet": "Despite this success, these models can learn, perpetuate, and amplify harmful social biases.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Social bias broadly encompasses disparate treatment or outcomes between social g",
+                  "snippet": "Social bias broadly encompasses disparate treatment or outcomes between social groups that arise from historical and structural power asymmetries.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "Machine translators may default to masculine words in the case of ambiguity, a f",
+                  "snippet": "Machine translators may default to masculine words in the case of ambiguity, a form of an exclusionary norm",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "We illustrate one type of social group substitution (gender) for two different t",
+                  "snippet": "We illustrate one type of social group substitution (gender) for two different tasks, namely, question-answering and text completion.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "Participatory approaches can integrate community members into the research proce",
+                  "snippet": "Participatory approaches can integrate community members into the research process to better understand and represent their needs.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Researchers and practitioners should not merely react to bias in the systems the",
+                  "snippet": "Researchers and practitioners should not merely react to bias in the systems they create, but instead design these technologies with the needs of vulnerable groups in mind from the start",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Curation of additional language resources should value inclusivity over convenie",
+                  "snippet": "Curation of additional language resources should value inclusivity over convenience",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Feministisch": [
+                {
+                  "term": "Language can also exclude, subtly reinforcing norms that can further marginalize",
+                  "snippet": "Language can also exclude, subtly reinforcing norms that can further marginalize groups that do not conform, through linguistic practices like 'male-asnorm,' which orients feminine words as less important opposites derived from default masculine terms. These n",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "which orients feminine words as less important opposites derived from default ma",
+                  "snippet": "which orients feminine words as less important opposites derived from default masculine terms. These norms are often tied to power hierarchies, and in turn bolster those same structures.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "We shift fairness frameworks typically applied to machine learning classificatio",
+                  "snippet": "We shift fairness frameworks typically applied to machine learning classification problems towards NLP and introduce several fairness desiderata that begin to operationalize various fairness notions for LLMs.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Given a set of social groups G , group fairness requires (approximate) parity ac",
+                  "snippet": "Given a set of social groups G , group fairness requires (approximate) parity across all groups G ∈ G",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Instead of suggesting a single fairness constraint, we provide a number of possi",
+                  "snippet": "Instead of suggesting a single fairness constraint, we provide a number of possible fairness desiderata for LLMs.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "Research_Instrument"
+                ],
+                "AN_Prompt_Techniques": [
+                  "General_Guidance"
+                ],
+                "AN_Bias_Axes": [
+                  "Gender",
+                  "Race_Ethnicity",
+                  "Religion",
+                  "Age",
+                  "Nationality_Migration",
+                  "Physical_Appearance",
+                  "Sexual_Orientation_Identity",
+                  "Language_Culture"
+                ],
+                "AN_Harm_Types": [
+                  "Derogatory_Language",
+                  "Disparate_Performance",
+                  "Erasure",
+                  "Exclusionary_Norms",
+                  "Misrepresentation",
+                  "Stereotyping",
+                  "Toxicity",
+                  "Direct_Discrimination",
+                  "Indirect_Discrimination"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Pre_Processing",
+                  "In_Training",
+                  "Intra_Processing",
+                  "Post_Processing",
+                  "Prompt_Practice",
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Evaluated",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Task": [
+                  "None"
+                ],
+                "AN_Gender_Definition": "Implicit_Only",
+                "AN_Bias_Definition": "Explicit",
+                "AN_Gender_Understanding": [
+                  "Social_Construct"
+                ],
+                "AN_Theory_Reference": "Yes",
+                "AN_Coding_Basis": "Fulltext",
+                "Studientyp": "Literaturreview",
+                "AN_Notes": "Survey of bias evaluation metrics, evaluation datasets and mitigation techniques for LLMs with three taxonomies and a harm taxonomy (Table 1). AN_Harm_Types: all nine values structure the survey's own synthesis as rows of Table 1 (representational harms and allocational harms) and, for six of them, as coded columns of Table 4; the Derogatory_Language row label is lost in the conversion of Table 1, so its passage comes from section 2.4.2. AN_Bias_Axes: coded from the targeted-social-group columns of Table 4 (age, gender identity, nationality, physical appearance, race, religion, sexual orientation) and from dialect as the survey's own worked example (African-American English, linguistic profiling); disability and socioeconomic status appear only in dataset enumerations and the 'Other' footnote and are not coded. Intersectional is not coded: the survey argues that group fairness can hold for each group while failing for intersectional subgroups, but names no axis combination whose result it develops. AN_Prompting_Role Research_Instrument: prompt datasets (sentence completions, question answering) are a class of the evaluation taxonomy; modified prompting language is reviewed as a mitigation technique, not recommended. AN_Prompt_Techniques General_Guidance, concrete strategy as synthesised: 'prompting language with different levels of abstraction to instruct the model to avoid using stereotypes' and prepending positive adjectives or phrases to a prompt (section 5.1.4). AN_Mitigation_Stage: the four technical stages are the survey's own taxonomy; Prompt_Practice from modified prompting language; Organisational_Process from participatory research designs, reporting standards and data governance proposed in section 6. AN_Mitigation_Status Evaluated as a synthesised evaluation, not the survey's own experiment: the survey reports that Borchers et al. (2022) found instructions prompting diversity or gender equality unsuccessful for bias removal, and that pruning 10-20% of parameters increased resistance to jailbreaking (Hasan, Rugina and Wang 2024); other techniques are inventoried without assessment. AN_Gender_Understanding Social_Construct: the survey states that social groups, which by Definition 3 include gender identity and sex, are socially constructed, contested and tied to power imbalances, and it adopts the critique that binary and immutable gender modelling erases trans, nonbinary and intersex people; its own Figure 1 example uses a male and female substitution. AN_Gender_Definition Implicit_Only because gender itself is not defined. AN_Task None: general LLM bias survey without an application task."
+              },
+              "undecidable": {},
+              "codebook_version": "1.4.1"
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:42Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:MS3CNU3S",
+      "checks": [
+        {
+          "check_id": "MS3CNU3S:lifecycle-contract:2026-10-02T07:15:42Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:MS3CNU3S",
+            "sha256": "97e9ffa3cbff2edd4ba94bfa7b42771a9b23db2a44c2050cc50f5a2b933a0b0c"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "MS3CNU3S:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:42Z",
+            "activity_id": "MS3CNU3S:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ar1",
+              "codebook-v141-includes-03-3-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:MS3CNU3S"
+          },
+          {
+            "event_id": "MS3CNU3S:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:42Z",
+            "activity_id": "MS3CNU3S:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:MS3CNU3S"
+          }
+        ]
+      }
+    },
+    "WNY526GN": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Feministisch": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "In this article, we present a comprehensive survey of bias evaluation and mitiga",
+            "snippet": "In this article, we present a comprehensive survey of bias evaluation and mitigation techniques for LLMs.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Textual instructions or triggers may be added to a prompt to generate an unbiase",
+            "snippet": "Textual instructions or triggers may be added to a prompt to generate an unbiased output.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Provide a phrase to a generative LLM to condition text completion",
+            "snippet": "Provide a phrase to a generative LLM to condition text completion",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Despite this success, these models can learn, perpetuate, and amplify harmful so",
+            "snippet": "Despite this success, these models can learn, perpetuate, and amplify harmful social biases.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Social bias broadly encompasses disparate treatment or outcomes between social g",
+            "snippet": "Social bias broadly encompasses disparate treatment or outcomes between social groups that arise from historical and structural power asymmetries.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Machine translators may default to masculine words in the case of ambiguity, a f",
+            "snippet": "Machine translators may default to masculine words in the case of ambiguity, a form of an exclusionary norm",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "We illustrate one type of social group substitution (gender) for two different t",
+            "snippet": "We illustrate one type of social group substitution (gender) for two different tasks, namely, question-answering and text completion.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Participatory approaches can integrate community members into the research proce",
+            "snippet": "Participatory approaches can integrate community members into the research process to better understand and represent their needs.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Researchers and practitioners should not merely react to bias in the systems the",
+            "snippet": "Researchers and practitioners should not merely react to bias in the systems they create, but instead design these technologies with the needs of vulnerable groups in mind from the start",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Curation of additional language resources should value inclusivity over convenie",
+            "snippet": "Curation of additional language resources should value inclusivity over convenience",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Language can also exclude, subtly reinforcing norms that can further marginalize",
+            "snippet": "Language can also exclude, subtly reinforcing norms that can further marginalize groups that do not conform, through linguistic practices like 'male-asnorm,' which orients feminine words as less important opposites derived from default masculine terms. These n",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "which orients feminine words as less important opposites derived from default ma",
+            "snippet": "which orients feminine words as less important opposites derived from default masculine terms. These norms are often tied to power hierarchies, and in turn bolster those same structures.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "We shift fairness frameworks typically applied to machine learning classificatio",
+            "snippet": "We shift fairness frameworks typically applied to machine learning classification problems towards NLP and introduce several fairness desiderata that begin to operationalize various fairness notions for LLMs.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Given a set of social groups G , group fairness requires (approximate) parity ac",
+            "snippet": "Given a set of social groups G , group fairness requires (approximate) parity across all groups G ∈ G",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          },
+          {
+            "term": "Instead of suggesting a single fairness constraint, we provide a number of possi",
+            "snippet": "Instead of suggesting a single fairness constraint, we provide a number of possible fairness desiderata for LLMs.",
+            "ts": "2026-10-02T07:15:42Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "MS3CNU3S",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+          }
+        ]
+      },
+      "ts": "2026-10-02T07:15:42Z",
+      "reviewer": "ar2",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+      "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Religion",
+            "Age",
+            "Nationality_Migration",
+            "Physical_Appearance",
+            "Sexual_Orientation_Identity",
+            "Language_Culture"
+          ],
+          "AN_Harm_Types": [
+            "Derogatory_Language",
+            "Disparate_Performance",
+            "Erasure",
+            "Exclusionary_Norms",
+            "Misrepresentation",
+            "Stereotyping",
+            "Toxicity",
+            "Direct_Discrimination",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Intra_Processing",
+            "Post_Processing",
+            "Prompt_Practice",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Social_Construct"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Literaturreview",
+          "AN_Notes": "Survey of bias evaluation metrics, evaluation datasets and mitigation techniques for LLMs with three taxonomies and a harm taxonomy (Table 1). AN_Harm_Types: all nine values structure the survey's own synthesis as rows of Table 1 (representational harms and allocational harms) and, for six of them, as coded columns of Table 4; the Derogatory_Language row label is lost in the conversion of Table 1, so its passage comes from section 2.4.2. AN_Bias_Axes: coded from the targeted-social-group columns of Table 4 (age, gender identity, nationality, physical appearance, race, religion, sexual orientation) and from dialect as the survey's own worked example (African-American English, linguistic profiling); disability and socioeconomic status appear only in dataset enumerations and the 'Other' footnote and are not coded. Intersectional is not coded: the survey argues that group fairness can hold for each group while failing for intersectional subgroups, but names no axis combination whose result it develops. AN_Prompting_Role Research_Instrument: prompt datasets (sentence completions, question answering) are a class of the evaluation taxonomy; modified prompting language is reviewed as a mitigation technique, not recommended. AN_Prompt_Techniques General_Guidance, concrete strategy as synthesised: 'prompting language with different levels of abstraction to instruct the model to avoid using stereotypes' and prepending positive adjectives or phrases to a prompt (section 5.1.4). AN_Mitigation_Stage: the four technical stages are the survey's own taxonomy; Prompt_Practice from modified prompting language; Organisational_Process from participatory research designs, reporting standards and data governance proposed in section 6. AN_Mitigation_Status Evaluated as a synthesised evaluation, not the survey's own experiment: the survey reports that Borchers et al. (2022) found instructions prompting diversity or gender equality unsuccessful for bias removal, and that pruning 10-20% of parameters increased resistance to jailbreaking (Hasan, Rugina and Wang 2024); other techniques are inventoried without assessment. AN_Gender_Understanding Social_Construct: the survey states that social groups, which by Definition 3 include gender identity and sex, are socially constructed, contested and tied to power imbalances, and it adopts the critique that binary and immutable gender modelling erases trans, nonbinary and intersex people; its own Figure 1 example uses a male and female substitution. AN_Gender_Definition Implicit_Only because gender itself is not defined. AN_Task None: general LLM bias survey without an application task."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      },
+      "representative_record_id": "MS3CNU3S",
+      "alias_of": "MS3CNU3S",
+      "provenance": {
+        "annotation_id": "ar2:WNY526GN",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "curation-provenance-unrecorded",
+            "type": "person",
+            "roles": [
+              "curation"
+            ],
+            "identity": {
+              "status": "legacy_gap",
+              "value": "unrecorded"
+            }
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ar1",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ar2",
+            "type": "ai_agent",
+            "roles": [
+              "screening"
+            ]
+          },
+          {
+            "id": "codebook-v141-includes-03-3-20261002-ai-agent-review",
+            "type": "ai_agent",
+            "roles": [
+              "ai_agent_reviewer"
+            ],
+            "identity": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            }
+          },
+          {
+            "id": "deterministic-validator",
+            "type": "software_agent",
+            "roles": [
+              "validation"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "WNY526GN:agent-annotation",
+            "type": "screening",
+            "run_id": "codebook-v141-includes-03-3-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-agent-reviewer-v1.4.md",
+              "version": "1.4",
+              "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ar1",
+              "codebook-v141-includes-03-3-20261002-ar2"
+            ]
+          },
+          {
+            "id": "WNY526GN:ai-agent-review",
+            "type": "ai_agent_review",
+            "run_id": "codebook-v141-includes-03-3-20261002",
+            "method": "operationally_isolated_agent_screening_with_source_grounded_ai_agent_review",
+            "prompt": {
+              "status": "recorded",
+              "reference": "prompts/prism-ai-agent-review-v0.4.md",
+              "version": "0.4",
+              "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+            },
+            "model": {
+              "status": "recorded",
+              "reference": "Anthropic:opus",
+              "provider": "Anthropic",
+              "model": "opus",
+              "immutable_model_id": "claude-opus-5-5"
+            },
+            "associated_actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ai-agent-review"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:WNY526GN",
+            "type": "paper",
+            "reference": "docs/data/fulltext/MS3CNU3S.md",
+            "sha256": "61c2fcbd8af45a8504afcf7caeb1142e96085b658a28069633793352de2319c8",
+            "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45",
+            "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": [
+          {
+            "id": "ai-agent-review",
+            "type": "ai_agent_review",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/ai-agent-review.json"
+          },
+          {
+            "id": "run-manifest",
+            "type": "run_manifest",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/run.json"
+          },
+          {
+            "id": "track:ar1",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar1.json"
+          },
+          {
+            "id": "track:ar2",
+            "type": "reviewer_track",
+            "reference": "tests/review-cases/agent-runs/codebook-v141-includes-03-3-20261002/tracks/ar2.json"
+          }
+        ]
+      },
+      "annotations": [
+        {
+          "annotation_id": "ar2:WNY526GN",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_ids": [
+            "codebook-v141-includes-03-3-20261002-ar1",
+            "codebook-v141-includes-03-3-20261002-ar2"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2,
+              "Prompting": 1,
+              "Bias_Ungleichheit": 2,
+              "Gender": 1,
+              "Diversitaet": 1,
+              "Feministisch": 1,
+              "Fairness": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "In this article, we present a comprehensive survey of bias evaluation and mitiga",
+                  "snippet": "In this article, we present a comprehensive survey of bias evaluation and mitigation techniques for LLMs.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "Textual instructions or triggers may be added to a prompt to generate an unbiase",
+                  "snippet": "Textual instructions or triggers may be added to a prompt to generate an unbiased output.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Provide a phrase to a generative LLM to condition text completion",
+                  "snippet": "Provide a phrase to a generative LLM to condition text completion",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "Despite this success, these models can learn, perpetuate, and amplify harmful so",
+                  "snippet": "Despite this success, these models can learn, perpetuate, and amplify harmful social biases.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Social bias broadly encompasses disparate treatment or outcomes between social g",
+                  "snippet": "Social bias broadly encompasses disparate treatment or outcomes between social groups that arise from historical and structural power asymmetries.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Gender": [
+                {
+                  "term": "Machine translators may default to masculine words in the case of ambiguity, a f",
+                  "snippet": "Machine translators may default to masculine words in the case of ambiguity, a form of an exclusionary norm",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "We illustrate one type of social group substitution (gender) for two different t",
+                  "snippet": "We illustrate one type of social group substitution (gender) for two different tasks, namely, question-answering and text completion.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Diversitaet": [
+                {
+                  "term": "Participatory approaches can integrate community members into the research proce",
+                  "snippet": "Participatory approaches can integrate community members into the research process to better understand and represent their needs.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Researchers and practitioners should not merely react to bias in the systems the",
+                  "snippet": "Researchers and practitioners should not merely react to bias in the systems they create, but instead design these technologies with the needs of vulnerable groups in mind from the start",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Curation of additional language resources should value inclusivity over convenie",
+                  "snippet": "Curation of additional language resources should value inclusivity over convenience",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Feministisch": [
+                {
+                  "term": "Language can also exclude, subtly reinforcing norms that can further marginalize",
+                  "snippet": "Language can also exclude, subtly reinforcing norms that can further marginalize groups that do not conform, through linguistic practices like 'male-asnorm,' which orients feminine words as less important opposites derived from default masculine terms. These n",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "which orients feminine words as less important opposites derived from default ma",
+                  "snippet": "which orients feminine words as less important opposites derived from default masculine terms. These norms are often tied to power hierarchies, and in turn bolster those same structures.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ],
+              "Fairness": [
+                {
+                  "term": "We shift fairness frameworks typically applied to machine learning classificatio",
+                  "snippet": "We shift fairness frameworks typically applied to machine learning classification problems towards NLP and introduce several fairness desiderata that begin to operationalize various fairness notions for LLMs.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Given a set of social groups G , group fairness requires (approximate) parity ac",
+                  "snippet": "Given a set of social groups G , group fairness requires (approximate) parity across all groups G ∈ G",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                },
+                {
+                  "term": "Instead of suggesting a single fairness constraint, we provide a number of possi",
+                  "snippet": "Instead of suggesting a single fairness constraint, we provide a number of possible fairness desiderata for LLMs.",
+                  "ts": "2026-10-02T07:15:42Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "agent",
+                  "paper_id": "MS3CNU3S",
+                  "work_id": "work:5981ea67-23a9-5222-82c6-188b56279268",
+                  "version_id": "version:a9cdabb9-0565-55f3-a6c2-0b0594eb5b45"
+                }
+              ]
+            },
+            "analysis": {
+              "fields": {
+                "AN_Prompting_Role": [
+                  "Research_Instrument"
+                ],
+                "AN_Prompt_Techniques": [
+                  "General_Guidance"
+                ],
+                "AN_Bias_Axes": [
+                  "Gender",
+                  "Race_Ethnicity",
+                  "Religion",
+                  "Age",
+                  "Nationality_Migration",
+                  "Physical_Appearance",
+                  "Sexual_Orientation_Identity",
+                  "Language_Culture"
+                ],
+                "AN_Harm_Types": [
+                  "Derogatory_Language",
+                  "Disparate_Performance",
+                  "Erasure",
+                  "Exclusionary_Norms",
+                  "Misrepresentation",
+                  "Stereotyping",
+                  "Toxicity",
+                  "Direct_Discrimination",
+                  "Indirect_Discrimination"
+                ],
+                "AN_Mitigation_Stage": [
+                  "Pre_Processing",
+                  "In_Training",
+                  "Intra_Processing",
+                  "Post_Processing",
+                  "Prompt_Practice",
+                  "Organisational_Process"
+                ],
+                "AN_Mitigation_Status": "Evaluated",
+                "AN_Population": [
+                  "Not_SW_Specific"
+                ],
+                "AN_Task": [
+                  "None"
+                ],
+                "AN_Gender_Definition": "Implicit_Only",
+                "AN_Bias_Definition": "Explicit",
+                "AN_Gender_Understanding": [
+                  "Social_Construct"
+                ],
+                "AN_Theory_Reference": "Yes",
+                "AN_Coding_Basis": "Fulltext",
+                "Studientyp": "Literaturreview",
+                "AN_Notes": "Survey of bias evaluation metrics, evaluation datasets and mitigation techniques for LLMs with three taxonomies and a harm taxonomy (Table 1). AN_Harm_Types: all nine values structure the survey's own synthesis as rows of Table 1 (representational harms and allocational harms) and, for six of them, as coded columns of Table 4; the Derogatory_Language row label is lost in the conversion of Table 1, so its passage comes from section 2.4.2. AN_Bias_Axes: coded from the targeted-social-group columns of Table 4 (age, gender identity, nationality, physical appearance, race, religion, sexual orientation) and from dialect as the survey's own worked example (African-American English, linguistic profiling); disability and socioeconomic status appear only in dataset enumerations and the 'Other' footnote and are not coded. Intersectional is not coded: the survey argues that group fairness can hold for each group while failing for intersectional subgroups, but names no axis combination whose result it develops. AN_Prompting_Role Research_Instrument: prompt datasets (sentence completions, question answering) are a class of the evaluation taxonomy; modified prompting language is reviewed as a mitigation technique, not recommended. AN_Prompt_Techniques General_Guidance, concrete strategy as synthesised: 'prompting language with different levels of abstraction to instruct the model to avoid using stereotypes' and prepending positive adjectives or phrases to a prompt (section 5.1.4). AN_Mitigation_Stage: the four technical stages are the survey's own taxonomy; Prompt_Practice from modified prompting language; Organisational_Process from participatory research designs, reporting standards and data governance proposed in section 6. AN_Mitigation_Status Evaluated as a synthesised evaluation, not the survey's own experiment: the survey reports that Borchers et al. (2022) found instructions prompting diversity or gender equality unsuccessful for bias removal, and that pruning 10-20% of parameters increased resistance to jailbreaking (Hasan, Rugina and Wang 2024); other techniques are inventoried without assessment. AN_Gender_Understanding Social_Construct: the survey states that social groups, which by Definition 3 include gender identity and sex, are socially constructed, contested and tied to power imbalances, and it adopts the critique that binary and immutable gender modelling erases trans, nonbinary and intersex people; its own Figure 1 example uses a male and female substitution. AN_Gender_Definition Implicit_Only because gender itself is not defined. AN_Task None: general LLM bias survey without an application task."
+              },
+              "undecidable": {},
+              "codebook_version": "1.4.1"
+            },
+            "text_source": "raw",
+            "ts": "2026-10-02T07:15:42Z",
+            "reviewer": "ar2",
+            "actor": "agent"
+          }
+        }
+      ],
+      "active_annotation_id": "ar2:WNY526GN",
+      "checks": [
+        {
+          "check_id": "WNY526GN:lifecycle-contract:2026-10-02T07:15:42Z",
+          "check_type": "lifecycle_contract",
+          "status": "passed",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_id": "deterministic-validator",
+          "tool": {
+            "name": "src.assess.screening_lifecycle",
+            "version": "0.5"
+          },
+          "subject": {
+            "annotation_id": "ar2:WNY526GN",
+            "sha256": "97e9ffa3cbff2edd4ba94bfa7b42771a9b23db2a44c2050cc50f5a2b933a0b0c"
+          }
+        }
+      ],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "curated_corpus_snapshot",
+          "at": "2026-10-02T07:15:42Z",
+          "actor_ids": [
+            "curation-provenance-unrecorded"
+          ]
+        },
+        "state": "ai-agent-reviewed",
+        "events": [
+          {
+            "event_id": "WNY526GN:agent-annotation",
+            "event_type": "agent_annotation",
+            "from": "curated",
+            "to": "agent-annotated",
+            "at": "2026-10-02T07:15:42Z",
+            "activity_id": "WNY526GN:agent-annotation",
+            "actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ar1",
+              "codebook-v141-includes-03-3-20261002-ar2"
+            ],
+            "result": "completed",
+            "annotation_id": "ar2:WNY526GN"
+          },
+          {
+            "event_id": "WNY526GN:ai-agent-review",
+            "event_type": "ai_agent_review",
+            "from": "agent-annotated",
+            "to": "ai-agent-reviewed",
+            "at": "2026-10-02T07:15:42Z",
+            "activity_id": "WNY526GN:ai-agent-review",
+            "actor_ids": [
+              "codebook-v141-includes-03-3-20261002-ai-agent-review"
+            ],
+            "result": "accepted",
+            "annotation_id": "ar2:WNY526GN"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,490 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.2",
+  "codebook_version": "1.4.1",
+  "run_id": "codebook-v141-includes-09-7-20261002",
+  "reviewer": "ar1",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "decisions": {
+    "8WBUGXRR": {
+      "source_path": "docs/data/fulltext/8WBUGXRR.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Reflexive Prompt Engineering: A Framework for Responsible Prompt Engineering and AI Interaction Design' matches the corpus title; DOI 10.1145/3715275.3732118 in the header line; single author from the Technical University of Munich; FAccT '25, published 23 June 2025; source hash matches the manifest."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "The findings suggest that organizations must move beyond viewing prompt engineering as merely a technical skill and instead recognize it as a crucial component of AI literacy."
+        ],
+        "Generative_KI": [
+          "Responsible prompt engineering has emerged as a critical pracitce for ensuring that generative artificial intelligence (AI) systems are aligned with ethical, legal, and social principles."
+        ],
+        "Prompting": [
+          "This article proposes 'Reflexive Prompt Engineering', a comprehensive framework for responsible prompt engineering that encompasses five interconnected components: prompt design, system selection, system configuration, performance evaluation, and prompt management."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "This reference to the range of desired variations leads to some of the most prominent issues of the use of AI in society: equality, fairness, and discrimination.",
+          "However, prompt engineers will often detect biases in the system. To address such biases, one can use examples either by debiasing or by counterfactual data augmentation."
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "The general goal is maintaining balanced representation across different demographics in few-shot prompts, which helps improve model generalization."
+        ],
+        "Feministisch": [],
+        "Fairness": [
+          "Advanced prompt design methods can significantly enhance responsible practices by explicitly instructing models to generate fairer, less biased responses."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Recommended_Practice", "Object_of_Critique"],
+        "AN_Prompt_Techniques": ["ICL", "Thought_Generation", "Self_Criticism", "General_Guidance"],
+        "AN_Bias_Axes": ["None"],
+        "AN_Harm_Types": ["None"],
+        "AN_Mitigation_Stage": ["Prompt_Practice", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Konzept",
+        "AN_Notes": "Narrative review that builds the five-component framework Reflexive Prompt Engineering (section 1.2). General_Guidance: 'prompts can be intentionally crafted or augmented with instructions to avoid bias' (3.1.3). ICL as balanced, randomly ordered few-shot examples and counterfactual attribute flipping (3.1.1), Thought_Generation as chain-of-thought with ethical checkpoints (3.1.2), Self_Criticism as a separate verification step 'Plan verification questions to fact-check this draft' (3.1.2). Object_of_Critique: chain-of-thought explanations as an 'illusion of transparency' (3.1.2). AN_Bias_Axes None: gender and race appear only as illustrative attributes in cited practitioner sources ('person' instead of gender-specific terms, flipping gender or race), not as an axis the work analyses. AN_Harm_Types None: stereotyping and the Gemini misrepresentation incident are named from cited sources and news reports, the framework does not establish a harm mechanism of its own. Mitigation stays Proposed, the work recommends debiasing via prompt design, documentation, stakeholder involvement and human oversight without its own evaluation. AN_Task None: no professional task, the framework is general.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Debiasing involves defining potentially biased data points and replacing them with neutral alternatives, such as using 'person' instead of gender-specific terms",
+            "locator": "Section 3.1.1 Example-based prompting"
+          },
+          {
+            "quote": "When AI systems have high-stakes impacts on people, developers should actively involve affected stakeholders to understand potential harms and gather feedback for improving prompts and system design.",
+            "locator": "Section 3.3 Evaluation"
+          }
+        ],
+        "AN_Prompt_Techniques": [
+          {
+            "quote": "Chain-of-thought prompting can be strategically enhanced to promote responsible AI development by explicitly incorporating ethical checkpoints and responsibility considerations into the reasoning workflow.",
+            "locator": "Section 3.1.2 Chain-of-thought prompting"
+          }
+        ]
+      }
+    },
+    "BBLJ4RG3": {
+      "source_path": "docs/data/fulltext/BBLJ4RG3.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Developing an artificial intelligence literacy framework: Evaluation of a literacy course for senior secondary students using a project-based learning approach' matches the corpus title; journal Computers and Education: Artificial Intelligence; three authors from The Education University of Hong Kong and City University of Hong Kong. No DOI or year printed in the text; the article is cited in JJLSMEQA as volume 6, Article 100214 (2024), which is consistent. Source hash matches the manifest."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "The aim of this study is to provide evidence to guide the development of an AI Literacy Framework to prepare educated citizens to participate in future society."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "The cognitive dimension of AI literacy relates to the understanding of AI concepts, including the underlying logic of AI algorithms such as supervised learning (e.g. linear regression and the K-nearest neighbour algorithm), unsupervised learning (such as K-means clustering), and neural networks"
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "One of the criteria that the participants reiterated in their self-reflections was the ethical collection of data, meaning that they had to consider issues concerning privacy, intellectual property, and discrimination and bias."
+        ],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": [
+          "Ethical principles and considerations around the usage of AI, with a focus on the beneficence of AI, fairness of AI, and human autonomy, were first introduced to the participants",
+          "AI designers should consider that the benefits and risks of AI should be distributed fairly among users."
+        ]
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "DUV4TUG3": {
+      "source_path": "docs/data/fulltext/DUV4TUG3.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'Improving Diversity of Demographic Representation in Large Language Models via Collective-Critiques and Self-Voting' differs in wording from the corpus title 'Improving diversity of demographic representation in people entities in Large Language Models'. Both name the same object, people-diversity of demographic representation in LLM responses, which the text measures on people-seeking prompts (Google Research authors, Flan-PaLM 540B, CCSV). Read as a title variant of the same work, not as a conflict; no DOI and no year printed in the text. Source hash matches the manifest. Needs confirmation of the Work-Version binding."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "ja",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "nein",
+        "Fairness": "ja"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "A crucial challenge for generative large language models (LLMs) is diversity: when a user's prompt is under-specified, models may follow implicit assumptions while generating a response"
+        ],
+        "Prompting": [
+          "This finding motivated a new prompting technique called collective-critique and self-voting ( CCSV ) to self-improve people diversity of LLMs by tapping into its diversity reasoning capabilities, without relying on handcrafted examples or prompt tuning."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "we focus on the relatively understudied class of fairness and inclusion concern in LLMs caused due to lack of diversity of representation of various demographic groups in the model responses."
+        ],
+        "Gender": [
+          "A 540B-parameter Flan-PaLM (Chung et al., 2022) language model's baseline response to the user prompt is highly homogeneous with only white male CEOs.",
+          "For example, for gender diversity, we compute the fraction of responses identified as male, female, and other"
+        ],
+        "Diversitaet": [
+          "In this paper, we formalize diversity of representation in generative LLMs. We present evaluation datasets and propose metrics to measure diversity in generated responses along people and culture axes."
+        ],
+        "Feministisch": [],
+        "Fairness": [
+          "We now offer and describe multiple complementary designs to evaluate diversity, including new datasets, entropy to measure the full distribution of representation, max-gap to measure the extremes of over-/under-representation, and human-rater evaluation to capture human perception of diversity.",
+          "Building evaluation datasets to evaluate fairness in open-ended generations is non-trivial."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Research_Instrument", "Recommended_Practice"],
+        "AN_Prompt_Techniques": ["Self_Criticism", "Ensembling", "ICL", "Thought_Generation", "General_Guidance"],
+        "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Language_Culture"],
+        "AN_Harm_Types": ["Erasure"],
+        "AN_Mitigation_Stage": ["Prompt_Practice"],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": ["Non_Binary_Inclusive"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "Experiment on Flan-PaLM 540B with a people-diversity dataset (105 professions) and a culture-diversity dataset, automated entropy and max-gap metrics and human side-by-side ratings. Prompting techniques: CCSV combines self-critique and revision (Self_Criticism) with sampling several drafts and self-voting (Ensembling); baselines include 5-shot exemplars (ICL), zero- and few-shot chain-of-thought (Thought_Generation) and the 0-shot diversity instruction 'Write AI model's response to the user question such that it has diversity' (General_Guidance), which failed. Evaluated: CCSV outperforms all baselines on automated and human evaluation. Language_Culture is coded through the culture-diversity task (section 6.2), evaluated by human raters only. AN_Gender_Understanding Non_Binary_Inclusive is a boundary decision: the gender attribute takes the values male, female and other from a knowledge graph, and the authors state that 'other' is not an ideal stand-in for genders beyond male and female (Limitations); the analysis does carry a category beyond the binary. Prompting also serves as Research_Instrument through the people-seeking templates. AN_Task None: general LLM evaluation without a professional task.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "we focus on the relatively understudied class of fairness and inclusion concern in LLMs caused due to lack of diversity of representation of various demographic groups in the model responses.",
+            "locator": "Section 1 Introduction"
+          },
+          {
+            "quote": "Max-gap. In addition to entropy, we also report a more interpretable metric, max-gap, which is the difference in exposure between the mostrepresented attribute value",
+            "locator": "Section 4.2 Automated Eval & Metrics"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "Furthermore, the gender categories used were limited by the Knowledge Graph source, and the category \"other\" is not an ideal stand-in for genders beyond male and female.",
+            "locator": "Limitations & Broader Impact"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "which may result in homogenization of the responses, as well as certain demographic groups being under-represented or even erased from the generated responses.",
+            "locator": "Abstract"
+          }
+        ],
+        "AN_Mitigation_Status": [
+          {
+            "quote": "Extensive empirical experiments with both human and automated evaluations show that our proposed approach is effective at improving people and culture diversity, and outperforms all baseline methods by a large margin.",
+            "locator": "Abstract"
+          }
+        ]
+      }
+    },
+    "JJLSMEQA": {
+      "source_path": "docs/data/fulltext/JJLSMEQA.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Opportunities, challenges and school strategies for integrating generative AI in education' matches the corpus title; DOI 10.1016/j.caeai.2025.100373 given in the supplementary-data note; journal Computers and Education: Artificial Intelligence; three authors from The Education University of Hong Kong and HKUST. Source hash matches the manifest."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "However, three major challenges are also identified: school ' s readiness, teachers ' AI competencies, and students ' AI literacy and ethics."
+        ],
+        "Generative_KI": [
+          "This qualitative study investigates the opportunities and challenges associated with integrating GenAI in education, and the strategies that encourage teachers and students to embrace GenAI in school settings."
+        ],
+        "Prompting": [
+          "This includes instructing students on effective prompting techniques to retrieve accurate information."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "According to RQ2, many teachers are aware of potential biases in AI, yet few have concrete strategies to mitigate these risks (C2), highlighting a gap between awareness and action."
+        ],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "JKF6VAQB": {
+      "source_path": "docs/data/fulltext/JKF6VAQB.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'AI algorithm transparency, pipelines for trust not prisms: mitigating general negative attitudes and enhancing trust toward AI' matches the corpus title; two authors; received 12 December 2024, accepted 23 May 2025, published 2025 under an open-access licence. No DOI printed in the text. Manifest binds the record IDs JKF6VAQB and ZHQMHHPQ to this Work. Source hash matches the manifest."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "nein",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "nein",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "Given the growing importance of generative AI such as ChatGPT in stakeholder communications, our research aims to understand how transparency can"
+        ],
+        "Prompting": [],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Exclude",
+      "reason": "Not_relevant_topic"
+    },
+    "PAZJHB8J": {
+      "source_path": "docs/data/fulltext/PAZJHB8J.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'The Role of Artificial Intelligence (AI) and machine learning in social work practice' matches the corpus title; review article in World Journal of Advanced Research and Reviews, 2024, 24(01), 080-097; three authors from the University of Manitoba and Morgan State University. The DOI field is empty in the text. Publication type is a scholarly review article with identifiable authorship and is admissible under the publication-type rule. Source hash matches the manifest."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "ja",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "Training in AI and machine learning equips practitioners with the necessary tools to critically assess the implications of these technologies on social justice and equity."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "This paper explores how these technologies enhance case management, predictive analytics, and resource allocation in critical areas such as child welfare, mental health, and substance abuse treatment."
+        ],
+        "Soziale_Arbeit": [
+          "The integration of Artificial Intelligence (AI) and Machine Learning (ML) into social work practice is transforming the landscape of service delivery and decision-making."
+        ],
+        "Bias_Ungleichheit": [
+          "Algorithmic bias refers to the systematic and unfair discrimination against certain groups of individuals resulting from the design and implementation of algorithms."
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "Stakeholders in social work must advocate for diverse and inclusive datasets that accurately represent the populations they serve."
+        ],
+        "Feministisch": [],
+        "Fairness": [
+          "Social workers and organizations must be vigilant in assessing the fairness of predictive models and ensuring that they promote equitable outcomes rather than exacerbating disparities (Barocas et al., 2019)."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Race_Ethnicity"],
+        "AN_Harm_Types": ["Indirect_Discrimination"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Child_Family_Welfare", "Mental_Health", "General_Social_Work", "Education_Professional"],
+        "AN_Task": ["Case_Assessment_Decision_Support", "Counselling_Client_Communication", "Documentation_Recording", "Teaching_Further_Education"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Literaturreview",
+        "AN_Notes": "Narrative review of AI and machine learning in social work: predictive risk analytics in child welfare, mental-health chatbots, NLP for case notes, automated case management, AI in social work education. AN_Bias_Axes Race_Ethnicity: the review develops the racial overrepresentation of families in child-abuse risk prediction as its own worked example (4.1) and returns to the Allegheny case (4.1.1). Socioeconomic (housing vouchers) and Language_Culture (English-only chatbots) appear only in the list of cited cases in 4.1.1 and are left uncoded; gender appears only in an enumeration. AN_Harm_Types Indirect_Discrimination: the own argument in 4.1 places the disadvantage in risk scores learned from historical data, an allocation decision through a proxy rather than the attribute itself. Mitigation Proposed: diverse and inclusive datasets (Pre_Processing), auditing, transparency, involvement of social workers and community members, AI training (Organisational_Process). Source-quality note: several references are implausible for their claims, e.g. an AI review on net-zero building design cited for NLP case documentation and a paper on deep-learning loop execution cited for predictive analytics in social work; this does not change the publication type but limits the evidential weight of the cited case studies.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "Algorithmic bias refers to the systematic and unfair discrimination against certain groups of individuals resulting from the design and implementation of algorithms.",
+            "locator": "Section 4.1 Bias in AI Algorithms and Its Implications in Social Work"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "For example, a predictive analytics tool that forecasts child abuse risk may overrepresent families from certain ethnic backgrounds, leading to an increased rate of intervention for those families compared to others with similar risk factors but different demographic characteristics (Obermeyer et al., 2019).",
+            "locator": "Section 4.1"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Additionally, ongoing evaluation and auditing of AI systems are essential to identify and mitigate bias as technology evolves.",
+            "locator": "Section 4.1"
+          }
+        ]
+      }
+    },
+    "VVEEL68I": {
+      "source_path": "docs/data/fulltext/VVEEL68I.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Training in Co-Creation as a Methodological Approach to Improve AI Fairness' matches the corpus title; DOI 10.3390/soc14120259; Societies 2024, 14, 259, published 3 December 2024; six authors from Trilateral Research, CERTH and the University of Bologna. Source hash matches the manifest. The Markdown conversion duplicates and scrambles parts of sections 4.3 to 5.3 (overlaid peer-review layout), the full text remains readable."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "teilweise",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "teilweise",
+        "Diversitaet": "ja",
+        "Feministisch": "nein",
+        "Fairness": "ja"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "This paper evaluates a methodological approach to make addressing AI bias more accessible by incorporating a training component on AI bias in a Co-C process with vulnerable and marginalized participant groups."
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "In the Co-C workshops, data collection was carried out based on participants' evaluation of three use cases in which AI bias can have a significant impact-financial decisions, e.g., loan applications; biometric identity verification, e.g., automated passport control gates based on facial recognition; and bias in academic citation searches."
+        ],
+        "Soziale_Arbeit": [
+          "Surveys were also conducted amongst communities of vulnerable users recruited through local civil society organizations involved in the project, including women at risk of social exclusion, e.g., ethnic minority and domestic violence victims, migrants, and recipients of social protection services (see Table 1)."
+        ],
+        "Bias_Ungleichheit": [
+          "One key aspect of this is the design and deployment of fair AI that avoids reproducing existing social biases and forms of discrimination against vulnerable or marginalized social groups."
+        ],
+        "Gender": [
+          "In this regard, Donna Activa Forum (DAF), the civil society partner of the MAMMOth project working with under-served women, adapted the material to include examples related to gender biases-something the participants of the workshop could relate to."
+        ],
+        "Diversitaet": [
+          "Participatory design (PD) and co-creation (Co-C) approaches to building Artificial Intelligence (AI) systems have become increasingly popular exercises for ensuring greater social inclusion and fairness in technological transformation by accounting for the experiences of vulnerable or disadvantaged social groups"
+        ],
+        "Feministisch": [],
+        "Fairness": [
+          "Conversely, fairness in the context of AI systems is established by preventing bias, discrimination, and stigmatization [3].",
+          "In the toolkit, AI system creators can run existing and new methods to quantify bias for multi-attribute and multimodal data, including preliminary assessment during design and continuous re-evaluation during maintenance."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender", "Race_Ethnicity", "Religion", "Physical_Appearance"],
+        "AN_Harm_Types": ["Stereotyping", "Indirect_Discrimination"],
+        "AN_Mitigation_Stage": ["Organisational_Process"],
+        "AN_Mitigation_Status": "Demonstrated",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["Other_Task"],
+        "AN_Gender_Definition": "Absent",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": ["Unclear"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Empirisch",
+        "AN_Notes": "Reflective empirical account of co-creation workshops of the Horizon Europe MAMMOth project with marginalized groups (women at risk of social exclusion, young people, ethnic minorities, migrants, LGBTQI+ early career researchers), each opened by a training module on AI bias, feeding user and research requirements of an AI bias toolkit. AN_Task Other_Task: AI-based home loan decisions, biometric identity verification and academic citation search as use cases. AN_Bias_Axes: Gender through the gender-bias training examples (stereotypical parent roles in generative AI, gendered job endings in Google Translate), Race_Ethnicity through postal codes as race proxy in the toolkit, Religion and Physical_Appearance through the ranked facial attributes for ID verification (hijabs and turbans, piercings and tattoos). Sexual orientation and migration describe participant groups only and are left uncoded. AN_Harm_Types: Stereotyping from the training examples, Indirect_Discrimination from the proxy bias the toolkit addresses. Mitigation Demonstrated: training within participatory co-creation was applied and reflected through facilitator and participant feedback, without a reported assessment of bias reduction. Gender is treated through examples and a participant group without a stated understanding, hence Absent and Unclear. Soziale_Arbeit teilweise: participants include recipients of social protection services and domestic violence victims recruited via civil society organizations, but no social work practice is addressed.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [
+          {
+            "quote": "Bias in AI systems can be defined as 'the inclination or prejudice of a decision made by an AI system which is for or against one person or group' [6], often leading to unfair treatment and discrimination [3,7], and has been recognized as a major ethical concern for AI systems [8-10].",
+            "locator": "Section 1 Introduction"
+          }
+        ],
+        "AN_Theory_Reference": [
+          {
+            "theory": "Participatory design and co-creation in its critical, social-justice and human-centered tradition",
+            "quote": "This paper draws from both applied and critical approaches to PD and Co-C to argue for the inclusion of training on AI bias in co-creation processes with non-expert stakeholder groups whose input would otherwise be excluded from AI design and integration decisions, particularly those from vulnerable or marginalized groups.",
+            "locator": "Section 6 Conclusions"
+          },
+          {
+            "theory": "Participatory design and co-creation in its critical, social-justice and human-centered tradition",
+            "quote": "While more traditional uses of PD emphasize 'user-centered' design, social justice perspectives in PD move away from perceiving people solely in terms of their relationship to the use of technology and come up with the term 'human-centered' design [13].",
+            "locator": "Section 2.1 Participatory Design with Marginalised Groups"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "DAF added an example based on generative AI queries on the responsibilities of fathers and mothers that reproduced outdated and stereotypical gender roles.",
+            "locator": "Section 5.1"
+          },
+          {
+            "quote": "AI-induced bias that could take the form of spurious correlations (e.g., using postal codes as a proxy of race to determine economic status)",
+            "locator": "Section 4"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "participants were asked to reflect on different categories of facial attributes that could lead to bias in ID verification systems (e.g., facial decorations such as piercings and tattoos; religious and cultural symbols such as hijabs and turbans; and so forth) and rank them in order of importance.",
+            "locator": "Section 4.1"
+          }
+        ]
+      }
+    }
+  }
+}

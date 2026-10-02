@@ -18,6 +18,9 @@ const EC = sandbox.window.EC;
 const fields = json('data/analysis_fields.json');
 const schema = json('data/category_schema.json');
 const landscape = json('data/literature_landscape.json');
+// SQ4 reads as not yet coded only while no released work carries a coded SQ4 field.
+const sq4Field = landscape.meta?.analysis_coverage?.fields?.AN_Gender_Definition || {};
+const sq4Coded = (sq4Field.value || 0) + (sq4Field.none || 0) + (sq4Field.undecidable || 0) > 0;
 const fixtureRecord = (id, analysis, categories) => ({
   id, work_id: 'work:' + id, title: id, author_year: id, year: 2024, decision: 'Include',
   categories: categories || [], analysis, record_ids: [id],
@@ -113,8 +116,9 @@ try {
   await visible('fragen');
   check('start page leads with the main question', (await page.locator('#fragen-title').innerText()).trim().endsWith('?'));
   check('start page shows the five research sub-questions', await page.locator('.sq-link').count() === 5);
-  check('the conceptual-grounding question states that it is not yet coded',
-    (await page.locator('.sq-item[data-sq="4"] .denominator--summary').innerText()).trim() === 'Noch nicht codiert');
+  const sq4Summary = (await page.locator('.sq-item[data-sq="4"] .denominator--summary').innerText()).trim();
+  check('the conceptual-grounding question states its coding state',
+    sq4Coded ? sq4Summary !== 'Noch nicht codiert' : sq4Summary === 'Noch nicht codiert');
   check('start page carries no standing inventory counter', await page.locator('#release-counts').count() === 0);
   check('start page never claims an answered question', !/beantwortet/i.test(await page.locator('#view-fragen').innerText()));
   const verifiedWorks = landscape.records.filter(r => r.decision === 'Include' && (r.verification || r.publication_approval)).length;
@@ -153,9 +157,11 @@ try {
   }
   await page.goto(base + '/index.html#view=frage&sq=4', { waitUntil: 'networkidle' });
   await visible('frage');
-  check('the conceptual-grounding page shows no count and no matrix before coding',
-    (await answer.locator('h1 + .denominator--summary').innerText()).endsWith('Noch nicht codiert') &&
-    await answer.locator('.matrix-table').count() === 0 &&
+  const sq4Denominator = await answer.locator('h1 + .denominator--summary').innerText();
+  check('the conceptual-grounding page follows its coding state',
+    (sq4Coded
+      ? !sq4Denominator.endsWith('Noch nicht codiert')
+      : sq4Denominator.endsWith('Noch nicht codiert') && await answer.locator('.matrix-table').count() === 0) &&
     await answer.locator('#frage-befunde, #frage-matrix, #frage-offen, #frage-werke').count() === 4);
   await page.goto(base + '/index.html#view=frage&sq=1', { waitUntil: 'networkidle' });
   await visible('frage');

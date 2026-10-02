@@ -1,0 +1,39 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-includes-04-5-20261002",
+  "status": "proposed",
+  "seed": 20261006,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "22XEFRWP",
+    "KNQYFQ6B",
+    "PYN6HB3E"
+  ],
+  "disagreeing_works": [
+    "3QUWCYVW"
+  ],
+  "drawn": [
+    "22XEFRWP",
+    "3QUWCYVW",
+    "KNQYFQ6B",
+    "PYN6HB3E"
+  ],
+  "flagged_additions": [
+    "7G78SADI"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "7G78SADI": "agent tracks derive Unclear against the human Include, social dimension only secondary",
+    "22XEFRWP": "Indirect_Discrimination rests on a salary allocation constructed by the authors",
+    "PYN6HB3E": "Indirect_Discrimination rests on a cited child-welfare case used as the work's own example"
+  },
+  "track_agreement_sha256": "47d2c6f3954d9b8aa2398c8d58f45560cf588678712b00d0c778933ee3d0edf9"
+}

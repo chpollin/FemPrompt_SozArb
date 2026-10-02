@@ -1,0 +1,761 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.4",
+  "reviewer": "ar1",
+  "actor": "agent",
+  "updated": "2026-10-02T06:39:26.603Z",
+  "transcription": {
+    "run_id": "codebook-v141-includes-05-6-20261002",
+    "source_packet": "tests/review-cases/agent-runs/codebook-v141-includes-05-6-20261002/tracks/ar1-coding.json",
+    "source_packet_sha256": "8a7279056a5e4dd8cab412174ddcee367185ce61ed1044bc94c30950e3c676a1",
+    "method": "deterministic_packet_projection_pending_prism_roundtrip"
+  },
+  "decisions": {
+    "3XMBE43Z": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "We tested these experiments in two different AI tools, namely ChatGPT (GPT-4) an",
+            "snippet": "We tested these experiments in two different AI tools, namely ChatGPT (GPT-4) and Microsoft Copilot.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Each scenario includes a gender-neutral prompt, a male-specific version, and a f",
+            "snippet": "Each scenario includes a gender-neutral prompt, a male-specific version, and a female-specific version and a non-binary-specific version.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          },
+          {
+            "term": "This contrast suggests that ChatGPT adapts its responses to perceived gender-bas",
+            "snippet": "This contrast suggests that ChatGPT adapts its responses to perceived gender-based risks only when explicitly mentioned, reinforcing the importance of demographic framing in prompt design.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Across all four experiments, the AI tools consistently reflected underlying stru",
+            "snippet": "Across all four experiments, the AI tools consistently reflected underlying structural gender biases.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "This study examines whether AI systems inherently consider gender in policy prop",
+            "snippet": "This study examines whether AI systems inherently consider gender in policy proposals, both when gender is explicitly mentioned in prompts and when it is not.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "These recommendations suggest that when explicitly prompted, AI tools are capabl",
+            "snippet": "These recommendations suggest that when explicitly prompted, AI tools are capable of generating thoughtful and inclusive designs that better serve non-binary individuals and other gender-diverse users.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "This reveals that the supposed neutrality of AI tools actually reproduces an and",
+            "snippet": "This reveals that the supposed neutrality of AI tools actually reproduces an androcentric norm, which in this case excludes bodies and needs not aligned with the gendered definition of the 'typical worker'.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          },
+          {
+            "term": "Feminist theory has pointed out how seemingly neutral technical standards, like ",
+            "snippet": "Feminist theory has pointed out how seemingly neutral technical standards, like office temperature, can produce bodily inequalities and disproportionately affect women [45].",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Our findings offer insights into the limitations of current AI tools as policy a",
+            "snippet": "Our findings offer insights into the limitations of current AI tools as policy advisors and contribute to ongoing discussions on algorithmic fairness, implicit gender bias, and the need for gender-aware AI governance.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "3XMBE43Z",
+            "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+            "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:39:26.603Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:bfe5a7ee-db49-566a-a115-b085671853ba",
+      "version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:7ef9a519-4f59-5fad-aef2-53051d8a5ea3",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms",
+            "Erasure",
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "In_Training",
+            "Prompt_Practice",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "Other_Task"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Social_Construct",
+            "Non_Binary_Inclusive"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Prompt experiment with ChatGPT (GPT-4) and Microsoft Copilot on four policy scenarios, each prompt variant submitted 50 times. General_Guidance: the work recommends 'precise, inclusive language in AI-assisted design and policy applications', i.e. explicitly naming the gendered target group in the prompt; it also states that inclusivity must not depend on prompting alone. Other_Task: drafting policy recommendations (policymaking, workplace and municipal policy design). Mitigation stages are recommendations in the conclusion: fine-tuning on curated gender-balanced and intersectional datasets (Pre_Processing, In_Training), equity principles in prompts (Prompt_Practice), audits, Human-in-the-Loop oversight and multidisciplinary teams (Organisational_Process); none is evaluated. Bias_Axes: only gender is varied; motherhood appears as a gendered role within the gender axis, race, class and ability are named only as intersecting factors in the discussion and are not analysed, so Intersectional is not coded. Social_Construct rests on the work's statement that gender relations are institutionally embedded in everyday practices; the work also uses biological metabolic differences as a factual premise. Erasure covers the omission of women's and non-binary needs in gender-unspecified prompts; Stereotyping covers baby-changing facilities placed only in women's restrooms."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "6L6WSDC8": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 1,
+        "Diversitaet": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "In this study, we explore LLMs' capacity of generating diverse perspectives and ",
+            "snippet": "In this study, we explore LLMs' capacity of generating diverse perspectives and rationales on subjective topics such as social norms and argumentative texts.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L6WSDC8",
+            "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+            "version_id": "version:17389a55-6900-5576-8575-da09fb577910"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Motivated by how humans form opinions based on values, we propose a criteria-bas",
+            "snippet": "Motivated by how humans form opinions based on values, we propose a criteria-based prompting technique to ground diverse opinions.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L6WSDC8",
+            "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+            "version_id": "version:17389a55-6900-5576-8575-da09fb577910"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Instead of providing a single viewpoint, an ideal NLP model should accommodate v",
+            "snippet": "Instead of providing a single viewpoint, an ideal NLP model should accommodate various perspectives to avoid any bias towards a dominant one.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L6WSDC8",
+            "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+            "version_id": "version:17389a55-6900-5576-8575-da09fb577910"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Yet, can LLMs reflect this diversity when generating text, or do they tend to fa",
+            "snippet": "Yet, can LLMs reflect this diversity when generating text, or do they tend to favor majority opinions?",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "6L6WSDC8",
+            "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+            "version_id": "version:17389a55-6900-5576-8575-da09fb577910"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:39:26.603Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:eb0bee27-299d-518a-8394-666dd7a2f496",
+      "version_id": "version:17389a55-6900-5576-8575-da09fb577910",
+      "version_type": "unknown",
+      "preferred_version_id": "version:17389a55-6900-5576-8575-da09fb577910",
+      "selected_version_is_preferred": true
+    },
+    "HLBXNWAZ": {
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 2,
+        "Prompting": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Artists who are using vGenAI need more knowledge and resources that can inform t",
+            "snippet": "Artists who are using vGenAI need more knowledge and resources that can inform the critical use of these tools.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "In this paper, we critically analyze Stable Diffusion (SD), a widely used open-s",
+            "snippet": "In this paper, we critically analyze Stable Diffusion (SD), a widely used open-source vGenAI tool, through visual and intersectional analysis.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "When it came to the visual images, we used a specific prompting strategy to prod",
+            "snippet": "When it came to the visual images, we used a specific prompting strategy to produce a dataset comprising 180 images using SDXL.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "We demonstrate how imagery produced through SD perpetuates pre-existing power sy",
+            "snippet": "We demonstrate how imagery produced through SD perpetuates pre-existing power systems such as sexism, racism, heteronormativity, and ableism, and assumes a default individual as white, able-bodied, and masculine-presenting.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Across various images, gender assignments were automatically applied by SDXL, re",
+            "snippet": "Across various images, gender assignments were automatically applied by SDXL, resulting in aesthetics that excluded feminine or non-binary representations.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Consequently, unless specifically prompted for diversity, the AI-generated image",
+            "snippet": "Consequently, unless specifically prompted for diversity, the AI-generated imagery lacks diversity to a significant extent, perpetuating ableist norms by portraying stereotypical bodies with uniform characteristics as the visual standard, based on what we witn",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Our methodological approach draws primarily from feminist Science and Technology",
+            "snippet": "Our methodological approach draws primarily from feminist Science and Technology Studies (STS) (e.g. Wajcman 2010; D'Ignazio and Klein 2020; Adkins et al. 1999; Lury 2020), intersectional critical theory (Crenshaw 1989; Sharma et al. 2023), and feminist media ",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "HLBXNWAZ",
+            "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+            "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:39:26.603Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+      "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Disability",
+            "Age",
+            "Socioeconomic",
+            "Nationality_Migration",
+            "Language_Culture",
+            "Sexual_Orientation_Identity",
+            "Physical_Appearance"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Erasure",
+            "Exclusionary_Norms",
+            "Misrepresentation"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Prompt_Practice",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "Other_Task"
+          ],
+          "AN_Gender_Definition": "Explicit",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Social_Construct",
+            "Non_Binary_Inclusive",
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Empirisch",
+          "AN_Notes": "Qualitative interpretative visual analysis of 180 Stable Diffusion XL images from minimal prompts, followed by a micro, meso and macro intersectional analysis. General_Guidance: users 'being more conscious of how they are generating images-e.g. what kind of prompts they use'; prompting otherwise serves as research instrument (deliberately minimal prompts to surface default outputs). Other_Task: image creation in creative and design practice. Bias_Axes: Language_Culture codes the Global North and US-centric cultural representations (food, settings), Nationality_Migration the immigrant/citizen prompts, Socioeconomic poverty/wealth and blue/white collar, Physical_Appearance the absence of larger or smaller bodies, Sexual_Orientation_Identity the heteronormativity and absence of non-binary representation the work reports; religion was explicitly excluded by the authors. Mitigation proposals: better curation of training data (Pre_Processing), conscious prompting by users (Prompt_Practice), regulation, criminal culpability, diverse teams and algorithmic reparation (Organisational_Process); none evaluated. Bias_Definition Implicit_Only: bias is framed through power systems and intersectionality without a sentence defining bias or discrimination. Toxicity was considered for the confederate flag imagery and left uncoded, since the work describes a violent symbol rather than language attacking a group."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "JZN2I6J5": {
+      "categories": {
+        "Generative_KI": 1,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Large language models (LLMs) have claimed stateof-the-art performance on most of",
+            "snippet": "Large language models (LLMs) have claimed stateof-the-art performance on most of the classical natural language processing (NLP) tasks in recent years while facilitating new frontiers in language generation.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "We present a novel prompt-tuning method for reducing biases in encoder models su",
+            "snippet": "We present a novel prompt-tuning method for reducing biases in encoder models such as BERT or RoBERTa.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Considering their recent emergence and wide availability to the general public, ",
+            "snippet": "Considering their recent emergence and wide availability to the general public, it is mandatory to identify and alleviate these biases to avoid perpetuating stereotypes towards underrepresented groups.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "We particularize this method to gender bias by providing a set of templates used",
+            "snippet": "We particularize this method to gender bias by providing a set of templates used for training the prompts",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "We evaluate our method for mitigating gender bias in BERT and RoBERTa on the gen",
+            "snippet": "We evaluate our method for mitigating gender bias in BERT and RoBERTa on the gender tests from SEAT (May et al., 2019) and StereoSet (Nadeem et al., 2021).",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          },
+          {
+            "term": "For StereoSet, a stereotype score (SS) closer to 50% indicates a less biased mod",
+            "snippet": "For StereoSet, a stereotype score (SS) closer to 50% indicates a less biased model.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "JZN2I6J5",
+            "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+            "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:39:26.603Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:c195afcd-0447-5f60-b1d6-c0e9d7807b18",
+      "version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db",
+      "version_type": "unknown",
+      "preferred_version_id": "version:d52044e7-6f88-57ce-9cd0-c69dfd57b5db",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Religion"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping"
+          ],
+          "AN_Mitigation_Stage": [
+            "In_Training",
+            "Prompt_Practice"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Soft prompt tuning: a few trainable prompt embeddings are concatenated to the input of frozen encoder-only models (BERT, RoBERTa) and trained with a KL-divergence loss on gendered templates; evaluated on SEAT, StereoSet and pseudo-perplexity against CDA, Dropout, INLP, SentenceDebias and Self-Debias, with debiasing on par with the state of the art and limited loss of language modelling ability. Generative_KI is teilweise because the models are encoder-only masked language models, not generative systems. AN_Prompt_Techniques None: learned soft prompts fall under no technique family; in-context learning is cited only as motivation. Mitigation stage In_Training for the trained prompt parameters and Prompt_Practice for the change of model input; Evaluated. Race_Ethnicity and Religion are measured as side effects on StereoSet race and religion tests. Bias definition Explicit through the technical StereoSet criterion. Harm types named from Gallegos et al. in the introduction are cited, not coded; only Stereotyping is measured. AN_Task None: benchmark study without an application task."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "P82X89Q4": {
+      "categories": {
+        "AI_Literacies": 2,
+        "Generative_KI": 1
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "This study aims to develop a comprehensive competency framework for artificial i",
+            "snippet": "This study aims to develop a comprehensive competency framework for artificial intelligence (AI) literacy, delineating essential competencies and sub- competencies.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "P82X89Q4",
+            "work_id": "work:78d01fb9-cb8c-50d0-9f8a-bed8ae548fa4",
+            "version_id": "version:8df6d0ac-f0b8-5427-8f89-cd8e32438327"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "For example, generative AI, optimized for pattern recognition and natural langua",
+            "snippet": "For example, generative AI, optimized for pattern recognition and natural language processing, has limitations in traditional quantitative analysis.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "P82X89Q4",
+            "work_id": "work:78d01fb9-cb8c-50d0-9f8a-bed8ae548fa4",
+            "version_id": "version:8df6d0ac-f0b8-5427-8f89-cd8e32438327"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:39:26.603Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:78d01fb9-cb8c-50d0-9f8a-bed8ae548fa4",
+      "version_id": "version:8df6d0ac-f0b8-5427-8f89-cd8e32438327",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:8df6d0ac-f0b8-5427-8f89-cd8e32438327",
+      "selected_version_is_preferred": true
+    },
+    "YMABYPKF": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "We employ an audit design to investigate biases in state-of-the-art large langua",
+            "snippet": "We employ an audit design to investigate biases in state-of-the-art large language models, including GPT-4.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "While providing numerical, decision-relevant anchors in the prompt can successfu",
+            "snippet": "While providing numerical, decision-relevant anchors in the prompt can successfully counteract the biases, qualitative details have inconsistent effects and may even increase disparities.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "We find that the advice systematically disadvantages names that are commonly ass",
+            "snippet": "We find that the advice systematically disadvantages names that are commonly associated with racial minorities and women.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Similarly, female-perceived names yield systematically worse outcomes than male-",
+            "snippet": "Similarly, female-perceived names yield systematically worse outcomes than male-perceived names.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "But because names strongly correlate with race/gender, any disparities we observ",
+            "snippet": "But because names strongly correlate with race/gender, any disparities we observe may constitute bias in the form of disparate impact.",
+            "ts": "2026-10-02T06:39:26.603Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "YMABYPKF",
+            "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+            "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe"
+          }
+        ]
+      },
+      "ts": "2026-10-02T06:39:26.603Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
+      "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
+      "version_type": "preprint",
+      "preferred_version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "Research_Instrument",
+            "Recommended_Practice"
+          ],
+          "AN_Prompt_Techniques": [
+            "General_Guidance"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional"
+          ],
+          "AN_Harm_Types": [
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Prompt_Practice",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Evaluated",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "Other_Task"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical",
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Experimentell",
+          "AN_Notes": "Audit study with 42 prompt templates in five scenarios (purchase, chess, public office, sports, hiring), names perceived as Black or white and male or female, three context levels, six LLMs. General_Guidance: 'providing the model with a numeric anchor' (decision-relevant numeric context in the prompt) reduces name-based disparities, while qualitative context has inconsistent effects; this prompt practice is evaluated in the work's own experiment (Evaluated), routine audits at deployment are recommended (Organisational_Process, Proposed). Other_Task: advice for laypeople on purchase negotiation, salary offers in hiring, election and sports predictions. Intersectional is coded because Black female-perceived names receive the worst outcomes compared with Black and with female names; the authors themselves state that this analysis does not equate to an evaluation of intersectionality. Indirect_Discrimination follows the codebook anchor (name as proxy, disparate impact); the work's attribution of the disparities to encoded stereotypes is treated as explanation of the mechanism, not as a separate Stereotyping harm. Theory reference: the U.S. legal doctrine of disparate treatment and disparate impact frames the notion of bias."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    }
+  }
+}

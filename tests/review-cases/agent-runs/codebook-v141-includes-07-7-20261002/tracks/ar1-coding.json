@@ -1,0 +1,491 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.2",
+  "codebook_version": "1.4.1",
+  "run_id": "codebook-v141-includes-07-7-20261002",
+  "reviewer": "ar1",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "decisions": {
+    "6JAZXKEB": {
+      "source_path": "docs/data/fulltext/6JAZXKEB.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Korpustitel und Texttitel stimmen überein (Using digital story writing as a pedagogy to develop AI literacy among primary students), Autor:innen Ng, Luo, Chan, Chu (University of Hong Kong), Zeitschrift Computers and Education: Artificial Intelligence. DOI und Erscheinungsjahr fehlen in der Paper-Ebene; kein Titel- oder DOI-Konflikt. Quellenhash entspricht dem Manifest."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "teilweise",
+        "Prompting": "nein",
+        "KI_Sonstige": "teilweise",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "This present study investigated the contribution of DSW as a pedagogy to develop four aspects of fostering AI literacy among upper primary students."
+        ],
+        "Generative_KI": [
+          "it is important to highlight ethical issues about generative AI including the ownership of artwork and generation of fake media throughout the workshop."
+        ],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "First, AI ocean activity in code.org engages students in knowing machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Through the hands-on simulation of AI applications, students could recognise the importance of data bias and it is important to avoid unjust impacts on people, particularly those related to sensitive characteristics such as race, ethnicity and gender."
+        ],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": [
+          "Designing fair and unbiased algorithms is one of the challenging problems nowadays in our technological world."
+        ]
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "9MDIBETZ": {
+      "source_path": "docs/data/fulltext/9MDIBETZ.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Korpustitel und Texttitel stimmen überein (GenderCARE: A Comprehensive Framework for Assessing and Reducing Gender Bias in Large Language Models), DOI 10.1145/3658644.3670284, Autor:innen Tang, Zhou, Zhang u. a., CCS '24, Proceedings 2024. Quellenhash entspricht dem Manifest."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "nein",
+        "Fairness": "ja"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [
+          "In this paper, we present Gender CARE , a comprehensive framework to assess and reduce gender bias in LLMs."
+        ],
+        "Prompting": [
+          "Robustness. This pertains to the reliability and consistency of assessment outcomes when evaluated across different prompt structures."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "we can define gender bias as prejudicial attitudes or discriminatory actions based on an individual's gender identity."
+        ],
+        "Gender": [
+          "Extensive experiments demonstrate a significant reduction in various gender bias benchmarks, with reductions peaking at over 90% and averaging above 35% across 17 different LLMs."
+        ],
+        "Diversitaet": [
+          "Inclusivity. This ensures the recognition and inclusion of multiple gender identities, extending beyond the traditional binary to embrace transgender and nonbinary identities."
+        ],
+        "Feministisch": [],
+        "Fairness": [
+          "we develop effective debiasing techniques that incorporate counterfactual data augmentation and specialized fine-tuning strategies to reduce gender bias in LLMs without compromising their overall performance.",
+          "we hope that our Gender CARE can represent a significant step towards achieving fairness and equity in LLMs."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Research_Instrument"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender"],
+        "AN_Harm_Types": ["Stereotyping", "Toxicity"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "In_Training"],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Explicit",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": ["Non_Binary_Inclusive"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "Prompts des GenderPair-Benchmarks dienen als Messinstrument (Instruktion, Pair Set, Requirement); keine Prompting-Technik im Sinne des Codebuchs. Bias-Achse Geschlecht einschließlich transgender und nicht-binärer Identitäten als dritte Gruppe; das Werk führt diese als Geschlechtsidentitäten, daher nur Gender codiert. Schadensarten: Stereotypisierung über Bias-Pair Ratio sowie StereoSet und Winoqueer, Toxizität als eigene Metrik; Regard-Differenzen messen Stimmung und begründen keine Disparate_Performance. Maßnahmen: Counterfactual Data Augmentation zum Debiasing-Datensatz (Pre_Processing) und LoRA-Fine-Tuning (In_Training), mit Reduktion auf GenderPair, Winoqueer, BOLD und StereoSet und Leistungsprüfung auf GLUE und MMLU evaluiert. Kein theoretischer Rahmen für Gender oder Bias; NIST-Kriterien und die National Gender Equality Strategy inspirieren Benchmark-Kriterien und sind keine Theorie. Das Ethical Statement benennt westliche Gender-Konzeptionen als Grenze.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Gender_Definition": [
+          {
+            "quote": "encompasses a broader spectrum, including the array of identities beyond the male-female binary, such as transgender, genderqueer, non-binary, and more",
+            "locator": "Sec. 2.1 Gender Bias Statement"
+          }
+        ],
+        "AN_Bias_Definition": [
+          {
+            "quote": "we can define gender bias as prejudicial attitudes or discriminatory actions based on an individual's gender identity.",
+            "locator": "Sec. 2.1 Gender Bias Statement"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "Group 3: gender identities that do not belong to the traditional binary or tend towards a neutral description.",
+            "locator": "Sec. 3.3.1 Pair Sets"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "This underscores the effectiveness of our methods in diminishing gender stereotype reliance.",
+            "locator": "Sec. 5.3, Stereotyping"
+          },
+          {
+            "quote": "Toxicity quantifies the harmfulness of the generated text towards a specific gender group, measuring the extent to which the language might perpetuate harm or negative stereotypes.",
+            "locator": "Sec. 3.5.2, Toxicity"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "To build a debiasing dataset, we leverage counterfactual data augmentation (CDA) [57], which allows for the creation of alternative scenarios that reduce existing biases.",
+            "locator": "Sec. 3.4.1, Pre_Processing"
+          },
+          {
+            "quote": "To ensure that the de-biased models retain their original performance, we employ Low-Rank Adaptation (LoRA) fine-tuning [25].",
+            "locator": "Sec. 3.4.2, In_Training"
+          }
+        ],
+        "AN_Mitigation_Status": [
+          {
+            "quote": "Table 5 presents a notable bias decrease in all three metrics, compared to the original models (Table 4).",
+            "locator": "Sec. 5.3"
+          }
+        ]
+      }
+    },
+    "GPSB87RN": {
+      "source_path": "docs/data/fulltext/GPSB87RN.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Korpustitel und Texttitel stimmen überein (What is Feminist AI?), Autorinnen Wudel und Ehrenberg, Friedrich-Ebert-Stiftung, Competence Centre on the Future of Work, Januar 2025, ISBN 978-3-98628-688-0. Publikationstyp: belegter Policy-Report mit identifizierbarer Autorenschaft und Literaturverzeichnis. Quellenhash entspricht dem Manifest."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "ja",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "This paper explores Feminist Artificial Intelligence (FAI), a framework leveraging intersectional feminism to address biases and inequities in AI systems."
+        ],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "FAI marks a critical departure from traditional AI by tackling structural inequalities and promoting accountable and equitable AI solutions."
+        ],
+        "Gender": [
+          "challenging the male-dominated, Western-centric biases that currently pervade AI systems"
+        ],
+        "Diversitaet": [
+          "This involves creating interdisciplinary and diverse teams and fostering iterative theory-practice loops to ensure that theoretical principles translate effectively into real-world applications."
+        ],
+        "Feministisch": [
+          "Intersectional feminism serves as one of the most effective research methods to unlock the black box of AI systems operating in a patriarchal system."
+        ],
+        "Fairness": [
+          "efforts should focus on mapping unpaid or exploited labour in the supply chain, testing training data for diversity measures, and ensuring explicit consent for data collection and usage."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender"],
+        "AN_Harm_Types": ["Exclusionary_Norms"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "Organisational_Process"],
+        "AN_Mitigation_Status": "Demonstrated",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Social_Construct"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Konzept",
+        "AN_Notes": "Bias-Achse Geschlecht als eigenes Argument (männlich dominierte Verzerrungen, binäre Geschlechterkategorien schließen nicht-binäre Personen aus). Intersektionalität ist Rahmen, eine Passage, deren Ergebnis von einer Achsenkombination abhängt, fehlt, daher kein Intersectional. Die Analyse von MIRA nach Geschlecht, Alter und Ethnizität wird als Praxisbeispiel berichtet und nicht als Bias-Analyse des Werks codiert. Schadensart Exclusionary_Norms aus dem eigenen Prüfkriterium zu binären Kategorien; die Aussage zu strukturell verstärkter Diskriminierung stützt sich auf zitierte Literatur. Maßnahmen: organisatorisch (diverse Teams, Stakeholder-Beteiligung, Gesetzgebung, Feminist Design Tool) und Datenvorbereitung (Prüfung von Trainingsdaten auf Diversität, synthetische Trainingsdaten bei MIRA zum Abbau von Ungleichheiten). Demonstrated bezieht sich allein auf MIRA als angewandtes und vorgestelltes Beispiel ohne berichtete Evaluation; die übrigen Maßnahmen bleiben Vorschläge. Social_Construct aus der Bestimmung des Patriarchats als Machtsystem, keine eigene Definition von Geschlecht. Bias-Verständnis nur implizit über systemische Machtstrukturen als Ursache von Ungleichheit.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Theory_Reference": [
+          {
+            "theory": "Intersektionaler Feminismus (Hill Collins)",
+            "quote": "Intersectional feminism refers to a framework that acknowledges the oppression of people shaped not only by their gender, but by other social categories such as ethnicity, class, sexuality, ability, age, religion or geography, which intersect (Hill Collins, 2010).",
+            "locator": "Background"
+          },
+          {
+            "theory": "Data Feminism (D'Ignazio und Klein)",
+            "quote": "the nine principles outlined by D'Ignazio and Klein (2024) provide a framework to evaluate power dynamics and uncover biases within AI systems",
+            "locator": "Ensuring AI systems are continuously developed to reflect changing societal influences"
+          },
+          {
+            "theory": "Feministische Theorie (Ferguson)",
+            "quote": "Ferguson (2017) formulates the common goal of chal -lenging current power relations, imagining better worlds and striving to achieve them.",
+            "locator": "Background"
+          }
+        ],
+        "AN_Gender_Understanding": [
+          {
+            "quote": "In this system, power and authority are primarily held by men, often resulting in the subordination of women and marginalised groups.",
+            "locator": "Background"
+          }
+        ],
+        "AN_Bias_Axes": [
+          {
+            "quote": "checking if a system relies on binaries and hierarchies , such as binary gender categories, which may introduce gender bias and exclude individuals identifying as non-binary;",
+            "locator": "Ensuring AI systems are continuously developed to reflect changing societal influences"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "checking if a system relies on binaries and hierarchies , such as binary gender categories, which may introduce gender bias and exclude individuals identifying as non-binary;",
+            "locator": "Ensuring AI systems are continuously developed to reflect changing societal influences, Exclusionary_Norms"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "MIRA adopts a multi-stakeholder, iterative development process, focusing on synthetic data training to address inequities while minimising resource demands.",
+            "locator": "MIRA: reducing power inequalities in healthcare, Pre_Processing"
+          },
+          {
+            "quote": "This involves creating interdisciplinary and diverse teams and fostering iterative theory-practice loops to ensure that theoretical principles translate effectively into real-world applications.",
+            "locator": "Ensuring AI systems seek to reduce power inequalities through feminist methodology, Organisational_Process"
+          }
+        ]
+      }
+    },
+    "JMAWNUEV": {
+      "source_path": "docs/data/fulltext/JMAWNUEV.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Korpustitel und Texttitel stimmen überein (GLAT: The generative AI literacy assessment test), Autor:innen Jin, Martinez-Maldonado, Gašević, Yan (Monash University), Zeitschrift Computers and Education: Artificial Intelligence. DOI und Erscheinungsjahr fehlen in der Paper-Ebene; kein Titel- oder DOI-Konflikt. Quellenhash entspricht dem Manifest."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "In this study, we present the GenAI Literacy Assessment Test (GLAT), a 20-item multiple-choice instrument developed following established procedures in psychological and educational measurement."
+        ],
+        "Generative_KI": [
+          "Unlike existing assessments that focus predominantly on general AI skills, GLAT targets the unique skills necessary for effective engagement with generative technologies, including technical proficiency, ethical awareness, and the capacity for critical evaluation of GenAI-generated outputs."
+        ],
+        "Prompting": [
+          "Developing GenAI literacy involves more than just foundational knowledge; it requires proficiency in crafting prompts, interpreting AI-generated outputs, and understanding the socio-ethical implications of using such tools"
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "When a generative AI system is used for screening job applications, what issue might arise concerning the quality and fairness of hiring decisions?"
+        ],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "MQJEES7J": {
+      "source_path": "docs/data/fulltext/MQJEES7J.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Korpustitel und Texttitel stimmen überein (AI literacy and trust: A multi-method study of Human-GAI team collaboration), Autor:innen Pan, Moore, Papadimitriou, Zhu (Lehigh University), Zeitschrift Computers in Human Behavior: Artificial Humans. DOI und Erscheinungsjahr fehlen in der Paper-Ebene; kein Titel- oder DOI-Konflikt. Quellenhash entspricht dem Manifest."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "Study 2 employed quantitative methods to determine predictors of trust in GAI, demonstrating that AI knowledge and perceived value -key components of AI literacy -significantly influenced perceptions of trust."
+        ],
+        "Generative_KI": [
+          "This study investigates the relationship between trust and AI literacy in human-generative AI (GAI) team collaboration, focusing on how AI literacy affects trust formation in these interactions."
+        ],
+        "Prompting": [
+          "Faculty provided a brief overview of the tool, covering its core functions and offering guidance on how to formulate effective prompts."
+        ],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "It also requires continuous evaluation of AI systems ' accuracy, reliability, and fairness to mitigate potential biases."
+        ],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "T9KEZN3G": {
+      "source_path": "docs/data/fulltext/T9KEZN3G.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Texttitel 'Governance of Generative AI' entspricht dem Haupttitel des Korpustitels; der Untertitel erscheint in der Paper-Ebene nicht als Überschrift, der Inhalt ('a comprehensive framework to govern generative AI') stimmt überein. Autor A. Taeihagh, Lee Kuan Yew School of Public Policy, Einleitungsartikel zum Special Issue in Policy and Society. DOI und Jahr fehlen im Kopf der Paper-Ebene; kein Titel- oder DOI-Konflikt. Publikationstyp: fachwissenschaftlicher Einleitungsartikel mit identifizierbarer Autorenschaft und Quellenbasis. Quellenhash entspricht dem Manifest."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "nein",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "AI literacy should become foundational in education systems to ensure a broad understanding within society of how these technologies are affecting our lives."
+        ],
+        "Generative_KI": [
+          "This special issue builds on the 2021 Policy and Society special issue on the governance of AI by focusing on the legal, organizational, political, regulatory, and social challenges of governing generative AI."
+        ],
+        "Prompting": [],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "data training and validation practices in generative AI models could propagate or even amplify biases in society related to race, ethnicity, gender, or other protected characteristics, leading to discriminatory outcomes and inequalities through means such as generation of media that reinforce stereotypes"
+        ],
+        "Gender": [],
+        "Diversitaet": [
+          "Focuses need to include improving practices around data curation, ensuring the use of diverse and representative datasets, and development of tools and procedures for detecting and addressing biases during training and deployment."
+        ],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "ZNHUCA4B": {
+      "source_path": "docs/data/fulltext/ZNHUCA4B.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Korpustitel und Texttitel stimmen überein (Recommendation on the Ethics of Artificial Intelligence), institutionelle Urheberschaft der UNESCO-Generalkonferenz, angenommen auf der 41. Sitzung am 23. November 2021. Keine DOI, die Annahme durch die Generalkonferenz dient als stabile Quellenkennung. Publikationstyp: normativer Policy-Text einer zwischenstaatlichen Organisation mit identifizierbarer institutioneller Autorenschaft und dokumentierter Quellenbasis im Völkerrecht, als belegter Policy-Report eingeordnet (siehe Bericht). Quellenhash entspricht dem Manifest."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "teilweise",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "teilweise",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": [
+          "Member States should work with international organizations, educational institutions and private and non-governmental entities to provide adequate AI literacy education to the public on all levels in all countries"
+        ],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": [
+          "AI systems are information-processing technologies that integrate models and algorithms that produce a capacity to learn and to perform cognitive tasks leading to outcomes such as prediction and decision-making in material and virtual environments."
+        ],
+        "Soziale_Arbeit": [
+          "Member States that acquire Al systems for human rights-sensitive use cases, such as law enforcement, welfare, employment, media and information providers, health care and the independent judiciary system should provide mechanisms to monitor the social and economic impact of such systems"
+        ],
+        "Bias_Ungleichheit": [
+          "AI actors should make all reasonable efforts to minimize and avoid reinforcing or perpetuating discriminatory or biased applications and outcomes throughout the life cycle of the AI system to ensure fairness of such systems."
+        ],
+        "Gender": [
+          "Member States should ensure that gender stereotyping and discriminatory biases are not translated into AI systems, and instead identify and proactively redress these."
+        ],
+        "Diversitaet": [
+          "Respect, protection and promotion of diversity and inclusiveness should be ensured throughout the life cycle of AI systems, consistent with international law, including human rights law."
+        ],
+        "Feministisch": [
+          "These gaps include: the gender wage gap; the unequal representation in certain professions and activities; the lack of representation at top management positions, boards of directors, or research teams in the AI field; the education gap; the digital and AI access, adoption, usage and affordability gap; and the unequal distribution of unpaid work and of the caring responsibilities in our societies."
+        ],
+        "Fairness": [
+          "AI actors should promote social justice and safeguard fairness and non-discrimination of any kind in compliance with international law."
+        ]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender"],
+        "AN_Harm_Types": ["Stereotyping", "Erasure"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Binary_Categorical"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Konzept",
+        "AN_Notes": "Normatives Rahmenwerk aus Werten, Prinzipien und Politikfeldern für Mitgliedstaaten. Bias-Achse Geschlecht als eigenes Politikfeld (Policy Area 6); weitere Merkmale wie race, colour, age, disability, language erscheinen nur in Aufzählungen geschützter Merkmale und bleiben uncodiert, ebenso die Gefälle zwischen Ländern (LMICs) und zwischen Stadt und Land, die als Zugangsungleichheit und nicht als Bias-Analyse behandelt werden. Schadensarten: Stereotypisierung aus dem eigenen Argument zur Reproduktion von Bias und Stereotypen (Abschnitt I.2(c), Ziffern 66 und 90), Erasure aus dem Verschwinden gefährdeter Sprachen und Dialekte durch NLP-Anwendungen (Ziffer 95). Diskriminierende algorithmische Entscheidungen (Ziffer 29) werden nicht als unmittelbar oder mittelbar klassifiziert und daher nicht codiert. Maßnahmen: Datenvorbereitung (diverse Trainingsdaten, nach Geschlecht disaggregierte Annotation, Ziffern 67 und 76) und Organisation (Ethical Impact Assessment, Aufsicht, Audit, diverse Teams), durchgehend als Empfehlung, daher Proposed. Geschlecht erscheint als Frauen und Mädchen gegenüber Männern ohne eigene Bestimmung; strukturelle Gender-Gaps (Ziffer 89) werden benannt, eine ausdrückliche Aussage zu Geschlecht als sozialer Konstruktion fehlt. Bias-Verständnis implizit über Nicht-Diskriminierung im Menschenrechtsrahmen; Ziffer 28 bestimmt Fairness als inklusiven Zugang zu den Vorteilen von KI, nicht Bias selbst. Kein Theoriebezug, der Menschenrechtsrahmen ist ein rechtlich-normativer Bezug. Soziale_Arbeit nur nachgeordnet über welfare als menschenrechtssensiblen Einsatzbereich und Unterstützung vulnerabler Personen.",
+        "undecidable": {}
+      },
+      "analysis_evidence": {
+        "AN_Bias_Axes": [
+          {
+            "quote": "Member States should ensure that gender stereotyping and discriminatory biases are not translated into AI systems, and instead identify and proactively redress these.",
+            "locator": "Policy Area 6: Gender, Ziffer 90"
+          }
+        ],
+        "AN_Harm_Types": [
+          {
+            "quote": "new ethical challenges are created by the potential of AI algorithms to reproduce and reinforce existing biases, and thus to exacerbate already existing forms of discrimination, prejudice and stereotyping.",
+            "locator": "I. Scope of application, Ziffer 2(c), Stereotyping"
+          },
+          {
+            "quote": "addressing the negative implications such as the reduction of use, which could lead to the disappearance of endangered languages, local dialects, and tonal and cultural variations associated with human language and expression.",
+            "locator": "Policy Area 7: Culture, Ziffer 95, Erasure"
+          }
+        ],
+        "AN_Mitigation_Stage": [
+          {
+            "quote": "Member States should implement policies to promote and increase diversity and inclusiveness that reflect their populations in AI development teams and training datasets",
+            "locator": "Policy Area 2, Ziffer 67, Pre_Processing"
+          },
+          {
+            "quote": "Moreover, Ethical Impact Assessment should include a transversal gender perspective.",
+            "locator": "Policy Area 6, Ziffer 87, Organisational_Process"
+          }
+        ]
+      }
+    }
+  }
+}
