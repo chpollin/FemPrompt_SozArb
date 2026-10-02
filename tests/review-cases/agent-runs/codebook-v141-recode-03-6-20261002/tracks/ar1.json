@@ -1,0 +1,972 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.4",
+  "reviewer": "ar1",
+  "actor": "agent",
+  "updated": "2026-10-02T12:24:50.380Z",
+  "transcription": {
+    "run_id": "codebook-v141-recode-03-6-20261002",
+    "source_packet": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/tracks/ar1-coding.json",
+    "source_packet_sha256": "3650076b0df977784ec780c51d92c97fb05656af481f86c40827d696e16252af",
+    "method": "deterministic_projection_with_prism_frontend_roundtrip",
+    "projection_path": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/tracks/ar1-projection.json",
+    "projection_sha256": "eeb3de3cb6381bb6c4dc71502d322eabaa7940f546ab3e4f35585baa2a126a2e"
+  },
+  "decisions": {
+    "2EBHMYU4": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Additionally, it calls for a robust approach to raise awareness and literacy, te",
+            "snippet": "Additionally, it calls for a robust approach to raise awareness and literacy, technical and ethical education, skills development, and capacity building.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "2EBHMYU4",
+            "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+            "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "This study analyzes the emerging agenda on intersectionality in AI.",
+            "snippet": "This study analyzes the emerging agenda on intersectionality in AI.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "2EBHMYU4",
+            "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+            "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca"
+          },
+          {
+            "term": "Typical examples include gender and racial biases embedded into voice assistants",
+            "snippet": "Typical examples include gender and racial biases embedded into voice assistants, humanoid robots, and hiring tools.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "2EBHMYU4",
+            "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+            "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Problems are seen as systemic, leading to a negative feedback loop and a vicious",
+            "snippet": "Problems are seen as systemic, leading to a negative feedback loop and a vicious cycle where discrimination in the workforce leads to the building of discriminating tools.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "2EBHMYU4",
+            "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+            "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca"
+          },
+          {
+            "term": "Reports highlight that AI reinforces gender and racial stereotypes and can offse",
+            "snippet": "Reports highlight that AI reinforces gender and racial stereotypes and can offset earlier progress made toward equality.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "2EBHMYU4",
+            "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+            "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "For example, the traditional understanding of gender as binary (male/female) is ",
+            "snippet": "For example, the traditional understanding of gender as binary (male/female) is being challenged today",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "2EBHMYU4",
+            "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+            "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca"
+          },
+          {
+            "term": "This diagnosis of the problem resonates with feminist scholarship of technology ",
+            "snippet": "This diagnosis of the problem resonates with feminist scholarship of technology that focuses on the mutual shaping of gender and technology and highlights how processes of technical change can influence gender power relations",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "2EBHMYU4",
+            "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+            "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Lack of diversity in the AI workforce is seen as the key problem in all four rep",
+            "snippet": "Lack of diversity in the AI workforce is seen as the key problem in all four reports.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "2EBHMYU4",
+            "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+            "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "To examine how AI impacts diverse social groups, intersectionality with its focu",
+            "snippet": "To examine how AI impacts diverse social groups, intersectionality with its focus on multiple and overlapping identities provides a useful perspective.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "2EBHMYU4",
+            "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+            "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca"
+          },
+          {
+            "term": "Thus, one of the questions for future research is to explore how intersectional ",
+            "snippet": "Thus, one of the questions for future research is to explore how intersectional and feminist approaches can be seen not just as an add",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "2EBHMYU4",
+            "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+            "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca"
+          }
+        ]
+      },
+      "ts": "2026-10-02T12:24:49.680Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+      "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Other_Axis"
+          ],
+          "AN_Harm_Types": [
+            "Stereotyping",
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "None"
+          ],
+          "AN_Gender_Definition": "Explicit",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Social_Construct",
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Empirisch",
+          "AN_Notes": "Framing-Analyse von vier Reports zu Intersektionalität und KI (Studientyp Empirisch als Dokumentanalyse). Other_Axis bezeichnet die Achse Globaler Norden und Globaler Süden, die die Autorin in ihrer eigenen Kritik an Stichproben und Beteiligten der Reports als Machtungleichgewicht ausführt. Schadensarten aus der eigenen Synthese der Reports (Abschnitt 3.1): Stereotypisierung durch KI und Exclusionary_Norms durch die homogene weiße männliche Entwicklerschaft, die ihre Annahmen in Systeme einschreibt. Einzelfälle wie das Amazon-Recruiting-Tool bleiben als zitierte Fälle unkodiert. Maßnahmen sind organisationale Empfehlungen der Reports (Diversität, Quoten, Governance, Beteiligung), vorgeschlagen, nicht evaluiert. Bias wird über den Intersektionalitätsrahmen und Macht verstanden, aber nicht eigens bestimmt."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "4ZL5Q48E": {
+      "categories": {
+        "AI_Literacies": 2,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 1
+      },
+      "decision": "Unclear",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Second, we discuss how algorithmic management demands new roles and competencies",
+            "snippet": "Second, we discuss how algorithmic management demands new roles and competencies while also fostering oppositional attitudes toward algorithms.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "4ZL5Q48E",
+            "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
+            "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833"
+          },
+          {
+            "term": "In a workplace where algorithmic management is implemented, it is essential for ",
+            "snippet": "In a workplace where algorithmic management is implemented, it is essential for managers and workers to develop algorithmic competencies (Jarrahi and Sutherland, 2019).",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "4ZL5Q48E",
+            "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
+            "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Termed 'algorithmic management' or 'management-by-algorithm', this trend has com",
+            "snippet": "Termed 'algorithmic management' or 'management-by-algorithm', this trend has come to be understood as the delegation of managerial functions to algorithms",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "4ZL5Q48E",
+            "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
+            "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "For this reason, algorithmic systems can inherit biases embedded in previous dec",
+            "snippet": "For this reason, algorithmic systems can inherit biases embedded in previous decisions, and reenact historical patterns of bias, discrimination, and inequalities (Chan and Wang, 2018; Lepri et al., 2018).",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "4ZL5Q48E",
+            "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
+            "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833"
+          },
+          {
+            "term": "First, we explore how algorithmic management shapes pre-existing power dynamics ",
+            "snippet": "First, we explore how algorithmic management shapes pre-existing power dynamics between workers and managers.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "4ZL5Q48E",
+            "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
+            "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833"
+          }
+        ]
+      },
+      "ts": "2026-10-02T12:24:49.680Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
+      "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+      "selected_version_is_preferred": true
+    },
+    "7FBB2KUC": {
+      "categories": {
+        "AI_Literacies": 1,
+        "Generative_KI": 2,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Die Fachkräfte müssen dazu befähigt werden, diese Wahrscheinlichkeiten zu interp",
+            "snippet": "Die Fachkräfte müssen dazu befähigt werden, diese Wahrscheinlichkeiten zu interpretieren (Schneider und Seelmeyer 2018).",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7FBB2KUC",
+            "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+            "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
+          }
+        ],
+        "Generative_KI": [
+          {
+            "term": "Das im Jahr 2020 veröffentlichte OpenAI GPT-3 (OpenAI LP, San Franciso, USA; Ope",
+            "snippet": "Das im Jahr 2020 veröffentlichte OpenAI GPT-3 (OpenAI LP, San Franciso, USA; OpenAI 2020) nutzt DeepLearning-Applikationen und ist in der Lage, anhand von wenigen Input-Parametern qualitativ hochwertige Texte zu generieren",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7FBB2KUC",
+            "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+            "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
+          },
+          {
+            "term": "Die technischen Fortschritte im Bereich der KI und speziell des NLP ermöglichen ",
+            "snippet": "Die technischen Fortschritte im Bereich der KI und speziell des NLP ermöglichen Entwicklungen von Chatbots, die in ihrer Kommunikation kaum mehr von einem menschlichen Gegenüber zu unterscheiden sind (Zong und Krishnamachari 2022).",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7FBB2KUC",
+            "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+            "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Im Projekt MAEWIN, das an der FH Bielefeld durchgeführt wird, wird auf Basis mas",
+            "snippet": "Im Projekt MAEWIN, das an der FH Bielefeld durchgeführt wird, wird auf Basis maschinell ausgewerteter Dokumentationen aus der Sozialen Arbeit ein Entscheidungsunterstützungssystem entwickelt (FH Bielefeld o.J.).",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7FBB2KUC",
+            "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+            "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
+          },
+          {
+            "term": "Predictive Analytics ist ein fortgeschrittenes Verfahren der Analytik, das histo",
+            "snippet": "Predictive Analytics ist ein fortgeschrittenes Verfahren der Analytik, das historische Daten mit statistischer Modellierung, Data-Mining-Techniken und maschinellem Lernen kombiniert",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7FBB2KUC",
+            "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+            "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "Mit diesem Artikel wird ein Beitrag zum Diskurs des Themas 'Künstliche Intellige",
+            "snippet": "Mit diesem Artikel wird ein Beitrag zum Diskurs des Themas 'Künstliche Intelligenz (KI)' in der Sozialen Arbeit geleistet",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7FBB2KUC",
+            "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+            "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Ohne interdisziplinäre Teams in der Entwicklung von Werkzeugen, die NLP nutzen, ",
+            "snippet": "Ohne interdisziplinäre Teams in der Entwicklung von Werkzeugen, die NLP nutzen, besteht die Gefahr der Reproduktion von Diskriminierung und sogar weiterer Radikalisierung (McGuffie und Newhouse 2020).",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7FBB2KUC",
+            "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+            "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
+          },
+          {
+            "term": "Grundsätzlich darf die digitale Kontaktaufnahme nicht die ausschließliche Form d",
+            "snippet": "Grundsätzlich darf die digitale Kontaktaufnahme nicht die ausschließliche Form des Erstkontakts sein, da sonst weniger digital affine Hilfesuchende nicht mehr erreicht werden.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "7FBB2KUC",
+            "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+            "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
+          }
+        ]
+      },
+      "ts": "2026-10-02T12:24:49.680Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+      "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "None"
+          ],
+          "AN_Harm_Types": [
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "General_Social_Work",
+            "Child_Family_Welfare"
+          ],
+          "AN_Task": [
+            "Counselling_Client_Communication",
+            "Case_Assessment_Decision_Support",
+            "Research"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Implicit_Only",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Theoretische Erörterung von NLP in Beratung, Altenhilfe sowie Kinder- und Jugendhilfe. Bias wird nur in der Diskussion behandelt, ohne analysierte soziale Achse. Digitale Affinität ist keine soziale Achse im Sinne der Achsenregel, das Argument trägt aber Exclusionary_Norms (Ankerwerk MA3LBJS6 desselben Werks). Die Wiederholung stereotyper Rollenbilder ist nur aus Lucy und Bamman 2021 zitiert und bleibt als Schadensart unkodiert. Maßnahmen: interdisziplinäre Entwicklungsteams, Transparenz und nicht ausschließlich digitaler Erstkontakt, vorgeschlagen. Aufgaben: Chatbots im Erstkontakt und in der Beratung, Entscheidungsunterstützung (MAEWIN, Predictive Analytics) und Forschung (CASoTex, NLP-gestützte Inhaltsanalyse). Theoriebezug als Grenzfall: Staub-Bernasconis Konzept der Menschenrechtsprofession rahmt die Gesamtanalyse und wird in der Diskussion ausdrücklich auf das Diskriminierungsverbot bezogen. Bias-Verständnis nur implizit als Reproduktion vorhandener Kontexte."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "A2P8MXMY": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Diversitaet": 1,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "An ability to critically reflect on the tool may protect against the possibility",
+            "snippet": "An ability to critically reflect on the tool may protect against the possibility of a tool becoming too powerful, and is a reminder that practitioners often utilise discretion even in highly constrained systems.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "A2P8MXMY",
+            "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+            "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "Algorithmic tools are increasingly used in child protection decision-making.",
+            "snippet": "Algorithmic tools are increasingly used in child protection decision-making.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "A2P8MXMY",
+            "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+            "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "These debates should be of much interest to social work, given the professional ",
+            "snippet": "These debates should be of much interest to social work, given the professional commitment to social justice ideals in social work as a discipline, and the sharp uptake of predictive tools in child protection contexts where many social workers practice.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "A2P8MXMY",
+            "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+            "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "Algorithms using these data have distorted feedback loops and can contain inequa",
+            "snippet": "Algorithms using these data have distorted feedback loops and can contain inequalities and biases.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "A2P8MXMY",
+            "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+            "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Of increasing interest is who is missing altogether from data sources used to tr",
+            "snippet": "Of increasing interest is who is missing altogether from data sources used to train algorithms.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "A2P8MXMY",
+            "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+            "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "One definition of statistical fairness in the use of predictive analytics is ens",
+            "snippet": "One definition of statistical fairness in the use of predictive analytics is ensuring that the rates of true positives are equal between population groups",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "A2P8MXMY",
+            "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+            "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368"
+          }
+        ]
+      },
+      "ts": "2026-10-02T12:24:49.680Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+      "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Race_Ethnicity",
+            "Socioeconomic",
+            "Other_Axis"
+          ],
+          "AN_Harm_Types": [
+            "Indirect_Discrimination",
+            "Disparate_Performance"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Child_Family_Welfare"
+          ],
+          "AN_Task": [
+            "Case_Assessment_Decision_Support"
+          ],
+          "AN_Gender_Definition": "Not_Applicable",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Not_Applicable"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Theoretisch",
+          "AN_Notes": "Kritisch-konzeptionelle Analyse prädiktiver Risikotools im Kinderschutz. Achsen: Rassifizierung und Ethnizität einschließlich Indigener und Maori, Klasse und Armut, Other_Axis als Wohnort und Standort der Kinderschutzbehörde, die die Autorin als eigenes Beispiel für Datenverzerrung ausführt. Geschlecht erscheint nur in einer Aufzählung und in zitierten Gerichtsdaten. Indirect_Discrimination über Proxies wie früheren Kontakt der Eltern mit dem Kinderschutzsystem, Disparate_Performance über die eigene Auswertung der AFST-Evaluation zur Genauigkeit für Schwarze und weiße Kinder. Maßnahmen: objektivere Outcome-Variablen wie Krankenhausaufnahmen zur Korrektur des Sample Frame (Datenebene) sowie Beteiligung von Familien, Citizen Councils und die Rolle der Fachkräfte (Organisation), jeweils vorgeschlagen oder diskutiert, nicht evaluiert. Die AFST-Evaluation betrifft das Tool selbst, keine Bias-Maßnahme."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "AHUSFEEA": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 1,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "Diversitaet": 2,
+        "Feministisch": 2,
+        "Fairness": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Provide AI literacy training across teams, focusing on ethics, intersectionality",
+            "snippet": "Provide AI literacy training across teams, focusing on ethics, intersectionality, and societal impact.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AHUSFEEA",
+            "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+            "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "In recent years, bias in artificial intelligence (AI) has become a major concern",
+            "snippet": "In recent years, bias in artificial intelligence (AI) has become a major concern, affecting public trust, social harmony, and fair governance.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AHUSFEEA",
+            "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+            "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+          },
+          {
+            "term": "Predictive policing systems, often trained on historical arrest data, disproport",
+            "snippet": "Predictive policing systems, often trained on historical arrest data, disproportionately target low-income communities of colour.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AHUSFEEA",
+            "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+            "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+          }
+        ],
+        "Soziale_Arbeit": [
+          {
+            "term": "Without addressing these intersectional biases, AI systems risk perpetuating and",
+            "snippet": "Without addressing these intersectional biases, AI systems risk perpetuating and deepening existing inequalities in welfare and social services.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AHUSFEEA",
+            "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+            "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "One significant issue is intersectional bias, where different forms of discrimin",
+            "snippet": "One significant issue is intersectional bias, where different forms of discrimination-such as racism, sexism, ableism, and colonialism-overlap and affect people in complex ways.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AHUSFEEA",
+            "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+            "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Gendered assumptions about work and career paths lead to a biased algorithm that",
+            "snippet": "Gendered assumptions about work and career paths lead to a biased algorithm that disregards the socioeconomic realities faced by women, reinforcing historical inequalities in employment.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AHUSFEEA",
+            "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+            "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Foster workforce diversity by recruiting underrepresented groups and creating in",
+            "snippet": "Foster workforce diversity by recruiting underrepresented groups and creating inclusive cultures.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AHUSFEEA",
+            "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+            "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+          }
+        ],
+        "Feministisch": [
+          {
+            "term": "Intersectionality, a term coined by legal scholar Kimberlé Crenshaw, is an appro",
+            "snippet": "Intersectionality, a term coined by legal scholar Kimberlé Crenshaw, is an approach to describe and address complex and nuanced forms of discrimination that result from interconnecting forms of oppression",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AHUSFEEA",
+            "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+            "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Fairness in AI refers to designing systems that promote equitable outcomes for a",
+            "snippet": "Fairness in AI refers to designing systems that promote equitable outcomes for all individuals , regardless of identity.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AHUSFEEA",
+            "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+            "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+          },
+          {
+            "term": "Develop fairness-driven models that align with societal goals.",
+            "snippet": "Develop fairness-driven models that align with societal goals.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "AHUSFEEA",
+            "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+            "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+          }
+        ]
+      },
+      "ts": "2026-10-02T12:24:49.680Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+      "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+      "version_type": "unknown",
+      "preferred_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Intersectional",
+            "Disability",
+            "Socioeconomic",
+            "Nationality_Migration",
+            "Other_Axis"
+          ],
+          "AN_Harm_Types": [
+            "Direct_Discrimination",
+            "Indirect_Discrimination",
+            "Disparate_Performance",
+            "Exclusionary_Norms"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Not_SW_Specific"
+          ],
+          "AN_Task": [
+            "Other_Task"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Intersectional"
+          ],
+          "AN_Theory_Reference": "Yes",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Konzept",
+          "AN_Notes": "Toolkit des Erasmus+-Projekts DIVERSIFAIR für den Industriesektor. Achsen und Schadensarten stammen aus der eigenen Analyse der Fallstudienbibliothek (Abschnitte Intersectionality at play und Why intersectionality matters), nicht aus bloßer Aufzählung. Other_Axis bezeichnet nicht-traditionelle Familienformen im dänischen Fall. Direct_Discrimination für RisCanvi, das Alter, Geschlecht und Nationalität als Eingabe nutzt, Indirect_Discrimination für das AMS-Beispiel mit Erwerbsunterbrechungen und Teilzeit als Proxy, Disparate_Performance für Fehlerraten der Gesichtserkennung, Exclusionary_Norms für Annahmen über normale Familien- und Finanzprofile. Maßnahmen: Datensatz-Audits und Diversifizierung der Daten (Datenebene) sowie Teams, Schulung, Aufsicht und Audits (Organisation), vorgeschlagen. Other_Task: Personalauswahl, Kreditvergabe, Betrugserkennung bei Sozialleistungen und Rückfallprognose als beschriebene Einsatzfälle. Geschlecht wird nur über den Intersektionalitätsrahmen erkennbar, ohne eigene Bestimmung, die Fälle vergleichen Frauen und Männer. Soziale_Arbeit teilweise über Fälle aus Wohlfahrt und Sozialleistungen."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    },
+    "INQNDHTI": {
+      "categories": {
+        "AI_Literacies": 1,
+        "KI_Sonstige": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 1,
+        "Diversitaet": 1,
+        "Fairness": 1
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "AI_Literacies": [
+          {
+            "term": "Educate healthcare personnel on the basics of AI, including techniques and solut",
+            "snippet": "Educate healthcare personnel on the basics of AI, including techniques and solutions, to establish trust in AI healthcare providers [43,84].",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "INQNDHTI",
+            "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+            "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+          }
+        ],
+        "KI_Sonstige": [
+          {
+            "term": "In this systematic literature review, we aimed to provide an overview of ethical",
+            "snippet": "In this systematic literature review, we aimed to provide an overview of ethical concerns and related strategies that are currently identified when applying AI in healthcare.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "INQNDHTI",
+            "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+            "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "As it can be seen in Table 5, justice and fairness was found to be the most prev",
+            "snippet": "As it can be seen in Table 5, justice and fairness was found to be the most prevalent ethical issue (in 24 out of 45 sources).",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "INQNDHTI",
+            "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+            "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+          },
+          {
+            "term": "As can be observed in Table 5, bias was the most frequently discussed ethical is",
+            "snippet": "As can be observed in Table 5, bias was the most frequently discussed ethical issue related to justice and fairness (N = 22).",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "INQNDHTI",
+            "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+            "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+          }
+        ],
+        "Gender": [
+          {
+            "term": "Gender bias [56,59] arises, for example, when AI algorithms only learn from pred",
+            "snippet": "Gender bias [56,59] arises, for example, when AI algorithms only learn from predominantly male data, which may cause an AI-powered clinical decision support tool not to capture fully the complexities of a disease in women [59].",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "INQNDHTI",
+            "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+            "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+          }
+        ],
+        "Diversitaet": [
+          {
+            "term": "Such input biases can arise when the input data used for training the model do n",
+            "snippet": "Such input biases can arise when the input data used for training the model do not represent the full spectrum of the target population or when the system has incomplete data [43,49].",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "INQNDHTI",
+            "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+            "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+          },
+          {
+            "term": "Guarantee that the input data collection and analysis are conducted in a mindful",
+            "snippet": "Guarantee that the input data collection and analysis are conducted in a mindful, objective, and diverse manner [59,78].",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "INQNDHTI",
+            "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+            "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+          }
+        ],
+        "Fairness": [
+          {
+            "term": "Fairness was the second-most frequently discussed ethical sub-issue within main ",
+            "snippet": "Fairness was the second-most frequently discussed ethical sub-issue within main ethical issue 1.",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "INQNDHTI",
+            "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+            "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+          },
+          {
+            "term": "Manage fairness constraints and distribution in ML algorithms by",
+            "snippet": "Manage fairness constraints and distribution in ML algorithms by",
+            "ts": "2026-10-02T12:24:49.680Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "agent",
+            "paper_id": "INQNDHTI",
+            "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+            "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+          }
+        ]
+      },
+      "ts": "2026-10-02T12:24:49.680Z",
+      "reviewer": "ar1",
+      "actor": "agent",
+      "text_source": "raw",
+      "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+      "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+      "selected_version_is_preferred": true,
+      "analysis": {
+        "fields": {
+          "AN_Prompting_Role": [
+            "None"
+          ],
+          "AN_Prompt_Techniques": [
+            "None"
+          ],
+          "AN_Bias_Axes": [
+            "Gender",
+            "Race_Ethnicity",
+            "Disability"
+          ],
+          "AN_Harm_Types": [
+            "Disparate_Performance",
+            "Direct_Discrimination",
+            "Indirect_Discrimination"
+          ],
+          "AN_Mitigation_Stage": [
+            "Pre_Processing",
+            "Organisational_Process"
+          ],
+          "AN_Mitigation_Status": "Proposed",
+          "AN_Population": [
+            "Health_Care"
+          ],
+          "AN_Task": [
+            "Other_Task"
+          ],
+          "AN_Gender_Definition": "Implicit_Only",
+          "AN_Bias_Definition": "Explicit",
+          "AN_Gender_Understanding": [
+            "Binary_Categorical"
+          ],
+          "AN_Theory_Reference": "No",
+          "AN_Coding_Basis": "Fulltext",
+          "Studientyp": "Literaturreview",
+          "AN_Notes": "PRISMA-basierter systematischer Review zu ethischen Fragen von KI im Gesundheitswesen mit zwölf Hauptthemen. Bias und Gerechtigkeit bilden das häufigste Hauptthema mit den Unterthemen Bias, Fairness sowie Discrimination and Equality, aus deren Synthese Achsen und Schadensarten kodiert sind. Disparate_Performance für Entscheidungsunterstützung, die Erkrankungen bei Frauen schlechter erfasst, Direct_Discrimination für die Bewerberauswahl nach Geschlecht und Herkunft am St George's Hospital, Indirect_Discrimination, wie das Werk selbst klassifiziert, für fehlende Geschlechts- und Ethnizitätsdaten. Die rassistisch verzerrte Allokation im US-Versorgungsalgorithmus wird nicht als direkt oder indirekt eingeordnet und bleibt ohne eigenen Code. Maßnahmen: Vorverarbeitung der Trainingsdaten und diverse Datenerhebung (Datenebene) sowie Stakeholder-Kooperation, Schulung und Regulierungsgremien (Organisation), aus der Literatur vorgeschlagen, ohne Evaluation. Fairness-Constraints werden nur allgemein genannt und begründen keine Trainingsstufe. Other_Task: klinische Diagnose und Entscheidungsunterstützung in der Medizin. Jobin et al. und die EU-Ethikleitlinien dienen als Kodierrahmen für ethische Themen, nicht als Theorie zu Gender oder Bias."
+        },
+        "undecidable": {},
+        "codebook_version": "1.4.1"
+      }
+    }
+  }
+}

@@ -63,7 +63,7 @@ def test_merge_adds_six_records_for_five_work_assignments() -> None:
 def test_merge_is_idempotent() -> None:
     product = _read(PRODUCT)
     first = merge_ai_agent_product.merge_documents(
-        _read(BASE),
+        _premerge_base(product),
         product,
         product_path=PRODUCT,
     )

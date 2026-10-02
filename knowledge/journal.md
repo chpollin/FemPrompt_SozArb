@@ -22,6 +22,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## October 2026
 
+### 2026-10-02: Recode runs for the works coded under codebook 1.3
+
+Three runs recoded 17 of the 20 works with 1.3 agent coding under ADR-046 on the branch `recode-v13-works`, with 34 fresh record receipts ([[update-protocol#Recode runs of 2 October 2026]]). The coding of `JFDBPUBN` was reviewed but withheld from integration, because its Work keeps 1.3 coding on `BDI6XU5A` of another Version, and `prepare_coding_run` now refuses such Works. Two gaps of the new contract were closed on the way. Correction receipts bound to a superseded record are withheld like its record receipt, and the recode tests use a frozen pre-recode fixture instead of the productive track. Afterwards 101 included works carry 1.4.1 coding and 2 carry 1.3 coding. Open is the Version-binding decision for `JFDBPUBN`, `BDI6XU5A` and `XIYX5HJS`.
+
 ### 2026-10-02: Recode contract for the works coded under codebook 1.3
 
 The included works whose productive agent coding stands under codebook 1.3 could not be recoded, because the run contract forbade AI Agent Review coverage, the merge refused divergent records and the lifecycle knew only a person's correction as a superseding annotation. ADR-046 adds a full recode as an `ai_agent_recode` annotation that supersedes the active one, keeps the record at `ai-agent-reviewed` and leaves the 1.3 annotation as history, with the exact productive record bound by hash in the run manifest's `recode_of` ([[specification#ADR-046 A governed agent recode supersedes the active agent annotation under a newer codebook]], [[update-protocol#Recoding and coding of the remaining Includes]]). A full recode was chosen over a field-wise patch so that one annotation carries one codebook version. Receipts of the replaced records become stale by design and are withheld until a fresh review. No recode run was executed. Open are the runs themselves and the 1.3 works `XIYX5HJS` and `BDI6XU5A`, whose productive record belongs to a non-preferred Version, which `prepare_coding_run` does not admit and which need a decision on their Version binding first.

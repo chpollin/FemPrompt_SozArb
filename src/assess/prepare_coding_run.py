@@ -98,6 +98,10 @@ def paper_entry(paper_id: str, registry: dict, works: dict, productive: dict | N
     record_ids = sorted(
         rid for rid in work["record_ids"] if registry["record_index"].get(rid, {}).get("version_id") == preferred
     )
+    # Coding on another Version of the Work would leave two conflicting codings of one Work.
+    elsewhere = sorted(rid for rid in work["record_ids"] if rid not in record_ids and rid in (productive or {}))
+    if elsewhere:
+        raise SystemExit(f"{paper_id}: Work carries agent coding on another Version ({', '.join(elsewhere)}), resolve the Version binding first")
     recode_of = recode_binding(paper_id, record_ids, productive or {}, codebook_version(), recode)
     entry = {
         "paper_id": paper_id,

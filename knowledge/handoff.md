@@ -40,8 +40,8 @@ On 2 October 2026 the analysis-coding run under codebook 1.4.1 coded the include
 1. The two reviewers screen their assigned open papers in PRISM, in a local clone with Chrome or Edge, following the setup in the README and `docs/help.html#prism`.
 2. Merge the UI branch after the operator's review, then the operator review on the phone.
 3. The domain experts take the spot checks in each run's `spot-check-sample.json` and decide the human and agent decision divergences the completion package lists.
-4. Build the partial-recode contract and recode the works coded under 1.3, and resolve the Work duplicates the run reported ([[plan#Analysis tool follow-ups]], [[plan#Source and corpus readiness]]).
-5. Write the answer drafts for SQ2 to SQ5 from the coded fields and continue the SQ1 answer under step 4 of [[plan#Answering the research questions]].
+4. Merge the branch `recode-v13-works`, which carries the recode contract ADR-046 and the recode of the works coded under 1.3, decide the Version binding of `JFDBPUBN`, `BDI6XU5A` and `XIYX5HJS`, and resolve the Work duplicates ([[plan#Source and corpus readiness]]).
+5. Refresh the answer drafts for SQ1 to SQ5 to the recoded state and continue with Assertions under step 4 of [[plan#Answering the research questions]].
 
 ## Checkout and local material
 

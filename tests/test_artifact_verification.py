@@ -249,3 +249,26 @@ def test_receipt_of_a_recoded_record_is_withheld_not_rejected(tmp_path):
     path.write_text(json.dumps({"decisions": {"one": tampered}}), encoding="utf-8")
     with pytest.raises(ValueError, match="Stale AI review"):
         validated_reviews(tmp_path, data)
+
+
+def test_correction_of_a_recoded_record_is_withheld_not_rejected(tmp_path):
+    """ADR-046: an AI correction bound to the superseded record version is withheld with it."""
+    data = ledger(tmp_path)
+    old = {"decision": "Include", "annotations": [{"annotation_id": "a1", "annotation_type": "screening_decision"}]}
+    recoded = {"decision": "Include", "annotations": [*old["annotations"], {
+        "annotation_id": "a2", "annotation_type": "ai_agent_recode", "supersedes": "a1",
+        "supersedes_record_sha256": record_hash(old)}]}
+    (tmp_path / "records.json").write_text(json.dumps({"decisions": {"one": recoded}}), encoding="utf-8")
+    correction = {"paper_id": "one", "base_artifact": "records.json#/decisions/one", "base_sha256": record_hash(old)}
+    (tmp_path / "corrections.json").write_text(json.dumps({"schema": "femprompt-screening-corrections/0.1", "corrections": {"one": correction}}), encoding="utf-8")
+    receipt = {**data["reviews"][0], "artifact": "corrections.json#/corrections/one",
+               "sha256": artifact_hash(tmp_path, "corrections.json#/corrections/one")}
+    data["reviews"] = [receipt]
+    reviews = validated_reviews(tmp_path, data)
+    assert reviews == {} and "corrections.json#/corrections/one" in reviews.latest
+    assert reviewed_screening_projection(tmp_path, "records.json#/decisions/one", recoded, reviews) == (recoded, None, None)
+    correction["base_sha256"] = "sha256:" + "0" * 64
+    (tmp_path / "corrections.json").write_text(json.dumps({"schema": "femprompt-screening-corrections/0.1", "corrections": {"one": correction}}), encoding="utf-8")
+    data["reviews"][0]["sha256"] = artifact_hash(tmp_path, "corrections.json#/corrections/one")
+    with pytest.raises(ValueError, match="Stale or mismatched screening correction"):
+        validated_reviews(tmp_path, data)

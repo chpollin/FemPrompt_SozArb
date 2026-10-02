@@ -26,7 +26,7 @@
     "corpus/zotero_export.json": "sha256:a6bddc7f5da07b5d4b6a9c67ccc861658cec4eeff317c32b075068117a551b68",
     "corpus/zotero_sync.json": "sha256:a68c1242fa39cb279c830e374d5ec07d174dad2763e8773cbc2db6b8e07d272b",
     "docs/data/research_vault_v2.json": "sha256:d18870c4a4fde8138a6850155c029785cf19eb781d8c1207b63051d34d09490f",
-    "generated/completion/completion-package.json": "sha256:e4b120a8e4c6f2cb302fd94a24f2882010b7c7062bfda2c9e7249359d5054f2d",
+    "generated/completion/completion-package.json": "sha256:d0f3b66857dcc09177e10e60836655649b26b8452ed497019012f3ec1387b9fd",
     "generated/contextual-update-2026-08-24-intake-package.json": "sha256:b7266d89cd632346c67d0e4f7b09a574edfd11888a61c29731785c2c05e31a48",
     "generated/round2-intake-package.json": "sha256:b83bb42daff38d23ce3d7981797d92aabc15caf415e600c5558f03e4ef465d1a"
   },
@@ -727,7 +727,8 @@
       "works": 361,
       "by_decision_authority": {
         "ai_review:Exclude": 8,
-        "ai_review:Include": 16,
+        "ai_review:Include": 15,
+        "ai_review:Unclear": 1,
         "legacy_human:Exclude": 90,
         "legacy_human:Include": 138,
         "legacy_human:None": 1,
@@ -737,8 +738,8 @@
         "expert_include": 138,
         "expert_exclude": 90,
         "expert_unresolved": 1,
-        "ai_review_include_pending_verification": 16,
-        "ai_review_exclude_pending_verification": 8,
+        "ai_review_include_pending_verification": 15,
+        "ai_review_exclude_pending_verification": 9,
         "open_fulltext_ready": 57,
         "open_fulltext_not_retrieved": 44,
         "open_not_queued": 7

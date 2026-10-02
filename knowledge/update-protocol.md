@@ -202,6 +202,10 @@ The run exposed the following points.
 
 The works coded under 1.3 still awaited their recode after these runs, because the merge refused a divergent record and the lifecycle had no agent annotation that supersedes another. ADR-046 added that contract as a full recode ([[#Recoding and coding of the remaining Includes]]).
 
+### Recode runs of 2 October 2026
+
+The runs `codebook-v141-recode-<batch>-6-20261002` recoded under ADR-046 the included works whose productive agent coding followed codebook 1.3, by the same procedure as the coding run, with `recode_of` binding each existing record. The new annotation supersedes the 1.3 annotation, which stays in the record history, and the earlier AI source-review and correction receipts of those records are withheld until the fresh record receipts. Three works stayed outside. One has its text only on a non-preferred Version, one is effectively excluded, and the coding of the preferred Version of a third was reviewed but held out of integration, because its Work keeps 1.3 coding on a record of another Version and two codings of one Work would conflict. That case waits for the operator's Version-binding decision, and `prepare_coding_run` now refuses a Work whose agent coding sits on another Version. The recode turned some former agent Includes into Unclear, which the completion package records as human and agent decision divergences.
+
 ## Lifecycle and authority
 
 The ordered states are `identified → curated → agent-annotated → ai-agent-reviewed → verified → publication-approved`.

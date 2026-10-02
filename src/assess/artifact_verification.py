@@ -224,6 +224,8 @@ def reviewed_screening_projection(repo: Path, artifact: str, decision: dict, rev
     if receipt is None or receipt.get("result") != "accepted":
         return decision, None, None
     if "#/corrections/" in receipt["artifact"]:
+        if superseded_by_recode(decision, _json_value(repo, receipt["artifact"]).get("base_sha256")):
+            return decision, None, None
         projected, correction = screening_correction(repo, receipt, decision, artifact)
         return projected, receipt, correction
     if receipt.get("sha256") != record_hash(decision):
@@ -296,6 +298,9 @@ outcomes can describe obsolete artifacts without blocking an unrelated release.
             correction = _json_value(repo, artifact)
             base_artifact = correction.get("base_artifact", "")
             base = _json_value(repo, base_artifact)
+            # A correction of a record that a recode superseded is withheld like the record's own receipt.
+            if superseded_by_recode(base, correction.get("base_sha256")):
+                continue
             screening_correction(repo, receipt, base, base_artifact)
         binding = receipt.get("canonical_binding")
         source_binding = review_source_binding(repo, registry or {}, receipt)

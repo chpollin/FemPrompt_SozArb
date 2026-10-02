@@ -491,7 +491,8 @@ def test_cli_migrates_then_validates(tmp_path: Path) -> None:
     )
 
 
-PRODUCTIVE = ROOT / "docs" / "data" / "screening" / "ar2.json"
+# Frozen pre-recode state, since the productive track itself carries the recode of this record.
+PRODUCTIVE = ROOT / "tests" / "fixtures" / "ar2-ukkqkl7i-before-recode.json"
 RECODE_RUN_ID = "recode-test-20261002"
 RECODE_RECORD = "UKKQKL7I"
 

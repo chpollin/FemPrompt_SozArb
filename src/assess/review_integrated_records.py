@@ -4,8 +4,9 @@ For every record in ``integration.new_record_ids`` and ``recoded_record_ids`` of
 the given runs the reviewing agent compares the current productive record with
 the run's product and final AI Agent Review coding, resolves every evidence
 snippet in the tracked reading source, checks the Work-Version identity against
-the registry and confirms the
-lifecycle stops at ai-agent-reviewed. A record passes only if every check holds;
+the registry and confirms the lifecycle stops at ai-agent-reviewed. A recoded
+record must also supersede its bound pre-run record (read from ``--base-ref``)
+under ADR-046 and keep its history as an exact prefix. A record passes only if every check holds;
 otherwise the receipt says changes_requested and names the failed checks.
 
 The receipt attests these comparisons by the named agent. It grants no human
@@ -17,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -102,8 +104,42 @@ def actual_record(record: dict) -> dict:
     return actual
 
 
+def recode_failures(record_id: str, record: dict, paper: dict, run: dict, base: dict) -> list[str]:
+    """ADR-046: the recode supersedes the bound record and keeps it as an exact history prefix."""
+    failures = []
+    binding = (paper.get("recode_of") or {}).get(record_id)
+    previous = base.get("decisions", {}).get(record_id)
+    if not binding or previous is None:
+        return ["the recode has no recode_of binding or no pre-run record to supersede"]
+    if record_hash(previous) != "sha256:" + binding["record_sha256"].removeprefix("sha256:"):
+        failures.append("the pre-run record hash differs from the run's recode_of binding")
+    annotations = record.get("annotations", [])
+    active = annotations[-1] if annotations else {}
+    if (active.get("annotation_type") != "ai_agent_recode" or record.get("active_annotation_id") != active.get("annotation_id")
+            or active.get("supersedes") != binding["annotation_id"]
+            or previous.get("active_annotation_id") != binding["annotation_id"]
+            or active.get("supersedes_record_sha256") != record_hash(previous)
+            or active.get("codebook_version") != run["codebook"]["version"]):
+        failures.append("the active annotation is not an ai_agent_recode superseding the bound annotation and record hash")
+    events = record.get("lifecycle", {}).get("events", [])
+    previous_events = previous.get("lifecycle", {}).get("events", [])
+    if (annotations[:-1] != previous.get("annotations")
+            or record.get("lifecycle", {}).get("baseline") != previous.get("lifecycle", {}).get("baseline")
+            or events[:len(previous_events)] != previous_events
+            or record.get("checks", [])[:len(previous.get("checks", []))] != previous.get("checks", [])):
+        failures.append("earlier annotations, baseline, events or checks are not preserved as an exact prefix")
+    reviewer = next(item["actor_id"] for item in run["provenance"]["activities"] if item["type"] == "ai_agent_review")
+    recode_events = [event for event in events[len(previous_events):] if event.get("event_type") == "ai_agent_recode"]
+    if (len(recode_events) != 1 or recode_events[0].get("annotation_id") != active.get("annotation_id")
+            or recode_events[0].get("result") != "accepted"
+            or (recode_events[0].get("from"), recode_events[0].get("to")) != ("ai-agent-reviewed", "ai-agent-reviewed")
+            or recode_events[0].get("actor_ids") != [reviewer]):
+        failures.append("the ai_agent_recode lifecycle event is missing or misattributed")
+    return failures
+
+
 def review_record(record_id: str, run_dir: str, run: dict, product: dict, review: dict,
-                  current: dict, registry: dict, manifest: dict, started: str) -> dict:
+                  current: dict, registry: dict, manifest: dict, started: str, base: dict) -> dict:
     paper = next(item for item in run["assignment"]["papers"] if record_id in item["record_ids"])
     record = current["decisions"].get(record_id)
     canonical = registry["record_index"].get(record_id, {})
@@ -168,10 +204,16 @@ def review_record(record_id: str, run_dir: str, run: dict, product: dict, review
             notes.append(f"all {len(items)} evidence terms and snippets resolve in {source_path}")
 
     lifecycle = record.get("lifecycle", {})
+    if record_id in run["integration"].get("recoded_record_ids", []):
+        failures.extend(recode_failures(record_id, record, paper, run, base))
     targets = {event.get("to") for event in lifecycle.get("events", [])}
     if lifecycle.get("state") != "ai-agent-reviewed" or targets & {"verified", "publication-approved"}:
         failures.append(f"lifecycle state {lifecycle.get('state')!r} or its events go beyond ai-agent-reviewed")
 
+    recode = (" The active annotation is an ai_agent_recode superseding the bound pre-run annotation and record hash; "
+              "earlier annotations, baseline, events and checks are preserved as an exact prefix; the accepted "
+              "ai_agent_recode event is attributed to the run's AI Agent Review actor."
+              if record_id in run["integration"].get("recoded_record_ids", []) else "")
     alias = f" Alias of {paper['paper_id']}, sharing its final coding." if paper["paper_id"] != record_id else ""
     if failures:
         findings = "Changes requested: " + "; ".join(failures) + "." + alias
@@ -182,7 +224,7 @@ def review_record(record_id: str, run_dir: str, run: dict, product: dict, review
             f"{paper['paper_id']} in ai-agent-review.json (categories, decision, reason, evidence and analysis); "
             f"the active annotation body matches; {'; '.join(notes)}; the Work-Version identity equals the registry "
             "record index; the lifecycle state is ai-agent-reviewed without human verification or publication "
-            "approval." + alias
+            "approval." + recode + alias
         )
         result = "accepted"
     receipt = {
@@ -216,6 +258,9 @@ def review_record(record_id: str, run_dir: str, run: dict, product: dict, review
 def main() -> None:
     started = now()
     registry, manifest, current = load(REGISTRY), load(MANIFEST), load(ARGS.target)
+    # The pre-run productive file is the recode base; the working tree already holds the merge.
+    base = json.loads(subprocess.run(["git", "show", f"{ARGS.base_ref}:{ARGS.target}"], cwd=REPO, check=True,
+                                     capture_output=True).stdout.decode("utf-8"))
     reviews, inputs, scope, runs = [], [], [], []
     for run_dir in ARGS.runs:
         run_dir = run_dir.rstrip("/")
@@ -228,7 +273,7 @@ def main() -> None:
             inputs.append({"path": f"{run_dir}/{name}", "sha256": artifact_hash(REPO, f"{run_dir}/{name}")})
         integration = run["integration"]
         for record_id in [*integration["new_record_ids"], *integration.get("recoded_record_ids", [])]:
-            reviews.append(review_record(record_id, run_dir, run, product, review, current, registry, manifest, started))
+            reviews.append(review_record(record_id, run_dir, run, product, review, current, registry, manifest, started, base))
             scope.append(record_id)
     for path in (ARGS.target, REGISTRY, MANIFEST):
         inputs.append({"path": path, "sha256": artifact_hash(REPO, path)})
@@ -263,6 +308,7 @@ parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.R
 parser.add_argument("output", help="repository-relative batch path under generated/verification/")
 parser.add_argument("runs", nargs="+", help="repository-relative run directories")
 parser.add_argument("--target", default="docs/data/screening/ar2.json")
+parser.add_argument("--base-ref", default="HEAD", help="git revision holding the pre-run productive file")
 parser.add_argument("--agent-id", required=True)
 parser.add_argument("--model", required=True)
 parser.add_argument("--provider", required=True)

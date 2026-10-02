@@ -188,6 +188,10 @@
     {
       "path": "generated/verification/codebook-v141-record-reviews-2026-10-02.json",
       "sha256": "sha256:a2896ef13c7f7bd8f21b166e7d56a1d4484b7f17a61c45cb0edf8799c0ce34d6"
+    },
+    {
+      "path": "generated/verification/codebook-v141-recode-record-reviews-2026-10-02.json",
+      "sha256": "sha256:3944769a74d9c4ebe6f8dfb81b636363356790697ae6602248f63ae77dfb6df8"
     }
   ],
   "authority": "Immutable attributed source-review batches; exact hashes bind each batch. This index does not create new reviews or human verification."
