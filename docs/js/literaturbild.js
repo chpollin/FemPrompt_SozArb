@@ -355,9 +355,9 @@ function tableHtml(data) {
             const h = kind === 'value' ? heat(count, data.max) : 0;
             const focusable = key === active;
             const body = kind === 'gap' ? '0' : kind === 'open' ? 'n. b.' : String(count);
-            html += '<td><button type="button" class="lb-cell lb-cell--' + kind + (h >= 60 ? ' is-dark' : '') + '" data-row="' + esc(row) +
+            html += '<td><button type="button" class="lb-cell lb-cell--' + kind + '" data-row="' + esc(row) +
                 '" data-col="' + esc(col) + '" data-ri="' + ri + '" data-ci="' + ci + '" data-state="' + kind + '" data-count="' + count +
-                '" style="--heat:' + h + '%" tabindex="' + (focusable ? '0' : '-1') + '" aria-pressed="' + (key === selected) +
+                '" style="--heat:' + h + '%' + (kind === 'value' ? ';--ink:' + EC.color.inkOnHeat(h) : '') + '" tabindex="' + (focusable ? '0' : '-1') + '" aria-pressed="' + (key === selected) +
                 '" aria-label="' + esc(cellAria(data, row, col, kind, count)) + '"><span class="lb-val" aria-hidden="true">' + body + '</span></button></td>';
         });
         html += '</tr>';

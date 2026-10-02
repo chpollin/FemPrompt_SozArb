@@ -20,16 +20,20 @@ const DECISIONS = {
     unclear: { label: 'Unclear', mark: '?' },
 };
 // Under Übereinstimmung a work of the selection is coded by the experts only, by the
-// LLM only, or by both; the divergent ones lead the list.
-const SIDES = {
-    expert: { mark: 'H', label: 'nur Expert:innen' },
-    llm: { mark: 'L', label: 'nur LLM' },
-    both: { mark: 'H+L', label: 'Expert:innen und LLM' },
-};
+// LLM only, or by both; the divergent ones lead each decision group of the list.
 const SIDE_ORDER = { expert: 0, llm: 1, both: 2 };
 
 function pct(value) { return Math.round(value * 100) + ' %'; }
 function share(part, whole) { return whole ? part / whole : null; }
+function inWorks(n) { return n + (n === 1 ? ' Werk' : ' Werken'); }
+
+// Anteil: a cell as a share of its column category's works, a header as a share of all
+// works with an expert decision. Both read only counts the Werke lens already shows.
+function anteilBase(s) {
+    return s.cats.length === 2
+        ? { part: s.expert.length, whole: stats([s.cats[1]]).expert.length, text: ' der Kategorie ' + label(s.cats[1]) }
+        : { part: s.expert.length, whole: map.assessed, text: ' mit Entscheidung der Expert:innen' };
+}
 
 // Each lens reads one value off the stats of a category set; null means no works.
 const LENSES = {
@@ -39,6 +43,13 @@ const LENSES = {
         value: function(s) { return s.expert.length; },
         format: function(v) { return String(v); },
         tip: function(s) { return tallyText(s.expert); },
+    },
+    anteil: {
+        label: 'Anteil',
+        legend: 'Werke mit beiden Kategorien, Anteil an den Werken der Spaltenkategorie',
+        value: function(s) { const b = anteilBase(s); return share(b.part, b.whole); },
+        format: pct,
+        tip: function(s) { const b = anteilBase(s); return b.part + ' von ' + inWorks(b.whole) + b.text; },
     },
     einschluss: {
         label: 'Einschluss',
@@ -228,7 +239,7 @@ function paint() {
         const v = L.value(s);
         const h = heat(v, range);
         cell.style.setProperty('--heat', h + '%');
-        cell.classList.toggle('is-dark', h >= 70);
+        cell.style.setProperty('--ink', EC.color.inkOnHeat(h));
         cell.dataset.value = v === null ? '' : String(Math.round(v * 10000) / 10000);
         cell.querySelector('.lk-val').textContent = v === null ? '–' : L.format(v);
         cell.setAttribute('aria-label', setLabel(s.cats) + ', ' + L.label + ' ' + (v === null ? 'keine Werke' : L.format(v)) + ', ' + L.tip(s));
@@ -303,27 +314,20 @@ function reasonOf(paper) {
     return (paper.divergence && paper.divergence.llm_reasoning) || (paper.llm && paper.llm.reasoning) || '';
 }
 
-function itemHtml(paper, s) {
-    const dec = DECISIONS[decisionKey(paper)];
-    const side = lens === 'uebereinstimmung' ? sideOf(paper, s) : null;
+// The shared work item (EC.workItemHtml) with the round-one LLM reasoning on request.
+function itemHtml(paper, s, key) {
     const reason = reasonOf(paper);
     const open = openReason === paper.id;
     const reasonId = 'lk-reason-' + EC.escapeHtml(paper.id);
     const pattern = paper.divergence && paper.divergence.pattern;
-    let html = '<li class="lk-item" data-decision="' + decisionKey(paper) + '"' + (side ? ' data-side="' + side + '"' : '') + '>';
-    html += '<span class="lk-mark lk-mark--' + decisionKey(paper) + '" aria-hidden="true">' + dec.mark + '</span>';
-    html += '<span class="lk-item-body"><a class="lk-item-title" href="#view=korpus&amp;paper=' + encodeURIComponent(paper.id) + '">' + EC.escapeHtml(paper.title) + '</a>';
-    html += '<span class="lk-item-meta">' +
-        (side ? '<span class="lk-side lk-side--' + side + '" title="' + SIDES[side].label + '"><span aria-hidden="true">' + SIDES[side].mark +
-            '</span><span class="sr-only">' + SIDES[side].label + '</span></span> ' : '') +
-        '<span class="lk-dec">' + dec.label + '</span>' + (paper.author_year ? ', ' + EC.escapeHtml(paper.author_year) : '') +
-        (reason ? ' <button type="button" class="lk-why" data-paper-id="' + EC.escapeHtml(paper.id) + '" aria-expanded="' + open +
-            '" aria-controls="' + reasonId + '">LLM-Begründung</button>' : '') + '</span>';
-    if (reason) {
-        html += '<span class="lk-reason" id="' + reasonId + '"' + (open ? '' : ' hidden') + '>' +
-            (pattern ? '<span class="lk-pattern">' + EC.escapeHtml(pattern) + '</span> ' : '') + EC.escapeHtml(reason) + '</span>';
-    }
-    return html + '</span></li>';
+    return EC.workItemHtml(paper, {
+        decision: key,
+        side: lens === 'uebereinstimmung' ? sideOf(paper, s) : null,
+        actions: reason ? ' <button type="button" class="lk-why" data-paper-id="' + EC.escapeHtml(paper.id) + '" aria-expanded="' + open +
+            '" aria-controls="' + reasonId + '">LLM-Begründung</button>' : '',
+        after: reason ? '<span class="lk-reason" id="' + reasonId + '"' + (open ? '' : ' hidden') + '>' +
+            (pattern ? '<span class="lk-pattern">' + EC.escapeHtml(pattern) + '</span> ' : '') + EC.escapeHtml(reason) + '</span>' : '',
+    });
 }
 
 function renderDetail() {
@@ -347,7 +351,7 @@ function renderDetail() {
             return '<li class="lk-concept">' + EC.escapeHtml(c.label) + ' <span class="lk-concept-count">' + c.count + '</span></li>';
         }).join('') + '</ul>';
     }
-    html += '<ol class="lk-list" role="list">' + papers.map(function(p) { return itemHtml(p, s); }).join('') + '</ol>';
+    html += EC.workGroupsHtml(papers, { decision: decisionKey, item: function(p, key) { return itemHtml(p, s, key); } });
     box.innerHTML = html;
     box.hidden = false;
 }

@@ -67,6 +67,101 @@ function paperStatus(paper) {
     return { cls: 'diverge', label: 'Divergenz' };
 }
 
+// Work lists of the Wissensnetz and the Landkarte share one item markup and one grouping
+// by decision, Include first. Each view keeps its own decision source and passes the key.
+const WORK_DECISIONS = {
+    include: { label: 'Include', mark: '+' },
+    exclude: { label: 'Exclude', mark: '−' },
+    unclear: { label: 'Unclear', mark: '?' },
+    none: { label: 'ohne Entscheidung', mark: '' },
+};
+const WORK_DECISION_ORDER = ['include', 'exclude', 'unclear', 'none'];
+const WORK_SIDES = {
+    expert: { mark: 'H', label: 'nur Expert:innen' },
+    llm: { mark: 'L', label: 'nur LLM' },
+    both: { mark: 'H+L', label: 'Expert:innen und LLM' },
+};
+
+// o: { decision, side, actions (html after the PRISM link), after (html below the meta line) }
+function workItemHtml(paper, o) {
+    const dec = WORK_DECISIONS[o.decision] || WORK_DECISIONS.none;
+    const id = encodeURIComponent(paper.id);
+    const who = paper.author_year || (paper.year ? String(paper.year) : '');
+    const side = o.side ? WORK_SIDES[o.side] : null;
+    return '<li class="lk-item" data-decision="' + o.decision + '"' + (side ? ' data-side="' + o.side + '"' : '') + '>' +
+        '<span class="lk-mark lk-mark--' + o.decision + '" aria-hidden="true">' + dec.mark + '</span>' +
+        '<span class="lk-item-body"><a class="lk-item-title" href="#view=korpus&amp;paper=' + id + '">' + escapeHtml(paper.title) + '</a>' +
+        '<span class="lk-item-meta">' +
+        (side ? '<span class="lk-side lk-side--' + o.side + '" title="' + side.label + '"><span aria-hidden="true">' + side.mark +
+            '</span><span class="sr-only">' + side.label + '</span></span> ' : '') +
+        '<span class="lk-dec">' + escapeHtml(dec.label) + '</span>' + (who ? ', ' + escapeHtml(who) : '') +
+        ' <a class="lk-prism" href="prisma.html?paper=' + id + '">PRISM<span class="sr-only">, ' + escapeHtml(paper.title) + '</span></a>' +
+        (o.actions || '') + '</span>' + (o.after || '') + '</span></li>';
+}
+
+// papers arrive in the view's own order, which each group keeps. o.decision(paper) gives
+// the decision key, o.item(paper, key) the item markup; cls names the scroll container.
+function workGroupsHtml(papers, o) {
+    const groups = {};
+    papers.forEach(function(p) {
+        const key = WORK_DECISIONS[o.decision(p)] ? o.decision(p) : 'none';
+        (groups[key] = groups[key] || []).push(p);
+    });
+    return '<div class="lk-list' + (o.cls ? ' ' + o.cls : '') + '">' + WORK_DECISION_ORDER.filter(function(key) { return groups[key]; }).map(function(key) {
+        const list = groups[key];
+        return '<h4 class="lk-group-title" data-decision="' + key + '">' + WORK_DECISIONS[key].label +
+            ' <span class="lk-group-count">' + list.length + (list.length === 1 ? ' Werk' : ' Werke') + '</span></h4>' +
+            '<ol class="lk-group" role="list">' + list.map(function(p) { return o.item(p, key); }).join('') + '</ol>';
+    }).join('') + '</div>';
+}
+
+// Text colour on a computed fill: white where it reaches WCAG AA 4.5:1, otherwise the
+// darkest text token, and pure black in the narrow band where neither does (around a
+// relative luminance of 0.2 no mid-grey text reaches 4.5:1 against both ends).
+function hexRgb(hex) {
+    const m = /^#?([0-9a-f]{6})$/i.exec(String(hex || '').trim());
+    if (!m) return null;
+    const n = parseInt(m[1], 16);
+    return [n >> 16 & 255, n >> 8 & 255, n & 255];
+}
+
+function luminance(rgb) {
+    const lin = rgb.map(function(v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); });
+    return 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2];
+}
+
+function contrastRatio(a, b) {
+    const la = luminance(a), lb = luminance(b);
+    return (Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05);
+}
+
+// color-mix(in srgb, colour share, #fff) as the cells draw it, share in 0..1.
+function mixWithWhite(hex, share) {
+    const rgb = hexRgb(hex);
+    return rgb.map(function(v) { return Math.round(v * share + 255 * (1 - share)); });
+}
+
+function readableInk(fill, darkHex) {
+    const white = [255, 255, 255];
+    if (contrastRatio(fill, white) >= 4.5) return '#fff';
+    const dark = hexRgb(darkHex) || [0, 0, 0];
+    return contrastRatio(fill, dark) >= 4.5 ? darkHex : '#000';
+}
+
+// Token values as the stylesheet defines them; the fallback is the tokens.css literal for
+// contexts that load no stylesheet (headless tests).
+function tokenHex(name, fallback) {
+    const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    return hexRgb(value) ? value : fallback;
+}
+
+// Text colour of a heat cell of the Landkarte and the Literaturbild, whose fill is
+// color-mix(in srgb, --primary-dark heat%, #fff).
+function inkOnHeat(heatPercent) {
+    const fill = mixWithWhite(tokenHex('--primary-dark', '#2d6364'), heatPercent / 100);
+    return readableInk(fill, tokenHex('--gray-900', '#1c1917'));
+}
+
 // Application State (private)
 
 let allPapers = [];
@@ -145,6 +240,9 @@ window.EC = {
     catLabel: catLabel,
     download: download,
     paperStatus: paperStatus,
+    workItemHtml: workItemHtml,
+    workGroupsHtml: workGroupsHtml,
+    color: { hexRgb: hexRgb, contrastRatio: contrastRatio, mixWithWhite: mixWithWhite, readableInk: readableInk, tokenHex: tokenHex, inkOnHeat: inkOnHeat },
     CAT_COLORS: CAT_COLORS,
     categoryGroups: function() { return categoryGroups; },
     CATEGORIES: CATEGORIES,
