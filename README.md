@@ -24,16 +24,27 @@ Human reviewers screen in PRISM, the project's screening tool, with ten categori
 
 The repository is private. Full texts stay in it, and a local build turns them into the reading layer of PRISM. Editing in PRISM works only in a local clone served by its own server, which writes the reviewer files into that clone, so any current browser works and no folder needs to be chosen.
 
-On Windows, clone into a short path such as `C:\femprompt`, for example with GitHub Desktop, because some paths come close to the Windows path limit. Install Python 3.11 or later from python.org and make sure `python` does not resolve to the Microsoft Store alias (Settings, Apps, Advanced app settings, App execution aliases). Node.js 22 is needed for the build and tests.
+On Windows, clone into a short path such as `C:\femprompt`, for example with GitHub Desktop, because some paths come close to the Windows path limit. Install Python 3.11 or later from python.org and make sure `python` does not resolve to the Microsoft Store alias (Settings, Apps, Advanced app settings, App execution aliases).
+
+Reviewers need only Python. Install the build dependencies once, then start PRISM by double-clicking `start-prism.cmd` in the clone, or run the module it calls:
 
 ```sh
 python -m pip install -r requirements-build.txt
-npm ci
-npm run build
-python -X utf8 -m src.publish.serve
+python -X utf8 -m src.publish.start_prism
 ```
 
-`npm ci` installs the locked dependencies without rewriting `package-lock.json`, which `npm install` may do and which would then show as a change in GitHub Desktop. `npm run preview` starts the same server. PRISM then opens at http://127.0.0.1:8870/prisma.html and the working application at http://127.0.0.1:8870/index.html. Reviewers start from the PRISM section of the help page, `docs/help.html#prism`. Developers run `npm run check` after the build, and the full test setup is in [`knowledge/testing.md`](knowledge/testing.md).
+It builds the git-ignored reading layer, starts the local server and opens PRISM at http://127.0.0.1:8870/prisma.html. It changes no tracked file, so GitHub Desktop shows only the reviewer's own file after saving. Reviewers start from the PRISM section of the help page, `docs/help.html#prism`.
+
+Developers and the operator additionally need Node.js 22 and run the full build, which also regenerates tracked projections from every reviewer file:
+
+```sh
+npm ci
+npm run build
+npm run check
+npm run preview
+```
+
+`npm ci` installs the locked dependencies without rewriting `package-lock.json`. The working application opens at http://127.0.0.1:8870/index.html, and the full test setup is in [`knowledge/testing.md`](knowledge/testing.md).
 
 GitHub Pages currently serves `docs/` from `main` at https://chpollin.github.io/FemPrompt_SozArb/. The public result site, the Evidence Companion, is built into `build/site/`, and switching Pages to it is an open decision.
 

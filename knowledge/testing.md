@@ -119,13 +119,13 @@ The native browser permission dialogue for the File System Access API, which sin
 
 ## Partner acceptance run
 
-The run reproduces the workflow of the two domain reviewers in a fresh clone of the private repository, from the build to the reviewer file that GitHub Desktop would commit. It clones into a short directory outside the working tree, builds there, serves the clone with `python -X utf8 -m src.publish.serve --port <port>` and then runs
+The run reproduces the workflow of the two domain reviewers in a fresh clone of the private repository, from the start to the reviewer file that GitHub Desktop would commit. It clones into a short directory outside the working tree, starts PRISM there with `python -X utf8 -m src.publish.start_prism --port <port> --no-browser`, which builds the reading layer, and then runs
 
 ```sh
-node tests/browser/partner.mjs --clone C:	mpp-partner-<date> --base http://127.0.0.1:<port> --reviewer sabine
+node tests/browser/partner.mjs --clone C:\tmp\fp-partner-<date> --base http://127.0.0.1:<port> --reviewer sabine
 ```
 
-The script drives Chromium through the real build and the real server. It opens `prisma.html`, switches to `Bearbeiten`, chooses the reviewer by name, checks that the server is the working folder without a folder action, narrows the list to `Offen` and the reviewer's `Zuteilung`, pins one Paper Beleg from the in-text search, chooses an exclusion reason, saves with Ctrl+S and reads the reviewer file back from disk. Since ADR-047 the server writes the file, so nothing in the browser is stubbed, and the written paths are read from `git status` of the clone. The script never commits, pushes or deletes.
+The script drives Chromium, or Firefox or WebKit with `--browser`, through the real build and the real server. It opens the first assigned paper with a full text. It opens `prisma.html`, switches to `Bearbeiten`, chooses the reviewer by name, checks that the server is the working folder without a folder action, narrows the list to `Offen` and the reviewer's `Zuteilung`, pins one Paper Beleg from the in-text search, chooses an exclusion reason, saves with Ctrl+S and reads the reviewer file back from disk. Since ADR-047 the server writes the file, so nothing in the browser is stubbed, and the written paths are read from `git status` of the clone. The script never commits, pushes or deletes.
 
 ### Run of 1 October 2026
 
@@ -149,6 +149,24 @@ Clone of the branch with the provisional PRISM fixes of the same day, made from 
 The run of 1 October predates ADR-047 and stubbed the folder picker. The run of 2 October, in a fresh clone from GitHub with the ADR-047 changes copied in, passed every step without a stub. The same clone showed that `npm install` rewrites `package-lock.json` and with it the build manifest, which is why the setup now uses `npm ci`. Two observations of the first run concern the hand-over. A reviewer who builds on Windows sees the four drifted data files as changed in GitHub Desktop, and the safe action is to discard them, as [Clean-checkout verification](#clean-checkout-verification) describes. A pushed reviewer file is an input of the build manifest, so `npm run check` on `main` reports a stale build until the next `npm run build`, which is an integration step for the operator and not for the reviewers.
 
 What stays manual for the reviewers is starting the server, the commit and push in GitHub Desktop, and the visual and scholarly judgement of the assessment itself. The native folder picker remains only as the fallback for a static server, and `tests/manual-checklist.md` covers its permission dialogue.
+
+### Run of 2 October 2026
+
+A fresh clone from GitHub, moved onto the branch with ADR-047 and ADR-048, served as the test bed.
+
+| Check | Result |
+|---|---|
+| `npm ci`, full build | No tracked file changes |
+| Save as reviewer, then full build | Fourteen generated files change, which led to the reviewer start without the full build |
+| `start_prism`, save, `git status` | Only the reviewer's own file |
+| Partner run for both reviewers in Chromium, Firefox and WebKit | Pass |
+| All assigned open papers opened one by one | None blocked or failing. Some have only an abstract and many no paper text, see `generated/agent-screening-queue.json` and the work lists of the Korpus |
+| Two tabs, a newer record edited on disk, switching reviewer | Merged without loss |
+| Damaged reviewer file | Never overwritten, named as damaged |
+| Server stopped mid-session, restarted, reloaded | The record stays in the browser and is offered for writing |
+| Second start, occupied port | Opens the running PRISM, or names the occupied port |
+| Keyboard alone from reviewer choice to save | Pass, focus visible |
+| 1366 by 768 at 100 and 125 percent | Panel and save action visible after the compact header. Below about 900 pixels width the columns stack and the page scrolls |
 
 ## Independent acceptance review of the result site
 

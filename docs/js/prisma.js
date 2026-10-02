@@ -483,7 +483,7 @@ function save() {
             setSaveStatus('saved', 'Gespeichert in ' + reviewerPath(key) + '.');
         return true;
     }).catch(function(e) {
-        // the browser now holds records the file lacks; the disk action stays available
+        // the browser now holds records the file lacks; the save action stays available
         // to write them once the cause is resolved
         reviewerRecoveryPending[key] = true;
         if (state.reviewer === key && version === writeVersion)
@@ -656,7 +656,7 @@ function selectReviewer(key) {
     setSaveStatus(fileError ? 'error' : (recovery ? 'dirty' : (trialMode ? 'ready' : (screeningHandle ? 'ready' : 'local'))), fileError
         ? 'Bestehende Datei ' + reviewerPath(normalized) + ' wird nicht verändert: ' + fileError
         : (recovery
-            ? 'Neuere Browser-Änderungen wurden wiederhergestellt. Mit der Diskette in die Datei schreiben.'
+            ? 'Neuere Browser-Änderungen wurden wiederhergestellt. Mit „Speichern“ in die Datei schreiben.'
         : (trialMode
             ? 'Isolierter Testlauf bereit. Ergebnisse bleiben in diesem Browser-Ursprung.'
             : (screeningHandle
@@ -737,7 +737,7 @@ function resolveReviewerConflict(key, keep) {
     saveLocal();
     setSaveStatus(keep === 'disk' ? 'ready' : 'dirty', keep === 'disk'
         ? 'Dateistand übernommen.'
-        : 'Browserstand übernommen. Mit der Diskette in die Datei schreiben.');
+        : 'Browserstand übernommen. Mit „Speichern“ in die Datei schreiben.');
     return true;
 }
 
@@ -850,7 +850,7 @@ function setConnectedSaveStatus() {
         return;
     }
     if (state.reviewer && reviewerRecoveryPending[state.reviewer]) {
-        setSaveStatus('dirty', 'Neuere Browser-Änderungen wurden wiederhergestellt. Mit der Diskette in ' +
+        setSaveStatus('dirty', 'Neuere Browser-Änderungen wurden wiederhergestellt. Mit „Speichern“ in ' +
             reviewerPath(state.reviewer) + ' schreiben.');
         return;
     }
@@ -989,11 +989,21 @@ async function loadAllReviewers() {
             if (merged.recovered) recoveries[key] = true;
             if (merged.conflict) { errors[key] = merged.conflict; conflicts[key] = merged.conflictDetail; }
         } catch (e) {
-            errors[key] = e && e.message ? e.message : String(e);
+            // a parse error is what a reviewer meets after a Git conflict; the parser's
+            // own wording names a character position nobody can act on
+            errors[key] = e instanceof SyntaxError
+                ? 'Die Datei ist beschädigt, etwa durch einen Git-Konflikt. Bitte der Projektleitung melden, deine Bewertungen bleiben im Browser erhalten'
+                : (e && e.message ? e.message : String(e));
             console.warn('[PRISMA] could not read', entry.name, e);
         }
     }
     if (!canEdit()) return;
+    // records that only the browser holds for a key whose file does not exist yet, as after
+    // a first save that failed, are pending like a recovery, so the save action offers them
+    Object.keys(state.reviewers).forEach(function(k) {
+        if (found[k] || errors[k] || !isReviewerId(k) || reservedKey(k)) return;
+        if (Object.keys(state.reviewers[k] || {}).length) recoveries[k] = true;
+    });
     reviewerFileErrors = errors;
     reviewerConflicts = conflicts;
     reviewerRecoveryPending = recoveries;
@@ -1242,12 +1252,18 @@ function loadLocalServer() {
 // path uses, backed by the server, so that path runs unchanged.
 function serverFolderHandle(info) {
     const base = '/__prism/screening/';
+    // every request of the handle fails with one message a reviewer can act on
+    const request = function(url, options) {
+        return fetch(url, options).catch(function() {
+            throw new Error('Der lokale Server ist nicht erreichbar. Läuft das PRISM-Fenster noch?');
+        });
+    };
     function fileHandle(name) {
         return {
             kind: 'file',
             name: name,
             getFile: function() {
-                return fetch(base + encodeURIComponent(name), { cache: 'no-store' }).then(function(r) {
+                return request(base + encodeURIComponent(name), { cache: 'no-store' }).then(function(r) {
                     // an absent file reads as empty, which the readers treat as absent
                     if (r.status === 404) return '';
                     if (!r.ok) throw new Error(name + ' ist nicht lesbar (' + r.status + ').');
@@ -1259,12 +1275,12 @@ function serverFolderHandle(info) {
                 return Promise.resolve({
                     write: function(value) { body = String(value); return Promise.resolve(); },
                     close: function() {
-                        return fetch(base + encodeURIComponent(name), {
+                        return request(base + encodeURIComponent(name), {
                             method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: body
                         }).then(function(r) {
                             if (r.ok) return;
                             return r.text().then(function(message) { throw new Error(message || ('Server antwortet ' + r.status + '.')); });
-                        }, function() { throw new Error('Der lokale Server ist nicht erreichbar. Läuft das Terminalfenster noch?'); });
+                        });
                     }
                 });
             }
@@ -1276,7 +1292,7 @@ function serverFolderHandle(info) {
         server: true,
         getFileHandle: function(name) { return Promise.resolve(fileHandle(name)); },
         values: async function*() {
-            const r = await fetch(base, { cache: 'no-store' });
+            const r = await request(base, { cache: 'no-store' });
             if (!r.ok) throw new Error('Der Ordner docs/data/screening ist nicht lesbar.');
             const names = await r.json();
             for (const name of names) yield fileHandle(name);
@@ -1974,8 +1990,8 @@ window.initializePrisma = function() {
     applyLifecycleContract();
     applyWorkVersionContract();
     initialized = true;
-    // Ctrl+S (Cmd+S) saves in Bearbeiten: the disk action sits above the list, far from
-    // the assessment in the tab order, and the browser's own page save is never wanted here
+    // Ctrl+S (Cmd+S) saves in Bearbeiten from anywhere, and the browser's own page save
+    // is never wanted here
     if (!pageListenersBound) {
         pageListenersBound = true;
         window.addEventListener('popstate', restoreFromUrl);
@@ -2092,10 +2108,10 @@ function workspaceBarHtml() {
         html += '<div class="pt-wsbar-top"><div class="pt-mode-seg" role="group" aria-label="Arbeitsmodus">' +
             '<button class="pt-seg-btn pt-read-mode" id="pt-read-mode" type="button" aria-pressed="' + !canEdit() + '">Lesen</button>' +
             '<button class="pt-seg-btn pt-edit-mode" id="pt-edit-mode" type="button" aria-pressed="' + canEdit() +
-            '" title="Kürzel, Arbeitsordner, Bewertungen und Speichern. Ein ungespeicherter Entwurf bleibt beim Wechsel erhalten.">Bearbeiten</button>' +
+            '" title="Bewerten und speichern. Ein ungespeicherter Entwurf bleibt beim Wechsel erhalten.">Bearbeiten</button>' +
             '</div></div>';
     }
-    html += '<section class="pt-sync-inline" id="pt-data-inline" aria-label="Kürzel und Arbeitsordner"></section>';
+    html += '<section class="pt-sync-inline" id="pt-data-inline" aria-label="Bearbeitung"></section>';
     return html;
 }
 
@@ -3639,8 +3655,9 @@ function saveGate(p) {
     const mode = saveMode(p, subject);
     const reasons = draftReasons(p, subject, mode);
     // records held only in the browser (a restored recovery, a failed write) are written
-    // by the same disk action even when the open paper is unchanged
-    if (mode === 'none' && canEdit() && !trialMode && state.reviewer && reviewerRecoveryPending[state.reviewer]) {
+    // by the same save action while the open paper is unchanged, also when that paper
+    // has no record yet and its untouched draft would itself be incomplete
+    if ((mode === 'none' || !work.dirty) && canEdit() && !trialMode && state.reviewer && reviewerRecoveryPending[state.reviewer]) {
         const pending = storageReason();
         return { ok: !pending, mode: 'file', storage: pending, reasons: [], label: 'Ausstehende Änderungen in die Datei schreiben' };
     }

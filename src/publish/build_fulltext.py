@@ -17,6 +17,7 @@ import json
 import re
 import shutil
 import sys
+import time
 import unicodedata
 from collections import Counter
 from difflib import SequenceMatcher
@@ -806,6 +807,20 @@ def resolve_docling(
     return (None, "mismatch") if explicit_mismatch else (None, None)
 
 
+def _replace(source: Path, target: Path, attempts: int = 10) -> None:
+    """Rename with a short retry. On Windows an indexer, virus scanner or the running
+    preview server can hold a file in the folder for a moment, and the rename then fails
+    with access denied although nothing is wrong."""
+    for attempt in range(attempts):
+        try:
+            source.replace(target)
+            return
+        except PermissionError:
+            if attempt == attempts - 1:
+                raise
+            time.sleep(0.3)
+
+
 def _publish_staged(stage_assets: Path, stage_manifest: Path) -> None:
     """Replace assets and manifest together, restoring the previous build on failure."""
     backup_assets = stage_assets.parent / "previous-fulltext"
@@ -815,9 +830,9 @@ def _publish_staged(stage_assets: Path, stage_manifest: Path) -> None:
     moved_assets = installed_assets = moved_manifest = installed_manifest = False
     try:
         if had_assets:
-            OUT_DIR.replace(backup_assets)
+            _replace(OUT_DIR, backup_assets)
             moved_assets = True
-        stage_assets.replace(OUT_DIR)
+        _replace(stage_assets, OUT_DIR)
         installed_assets = True
         if had_manifest:
             MANIFEST.replace(backup_manifest)
@@ -828,7 +843,7 @@ def _publish_staged(stage_assets: Path, stage_manifest: Path) -> None:
         if installed_assets and OUT_DIR.exists():
             shutil.rmtree(OUT_DIR)
         if moved_assets and backup_assets.exists():
-            backup_assets.replace(OUT_DIR)
+            _replace(backup_assets, OUT_DIR)
         if installed_manifest and MANIFEST.exists():
             MANIFEST.unlink()
         if moved_manifest and backup_manifest.exists():

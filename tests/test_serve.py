@@ -5,7 +5,7 @@ from http.server import ThreadingHTTPServer
 
 import pytest
 
-from src.publish.serve import Handler
+from src.publish.serve import ExclusiveServer, Handler
 
 VALID = {"schema": "femprompt-prisma-reviewer/0.5", "reviewer": "sabine", "actor": "human", "decisions": {}}
 
@@ -81,3 +81,12 @@ def test_clone_info_and_marker_header(server):
     assert status == 200 and marker == "1"
     status, _, body = request(httpd, "GET", "/__prism/clone")
     assert status == 200 and json.loads(body)["reviewers"] == ["sabine", "susi"]
+
+
+def test_a_second_server_cannot_bind_the_same_port():
+    first = ExclusiveServer(("127.0.0.1", 0), Handler)
+    try:
+        with pytest.raises(OSError):
+            ExclusiveServer(("127.0.0.1", first.server_address[1]), Handler)
+    finally:
+        first.server_close()

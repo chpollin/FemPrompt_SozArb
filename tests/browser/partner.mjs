@@ -8,21 +8,22 @@
 // which writes the reviewer file into the clone itself, so no folder picker or browser
 // permission is involved. Writes are read from `git status` of the clone. The script never
 // commits, pushes or deletes anything.
-import { chromium } from 'playwright';
+import { chromium, firefox, webkit } from 'playwright';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve, join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const args = process.argv.slice(2);
-const opt = { clone: null, base: null, reviewer: 'sabine', out: null };
+const opt = { clone: null, base: null, reviewer: 'sabine', out: null, browser: 'chromium' };
 for (let i = 0; i < args.length; i++) {
   if (args[i] === '--clone') opt.clone = args[++i];
   else if (args[i] === '--base') opt.base = args[++i];
   else if (args[i] === '--reviewer') opt.reviewer = args[++i];
   else if (args[i] === '--out') opt.out = args[++i];
+  else if (args[i] === '--browser') opt.browser = args[++i];
 }
-if (!opt.clone || !opt.base) { console.error('usage: --clone <path> --base <url> [--reviewer key] [--out dir]'); process.exit(2); }
+if (!opt.clone || !opt.base) { console.error('usage: --clone <path> --base <url> [--reviewer key] [--out dir] [--browser chromium|firefox|webkit]'); process.exit(2); }
 const root = resolve(opt.clone);
 const outDir = resolve(opt.out || join(dirname(fileURLToPath(import.meta.url)), 'out', 'partner'));
 mkdirSync(outDir, { recursive: true });
@@ -39,7 +40,8 @@ function check(name, ok, detail) {
   console.log((ok ? 'ok   ' : 'FAIL ') + name + (!ok && detail !== undefined ? '  >> ' + JSON.stringify(detail).slice(0, 600) : ''));
 }
 
-const browser = await chromium.launch();
+// saving goes through the local server, so any engine can run the reviewer path
+const browser = await ({ chromium, firefox, webkit })[opt.browser].launch();
 const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, locale: 'de-AT' });
 const page = await context.newPage();
 const errors = [];
@@ -66,8 +68,13 @@ try {
 
   await page.click('.pt-status-seg [data-status="offen"]');
   await page.click(`.pt-assignee-seg [data-assignee="${key}"]`);
-  await page.click('#pt-corpus-list .pt-nav-item');
-  await page.waitForFunction(() => !window.__PRISMA_TEST__.readingPending() && document.querySelector('#pt-assess-col .pt-dim'), null, { timeout: 15000 });
+  // the first assigned paper with a full text, since a Paper Beleg needs a text to search
+  const items = await page.$$eval('#pt-corpus-list .pt-nav-item', (els) => els.length);
+  for (let i = 0; i < items; i++) {
+    await page.click(`#pt-corpus-list .pt-nav-item >> nth=${i}`);
+    await page.waitForFunction(() => !window.__PRISMA_TEST__.readingPending() && document.querySelector('#pt-assess-col .pt-dim'), null, { timeout: 15000 });
+    if (await page.evaluate(() => window.__PRISMA_TEST__.textSource() === 'raw')) break;
+  }
   paperId = await page.evaluate(() => window.EC.getAllPapers()[window.__PRISMA_TEST__.getState().index].id);
   const assigned = JSON.parse(readFileSync(join(root, 'docs/data/screening/assignment.json'), 'utf8')).assignments[paperId];
   check('4 list: Offen plus Zuteilung opens a paper assigned to the reviewer', assigned === key, { paperId, assigned });
@@ -84,7 +91,7 @@ try {
 
   // one Paper Beleg from the in-text search, then an exclusion reason, then the disk action
   const term = await page.evaluate(() => {
-    const words = (document.getElementById('pt-doc').textContent.match(/[A-Za-z]{7,}/g) || []);
+    const words = (document.getElementById('pt-doc').innerText.match(/[A-Za-z]{7,}/g) || []);
     return words[Math.min(5, words.length - 1)] || null;
   });
   await page.fill('#pt-intext', term);

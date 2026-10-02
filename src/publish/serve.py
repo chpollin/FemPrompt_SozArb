@@ -91,6 +91,12 @@ def write_reviewer_file(repo: Path, name: str, body: bytes) -> None:
     os.replace(temp, target)
 
 
+class ExclusiveServer(ThreadingHTTPServer):
+    # HTTPServer sets SO_REUSEADDR, which on Windows lets a second server bind a port
+    # that is already in use, so two clones would answer on one address at random.
+    allow_reuse_address = False
+
+
 class Handler(BaseHTTPRequestHandler):
     repo = ROOT
 
@@ -197,7 +203,11 @@ def main(argv=None):
     print(f"PRISM: http://127.0.0.1:{args.port}/prisma.html", flush=True)
     print(f"Optional generated export: http://127.0.0.1:{args.port}/results/index.html", flush=True)
     print(f"Reviewer files are written to {ROOT / SCREENING}", flush=True)
-    ThreadingHTTPServer(("127.0.0.1", args.port), Handler).serve_forever()
+    try:
+        server = ExclusiveServer(("127.0.0.1", args.port), Handler)
+    except OSError:
+        parser.error(f"Port {args.port} is in use. Stop the other server or pass --port.")
+    server.serve_forever()
 
 
 if __name__ == "__main__":

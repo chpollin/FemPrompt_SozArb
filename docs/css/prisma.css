@@ -66,6 +66,15 @@ body.pt-fullscreen {
   display: flex; flex-direction: column; height: 100vh; height: 100dvh; overflow: hidden;
 }
 body.pt-fullscreen > header { flex: none; }
+/* The workspace is read for hours on laptop screens, so its shared header keeps title and
+   navigation on one compact row and leaves subtitle and authors to the other pages. */
+body.pt-fullscreen > header { padding-top: 0.5rem; }
+body.pt-fullscreen > header::after { margin-top: 0.5rem; }
+body.pt-fullscreen .header-top { display: flex; align-items: center; gap: 1rem; }
+body.pt-fullscreen .header-brand h1 { margin: 0; font-size: 1.35rem; white-space: nowrap; }
+body.pt-fullscreen .header-brand .subtitle,
+body.pt-fullscreen .header-brand .header-authors { display: none; }
+body.pt-fullscreen .header-nav { flex-wrap: wrap; justify-content: flex-end; margin-top: 0; }
 body.pt-fullscreen *, body.pt-fullscreen *::before, body.pt-fullscreen *::after { box-sizing: border-box; }
 /* every [hidden] element stays hidden, whatever display rule a component sets */
 body.pt-fullscreen [hidden] { display: none !important; }

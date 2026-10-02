@@ -202,5 +202,27 @@ export async function runIntegrityChecks(root) {
       !T.reviewerFileErrors().assignment && !T.getState().reviewers.assignment, T.reviewerFileErrors());
     check('assignment: its name cannot become a reviewer key', T.selectReviewer('assignment') === false);
   }
+
+  // 6. A first save that failed leaves records only in the browser. With no file on disk
+  // they are pending, and the save action writes them beside an untouched open paper.
+  {
+    const { T } = tool(root, corpus);
+    const folder = memoryFolder({ 'ar2.json': ar2Text });
+    T.setScreeningHandle(folder);
+    T.selectReviewer('bo');
+    const held = corpus.find((p) => !(p.human && p.human.decision));
+    T.getState().reviewers.bo = { [held.id]: { decision: 'Exclude', reason: 'Duplicate', categories: {}, evidence: {}, ts: '2026-10-02T10:00:00.000Z', reviewer: 'bo', actor: 'human' } };
+    await T.loadAllReviewers();
+    const other = corpus.findIndex((p) => p !== held && !(p.human && p.human.decision));
+    T.getState().index = other;
+    T.resetWork(corpus[other]);
+    const gate = T.saveGate(corpus[other]);
+    check('pending: browser-only records without a file are flagged and offered beside an untouched paper',
+      T.reviewerRecoveryPending().bo === true && gate.ok && gate.mode === 'file', { pending: T.reviewerRecoveryPending(), gate });
+    await T.save();
+    await settle(T);
+    const written = folder.files['bo.json'] ? JSON.parse(folder.files['bo.json']).decisions : {};
+    check('pending: the save action writes them into the new file', !!written[held.id], Object.keys(written));
+  }
   return checks;
 }

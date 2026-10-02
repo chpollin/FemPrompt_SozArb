@@ -175,6 +175,7 @@ The accepted scope is defined in [[governance#Verification scope decision, 22 Se
 
 - Confirm the native Chromium directory-permission path in a disposable clone. Since ADR-047 it is only the fallback for a static server, and the operator's own test of 2 October 2026 connected a clone through it.
 - Exercise the setup path of the README with a person who did not build PRISM before, on a fresh Windows clone, and correct the documentation where it fails.
+- Update three checks of `tests/browser/companion.mjs` that fail on `main` as well: two still expect the codebook 1.4 fields and the conceptual-grounding page to be uncoded, which the coding run of 2 October 2026 changed, and one expects a form for the open decision mark in the Korpus track. `npm run check` does not run this suite.
 
 ## Waiting on the project owner
 
@@ -223,6 +224,7 @@ The numbers are referenced from the steps above. The status column states how fa
 | 18 | Final scholarly release of verified research records and outputs | Open. The preliminary AI-source-reviewed release is authorised | Person-attributed publication approval |
 | 19 | Final submission package | Open | Approval of manuscript, supplement, disclosures and venue requirements |
 | 20 | Whether PRISM drops the analysis-coding step that it still required of a human reviewer on an Include (FR-14 in [[specification]]) | Taken on 1 October 2026. PRISM has no human analysis step (ADR-045) | None |
+| 21 | Whether the assigned open papers without paper text are acquired before the reviewers reach them, or screened on their metadata and excluded as Kein Volltext, which ADR-048 makes a formal exclusion. A sweep of 2 October 2026 found a substantial share of both reviewers' lists without paper text and some with only an abstract ([[testing#Run of 2 October 2026]]) | Open | Operator decision before the screening sessions |
 
 ### Decisions taken
 

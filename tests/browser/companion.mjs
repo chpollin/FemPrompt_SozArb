@@ -1174,7 +1174,7 @@ try {
     const contested = pick((p) => decisionOf(p) === 'Include');
     const bind = (p) => ({ work_id: p.work_id, version_id: p.version_id });
     const fileA = { schema: 'femprompt-prisma-reviewer/0.5', reviewer: revA, actor: 'human', updated: '2026-10-02T12:00:00.000Z', decisions: {
-      [codedOpen.id]: { ...bind(codedOpen), decision: 'Include', categories: { Gender: 2, Soziale_Arbeit: 1, Prompting: 0 }, ts: '2026-10-02T10:00:00.000Z', actor: 'human' },
+      [codedOpen.id]: { ...bind(codedOpen), decision: 'Include', categories: { Gender: 2, Soziale_Arbeit: 1, Prompting: 0, Fairness: 2 }, evidence_basis: { Fairness: 'formal_exclusion' }, ts: '2026-10-02T10:00:00.000Z', actor: 'human' },
       [openA.id]: { ...bind(openA), decision: 'Include', ts: '2026-10-02T10:01:00.000Z', actor: 'human' },
       [unclearA.id]: { ...bind(unclearA), decision: 'Unclear', ts: '2026-10-02T10:02:00.000Z', actor: 'human' },
       [badDecision.id]: { ...bind(badDecision), decision: 'Maybe', ts: '2026-10-02T10:03:00.000Z', actor: 'human' },
@@ -1210,7 +1210,7 @@ try {
     check('a reviewer record overrides the expert decision, the newer record wins, invalid records are skipped',
       decided.join() === 'include,include,unclear,open,open,include,include', decided.join());
     const recordCats = await reviewed.evaluate((id) => window.EC.korpusStages.humanCategories({ id, benchmark: {} }), codedOpen.id);
-    check('a reviewer record supplies the categories of its work at teilweise and ja',
+    check('a reviewer record supplies the categories of its work at teilweise and ja, without those of a formal exclusion (ADR-048)',
       JSON.stringify((recordCats || []).sort()) === JSON.stringify(['Gender', 'Soziale_Arbeit']), JSON.stringify(recordCats));
     const unclearForm = await reviewed.evaluate((paper) => {
       const box = document.createElement('div');

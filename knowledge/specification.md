@@ -932,7 +932,11 @@ Decision.
 
 Rationale. The server removes the only setup step a reviewer can get wrong and the only browser restriction, and the endpoint stays narrower than the File System Access permission it replaces, which granted the page the whole chosen folder. Placing the save action and its state beside the assessment keeps the decision, its missing preconditions and its persistence in one place.
 
-Effect. `src/publish/serve.py`, `loadLocalServer`, `serverFolderHandle`, `connectLocalServer`, `reviewerChoiceHtml`, `saveButtonHtml` and `dockHtml` in `docs/js/prisma.js`. `tests/test_serve.py` checks the accepted and refused writes, `tests/browser/partner.mjs` runs the reviewer path against the real server and `git status` of the clone, and `tests/browser/pilot.mjs` checks the dock save action.
+6. Reviewers start PRISM with `start-prism.cmd` or `src/publish/start_prism.py`, which builds only the git-ignored reading layer, binds the port exclusively and opens the browser. The full build regenerates tracked projections from every reviewer file and stays the operator's integration step, so a reviewer's working tree shows only the own reviewer file. A second start opens the running PRISM of the same clone. Both servers bind exclusively, because Python's default address reuse lets a second process bind an occupied port on Windows.
+7. Records that only the browser holds for a reviewer without a file, as after a first save that failed, count as pending, and the save action writes them while the open paper is unchanged. A file that does not parse, the usual result of a Git conflict, is named as damaged and never overwritten.
+8. The Korpus view leaves out the categories that carry the basis `formal_exclusion` (ADR-048).
+
+Effect. `src/publish/serve.py`, `src/publish/start_prism.py`, `start-prism.cmd`, `loadLocalServer`, `serverFolderHandle`, `connectLocalServer`, `reviewerChoiceHtml`, `saveButtonHtml` and `dockHtml` in `docs/js/prisma.js`, and `addReviewerFile` in `docs/js/korpus-stages.js`. The PRISM page keeps title and navigation of the shared header on one compact row through `docs/css/prisma.css`. `tests/test_serve.py` checks the accepted and refused writes, `tests/browser/partner.mjs` runs the reviewer path against the real server and `git status` of the clone, and `tests/browser/pilot.mjs` checks the dock save action.
 
 ### ADR-048 A formal exclusion needs no Paper Beleg for its categories (refines ADR-042, decision 4)
 

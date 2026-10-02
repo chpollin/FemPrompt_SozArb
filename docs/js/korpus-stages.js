@@ -144,7 +144,10 @@ function addReviewerFile(key, file) {
         const known = humanRecord[pid];
         // Two reviewers on one paper: the later record is the current assessment.
         if (known && known.ts >= ts) return;
-        humanRecord[pid] = { decision: rec.decision, categories: assignedCategories(rec.categories), ts: ts, reviewer: key };
+        // categories set on a formal exclusion were not judged on the content (ADR-048)
+        const basis = rec.evidence_basis || {};
+        const judged = assignedCategories(rec.categories).filter(function (cat) { return basis[cat] !== 'formal_exclusion'; });
+        humanRecord[pid] = { decision: rec.decision, categories: judged, ts: ts, reviewer: key };
     });
 }
 
