@@ -1,6 +1,6 @@
 # Completion package
 
-Source fingerprint: `sha256:01e21fd6e159e042c596097d236cb5fe019e303c78223c3c54d43016154ca101`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:4a0bcbc5beed6a3bd332c75cb043bd3a41e5805f90aaf4e686ac6a7b71825f0f`. Deterministic internal preparation; no approval is created.
 
 Scope: existing corpus plus all already identified 2026 candidates (search cutoff 2026-08-24) and the separate targeted gap-fill intake from 2026-09-05. Candidate membership does not imply inclusion. New search should address a concrete evidence gap with excellent sources.
 
@@ -13,7 +13,7 @@ Scope: existing corpus plus all already identified 2026 candidates (search cutof
 | Works with recorded AI-review records | 141 |
 | Works with decision or coding conflicts | 29 |
 | Works with an unresolved negative AI source review | 1 |
-| Records using an accepted immutable AI correction | 9 |
+| Records using an accepted immutable AI correction | 2 |
 | Historical human records missing canonical identity binding | 1 |
 | Historical human records reconciled to existing Works | 0 |
 | Works under a confirmed integrity hold | 2 |

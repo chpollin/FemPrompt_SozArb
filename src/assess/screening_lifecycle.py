@@ -7,7 +7,12 @@ agent track to schema 0.5 without altering its input file.
 
 Usage:
     python -m src.assess.screening_lifecycle validate path/to/track.json
-    python -m src.assess.screening_lifecycle migrate input.json output-0.5.json
+    python -m src.assess.screening_lifecycle migrate input.json output-0.5.json [--base track.json]
+
+A product whose review context names ``recodes`` replaces the active annotation of
+existing productive records. Migration then needs the productive track as
+``--base`` and appends an ``ai_agent_recode`` annotation and event to the exact
+record the run manifest binds (ADR-046).
 
 The contract was aligned to the frozen PRISM publisher surface on 2026-08-23.
 Missing historical prompt, model, and reviewer identity data stay explicit as
@@ -24,6 +29,12 @@ import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+
+try:
+    from src.assess.artifact_verification import record_hash
+except ModuleNotFoundError:
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+    from src.assess.artifact_verification import record_hash
 
 
 SCHEMA_V03 = "femprompt-prisma-reviewer/0.3"
@@ -57,6 +68,13 @@ NON_TRANSITIONS = {
 VERIFICATION_RESULTS = frozenset(CONTRACT["verification_results"])
 CHECK_STATUSES = frozenset(CONTRACT["check_statuses"])
 CHECK_TYPES = frozenset(CONTRACT["check_types"])
+# An annotation without a recorded codebook version counts as 1.3 (update protocol).
+BASELINE_CODEBOOK_VERSION = "1.3"
+GOVERNANCE_FIELDS = frozenset(
+    ("provenance", "annotations", "active_annotation_id", "checks", "lifecycle")
+)
+# Events by persons. A record carrying one is never recoded by an agent run.
+HUMAN_AUTHORITY_EVENTS = frozenset(("domain_expert_verification", "publication_approval"))
 ANNOTATION_BODY_FIELDS = (
     "categories",
     "decision",
@@ -297,6 +315,7 @@ def _validate_annotations(
         if annotation_type not in (
             "screening_decision",
             "domain_expert_correction",
+            "ai_agent_recode",
         ):
             errors.append(
                 f"{item_location}.annotation_type: unsupported value {annotation_type!r}"
@@ -339,6 +358,10 @@ def _validate_annotations(
                 errors.append(
                     f"{item_location}.changes: every change needs path, before, and after"
                 )
+        if annotation_type == "ai_agent_recode":
+            _validate_recode_annotation(
+                annotation, previous_annotation_id, actor_index, item_location, errors
+            )
         previous_annotation_id = annotation_id
 
     active_id = record.get("active_annotation_id")
@@ -356,6 +379,48 @@ def _validate_annotations(
             f"{paper_id}.active_annotation_id: active body differs from record projection"
         )
     return annotation_index
+
+
+def _validate_recode_annotation(
+    annotation: dict[str, Any],
+    previous_annotation_id: str | None,
+    actor_index: dict[str, dict[str, Any]],
+    location: str,
+    errors: list[str],
+) -> None:
+    supersedes = annotation.get("supersedes")
+    if not _nonempty_string(supersedes) or supersedes != previous_annotation_id:
+        errors.append(f"{location}.supersedes: must reference the preceding annotation")
+    actor_ids = annotation.get("actor_ids")
+    if isinstance(actor_ids, list) and not _has_role(
+        [actor_id for actor_id in actor_ids if actor_id in actor_index],
+        actor_index,
+        "screening",
+        "ai_agent",
+    ):
+        errors.append(f"{location}: recode requires ai_agent screening actors")
+    if not _nonempty_string(annotation.get("reason")):
+        errors.append(f"{location}.reason: recode reason is required")
+    version = annotation.get("codebook_version")
+    if not _nonempty_string(version):
+        errors.append(f"{location}.codebook_version: recode codebook version is required")
+    body = annotation.get("body")
+    coded = (
+        body.get("analysis", {}).get("codebook_version")
+        if _is_mapping(body) and _is_mapping(body.get("analysis"))
+        else None
+    )
+    if coded is not None and coded != version:
+        errors.append(f"{location}.codebook_version: differs from the body analysis")
+    digest = str(annotation.get("supersedes_record_sha256") or "")
+    if not (
+        digest.startswith("sha256:")
+        and len(digest) == 71
+        and all(char in "0123456789abcdef" for char in digest[7:])
+    ):
+        errors.append(
+            f"{location}.supersedes_record_sha256: canonical hash of the superseded record required"
+        )
 
 
 def _validate_checks(
@@ -462,6 +527,7 @@ def _validate_lifecycle(
         return
     previous_state = baseline_state
     correction_event_ids: set[str] = set()
+    recode_event_ids: set[str] = set()
     for index, event in enumerate(events):
         event_location = f"{location}.events[{index}]"
         if not _is_mapping(event):
@@ -493,6 +559,8 @@ def _validate_lifecycle(
             )
             continue
         rule = transition or non_transition
+        if transition is None and target != previous_state:
+            errors.append(f"{event_location}.to: a non-transition event keeps the state")
         if event_type != rule["event_type"]:
             errors.append(
                 f"{event_location}.event_type: expected {rule['event_type']!r}"
@@ -539,6 +607,14 @@ def _validate_lifecycle(
                 )
             else:
                 correction_event_ids.add(annotation_id)
+        elif event_type == "ai_agent_recode":
+            annotation = annotation_index.get(annotation_id)
+            if annotation is None or annotation.get("annotation_type") != "ai_agent_recode":
+                errors.append(
+                    f"{event_location}.annotation_id: recode event requires a recode annotation"
+                )
+            else:
+                recode_event_ids.add(annotation_id)
         elif annotation_id is not None and annotation_id not in annotation_index:
             errors.append(f"{event_location}.annotation_id: unknown annotation")
         if target in ("verified", "publication-approved") and (
@@ -560,6 +636,13 @@ def _validate_lifecycle(
         ):
             errors.append(
                 f"{location}: correction annotation {annotation_id!r} has no corrected_and_accepted event"
+            )
+        if (
+            annotation.get("annotation_type") == "ai_agent_recode"
+            and annotation_id not in recode_event_ids
+        ):
+            errors.append(
+                f"{location}: recode annotation {annotation_id!r} has no ai_agent_recode event"
             )
 
 
@@ -923,10 +1006,137 @@ def add_validation_receipts(document: dict[str, Any], checked_at: str) -> None:
         )
 
 
-def migrate_v03_document(
-    source: dict[str, Any], checked_at: str | None = None
+def recode_refusal(record: Any) -> str | None:
+    """Return why an agent run may not recode this productive record, else None."""
+    if not _is_mapping(record) or record.get("actor") != "agent":
+        return "it is not an agent record"
+    lifecycle = record.get("lifecycle")
+    if not _is_mapping(lifecycle) or lifecycle.get("state") != "ai-agent-reviewed":
+        state = lifecycle.get("state") if _is_mapping(lifecycle) else None
+        return f"its state {state!r} is not ai-agent-reviewed"
+    if any(
+        _is_mapping(event) and event.get("event_type") in HUMAN_AUTHORITY_EVENTS
+        for event in lifecycle.get("events", [])
+    ):
+        return "it carries a domain-expert verification or publication event"
+    return None
+
+
+def active_codebook_version(record: dict[str, Any]) -> str:
+    """Codebook version of the active annotation, 1.3 where none is recorded."""
+    active = next(
+        (
+            item
+            for item in record.get("annotations", [])
+            if _is_mapping(item)
+            and item.get("annotation_id") == record.get("active_annotation_id")
+        ),
+        {},
+    )
+    analysis = active.get("body", {}).get("analysis")
+    version = analysis.get("codebook_version") if _is_mapping(analysis) else None
+    return str(version or BASELINE_CODEBOOK_VERSION)
+
+
+def _recode_record(
+    existing: dict[str, Any],
+    fresh: dict[str, Any],
+    binding: Any,
+    *,
+    paper_id: str,
+    reviewer: str,
+    run_id: str,
+    codebook_version: str,
+    timestamp: str,
 ) -> dict[str, Any]:
-    """Project a 0.3 agent reviewer file to the nested 0.5 contract."""
+    """Append the fresh coding as a superseding agent annotation to the exact record.
+
+    A full recode, never a field-wise patch: the projection is the complete new
+    coding, and earlier annotations, activities, checks and events stay as history.
+    """
+    refusal = recode_refusal(existing)
+    if refusal:
+        raise ValueError(f"{paper_id}: refusing to recode, {refusal}")
+    if not _is_mapping(binding) or binding.get("annotation_id") != existing.get(
+        "active_annotation_id"
+    ):
+        raise ValueError(f"{paper_id}: recode binding does not name the active annotation")
+    previous_hash = record_hash(existing)
+    if f"sha256:{binding.get('record_sha256')}" != previous_hash:
+        raise ValueError(f"{paper_id}: recode binding does not match the current record")
+    record = {
+        key: copy.deepcopy(value)
+        for key, value in fresh.items()
+        if key not in GOVERNANCE_FIELDS
+    }
+    provenance = copy.deepcopy(existing["provenance"])
+    known_actors = {actor["id"]: actor for actor in provenance["actors"]}
+    for actor in fresh["provenance"]["actors"]:
+        if actor["id"] not in known_actors:
+            provenance["actors"].append(copy.deepcopy(actor))
+        elif known_actors[actor["id"]] != actor:
+            raise ValueError(f"{paper_id}: recode actor {actor['id']!r} differs from history")
+    screening, review = (copy.deepcopy(item) for item in fresh["provenance"]["activities"])
+    screening["id"] = f"{paper_id}:{run_id}:agent-recode"
+    review["id"] = f"{paper_id}:{run_id}:ai-agent-review"
+    provenance["activities"].extend((screening, review))
+    for key in ("used_sources", "derived_from"):
+        for reference in fresh["provenance"][key]:
+            entry = {**copy.deepcopy(reference), "id": f"{run_id}:{reference['id']}"}
+            if entry not in provenance[key]:
+                provenance[key].append(entry)
+    annotation_id = f"{reviewer}:{paper_id}:{run_id}"
+    provenance["annotation_id"] = annotation_id
+    provenance["annotation_type"] = "ai_agent_recode"
+    record["provenance"] = provenance
+    record["annotations"] = [
+        *copy.deepcopy(existing["annotations"]),
+        {
+            "annotation_id": annotation_id,
+            "annotation_type": "ai_agent_recode",
+            "at": timestamp,
+            "actor_ids": list(screening["associated_actor_ids"]),
+            "body": annotation_body(record),
+            "supersedes": existing["active_annotation_id"],
+            "supersedes_record_sha256": previous_hash,
+            "codebook_version": codebook_version,
+            "reason": (
+                f"Complete recode under codebook {codebook_version} of the annotation "
+                f"coded under codebook {active_codebook_version(existing)}, so that one "
+                "annotation carries one codebook version."
+            ),
+        },
+    ]
+    record["active_annotation_id"] = annotation_id
+    record["checks"] = copy.deepcopy(existing.get("checks", []))
+    lifecycle = copy.deepcopy(existing["lifecycle"])
+    lifecycle["events"].append(
+        {
+            "event_id": f"{paper_id}:{run_id}:ai-agent-recode",
+            "event_type": "ai_agent_recode",
+            "from": "ai-agent-reviewed",
+            "to": "ai-agent-reviewed",
+            "at": timestamp,
+            "activity_id": review["id"],
+            "actor_ids": list(review["associated_actor_ids"]),
+            "result": "accepted",
+            "annotation_id": annotation_id,
+        }
+    )
+    record["lifecycle"] = lifecycle
+    return record
+
+
+def migrate_v03_document(
+    source: dict[str, Any],
+    checked_at: str | None = None,
+    base: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Project a 0.3 agent reviewer file to the nested 0.5 contract.
+
+    Records named in ``review_context.recodes`` are appended as recodes to the
+    matching record of ``base``, the productive track.
+    """
     if not _is_mapping(source) or source.get("schema") not in {SCHEMA_V03, SCHEMA_V04}:
         raise ValueError(
             f"Migration requires a {SCHEMA_V03} or {SCHEMA_V04} JSON object"
@@ -953,6 +1163,13 @@ def migrate_v03_document(
     ai_review_model = _recorded_ai_review_capture(source, "model")
     curator = _curation_actor(source)
     ai_agent_reviewer = _ai_review_actor(source, ai_review_model)
+    recodes = _review_context(source).get("recodes") or {}
+    if not _is_mapping(recodes) or set(recodes) - set(decisions):
+        raise ValueError("review_context.recodes must name records of this product")
+    if recodes and not (_is_mapping(base) and _is_mapping(base.get("decisions"))):
+        raise ValueError("A recode product needs the productive track as base")
+    manifest = (_run_manifest(source) or {}) if recodes else {}
+    run_codebook = manifest.get("codebook", {}).get("version")
     for paper_id in sorted(decisions):
         record = copy.deepcopy(decisions[paper_id])
         if not _is_mapping(record):
@@ -1036,6 +1253,22 @@ def migrate_v03_document(
                 },
             ],
         }
+        if paper_id in recodes:
+            existing = base["decisions"].get(paper_id)
+            if existing is None:
+                raise ValueError(f"{paper_id}: recode target is absent from the base track")
+            if not _nonempty_string(run_codebook):
+                raise ValueError("A recode needs the codebook version of its run manifest")
+            record = _recode_record(
+                existing,
+                record,
+                recodes[paper_id],
+                paper_id=paper_id,
+                reviewer=reviewer,
+                run_id=run_id,
+                codebook_version=run_codebook,
+                timestamp=timestamp,
+            )
         migrated["decisions"][paper_id] = record
     if checked_at is not None:
         timestamp_errors: list[str] = []
@@ -1078,6 +1311,11 @@ def main(argv: list[str] | None = None) -> int:
     migrate_parser.add_argument("input", type=Path)
     migrate_parser.add_argument("output", type=Path)
     migrate_parser.add_argument(
+        "--base",
+        type=Path,
+        help="productive track whose records a recode product supersedes",
+    )
+    migrate_parser.add_argument(
         "--checked-at",
         help="append passed lifecycle-contract receipts at this ISO-8601 timestamp",
     )
@@ -1090,7 +1328,11 @@ def main(argv: list[str] | None = None) -> int:
         else:
             _write_json(
                 args.output,
-                migrate_v03_document(document, checked_at=args.checked_at),
+                migrate_v03_document(
+                    document,
+                    checked_at=args.checked_at,
+                    base=_read_json(args.base) if args.base else None,
+                ),
             )
             print(f"OK: wrote {args.output}")
     except (FileNotFoundError, ValueError) as error:

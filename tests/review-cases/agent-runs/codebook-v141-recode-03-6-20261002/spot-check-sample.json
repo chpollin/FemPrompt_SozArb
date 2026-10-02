@@ -1,0 +1,40 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-recode-03-6-20261002",
+  "status": "proposed",
+  "seed": 20261005,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "2EBHMYU4"
+  ],
+  "disagreeing_works": [
+    "7FBB2KUC",
+    "A2P8MXMY",
+    "AHUSFEEA",
+    "INQNDHTI"
+  ],
+  "drawn": [
+    "2EBHMYU4",
+    "7FBB2KUC",
+    "A2P8MXMY",
+    "AHUSFEEA",
+    "INQNDHTI"
+  ],
+  "flagged_additions": [
+    "4ZL5Q48E"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "4ZL5Q48E": "whether worker-management power asymmetry counts as social inequality decides the Include, tracks split",
+    "AHUSFEEA": "publication type of a project toolkit without authors or DOI"
+  },
+  "track_agreement_sha256": "1529fe0097e96910b403ebfc1b7da2d0a6d3924e82cd05d3220be30b538dbd2f"
+}

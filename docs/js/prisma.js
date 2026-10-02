@@ -3489,7 +3489,9 @@ function provenanceHtml(record) {
     h += '<p class="pt-provenance-label">Quellen</p>' + verificationRefList(provenance.used_sources, 'Keine Quellenprovenienz');
     h += '<p class="pt-provenance-label">Abgeleitet aus</p>' + verificationRefList(provenance.derived_from, 'Keine abgeleiteten Artefakte');
     h += '<p class="pt-provenance-label">Annotationen</p><ol class="pt-verify-refs">' + view.annotations.map(function(annotation) {
-        return '<li>' + verificationValue(annotation.annotation_id) + (annotation.supersedes ? ', ersetzt ' + EC.escapeHtml(annotation.supersedes) : '') +
+        const recode = annotation.annotation_type === 'ai_agent_recode'
+            ? ', KI-Neukodierung' + (annotation.codebook_version ? ' nach Codebuch ' + EC.escapeHtml(annotation.codebook_version) : '') : '';
+        return '<li>' + verificationValue(annotation.annotation_id) + recode + (annotation.supersedes ? ', ersetzt ' + EC.escapeHtml(annotation.supersedes) : '') +
             (annotation.annotation_id === view.active_annotation_id ? ', aktiv' : '') + '</li>';
     }).join('') + '</ol>';
     h += '<p class="pt-provenance-label">Validierungen</p>' + (view.checks.length ? '<ol class="pt-verify-refs">' + view.checks.map(function(check) {
@@ -3503,7 +3505,8 @@ function historyHtml(record) {
     const events = verificationView(record).lifecycle.events;
     if (!events.length) return '';
     return '<p class="pt-history">Verlauf: ' + events.map(function(event) {
-        const result = event.result && RESULT_LABELS[event.result] && event.to === event.from
+        const result = event.event_type === 'ai_agent_recode' ? 'KI-Neukodierung'
+            : event.result && RESULT_LABELS[event.result] && event.to === event.from
             ? RESULT_LABELS[event.result] : lifecycleLabel(event.to);
         return EC.escapeHtml(result) + (event.at ? ' ' + EC.escapeHtml(dateLabel(event.at)) : '');
     }).join(' → ') + '</p>';

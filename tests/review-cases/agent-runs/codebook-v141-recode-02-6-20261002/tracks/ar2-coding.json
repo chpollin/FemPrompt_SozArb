@@ -1,0 +1,336 @@
+{
+  "schema": "femprompt-prisma-coding-packet/0.2",
+  "codebook_version": "1.4.1",
+  "run_id": "codebook-v141-recode-02-6-20261002",
+  "reviewer": "ar2",
+  "actor": "agent",
+  "source_mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+  "decisions": {
+    "6TAA76Q4": {
+      "source_path": "docs/data/fulltext/6TAA76Q4.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'HOW PEOPLE USE CHATGPT' matches the corpus title. NBER Working Paper 34255 (stable identifier, http://www.nber.org/papers/w34255), September 2025, authors Chatterji, Cunningham, Deming, Hitzig, Ong, Shan, Wadman. Working paper, consistent with the manifest version type. Source hash matches the manifest."
+      },
+      "categories": {
+        "AI_Literacies": "nein",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "teilweise",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": [],
+        "Generative_KI": ["This paper studies consumer usage of ChatGPT, the first mass-market chatbot and likely the largest."],
+        "Prompting": ["Each taxonomy is defined in a prompt passed to an LLM, allowing us to classify messages without any human seeing them."],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": ["Early adopters were disproportionately male but the gender gap has narrowed dramatically, and we find higher growth rates in lower-income countries."],
+        "Gender": ["This suggests that gender gaps in ChatGPT usage have closed substantially over time."],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Unclear",
+      "reason": null
+    },
+    "7VFNS5R3": {
+      "source_path": "docs/data/fulltext/7VFNS5R3.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'Evaluation of an artificial intelligence literacy course for university students with diverse study backgrounds' matches the corpus title, journal Computers and Education: Artificial Intelligence, authors Kong, Cheung, Zhang (The Education University of Hong Kong). The converted text shows no DOI and no legible publication year (garbled header), so DOI and year could not be checked against the text. Source hash matches the manifest."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "teilweise",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "ja",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": ["The objective of this study was to design, implement and evaluate an AI literacy course for university students."],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": ["This is the first course of an AI literacy programme and it concentrates on concepts related to machine learning."],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": ["In addition to overcoming the disparities among participants of different educational backgrounds, we were concerned about closing the gender gap in tech-related learning."],
+        "Gender": ["(3) Can this AI literacy course narrow the gaps in learning about AI between the genders and people of different study backgrounds?"],
+        "Diversitaet": ["Greater inclusion of women in the digital economy and increased diversity bring increased value, both social and economic."],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender"],
+        "AN_Harm_Types": ["None"],
+        "AN_Mitigation_Stage": ["Organisational_Process"],
+        "AN_Mitigation_Status": "Evaluated",
+        "AN_Population": ["Education_Professional"],
+        "AN_Task": ["Teaching_Further_Education"],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Binary_Categorical"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Empirisch",
+        "AN_Notes": "Pre-post evaluation of a 7-hour AI literacy course with 120 university students in Hong Kong, research question 3 on narrowing the gender gap. Bias_Axes Gender because the work compares female and male participants on concepts test, literacy and empowerment; study background and programming experience are non-social variables and not coded. Harm_Types None, the work establishes no AI harm mechanism, the gender gap concerns learning and self-efficacy. Mitigation coded as Organisational_Process (training) with status Evaluated, because the course is an identifiable intervention whose effect on the gender gap in AI empowerment is tested and reported (Table 5); the disparity addressed is a gender gap in AI learning, not algorithmic bias, which is an interpretive choice. Gender understanding binary ('both genders', female and male groups) without examination of the categories. Theory references (self-efficacy after Bandura, programming empowerment) frame empowerment, not gender or bias; gender stereotypes are cited to explain a finding, so AN_Theory_Reference No."
+      },
+      "analysis_evidence": {
+        "AN_Bias_Axes": [{ "quote": "Concerning gender differences in self-perceived AI empowerment, Table 5 shows that our female participants felt less empowered before the course, but this difference no longer existed after the course.", "locator": "Section 4.4 Bridging the gender gap" }],
+        "AN_Mitigation_Status": [{ "quote": "In addition, the course successfully reduced the gender gap regarding AI literacy and AI empowerment.", "locator": "Section 5 Conclusion and implications" }],
+        "AN_Gender_Understanding": [{ "quote": "The course targeted university students from all study backgrounds and both genders.", "locator": "Section 2.4" }]
+      }
+    },
+    "8JR5AGRG": {
+      "source_path": "docs/data/fulltext/8JR5AGRG.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Challenging Systematic Prejudices. An Investigation into Gender Bias in Large Language Models' matches the corpus title. Published 2024 by UNESCO and IRCAI, document code CI/DIT/2024/GP/01 as stable identifier, named author list (van Niekerk, Perez-Ortiz, Shawe-Taylor et al.). No DOI in the text. Publication type is a documented research and policy report with identifiable authorship and own studies, admissible under the ratified publication-type rule. Source hash matches the manifest."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "teilweise",
+        "KI_Sonstige": "nein",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "ja",
+        "Feministisch": "teilweise",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": ["Facilitate public engagement and awareness, by implementing initiatives aimed at bolstering literacy about the impacts of gender bias in AI, and the importance of ethical AI development."],
+        "Generative_KI": ["This study explores biases in three significant large language models (LLMs): OpenAI's GPT -2 and ChatGPT, along with Meta's Llama 2, highlighting their role in both advanced decision-making systems and as user-facing conversational agents."],
+        "Prompting": ["The approach of this second study starts with an incomplete sentence and prompts the model to complete it."],
+        "KI_Sonstige": [],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": ["The research uncovers persistent social biases within these state-of-the-art language models, despite ongoing efforts to mitigate such issues."],
+        "Gender": ["Overall, this study showed a strong bias where gendered names were associated with traditional career and family roles, where female names were associated with 'home', 'family', 'children', and 'marriage'; while male names were associated with 'business', 'executive', 'salary', and 'career'."],
+        "Diversitaet": ["The results revealed that AI tends to generate more varied and engaging descriptions for certain groups, while responses for individuals from less represented cultures and women were often more repetitive and relied on stereotypes."],
+        "Feministisch": ["The pervasive problem of bias against women and girls worldwide is a deeply entrenched issue that manifests across various societal, economic, and political domains, reflecting centuries of gender inequalities and systemic discrimination."],
+        "Fairness": ["Large language models (LLMs) especially pose significant hurdles to achieving algorithmic fairness, with recent versions still exhibiting biases and perpetuating stereotypes."]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["Research_Instrument"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender", "Sexual_Orientation_Identity", "Race_Ethnicity", "Age", "Language_Culture", "Nationality_Migration"],
+        "AN_Harm_Types": ["Stereotyping", "Derogatory_Language"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "In_Training", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Implicit_Only",
+        "AN_Bias_Definition": "Explicit",
+        "AN_Gender_Understanding": ["Binary_Categorical"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Experimentell",
+        "AN_Notes": "UNESCO/IRCAI issue brief with own prompt-based studies on GPT-2, ChatGPT, Llama 2 and Ada-002 embeddings (word-embedding association test, regard of sentence completions, diversity of completions by culture and gender, story generation by gender and nationality). Prompts are the research instrument; sentence-completion prompts carry no codable technique. Axes: Gender, Sexual_Orientation_Identity (gay subjects), Race_Ethnicity (regard subjects varied by race), Age (age and pleasantness in the association test), Language_Culture (British and Zulu as cultural backgrounds, named culture by the work), Nationality_Migration (Global North and South by nationality). Intersectional not coded: gender is crossed with culture and nationality in Study 3 and the story analysis, but the work states in its limitations an 'urgent need' for intersectional analysis and reports no result that depends on the combination beyond the separate gender and culture patterns. Harm types from own results: Stereotyping (gendered role associations, stereotyped occupations) and Derogatory_Language (sexist, misogynistic and degrading completions about women and gay subjects); repetitiveness of output for women and local groups is treated as stereotyping, not Disparate_Performance, since it is a difference in output style. Mitigation recommendations only: diverse and inclusive training data and data augmentation (Pre_Processing), adversarial training and RLHF guidelines (In_Training), audits, governance, diverse teams, stakeholder participation and literacy initiatives (Organisational_Process). The comparison of RLHF-tuned ChatGPT with base models is a cross-model observation, not an evaluation of an identifiable mitigation, so status Proposed. Gender understanding follows the binary man/woman, boy/girl categories of the analysis; mentions of non-binary identities and 'the complexity of human gender identities' are conceptual statements the analysis does not follow. Bias defined explicitly as algorithmic bias that unfairly discriminates. No named theory frames gender or bias; the implicit association test is a measurement method."
+      },
+      "analysis_evidence": {
+        "AN_Bias_Definition": [{ "quote": "Algorithmic bias happens when an algorithm, or a set of computer instructions, unfairly discriminates against certain people or groups.", "locator": "Section 'Inside the algorithm: Exploring Algorithmic Bias'" }],
+        "AN_Bias_Axes": [
+          { "quote": "The study considered subjects varying by gender and race.", "locator": "Study 2: Discrimination in Generated Text from a Gender Perspective" },
+          { "quote": "Our findings indicate that a significant, strong association between gender and career or family, as well as age and pleasantness, persist in current generation models.", "locator": "Study 1: Bias in Word Associations Between Gender and Career" },
+          { "quote": "By prompting the models to complete sentences about British and Zulu men and women in various occupations, researchers assessed the 'diversity' of the outcomes.", "locator": "Study 3: Repetitiveness of Generated Text in Different Cultural and Gender Contexts" },
+          { "quote": "This analysis expanded on gender bias studies by including the impact of nationality, particularly focusing on the distinction between the Global North and South.", "locator": "Section 'Expanding the Analysis to the Global North/South Divide'" }
+        ],
+        "AN_Harm_Types": [
+          { "quote": "This broad analysis reveals prevalent gender stereotypes in LLM-generated content.", "locator": "Section 'Diversity and Stereotyping in LLMs'" },
+          { "quote": "Negative content about gay subjects appeared in approximately 70% of instances for Llama2, and in approximately 60% of instances for GPT-2GPT-2 generated content included sentences such as, 'The gay person was regarded as an abnormal person, and it was believed that his or her life would be difficult to live,'", "locator": "Study 2" }
+        ],
+        "AN_Mitigation_Stage": [{ "quote": "Employing bias detection tools is crucial in identifying gender biases within these datasets, enabling developers to address these issues through methods such as data augmentation and adversarial training.", "locator": "Executive summary" }]
+      }
+    },
+    "8MRNK6FX": {
+      "source_path": "docs/data/fulltext/8MRNK6FX.md",
+      "identity_check": {
+        "status": "provisional",
+        "basis": "Text title 'Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work' matches the corpus title, single author Yuan Yi, School of Humanities and Foreign Languages, Qingdao University of Technology. The converted text shows no DOI, venue or publication year, so these could not be checked. Short scholarly article with abstract, keywords and references, admissible as a scholarly article. Source hash matches the manifest."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "ja",
+        "Prompting": "nein",
+        "KI_Sonstige": "teilweise",
+        "Soziale_Arbeit": "ja",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "nein",
+        "Diversitaet": "teilweise",
+        "Feministisch": "nein",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": ["Enhancing professional training equips social workers to navigate challenges posed by emerging technologies, ensuring effective social work in digital environments."],
+        "Generative_KI": ["Therefore, in anticipation of future risks, this discourse delves into the application risks posed by ChatGPT and other AI technologies in social work, offering multifaceted analyses and proposing corresponding regulatory measures to guide the responsible development of AI within the social work domain."],
+        "Prompting": [],
+        "KI_Sonstige": ["Similarly, in risk assessment algorithms, overlooking crucial characteristics or assigning disproportionate weight to certain features can result in biased outcomes against marginalized groups."],
+        "Soziale_Arbeit": ["Concurrently, generative AI technologies reshape social work practice, fostering the emergence of information cocoons and virtualized social relationships."],
+        "Bias_Ungleichheit": ["A significant concern arises from algorithmic bias, stemming from inherent imbalances in the data collation process."],
+        "Gender": [],
+        "Diversitaet": ["These imbalances may manifest as underrepresentation or overrepresentation of certain groups or categories within the dataset."],
+        "Feministisch": [],
+        "Fairness": ["This involves ensuring the diversity and representativeness of datasets, mitigating biases inherent in the data to prevent skewing the algorithm's training outcomes."]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["None"],
+        "AN_Harm_Types": ["Disparate_Performance", "Direct_Discrimination"],
+        "AN_Mitigation_Stage": ["Pre_Processing", "Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["General_Social_Work"],
+        "AN_Task": ["Case_Assessment_Decision_Support"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "No",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Theoretisch",
+        "AN_Notes": "Short conceptual risk analysis of ChatGPT and AI in social work (data security, algorithmic bias, ethics, legal risks) with countermeasures. Bias_Axes None: the work discusses bias against 'certain groups', 'minority groups' and 'marginalized groups'; 'economically disadvantaged' appears in a single for-instance sentence that is not developed as a worked example, boundary analogous to the VSZM7CT6 anchor. Harm types from the work's own risk argument: Disparate_Performance (underrepresented groups lead to systems that cannot accurately gauge their needs) and Direct_Discrimination (feedback-loop bias leading to denial of services based on inherent characteristics); the work does not separate direct from indirect discrimination, 'based on their inherent characteristics' was read as direct. Stereotyping is only asserted in one sentence without mechanism and is not coded. Mitigation proposed: diverse and representative datasets (Pre_Processing), oversight, training of social workers, transparency, legal regulation (Organisational_Process). Training ChatGPT to warn on sensitive topics concerns illicit content, not bias, and is not coded as In_Training. AN_Task Case_Assessment_Decision_Support for risk assessment algorithms and AI-driven decisions about services; no other task is described concretely. Bias is explained by its data sources without a defining sentence, so Implicit_Only."
+      },
+      "analysis_evidence": {
+        "AN_Harm_Types": [
+          { "quote": "For instance, within the realm of social services, inadequate data on economically disadvantaged or minority groups may hinder AI systems from accurately gauging and addressing their needs.", "locator": "Section 2.1" },
+          { "quote": "Consequently, this may impinge upon client autonomy, leading to unjust treatment or denial of services and resources to deserving groups or individuals based on their inherent characteristics.", "locator": "Section 2.1" }
+        ],
+        "AN_Mitigation_Stage": [{ "quote": "Furthermore, in tackling algorithmic bias, social work institutions must overhaul the design and training processes of AI systems.", "locator": "Section 3.1" }],
+        "AN_Task": [{ "quote": "AI algorithms, susceptible to biases present in training data, risk rendering discriminatory decisions against certain demographic groups.", "locator": "Section 2.3" }]
+      }
+    },
+    "HDXTRBUK": {
+      "source_path": "docs/data/fulltext/HDXTRBUK.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Problematising Artificial Intelligence in Social Work Education: Challenges, Issues and Possibilities' matches the corpus title. DOI 10.1093/bjsw/bcab168, The British Journal of Social Work, 2021, authors Hodgson, Goldingay, Boddy, Nipperess, Watts. Accepted manuscript from Griffith Research Online, consistent with the published article. Source hash matches the manifest."
+      },
+      "categories": {
+        "AI_Literacies": "teilweise",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "ja",
+        "Bias_Ungleichheit": "teilweise",
+        "Gender": "nein",
+        "Diversitaet": "nein",
+        "Feministisch": "nein",
+        "Fairness": "nein"
+      },
+      "evidence": {
+        "AI_Literacies": ["We foresee a greater impetus to include critical digital literacies in social work education, precisely because AI and machine learning will become commonplace in social work practice and society generally."],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": ["We identify the transformative and disruptive potential of AI in higher education, and consider how this intersects with the ethical and relational side of social work as a profession."],
+        "Soziale_Arbeit": ["As social work educators, we have begun to wonder what the implications of AI in the academy will have for social work education."],
+        "Bias_Ungleichheit": ["AI systems are created by humans, like conventional human systems, bias and structural inequity can be built into them, even if inadvertently."],
+        "Gender": [],
+        "Diversitaet": [],
+        "Feministisch": [],
+        "Fairness": []
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["None"],
+        "AN_Harm_Types": ["None"],
+        "AN_Mitigation_Stage": ["None"],
+        "AN_Mitigation_Status": "None",
+        "AN_Population": ["Education_Professional"],
+        "AN_Task": ["Teaching_Further_Education"],
+        "AN_Gender_Definition": "Not_Applicable",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Not_Applicable"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Theoretisch",
+        "AN_Notes": "Conceptual, literature-based paper on AI (machine learning, intelligent tutoring, teacherbots, VR simulation) in higher education and its implications for social work education. Bias_Axes None: 'AI algorithms may reinforce racial and gender stereotypes' is a cited sentence not developed as the work's own worked example (codebook anchor VSZM7CT6 names this case). Harm_Types None: bias, predictive risk modelling concerns and the beneficence problem are cited from other work, not established by the work's own argument. Mitigation None: the proposed critical digital literacies address AI understanding in general, not a measure against bias. Gender is not an object; 'gender stereotypes' appears once in a cited sentence. Bias understood as structural inequity built into human-made systems, without a defining sentence, so Implicit_Only. Theory reference Yes with Braidotti's critical posthumanism, whose 'Convergence' of transformations and persistent inequalities frames the paper's treatment of bias and structural inequity in AI; this line between a framing concept and an illustrative mention is an interpretive choice. Feministisch kept at nein because Braidotti is used as posthuman theory without a gender-related power analysis."
+      },
+      "analysis_evidence": {
+        "AN_Theory_Reference": [{ "theory": "Critical posthumanism (Braidotti), the Convergence of transformations and persistent inequalities", "quote": "Despite this caution social work needs to engage with what Braidotti (2019a, p. 10) refers to as '[T]he Convergence…with its distinctive combination of speedy transformations and persistent inequalities…[which] are planetary and multi-scalar.'", "locator": "Section 'Artificial Intelligence in Higher Education', final paragraph" }],
+        "AN_Task": [{ "quote": "The implications of AI in the academy suggest three emerging prospects confronting social work educators: what to teach; how it will be taught; and, existential threats about the future of social work and social work education.", "locator": "Section 'Implications for Social Work Education'" }]
+      }
+    },
+    "JFDBPUBN": {
+      "source_path": "docs/data/fulltext/JFDBPUBN.md",
+      "identity_check": {
+        "status": "verified",
+        "basis": "Text title 'Gender und KI-Anwendungen. Trägt KI zum Genderproblem oder zu seiner Lösung bei?' matches the corpus title. DOI 10.57720/5510, project report of FH Bielefeld, authors Mauritz and Franken, reporting period July 2020 to February 2021. Research report with identifiable authorship, own survey and source basis, admissible under the ratified publication-type rule. Source hash matches the manifest."
+      },
+      "categories": {
+        "AI_Literacies": "ja",
+        "Generative_KI": "nein",
+        "Prompting": "nein",
+        "KI_Sonstige": "ja",
+        "Soziale_Arbeit": "nein",
+        "Bias_Ungleichheit": "ja",
+        "Gender": "ja",
+        "Diversitaet": "teilweise",
+        "Feministisch": "teilweise",
+        "Fairness": "teilweise"
+      },
+      "evidence": {
+        "AI_Literacies": ["H2: Frauen schätzen ihre eigene Kompetenz in Bezug auf KI-Anwendungen geringer ein als Männer."],
+        "Generative_KI": [],
+        "Prompting": [],
+        "KI_Sonstige": ["war die Untersuchung von genderrelevanten Aspekten bei der Wahrnehmung, Bewertung, Entwicklung und dem Einsatz von KI in der Arbeitswelt."],
+        "Soziale_Arbeit": [],
+        "Bias_Ungleichheit": [
+          "Forschungsarbeiten zeigen, dass diese Technologien ungewollt eine Vielzahl an Verzerrungen und Diskriminierungen enthalten.",
+          "Und wie können die Geschlechterstereotype von Algorithmen reduziert werden, um zu mehr Gleichberechtigung bei automatisierten Entscheidungen beizutragen?"
+        ],
+        "Gender": ["Alle aus dem vorangeschalteten Theorieteil abgeleiteten fünf Hypothesen konnten bestätigt werden und bei fast allen gemessenen Konstrukten wurden Unterschiede zwischen den Geschlechtern festgestellt."],
+        "Diversitaet": ["So ist es nötig, eine größere Vielfalt an Personen bei der KI-Entwicklung zu berücksichtigen und zu fördern sowie für die möglichen Risiken der KI-Anwendungen im Sinne von Vorurteilen und Diskriminierungen zu sensibilisieren."],
+        "Feministisch": ["Mögliche Ursachen sind tradierte Sozialisationsmuster, gesellschaftliche Rollenerwartungen und Stereotype, welche den Talenten und Ambitionen der Frauen gegenüberstehen und ihren beruflichen Erfolg beeinflussen."],
+        "Fairness": ["Hierfür sind explizite Anforderungen an die KI erforderlich, einschließlich Regeln für angemessenes Verhalten, um unerwünschte Vorurteile zu mindern und Fairness zu erreichen"]
+      },
+      "decision": "Include",
+      "reason": null,
+      "analysis": {
+        "AN_Prompting_Role": ["None"],
+        "AN_Prompt_Techniques": ["None"],
+        "AN_Bias_Axes": ["Gender"],
+        "AN_Harm_Types": ["None"],
+        "AN_Mitigation_Stage": ["Organisational_Process"],
+        "AN_Mitigation_Status": "Proposed",
+        "AN_Population": ["Not_SW_Specific"],
+        "AN_Task": ["None"],
+        "AN_Gender_Definition": "Explicit",
+        "AN_Bias_Definition": "Implicit_Only",
+        "AN_Gender_Understanding": ["Binary_Categorical", "Social_Construct"],
+        "AN_Theory_Reference": "Yes",
+        "AN_Coding_Basis": "Fulltext",
+        "Studientyp": "Empirisch",
+        "AN_Notes": "German project report with literature part and an online survey on gender differences in perception, self-assessed competence, interest and trust regarding AI in the world of work. Bias_Axes Gender, since the analysis compares women and men on all constructs; the age correlation with trust is reported for the full sample but not framed as bias, so Age is not coded. Harm_Types None: discrimination cases (Facebook STEM ads, Amazon recruiting tool, cardiovascular risk data, voice and face recognition) are only cited from other work in the theory section, and the survey establishes no harm mechanism of its own. Mitigation proposed, all organisational: more women and diversity in AI development, AI competence building and sensitisation, explicit requirements and fairness toolkits such as AI Fairness 360 named without technical stage, EU ethics guidelines. AN_Task None, functional areas such as recruiting appear only as survey items on perceived risk. Gender defined explicitly as social gender in contrast to biological sex; the definition section states that attributions are shaped by history and social change and the discussion explains differences by socialisation and role expectations, so Social_Construct; the survey analysis keeps two categories and removes the four 'divers' respondents, so Binary_Categorical. Theory reference: role theory and role congruity theory (Wiswede 1977, Eagly and Karau 2002) frame the explanation of gender differences."
+      },
+      "analysis_evidence": {
+        "AN_Gender_Definition": [{ "quote": "Im Gegensatz zu sex als biologisches Geschlecht, wird mit gender das soziale Geschlecht im wissenschaftlichen Sprachgebrauch definiert (Universität Bielefeld 2012).", "locator": "Section 2.1.1 Gender - Begriffsdefinition" }],
+        "AN_Gender_Understanding": [
+          { "quote": "Solche Eigenschaftszuschreibungen sind durch Historie und gesellschaftlichen Wandel geprägt (eval.at o. J.).", "locator": "Section 2.1.1" },
+          { "quote": "Außerdem interessieren uns diejenigen Teilnehmenden, die sich dem weiblichen oder dem männlichen Geschlecht zugehörig fühlen, so dass vier Personen, die sich der Gruppe 'divers' zugeordnet haben, für die folgende Betrachtung aus dem Datensatz genommen wurden.", "locator": "Section 3.3 Beschreibung der Stichprobe" }
+        ],
+        "AN_Theory_Reference": [{ "theory": "Role theory and role congruity theory of prejudice (gesellschaftliche Rollenerwartungen, Geschlechterrolle)", "quote": "Mögliche Ursachen sind tradierte Sozialisationsmuster, gesellschaftliche Rollenerwartungen und Stereotype, welche den Talenten und Ambitionen der Frauen gegenüberstehen und ihren beruflichen Erfolg beeinflussen.", "locator": "Section 2.4 Forschungsbedarf, Forschungsfragen und Hypothesen" }],
+        "AN_Mitigation_Stage": [{ "quote": "Dies kann u.a. mit einem höheren Anteil von Frauen gelingen, die sich bei der Entwicklung und Konzipierung von KI-Systemen einbringen.", "locator": "Section 5.2 Ausblick und Handlungsempfehlungen" }]
+      }
+    }
+  }
+}

@@ -489,3 +489,132 @@ def test_cli_migrates_then_validates(tmp_path: Path) -> None:
     assert (
         json.loads(output.read_text(encoding="utf-8"))["schema"] == lifecycle.SCHEMA_V05
     )
+
+
+# Frozen pre-recode state, since the productive track itself carries the recode of this record.
+PRODUCTIVE = ROOT / "tests" / "fixtures" / "ar2-ukkqkl7i-before-recode.json"
+RECODE_RUN_ID = "recode-test-20261002"
+RECODE_RECORD = "UKKQKL7I"
+
+
+def recode_fixture(
+    tmp_path: Path, base: dict[str, Any] | None = None
+) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+    """Return base track, migrated recode product and run manifest for one 1.3 record.
+
+    The recode reuses the reviewed product of the run that first coded the record,
+    marked as codebook 1.4.1 under a new run, so only the recode contract varies.
+    """
+    from src.assess.artifact_verification import record_hash
+
+    base = base or json.loads(PRODUCTIVE.read_text(encoding="utf-8"))
+    existing = base["decisions"][RECODE_RECORD]
+    binding = {
+        "annotation_id": existing["active_annotation_id"],
+        "record_sha256": record_hash(existing).removeprefix("sha256:"),
+    }
+    manifest = json.loads((NEW_PRODUCT.parent / "run.json").read_text(encoding="utf-8"))
+    manifest["run_id"] = RECODE_RUN_ID
+    manifest["codebook"] = {"path": "assessment/categories.yaml", "version": "1.4.1"}
+    for paper in manifest["assignment"]["papers"]:
+        if paper["paper_id"] == RECODE_RECORD:
+            paper["ai_agent_review_coverage"] = True
+            paper["recode_of"] = {RECODE_RECORD: binding}
+    manifest_path = tmp_path / "run.json"
+    manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+    source = json.loads(NEW_PRODUCT.read_text(encoding="utf-8"))
+    source["decisions"] = {RECODE_RECORD: source["decisions"][RECODE_RECORD]}
+    record = source["decisions"][RECODE_RECORD]
+    record["ts"] = "2026-10-02T10:00:00.000Z"
+    record["analysis"]["codebook_version"] = "1.4.1"
+    context = source["review_context"]
+    context.update(
+        run_id=RECODE_RUN_ID,
+        run_manifest=manifest_path.as_posix(),
+        ai_agent_reviewer_actor_id=f"{RECODE_RUN_ID}-ai-agent-review",
+        recodes={RECODE_RECORD: binding},
+    )
+    for track in context["input_tracks"]:
+        track["actor_id"] = f"{RECODE_RUN_ID}-{track['reviewer']}"
+    product = lifecycle.migrate_v03_document(
+        source, checked_at="2026-10-02T10:05:00.000Z", base=base
+    )
+    return base, product, manifest
+
+
+def test_recode_appends_a_superseding_annotation_and_keeps_the_state(
+    tmp_path: Path,
+) -> None:
+    base, product, _ = recode_fixture(tmp_path)
+    existing = base["decisions"][RECODE_RECORD]
+    record = product["decisions"][RECODE_RECORD]
+    recode = record["annotations"][-1]
+
+    assert lifecycle.validate_document(product) == []
+    assert record["annotations"][:-1] == existing["annotations"]
+    assert recode["annotation_type"] == "ai_agent_recode"
+    assert recode["supersedes"] == existing["active_annotation_id"]
+    assert recode["codebook_version"] == "1.4.1"
+    assert "codebook 1.3" in recode["reason"]
+    assert record["active_annotation_id"] == recode["annotation_id"]
+    assert record["analysis"]["codebook_version"] == "1.4.1"
+    assert record["lifecycle"]["state"] == "ai-agent-reviewed"
+    assert record["lifecycle"]["events"][:-1] == existing["lifecycle"]["events"]
+    event = record["lifecycle"]["events"][-1]
+    assert (event["event_type"], event["from"], event["to"]) == (
+        "ai_agent_recode",
+        "ai-agent-reviewed",
+        "ai-agent-reviewed",
+    )
+    assert record["checks"][:-1] == existing["checks"]
+    assert record["checks"][-1]["subject"]["annotation_id"] == recode["annotation_id"]
+
+
+def test_recode_refuses_a_verified_record(tmp_path: Path) -> None:
+    base = json.loads(PRODUCTIVE.read_text(encoding="utf-8"))
+    record = base["decisions"][RECODE_RECORD]
+    record["lifecycle"]["events"].append(
+        {"event_type": "domain_expert_verification", "from": "ai-agent-reviewed", "to": "verified"}
+    )
+    record["lifecycle"]["state"] = "verified"
+
+    with pytest.raises(ValueError, match="refusing to recode"):
+        recode_fixture(tmp_path, base)
+
+
+def test_recode_refuses_a_binding_to_another_record_version(tmp_path: Path) -> None:
+    base, product, manifest = recode_fixture(tmp_path)
+    source = json.loads(NEW_PRODUCT.read_text(encoding="utf-8"))
+    changed = deepcopy(base)
+    changed["decisions"][RECODE_RECORD]["checks"].append(
+        deepcopy(changed["decisions"][RECODE_RECORD]["checks"][0])
+        | {"check_id": "later-check"}
+    )
+    source["decisions"] = {RECODE_RECORD: source["decisions"][RECODE_RECORD]}
+    source["review_context"].update(
+        run_id=RECODE_RUN_ID,
+        run_manifest=(tmp_path / "run.json").as_posix(),
+        recodes=manifest["assignment"]["papers"][0]["recode_of"],
+    )
+
+    with pytest.raises(ValueError, match="does not match the current record"):
+        lifecycle.migrate_v03_document(source, base=changed)
+
+
+def test_validator_requires_recode_event_and_superseded_annotation(
+    tmp_path: Path,
+) -> None:
+    _, product, _ = recode_fixture(tmp_path)
+    without_event = deepcopy(product)
+    without_event["decisions"][RECODE_RECORD]["lifecycle"]["events"].pop()
+    wrong_supersedes = deepcopy(product)
+    wrong_supersedes["decisions"][RECODE_RECORD]["annotations"][-1]["supersedes"] = "ar2:other"
+
+    assert any(
+        "has no ai_agent_recode event" in error
+        for error in lifecycle.validate_document(without_event)
+    )
+    assert any(
+        "supersedes: must reference the preceding annotation" in error
+        for error in lifecycle.validate_document(wrong_supersedes)
+    )

@@ -90,8 +90,8 @@ Identity rule. Records are the same find when they share a normalised DOI, an ar
 | works | expert_include | 138 |
 | works | expert_exclude | 90 |
 | works | expert_unresolved | 1 |
-| works | ai_review_include_pending_verification | 16 |
-| works | ai_review_exclude_pending_verification | 8 |
+| works | ai_review_include_pending_verification | 15 |
+| works | ai_review_exclude_pending_verification | 9 |
 | works | open_fulltext_ready | 57 |
 | works | open_fulltext_not_retrieved | 44 |
 | works | open_not_queued | 7 |

@@ -1,6 +1,6 @@
 # Data dictionary
 
-Source fingerprint: `sha256:01e21fd6e159e042c596097d236cb5fe019e303c78223c3c54d43016154ca101`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:4a0bcbc5beed6a3bd332c75cb043bd3a41e5805f90aaf4e686ac6a7b71825f0f`. Deterministic internal preparation; no approval is created.
 
 | Field / artifact | Meaning |
 |---|---|
@@ -15,6 +15,7 @@ Source fingerprint: `sha256:01e21fd6e159e042c596097d236cb5fe019e303c78223c3c54d4
 | human_verification | Historical CSV evidence or missing evidence; never a fabricated current lifecycle event. |
 | agent_records | Active annotation, lifecycle events, actor/model provenance, source references and legacy gaps as recorded. |
 | current_ai_source_review | Current accepted source-hash-bound review with actual agent, disclosed model, time and substantive findings; historical provenance remains separate. |
+| current_ai_review_result superseded_by_recode | The latest receipt reviewed the record version that an agent recode superseded (ADR-046). The recoded record counts as not yet source-reviewed and carries the next action renew_ai_source_review_of_the_recoded_record. |
 | applied_ai_correction / original_analysis | Immutable correction projection and original coding side by side; correction base artifact/hash and each field change remain auditable. |
 | ai_correction_provenance | Work-queue references to each correction, its immutable basis, hashes and correcting/reviewing agent, model and dates. |
 | open_ai_source_review_record_ids | Negative or unverifiable source reviews with no accepted correction; affected work coding is not counted in interim SQ tables. |

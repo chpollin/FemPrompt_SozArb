@@ -16,8 +16,8 @@
     "canonical_records": 463,
     "canonical_works": 361,
     "direct_human_annotated_records": 302,
-    "direct_ai_agent_reviewed_without_human": 29,
-    "unannotated_alias_records_covered_at_work_level": 22,
+    "direct_ai_agent_reviewed_without_human": 40,
+    "unannotated_alias_records_covered_at_work_level": 11,
     "queued_records": 110,
     "queued_works": 101,
     "ready_works": 57,
@@ -7665,22 +7665,6 @@
   ],
   "covered_alias_records": [
     {
-      "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
-      "record_id": "HDXTRBUK",
-      "covered_by_human_records": [],
-      "covered_by_ai_agent_reviewed_records": [
-        "VSZM7CT6"
-      ]
-    },
-    {
-      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
-      "record_id": "Z5287FAB",
-      "covered_by_human_records": [],
-      "covered_by_ai_agent_reviewed_records": [
-        "SQYLQFRU"
-      ]
-    },
-    {
       "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
       "record_id": "C8A7TXTF",
       "covered_by_human_records": [],
@@ -7689,28 +7673,11 @@
       ]
     },
     {
-      "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
-      "record_id": "ET4MMZGH",
-      "covered_by_human_records": [],
-      "covered_by_ai_agent_reviewed_records": [
-        "QUV5DQH3"
-      ]
-    },
-    {
       "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
       "record_id": "978AV9KZ",
       "covered_by_human_records": [],
       "covered_by_ai_agent_reviewed_records": [
         "FTJM5R8N"
-      ]
-    },
-    {
-      "work_id": "work:4b1bc38b-3228-5112-ac8f-026d8d4f7a2e",
-      "record_id": "JFVQIWE5",
-      "covered_by_human_records": [],
-      "covered_by_ai_agent_reviewed_records": [
-        "8MRNK6FX",
-        "SSF5Q33W"
       ]
     },
     {
@@ -7727,22 +7694,6 @@
       "covered_by_human_records": [],
       "covered_by_ai_agent_reviewed_records": [
         "3ZNMTJ5B"
-      ]
-    },
-    {
-      "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
-      "record_id": "8JR5AGRG",
-      "covered_by_human_records": [],
-      "covered_by_ai_agent_reviewed_records": [
-        "EQV4DNQR"
-      ]
-    },
-    {
-      "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
-      "record_id": "9KDFMECH",
-      "covered_by_human_records": [],
-      "covered_by_ai_agent_reviewed_records": [
-        "4ZL5Q48E"
       ]
     },
     {
@@ -7773,22 +7724,6 @@
       ]
     },
     {
-      "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
-      "record_id": "QZRHHAE2",
-      "covered_by_human_records": [],
-      "covered_by_ai_agent_reviewed_records": [
-        "A2P8MXMY"
-      ]
-    },
-    {
-      "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
-      "record_id": "M62T5ICP",
-      "covered_by_human_records": [],
-      "covered_by_ai_agent_reviewed_records": [
-        "UKKQKL7I"
-      ]
-    },
-    {
       "work_id": "work:b4a52bdb-3182-5695-bbac-d3620ef7d3fe",
       "record_id": "3TWV7VWW",
       "covered_by_human_records": [],
@@ -7797,35 +7732,11 @@
       ]
     },
     {
-      "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
-      "record_id": "AHUSFEEA",
-      "covered_by_human_records": [],
-      "covered_by_ai_agent_reviewed_records": [
-        "J5EF9W6M"
-      ]
-    },
-    {
       "work_id": "work:bd83caf1-923f-5895-b6bb-9d558c619ceb",
       "record_id": "JFDBPUBN",
       "covered_by_human_records": [],
       "covered_by_ai_agent_reviewed_records": [
         "BDI6XU5A"
-      ]
-    },
-    {
-      "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
-      "record_id": "6TAA76Q4",
-      "covered_by_human_records": [],
-      "covered_by_ai_agent_reviewed_records": [
-        "BHXDU7VM"
-      ]
-    },
-    {
-      "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
-      "record_id": "INQNDHTI",
-      "covered_by_human_records": [],
-      "covered_by_ai_agent_reviewed_records": [
-        "P4YQIKJX"
       ]
     },
     {

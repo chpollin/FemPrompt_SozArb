@@ -8,7 +8,8 @@
 run folder and transfers it through the production PRISM functions. `review`
 validates the AI Agent Review, computes the track agreement, draws the spot-check
 sample and completes the manifest. `integrate` merges the reviewed product
-append-only into the productive agent track. Every step refuses to continue on a
+append-only into the productive agent track; a record the manifest binds in
+`recode_of` is replaced by its recode, which keeps the earlier annotation as history. Every step refuses to continue on a
 failed validator, so a blocked record never reaches productive data.
 """
 
@@ -232,13 +233,23 @@ def review(run_id: str, started_at: str, flags: dict[str, str]) -> None:
     print(f"{run_id}: review accepted by validator, sample {sample['drawn']} + {sample['flagged_additions']}")
 
 
-def integrate(run_id: str) -> None:
+def integrate(run_id: str, withhold: dict[str, str] | None = None) -> None:
     manifest, run = load(run_id)
     base = f"{RUNS}/{run_id}"
     stamp = now()
     v04, v05 = f"{base}/product-v0.4.json", f"{base}/product-v0.5.json"
     run_cmd("node", "tests/review-cases/build-ai-agent-product.mjs", manifest, f"{base}/ai-agent-review.json", v04, stamp)
-    run_cmd("python", "-m", "src.assess.screening_lifecycle", "migrate", v04, v05, "--checked-at", stamp)
+    withhold = withhold or {}
+    if withhold:
+        # A reviewed record can be held out of productive data for an operator decision; it stays in the run folder.
+        product04 = json.loads((ROOT / v04).read_text(encoding="utf-8"))
+        missing = sorted(set(withhold) - set(product04["decisions"]))
+        if missing:
+            raise SystemExit(f"cannot withhold records absent from the product: {', '.join(missing)}")
+        for rid in withhold:
+            del product04["decisions"][rid]
+        (ROOT / v04).write_text(json.dumps(product04, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+    run_cmd("python", "-m", "src.assess.screening_lifecycle", "migrate", v04, v05, "--base", TARGET, "--checked-at", stamp)
     before = json.loads((ROOT / TARGET).read_text(encoding="utf-8"))
     base_commit = run_cmd("git", "rev-parse", "HEAD").strip()
     base_hash = sha256(TARGET)
@@ -247,6 +258,7 @@ def integrate(run_id: str) -> None:
     after = json.loads((ROOT / TARGET).read_text(encoding="utf-8"))
     product = json.loads((ROOT / v05).read_text(encoding="utf-8"))
     new_ids = sorted(set(product["decisions"]) - set(before["decisions"]))
+    recoded_ids = sorted(k for k in product["decisions"] if k in before["decisions"] and before["decisions"][k] != after["decisions"][k])
     run["integration"] = {
         "status": "integrated",
         "method": "append_only_validated_product_merge",
@@ -255,8 +267,12 @@ def integrate(run_id: str) -> None:
         "base_commit": base_commit,
         "base_sha256": f"sha256:{base_hash}",
         "preexisting_record_count": len(before["decisions"]),
-        "preexisting_records_preserved": all(after["decisions"].get(k) == v for k, v in before["decisions"].items()),
+        "preexisting_records_preserved": all(
+            after["decisions"].get(k) == v for k, v in before["decisions"].items() if k not in recoded_ids
+        ),
         "new_record_ids": new_ids,
+        "recoded_record_ids": recoded_ids,
+        "withheld_records": [{"record_id": rid, "reason": reason} for rid, reason in sorted(withhold.items())],
         "resulting_sha256_at_merge": f"sha256:{sha256(TARGET)}",
         "merge_command": merge,
         "id": f"{run_id}:deterministic-integration",
@@ -266,7 +282,7 @@ def integrate(run_id: str) -> None:
     event["event_type"] = "run_completed_after_review_and_integration"
     event["activity_id"] = f"{run_id}:deterministic-integration"
     save(manifest, run)
-    print(f"{run_id}: integrated {len(new_ids)} records")
+    print(f"{run_id}: integrated {len(new_ids)} new and {len(recoded_ids)} recoded records")
 
 
 def main() -> None:
@@ -275,6 +291,7 @@ def main() -> None:
     parser.add_argument("run_id")
     parser.add_argument("--started-at")
     parser.add_argument("--flag", action="append", default=[], help="ID=reason for a domain-expert decision")
+    parser.add_argument("--withhold", action="append", default=[], help="ID=reason to hold a reviewed record out of integration")
     args = parser.parse_args()
     if args.step == "tracks":
         tracks(args.run_id, args.started_at)
@@ -282,7 +299,7 @@ def main() -> None:
         flags = dict(item.split("=", 1) for item in args.flag)
         review(args.run_id, args.started_at or now(), flags)
     else:
-        integrate(args.run_id)
+        integrate(args.run_id, dict(item.split("=", 1) for item in args.withhold))
 
 
 if __name__ == "__main__":

@@ -171,8 +171,8 @@ current_state,,works,361
 current_state,,works:expert_include,138
 current_state,,works:expert_exclude,90
 current_state,,works:expert_unresolved,1
-current_state,,works:ai_review_include_pending_verification,16
-current_state,,works:ai_review_exclude_pending_verification,8
+current_state,,works:ai_review_include_pending_verification,15
+current_state,,works:ai_review_exclude_pending_verification,9
 current_state,,works:open_fulltext_ready,57
 current_state,,works:open_fulltext_not_retrieved,44
 current_state,,works:open_not_queued,7

@@ -151,6 +151,23 @@ function validateOutput(output, label, errors, completed) {
   }
 }
 
+function validateRecode(paper, recordIds, harnessRun, errors) {
+  const label = `recode_of for ${paper.paper_id || '<paper>'}`;
+  const recode = paper.recode_of;
+  if (!harnessRun) errors.push(`${label} requires run schema 1.4`);
+  if (paper.ai_agent_review_coverage !== true)
+    errors.push(`ai_agent_review_coverage for ${paper.paper_id || '<paper>'} must be true for a recode`);
+  if (!recode || typeof recode !== 'object' || Array.isArray(recode) || !Object.keys(recode).length) {
+    errors.push(`${label} must map record IDs to their bound productive records`);
+    return;
+  }
+  for (const [recordId, binding] of Object.entries(recode)) {
+    if (!recordIds.includes(recordId)) errors.push(`${label} names record ${recordId} outside record_ids`);
+    requireString(binding?.annotation_id, `${label}.${recordId}.annotation_id`, errors);
+    requireHash(binding?.record_sha256, `${label}.${recordId}.record_sha256`, errors);
+  }
+}
+
 export function validateManifest(run, { path = '<memory>', allowLegacy = true } = {}) {
   if (!run || typeof run !== 'object' || Array.isArray(run)) return { ok: false, legacy: false, errors: ['manifest must be an object'] };
 
@@ -234,7 +251,11 @@ export function validateManifest(run, { path = '<memory>', allowLegacy = true } 
     // code works that human screening already covers and records that coverage.
     if (harnessRun ? typeof paper?.human_coverage !== 'boolean' : paper?.human_coverage !== false)
       errors.push(`human_coverage for ${paper?.paper_id || '<paper>'} must be ${harnessRun ? 'recorded' : 'false'}`);
-    if (paper?.ai_agent_review_coverage !== false)
+    // A recode (ADR-046) binds the exact productive records it supersedes, so only a
+    // declared recode may cover a work that an AI Agent Review already covers.
+    if (paper && Object.hasOwn(paper, 'recode_of'))
+      validateRecode(paper, recordIds, harnessRun, errors);
+    else if (paper?.ai_agent_review_coverage !== false)
       errors.push(`ai_agent_review_coverage for ${paper?.paper_id || '<paper>'} must be false`);
     requireString(paper?.source?.path, `source path for ${paper?.paper_id || '<paper>'}`, errors);
     requireHash(paper?.source?.sha256, `source hash for ${paper?.paper_id || '<paper>'}`, errors);

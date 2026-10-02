@@ -141,7 +141,7 @@ Round-two Includes receive the analysis fields during agent screening. Round-one
 
 ### Recoding and coding of the remaining Includes
 
-The works coded under version 1.3 are recoded by the agent tracks for `AN_Bias_Axes` and `AN_Harm_Types` and receive `AN_Task` and the SQ4 fields in the same pass, so each full text is read once. Their other 1.3 fields keep their values, because their definitions did not change. The included works without analysis coding receive the full 1.4 coding. Both passes run as harness runs under schema 1.4 with AI Agent Review and the validation below.
+The works coded under version 1.3 receive a full recode under the current codebook by the same governed run procedure as the other works, two isolated tracks and a separate AI Agent Review. The recode replaces the complete coding, all ten categories, the decision and every analysis field, instead of recoding `AN_Bias_Axes` and `AN_Harm_Types` and adding the new fields to the kept 1.3 values. One annotation then carries one codebook version, so no record mixes fields of two runs and the state `not_collected` stays derivable from the active annotation. `python -m src.assess.prepare_coding_run <run-id> <purpose> <paper-id> ... --recode` admits a work only when its productive agent coding stands under an older codebook and binds each of its productive records by active annotation and canonical record hash in `recode_of`. Integration appends the result as an `ai_agent_recode` annotation that supersedes the 1.3 annotation, which stays in the record as history (ADR-046). The included works without analysis coding receive the full coding as new records. Both passes run as harness runs under schema 1.4 with AI Agent Review and the validation below.
 
 ### Validation of the AI coding
 
@@ -200,13 +200,19 @@ The run exposed the following points.
 - The anchor work `7L93JBLR` of [[codebook-v1.4-proposal]] was coded by the run it anchors.
 - The first manifests listed records of other Versions of the same Work as aliases, and agent-written files carried CRLF line endings under hashes that an LF checkout would break. Both were corrected before the commit and recorded in the affected manifests, and the scripts now prevent them.
 
-The works coded under 1.3 still await their recode. The coding packet requires all ten categories and every analysis field, and the merge refuses a divergent record without a `supersedes` path, so a partial recode has no contract yet.
+The works coded under 1.3 still awaited their recode after these runs, because the merge refused a divergent record and the lifecycle had no agent annotation that supersedes another. ADR-046 added that contract as a full recode ([[#Recoding and coding of the remaining Includes]]).
+
+### Recode runs of 2 October 2026
+
+The runs `codebook-v141-recode-<batch>-6-20261002` recoded under ADR-046 the included works whose productive agent coding followed codebook 1.3, by the same procedure as the coding run, with `recode_of` binding each existing record. The new annotation supersedes the 1.3 annotation, which stays in the record history, and the earlier AI source-review and correction receipts of those records are withheld until the fresh record receipts. Three works stayed outside. One has its text only on a non-preferred Version, one is effectively excluded, and the coding of the preferred Version of a third was reviewed but held out of integration, because its Work keeps 1.3 coding on a record of another Version and two codings of one Work would conflict. That case waits for the operator's Version-binding decision, and `prepare_coding_run` now refuses a Work whose agent coding sits on another Version. The recode turned some former agent Includes into Unclear, which the completion package records as human and agent decision divergences.
 
 ## Lifecycle and authority
 
 The ordered states are `identified → curated → agent-annotated → ai-agent-reviewed → verified → publication-approved`.
 
 Deterministic checks bind to the exact annotation ID and content hash. They record structural and rule conformance. A domain expert later records `accepted`, `corrected_and_accepted`, `changes_requested`, or `rejected` for every intended productive record. Accepted outcomes establish `verified`. Corrections append a complete person-attributed annotation with field-level differences and `supersedes`. Publication approval requires a later person-attributed event.
+
+A governed agent recode appends a complete `ai_agent_recode` annotation with `supersedes`, the hash of the replaced record, the codebook version and its reason, together with an `ai_agent_recode` event of the new run's AI Agent Review that keeps the record at `ai-agent-reviewed` (ADR-046). It is open only to a record at `ai-agent-reviewed` without a domain-expert verification or publication-approval event. An AI source-review receipt of the replaced record no longer counts for the recoded record, which needs a fresh receipt from `src.assess.review_integrated_records`.
 
 Internal topic modelling, descriptive analysis, Assertion generation, and report drafting may use `ai-agent-reviewed` data when every derived artifact retains the supporting lifecycle state. Final scholarly literature claims require domain-expert verification. The operator's separately dated preliminary-release permission in `config/publication_policy.json` allows explicitly labelled, currently source-reviewed AI projections under the artifact and source integrity gates in [[governance#Publication boundary]]. It does not establish human verification or final scholarly publication approval.
 

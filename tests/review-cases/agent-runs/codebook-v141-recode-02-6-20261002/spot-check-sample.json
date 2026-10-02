@@ -1,0 +1,44 @@
+{
+  "schema": "femprompt-spot-check-sample/0.1",
+  "run_id": "codebook-v141-recode-02-6-20261002",
+  "status": "proposed",
+  "seed": 20261004,
+  "rule": "max(5, ceil(15 percent of the run)) works, half drawn from works whose tracks agreed on every analysis field and the rest from works with at least one analysis-field difference, using Python random.Random(seed).sample on the sorted IDs, plus every work an agent or the AI Agent Review flagged for a domain-expert decision",
+  "agreeing_works": [
+    "HDXTRBUK",
+    "JFDBPUBN"
+  ],
+  "disagreeing_works": [
+    "7VFNS5R3",
+    "8JR5AGRG",
+    "8MRNK6FX"
+  ],
+  "drawn": [
+    "7VFNS5R3",
+    "8JR5AGRG",
+    "8MRNK6FX",
+    "HDXTRBUK",
+    "JFDBPUBN"
+  ],
+  "flagged_additions": [
+    "6TAA76Q4"
+  ],
+  "fields": [
+    "AN_Task",
+    "AN_Gender_Definition",
+    "AN_Bias_Definition",
+    "AN_Gender_Understanding",
+    "AN_Theory_Reference",
+    "AN_Bias_Axes",
+    "AN_Harm_Types"
+  ],
+  "flag_reasons": {
+    "6TAA76Q4": "recode derives Unclear for a work earlier coded Include",
+    "7VFNS5R3": "Evaluated rests on a course against a gender gap in AI learning, AN_Task for an AI-literacy course",
+    "8JR5AGRG": "Intersectional although the work names intersectional analysis as open, Proposed for a model comparison",
+    "8MRNK6FX": "Socioeconomic from one example sentence, Direct_Discrimination for an unclassified allocative disadvantage",
+    "HDXTRBUK": "theory reference via critical posthumanism, the run codes its own codebook anchor work",
+    "JFDBPUBN": "Social_Construct with Binary_Categorical"
+  },
+  "track_agreement_sha256": "08ba9c3a13614f258d7719c178bb0d4bb058b1093f21b2643499574f2661e920"
+}

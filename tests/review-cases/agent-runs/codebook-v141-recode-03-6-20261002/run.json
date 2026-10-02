@@ -1,0 +1,515 @@
+{
+  "schema": "femprompt-prisma-agent-run/1.4",
+  "run_id": "codebook-v141-recode-03-6-20261002",
+  "status": "completed",
+  "lifecycle": {
+    "baseline": "identified",
+    "state": "completed",
+    "target": "ai-agent-reviewed",
+    "events": [
+      {
+        "event_id": "codebook-v141-recode-03-6-20261002:started",
+        "event_type": "run_started",
+        "from": "prepared",
+        "to": "running",
+        "activity_id": "codebook-v141-recode-03-6-20261002:source-coding",
+        "at": "2026-10-02T12:18:00Z",
+        "actor_ids": [
+          "codebook-v141-recode-03-6-20261002-ar1",
+          "codebook-v141-recode-03-6-20261002-ar2"
+        ]
+      },
+      {
+        "event_id": "codebook-v141-recode-03-6-20261002:completed",
+        "event_type": "run_completed_after_review_and_integration",
+        "from": "running",
+        "to": "completed",
+        "activity_id": "codebook-v141-recode-03-6-20261002:deterministic-integration",
+        "at": "2026-10-02T12:31:29Z",
+        "actor_ids": [
+          "codebook-v141-recode-03-6-20261002-ai-agent-review"
+        ]
+      }
+    ]
+  },
+  "codebook": {
+    "path": "assessment/categories.yaml",
+    "version": "1.4.1",
+    "sha256": "7b95295702c0ec4054e018a95327371f927a526256d2fea7060f54d0e8d47acd"
+  },
+  "prompt": {
+    "path": "prompts/prism-agent-reviewer-v1.4.md",
+    "version": "1.4",
+    "sha256": "bd7e2317a1fa720adb56e9926445af2e4d5cec2aa4400f4cecbab6c66428a18d"
+  },
+  "baseline": {
+    "commit": "c26fbca444727466621f3f5a7e54a3f23c54ef35"
+  },
+  "assignment": {
+    "complete": true,
+    "papers": [
+      {
+        "paper_id": "2EBHMYU4",
+        "title": "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action",
+        "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+        "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "2EBHMYU4",
+          "SJLJ2GHC",
+          "X54V3JMF"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": true,
+        "source": {
+          "path": "docs/data/fulltext/2EBHMYU4.md",
+          "sha256": "a2c87d3702b11a580f428735a07d20da3cbdc595f12b39952b9dd85d18044193",
+          "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca"
+        },
+        "recode_of": {
+          "2EBHMYU4": {
+            "annotation_id": "ar2:2EBHMYU4",
+            "record_sha256": "061216c84367faa639b814ccbccc67264041b00f42574387c09088a47ae4292d"
+          }
+        }
+      },
+      {
+        "paper_id": "4ZL5Q48E",
+        "title": "Algorithmic management in a work context",
+        "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
+        "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "4ZL5Q48E",
+          "9KDFMECH"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": true,
+        "source": {
+          "path": "docs/data/fulltext/4ZL5Q48E.md",
+          "sha256": "58a9ba0d83ec069d5566290affdd4929b6f0532e2a90a06c508a8741b67dfa86",
+          "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833"
+        },
+        "recode_of": {
+          "4ZL5Q48E": {
+            "annotation_id": "ar2:4ZL5Q48E",
+            "record_sha256": "e705ad660b8345303e25fcd392adeee0a750614091cff938ce52276a55668c86"
+          }
+        }
+      },
+      {
+        "paper_id": "7FBB2KUC",
+        "title": "Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit: Eine exemplarische arbeitsfeldübergreifende Betrachtung des Natural Language Processing (NLP)",
+        "work_id": "work:f84da843-9f89-5484-9cde-38ea256a6a92",
+        "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "7FBB2KUC",
+          "JNLPSHD5",
+          "MA3LBJS6"
+        ],
+        "human_coverage": true,
+        "ai_agent_review_coverage": true,
+        "source": {
+          "path": "docs/data/fulltext/7FBB2KUC.md",
+          "sha256": "29d119217981f46b3af7a8a64d29740c26e4f094f84b55d4ef57819d27534fff",
+          "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5"
+        },
+        "recode_of": {
+          "MA3LBJS6": {
+            "annotation_id": "ar2:MA3LBJS6",
+            "record_sha256": "6462fef3274e0d0c86025e3da8a7b6ed2ccaa1f450ef88f0c5c92dd1d9df28a2"
+          }
+        }
+      },
+      {
+        "paper_id": "A2P8MXMY",
+        "title": "Algorithmic justice in child protection: Statistical fairness, social justice and the implications for practice",
+        "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+        "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "A2P8MXMY",
+          "QZRHHAE2"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": true,
+        "source": {
+          "path": "docs/data/fulltext/A2P8MXMY.md",
+          "sha256": "ecbc9b145a7e79aef51c21b91d52427e930fa65a211b9da34be6dbc29ec06b4b",
+          "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368"
+        },
+        "recode_of": {
+          "A2P8MXMY": {
+            "annotation_id": "ar2:A2P8MXMY",
+            "record_sha256": "8281a2fe8b19510ae258e63fabef8ea7e1dda1f0953d4eb731901a201d641cbe"
+          }
+        }
+      },
+      {
+        "paper_id": "AHUSFEEA",
+        "title": "AI & Intersectionality: A Toolkit For Fairness & Inclusion",
+        "work_id": "work:b80e0d75-d2fe-580a-8280-409f436e0c1c",
+        "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+        "version_type": "unknown",
+        "preferred_version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "AHUSFEEA",
+          "J5EF9W6M"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": true,
+        "source": {
+          "path": "docs/data/fulltext/AHUSFEEA.md",
+          "sha256": "0e68f50a12c1b96a6d1d874f5c34163bcae55882bcf7f620ee6f4eb42e109cee",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2"
+        },
+        "recode_of": {
+          "J5EF9W6M": {
+            "annotation_id": "ar2:J5EF9W6M",
+            "record_sha256": "78ce2c3321eaa06a648f960cbfd87b79840a9dc11680194beca878b90593f53d"
+          }
+        }
+      },
+      {
+        "paper_id": "INQNDHTI",
+        "title": "Ethics & AI: A systematic review on ethical concerns and related strategies for designing with AI in healthcare",
+        "work_id": "work:f2c7ca3f-eef7-5a22-a833-ae72ab6fa083",
+        "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+        "version_type": "version_of_record",
+        "preferred_version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+        "selected_version_is_preferred": true,
+        "record_ids": [
+          "INQNDHTI",
+          "P4YQIKJX"
+        ],
+        "human_coverage": false,
+        "ai_agent_review_coverage": true,
+        "source": {
+          "path": "docs/data/fulltext/INQNDHTI.md",
+          "sha256": "2c53bd1a871bf0cd282df8a932ee998ee3feb5435ee5f42c4bf7db19252f7092",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38"
+        },
+        "recode_of": {
+          "P4YQIKJX": {
+            "annotation_id": "ar2:P4YQIKJX",
+            "record_sha256": "5bc075daae8ba1fb0ad36173ca3583d8f08ac632e2787d02ddd1751fd25e2d5d"
+          }
+        }
+      }
+    ]
+  },
+  "isolation": {
+    "mode": "operational",
+    "epistemic_independence_claimed": false,
+    "model_diversity": "same_model",
+    "explanation": "Each agent track runs in its own harness context with its own working folder, reviewer identity, coding packet, report and output path, and reads the same frozen criteria and Paper sources. Operational separation records execution conditions and establishes no epistemic independence. Two tracks on the same model are less independent than two tracks on different models."
+  },
+  "actors": [
+    {
+      "id": "codebook-v141-recode-03-6-20261002-ar1",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar1"
+    },
+    {
+      "id": "codebook-v141-recode-03-6-20261002-ar2",
+      "type": "ai_agent",
+      "role": "reviewer",
+      "reviewer_id": "ar2"
+    },
+    {
+      "id": "codebook-v141-recode-03-6-20261002-ai-agent-review",
+      "type": "ai_agent",
+      "role": "ai_agent_reviewer"
+    }
+  ],
+  "timestamps": {
+    "created_at": "2026-10-02T12:16:47Z",
+    "started_at": "2026-10-02T12:18:00Z",
+    "completed_at": "2026-10-02T12:31:29Z"
+  },
+  "execution": {
+    "mode": "blinded_source_review_with_deterministic_prism_roundtrip",
+    "reason": "Operationally isolated agents create source-grounded coding packets in a harness-agnostic AI harness run. The orchestrator transfers validated packets deterministically through the production PRISM functions.",
+    "required_controls": [
+      "Reviewer agents may read only the frozen rules, manifest and assigned Paper sources, and write only to their own working folder.",
+      "Reviewer agents may not inspect previous judgments, knowledge distillates, the other track, or productive screening data.",
+      "The orchestrator projects validated values mechanically and may not resolve substantive ambiguity during transfer."
+    ],
+    "coding_packet_validation": {
+      "command": "node tests/review-cases/validate-coding-packet.mjs tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/run.json <reviewer-id>",
+      "result": "pass",
+      "records": 12
+    },
+    "frontend_roundtrip": {
+      "method": "deterministic_projection_with_prism_frontend_roundtrip",
+      "command": "node tests/review-cases/roundtrip-prism-track.mjs tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/run.json <reviewer-id> tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/tracks/<reviewer-id>-projection.json tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/tracks/<reviewer-id>.json",
+      "result": "pass",
+      "records": 12,
+      "production_functions": [
+        "validateReviewerPayload",
+        "importReviewerPayload",
+        "recordRequirements",
+        "reviewerFileText"
+      ],
+      "transfer_actor": "agent"
+    },
+    "protocol_basis": "knowledge/update-protocol.md#Agent-assisted completion",
+    "purpose": "Recode under codebook 1.4.1 of included works coded under codebook 1.3, batch 3 of 3, superseding the active agent annotation (ADR-046).",
+    "track_agreement": {
+      "command": "python -m src.assess.agent_track_diagnostics tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002 --output tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/track-agreement.json",
+      "path": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/track-agreement.json",
+      "sha256": "30117e55325225f5411fe560fe88125f82d84e660ee9a40225be01627f198163",
+      "label": "workflow_diagnostic_not_accuracy"
+    }
+  },
+  "tracks": [
+    {
+      "reviewer_id": "ar1",
+      "actor_id": "codebook-v141-recode-03-6-20261002-ar1",
+      "actor_type": "ai_agent",
+      "execution_environment": {
+        "harness": "Claude Code subagent",
+        "provider": "Anthropic",
+        "model": "opus",
+        "model_id": "claude-opus-5-5"
+      },
+      "paper_ids": [
+        "2EBHMYU4",
+        "4ZL5Q48E",
+        "7FBB2KUC",
+        "A2P8MXMY",
+        "AHUSFEEA",
+        "INQNDHTI"
+      ],
+      "source_assignments": [
+        {
+          "paper_id": "2EBHMYU4",
+          "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+          "source_path": "docs/data/fulltext/2EBHMYU4.md",
+          "source_sha256": "a2c87d3702b11a580f428735a07d20da3cbdc595f12b39952b9dd85d18044193"
+        },
+        {
+          "paper_id": "4ZL5Q48E",
+          "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+          "source_path": "docs/data/fulltext/4ZL5Q48E.md",
+          "source_sha256": "58a9ba0d83ec069d5566290affdd4929b6f0532e2a90a06c508a8741b67dfa86"
+        },
+        {
+          "paper_id": "7FBB2KUC",
+          "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+          "source_path": "docs/data/fulltext/7FBB2KUC.md",
+          "source_sha256": "29d119217981f46b3af7a8a64d29740c26e4f094f84b55d4ef57819d27534fff"
+        },
+        {
+          "paper_id": "A2P8MXMY",
+          "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+          "source_path": "docs/data/fulltext/A2P8MXMY.md",
+          "source_sha256": "ecbc9b145a7e79aef51c21b91d52427e930fa65a211b9da34be6dbc29ec06b4b"
+        },
+        {
+          "paper_id": "AHUSFEEA",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_path": "docs/data/fulltext/AHUSFEEA.md",
+          "source_sha256": "0e68f50a12c1b96a6d1d874f5c34163bcae55882bcf7f620ee6f4eb42e109cee"
+        },
+        {
+          "paper_id": "INQNDHTI",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_path": "docs/data/fulltext/INQNDHTI.md",
+          "source_sha256": "2c53bd1a871bf0cd282df8a932ee998ee3feb5435ee5f42c4bf7db19252f7092"
+        }
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/tracks/ar1-coding.json",
+      "coding_packet_sha256": "3650076b0df977784ec780c51d92c97fb05656af481f86c40827d696e16252af",
+      "report": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/reports/ar1.md",
+      "report_sha256": "916c1d82683e1e327f0792107077c1b0f5ba0297dd0917b2ec43e2ecd261eac4",
+      "started_at": "2026-10-02T12:22:16Z",
+      "completed_at": "2026-10-02T12:24:03Z",
+      "output": {
+        "path": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/tracks/ar1.json",
+        "sha256": "e0ec01c5f669c37f7b01939883cccf5deaa366705e37f7fe7c4a8c98d6d3369e"
+      }
+    },
+    {
+      "reviewer_id": "ar2",
+      "actor_id": "codebook-v141-recode-03-6-20261002-ar2",
+      "actor_type": "ai_agent",
+      "execution_environment": {
+        "harness": "Claude Code subagent",
+        "provider": "Anthropic",
+        "model": "opus",
+        "model_id": "claude-opus-5-5"
+      },
+      "paper_ids": [
+        "2EBHMYU4",
+        "4ZL5Q48E",
+        "7FBB2KUC",
+        "A2P8MXMY",
+        "AHUSFEEA",
+        "INQNDHTI"
+      ],
+      "source_assignments": [
+        {
+          "paper_id": "2EBHMYU4",
+          "version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+          "source_path": "docs/data/fulltext/2EBHMYU4.md",
+          "source_sha256": "a2c87d3702b11a580f428735a07d20da3cbdc595f12b39952b9dd85d18044193"
+        },
+        {
+          "paper_id": "4ZL5Q48E",
+          "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
+          "source_path": "docs/data/fulltext/4ZL5Q48E.md",
+          "source_sha256": "58a9ba0d83ec069d5566290affdd4929b6f0532e2a90a06c508a8741b67dfa86"
+        },
+        {
+          "paper_id": "7FBB2KUC",
+          "version_id": "version:8684153b-225d-5ed2-b706-4df0d799f3d5",
+          "source_path": "docs/data/fulltext/7FBB2KUC.md",
+          "source_sha256": "29d119217981f46b3af7a8a64d29740c26e4f094f84b55d4ef57819d27534fff"
+        },
+        {
+          "paper_id": "A2P8MXMY",
+          "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+          "source_path": "docs/data/fulltext/A2P8MXMY.md",
+          "source_sha256": "ecbc9b145a7e79aef51c21b91d52427e930fa65a211b9da34be6dbc29ec06b4b"
+        },
+        {
+          "paper_id": "AHUSFEEA",
+          "version_id": "version:1f212027-d4ce-570f-960f-49a89d1b50c2",
+          "source_path": "docs/data/fulltext/AHUSFEEA.md",
+          "source_sha256": "0e68f50a12c1b96a6d1d874f5c34163bcae55882bcf7f620ee6f4eb42e109cee"
+        },
+        {
+          "paper_id": "INQNDHTI",
+          "version_id": "version:54cf8de3-1586-55df-b963-b7e57f1b8b38",
+          "source_path": "docs/data/fulltext/INQNDHTI.md",
+          "source_sha256": "2c53bd1a871bf0cd282df8a932ee998ee3feb5435ee5f42c4bf7db19252f7092"
+        }
+      ],
+      "coding_packet": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/tracks/ar2-coding.json",
+      "coding_packet_sha256": "ef896d95a7a8d51ff2d419332f4e7d8a3239bf2c414a9f98cffaf6c85b58e028",
+      "report": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/reports/ar2.md",
+      "report_sha256": "2a7d4c8eebc6eed320bb85b4e040f6301fbdd260bd8fd1f3e4a990a79860fbe9",
+      "started_at": "2026-10-02T12:18:00Z",
+      "completed_at": "2026-10-02T12:23:37Z",
+      "output": {
+        "path": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/tracks/ar2.json",
+        "sha256": "bf0eae908902d0b13bd79aa24d573c4f1578e93c63960cd7d00da19878b734d4"
+      }
+    }
+  ],
+  "provenance": {
+    "activities": [
+      {
+        "id": "codebook-v141-recode-03-6-20261002:ai-agent-review",
+        "type": "ai_agent_review",
+        "run_id": "codebook-v141-recode-03-6-20261002",
+        "method": "source_grounded_ai_agent_review",
+        "prompt": {
+          "path": "prompts/prism-ai-agent-review-v0.4.md",
+          "version": "0.4",
+          "sha256": "31397d6b4d87e435755592a18cabb386f400ee94b8b43d87224076f163614050"
+        },
+        "model": {
+          "provider": "Anthropic",
+          "model": "opus",
+          "immutable_model_id": "claude-opus-5-5"
+        },
+        "execution_environment": {
+          "harness": "Claude Code subagent",
+          "provider": "Anthropic",
+          "model": "opus",
+          "model_id": "claude-opus-5-5"
+        },
+        "associated_actor_ids": [
+          "codebook-v141-recode-03-6-20261002-ai-agent-review"
+        ],
+        "status": "completed",
+        "actor_id": "codebook-v141-recode-03-6-20261002-ai-agent-review",
+        "actor_type": "ai_agent",
+        "input_track_ids": [
+          "ar1",
+          "ar2"
+        ],
+        "source_basis": "assigned paper/source records",
+        "started_at": "2026-10-02T12:31:29Z",
+        "completed_at": "2026-10-02T12:31:29Z",
+        "outputs": [
+          {
+            "kind": "ai_agent_review",
+            "path": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/ai-agent-review.json",
+            "sha256": "fb29eb2905aed28b7b7c27b2da506fb9014f096063c057d7344c1e1ecdbee572"
+          },
+          {
+            "kind": "ai_agent_review_report",
+            "path": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/reports/ai-agent-review.md",
+            "sha256": "f8336cb696c651635cf8211ab1ae89d908992828cf9909b2b93adefd378a3d55"
+          }
+        ]
+      }
+    ]
+  },
+  "outputs": [
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar1",
+      "path": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/tracks/ar1.json",
+      "sha256": "e0ec01c5f669c37f7b01939883cccf5deaa366705e37f7fe7c4a8c98d6d3369e"
+    },
+    {
+      "kind": "agent_track",
+      "reviewer_id": "ar2",
+      "path": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/tracks/ar2.json",
+      "sha256": "bf0eae908902d0b13bd79aa24d573c4f1578e93c63960cd7d00da19878b734d4"
+    },
+    {
+      "kind": "ai_agent_review",
+      "path": "tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/ai-agent-review.json",
+      "sha256": "fb29eb2905aed28b7b7c27b2da506fb9014f096063c057d7344c1e1ecdbee572"
+    }
+  ],
+  "integration": {
+    "status": "integrated",
+    "method": "append_only_validated_product_merge",
+    "target": "docs/data/screening/ar2.json",
+    "integrated_at": "2026-10-02T12:38:07Z",
+    "base_commit": "c26fbca444727466621f3f5a7e54a3f23c54ef35",
+    "base_sha256": "sha256:3249ed929035380d5e3f9262e63ad46f9f51b32952bc3528fb30d258c461f52d",
+    "preexisting_record_count": 191,
+    "preexisting_records_preserved": true,
+    "new_record_ids": [
+      "7FBB2KUC",
+      "9KDFMECH",
+      "AHUSFEEA",
+      "INQNDHTI",
+      "JNLPSHD5",
+      "QZRHHAE2",
+      "SJLJ2GHC",
+      "X54V3JMF"
+    ],
+    "recoded_record_ids": [
+      "2EBHMYU4",
+      "4ZL5Q48E",
+      "A2P8MXMY",
+      "J5EF9W6M",
+      "MA3LBJS6",
+      "P4YQIKJX"
+    ],
+    "withheld_records": [],
+    "resulting_sha256_at_merge": "sha256:68924c92784904258bc82649d4e5ff37239d704645b8b3f99887b6da5af93124",
+    "merge_command": "python -m src.assess.merge_ai_agent_product docs/data/screening/ar2.json tests/review-cases/agent-runs/codebook-v141-recode-03-6-20261002/product-v0.5.json docs/data/screening/ar2.json",
+    "id": "codebook-v141-recode-03-6-20261002:deterministic-integration",
+    "actor_id": "orchestrator"
+  }
+}
