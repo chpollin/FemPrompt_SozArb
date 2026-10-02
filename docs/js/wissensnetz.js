@@ -592,19 +592,20 @@ function onHover(event) {
 }
 
 // Tooltip of a figure item, beside the pointer on an edge, or beside the node itself on a
-// node or a focused item. Four corners around that anchor box are scored by what each
-// would cover: the anchor and the selected node must stay visible, count labels and the
-// work list should, other nodes and their labels rather. The corner covering least wins,
-// a tie keeps the order below right, below left, above right, above left, and every
+// node or a focused item. Four corners around that anchor box are compared first by
+// whether they cover the anchor or the selected node, which the tooltip must never do,
+// then by how much of the count labels, the work list and the other nodes they cover.
+// A tie keeps the order below right, below left, above right, above left, and every
 // corner is clamped into the viewport, so near an edge it flips.
 const TIP_GAP = 16;
-function tipPosition(at, size, view, avoid) {
+function tipPosition(at, size, view, hard, soft) {
     const right = at.x + (at.w || 0) + TIP_GAP;
     const left = at.x - TIP_GAP - size.w;
     const below = at.y + (at.h || 0) + TIP_GAP;
     const above = at.y - TIP_GAP - size.h;
     const corners = [[right, below], [left, below], [right, above], [left, above]];
-    const all = [{ x: at.x - 6, y: at.y - 6, w: (at.w || 0) + 12, h: (at.h || 0) + 12, weight: 1000 }].concat(avoid);
+    const must = [{ x: at.x - 6, y: at.y - 6, w: (at.w || 0) + 12, h: (at.h || 0) + 12 }].concat(hard);
+    const area = function (box, list) { return list.reduce(function (sum, o) { return sum + overlapArea(box, o); }, 0); };
     let best = null;
     corners.forEach(function (c) {
         const box = {
@@ -612,15 +613,15 @@ function tipPosition(at, size, view, avoid) {
             y: Math.max(8, Math.min(c[1], view.h - size.h - 8)),
             w: size.w, h: size.h,
         };
-        const cost = all.reduce(function (sum, o) { return sum + overlapArea(box, o) * (o.weight || 1); }, 0);
-        if (!best || cost < best.cost) best = { cost: cost, left: box.x, top: box.y };
+        const covers = area(box, must), cost = area(box, soft);
+        if (!best || covers < best.covers || (covers === best.covers && cost < best.cost)) best = { covers: covers, cost: cost, left: box.x, top: box.y };
     });
     return best;
 }
 
-function rectOf(el, weight) {
+function rectOf(el) {
     const r = el.getBoundingClientRect();
-    return { x: r.left, y: r.top, w: r.width, h: r.height, weight: weight };
+    return { x: r.left, y: r.top, w: r.width, h: r.height };
 }
 
 // The tooltip repeats the item's aria-label, so it is hidden from assistive technology.
@@ -634,14 +635,15 @@ function showTip(item, at) {
     }
     tip.firstChild.textContent = item.getAttribute('aria-label');
     tip.hidden = false;
+    // Measured at the origin, an absolutely placed box near the right edge would shrink to fit.
+    tip.style.left = tip.style.top = '0px';
     const box = tip.getBoundingClientRect();
-    const avoid = [];
-    root.querySelectorAll('#wn-figure .wn-node.is-selected .wn-dot').forEach(function (el) { avoid.push(rectOf(el, 1000)); });
-    root.querySelectorAll('#wn-figure .wn-pill').forEach(function (el) { avoid.push(rectOf(el, 20)); });
+    const hard = [], soft = [];
+    root.querySelectorAll('#wn-figure .wn-node.is-selected .wn-dot').forEach(function (el) { hard.push(rectOf(el)); });
+    root.querySelectorAll('#wn-figure .wn-pill, #wn-figure .wn-label, #wn-figure .wn-node:not(.is-selected) .wn-dot').forEach(function (el) { soft.push(rectOf(el)); });
     const detail = root.querySelector('#wn-detail');
-    if (!detail.hidden) avoid.push(rectOf(detail, 50));
-    root.querySelectorAll('#wn-figure .wn-label, #wn-figure .wn-node:not(.is-selected) .wn-dot').forEach(function (el) { avoid.push(rectOf(el, 2)); });
-    const spot = tipPosition(at, { w: box.width, h: box.height }, { w: document.documentElement.clientWidth, h: window.innerHeight }, avoid);
+    if (!detail.hidden) soft.push(rectOf(detail));
+    const spot = tipPosition(at, { w: box.width, h: box.height }, { w: document.documentElement.clientWidth, h: window.innerHeight }, hard, soft);
     tip.style.left = spot.left + window.scrollX + 'px';
     tip.style.top = spot.top + window.scrollY + 'px';
 }
