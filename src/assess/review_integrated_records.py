@@ -1,9 +1,10 @@
 """Write AI source-review receipts for records an agent run integrated into PRISM.
 
-For every record in ``integration.new_record_ids`` of the given runs the reviewing
-agent compares the current productive record with the run's product and final
-AI Agent Review coding, resolves every evidence snippet in the tracked reading
-source, checks the Work-Version identity against the registry and confirms the
+For every record in ``integration.new_record_ids`` and ``recoded_record_ids`` of
+the given runs the reviewing agent compares the current productive record with
+the run's product and final AI Agent Review coding, resolves every evidence
+snippet in the tracked reading source, checks the Work-Version identity against
+the registry and confirms the
 lifecycle stops at ai-agent-reviewed. A record passes only if every check holds;
 otherwise the receipt says changes_requested and names the failed checks.
 
@@ -225,7 +226,8 @@ def main() -> None:
         runs.append(run["run_id"])
         for name in ("run.json", "product-v0.5.json", "ai-agent-review.json"):
             inputs.append({"path": f"{run_dir}/{name}", "sha256": artifact_hash(REPO, f"{run_dir}/{name}")})
-        for record_id in run["integration"]["new_record_ids"]:
+        integration = run["integration"]
+        for record_id in [*integration["new_record_ids"], *integration.get("recoded_record_ids", [])]:
             reviews.append(review_record(record_id, run_dir, run, product, review, current, registry, manifest, started))
             scope.append(record_id)
     for path in (ARGS.target, REGISTRY, MANIFEST):

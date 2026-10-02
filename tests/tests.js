@@ -2250,6 +2250,35 @@ test('a paper with only an agent record starts empty for a human and saves as an
     delete S.reviewers.ev;
 });
 
+test('a recoded agent record names its recode in provenance and history and stays out of human sessions (ADR-044, ADR-046)', function() {
+    var record = agentRecordFixture('RC1');
+    var recode = JSON.parse(JSON.stringify(record.annotations[0]));
+    recode.annotation_id = 'ar2:RC1:run-2';
+    recode.annotation_type = 'ai_agent_recode';
+    recode.supersedes = 'ar2:RC1';
+    recode.codebook_version = '1.4.1';
+    recode.at = '2026-10-02T10:00:00.000Z';
+    record.annotations.push(recode);
+    record.active_annotation_id = recode.annotation_id;
+    record.lifecycle.events.push({ event_id: 'RC1:run-2:ai-agent-recode', event_type: 'ai_agent_recode', from: 'ai-agent-reviewed',
+        to: 'ai-agent-reviewed', result: 'accepted', at: recode.at, activity_id: 'RC1:run-2:ai-agent-review', actor_ids: ['review-1'],
+        annotation_id: recode.annotation_id });
+    var provenance = T.provenanceHtml(record);
+    assertContains(provenance, 'KI-Neukodierung nach Codebuch 1.4.1, ersetzt ar2:RC1, aktiv');
+    var history = T.historyHtml(record);
+    assertContains(history, 'KI-Neukodierung 02.10.2026');
+    assertNotContains(history, 'bestätigt 02.10.2026', 'a recode is no confirmation');
+    var p = { id: 'RC1', title: 'X' };
+    T.setPapers([p]);
+    var S = T.getState();
+    S.reviewer = 'ev'; S.reviewers.ev = {}; S.index = 0;
+    T.setServedAgentEnvelope(agentEnvelope({ RC1: record }));
+    assertEqual(T.paperSubject(p).kind, 'empty', 'a recoded agent record is no subject of a human session');
+    assertEqual(Object.keys(T.draftFor(p).cats).length, 0, 'and seeds no draft');
+    T.setServedAgentEnvelope(null);
+    delete S.reviewers.ev;
+});
+
 test('list dots and the category filter never show agent or LLM codes (ADR-044)', function() {
     var papersFix = [
         { id: 'D1', title: 'agent only', llm: { decision: 'Include', all_categories: { Gender: 1, Prompting: 1 } } },

@@ -329,7 +329,7 @@
       "properties": {
         "annotation_id": { "type": "string", "minLength": 1 },
         "annotation_type": {
-          "enum": ["screening_decision", "domain_expert_correction"]
+          "enum": ["screening_decision", "domain_expert_correction", "ai_agent_recode"]
         },
         "at": { "$ref": "#/$defs/timestamp" },
         "actor_ids": {
@@ -523,6 +523,7 @@
                 "enum": [
                   "agent_annotation",
                   "ai_agent_review",
+                  "ai_agent_recode",
                   "domain_expert_verification",
                   "publication_approval"
                 ]

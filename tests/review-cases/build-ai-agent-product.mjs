@@ -74,6 +74,12 @@ function main() {
           representative_record_id: paper.paper_id,
         },
       ]))),
+      // Records an AI Agent Review already covers are recoded against the exact
+      // productive record the manifest binds; migration appends to their history.
+      ...(run.assignment.papers.some((paper) => paper.recode_of)
+        ? { recodes: Object.fromEntries(run.assignment.papers.flatMap((paper) => Object.entries(paper.recode_of || {}))
+          .sort(([left], [right]) => left.localeCompare(right))) }
+        : {}),
       work_assignments: run.assignment.papers.map((paper) => ({
         work_id: paper.work_id,
         version_id: paper.version_id,

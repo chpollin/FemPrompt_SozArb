@@ -35,6 +35,7 @@ from src.assess.artifact_verification import (
     latest_screening_review,
     load_reviews,
     reviewed_screening_projection,
+    superseded_by_recode,
 )
 from src.file_hashing import file_sha256
 from src.replay import replay_round1
@@ -375,6 +376,14 @@ def _agent_records(
                 repo, artifact, record, outcomes
             )
             current_review = latest_screening_review(repo, artifact, outcomes)
+            # A recode leaves the receipt of the superseded record behind; the
+            # recoded record then needs a fresh review rather than counting as reviewed.
+            recoded_review = bool(
+                current_review
+                and superseded_by_recode(record, current_review.get("sha256"))
+            )
+            if recoded_review:
+                current_review = None
             if receipt:
                 inputs.add(receipt["artifact"].partition("#")[0])
             annotation = next(
@@ -417,6 +426,8 @@ def _agent_records(
                     "current_ai_source_review": _review_summary(current_review),
                     "current_ai_review_result": current_review["result"]
                     if current_review
+                    else "superseded_by_recode"
+                    if recoded_review
                     else "not_recorded",
                     "latest_original_ai_source_review": _review_summary(
                         outcomes.get(artifact)
@@ -723,6 +734,11 @@ def _work_rows(
             )
         if stale_reviews:
             actions.append("renew_source_review_for_the_current_source_binding")
+        if any(
+            row.get("current_ai_review_result") == "superseded_by_recode"
+            for row in agent_rows
+        ):
+            actions.append("renew_ai_source_review_of_the_recoded_record")
         if effective == "Include" and not field_values:
             actions.append("complete_source_bound_SQ1_to_SQ5_coding")
         if work_resolution:
@@ -1767,6 +1783,7 @@ This directory is an internal operator package and is not a website release inpu
 | human_verification | Historical CSV evidence or missing evidence; never a fabricated current lifecycle event. |
 | agent_records | Active annotation, lifecycle events, actor/model provenance, source references and legacy gaps as recorded. |
 | current_ai_source_review | Current accepted source-hash-bound review with actual agent, disclosed model, time and substantive findings; historical provenance remains separate. |
+| current_ai_review_result superseded_by_recode | The latest receipt reviewed the record version that an agent recode superseded (ADR-046). The recoded record counts as not yet source-reviewed and carries the next action renew_ai_source_review_of_the_recoded_record. |
 | applied_ai_correction / original_analysis | Immutable correction projection and original coding side by side; correction base artifact/hash and each field change remain auditable. |
 | ai_correction_provenance | Work-queue references to each correction, its immutable basis, hashes and correcting/reviewing agent, model and dates. |
 | open_ai_source_review_record_ids | Negative or unverifiable source reviews with no accepted correction; affected work coding is not counted in interim SQ tables. |

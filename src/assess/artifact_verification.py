@@ -32,6 +32,20 @@ def record_hash(record: Any) -> str:
     return "sha256:" + hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+def superseded_by_recode(record: Any, sha256: Any) -> bool:
+    """Whether an agent recode replaced the exact record version a receipt binds.
+
+    Such a receipt is stale by design (ADR-046). It is withheld rather than
+    rejected as tampering, so the recoded record awaits a fresh source review.
+    """
+    return isinstance(record, dict) and any(
+        isinstance(annotation, dict)
+        and annotation.get("annotation_type") == "ai_agent_recode"
+        and annotation.get("supersedes_record_sha256") == sha256
+        for annotation in record.get("annotations", [])
+    )
+
+
 def safe_path(repo: Path, reference: str) -> Path:
     if not isinstance(reference, str) or not reference or "\\" in reference:
         raise ValueError("Expected a nonempty repository-relative POSIX path")
@@ -213,6 +227,8 @@ def reviewed_screening_projection(repo: Path, artifact: str, decision: dict, rev
         projected, correction = screening_correction(repo, receipt, decision, artifact)
         return projected, receipt, correction
     if receipt.get("sha256") != record_hash(decision):
+        if superseded_by_recode(decision, receipt.get("sha256")):
+            return decision, None, None
         raise ValueError(f"Stale AI verification receipt: {artifact}")
     return decision, receipt, None
 
@@ -271,6 +287,10 @@ outcomes can describe obsolete artifacts without blocking an unrelated release.
         if receipt["result"] != "accepted":
             continue
         if artifact_hash(repo, artifact) != receipt["sha256"]:
+            if "#/decisions/" in artifact and superseded_by_recode(
+                _json_value(repo, artifact), receipt["sha256"]
+            ):
+                continue
             raise ValueError(f"Stale AI review: {artifact}")
         if "#/corrections/" in artifact:
             correction = _json_value(repo, artifact)

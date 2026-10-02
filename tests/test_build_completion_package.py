@@ -1277,3 +1277,31 @@ def test_fields_introduced_later_are_not_collected_for_earlier_annotations():
     states = completion._field_states(rows, schema())
     task = next(r for r in states if r["track"] == "all" and r["field"] == "AN_Task")
     assert task["states"]["not_collected"]["count"] >= 1
+
+
+def test_recoded_record_with_an_old_receipt_needs_a_fresh_review(tmp_path):
+    """ADR-046: the receipt of the superseded record neither crashes nor counts as current."""
+    artifact = "docs/data/screening/ar2.json#/decisions/A"
+    body = {"decision": "Include", "analysis": {"fields": {"AN_Task": ["None"]}}}
+    old = {**body, "active_annotation_id": "a1", "lifecycle": {"state": "ai-agent-reviewed"},
+           "annotations": [{"annotation_id": "a1", "annotation_type": "screening_decision", "body": body}]}
+    new_body = {"decision": "Include", "analysis": {"fields": {"AN_Task": ["Assessment"]}, "codebook_version": "1.4.1"}}
+    recoded = {**new_body, "active_annotation_id": "a2", "lifecycle": {"state": "ai-agent-reviewed"},
+               "annotations": [*old["annotations"], {"annotation_id": "a2", "annotation_type": "ai_agent_recode",
+                                                     "supersedes": "a1", "supersedes_record_sha256": record_hash(old),
+                                                     "body": new_body}]}
+    path = tmp_path / "docs/data/screening/ar2.json"
+    path.parent.mkdir(parents=True)
+    path.write_text(json.dumps({"schema": "femprompt-prisma-reviewer/0.5", "decisions": {"A": recoded}}), encoding="utf-8")
+    receipt = {"artifact": artifact, "sha256": record_hash(old), "result": "accepted", "agent_id": "/test/reviewer",
+               "model": "test-model", "reviewed_at": "2026-09-05T12:00:00Z", "findings": "Accepted."}
+
+    agents, issues = completion._agent_records(tmp_path, set(), {}, {artifact: receipt})
+    row = agents["A"][0]
+    assert not issues
+    assert row["current_ai_review_result"] == "superseded_by_recode"
+    assert row["current_ai_source_review"] is None
+    assert row["codebook_version"] == "1.4.1"
+    rows, _ = completion._work_rows(registry(), [], agents, {})
+    assert "renew_ai_source_review_of_the_recoded_record" in rows[0]["next_actions"]
+    assert rows[0]["analysis_codebook_versions"] == ["1.4.1"]

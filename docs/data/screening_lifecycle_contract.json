@@ -58,6 +58,13 @@
       "actor_type": "person",
       "role": "domain_expert",
       "results": ["changes_requested", "rejected"]
+    },
+    {
+      "state": "ai-agent-reviewed",
+      "event_type": "ai_agent_recode",
+      "actor_type": "ai_agent",
+      "role": "ai_agent_reviewer",
+      "results": ["accepted"]
     }
   ],
   "verification_results": [
@@ -76,6 +83,7 @@
   "authority": {
     "validation": "A deterministic script or schema checks structural and rule conformance. A passed check does not establish scholarly correctness.",
     "ai_agent_review": "An AI agent checks an annotation against its assigned sources. This review does not establish domain-expert verification.",
+    "ai_agent_recode": "A later governed agent run replaces the active agent annotation of an ai-agent-reviewed record with a complete coding under a newer codebook. The record stays ai-agent-reviewed and the superseded annotation remains in its history. A record with human verification or publication approval is never recoded.",
     "verification": "A named domain expert evaluates an artifact against its evidence and scholarly meaning and may accept, correct, request changes, or reject it.",
     "publication_approval": "A named person authorizes a verified artifact for the public projection."
   },

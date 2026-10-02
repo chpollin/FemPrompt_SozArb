@@ -202,6 +202,33 @@ assert(validateManifest(analysisOfScreenedWork).ok, 'analysis coding of a human-
 delete analysisOfScreenedWork.assignment.papers[0].human_coverage;
 assert(!validateManifest(analysisOfScreenedWork).ok, 'unrecorded human coverage was accepted');
 
+// The shared paper fixture leaks mutations between cases, so each recode case clones it.
+const recodeRun = () => {
+  const run = structuredClone(validManifest());
+  run.assignment.papers[0].human_coverage = false;
+  run.assignment.papers[0].ai_agent_review_coverage = true;
+  run.assignment.papers[0].recode_of = { 'PAPER-1': { annotation_id: 'ar2:PAPER-1', record_sha256: hash } };
+  return run;
+};
+assert(validateManifest(recodeRun()).ok, 'a declared recode of an AI-agent-reviewed work was rejected');
+const undeclaredReviewCoverage = recodeRun();
+delete undeclaredReviewCoverage.assignment.papers[0].recode_of;
+assert(!validateManifest(undeclaredReviewCoverage).ok, 'AI Agent Review coverage without a recode binding was accepted');
+const recodeWithoutCoverage = recodeRun();
+recodeWithoutCoverage.assignment.papers[0].ai_agent_review_coverage = false;
+assert(!validateManifest(recodeWithoutCoverage).ok, 'a recode that denies its AI Agent Review coverage was accepted');
+const recodeOutsideRecords = recodeRun();
+recodeOutsideRecords.assignment.papers[0].recode_of = { OTHER: { annotation_id: 'ar2:OTHER', record_sha256: hash } };
+assert(!validateManifest(recodeOutsideRecords).ok, 'a recode binding outside the assigned record IDs was accepted');
+const recodeWithoutHash = recodeRun();
+recodeWithoutHash.assignment.papers[0].recode_of['PAPER-1'].record_sha256 = 'sha256:abc';
+assert(!validateManifest(recodeWithoutHash).ok, 'a recode binding without a record hash was accepted');
+const historicalRecode = recodeRun();
+historicalRecode.schema = 'femprompt-prisma-agent-run/1.3';
+delete historicalRecode.codebook;
+historicalRecode.model = { provider: 'OpenAI', model: 'gpt-example', model_version: '2026-08-23' };
+assert(!validateManifest(historicalRecode).ok, 'a recode under a historical run schema was accepted');
+
 const missingRepresentativeAlias = validManifest();
 missingRepresentativeAlias.assignment.papers[0].record_ids = ['ALIAS-1'];
 assert(!validateManifest(missingRepresentativeAlias).ok, 'work without its representative record ID was accepted');
