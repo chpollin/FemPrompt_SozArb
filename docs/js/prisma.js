@@ -3884,11 +3884,14 @@ function railHtml(p) {
     if (record && !(subject.kind === 'empty' && !work.dirty)) h += decisionBadgeHtml(record, subject.kind === 'own' || (editable && work.dirty));
     const draft = drafts[p.id];
     let provenance = provenanceLine(p, subject);
-    // in Bearbeiten the mark beside the decision states the unsaved draft, so the line
-    // keeps only who decided; an empty draft has no one yet
-    if (editable && work.dirty && subject.kind === 'empty') provenance = '';
+    // in Bearbeiten the mark beside the decision states the unsaved draft; the line keeps
+    // who decided and says that it was changed, so it never claims a saved state the
+    // draft no longer has, and an empty draft has no one yet
+    if (editable && work.dirty) provenance = subject.kind === 'empty' ? '' : provenance.replace(/, gespeichert (.+)$/, ' vom $1') + ', geändert';
     else if (!editable && canEditAvailableDraft(draft)) provenance += ', Änderungen in Bearbeiten nicht gespeichert';
-    if (editable && work.dirty) h += '<span class="pt-save-mark is-dirty" role="img" aria-label="Nicht gespeichert" title="Nicht gespeichert"></span>';
+    // a pencil, not a dot, since dots beside it stand for categories
+    if (editable && work.dirty) h += '<span class="pt-save-mark is-dirty" role="img" aria-label="Nicht gespeichert" title="Nicht gespeichert">' +
+        '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M10.8 2.7l2.5 2.5-7.6 7.6-3.2.7.7-3.2z"/></svg></span>';
     else if (subject.kind === 'own' && !acceptanceMode) h += '<span class="pt-save-mark is-saved" role="img" aria-label="Gespeichert" title="Gespeichert">' +
         '<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span>';
     h += '</div>';
