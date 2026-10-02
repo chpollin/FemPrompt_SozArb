@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-01
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -915,3 +915,22 @@ Decision.
 Rationale. Separating the two tasks keeps the human work to the screening judgement and leaves the analysis coding with the agent track that already produces it under a governed prompt and run manifest.
 
 Effect. `docs/js/prisma.js` decides with `analysisRequired`, which holds for an agent Include only, and with `analysisStepOffered`, which holds for agent runs and the acceptance view. `recordRequirements` and `draftReasons` use the first, `railHtml` and `analysisEntryHtml` the second, and `commit` carries an existing human analysis part over unchanged. `tests/tests.js` checks the human and agent requirement, the absent step and the unchanged analysis part, and `tests/browser/pilot.mjs` saves a human Include without an analysis part. The help page states the division.
+
+### ADR-046 A governed agent recode supersedes the active agent annotation under a newer codebook
+
+Status. Implemented on 2026-10-02 on the branch `recode-v13-works` as commissioned by the operator. The operator's acceptance comes with the merge into `main`.
+
+Context. The productive agent track `docs/data/screening/ar2.json` holds included works whose active annotation was coded under codebook 1.3, while the analysis of SQ1 to SQ5 reads codebook 1.4.1. These records stand at `ai-agent-reviewed`. The run contract required `ai_agent_review_coverage: false` for every assigned work, the merge refused any divergent record, and the lifecycle knew only the person-attributed `domain_expert_correction` as a superseding annotation. A recode by the governed run procedure therefore had no contract.
+
+Decision.
+
+1. A recode is a full recode. The new annotation of type `ai_agent_recode` carries the complete coding of the new run's AI Agent Review, all ten categories, the decision and every analysis field. It records `supersedes` with the preceding annotation, `supersedes_record_sha256` with the canonical hash of the replaced record, the `codebook_version`, a `reason` naming the codebook change and the screening agents of the new run as actors. The record projection and `active_annotation_id` move to it, and the earlier annotations, activities, checks and events stay in the record as history.
+2. The lifecycle contract adds the non-transition event `ai_agent_recode` with result `accepted` at `ai-agent-reviewed`, attributed to the AI Agent Review actor of the new run. The state stays `ai-agent-reviewed`. Every recode annotation needs its event, and a non-transition event never changes the state.
+3. A record with a domain-expert verification or a publication-approval event, or outside `ai-agent-reviewed`, is never recoded. Migration, merge and manifest preparation refuse it.
+4. Run schema 1.4 gains the optional per-work `recode_of`, which maps each record ID of the work already in the productive track to its active annotation ID and the canonical hash of the exact record. Only such a work may record `ai_agent_review_coverage: true`.
+5. The merge replaces an existing record only when the product record ends in a recode whose `supersedes` is the existing active annotation, the existing annotations, baseline, events and checks are an exact prefix of the product record, and the manifest's bound hash equals the canonical hash of the existing record. Everything else keeps the append-only refusal. The `review_runs` entry lists the recoded IDs separately.
+6. An AI source-review receipt bound to the replaced record becomes stale by design. It is withheld instead of failing the build, and the recoded record counts as not yet source-reviewed until a fresh receipt exists.
+
+Rationale. One annotation carries one codebook version, so no record mixes fields of two runs and the state `not_collected` stays derivable from the active annotation. Binding the exact record hash in the manifest before the run makes a concurrent change of the productive record fail the merge instead of being overwritten. A recode by agents never touches human authority, which is why a verified or approved record stays out of reach.
+
+Effect. `docs/data/screening_lifecycle_contract.json` and `schemas/femprompt-prisma-reviewer-0.5.schema.json` carry the event and annotation type. `src/assess/screening_lifecycle.py` validates the recode annotation and event and appends the recode in `migrate --base`, `src/assess/merge_ai_agent_product.py` checks binding, supersession, history prefix and hash, `src/assess/prepare_coding_run.py --recode` writes `recode_of` for works coded under an older codebook, `src/assess/complete_coding_run.py` records `recoded_record_ids`, and `src/assess/review_integrated_records.py` issues receipts for them. `tests/review-cases/validate-run-contract.mjs` admits AI Agent Review coverage only with `recode_of`, and `tests/review-cases/build-ai-agent-product.mjs` passes the bindings to migration. `src/assess/artifact_verification.py` withholds a receipt that a recode superseded, and `src/analysis/build_completion_package.py` reports it as `superseded_by_recode` with the action to renew the review. PRISM labels the annotation and the event "KI-Neukodierung" in provenance and history, and ADR-044 keeps the recoded agent record out of human sessions. `tests/test_screening_lifecycle.py`, `tests/test_merge_ai_agent_product.py`, `tests/test_artifact_verification.py`, `tests/test_build_completion_package.py`, `tests/review-cases/verify-run-contract.mjs` and `tests/tests.js` cover the accepted recode and its refusals.

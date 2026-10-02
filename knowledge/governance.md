@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-01
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 topics: ["[[Research Governance]]", "[[Provenance]]", "[[Human-in-the-Loop]]"]
@@ -70,6 +70,8 @@ Operational isolation uses separate agent contexts, reviewer identities, assignm
 ## Corrections and re-execution
 
 A domain-expert correction creates a complete new annotation version. The correction records its reason, field-level differences, responsible person, timestamp, and the annotation it supersedes. Earlier versions remain immutable. Re-execution creates a new run and new provenance records, preserving the prior run as research evidence.
+
+A governed agent run under a newer codebook may recode an AI-agent-reviewed record with a complete `ai_agent_recode` annotation that supersedes the active one (ADR-046). The record stays `ai-agent-reviewed`, the earlier annotation stays in its history, and the run manifest binds the exact record it replaces. A recode grants no human authority and never reaches a record with domain-expert verification or publication approval.
 
 ## Publication boundary
 
