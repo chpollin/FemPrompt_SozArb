@@ -14,6 +14,9 @@ const UNDECIDABLE = '__undecidable';
 const ABSENT = '__absent';
 const EMPTY = '__empty';
 const STUDY_FIELD = 'Studientyp';
+// The schema's internal group values technik and sozial name the dimensions of the
+// screening rule; every view names the groups Gegenstand and Perspektive.
+const GROUP_LABELS = EC.CATEGORY_GROUP_LABELS = { object: 'Gegenstand', perspective: 'Perspektive' };
 
 // label, definition, value_labels and value_definitions in analysis_fields.json take
 // precedence when the pipeline emits them; without them the controlled identifier is
@@ -75,15 +78,15 @@ function createModel(input) {
     fields.fields.filter(function (field) { return !field.free_text && Array.isArray(field.values); })
         .forEach(function (field) { dims.push(fieldDimension(field)); });
     if (Array.isArray(fields.study_types) && fields.study_types.length) {
-        dims.push(fieldDimension({ name: STUDY_FIELD, label: STUDY_FIELD, multi: false, values: fields.study_types }));
+        // study_type carries the German value labels; the bare list remains the fallback.
+        dims.push(fieldDimension(Object.assign({ name: STUDY_FIELD, label: STUDY_FIELD, values: fields.study_types },
+            fields.study_type || {}, { multi: false })));
     }
     Object.keys(schema.groups || {}).forEach(function (group) {
         const members = schema.groups[group];
-        const first = categoryByKey[members[0]] || {};
-        const groupName = String(first.group || group);
         dims.push({
             id: group, kind: 'group', workLevel: false, process: false, values: members.slice(), definition: '',
-            label: 'Kategoriegruppe ' + groupName.charAt(0).toUpperCase() + groupName.slice(1),
+            label: 'Kategoriegruppe ' + (GROUP_LABELS[group] || group),
             statusKeys: [NONE, ABSENT],
             valueLabel: function (key) { return (categoryByKey[key] && categoryByKey[key].label) || humanise(key); },
             valueDefinition: function (key) { return (categoryByKey[key] && categoryByKey[key].definition) || ''; },

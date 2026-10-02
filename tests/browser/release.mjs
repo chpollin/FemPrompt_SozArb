@@ -99,6 +99,10 @@ check('model: category evidence keeps quote and record', fixture.evidenceFor(wor
 const neighbours = fixture.neighbours(fixture.includes, { dimId: 'AN_Bias_Axes', key: 'Gender' }, ['AN_Bias_Axes']);
 check('model: neighbours are co-coded terms without the ego', neighbours.length === 1 && neighbours[0].key === 'Age');
 check('model: search folds umlauts and diacritics', EC.fold('Diversität') === EC.fold('Diversitaet'));
+check('model: category groups carry the names Gegenstand and Perspektive', fixture.dim('object').label === 'Kategoriegruppe Gegenstand' &&
+  fixture.dim('perspective').label === 'Kategoriegruppe Perspektive');
+check('model: study types carry German labels', fixture.dim(fixture.STUDY_FIELD).valueLabel('Unclear') === 'Unklar');
+check('public category definitions carry no coding instruction', schema.categories.every(c => c.definition && !/WICHTIG/.test(c.definition) && !('examples_negative' in c)));
 
 // Browser acceptance against build/site.
 const mime = { '.html': 'text/html', '.js': 'text/javascript', '.json': 'application/json', '.css': 'text/css', '.woff2': 'font/woff2' };
@@ -157,6 +161,15 @@ try {
   check('answer meta lines carry no middle-dot separator', (await answer.locator('.work-meta, .evidence-locator, .assertion-meta, .review-line, .denominator, .open-works')
     .allTextContents()).every(t => !t.includes('·')));
   check('answer map cells link to the matrix', (await answer.locator('a.matrix-cell').first().getAttribute('href')).includes('view=matrix'));
+  const cellContrast = await answer.locator('a.matrix-cell').evaluateAll(cells => {
+    const rgb = color => { const cv = document.createElement('canvas'); cv.width = cv.height = 1; const ctx = cv.getContext('2d');
+      ctx.fillStyle = '#000'; ctx.fillStyle = color; ctx.fillRect(0, 0, 1, 1); return Array.from(ctx.getImageData(0, 0, 1, 1).data).slice(0, 3); };
+    const lum = color => { const c = rgb(color).map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; });
+      return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; };
+    return Math.min(...cells.map(cell => { const s = getComputedStyle(cell); const a = lum(s.backgroundColor), b = lum(s.color);
+      return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05); }));
+  });
+  check('answer map cell numbers keep 4.5:1 on every shade', cellContrast >= 4.5);
   const statusLabel = fields.fields.find(field => field.name === 'AN_Mitigation_Status').label;
   check('work-level status is named as the work\'s status', (await answer.locator('.answer-map h3').allInnerTexts()).some(text => text.includes(statusLabel + ' des Werks')));
   check('answer page never claims an answered question', !/beantwortet/i.test(await answer.innerText()));
@@ -239,6 +252,11 @@ try {
     document.activeElement.matches('button.matrix-cell') && document.activeElement.dataset.row + '|' + document.activeElement.dataset.col) === openCell);
   await page.locator(`button.matrix-cell[data-row="${openRow}"][data-col="${openCol}"]`).click();
   await page.waitForSelector('#worklist:not([hidden])');
+  await page.goBack();
+  await page.waitForSelector('#worklist[hidden]', { state: 'attached' });
+  check('back from an open list keeps focus on the view heading', await page.evaluate(() => document.activeElement.matches('[data-view-root="matrix"] h1')));
+  await page.goForward();
+  await page.waitForSelector('#worklist:not([hidden])');
 
   const workHref = await page.locator('#worklist .work-title a').first().getAttribute('href');
   await page.goto(base + '/index.html' + workHref, { waitUntil: 'networkidle' });
@@ -264,6 +282,11 @@ try {
     const next = mark.nextSibling ? mark.nextSibling.textContent[0] || '' : '';
     return !(/[\p{L}\p{N}]/u.test(next) && /[\p{L}\p{N}]/u.test(mark.textContent.slice(-1)));
   }))));
+  check('screening decision and publication version read in German', !/Screening (Include|Exclude|Unclear)|Version of Record|Accepted Manuscript/
+    .test(await page.locator('.werk').innerText()));
+  check('a partial category is announced once per evidence caption', (await page.locator('.werk .evidence-code').allTextContents())
+    .every(t => (t.match(/teilweise/g) || []).length <= 1));
+  check('review record shows German dates and agent roles', !/\d{4}-\d{2}-\d{2}T/.test(await page.locator('.werk-technical').evaluate(node => node.textContent)));
   check('work page shows dates and agents in plain words', !/\/root\//.test(await page.locator('.werk').evaluate(node => {
     const clone = node.cloneNode(true);
     clone.querySelectorAll('details').forEach(d => d.remove());
@@ -273,6 +296,8 @@ try {
   await page.goto(base + '/index.html#view=korpus', { waitUntil: 'networkidle' });
   await visible('korpus');
   check('korpus shows no counter before a user action', (await page.locator('#korpus-count').innerText()).trim() === '');
+  check('decision and study type options read in German', (await page.locator('#korpus-decision option, #korpus-study option').allInnerTexts())
+    .every(t => !/^(Include|Exclude|Unclear)/.test(t.trim())));
   check('facet options carry no counts without a search or filter', (await page.locator('#korpus-root select option').allInnerTexts())
     .every(t => !/\(\d+\)$/.test(t.trim())));
   await page.fill('#korpus-search', 'Not_SW_Specific');
@@ -302,6 +327,22 @@ try {
   check('network neighbours exclude process fields', await page.locator('#netz-fields input[value="AN_Coding_Basis"], #netz-fields input[value="object"], #netz-fields input[value="perspective"]').count() === 0);
   check('network heading keeps term and field apart', /\S, \S/.test(await page.locator('#netz-heading').evaluate(node => node.textContent)));
   check('network states its denominator', (await page.locator('#netz-summary .denominator--summary').innerText()).includes('eingeschlossenen Werken codiert'));
+  const allFields = await page.locator('#netz-fields input').evaluateAll(boxes => boxes.map(box => box.value).join(','));
+  await page.goto(base + '/index.html#view=netz&fields=' + encodeURIComponent(allFields), { waitUntil: 'networkidle' });
+  await visible('netz');
+  check('network coded share ignores fields without codes', Number(await page.locator('#netz-summary .denominator--summary').getAttribute('data-coded')) > 0);
+  const edgeContrast = await page.evaluate(() => {
+    const rgb = color => { const cv = document.createElement('canvas'); cv.width = cv.height = 1; const ctx = cv.getContext('2d');
+      ctx.fillStyle = '#000'; ctx.fillStyle = color; ctx.fillRect(0, 0, 1, 1); return Array.from(ctx.getImageData(0, 0, 1, 1).data); };
+    const lum = color => { const c = rgb(color).slice(0, 3).map(v => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; });
+      return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; };
+    const page = lum(getComputedStyle(document.body).backgroundColor);
+    const ratio = color => { const a = lum(color); return (Math.max(a, page) + 0.05) / (Math.min(a, page) + 0.05); };
+    const lines = [...document.querySelectorAll('#netz-graph .netz-line')].map(line => getComputedStyle(line));
+    const box = document.querySelector('#netz-graph .netz-count-box');
+    return { lines: Math.min(...lines.map(s => Number(s.strokeOpacity) < 1 ? 0 : ratio(s.stroke))), box: box ? ratio(getComputedStyle(box).stroke) : 3 };
+  });
+  check('network edges and count boxes keep 3:1 against the page', edgeContrast.lines >= 3 && edgeContrast.box >= 3);
 
   await page.goto(base + '/index.html#view=chat', { waitUntil: 'networkidle' });
   await visible('chat');
@@ -362,7 +403,7 @@ try {
   check('chat input and buttons fit at 390 px', chatBox);
   await page.setViewportSize({ width: 320, height: 720 });
   for (const hash of ['#view=werk&id=' + encodeURIComponent(landscape.records.find(r => r.decision === 'Include').work_id), '#view=fragen',
-    '#view=frage&sq=3', '#view=korpus', '#view=aussagen', '#view=methode', '#view=chat']) {
+    '#view=frage&sq=3', '#view=matrix&rows=AN_Bias_Axes&cols=AN_Harm_Types', '#view=netz', '#view=korpus', '#view=aussagen', '#view=methode', '#view=chat']) {
     await page.goto(base + '/index.html' + hash, { waitUntil: 'networkidle' });
     check('320 px reflow without horizontal scrolling: ' + hash.split('&')[0], await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
   }

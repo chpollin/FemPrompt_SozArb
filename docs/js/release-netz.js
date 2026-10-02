@@ -322,7 +322,13 @@ function render(params) {
     // The hidden comma keeps term and field apart in the heading's accessible name.
     heading.innerHTML = EC.esc(labelOf(ego)) + '<span class="sr-only">, </span><span class="netz-heading-dim">' +
         EC.esc(model.dim(ego.dimId).label) + '</span>';
-    root.querySelector('#netz-summary').innerHTML = EC.summaryLine(model.includes, [ego.dimId].concat(state.fields), false);
+    // A field no released work carries beyond ohne Angabe, such as a pilot field or one not
+    // collected under the coding's codebook, would count every work as uncoded, so the line
+    // names only fields that carry codes, as the answer pages do.
+    const summaryFields = [ego.dimId].concat(state.fields).filter(function (id) {
+        return model.includes.some(function (work) { return model.isCoded(work, id); });
+    });
+    root.querySelector('#netz-summary').innerHTML = EC.summaryLine(model.includes, summaryFields, false);
     const key = model.token(ego.dimId, ego.key) + '|' + (bipartite ? 'works' : 'radial');
     const scroll = figure.dataset.key === key ? figure.scrollLeft : null;
     if (neighbours.length) {

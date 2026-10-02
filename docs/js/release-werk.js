@@ -51,7 +51,7 @@ function categorySection(work) {
     const quotes = categories.map(function (category) {
         return model.categoryEvidence(work, category.key).map(function (item) {
             return '<figure class="evidence" data-code="' + EC.esc(category.key) + '"><figcaption class="evidence-code">' +
-                EC.metaLine([EC.categoryChip(info(category.key), { small: true, level: category.level }),
+                EC.metaLine([EC.categoryChip(info(category.key), { small: true, level: category.level, levelShown: true }),
                     EC.esc(LEVEL_LABELS[category.level] || ('Stufe ' + category.level))]) + '</figcaption>' +
                 '<blockquote class="evidence-quote">' + EC.highlight(item.text, item.term) + '</blockquote>' +
                 '<p class="evidence-locator">' + EC.esc(TEXT_SOURCE_LABELS[item.textSource] || 'Textgrundlage offen') + '</p></figure>';
@@ -94,7 +94,17 @@ function reasonLabel(code) {
 function decisionLine(work) {
     const record = work.record;
     if (!record) return '<p class="werk-decision">Kein veröffentlichtes Screening</p>';
-    return '<p class="werk-decision">Screening ' + EC.esc(record.decision) + (record.reason ? ', ' + EC.esc(reasonLabel(record.reason)) : '') + '</p>';
+    return '<p class="werk-decision">' + EC.esc(EC.screeningLabel(work).replace(/^i/, 'I')) + (record.reason ? ', ' + EC.esc(reasonLabel(record.reason)) : '') + '</p>';
+}
+
+// The review record names agents by role and dates in German, as the Assertion review does;
+// the run path follows in its own row.
+function agentLine(agentId, modelName, verb, at) {
+    return [EC.agentRole(agentId), modelName ? 'Modell ' + modelName : '', at ? verb + ' ' + EC.germanDate(at) : ''].filter(Boolean).join(', ');
+}
+
+function eventLine(event) {
+    return (event.actor_ids || []).concat([event.at ? 'am ' + EC.germanDate(event.at) : '']).filter(Boolean).join(', ');
 }
 
 function technicalSection(work) {
@@ -110,19 +120,21 @@ function technicalSection(work) {
         (record.source_records || [record]).forEach(function (source) {
             const receipt = source.ai_verification;
             if (receipt) {
-                rows.push(['KI-Quellenprüfung ' + source.id, [receipt.agent_id, receipt.model, receipt.reviewed_at].join(', ')],
-                    ['Prüfbefund ' + source.id, receipt.findings], ['Prüfartefakt ' + source.id, receipt.artifact + ', ' + receipt.sha256]);
+                rows.push(['KI-Quellenprüfung ' + source.id, agentLine(receipt.agent_id, receipt.model, 'geprüft am', receipt.reviewed_at)],
+                    ['Prüfbefund ' + source.id, receipt.findings], ['Prüfartefakt ' + source.id, receipt.artifact + ', ' + receipt.sha256],
+                    ['Agentenkennung ' + source.id, receipt.agent_id]);
             }
             if (source.verification) {
-                rows.push(['Fachliche Verifikation ' + source.id, (source.verification.actor_ids || []).concat([source.verification.at]).filter(Boolean).join(', ')]);
+                rows.push(['Fachliche Verifikation ' + source.id, eventLine(source.verification)]);
             }
             if (source.publication_approval) {
-                rows.push(['Publikationsfreigabe ' + source.id, (source.publication_approval.actor_ids || []).concat([source.publication_approval.at]).filter(Boolean).join(', ')]);
+                rows.push(['Publikationsfreigabe ' + source.id, eventLine(source.publication_approval)]);
             }
         });
         if (record.ai_correction) {
             const correction = record.ai_correction;
-            rows.push(['KI-Korrektur', [correction.agent_id, correction.model, correction.corrected_at].join(', ')]);
+            rows.push(['KI-Korrektur', agentLine(correction.agent_id, correction.model, 'korrigiert am', correction.corrected_at)],
+                ['Agentenkennung der Korrektur', correction.agent_id]);
         }
         rows.push(['Codierung', (record.actor === 'agent' ? 'codierender KI-Agent ' : 'Fachexpertin oder Fachexperte ') + record.reviewer]);
     } else {
@@ -155,13 +167,14 @@ function renderWerk(params) {
 }
 
 function decisionOf(work) { return work.record ? work.record.decision : UNSCREENED; }
-function decisionLabel(value) { return value === UNSCREENED ? 'nicht gescreent' : value; }
+function decisionLabel(value) { return value === UNSCREENED ? 'nicht gescreent' : EC.decisionLabel(value); }
 function studyOf(work) { return model.stateOf(work, model.STUDY_FIELD).values; }
+function studyLabel(value) { return model.dim(model.STUDY_FIELD).valueLabel(value); }
 
 const FACETS = [
     { key: 'decision', id: 'korpus-decision', label: 'Entscheidung', all: 'Alle Entscheidungen',
         values: function (work) { return [decisionOf(work)]; }, labelOf: decisionLabel },
-    { key: 'study', id: 'korpus-study', label: 'Studientyp', all: 'Alle Studientypen', values: studyOf },
+    { key: 'study', id: 'korpus-study', label: 'Studientyp', all: 'Alle Studientypen', values: studyOf, labelOf: studyLabel },
     { key: 'year', id: 'korpus-year', label: 'Jahr', all: 'Alle Jahre', values: function (work) { return work.year ? [String(work.year)] : []; } },
     { key: 'status', id: 'korpus-status', label: 'Prüfstand', all: 'Alle Prüfstände', values: function (work) { return [work.status]; },
         labelOf: function (value) { return value === 'verified' ? '● fachlich verifiziert' : '◆ ' + model.publicLabel; } },
@@ -187,7 +200,7 @@ function facetValues(facet) {
 }
 
 function korpusItem(work) {
-    const study = studyOf(work).join(', ');
+    const study = studyOf(work).map(studyLabel).join(', ');
     return '<li class="korpus-item" data-work-id="' + EC.esc(work.id) + '">' +
         '<a class="korpus-title" href="' + EC.esc(EC.href({ view: 'werk', id: work.id })) + '">' + EC.esc(work.title) + '</a>' +
         '<p class="work-meta">' + EC.metaLine([work.authorYear, study, decisionLabel(decisionOf(work))].map(EC.esc)

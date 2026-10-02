@@ -247,8 +247,8 @@ function renderMethode() {
         '<p>Die Veröffentlichung zeigt den bereits quellengeprüften Teil des Literaturreviews, nicht den abgeschlossenen Review. ' +
         'Ein Werk, das hier fehlt, ist zurückgehalten oder noch in Bearbeitung. Sein Fehlen ist keine Ausschlussentscheidung.' +
         (meta.search_cutoff ? ' Der Suchstand ist der ' + EC.esc(EC.germanDate(meta.search_cutoff)) + '.' : '') + '</p>' +
-        '<p>Ein Werk wird eingeschlossen, wenn Technik- und Sozialdimension je mindestens eine Kategorie mit ja tragen. ' +
-        'Tragen beide höchstens teilweise zutreffende Kategorien, bleibt es unklar, und fehlt einer Dimension jede Kategorie, wird es ausgeschlossen. ' +
+        '<p>Ein Werk wird eingeschlossen, wenn die Kategoriegruppen Gegenstand und Perspektive je mindestens eine Kategorie mit ja tragen. ' +
+        'Tragen beide mindestens eine teilweise zutreffende Kategorie, aber nicht beide eine mit ja, bleibt es unklar, und fehlt einer Gruppe jede Kategorie, wird es ausgeschlossen. ' +
         'Die Analysefelder werden nur für eingeschlossene Werke codiert. Ein Feld ist eine Liste von Codes je Werk, eine Zelle der Matrix ' +
         'und eine Kante im Netz zählen deshalb Werke, in denen zwei Codes gemeinsam vergeben sind. Sie behaupten keine Beziehung zwischen den Codes.</p>' +
         '<p>Der Status einer Maßnahme ist ein Wert je Werk und gilt nicht für eine einzelne Technik oder Stufe. ' +

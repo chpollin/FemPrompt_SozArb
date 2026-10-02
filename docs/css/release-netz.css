@@ -12,11 +12,6 @@
 
 .netz-controls { align-items: flex-start; }
 
-/* Long term options set the select's intrinsic width; without a cap it pushes the page
-   wider than a phone viewport in fonts wider than the local ones (CI runs on Linux). */
-.netz-controls > label { min-inline-size: 0; max-inline-size: 100%; }
-.netz-controls select#netz-term { max-inline-size: 100%; min-inline-size: 0; }
-
 .netz-fields {
     border: 1px solid var(--gray-300);
     border-radius: var(--radius-md);
@@ -110,8 +105,8 @@
 .netz-item:focus { outline: none; }
 
 .netz-line {
-    stroke: var(--dim);
-    stroke-opacity: 0.7;
+    /* Darkened toward the text colour, so even the light category colours keep 3:1 against the page. */
+    stroke: color-mix(in oklch, var(--dim) 55%, var(--gray-900));
     stroke-linecap: round;
 }
 
@@ -122,9 +117,7 @@
 .netz-edge:hover .netz-ring { stroke: var(--gray-400); }
 .netz-edge:focus-visible .netz-ring { stroke: var(--gray-900); }
 
-.netz-edge.is-selected .netz-line { stroke-opacity: 1; }
-
-.netz-count-box { fill: Canvas; stroke: var(--gray-400); stroke-width: 1; }
+.netz-count-box { fill: Canvas; stroke: var(--gray-500); stroke-width: 1; }
 .netz-count { font-size: 12px; font-weight: 600; fill: var(--gray-900); }
 .netz-edge:hover .netz-count-box { stroke: var(--gray-700); }
 .netz-edge:focus-visible .netz-count-box { stroke: var(--gray-900); stroke-width: 2.5; }

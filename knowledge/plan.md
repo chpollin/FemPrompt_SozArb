@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-01
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -72,7 +72,7 @@ The sub-questions are answered in the following order. Steps that depend on an o
 The public Evidence Companion is specified in [[specification#Public Evidence Companion]].
 
 1. Replace the long internal agent coding notes in the public work list by field-level evidence once it exists. Until then the note stays collapsed and labelled as the rationale of the coding agent, never as evidence.
-2. Run the [[testing#Independent acceptance review of the result site]], which recomputes every displayed figure from the released data and checks display rules, keyboard operation, zoom, contrast and content fitness. Its findings are recorded in this plan. An operator review on the phone follows, and an acceptance session with the domain experts comes later.
+2. Run the [[testing#Independent acceptance review of the result site]], which recomputes every displayed figure from the released data and checks display rules, keyboard operation, zoom, contrast and content fitness. Its findings are recorded in this plan. The first review of 2 October 2026 found reflow, contrast, label, focus and naming defects, which are fixed and covered by `tests/browser/release.mjs`. Left to the operator from it are the publication of `source_path` in the released records, the language of the Assertion statements and the Kubes item. An operator review on the phone follows, and an acceptance session with the domain experts comes later.
 3. Switch Pages to `build/site/` under [[#Deployment]] once decision 3 is taken. Until then Pages serves `docs/` including internal working data.
 4. Keep the internal working application `docs/index.html` local. Its Kategorien view still lists concepts from the historical concept graph ([[data#Historical concept graph and divergence classification]]).
 

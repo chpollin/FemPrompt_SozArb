@@ -80,10 +80,20 @@ function metaLine(parts) {
 
 function workCount(count) { return count + (count === 1 ? ' Werk' : ' Werke'); }
 
+// The work-version contract labels some publication stages with their English terms;
+// the public pages name them in German and take every other label from the contract.
+const VERSION_LABELS = {
+    accepted_manuscript: 'akzeptiertes Manuskript', version_of_record: 'Verlagsfassung',
+    corrected_version_of_record: 'korrigierte Verlagsfassung', enhanced_version_of_record: 'erweiterte Verlagsfassung',
+};
 function versionLabel(value) {
     const labels = (model && model.landscape.version_type_labels) || {};
-    return labels[value] || (value ? String(value).replace(/_/g, ' ') : '');
+    return VERSION_LABELS[value] || labels[value] || (value ? String(value).replace(/_/g, ' ') : '');
 }
+
+// Screening decisions stay English codes in the data and the URL.
+const DECISION_LABELS = { Include: 'eingeschlossen', Exclude: 'ausgeschlossen', Unclear: 'unklar' };
+function decisionLabel(value) { return DECISION_LABELS[value] || String(value || ''); }
 
 function germanDate(value) {
     const match = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(value || ''));
@@ -105,7 +115,8 @@ function agentRole(agentId) {
 // matrix, the work lists and the Werk page; the canonical look lives in research.css
 // under "Category chip (shared)". category is { key, label, color }. A chip is a
 // toggle button when options.pressed is a boolean and a static label otherwise.
-const CHIP_GROUP_LABELS = { object: 'Gegenstand', perspective: 'Perspektive' };
+// options.levelShown means the caller prints the level beside the chip, so the chip
+// does not announce it a second time.
 const CHIP_LEVEL_LABELS = { 1: 'teilweise', 2: 'ja' };
 
 function categoryChip(category, options) {
@@ -116,7 +127,7 @@ function categoryChip(category, options) {
         (toggle ? ' type="button" aria-pressed="' + opts.pressed + '"' : '') +
         ' data-cat="' + esc(category.key) + '"' + level + ' style="--chip-color:' + esc(category.color || 'var(--gray-500)') + '"';
     const body = '<span class="chip-dot" aria-hidden="true"></span>' + esc(category.label || category.key) +
-        (level ? '<span class="sr-only">, teilweise</span>' : '') + (opts.extra || '');
+        (level && !opts.levelShown ? '<span class="sr-only">, teilweise</span>' : '') + (opts.extra || '');
     return toggle ? '<button' + attrs + '>' + body + '</button>' : '<span' + attrs + '>' + body + '</span>';
 }
 
@@ -130,7 +141,7 @@ function categoryChipRow(items, groups) {
         const chips = groups[group].filter(function (key) { return byKey[key]; }).map(function (key) {
             return categoryChip(byKey[key].category, byKey[key].options);
         });
-        return chips.length ? '<span class="chip-group-label">' + esc(CHIP_GROUP_LABELS[group] || group) + '</span>' + chips.join('') : '';
+        return chips.length ? '<span class="chip-group-label">' + esc((EC.CATEGORY_GROUP_LABELS || {})[group] || group) + '</span>' + chips.join('') : '';
     }).filter(Boolean).join('<span class="chip-group-sep" aria-hidden="true"></span>');
 }
 
@@ -157,7 +168,7 @@ function topicLabel(topic) { return TOPIC_LABELS[topic] || topic; }
 
 function screeningLabel(work) {
     if (!work || !work.record) return 'nicht gescreent';
-    return 'Screening ' + work.record.decision;
+    return 'im Screening ' + decisionLabel(work.record.decision);
 }
 
 function renderAssertion(assertion, options) {
@@ -235,6 +246,9 @@ function settleFocus(root, ctx) {
         list.scrollIntoView({ block: 'start' });
     } else if (ctx.changed && ctx.focusHeading && heading) {
         focusHeading(heading);
+    } else if (ctx.external && ctx.focusHeading && heading && !root.contains(document.activeElement)) {
+        // Back or Forward removed the list that held focus, which would otherwise fall to the body.
+        focusHeading(heading);
     }
 }
 
@@ -297,7 +311,7 @@ if (!host) document.addEventListener('click', function (event) {
 Object.assign(EC, {
     esc: esc, safeUrl: safeUrl, go: go, href: href, parseHash: parseHash,
     statusMark: statusMark, metaLine: metaLine, workCount: workCount, versionLabel: versionLabel, highlight: highlight,
-    germanDate: germanDate, agentRole: agentRole, screeningLabel: screeningLabel,
+    germanDate: germanDate, agentRole: agentRole, screeningLabel: screeningLabel, decisionLabel: decisionLabel,
     renderAssertion: renderAssertion, registerView: registerView,
     categoryChip: categoryChip, categoryChipRow: categoryChipRow,
 });

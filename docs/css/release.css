@@ -51,6 +51,8 @@ main.release-main { max-inline-size: 1200px; padding: var(--space-xl) var(--spac
 :is(.release-main, .release-view) p, :is(.release-main, .release-view) li, :is(.release-main, .release-view) dd { max-inline-size: 62ch; }
 :is(.release-main, .release-view) section > p + p { margin-block-start: var(--space-sm); }
 :is(.release-main, .release-view) a { color: var(--primary-dark); }
+/* Cell counts on the answer pages are links; the link colour would fall below 4.5:1 on the shaded cells. */
+:is(.release-main, .release-view) a.matrix-cell { color: var(--gray-900); }
 .release-error {
     padding: var(--space-md); border: 1px solid var(--danger); border-radius: var(--radius-sm);
     color: var(--gray-900); background: color-mix(in oklch, var(--danger) 10%, var(--gray-50)); font-weight: 600;
@@ -61,13 +63,15 @@ main.release-main { max-inline-size: 1200px; padding: var(--space-xl) var(--spac
 
 /* Controls */
 :where(.release-main, .release-view) .controls { display: flex; flex-wrap: wrap; gap: var(--space-md) var(--space-lg); align-items: end; margin-block-end: var(--space-lg); }
-:where(.release-main, .release-view) .controls label { display: grid; gap: var(--space-xs); font-size: var(--text-sm); font-weight: 600; color: var(--gray-700); }
+/* Long options set a select's intrinsic width; without these caps a label cannot shrink and
+   pushes the page wider than a 320 px viewport, more so in the wider fonts of Linux CI. */
+:where(.release-main, .release-view) .controls label { display: grid; gap: var(--space-xs); font-size: var(--text-sm); font-weight: 600; color: var(--gray-700); min-inline-size: 0; max-inline-size: 100%; }
 :where(.release-main, .release-view) .controls label[hidden] { display: none; }
 :where(.release-main, .release-view) .controls select, :where(.release-main, .release-view) .controls input {
     font: inherit; font-size: var(--text-body); font-weight: 400; color: var(--gray-900);
     min-block-size: 2.5rem; padding: var(--space-xs) var(--space-sm);
     border: 1px solid var(--gray-500); border-radius: var(--radius-sm); background: var(--gray-50);
-    max-inline-size: 100%;
+    min-inline-size: 0; max-inline-size: 100%;
 }
 :where(.release-main, .release-view) .controls input[type="search"] { inline-size: min(100%, 22rem); }
 

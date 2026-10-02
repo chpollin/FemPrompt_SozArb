@@ -47,9 +47,9 @@ function isJoint(axes) {
 }
 
 // A category of a category-group axis is set as a category chip.
-function chipOf(dimId, key, level) {
+function chipOf(dimId, key, level, levelShown) {
     const category = model.dim(dimId).kind === 'group' && !isStatusKey(key) ? model.category(key) : null;
-    return category ? EC.categoryChip(category, { small: true, level: level }) : '';
+    return category ? EC.categoryChip(category, { small: true, level: level, levelShown: levelShown }) : '';
 }
 
 function headerHtml(dimId, key) {
@@ -214,7 +214,7 @@ function evidenceBlocks(work, dimId, key) {
     // the Werk page; record keys stay in its collapsed review record.
     return model.evidenceFor(work, dimId, key).filter(function (item) { return item.kind === 'quote'; }).map(function (item) {
         return '<figure class="evidence"><figcaption class="evidence-code">' +
-            EC.metaLine([chipOf(dimId, key, item.level) || EC.esc(dim.valueLabel(key)), LEVEL_LABELS[item.level] || '']) + '</figcaption>' +
+            EC.metaLine([chipOf(dimId, key, item.level, Boolean(LEVEL_LABELS[item.level])) || EC.esc(dim.valueLabel(key)), LEVEL_LABELS[item.level] || '']) + '</figcaption>' +
             '<blockquote class="evidence-quote">' + EC.highlight(item.text, item.term) + '</blockquote>' +
             '<p class="evidence-locator">' + EC.esc(TEXT_SOURCE_LABELS[item.textSource] || 'Textgrundlage offen') + '</p></figure>';
     }).join('');
@@ -235,7 +235,7 @@ function cellCodes(work, axes) {
 
 function studyType(work) {
     const state = model.stateOf(work, model.STUDY_FIELD);
-    return state.values.length ? state.values.join(', ') : '';
+    return state.values.map(model.dim(model.STUDY_FIELD).valueLabel).join(', ');
 }
 
 function workItem(work, axes) {
@@ -308,7 +308,7 @@ function renderMatrixView(params) {
     document.getElementById('matrix-rows').innerHTML = dimOptions(state.rows);
     document.getElementById('matrix-cols').innerHTML = dimOptions(state.cols);
     document.getElementById('matrix-year').innerHTML = plainOptions(values.years, state.year, 'Alle Jahre');
-    document.getElementById('matrix-study').innerHTML = plainOptions(values.studies, state.study, 'Alle Studientypen');
+    document.getElementById('matrix-study').innerHTML = plainOptions(values.studies, state.study, 'Alle Studientypen', model.dim(model.STUDY_FIELD).valueLabel);
     document.getElementById('matrix-status').innerHTML = plainOptions(values.statuses, state.status, 'Alle Prüfstände', statusOptionLabel);
     // A filter over a single review status changes nothing, so it is not offered.
     document.getElementById('matrix-status').closest('label').hidden = values.statuses.length < 2 && !state.status;
