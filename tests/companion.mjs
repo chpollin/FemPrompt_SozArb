@@ -271,6 +271,122 @@ await check('Wissensnetz shows the category network and selects an edge into the
   if (new URLSearchParams(window.location.hash.slice(1)).get('sel') !== pick.dataset.sel) throw new Error('selection not in hash');
 });
 
+// Box of an SVG count label from its translate and rect attributes (jsdom has no layout).
+const pillBox = (g) => {
+  const [x, y] = g.getAttribute('transform').match(/-?[\d.]+/g).map(Number);
+  const r = g.querySelector('rect');
+  return { x: x + Number(r.getAttribute('x')), y: y + Number(r.getAttribute('y')), w: Number(r.getAttribute('width')), h: Number(r.getAttribute('height')) };
+};
+const overlaps = (p, q) => Math.min(p.x + p.w, q.x + q.w) > Math.max(p.x, q.x) && Math.min(p.y + p.h, q.y + q.h) > Math.max(p.y, q.y);
+const expertWorks = () => EC.getAllPapers().filter((p) => p.human && p.human.decision);
+const expertCount = (cats) => expertWorks().filter((p) => cats.every((c) => (p.human.all_categories || {})[c] === 1)).length;
+
+await check('label placement keeps two labels on the same curve apart', async () => {
+  const item = { from: [0, 0], via: [50, 0], to: [100, 0], w: 30, h: 16 };
+  const [a, b] = EC.wissensnetz.placeLabels([item, item], []);
+  if (overlaps(a.box, b.box)) throw new Error(JSON.stringify([a.box, b.box]));
+  const [c] = EC.wissensnetz.placeLabels([{ ...item, steps: [0.75, 0.5] }], [{ x: 60, y: -20, w: 40, h: 40 }]);
+  if (c.x !== 50) throw new Error('obstacle not avoided ' + c.x);
+});
+
+await check('the tooltip position flips at the viewport edge and avoids a protected box', async () => {
+  const size = { w: 200, h: 60 };
+  const view = { w: 1000, h: 800 };
+  const corner = EC.wissensnetz.tipPosition({ x: 950, y: 780 }, size, view, []);
+  const tipBox = { x: corner.left, y: corner.top, w: size.w, h: size.h };
+  if (corner.left + size.w > view.w || corner.top + size.h > view.h || EC.wissensnetz.overlapArea(tipBox, { x: 944, y: 774, w: 12, h: 12 })) {
+    throw new Error('no flip ' + JSON.stringify(corner));
+  }
+  const avoid = EC.wissensnetz.tipPosition({ x: 400, y: 400 }, size, view, [{ x: 410, y: 410, w: 300, h: 100, weight: 1000 }]);
+  if (EC.wissensnetz.overlapArea({ x: avoid.left, y: avoid.top, w: size.w, h: size.h }, { x: 410, y: 410, w: 300, h: 100 })) throw new Error('covers ' + JSON.stringify(avoid));
+});
+
+await check('cell text reaches 4.5:1 on every fill of the heat scale', async () => {
+  const C = EC.color;
+  const bad = [];
+  for (let h = 0; h <= 100; h += 1) {
+    const fill = C.mixWithWhite('#2d6364', h / 100);
+    const ink = C.readableInk(fill, '#1c1917');
+    const ratio = C.contrastRatio(fill, C.hexRgb(ink === '#fff' ? '#ffffff' : ink === '#000' ? '#000000' : ink));
+    if (ratio < 4.5) bad.push(h + ':' + ratio.toFixed(2));
+  }
+  if (bad.length) throw new Error(bad.join(' '));
+});
+
+await check('with a node selected no two count labels overlap and none covers a node, for every category', async () => {
+  const problems = [];
+  for (const cat of EC.CATEGORIES) {
+    setHash('#view=wissensnetz&sel=' + cat);
+    await waitFor(() => doc.querySelector(`#wn-graph .wn-node.is-selected[data-sel="${cat}"]`) !== null, 'node ' + cat);
+    const pills = [...doc.querySelectorAll('#wn-graph .wn-pill')].map(pillBox);
+    const dots = [...doc.querySelectorAll('#wn-graph .wn-node')].map((g) => {
+      const c = g.querySelector('.wn-hit');
+      const r = Number(g.querySelector('.wn-dot').getAttribute('r'));
+      return { x: Number(c.getAttribute('cx')) - r, y: Number(c.getAttribute('cy')) - r, w: 2 * r, h: 2 * r };
+    });
+    pills.forEach((p, i) => {
+      pills.forEach((q, j) => { if (i < j && overlaps(p, q)) problems.push(cat + ' labels ' + i + ',' + j); });
+      dots.forEach((d, j) => { if (overlaps(p, d)) problems.push(cat + ' label ' + i + ' on node ' + j); });
+    });
+    if (pills.length !== doc.querySelectorAll('#wn-table .wn-pick').length) problems.push(cat + ' label count');
+  }
+  if (problems.length) throw new Error(problems.slice(0, 5).join('; '));
+});
+
+await check('a selected node lists only partner categories with the share of the partner works', async () => {
+  setHash('#view=wissensnetz&sel=Bias_Ungleichheit');
+  await waitFor(() => doc.getElementById('wn-table-caption').textContent.includes('Bias'), 'connections table');
+  const rows = [...doc.querySelectorAll('#wn-table tbody tr')];
+  const wrong = rows.filter((tr) => {
+    const chips = tr.querySelectorAll('th .category-chip');
+    const partner = chips[0].dataset.cat;
+    const count = Number(tr.querySelector('.wn-pick').firstChild.textContent);
+    const share = tr.querySelector('td:last-child').textContent;
+    return chips.length !== 1 || partner === 'Bias_Ungleichheit' || count !== expertCount(['Bias_Ungleichheit', partner]) ||
+      share !== Math.round(count / expertCount([partner]) * 100) + ' %';
+  });
+  if (!rows.length || wrong.length) throw new Error(wrong.map((tr) => tr.textContent).join(' | '));
+  const fem = doc.querySelector('#wn-graph .wn-edge[data-sel="Bias_Ungleichheit,Feministisch"]').getAttribute('aria-label');
+  const n = expertCount(['Bias_Ungleichheit', 'Feministisch']);
+  if (fem !== `Feministisch und Bias & Ungleichheit, gemeinsam codiert in ${n} Werken, ${n} von ${expertCount(['Feministisch'])} Werken der Kategorie Feministisch`) throw new Error(fem);
+});
+
+await check('the work list of a selection is grouped by decision, Include first, each group with its count', async () => {
+  const titles = [...doc.querySelectorAll('#wn-detail .lk-group-title')];
+  const keys = titles.map((t) => t.dataset.decision);
+  if (keys[0] !== 'include' || keys.join() !== ['include', 'exclude', 'unclear', 'none'].filter((k) => keys.includes(k)).join()) throw new Error(keys.join());
+  titles.forEach((t) => {
+    const list = t.nextElementSibling;
+    const items = list.querySelectorAll('.lk-item');
+    if (![...items].every((li) => li.dataset.decision === t.dataset.decision)) throw new Error('mixed group ' + t.textContent);
+    if (!t.textContent.includes(items.length + (items.length === 1 ? ' Werk' : ' Werke'))) throw new Error('group count ' + t.textContent);
+  });
+});
+
+await check('the residual category is drawn quieter in the network', async () => {
+  const residual = [...doc.querySelectorAll('#wn-graph .wn-node--residual')].map((g) => g.dataset.sel);
+  if (residual.join() !== 'KI_Sonstige') throw new Error(residual.join());
+  if (!/Sammelkategorie KI Sonstige/.test(doc.getElementById('wn-legend').textContent)) throw new Error('legend');
+});
+
+await check('the Landkarte Anteil lens states the share of the column category and a cell lists its works grouped with PRISM links', async () => {
+  setHash('#view=vergleich&lens=anteil');
+  await waitFor(() => doc.querySelector('#landkarte .lk-lens[data-lens="anteil"][aria-pressed="true"]') !== null, 'anteil lens');
+  const wrong = [...doc.querySelectorAll('#landkarte button.lk-cell')].filter((b) => {
+    const v = expertCount([b.dataset.row, b.dataset.col]) / expertCount([b.dataset.col]);
+    return Math.abs(Number(b.dataset.value) - v) > 1e-3 || !b.getAttribute('aria-label').includes(`von ${expertCount([b.dataset.col])} Werken der Kategorie`) ||
+      !/^#(fff|000)$|^#1c1917$/.test(b.style.getPropertyValue('--ink'));
+  });
+  if (wrong.length) throw new Error(wrong.map((b) => b.getAttribute('aria-label')).join(' | '));
+  const cell = doc.querySelector('#landkarte button.lk-cell[data-row="Generative_KI"][data-col="Bias_Ungleichheit"]');
+  cell.dispatchEvent(new window.MouseEvent('click', { bubbles: true }));
+  await waitFor(() => !doc.getElementById('landkarte-detail').hidden, 'detail');
+  const items = [...doc.querySelectorAll('#landkarte-detail .lk-item')];
+  if (items.length !== expertCount(['Generative_KI', 'Bias_Ungleichheit'])) throw new Error('items ' + items.length);
+  if (doc.querySelector('#landkarte-detail .lk-group-title').dataset.decision !== 'include') throw new Error('Include not first');
+  if (!items.every((li) => li.querySelector('.lk-prism').getAttribute('href').startsWith('prisma.html?paper='))) throw new Error('PRISM link missing');
+});
+
 await check('Begriffsnetz shows the ego network with its table and denominator', async () => {
   setHash('#view=begriffsnetz');
   await waitFor(() => doc.querySelector('#view-begriffsnetz #netz-list') !== null, 'network table');
