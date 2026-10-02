@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-02-21
-updated: 2026-10-01
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
@@ -206,7 +206,7 @@ Domain experts establish scholarly authority for the Assertions and output inter
 ## Scholarly authority in the workflow
 
 1. Zotero curation (stages 1 and 7). Import from committed RIS files, duplicate merge with a documented match reason, metadata correction. The duplicate merge of the round-2 and vault findings is open on the operator side.
-2. Round-1 expert track and round-2 human screening (stages 4, 5, 7). The consolidated expert annotation remains authoritative for round 1. The human reviewers screen the open papers without the agent coding or the LLM assessment (ADR-044). Verification of the ai-agent-reviewed set follows the verification scope decision of 22 September 2026, which is accepted and not yet implemented.
+2. Round-1 expert track and round-2 human screening (stages 4, 5, 7). The consolidated expert annotation remains authoritative for round 1. The human reviewers screen the open papers without the agent coding or the LLM assessment (ADR-044). Every category a reviewer sets needs a Paper Beleg, except on an exclusion for a formal reason, which judges the record and not its content (ADR-048). The formal reasons are Duplicate, Wrong publication type, No full text and Language. They extend the three workflow criteria of the round-one replay below by Language, since a reviewer who cannot read a text cannot cite it either. Categories set on a formal exclusion are kept with the basis `formal_exclusion` and do not count as judged categories. Verification of the ai-agent-reviewed set follows the verification scope decision of 22 September 2026, which is accepted and not yet implemented.
 3. Stage-3 verification (stages 8 and 9). Domain experts decide the remaining F, G, and U cases of the waitlist and set `verified` in the Research Vault.
 4. Operator gates. Analysis-field freezes, protocol amendments, migration releases, and merges to `main` are dated research decisions recorded in [[specification]], [[update-protocol]], and `LAUFPROTOKOLL.md`.
 

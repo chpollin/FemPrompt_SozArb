@@ -15,7 +15,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-29
-updated: 2026-10-01
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5), Codex (GPT-6)
 related: [project, analysis-methods, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, codebook-v1.4-proposal, research-vault, analysis-divergence, analysis-sq-advisory, project-review-2026-09-05]
@@ -87,7 +87,7 @@ The Work-level partition of the intended Include scope for each analysis field, 
 An atomic, evidence-linked statement in the Grounded Vault. An Assertion cites identified statements in one or more distilled knowledge documents and may support the literature report, the paper, or both. Its status records how far the evidence chain has been checked.
 
 ### Bearbeiten and Lesen
-The two modes of PRISM (ADR-042). `Lesen` shows every document with its current human annotation and writes nothing. `Bearbeiten` exists only in a local clone whose build created the full-text manifest, opened in a browser with File System Access, and saves into the reviewer's own file. Neither mode shows an AI pre-assessment (ADR-044).
+The two modes of PRISM (ADR-042). `Lesen` shows every document with its current human annotation and writes nothing. `Bearbeiten` exists only in a local clone whose reading layer is built, started with `start-prism.cmd`, and its local server saves into the reviewer's own file in any current browser (ADR-047). Neither mode shows an AI pre-assessment (ADR-044).
 
 ### Beleg
 A pinned passage in PRISM, stored with term, surrounding snippet, timestamp, source layer, and actor. A pin from the Paper layer starts an empty category at `teilweise`, and the reviewer decides whether the aspect is central enough for `ja`. A pin from the LLM-Wissensdestillat remains advisory and cannot satisfy the Paper-evidence gate. The legacy `origin` field is retained only for compatibility, while `source_layer` and `actor` carry the current provenance.
@@ -130,6 +130,9 @@ The state of one analysis field in one released record, stored in `analysis.fiel
 
 ### Final scholarly authority
 The responsibility assigned to the domain experts for verification, scholarly interpretation, and publication approval. AI-agent annotations and AI Agent Reviews can prepare the complete corpus, but they cannot confer this authority.
+
+### Formaler Ausschluss
+The German term for an Exclude whose reason concerns the record rather than its content, namely Duplikat, Falscher Publikationstyp, Kein Volltext and Sprache. Its categories need no Paper Beleg and carry the basis `formal_exclusion` (ADR-048, [[methods]]).
 
 ### Grounded
 The status of a Grounded-Vault artifact whose required references to the layer below resolve under the deterministic anchor and schema check. A grounded Assertion or chapter has received neither AI Agent Review nor domain-expert verification. [[research-vault#Status and checks]] defines the status vocabulary.

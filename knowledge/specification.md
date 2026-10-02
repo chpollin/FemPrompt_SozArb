@@ -22,7 +22,7 @@ topics: ["[[Requirements Engineering]]", "[[Decision Records]]"]
 related: [project, data, standards, plan, journal, governance, testing]
 ---
 
-PRISM is the project's standalone, PRISMA-conformant screening and verification instrument (`docs/prisma.html`, ADR-008). It writes its data files directly into the connected project folder through the File System Access API, and versioning happens outside the tool in GitHub Desktop (ADR-014, superseding the in-tool Git surface of ADR-009). Requirements, usage scenarios, feature scope and design system specify PRISM. The public result site is specified in [Public Evidence Companion](#public-evidence-companion), and the decisions for both follow as numbered ADRs. The data model lives in [[data]], the implemented standards in [[standards]].
+PRISM is the project's standalone, PRISMA-conformant screening and verification instrument (`docs/prisma.html`, ADR-008). Its local server writes the reviewer files into the clone it serves, with the File System Access API as the fallback for a static server, and versioning happens outside the tool in GitHub Desktop (ADR-047, ADR-014, superseding the in-tool Git surface of ADR-009). Requirements, usage scenarios, feature scope and design system specify PRISM. The public result site is specified in [Public Evidence Companion](#public-evidence-companion), and the decisions for both follow as numbered ADRs. The data model lives in [[data]], the implemented standards in [[standards]].
 
 Three surfaces serve different readers. The public Evidence Companion is the allowlisted result site that `src/publish/build_release.py` builds into `build/site/` (ADR-041). PRISM is the working instrument for screening, coding and domain verification. The internal working application `docs/index.html` is a local working surface for the project team and the one page that brings the result views and the working views together ([Working Companion](#working-companion)). Its Kategorien and Korpus views read the working data under `docs/data/`, including the round-one human-AI comparison. The concept lists of the Kategorien view still come from `docs/data/concept_graph.json`, a historical, frozen and unreviewed concept graph without a generator, whose counts do not recompute from its own paper concepts ([[data#Historical concept graph and divergence classification]]). Neither the working application nor PRISM is part of the public site. Until the project owner switches the Pages source, GitHub Pages still serves `docs/` ([[testing#Local preview and deployment]]).
 
@@ -140,7 +140,7 @@ Purpose. Get batches in and PRISMA records out without a backend.
 
 Data basis. Session JSON (full state), decision-log CSV, the Stage R seed dataset (the round-1 data carried through PRISM).
 
-Interaction. The daily editor loads the repository corpus, retains a browser recovery copy, and writes the selected reviewer file through one disk action. Historical conversion, reconciliation, disclosure, and exchange remain operator functions without editor-facing controls.
+Interaction. The daily editor loads the repository corpus, retains a browser recovery copy, and writes the selected reviewer file through one save action. Historical conversion, reconciliation, disclosure, and exchange remain operator functions without editor-facing controls.
 
 Limits. Collaboration is file-based through separate reviewer JSON files and GitHub Desktop. Concurrent tabs using the same reviewer key are outside the supported workflow.
 
@@ -162,7 +162,7 @@ SCREENING  ┌ corpus list + full-text search ┐  ┌ full text (formatted, sea
            │ search all texts: "gender"      │  │ "...gendered scripts of care..."   │  │  └ pin: "gendered..."  │
            │ [paper 13/87]                   │  │ [next hit ↵]  [pin as evidence]    │  │ derived: INCLUDE       │
            └─────────────────────────────────┘  └────────────────────────────────────┘  └───────────────────────┘
-COMPACT STORAGE      editor key · target file · working folder · save state
+COMPACT STORAGE      reviewer · save state
 INTERNAL OUTPUTS     flow · checklist · disclosure · exchange
 ```
 
@@ -194,10 +194,10 @@ This is the workspace implemented in `docs/js/prisma.js` and `docs/css/prisma.cs
 
 #### Page shell
 
-Standalone page `docs/prisma.html` (ADR-008), wearing the Companion design since ADR-014 and the shared site header. `js/prisma-data.js` provides the `window.EC` shim over `research_vault_v2.json`. The page is one column of header and workspace, so the workspace fills the remaining height without a hard-coded header height. The workspace opens in read mode with the two-state control `Lesen | Bearbeiten` at the top of the corpus column, rendered only in a local project copy (ADR-039, ADR-042). Editor setup and the connected-folder status appear only in edit mode. The button "Speichern" in the assessment dock is the only daily save action, with its missing precondition named above it, and Ctrl+S triggers it from anywhere in `Bearbeiten` (ADR-047). Records that only the browser holds after a failed write or a restored recovery are written by the same action even when the open paper is unchanged. The storage line names the key and the target file, and below it the clone folder with the actions to change key or folder. A conflict between file and browser names the paper by title, each choice states the decision it keeps, and choosing writes the file at once. A key change can be cancelled with its button or Escape. The pin menu opens on the side of the passage with more room and scrolls inside when that room is short, so it never covers the passage.
+Standalone page `docs/prisma.html` (ADR-008), wearing the Companion design since ADR-014 and the shared site header. `js/prisma-data.js` provides the `window.EC` shim over `research_vault_v2.json`. The page is one column of header and workspace, so the workspace fills the remaining height without a hard-coded header height. The workspace opens in read mode with the two-state control `Lesen | Bearbeiten` at the top of the corpus column, rendered only in a local project copy (ADR-039, ADR-042). Editor setup and the connected-folder status appear only in edit mode. The button "Speichern" in the assessment dock is the only daily save action, with its missing precondition named above it, and Ctrl+S triggers it from anywhere in `Bearbeiten` (ADR-047). Records that only the browser holds after a failed write or a restored recovery are written by the same action even when the open paper is unchanged. Served by the local server, the storage line names the reviewer with the action "Wechseln", and the target file shows on hover and in every save result. Served statically, it names key, target file and folder with the actions to change them (ADR-029). A conflict between file and browser names the paper by title, each choice states the decision it keeps, and choosing writes the file at once. A key change can be cancelled with its button or Escape. The pin menu opens on the side of the passage with more room and scrolls inside when that room is short, so it never covers the passage.
 
-- First-use setup: reviewer key and working folder.
-- Daily storage: exact target file, connected-folder status, write result, and one disk action.
+- First-use setup: the reviewer chosen by name from the assignment (ADR-047).
+- Daily storage: write result and the one save action in the assessment dock.
 - Output utilities: PRISMA flow, checklist, disclosure, export, import, and reconciliation remain outside the editor surface.
 
 There is no blind-mode toggle. Every human session shows the current annotation with its provenance and no AI pre-assessment (ADR-042, ADR-044).
