@@ -6,12 +6,10 @@ const EC = window.EC;
 
 // The one place that defines the research questions shown on the site: the main
 // question as start heading and, per sub-question, its wording, matrix presets, the
-// analysis fields it draws on, what is not yet determinable for it (`limits`) and the
-// assertion topics assigned to it. Canonical wording and limits live in
-// knowledge/project.md#research-questions and
+// analysis fields it draws on and what is not yet determinable for it (`limits`).
+// Canonical wording and limits live in knowledge/project.md#research-questions and
 // knowledge/analysis-methods.md#answering-the-research-questions.
-// An assertion's `research_questions` decides its assignment; the `topics` lists
-// are the fallback while the assertion index carries no such field.
+// An assertion's `research_questions` decides its assignment.
 const MAIN_QUESTION = 'Wie können Fachkräfte der Sozialen Arbeit verantwortlich mit LLMs arbeiten, und welche Bias-Formen und welchen Umgang damit zeigt die Literatur?';
 // The ids follow the numbering of 1 October 2026 (SQ1 to SQ5 in the knowledge base).
 // A question whose fields carry no code for any released work says that it is not
@@ -26,7 +24,6 @@ const QUESTIONS = [
         outside: { field: 'AN_Population', value: 'Not_SW_Specific', label: 'Nicht spezifisch für die Soziale Arbeit' },
         limits: 'Die Werte des Aufgabenfelds werden pilotiert, und für Werke, die vor Codebuchversion 1.4 codiert wurden, ist es nicht erhoben. ' +
             'Literatur zu Aufgaben ohne Bezug zu Bias ist möglicherweise unterrepräsentiert, weil die Suche auf Bias und Gender ausgerichtet war.',
-        topics: [],
     },
     {
         id: '2', name: 'Bias-Formen',
@@ -36,7 +33,6 @@ const QUESTIONS = [
         limits: 'Die Codes der Bias-Achsen und Schadensarten stammen bis zur Neucodierung aus Codebuchversion 1.3, deren Definitionen Version 1.4 geschärft hat. ' +
             'Zwei getrennte Codierungen durch KI-Agenten weichen in beiden Feldern oft voneinander ab. ' +
             'Welche Formen fehlen, lässt sich erst nach vollständiger Codierung bestimmen.',
-        topics: [],
     },
     {
         id: '3', name: 'Umgang mit Bias',
@@ -44,7 +40,6 @@ const QUESTIONS = [
         maps: [{ rows: 'AN_Prompt_Techniques', cols: 'AN_Prompting_Role' }, { rows: 'AN_Mitigation_Stage', cols: 'AN_Mitigation_Status' }],
         fields: ['AN_Prompt_Techniques', 'AN_Prompting_Role', 'AN_Mitigation_Stage', 'AN_Mitigation_Status'],
         limits: 'Der Status einer Maßnahme ist ein Wert je Werk. Welche Technik oder Stufe evaluiert, demonstriert oder nur vorgeschlagen ist, lässt sich daraus nicht bestimmen.',
-        topics: ['Prompting and Bias Mitigation'],
     },
     {
         id: '4', name: 'Begriffliche Fundierung',
@@ -52,16 +47,14 @@ const QUESTIONS = [
         maps: [{ rows: 'AN_Gender_Understanding', cols: 'AN_Theory_Reference' }],
         fields: ['AN_Gender_Definition', 'AN_Bias_Definition', 'AN_Gender_Understanding', 'AN_Theory_Reference'],
         limits: 'Die Frage ist nur aus Volltexten beantwortbar. Die Theorien selbst stehen als belegte Bezüge bei den Werken, nicht als Codes.',
-        topics: [],
     },
     {
         id: '5', name: 'Kompetenzen',
         text: 'Welche Kompetenzen und organisationalen Voraussetzungen nennt die Literatur für einen verantwortlichen Einsatz, und wo greifen allgemeine Prompting-Anleitungen für die Soziale Arbeit zu kurz?',
         maps: [{ rows: 'AN_Mitigation_Stage', cols: 'AN_Prompting_Role' }],
         fields: ['AN_Mitigation_Stage', 'AN_Prompting_Role'],
-        limits: 'Das externe Rahmenwerk allgemeiner Prompting-Anleitungen ist noch nicht benannt. ' +
-            'Wo solche Anleitungen für die Soziale Arbeit zu kurz greifen, ist deshalb noch nicht bestimmbar.',
-        topics: ['AI Literacy'],
+        limits: 'Als externes Rahmenwerk allgemeiner Prompting-Anleitungen dient The Prompt Report (Schulhoff et al. 2024). ' +
+            'Wo solche Anleitungen für die Soziale Arbeit zu kurz greifen, ist erst nach dem Abgleich der Literatur mit diesem Rahmenwerk bestimmbar.',
     },
 ];
 
@@ -75,9 +68,9 @@ function matrixHref(map, cell) {
     return EC.href(Object.assign({ view: 'matrix', rows: map.rows, cols: map.cols }, cell ? { cell: cell } : {}));
 }
 
-// A field counts as coded once any released Include carries a state other than absent.
+// A field counts as coded once any released Include carries a value, none or undecidable.
 function fieldCoded(field) {
-    return Boolean(model.dim(field)) && model.includes.some(function (work) { return model.stateOf(work, field).state !== 'absent'; });
+    return Boolean(model.dim(field)) && model.includes.some(function (work) { return model.isCoded(work, field); });
 }
 
 function questionCoded(item) { return item.fields.some(fieldCoded); }
@@ -88,7 +81,7 @@ function validMaps(item) { return item.maps.filter(function (map) { return field
 // instead of a share, so no figure suggests coding that does not exist.
 function summaryHtml(item, prefix) {
     if (!questionCoded(item)) {
-        return '<p class="denominator denominator--summary" data-coded="0">' + (prefix ? EC.esc(prefix) + ' · ' : '') + 'Noch nicht codiert</p>';
+        return '<p class="denominator denominator--summary" data-coded="0">' + (prefix ? '<span class="denominator-prefix">' + EC.esc(prefix) + '</span> ' : '') + 'Noch nicht codiert</p>';
     }
     // A field nobody has coded yet, such as a pilot field, would make every work count as uncoded.
     return EC.summaryLine(model.includes, item.fields.filter(fieldCoded), false, prefix, { status: true });
@@ -99,7 +92,7 @@ function renderStart() {
     document.getElementById('sq-list').innerHTML = QUESTIONS.map(function (item) {
         const maps = validMaps(item).map(function (map) {
             return '<a class="sq-matrix-link" href="' + EC.esc(matrixHref(map)) + '">' + EC.esc(mapLabel(map)) + '</a>';
-        }).join(' · ');
+        }).join(', ');
         return '<li class="sq-item" data-sq="' + item.id + '"><a class="sq-link" href="' + EC.esc(EC.href({ view: 'frage', sq: item.id })) + '">' +
             EC.esc(item.text) + '</a>' + summaryHtml(item, '') +
             (maps ? '<p class="sq-maps">Matrix ' + maps + '</p>' : '') + '</li>';
@@ -115,10 +108,8 @@ function questionIds(value) {
 }
 
 function findingsFor(item) {
-    const assigned = model.assertions.some(function (assertion) { return assertion.research_questions != null; });
     return model.assertions.filter(function (assertion) {
-        if (assigned) return questionIds(assertion.research_questions).indexOf(item.id) >= 0;
-        return (assertion.topics || []).some(function (topic) { return item.topics.indexOf(topic) >= 0; });
+        return questionIds(assertion.research_questions || []).indexOf(item.id) >= 0;
     });
 }
 
@@ -128,22 +119,17 @@ function openSection(item) {
         const dim = model.dim(field);
         const own = model.coverage(model.includes, field);
         const pipeline = model.pipelineCoverage(field);
-        const notCoded = pipeline && pipeline.not_coded != null ? pipeline.not_coded : own.not_coded;
-        const undecidable = pipeline && pipeline.undecidable != null ? pipeline.undecidable : own.undecidable;
+        const figure = function (key) { return pipeline && pipeline[key] != null ? pipeline[key] : own[key]; };
         // The denominator stands once in the summary line at the top of the page.
-        const parts = [notCoded + ' noch nicht codiert', undecidable + ' nicht entscheidbar'];
-        if (pipeline && pipeline.absent) parts.push(pipeline.absent + ' ohne Angabe');
+        const parts = [figure('not_coded') + ' noch nicht codiert', figure('undecidable') + ' nicht entscheidbar'];
+        if (figure('absent')) parts.push(figure('absent') + ' ohne Angabe');
         if (pipeline && pipeline.withheld != null) parts.push(pipeline.withheld + ' zurückgehalten');
-        const open = model.includes.filter(function (work) {
-            const state = model.stateOf(work, field).state;
-            return state === 'absent' || state === 'undecidable';
-        });
+        const open = model.includes.filter(function (work) { return !model.isCoded(work, field); });
         return '<div class="open-field" data-field="' + EC.esc(field) + '"><h3>' + EC.esc(dim.label) + '</h3>' +
-            '<p class="denominator">' + parts.join(' · ') + '</p>' +
+            '<p class="denominator">' + parts.join(', ') + '</p>' +
             (open.length ? '<ul class="open-works" role="list">' + open.map(function (work) {
-                const state = model.stateOf(work, field).state === 'undecidable' ? 'nicht entscheidbar' : 'noch nicht codiert';
                 return '<li><a href="' + EC.esc(EC.href({ view: 'werk', id: work.id })) + '">' + EC.esc(work.authorYear || work.title) +
-                    '</a> · ' + state + '</li>';
+                    '</a>, ' + fieldValuesText(work, field) + '</li>';
             }).join('') + '</ul>' : '') + '</div>';
     }).join('');
 }
@@ -154,6 +140,7 @@ function fieldValuesText(work, field) {
     if (state.state === 'value') return state.values.map(function (value) { return EC.esc(dim.valueLabel(value)); }).join(', ');
     if (state.state === 'none') return 'nicht zutreffend';
     if (state.state === 'undecidable') return 'nicht entscheidbar';
+    if (state.state === 'empty') return 'ohne Angabe';
     return 'noch nicht codiert';
 }
 
@@ -176,7 +163,7 @@ function worksSection(item) {
         return '<ol class="worklist" role="list">' + selection.map(function (work) {
             return '<li class="work-item" data-work-id="' + EC.esc(work.id) + '"><h' + level + ' class="work-title"><a href="' +
                 EC.esc(EC.href({ view: 'werk', id: work.id })) + '">' + EC.esc(work.title) + '</a></h' + level + '>' +
-                '<p class="work-meta">' + [work.authorYear].filter(Boolean).map(EC.esc).concat([EC.statusMark(work.status)]).join(' · ') + '</p>' +
+                '<p class="work-meta">' + EC.metaLine([EC.esc(work.authorYear), EC.statusMark(work.status)]) + '</p>' +
                 '<dl class="code-list code-list--compact">' + fields.map(function (field) {
                     return '<div class="code-row"><dt>' + EC.esc(model.dim(field).label) + '</dt><dd>' + fieldValuesText(work, field) + '</dd></div>';
                 }).join('') + '</dl></li>';
@@ -243,7 +230,7 @@ function renderMethode() {
             ? '<dl class="value-definitions">' + dim.values.map(function (value) {
                 return '<dt>' + EC.esc(dim.valueLabel(value)) + '</dt><dd>' + EC.esc(dim.valueDefinition(value)) + '</dd>';
             }).join('') + '</dl>'
-            : '<p>' + dim.values.map(function (value) { return EC.esc(dim.valueLabel(value)); }).join(' · ') + '</p>';
+            : '<p>' + dim.values.map(function (value) { return EC.esc(dim.valueLabel(value)); }).join(', ') + '</p>';
         return '<dt>' + EC.esc(dim.label) + '</dt><dd>' + (dim.definition ? '<p>' + EC.esc(dim.definition) + '</p>' : '') + values + '</dd>';
     }).join('');
     document.getElementById('methode-root').innerHTML =
@@ -253,6 +240,7 @@ function renderMethode() {
         '<dt><span aria-hidden="true">●</span> fachlich verifiziert</dt><dd>Eine Fachexpertin oder ein Fachexperte hat die Codierung geprüft und angenommen.</dd>' +
         '<dt>n. z. nicht zutreffend</dt><dd>Das Feld ist codiert, und keiner seiner Werte trifft auf das Werk zu.</dd>' +
         '<dt>n. e. nicht entscheidbar</dt><dd>Das Feld ist codiert, aber die Quelle erlaubt keine Entscheidung.</dd>' +
+        '<dt>o. A. ohne Angabe</dt><dd>Das Werk ist codiert, aber dieses Feld hat keinen Eintrag, weil es optional ist, etwa bei Codierung aus dem Abstract, oder bei der Codierung noch nicht erhoben wurde.</dd>' +
         '<dt>noch nicht codiert</dt><dd>Für das Werk liegt in diesem Feld noch keine Codierung vor.</dd>' +
         '<dt>n. b. nicht bestimmbar</dt><dd>Eine leere Zelle, solange eingeschlossene Werke noch nicht codiert sind. Eine 0 steht erst, wenn die Codierung der Auswahl vollständig ist.</dd></dl></section>' +
         '<section aria-labelledby="methode-umfang"><h2 id="methode-umfang">Umfang</h2>' +

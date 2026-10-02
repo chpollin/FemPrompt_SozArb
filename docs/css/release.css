@@ -78,6 +78,7 @@ main.release-main { max-inline-size: 1200px; padding: var(--space-xl) var(--spac
 :where(.release-main, .release-view) .denominators { margin-block: var(--space-md); }
 :is(.release-main, .release-view) .denominator { font-size: var(--text-base); color: var(--gray-700); margin-block: var(--space-xs); max-inline-size: 62ch; }
 :where(.release-main, .release-view) .denominator--summary { font-size: var(--text-md); font-weight: 700; color: var(--gray-900); }
+:where(.release-main, .release-view) .denominator-prefix { display: block; }
 :where(.release-main, .release-view) .denominator-label { font-weight: 600; color: var(--gray-900); margin-inline-end: var(--space-xs); }
 :is(.release-main, .release-view) .mark-legend { font-size: var(--text-sm); color: var(--gray-700); margin-block: var(--space-sm) var(--space-lg); max-inline-size: 62ch; }
 
@@ -106,7 +107,7 @@ main.release-main { max-inline-size: 1200px; padding: var(--space-xl) var(--spac
 }
 :where(.release-main, .release-view) .matrix-cell:hover { border-color: var(--primary-dark); }
 :where(.release-main, .release-view) .matrix-cell[aria-pressed="true"] { outline: 3px solid var(--primary-dark); outline-offset: -1px; font-weight: 700; }
-:where(.release-main, .release-view) .matrix-cell--none, :where(.release-main, .release-view) .matrix-cell--absent, :where(.release-main, .release-view) .matrix-cell--undecidable { border-style: dashed; color: var(--gray-700); }
+:where(.release-main, .release-view) .matrix-cell--none, :where(.release-main, .release-view) .matrix-cell--absent, :where(.release-main, .release-view) .matrix-cell--empty, :where(.release-main, .release-view) .matrix-cell--undecidable { border-style: dashed; color: var(--gray-700); }
 :where(.release-main, .release-view) .matrix-cell .mark-glyph { color: var(--gray-900); font-size: var(--text-xs); }
 :where(.release-main, .release-view) .matrix-empty { color: var(--gray-500); font-size: var(--text-xs); }
 :where(.release-main, .release-view) .matrix-empty--open { font-style: italic; }
@@ -116,6 +117,9 @@ main.release-main { max-inline-size: 1200px; padding: var(--space-xl) var(--spac
 :where(.release-main, .release-view) .worklist { list-style: none; display: grid; gap: var(--space-xl); margin-block-start: var(--space-md); }
 :where(.release-main, .release-view) .work-item { max-inline-size: 62ch; }
 :where(.release-main, .release-view) .work-title { font-family: var(--font-display); font-size: var(--text-lg); margin: 0 0 var(--space-xs); line-height: 1.35; }
+:where(.release-main, .release-footer, .release-view) .meta-part:not(:last-child) { margin-inline-end: var(--space-md); }
+/* A legend entry wraps inside itself only when it is wider than the line. */
+:where(.release-main, .release-view) .mark-legend .meta-part { display: inline-block; }
 :where(.release-main, .release-view) .work-meta { font-size: var(--text-base); color: var(--gray-700); }
 :where(.release-main, .release-view) .work-evidence { display: grid; gap: var(--space-md); margin-block-start: var(--space-sm); }
 :where(.release-main, .release-view) .evidence { margin: 0; max-inline-size: 62ch; }

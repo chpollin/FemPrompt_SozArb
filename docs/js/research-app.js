@@ -1520,7 +1520,7 @@ function buildDetailContent(paper) {
             '<div class="assessment-decision" style="color:' + llmDecColor + '">' + escapeHtml(llm.decision) + '</div>' +
             catGridColored(llm.all_categories);
         if (llm.reasoning) {
-            html += '<div class="reasoning-section"><span class="reasoning-label">Begründung</span>' +
+            html += '<div class="reasoning-section"><h4 class="reasoning-label">Begründung</h4>' +
                 '<p class="reasoning-text">' + escapeHtml(llm.reasoning) + '</p></div>';
         }
         html += '</div>';

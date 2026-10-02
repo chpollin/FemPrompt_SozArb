@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-01
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -279,25 +279,25 @@ Navigation labels equal the view titles. Each view answers one task.
 | View | Task | Module |
 |---|---|---|
 | Fragen | Enter through the main question and the five sub-questions, each with its coding line and links to its matrix presets. A question without coded fields, currently SQ4, states "Noch nicht codiert" instead of a coding line | `docs/js/release-fragen.js` |
-| Answer page per sub-question | Read what the reviewed literature shows, in the order Befunde (released Assertions), Matrix (preset matrices), Offen (what the question cannot yet determine, then works not yet coded or undecidable per field) and Werke (included works with a code in the question's fields, for SQ1 with works coded only as not specific to social work in a separate group) | `docs/js/release-fragen.js` |
+| Answer page per sub-question | Read what the reviewed literature shows, in the order Befunde (released Assertions), Matrix (preset matrices), Offen (what the question cannot yet determine, then per field the works not yet coded, ohne Angabe or undecidable) and Werke (included works with a code in the question's fields, for SQ1 with works coded only as not specific to social work in a separate group) | `docs/js/release-fragen.js` |
 | Matrix | Cross two coded dimensions under year, study type and review-status filters and open the work list of a cell with its evidence | `docs/js/release-matrix.js` |
-| Netz | Explore the terms coded together with one selected term from selectable subject fields (the coding basis and the screening category groups are no neighbour choices), as a radial figure with a table equivalent and, on wide screens with `Werke zeigen`, as a works-terms column view, and open the work list of an edge. On narrow screens the table precedes the figure | `docs/js/release-netz.js` |
+| Netz | Explore the terms coded together with one selected term from selectable subject fields (the coding basis and the screening category groups are no neighbour choices), as a radial figure with a table equivalent and, on wide screens with `Werke zeigen`, as a works-terms column view, and open the work list of an edge. On narrow screens the table precedes the figure, and the figure's box is fitted to its drawn labels, so no label is cut off when it scales into the column | `docs/js/release-netz.js` |
 | Korpus | Search all released works by bibliography, codes and category labels and filter them by decision, study type, year and review status. Facet counts appear only while a search or facet is active, and a facet with one value is not offered | `docs/js/release-werk.js` |
 | Werk | Read one work with its status, screening decision, codes, evidence and Assertions and a collapsed record of identity and review | `docs/js/release-werk.js` |
 | Aussagen | Search the released Assertions with their quotations and review record | `docs/js/public-release.js` |
 | Chat | Ask questions of the released Assertions through the grounded chat of `docs/js/wissenschat.js`, each answer headed as a model proposal with model and time, local notices without a provider request set apart | `docs/js/public-release.js` |
 | Methode | Status marks, release scope, screening rule, category definitions, analysis vocabulary, downloads | `docs/js/release-fragen.js` |
 
-`docs/js/release-model.js` holds the client-side model, and `docs/js/public-release.js` holds the hash router and the shared renderers. The matrix table, the work list and the coverage lines are shared through `window.EC` from `release-matrix.js`, so the answer pages and the Netz use the same rendering. The research questions, their matrix presets, their fields, their current limits and their fallback Assertion topics live in the single `QUESTIONS` structure of `release-fragen.js`, with the canonical wording in [[project#Research questions]] and the limits in [[analysis-methods#Answering the research questions]]. An Assertion's `research_questions` entry decides its assignment to a sub-question. The topic lists apply only while the Assertion index carries no such entry. The router hides the navigation entry of any view whose module is not loaded. Removing the Netz view therefore takes its script and stylesheet lines in `docs/release.html`, its two entries in `PUBLIC_FILES` and its checks in `tests/browser/release.mjs`.
+`docs/js/release-model.js` holds the client-side model, and `docs/js/public-release.js` holds the hash router and the shared renderers. The matrix table, the work list and the coverage lines are shared through `window.EC` from `release-matrix.js`, so the answer pages and the Netz use the same rendering. The research questions, their matrix presets, their fields and their current limits live in the single `QUESTIONS` structure of `release-fragen.js`, with the canonical wording in [[project#Research questions]] and the limits in [[analysis-methods#Answering the research questions]]. An Assertion's `research_questions` entry, which `build_assertion_index.py` emits for every released Assertion from the frontmatter field `research-questions`, decides its assignment to a sub-question. Assertion topics are shown with German labels from a label map in `public-release.js`, because the research vault records them in English only, and an unmapped topic appears as recorded. The router hides the navigation entry of any view whose module is not loaded. Removing the Netz view therefore takes its script and stylesheet lines in `docs/release.html`, its two entries in `PUBLIC_FILES` and its checks in `tests/browser/release.mjs`.
 
 ### Data contract
 
 The reader in `release-model.js` follows the coverage contract in [[data#Analysis field states and coverage]].
 
-- Per released record, the state of an analysis field comes from `analysis.fields` and `analysis.undecidable`. A value list is coded, `["None"]` is coded as not applicable, a field named in `analysis.undecidable` (list or object form) is undecidable, and a missing analysis or an empty value reads as not yet coded. The reader does not consume the record-level `analysis.field_states`. It derives the same states and shows the contract's `absent` as not yet coded.
+- Per released record, the state of an analysis field comes from `analysis.field_states` together with `analysis.fields` and `analysis.undecidable`. A value list is coded, `["None"]` is coded as not applicable, a field that `field_states` or `analysis.undecidable` (list or object form) names as undecidable is undecidable, and a field whose `field_states` entry is `absent` reads as ohne Angabe, a coded work whose coding left the field empty or did not collect it. A missing analysis reads as not yet coded. A record without `field_states` cannot tell an empty field from an uncoded one, so there an empty value reads as not yet coded.
 - A category group counts as coded with its member categories and as not applicable when the record carries none of them.
 - Unfiltered denominators and the withheld count come from `meta.analysis_coverage`. `scope.work_total` is the denominator, and a field or category-group entry is read only when `value`, `none`, `undecidable`, `absent`, `not_coded` and `withheld` are all numeric. The site shows `absent` as ohne Angabe, apart from `not_coded` as noch nicht codiert, and `withheld` as zurückgehalten. Without a readable entry for every named dimension, the site counts over the released records and names the denominator veröffentlichte eingeschlossene Werke, never the full scope.
-- The line "n von N eingeschlossenen Werken codiert" over several fields counts a work as coded when every named field carries a recorded state. From the pipeline figures it takes the smallest coded total among the fields, because per-field figures cannot express coding in every field.
+- The line "n von N eingeschlossenen Werken codiert" over several fields counts a work as coded when every named field carries a value, nicht zutreffend or nicht entscheidbar. A field ohne Angabe does not count, as in the pipeline figures, where coded is the sum of `value`, `none` and `undecidable`. From the pipeline figures it takes the smallest coded total among the fields, because per-field figures cannot express coding in every field. A question's fields count as coded under the same rule, so a field that no released work carries beyond ohne Angabe leaves a question uncoded.
 - Filtered views count over the released records that remain after the filter. Beyond these counts and the cross-tabulation of released records the client computes nothing.
 - Labels come from `category_schema.json` and `analysis_fields.json`. A field's `label`, `definition`, `value_labels` and `value_definitions` take precedence when the pipeline emits them, and the Methode page shows the definitions. Without them the site shows the controlled identifier without its `AN_` prefix.
 - A work counts as fachlich verifiziert when its released record carries a domain-expert verification or publication approval, or, without a released screening record, when its Assertion evidence is verified. Otherwise it carries the public label of the publication policy.
@@ -308,13 +308,14 @@ These rules bind every view of the result site.
 
 - A matrix cell and a network edge count works in which two codes occur together. They state no relation, direction or effect, and between two multi-valued codes their wording reads "gemeinsam codiert in n Werken".
 - A single-valued field describes the whole work and carries the suffix "des Werks". A cell that crosses it with another field counts works and never attributes the work's status to one technique or stage.
-- The line "n von N eingeschlossenen Werken codiert" stands once, first above every matrix, every answer page and the Netz, and the axis lines below it partition it without repeating N. "codiert" means any recorded state, and "mit Code" counts value-coded works. Where status is summarised, the line states how many works are fachlich verifiziert, including none.
-- An empty cell reads "n. b." while `meta.analysis_coverage` reports included works that are not coded or withheld on either axis, or, without an entry, while the coverage scope exceeds the released included works. It reads 0 only when coding of the selection is complete. Works that are not yet coded are not released, so the not-coded row and column appear only when a released work lacks the field, and their pipeline count stands in the axis line.
+- The line "n von N eingeschlossenen Werken codiert" stands once, first above every matrix, every answer page and the Netz, and the axis lines below it partition it without repeating N. "codiert" means a value, nicht zutreffend or nicht entscheidbar, and "mit Code" counts value-coded works. The axis lines name ohne Angabe apart from noch nicht codiert. Where status is summarised, the line states how many works are fachlich verifiziert, including none.
+- An empty cell reads "n. b." while `meta.analysis_coverage` reports included works that are not coded or withheld on either axis, or, without an entry, while the coverage scope exceeds the released included works. It reads 0 only when coding of the selection is complete. Works that are not yet coded are not released, so the not-coded row and column appear only when a released work lacks the field, and their pipeline count stands in the axis line. The row and column ohne Angabe appear only when a released work carries that state.
 - Every matrix carries the visible caption "Gemeinsam codiert in denselben Werken" with its axes, or "Werke je Code" when an axis is a work-level field.
-- Status marks are ◆ KI-quellengeprüft, ● fachlich verifiziert, n. z. codiert und nicht zutreffend, n. e. nicht entscheidbar and n. b. nicht bestimmbar. Marks follow the count, so no mark reads as a sign. Each mark comes with text or an accessible label, so no meaning depends on colour. A matrix cell carries ● only when every work in it is verified, and the review-status filter is offered only while more than one status exists.
+- Status marks are ◆ KI-quellengeprüft, ● fachlich verifiziert, n. z. codiert und nicht zutreffend, n. e. nicht entscheidbar, o. A. ohne Angabe and n. b. nicht bestimmbar. Marks follow the count, so no mark reads as a sign. Each mark comes with text or an accessible label, so no meaning depends on colour. A matrix cell carries ● only when every work in it is verified, and the review-status filter is offered only while more than one status exists.
 - Category evidence appears as the quotation with its text basis, each passage once, with the highlight widened to whole words. Analysis fields carry no field-level evidence in the data. Work lists therefore show the codes of the cell and the category quotations, and the Werk page shows the coding note collapsed as the coding agent's rationale, not as evidence and not set as a quotation.
 - Every Assertion evidence names the screening state of its work, Include, Exclude or Unclear from the landscape, or nicht gescreent.
 - Dates appear in German form and agents by their role. Record keys, run paths and hashes appear only inside the collapsed review records.
+- Fields of one line, such as author, year and status of a work or the locator of an evidence, stand apart by spacing (`EC.metaLine`), and lists within a line by commas. No middle dot serves as separator. An exclusion reason appears with its German label from `exclusion_reason_labels` in `category_schema.json`.
 - Recommendations in codes and Assertions are reported as recommendations of their source. Start and answer pages describe what the reviewed literature shows and never call a question answered.
 
 ### URL state
@@ -333,7 +334,7 @@ Every view state is a hash of URL parameters, so browser history and deep links 
 #view=methode
 ```
 
-A dimension is an analysis field name, `Studientyp`, or a category group key from `category_schema.json`. Status rows and columns use the keys `__none`, `__undecidable` and `__absent`, and category groups carry only `__none` and `__absent`.
+A dimension is an analysis field name, `Studientyp`, or a category group key from `category_schema.json`. Status rows and columns use the keys `__none`, `__undecidable`, `__empty` for ohne Angabe and `__absent` for noch nicht codiert, and category groups carry only `__none` and `__absent`.
 
 ### Working Companion
 
@@ -380,11 +381,8 @@ The Literaturbild is the evidence-and-gap map of the working application in the 
 
 ### Open interface questions
 
-1. German display labels and definitions for the analysis fields and their values belong in `assessment/categories.yaml` and its projection. The site reads them under the keys named in the data contract as soon as they are emitted.
-2. Until the Assertion index carries `research_questions`, the topic lists in `QUESTIONS` assign Assertions to sub-questions.
-3. Category evidence has a record locator but no page or section locator, unlike Assertion evidence. Analysis fields have no field-level evidence. Until it exists, the Werk page shows the coding note collapsed as the coding agent's rationale.
-4. A released record with an empty optional field reads as noch nicht codiert in the matrix, while the pipeline figures count it as ohne Angabe. Reading `analysis.field_states` would let the matrix row show the same distinction.
-5. Whether the Netz view and aggregate coverage counts about unreleased works appear publicly are open decisions of the project owner, recorded in [[plan]].
+1. Category evidence has a record locator but no page or section locator, unlike Assertion evidence. Analysis fields have no field-level evidence. Until it exists, the Werk page shows the coding note collapsed as the coding agent's rationale.
+2. Whether the Netz view and aggregate coverage counts about unreleased works appear publicly are open decisions of the project owner, recorded in [[plan]].
 
 ## Decisions
 

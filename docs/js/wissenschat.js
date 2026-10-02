@@ -461,7 +461,7 @@ function renderMessages() {
 function buildMessageHead(msg) {
     if (msg.local) return '<p class="chat-msg-head">Hinweis ohne KI-Anfrage</p>';
     const time = (msg.at || new Date()).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-    return '<p class="chat-msg-head">' + EC.escapeHtml('KI-Antwort, Vorschlag · ' + MODEL + ' · ' + time) + '</p>';
+    return '<p class="chat-msg-head">' + EC.escapeHtml('KI-Antwort, Vorschlag, ' + MODEL + ', ' + time) + '</p>';
 }
 
 // Re-rendering the whole growing markdown on every SSE chunk is quadratic, so
@@ -573,24 +573,24 @@ function reviewLabel(source) {
     const review = source.review;
     let label = source.status === 'publication-approved' ? 'Publikationsfreigegeben'
         : source.status === 'verified' ? 'Fachlich verifiziert' : 'KI-quellengeprüft';
-    if (review) label += ' · KI-Prüfung ' + review.model + ' · ' + germanDate(review.reviewed_at);
+    if (review) label += ', KI-Prüfung ' + review.model + ' am ' + germanDate(review.reviewed_at);
     return label;
 }
 
 function buildReferenceListHtml(sources) {
     if (!sources || !sources.length) return '';
-    let html = '<div class="chat-references"><div class="chat-ref-label">Quellen und Fundstellen</div>';
+    let html = '<div class="chat-references"><h3 class="chat-ref-label">Quellen und Fundstellen</h3>';
     sources.forEach(function(source) {
         const url = sourceUrl(source.source_url);
         if (!url) return;
         const review = source.review;
         // Technical identifiers stay available for audit but out of the reading line.
         const record = [source.id, review && review.agent_id, source.work_id, source.version_id,
-            source.statement_ref, review && review.reviewed_at].filter(Boolean).join(' · ');
+            source.statement_ref, review && review.reviewed_at].filter(Boolean).join(', ');
         html += '<div class="chat-source">' +
             '<a href="' + EC.escapeHtml(url) + '" target="_blank" rel="noopener noreferrer">' +
-                EC.escapeHtml([source.author_year, source.title].filter(Boolean).join(' · ')) + '</a>' +
-            '<p>' + EC.escapeHtml(source.locator + ' · ' + source.version_type + ' · ' + reviewLabel(source)) + '</p>' +
+                EC.escapeHtml([source.author_year, source.title].filter(Boolean).join(', ')) + '</a>' +
+            '<p>' + EC.escapeHtml(source.locator + ', ' + source.version_type + ', ' + reviewLabel(source)) + '</p>' +
             '<blockquote>' + EC.escapeHtml(source.quote) + '</blockquote>' +
             '<a class="chat-ref-item" href="#view=werk&amp;id=' + encodeURIComponent(source.work_id) +
                 '" data-paper-id="' + EC.escapeHtml(source.record_id) + '">Werk ansehen</a>' +

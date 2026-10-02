@@ -8,7 +8,11 @@ const EC = root.EC = root.EC || {};
 
 const NONE = '__none';
 const UNDECIDABLE = '__undecidable';
+// ABSENT is a work without coding in the field. EMPTY is the contract state `absent`,
+// a coded work whose coding left an optional field without entry; the URL key
+// __absent predates it and keeps its meaning.
 const ABSENT = '__absent';
+const EMPTY = '__empty';
 const STUDY_FIELD = 'Studientyp';
 
 // label, definition, value_labels and value_definitions in analysis_fields.json take
@@ -52,7 +56,7 @@ function fieldDimension(field) {
         // The coding basis records how a work was coded, not what it addresses.
         process: field.name === 'AN_Coding_Basis',
         values: values.filter(function (value) { return value !== 'None'; }),
-        statusKeys: [NONE, UNDECIDABLE, ABSENT],
+        statusKeys: [NONE, UNDECIDABLE, EMPTY, ABSENT],
         valueLabel: function (value) { return labels[value] || humanise(value); },
         valueDefinition: function (value) { return typeof definitions[value] === 'string' ? definitions[value] : ''; },
     };
@@ -153,7 +157,11 @@ function createModel(input) {
         }
         const analysis = record.analysis;
         if (!analysis || !analysis.fields) return { state: 'absent', values: [] };
-        if (isUndecidable(analysis, dimId)) return { state: 'undecidable', values: [] };
+        // The release projection names each field's state. Without field_states an empty
+        // field cannot be told apart from one not yet coded and reads as not coded.
+        const stated = analysis.field_states && analysis.field_states[dimId];
+        if (stated === 'undecidable' || isUndecidable(analysis, dimId)) return { state: 'undecidable', values: [] };
+        if (stated === 'absent') return { state: 'empty', values: [] };
         const raw = analysis.fields[dimId];
         const list = (Array.isArray(raw) ? raw : [raw]).filter(function (value) { return value != null && value !== ''; });
         if (!list.length) return { state: 'absent', values: [] };
@@ -165,7 +173,7 @@ function createModel(input) {
     function keysOf(work, dimId) {
         const state = stateOf(work, dimId);
         if (state.state === 'value') return state.values;
-        return [state.state === 'none' ? NONE : state.state === 'undecidable' ? UNDECIDABLE : ABSENT];
+        return [{ none: NONE, undecidable: UNDECIDABLE, empty: EMPTY }[state.state] || ABSENT];
     }
 
     function rowKeys(dimId) {
@@ -190,12 +198,13 @@ function createModel(input) {
     }
 
     function coverage(selection, dimId) {
-        const counts = { in_scope: selection.length, coded: 0, none: 0, undecidable: 0, not_coded: 0 };
+        const counts = { in_scope: selection.length, coded: 0, none: 0, undecidable: 0, absent: 0, not_coded: 0 };
         selection.forEach(function (work) {
             const state = stateOf(work, dimId).state;
             if (state === 'value') counts.coded += 1;
             else if (state === 'none') counts.none += 1;
             else if (state === 'undecidable') counts.undecidable += 1;
+            else if (state === 'empty') counts.absent += 1;
             else counts.not_coded += 1;
         });
         return counts;
@@ -233,9 +242,16 @@ function createModel(input) {
         return typeof total !== 'number' || total <= includes.length;
     }
 
-    // "n von N eingeschlossenen Werken codiert": coded means any recorded state
-    // (value, none, undecidable) in every named field. Per-field pipeline figures
-    // cannot express "every field", so their smallest coded total is the bound.
+    // A field counts as coded with a value, none or undecidable. A field without entry
+    // stays out, as in the pipeline figures, so a field nobody was asked to code does
+    // not count as coded.
+    function isCoded(work, dimId) {
+        const state = stateOf(work, dimId).state;
+        return state === 'value' || state === 'none' || state === 'undecidable';
+    }
+
+    // "n von N eingeschlossenen Werken codiert": coded in every named field. Per-field
+    // pipeline figures cannot express "every field", so their smallest coded total is the bound.
     function codedSummary(selection, dimIds, usePipeline) {
         const ids = dimIds.filter(function (id, index) { return dimById[id] && dimIds.indexOf(id) === index; });
         if (usePipeline) {
@@ -251,7 +267,7 @@ function createModel(input) {
             }
         }
         const coded = selection.filter(function (work) {
-            return ids.every(function (id) { return stateOf(work, id).state !== 'absent'; });
+            return ids.every(function (id) { return isCoded(work, id); });
         }).length;
         return { coded: coded, total: selection.length, source: 'records' };
     }
@@ -297,7 +313,7 @@ function createModel(input) {
 
     function evidenceFor(work, dimId, key) {
         const dim = dimById[dimId];
-        if (!dim || key === NONE || key === UNDECIDABLE || key === ABSENT) return [];
+        if (!dim || key === NONE || key === UNDECIDABLE || key === EMPTY || key === ABSENT) return [];
         if (dim.kind === 'group') return categoryEvidence(work, key);
         return fieldCorrections(work, dimId);
     }
@@ -359,13 +375,13 @@ function createModel(input) {
     }
 
     return {
-        NONE: NONE, UNDECIDABLE: UNDECIDABLE, ABSENT: ABSENT, STUDY_FIELD: STUDY_FIELD,
+        NONE: NONE, UNDECIDABLE: UNDECIDABLE, EMPTY: EMPTY, ABSENT: ABSENT, STUDY_FIELD: STUDY_FIELD,
         landscape: landscape, schema: schema, fields: fields, release: release, assertions: assertions,
         publicLabel: (landscape.source && landscape.source.public_label) ||
             (input.assertions && input.assertions.meta && input.assertions.meta.public_label) || 'KI-quellengeprüft',
         dims: dims, dim: function (id) { return dimById[id] || null; },
         works: allWorks, includes: includes, workById: workById,
-        stateOf: stateOf, keysOf: keysOf, rowKeys: rowKeys, crossTab: crossTab,
+        stateOf: stateOf, isCoded: isCoded, keysOf: keysOf, rowKeys: rowKeys, crossTab: crossTab,
         coverage: coverage, pipelineCoverage: pipelineCoverage, codedSummary: codedSummary, filterWorks: filterWorks,
         codingComplete: codingComplete,
         evidenceFor: evidenceFor, categoryEvidence: categoryEvidence,

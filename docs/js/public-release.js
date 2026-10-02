@@ -68,9 +68,14 @@ function href(params) { return host ? host.href(params) : hashOf(params); }
 function statusMark(status, options) {
     const verified = status === 'verified';
     const label = verified ? 'fachlich verifiziert' : (model ? model.publicLabel : 'KI-quellengeprüft');
-    const extra = options && options.full && !verified ? ' · nicht fachlich verifiziert' : '';
+    const extra = options && options.full && !verified ? ', nicht fachlich verifiziert' : '';
     return '<span class="status-mark status-mark--' + (verified ? 'verified' : 'ki') + '">' +
         '<span class="mark-glyph" aria-hidden="true">' + (verified ? '●' : '◆') + '</span> ' + esc(label + extra) + '</span>';
+}
+
+// The fields of one line stand apart by spacing rather than a separator glyph.
+function metaLine(parts) {
+    return parts.filter(Boolean).map(function (part) { return '<span class="meta-part">' + part + '</span>'; }).join(' ');
 }
 
 function workCount(count) { return count + (count === 1 ? ' Werk' : ' Werke'); }
@@ -141,6 +146,15 @@ function highlight(text, term) {
     return esc(body.slice(0, start)) + '<mark>' + esc(body.slice(start, end)) + '</mark>' + esc(body.slice(end));
 }
 
+// Assertion topics are recorded in English in the research vault, which has no German
+// label for them; the public page shows German labels and an unknown topic as recorded.
+const TOPIC_LABELS = {
+    'AI Literacy': 'KI-Kompetenz',
+    'Generative AI in Social Work': 'Generative KI in der Sozialen Arbeit',
+    'Prompting and Bias Mitigation': 'Prompting und Bias-Minderung',
+};
+function topicLabel(topic) { return TOPIC_LABELS[topic] || topic; }
+
 function screeningLabel(work) {
     if (!work || !work.record) return 'nicht gescreent';
     return 'Screening ' + work.record.decision;
@@ -156,20 +170,20 @@ function renderAssertion(assertion, options) {
         const workLink = work ? '<a href="' + esc(href({ view: 'werk', id: work.id })) + '">' + esc(item.author_year || item.title) + '</a>'
             : esc(item.author_year || item.title);
         return '<li class="evidence-item"><blockquote class="evidence-quote">' + esc(item.quote) + '</blockquote>' +
-            '<p class="evidence-locator">' + workLink + ' · ' + esc(item.locator) +
-            ' · <span class="screening-state">' + esc(screeningLabel(work)) + '</span>' +
-            (item.version_type ? ' · ' + esc(versionLabel(item.version_type)) : '') +
-            (url ? ' · <a href="' + esc(url) + '" target="_blank" rel="noopener">Quelle öffnen</a>' : '') + '</p></li>';
+            '<p class="evidence-locator">' + metaLine([workLink, esc(item.locator),
+                '<span class="screening-state">' + esc(screeningLabel(work)) + '</span>',
+                item.version_type ? esc(versionLabel(item.version_type)) : '',
+                url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener">Quelle öffnen</a>' : '']) + '</p></li>';
     }).join('');
     return '<article class="assertion" data-assertion-id="' + esc(assertion.id) + '">' +
         '<h' + level + ' class="assertion-statement">' + esc(assertion.statement) + '</h' + level + '>' +
-        '<p class="assertion-meta">' + statusMark(status) +
-        (assertion.topics && assertion.topics.length ? ' · ' + esc(assertion.topics.join(', ')) : '') + '</p>' +
+        '<p class="assertion-meta">' + metaLine([statusMark(status),
+            esc((assertion.topics || []).map(topicLabel).join(', '))]) + '</p>' +
         '<ul class="evidence-list" role="list">' + evidence + '</ul>' +
         '<details class="assertion-review"><summary>Prüfnachweis</summary>' +
-        '<p class="review-line">' + esc(agentRole(review.agent_id)) + ' · Modell ' + esc(review.model) +
-        ' · geprüft am ' + esc(germanDate(review.reviewed_at)) + '</p><p>' + esc(review.findings) + '</p>' +
-        '<p class="review-line">Agentenkennung ' + esc(review.agent_id) + ' · Aussage ' + esc(assertion.id) + '</p></details></article>';
+        '<p class="review-line">' + metaLine([esc(agentRole(review.agent_id)), 'Modell ' + esc(review.model),
+            'geprüft am ' + esc(germanDate(review.reviewed_at))]) + '</p><p>' + esc(review.findings) + '</p>' +
+        '<p class="review-line">' + metaLine(['Agentenkennung ' + esc(review.agent_id), 'Aussage ' + esc(assertion.id)]) + '</p></details></article>';
 }
 
 function registerView(name, view) { views[name] = view; }
@@ -204,7 +218,7 @@ function render() {
     const heading = visibleHeading();
     // The tab title repeats the page heading.
     const headingText = heading ? heading.textContent.trim() : '';
-    document.title = (headingText ? headingText + ' · ' : '') + SITE_TITLE;
+    document.title = (headingText ? headingText + ' -- ' : '') + SITE_TITLE;
     settleFocus(document.querySelector('[data-view-root="' + params.view + '"]'),
         { changed: changed, external: external, focusHeading: booted });
 }
@@ -248,7 +262,7 @@ if (!host) registerView('aussagen', {
         if (input.value !== query) input.value = query;
         const words = EC.fold(query).split(/\s+/).filter(Boolean);
         const selected = model.assertions.filter(function (assertion) {
-            const text = EC.fold(JSON.stringify(assertion));
+            const text = EC.fold(JSON.stringify(assertion) + ' ' + (assertion.topics || []).map(topicLabel).join(' '));
             return words.every(function (word) { return text.indexOf(word) >= 0; });
         });
         const count = document.getElementById('assertion-count');
@@ -282,7 +296,7 @@ if (!host) document.addEventListener('click', function (event) {
 
 Object.assign(EC, {
     esc: esc, safeUrl: safeUrl, go: go, href: href, parseHash: parseHash,
-    statusMark: statusMark, workCount: workCount, versionLabel: versionLabel, highlight: highlight,
+    statusMark: statusMark, metaLine: metaLine, workCount: workCount, versionLabel: versionLabel, highlight: highlight,
     germanDate: germanDate, agentRole: agentRole, screeningLabel: screeningLabel,
     renderAssertion: renderAssertion, registerView: registerView,
     categoryChip: categoryChip, categoryChipRow: categoryChipRow,

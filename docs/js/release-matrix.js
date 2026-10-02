@@ -14,6 +14,7 @@ let focusCell = null;
 function statusKeyText(key) {
     if (key === model.NONE) return 'nicht zutreffend';
     if (key === model.UNDECIDABLE) return 'nicht entscheidbar';
+    if (key === model.EMPTY) return 'ohne Angabe';
     return 'noch nicht codiert';
 }
 
@@ -21,10 +22,11 @@ function statusKeyText(key) {
 function statusKeyGlyph(key) {
     if (key === model.NONE) return 'n. z.';
     if (key === model.UNDECIDABLE) return 'n. e.';
+    if (key === model.EMPTY) return 'o. A.';
     return '';
 }
 
-function isStatusKey(key) { return key === model.NONE || key === model.UNDECIDABLE || key === model.ABSENT; }
+function isStatusKey(key) { return key === model.NONE || key === model.UNDECIDABLE || key === model.EMPTY || key === model.ABSENT; }
 
 function keyLabel(dimId, key) {
     const dim = model.dim(dimId);
@@ -60,6 +62,7 @@ function headerHtml(dimId, key) {
 function cellKind(rowKey, colKey) {
     if (rowKey === model.ABSENT || colKey === model.ABSENT) return 'absent';
     if (rowKey === model.UNDECIDABLE || colKey === model.UNDECIDABLE) return 'undecidable';
+    if (rowKey === model.EMPTY || colKey === model.EMPTY) return 'empty';
     if (rowKey === model.NONE || colKey === model.NONE) return 'none';
     return 'value';
 }
@@ -67,6 +70,7 @@ function cellKind(rowKey, colKey) {
 function cellGlyph(kind, works) {
     if (kind === 'absent') return '';
     if (kind === 'undecidable') return 'n. e.';
+    if (kind === 'empty') return 'o. A.';
     if (kind === 'none') return 'n. z.';
     return works.every(function (work) { return work.status === 'verified'; }) ? '●' : '◆';
 }
@@ -112,12 +116,18 @@ function captionHtml(rowDimId, colDimId) {
 function matrixTable(selection, rowDimId, colDimId, options) {
     const opts = options || {};
     // The not-coded row holds released works only. Works that are not yet coded are
-    // not released, so the row appears only when a released work lacks the field.
-    const hasAbsent = function (dimId) {
-        return selection.some(function (work) { return model.stateOf(work, dimId).state === 'absent'; });
+    // not released, so the row appears only when a released work lacks the field, and
+    // the row of fields without entry only when a released work has one.
+    const optional = {};
+    optional[model.ABSENT] = 'absent';
+    optional[model.EMPTY] = 'empty';
+    const shown = function (dimId) {
+        return function (key) {
+            return !optional[key] || selection.some(function (work) { return model.stateOf(work, dimId).state === optional[key]; });
+        };
     };
-    const rowKeys = model.rowKeys(rowDimId).filter(function (key) { return key !== model.ABSENT || hasAbsent(rowDimId); });
-    const colKeys = model.rowKeys(colDimId).filter(function (key) { return key !== model.ABSENT || hasAbsent(colDimId); });
+    const rowKeys = model.rowKeys(rowDimId).filter(shown(rowDimId));
+    const colKeys = model.rowKeys(colDimId).filter(shown(colDimId));
     const cells = model.crossTab(selection, rowDimId, colDimId);
     let maximum = 0;
     rowKeys.forEach(function (row) {
@@ -174,11 +184,11 @@ function coverageLine(selection, dimId, axis, filtered) {
     // The denominator stands once in the summary line above; axis lines only partition it.
     const parts = [figures.coded + ' mit Code', figures.none + ' nicht zutreffend'];
     if (dim.kind === 'field') parts.push(figures.undecidable + ' nicht entscheidbar');
+    if (figures.absent) parts.push(figures.absent + ' ohne Angabe');
     parts.push(figures.not_coded + ' noch nicht codiert');
-    if (pipeline && !filtered && pipeline.absent) parts.push(pipeline.absent + ' ohne Angabe');
     if (pipeline && !filtered && pipeline.withheld != null) parts.push(pipeline.withheld + ' zurückgehalten');
     return '<p class="denominator" data-axis="' + axis + '" data-dim="' + EC.esc(dimId) + '"><span class="denominator-label">' +
-        EC.esc(dim.label) + '</span> ' + parts.join(' · ') + '</p>';
+        EC.esc(dim.label) + '</span> ' + parts.join(', ') + '</p>';
 }
 
 // Pipeline figures cover the whole Include scope. Without them for every named
@@ -193,7 +203,7 @@ function summaryLine(selection, dimIds, filtered, prefix, options) {
         status = verified ? ', davon ' + verified + ' fachlich verifiziert' : ', noch keines fachlich verifiziert';
     }
     return '<p class="denominator denominator--summary" data-coded="' + summary.coded + '" data-total="' + summary.total +
-        '" data-source="' + summary.source + '">' + (prefix ? EC.esc(prefix) + ' · ' : '') +
+        '" data-source="' + summary.source + '">' + (prefix ? '<span class="denominator-prefix">' + EC.esc(prefix) + '</span> ' : '') +
         summary.coded + ' von ' + summary.total + scope + status + '</p>';
 }
 
@@ -203,8 +213,8 @@ function evidenceBlocks(work, dimId, key) {
     // Only quotations are evidence. Correction reasons are agent rationale and stay on
     // the Werk page; record keys stay in its collapsed review record.
     return model.evidenceFor(work, dimId, key).filter(function (item) { return item.kind === 'quote'; }).map(function (item) {
-        return '<figure class="evidence"><figcaption class="evidence-code">' + (chipOf(dimId, key, item.level) || EC.esc(dim.valueLabel(key))) +
-            (LEVEL_LABELS[item.level] ? ' · ' + LEVEL_LABELS[item.level] : '') + '</figcaption>' +
+        return '<figure class="evidence"><figcaption class="evidence-code">' +
+            EC.metaLine([chipOf(dimId, key, item.level) || EC.esc(dim.valueLabel(key)), LEVEL_LABELS[item.level] || '']) + '</figcaption>' +
             '<blockquote class="evidence-quote">' + EC.highlight(item.text, item.term) + '</blockquote>' +
             '<p class="evidence-locator">' + EC.esc(TEXT_SOURCE_LABELS[item.textSource] || 'Textgrundlage offen') + '</p></figure>';
     }).join('');
@@ -230,7 +240,7 @@ function studyType(work) {
 
 function workItem(work, axes) {
     const evidence = axes.map(function (axis) { return evidenceBlocks(work, axis.dimId, axis.key); }).join('');
-    const meta = [work.authorYear, studyType(work)].filter(Boolean).map(EC.esc).concat([EC.statusMark(work.status)]).join(' · ');
+    const meta = EC.metaLine([EC.esc(work.authorYear), EC.esc(studyType(work)), EC.statusMark(work.status)]);
     return '<li class="work-item" data-work-id="' + EC.esc(work.id) + '">' +
         '<h3 class="work-title"><a href="' + EC.esc(EC.href({ view: 'werk', id: work.id })) + '">' + EC.esc(work.title) + '</a></h3>' +
         '<p class="work-meta">' + meta + '</p>' + cellCodes(work, axes) +
@@ -369,9 +379,9 @@ EC.coverageLine = coverageLine;
 EC.summaryLine = summaryLine;
 EC.countPhrase = countPhrase;
 EC.markLegendHtml = function () {
-    return '<span aria-hidden="true">◆</span> ' + EC.esc(model.publicLabel) + ' · <span aria-hidden="true">●</span> fachlich verifiziert · ' +
-        'n. z. codiert, nicht zutreffend · n. e. nicht entscheidbar · ' +
-        'n. b. nicht bestimmbar, solange eingeschlossene Werke noch nicht codiert sind';
+    return EC.metaLine(['<span aria-hidden="true">◆</span> ' + EC.esc(model.publicLabel), '<span aria-hidden="true">●</span> fachlich verifiziert',
+        'n. z. codiert und nicht zutreffend', 'n. e. nicht entscheidbar', 'o. A. ohne Angabe',
+        'n. b. nicht bestimmbar, solange eingeschlossene Werke noch nicht codiert sind']);
 };
 EC.statusKeyText = function (key) { return statusKeyText(key); };
 EC.matrixDefaults = DEFAULT_AXES;

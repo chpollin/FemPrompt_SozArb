@@ -247,7 +247,7 @@ rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
 .wn-node .wn-hit { fill: transparent; pointer-events: all; }
 .wn-item { cursor: pointer; outline: none; }
 
-.wn-dot { fill: var(--node); stroke: #fff; stroke-width: 1.5; }
+.wn-dot { fill: var(--node); stroke: var(--gray-50); stroke-width: 1.5; }
 .wn-dot--union { fill-opacity: .35; stroke: var(--node); }
 .wn-dot-both { fill: var(--node); }
 .wn-label { fill: var(--gray-900); font-weight: 500; }
@@ -269,7 +269,7 @@ rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
 .wn-node:focus-visible .wn-hit { stroke: none; }
 
 .wn-pill { pointer-events: none; }
-.wn-pill rect { fill: #fff; stroke: var(--primary-dark); stroke-width: 1.2; }
+.wn-pill rect { fill: var(--gray-50); stroke: var(--primary-dark); stroke-width: 1.2; }
 .wn-pill text { fill: var(--gray-900); font-weight: 600; font-variant-numeric: tabular-nums; }
 
 .wn-legend { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); margin: var(--space-sm) 0 0; padding: 0; list-style: none; font-size: var(--text-xs); color: var(--gray-700); }
@@ -280,7 +280,7 @@ rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
 .wn-detail { border-bottom: 1px solid var(--gray-200); padding-bottom: var(--space-md); }
 .wn-detail[hidden] { display: none; }
 .wn-detail-head { display: flex; align-items: start; justify-content: space-between; gap: var(--space-sm); }
-.wn-clear { flex: none; inline-size: 1.75rem; block-size: 1.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); background: #fff; color: var(--gray-700); font-size: 1.1rem; line-height: 1; cursor: pointer; }
+.wn-clear { flex: none; inline-size: 1.75rem; block-size: 1.75rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); background: var(--gray-50); color: var(--gray-700); font-size: 1.1rem; line-height: 1; cursor: pointer; }
 .wn-clear:hover { background: var(--gray-100); }
 .wn-list { max-height: 24rem; }
 .wn-prism { margin-inline-start: var(--space-xs); color: var(--primary-dark); }
@@ -290,12 +290,12 @@ rect.netz-hit { fill: transparent; stroke: transparent; pointer-events: all; }
 .wn-table { inline-size: 100%; border-collapse: collapse; font-size: var(--text-sm); }
 .wn-table caption { text-align: start; font-weight: 600; color: var(--gray-800); padding-block-end: var(--space-xs); }
 .wn-table th, .wn-table td { padding: .3rem var(--space-xs); border-bottom: 1px solid var(--gray-100); text-align: start; vertical-align: middle; }
-.wn-table thead th { position: sticky; top: 0; background: #fff; font-weight: 500; color: var(--gray-600); font-size: var(--text-xs); }
+.wn-table thead th { position: sticky; top: 0; background: var(--gray-50); font-weight: 500; color: var(--gray-600); font-size: var(--text-xs); }
 .wn-pair { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; font-weight: 400; }
 .wn-table tr.is-selected { background: var(--gray-100); }
 .wn-num { font-variant-numeric: tabular-nums; color: var(--gray-700); }
-.wn-pick { min-inline-size: 2.75rem; padding: .15rem .5rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); background: #fff; font: inherit; font-variant-numeric: tabular-nums; cursor: pointer; }
+.wn-pick { min-inline-size: 2.75rem; padding: .15rem .5rem; border: 1px solid var(--gray-300); border-radius: var(--radius-md); background: var(--gray-50); font: inherit; font-variant-numeric: tabular-nums; cursor: pointer; }
 .wn-pick:hover { background: var(--gray-100); }
-.wn-pick[aria-pressed="true"] { background: var(--primary-dark); border-color: var(--primary-dark); color: #fff; font-weight: 600; }
+.wn-pick[aria-pressed="true"] { background: var(--primary-dark); border-color: var(--primary-dark); color: var(--gray-50); font-weight: 600; }
 
 @media (prefers-reduced-motion: reduce) { .wn-line { transition: none; } }

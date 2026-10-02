@@ -50,6 +50,18 @@ const cells = fixture.crossTab(fixture.includes, 'AN_Bias_Axes', 'AN_Mitigation_
 check('model: a multi-valued work counts once per jointly coded value', cells.Gender.Evaluated.length === 1 && cells.Age.Evaluated.length === 1);
 check('model: status rows hold uncoded and undecidable works', cells[fixture.ABSENT][fixture.ABSENT].length === 2 &&
   cells[fixture.UNDECIDABLE][fixture.ABSENT].length === 2);
+const stated = EC.createModel({ schema, fields, landscape: { meta: {}, source: {}, records: [
+  fixtureRecord('STATED_EMPTY', { fields: { AN_Bias_Axes: ['Gender'] }, field_states: { AN_Bias_Axes: 'value', AN_Harm_Types: 'absent' }, undecidable: [] }),
+  fixtureRecord('STATED_NONE', { fields: { AN_Harm_Types: ['None'] }, field_states: { AN_Harm_Types: 'none' }, undecidable: [] }),
+  fixtureRecord('UNSTATED', null)] } });
+const statedWork = id => stated.workById('work:' + id);
+const statedCoverage = stated.coverage(stated.includes, 'AN_Harm_Types');
+check('model: field_states absent reads as without entry, apart from not coded',
+  stated.stateOf(statedWork('STATED_EMPTY'), 'AN_Harm_Types').state === 'empty' &&
+  stated.stateOf(statedWork('UNSTATED'), 'AN_Harm_Types').state === 'absent' &&
+  statedCoverage.absent === 1 && statedCoverage.not_coded === 1 && statedCoverage.none === 1 &&
+  stated.crossTab(stated.includes, 'AN_Bias_Axes', 'AN_Harm_Types').Gender[stated.EMPTY].length === 1 &&
+  stated.codedSummary(stated.includes, ['AN_Harm_Types'], false).coded === 1);
 check('model: coded summary counts any recorded state', fixture.codedSummary(fixture.includes, ['AN_Bias_Axes'], false).coded === 4);
 const withPipeline = EC.createModel({ schema, fields, landscape: { meta: { analysis_coverage: {
   scope: { work_total: 12 },
@@ -142,7 +154,8 @@ try {
   check('tab title equals the page heading', (await page.title()).startsWith((await answer.locator('h1').innerText()).trim()));
   check('every answer matrix carries a visible joint-coding caption', await answer.locator('.matrix-table').count() ===
     await answer.locator('p.matrix-caption:visible').count());
-  check('answer work lists show no leading separator', (await answer.locator('.work-meta').allInnerTexts()).every(t => !/^\s*·/.test(t)));
+  check('answer meta lines carry no middle-dot separator', (await answer.locator('.work-meta, .evidence-locator, .assertion-meta, .review-line, .denominator, .open-works')
+    .allTextContents()).every(t => !t.includes('·')));
   check('answer map cells link to the matrix', (await answer.locator('a.matrix-cell').first().getAttribute('href')).includes('view=matrix'));
   const statusLabel = fields.fields.find(field => field.name === 'AN_Mitigation_Status').label;
   check('work-level status is named as the work\'s status', (await answer.locator('.answer-map h3').allInnerTexts()).some(text => text.includes(statusLabel + ' des Werks')));
@@ -316,6 +329,26 @@ try {
     await page.goto(base + '/index.html' + hash, { waitUntil: 'networkidle' });
     check('mobile has no horizontal document overflow: ' + hash, await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1));
   }
+  // Glyph widths differ between platforms, so the labels are widened beyond any estimate
+  // and every term is drawn; the svg clips whatever lies outside its viewBox.
+  await page.goto(base + '/index.html#view=netz', { waitUntil: 'networkidle' });
+  await page.addStyleTag({ content: '.netz-graph text { letter-spacing: .3em; }' });
+  const clipped = [];
+  for (const token of await page.locator('#netz-term option').evaluateAll(options => options.map(option => option.value))) {
+    await page.evaluate(value => { location.hash = '#view=netz&term=' + encodeURIComponent(value); }, token);
+    await page.waitForFunction(value => document.querySelector('#netz-term').value === value, token);
+    clipped.push(...await page.evaluate(() => {
+      const graph = document.querySelector('#netz-graph');
+      if (!graph) return [];
+      const frame = graph.getBoundingClientRect();
+      return [...graph.querySelectorAll('text')].filter((node) => {
+        const box = node.getBoundingClientRect();
+        return box.left < frame.left - 1 || box.right > frame.right + 1 || box.top < frame.top - 1 || box.bottom > frame.bottom + 1;
+      }).map((node) => node.textContent);
+    }));
+  }
+  check('network labels fit inside the figure at 390 px', clipped.length === 0);
+  if (clipped.length) console.log(clipped.slice(0, 10).join(' | '));
   await page.screenshot({ path: 'tests/browser/out/release/mobile.png', fullPage: true });
   const chatBox = await page.evaluate(async () => {
     location.hash = '#view=chat';

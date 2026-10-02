@@ -24,13 +24,14 @@ function sourceLink(work) {
 }
 
 function metaLine(work) {
-    return [work.authors, work.year, work.journal, work.versionType ? EC.versionLabel(work.versionType) : '']
-        .filter(Boolean).map(EC.esc).concat(sourceLink(work) ? [sourceLink(work)] : []).join(' · ');
+    return EC.metaLine([work.authors, work.year, work.journal, work.versionType ? EC.versionLabel(work.versionType) : '']
+        .map(EC.esc).concat([sourceLink(work)]));
 }
 
 function stateText(state) {
     if (state.state === 'none') return 'nicht zutreffend';
     if (state.state === 'undecidable') return 'nicht entscheidbar';
+    if (state.state === 'empty') return 'ohne Angabe';
     if (state.state === 'absent') return 'noch nicht codiert';
     return '';
 }
@@ -50,8 +51,8 @@ function categorySection(work) {
     const quotes = categories.map(function (category) {
         return model.categoryEvidence(work, category.key).map(function (item) {
             return '<figure class="evidence" data-code="' + EC.esc(category.key) + '"><figcaption class="evidence-code">' +
-                EC.categoryChip(info(category.key), { small: true, level: category.level }) + ' · ' +
-                EC.esc(LEVEL_LABELS[category.level] || ('Stufe ' + category.level)) + '</figcaption>' +
+                EC.metaLine([EC.categoryChip(info(category.key), { small: true, level: category.level }),
+                    EC.esc(LEVEL_LABELS[category.level] || ('Stufe ' + category.level))]) + '</figcaption>' +
                 '<blockquote class="evidence-quote">' + EC.highlight(item.text, item.term) + '</blockquote>' +
                 '<p class="evidence-locator">' + EC.esc(TEXT_SOURCE_LABELS[item.textSource] || 'Textgrundlage offen') + '</p></figure>';
         }).join('');
@@ -84,10 +85,16 @@ function analysisSection(work) {
             '<p class="rationale">' + EC.esc(notes) + '</p></details>' : '');
 }
 
+// Exclusion reasons are controlled codes; their German labels come from the public category schema.
+function reasonLabel(code) {
+    const labels = model.schema.exclusion_reason_labels || {};
+    return labels[code] || String(code).replace(/_/g, ' ');
+}
+
 function decisionLine(work) {
     const record = work.record;
     if (!record) return '<p class="werk-decision">Kein veröffentlichtes Screening</p>';
-    return '<p class="werk-decision">Screening ' + EC.esc(record.decision) + (record.reason ? ' · ' + EC.esc(String(record.reason).replace(/_/g, ' ')) : '') + '</p>';
+    return '<p class="werk-decision">Screening ' + EC.esc(record.decision) + (record.reason ? ', ' + EC.esc(reasonLabel(record.reason)) : '') + '</p>';
 }
 
 function technicalSection(work) {
@@ -98,24 +105,24 @@ function technicalSection(work) {
             ['Begutachtung', PEER_REVIEW_LABELS[record.peer_review_status] || PEER_REVIEW_LABELS.not_established],
             ['Einträge', work.recordIds.join(', ')]);
         if ((record.work_versions || []).length > 1) {
-            rows.push(['Bekannte Fassungen', record.work_versions.map(function (item) { return EC.versionLabel(item.version_type); }).join(' · ')]);
+            rows.push(['Bekannte Fassungen', record.work_versions.map(function (item) { return EC.versionLabel(item.version_type); }).join(', ')]);
         }
         (record.source_records || [record]).forEach(function (source) {
             const receipt = source.ai_verification;
             if (receipt) {
-                rows.push(['KI-Quellenprüfung ' + source.id, receipt.agent_id + ' · ' + receipt.model + ' · ' + receipt.reviewed_at],
-                    ['Prüfbefund ' + source.id, receipt.findings], ['Prüfartefakt ' + source.id, receipt.artifact + ' · ' + receipt.sha256]);
+                rows.push(['KI-Quellenprüfung ' + source.id, [receipt.agent_id, receipt.model, receipt.reviewed_at].join(', ')],
+                    ['Prüfbefund ' + source.id, receipt.findings], ['Prüfartefakt ' + source.id, receipt.artifact + ', ' + receipt.sha256]);
             }
             if (source.verification) {
-                rows.push(['Fachliche Verifikation ' + source.id, (source.verification.actor_ids || []).join(', ') + ' · ' + (source.verification.at || '')]);
+                rows.push(['Fachliche Verifikation ' + source.id, (source.verification.actor_ids || []).concat([source.verification.at]).filter(Boolean).join(', ')]);
             }
             if (source.publication_approval) {
-                rows.push(['Publikationsfreigabe ' + source.id, (source.publication_approval.actor_ids || []).join(', ') + ' · ' + (source.publication_approval.at || '')]);
+                rows.push(['Publikationsfreigabe ' + source.id, (source.publication_approval.actor_ids || []).concat([source.publication_approval.at]).filter(Boolean).join(', ')]);
             }
         });
         if (record.ai_correction) {
             const correction = record.ai_correction;
-            rows.push(['KI-Korrektur', correction.agent_id + ' · ' + correction.model + ' · ' + correction.corrected_at]);
+            rows.push(['KI-Korrektur', [correction.agent_id, correction.model, correction.corrected_at].join(', ')]);
         }
         rows.push(['Codierung', (record.actor === 'agent' ? 'codierender KI-Agent ' : 'Fachexpertin oder Fachexperte ') + record.reviewer]);
     } else {
@@ -183,8 +190,8 @@ function korpusItem(work) {
     const study = studyOf(work).join(', ');
     return '<li class="korpus-item" data-work-id="' + EC.esc(work.id) + '">' +
         '<a class="korpus-title" href="' + EC.esc(EC.href({ view: 'werk', id: work.id })) + '">' + EC.esc(work.title) + '</a>' +
-        '<p class="work-meta">' + [work.authorYear, study, decisionLabel(decisionOf(work))].filter(Boolean).map(EC.esc)
-            .concat([EC.statusMark(work.status)]).join(' · ') + '</p></li>';
+        '<p class="work-meta">' + EC.metaLine([work.authorYear, study, decisionLabel(decisionOf(work))].map(EC.esc)
+            .concat([EC.statusMark(work.status)])) + '</p></li>';
 }
 
 function renderKorpusList(params) {
