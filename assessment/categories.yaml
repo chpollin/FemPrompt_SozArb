@@ -182,22 +182,28 @@ decision:
     Wenn Technik UND Sozial erfüllt → Include.
     Wenn nur Technik ODER nur Sozial → Exclude.
 
+# formal: the reason concerns the record, not the content, so the categories set with
+# it need no Paper Beleg and are stored with evidence_basis formal_exclusion (ADR-048).
 exclusion_reasons:
   - code: Duplicate
     label: Duplikat
     description: Identische Publikation aus anderem Source_Tool
+    formal: true
   - code: Not_relevant_topic
     label: Thema nicht einschlägig
     description: Thematisch nicht passend
   - code: Wrong_publication_type
     label: Falscher Publikationstyp
     description: Ungeeigneter Publikationstyp (Blogbeitrag, etc.)
+    formal: true
   - code: No_full_text
     label: Kein Volltext
     description: Kein Volltext verfügbar
+    formal: true
   - code: Language
     label: Sprache
     description: Sprache nicht zugänglich
+    formal: true
   - code: Consolidated_expert_exclusion
     label: Expert:innen-Entscheidung übernommen
     description: Die konsolidierte Expert:innen-Entscheidung Exclude wird in PRISM bestätigt (ADR-042)

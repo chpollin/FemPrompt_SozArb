@@ -259,7 +259,7 @@ async function screenPaper(paperSpec, decisionSpec) {
       !document.getElementById('pt-open-analysis') && !/Analysekodierung|Studientyp/.test(document.getElementById('pt-assess-col').textContent) &&
       !/Analysekodierung/.test(document.getElementById('pt-actions-hint')?.textContent || '')));
   }
-  await page.waitForSelector('#pt-record:not([disabled])', { timeout: 5000 });
+  await page.waitForSelector('#pt-record:not([aria-disabled])', { timeout: 5000 });
   const dock = await page.evaluate(() => {
     const x = document.querySelector('#pt-assess-col .pt-action-dock'), rail = document.getElementById('pt-assess-col');
     const a = x.getBoundingClientRect(), b = rail.getBoundingClientRect();
@@ -383,7 +383,7 @@ try {
   check('reviewer key: trimmed safe key persists and fixes the exact target path', await page.evaluate((key) =>
     window.__PRISMA_TEST__.getState().reviewer === key && document.querySelector('.pt-sync-identity code')?.textContent === `docs/data/screening/${key}.json`, opt.reviewer));
   check('save gate: the disk action stays disabled until the working folder is connected and says why', await page.evaluate(() =>
-    document.getElementById('pt-record')?.disabled && /Arbeitsordner verbinden/.test(document.getElementById('pt-actions-hint')?.textContent || '') &&
+    document.getElementById('pt-record')?.getAttribute('aria-disabled') === 'true' && /Arbeitsordner verbinden/.test(document.getElementById('pt-actions-hint')?.textContent || '') &&
       /Arbeitsordner verbinden/.test(document.getElementById('pt-record').title)));
   check('folder setup: exactly one folder action is offered before connection', (await page.$$('.pt-folder-action')).length === 1);
   await connectFixtureStorage(page, opt.reviewer);
@@ -576,7 +576,7 @@ try {
   await enterEditing(page);
   await page.waitForFunction(() => !window.__PRISMA_TEST__.readingPending());
   check('edit: the own saved record opens editable in Bearbeiten, with nothing to save until it changes',
-    !!(await page.$('#pt-assess-col .pt-dim .category-chip:not([disabled])')) && await page.isDisabled('#pt-record'));
+    !!(await page.$('#pt-assess-col .pt-dim .category-chip:not([disabled])')) && (await page.getAttribute('#pt-record', 'aria-disabled')) === 'true');
   await page.reload();
   await page.waitForFunction(() => window.__PRISMA_TEST__ && !window.__PRISMA_TEST__.readingPending());
   await gotoPaper(manifest.papers[0].id);
@@ -691,7 +691,7 @@ try {
   await expertPage.screenshot({ path: join(outDir, '05b-agent-only-paper.png') });
   trace.screenshots.push('05b-agent-only-paper.png');
   await expertPage.click('#pt-assess-col .pt-reason-chip[data-reason="Not_relevant_topic"]');
-  await expertPage.waitForSelector('#pt-record:not([disabled])', { timeout: 5000 });
+  await expertPage.waitForSelector('#pt-record:not([aria-disabled])', { timeout: 5000 });
   await expertPage.click('#pt-record');
   const written = await expertPage.evaluate(async (original) => {
     const deadline = Date.now() + 3000;
@@ -1398,13 +1398,13 @@ try {
   const gated = await a.pg.evaluate(() => ({
     pending: window.__PRISMA_TEST__.readingPending(),
     derived: window.__PRISMA_TEST__.finalDecisionOf(window.__PRISMA_TEST__.getWork().cats, false),
-    disabled: document.getElementById('pt-record').disabled,
+    disabled: document.getElementById('pt-record').getAttribute('aria-disabled') === 'true',
     hint: (document.getElementById('pt-actions-hint') || {}).textContent
   }));
   check('gate: an Include-deriving state cannot be committed while the text is loading', gated.pending && gated.derived === 'Include' && gated.disabled && /lädt/.test(gated.hint || ''), gated);
   await a.pg.waitForFunction(() => !window.__PRISMA_TEST__.readingPending(), null, { timeout: 8000 });
   const released = await a.pg.evaluate(() => ({
-    disabled: document.getElementById('pt-record').disabled,
+    disabled: document.getElementById('pt-record').getAttribute('aria-disabled') === 'true',
     src: window.__PRISMA_TEST__.textSource()
   }));
   check('gate: the landed reading releases the button without touching a chip', released.disabled === false && released.src === 'raw', released);

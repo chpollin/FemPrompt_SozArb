@@ -411,7 +411,13 @@ body.pt-fullscreen [hidden] { display: none !important; }
   border: 1px solid var(--pt-human); background: var(--pt-human); color: var(--pt-surface); transition: background .12s, opacity .12s;
 }
 .pt-save-btn:hover:not([disabled]) { background: oklch(0.44 0.14 264); border-color: oklch(0.44 0.14 264); }
-.pt-save-btn[disabled] { opacity: 0.4; cursor: not-allowed; }
+.pt-save-btn[aria-disabled="true"] { opacity: 0.45; }
+.pt-save-btn[aria-disabled="true"]:hover { background: var(--pt-human); border-color: var(--pt-human); }
+/* a set category still waiting for its Paper Beleg */
+.pt-dim .category-chip.pt-chip-unbelegt { outline: 2px dashed var(--pt-warn-ink); outline-offset: 2px; }
+@keyframes pt-gap-flash { 0%, 100% { box-shadow: none; } 40% { box-shadow: 0 0 0 4px var(--pt-warn); } }
+.pt-gap-flash { animation: pt-gap-flash .9s ease-out 1; }
+@media (prefers-reduced-motion: reduce) { .pt-gap-flash { animation: none; } }
 
 /* analysis coding step (FR-14, ADR-026) */
 .pt-anpanel { display: grid; gap: 0.75rem; }

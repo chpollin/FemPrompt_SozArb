@@ -92,7 +92,7 @@ try {
   await page.click('#pt-pin-hit');
   await page.click('#pt-pinmenu .category-chip[data-cat="Soziale_Arbeit"]');
   await page.click('#pt-assess-col .pt-reason-chip[data-reason="Not_relevant_topic"]');
-  await page.waitForSelector('#pt-record:not([disabled])', { timeout: 10000 });
+  await page.waitForSelector('#pt-record:not([aria-disabled])', { timeout: 10000 });
   await page.screenshot({ path: join(outDir, 'partner-before-save.png') });
   await page.keyboard.press('Control+S');
   await page.waitForFunction(() => /Gespeichert in/.test(document.getElementById('pt-save-status')?.textContent || ''), null, { timeout: 15000 });

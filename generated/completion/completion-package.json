@@ -41116,11 +41116,11 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:17a3793b6c9b55f1141e7c46a9e451b00cfeec21f97245ec109a461bd59f7cec",
+  "source_fingerprint": "sha256:01e21fd6e159e042c596097d236cb5fe019e303c78223c3c54d43016154ca101",
   "sources": [
     {
       "path": "assessment/categories.yaml",
-      "sha256": "7b95295702c0ec4054e018a95327371f927a526256d2fea7060f54d0e8d47acd"
+      "sha256": "b427f946bb10a4583a1e849a5ae4b5d3d1947c2fb320753a6f999b19a37d6bf3"
     },
     {
       "path": "assessment/human_assessment.csv",
@@ -41364,7 +41364,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "d18870c4a4fde8138a6850155c029785cf19eb781d8c1207b63051d34d09490f"
+      "sha256": "f29da32b20c1b4f4250d7371097489e45de0a972535f0753c53e010f017efe94"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -42208,7 +42208,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "058a3c25496a92aed5d27415c481ea779273bad05b4998a1945a42e8144b20a2"
+      "sha256": "3fdbebae2ecf5bd4d6b906a39f4be3ee2dbfa48d1116d1ede762c566e37f93cf"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",

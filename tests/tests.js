@@ -1532,6 +1532,21 @@ test('analysis coding is required only of agent records, never of a human record
     agent.analysis = completeAnalysis('abstract');
     assert(T.recordRequirements(agent).ok, 'an agent Include with complete analysis is complete');
 });
+test('a formal exclusion needs no Paper Beleg and marks its categories, a substantive one still does (ADR-048)', function() {
+    var cats = { Gender: 2 };
+    var formal = { decision: 'Exclude', reason: 'Duplicate', categories: cats, evidence: {}, evidence_basis: { Gender: 'formal_exclusion' } };
+    assert(T.recordRequirements(formal).ok, 'a duplicate exclusion with an unbelegt category is complete');
+    var topical = { decision: 'Exclude', reason: 'Not_relevant_topic', categories: cats, evidence: {}, evidence_basis: { Gender: 'formal_exclusion' } };
+    assert(!T.recordRequirements(topical).ok, 'the formal basis does not carry over to a substantive reason');
+    T.resetWork({ id: 'formalW' });
+    var w = T.getWork();
+    w.cats = { Gender: 2 }; w.evidence = {}; w.override = false;
+    w.reason = 'Duplicate';
+    assertEqual((T.workingDecisionRecord().evidence_basis || {}).Gender, 'formal_exclusion', 'a duplicate draft marks its unbelegt category');
+    w.reason = 'Not_relevant_topic';
+    assertEqual((T.workingDecisionRecord().evidence_basis || {}).Gender, undefined, 'a topical exclusion keeps the Beleg duty');
+    assertEqual(T.paperEvidenceMissing(w.cats, w.evidence, T.workingDecisionRecord().evidence_basis).join(), 'Gender', 'and names the category as missing');
+});
 test('a human session offers no analysis step and keeps an existing analysis part unchanged (ADR-045)', function() {
     var paper = { id: 'anKeep', title: 'keep analysis' };
     T.setPapers([paper]);

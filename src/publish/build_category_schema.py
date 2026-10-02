@@ -28,6 +28,7 @@ GROUP_RE = re.compile(r"^\s{4}group:\s*(\S+)\s*$")
 OPTION_RE = re.compile(r"^\s{4}-\s+(\S+)\s*$")
 REASON_RE = re.compile(r"^\s{2}-\s+code:\s*(\S+)\s*$")
 REASON_LABEL_RE = re.compile(r"^\s{4}label:\s*(\S.*?)\s*$")
+REASON_FORMAL_RE = re.compile(r"^\s{4}formal:\s*true\s*$")
 
 PRESENTATION = {
     "AI_Literacies": ("AI Literacies", "#5b8c5a"),
@@ -114,11 +115,14 @@ def build(source: Path = YAML_IN) -> dict[str, Any]:
     decision_options = _nested_options(_section(lines, "decision"), "options")
     exclusion_reasons: list[str] = []
     reason_labels: dict[str, str] = {}
+    formal_reasons: list[str] = []
     for line in _section(lines, "exclusion_reasons"):
         if match := REASON_RE.match(line):
             exclusion_reasons.append(match.group(1))
         elif (match := REASON_LABEL_RE.match(line)) and exclusion_reasons:
             reason_labels[exclusion_reasons[-1]] = match.group(1)
+        elif REASON_FORMAL_RE.match(line) and exclusion_reasons:
+            formal_reasons.append(exclusion_reasons[-1])
     if decision_options != ["Include", "Exclude", "Unclear"]:
         raise ValueError(f"Unexpected decision vocabulary: {decision_options}")
     if not exclusion_reasons:
@@ -166,6 +170,7 @@ def build(source: Path = YAML_IN) -> dict[str, Any]:
         "decision_options": decision_options,
         "exclusion_reasons": exclusion_reasons,
         "exclusion_reason_labels": reason_labels,
+        "formal_exclusion_reasons": formal_reasons,
         "categories": categories,
         "groups": {
             "object": [item["key"] for item in categories if item["group"] == "technik"],

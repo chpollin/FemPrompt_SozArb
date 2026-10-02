@@ -41,6 +41,7 @@ const CAT_NEGATIVE = {}; // codebook examples_negative, shown verbatim beside th
 const CAT_COLOR = {};
 const EXCLUSION_REASONS = [];
 const EXCLUSION_LABELS = {};
+const FORMAL_REASONS = []; // reasons about the record, not the content (ADR-048)
 
 function applyCategorySchema() {
     const schema = window.__CATEGORY_SCHEMA__ ||
@@ -55,6 +56,7 @@ function applyCategorySchema() {
     SOCIAL_CATS.splice(0, SOCIAL_CATS.length, ...groups.perspective);
     ALL_CATS.splice(0, ALL_CATS.length, ...TECH_CATS, ...SOCIAL_CATS);
     EXCLUSION_REASONS.splice(0, EXCLUSION_REASONS.length, ...schema.exclusion_reasons);
+    FORMAL_REASONS.splice(0, FORMAL_REASONS.length, ...(schema.formal_exclusion_reasons || []));
     [CAT_LABELS, CAT_DEFS, CAT_NEGATIVE, CAT_COLOR, EXCLUSION_LABELS].forEach(function(map) {
         Object.keys(map).forEach(function(key) { delete map[key]; });
     });
@@ -2505,8 +2507,9 @@ function positionBarHtml() {
 function saveButtonHtml(p) {
     const gate = saveGate(p);
     const title = gate.ok ? gate.label : 'Speichern nicht möglich: ' + (gate.storage || gate.reasons[0] || gate.label);
+    // not disabled: a click on an incomplete draft names what is missing and moves there
     return '<button class="pt-save-btn" id="pt-record" type="button" aria-keyshortcuts="Control+S" aria-describedby="pt-actions-hint" title="' +
-        EC.escapeHtml(title + ' (Strg+S)') + '"' + (gate.ok ? '' : ' disabled') + '>Speichern</button>';
+        EC.escapeHtml(title + ' (Strg+S)') + '"' + (gate.ok ? '' : ' aria-disabled="true"') + '>Speichern</button>';
 }
 
 function dockHintText(p) {
@@ -3019,7 +3022,7 @@ function unpinEvidence(cat, idx) {
 function paperEvidenceMissing(cats, evidence, basis) {
     return ALL_CATS.filter(function(c) {
         if (catLevel((cats || {})[c]) === 0) return false;
-        if (basis && basis[c] === 'expert_assessment') return false;
+        if (basis && (basis[c] === 'expert_assessment' || basis[c] === 'formal_exclusion')) return false;
         return !((evidence && evidence[c]) || []).some(isPaperEvidence);
     });
 }
@@ -3028,6 +3031,9 @@ function recordRequirements(dec) {
     if (!dec) return { ok: false, missing: ['Entscheidung'] };
     const missing = paperEvidenceMissing(dec.categories || {}, dec.evidence || {}, dec.evidence_basis)
         .map(function(c) { return 'Paper-Beleg: ' + CAT_LABELS[c]; });
+    // the formal basis holds only while the record is a formal exclusion
+    if (!isFormalExclusion(dec) && Object.keys(dec.evidence_basis || {}).some(function(c) { return dec.evidence_basis[c] === 'formal_exclusion'; }))
+        missing.push('Paper-Beleg nur bei formalem Ausschluss entbehrlich');
     if (dec.decision !== finalDecisionOf(dec.categories || {}, !!dec.override))
         missing.push('Entscheidung passt nicht zu Kategorien und Abweichung');
     if (dec.decision === 'Exclude' && !dec.reason) missing.push('Ausschlussgrund');
@@ -3533,12 +3539,22 @@ function discardDraft(p) {
 // Categories taken over unchanged from the expert decision and without a Paper pin.
 function draftEvidenceBasis(w) {
     const basis = {};
-    if (!w || !w.expertBasis) return basis;
+    if (!w) return basis;
+    const formal = isFormalExclusion({ decision: finalDecisionOf(w.cats, w.override), reason: w.reason });
     ALL_CATS.forEach(function(c) {
         const level = catLevel(w.cats[c]);
-        if (level && w.expertBasis[c] === level && !((w.evidence[c] || []).some(isPaperEvidence))) basis[c] = 'expert_assessment';
+        if (!level || (w.evidence[c] || []).some(isPaperEvidence)) return;
+        if (w.expertBasis && w.expertBasis[c] === level) basis[c] = 'expert_assessment';
+        else if (formal) basis[c] = 'formal_exclusion';
     });
     return basis;
+}
+
+// A formal exclusion (duplicate, publication type, missing full text, language) judges
+// the record, not its content, so the categories set with it need no Paper Beleg.
+// They are kept as the reviewer's statement and marked formal_exclusion (ADR-048).
+function isFormalExclusion(record) {
+    return !!(record && record.decision === 'Exclude' && FORMAL_REASONS.indexOf(record.reason) !== -1);
 }
 
 function workingTextSource() {
@@ -3601,7 +3617,8 @@ function draftReasons(p, subject, mode) {
     const reasons = [];
     const record = workingDecisionRecord();
     const missing = paperEvidenceMissing(record.categories, record.evidence, record.evidence_basis);
-    if (missing.length) reasons.push('Paper-Beleg fehlt: ' + missing.map(function(c) { return CAT_LABELS[c]; }).join(', '));
+    if (missing.length) reasons.push('Beleg fehlt für ' + missing.map(function(c) { return CAT_LABELS[c]; }).join(', ') +
+        '. Textstelle markieren oder Suchtreffer anheften');
     if (record.decision === 'Exclude' && !record.reason) reasons.push('Ausschlussgrund wählen');
     if (record.decision === 'Include' && record.override && !record.override_reason) reasons.push('Abweichung begründen');
     if (analysisRequired(record) && !analysisRequirements(record).ok) reasons.push('Analysekodierung unvollständig');
@@ -3643,12 +3660,13 @@ function categoryChipHtml(cat, level, opts) {
     const description = [CAT_DEFS[cat] || ''];
     if (opts.expertBasis) description.push('Expert:innen-Urteil, ohne Textbeleg.');
     return '<button type="button" class="category-chip' + (opts.compact ? ' category-chip--compact' : '') +
-        (opts.expertBasis ? ' pt-chip-expert' : '') + '" data-cat="' + EC.escapeHtml(cat) + '" data-level="' +
+        (opts.expertBasis ? ' pt-chip-expert' : '') + (opts.unbelegt ? ' pt-chip-unbelegt' : '') + '" data-cat="' + EC.escapeHtml(cat) + '" data-level="' +
         (lvl === 1 ? 'teilweise' : (lvl === 2 ? 'ja' : 'nein')) + '" aria-pressed="' + pressed + '" style="--chip-color:' +
         EC.escapeHtml(CAT_COLOR[cat] || '') + '"' + (opts.inlineDefinition ? ' aria-describedby="pt-cat-def"' : ' title="' + EC.escapeHtml(description.join(' ').trim()) + '"') +
         (opts.disabled ? ' disabled' : '') + '>' +
         '<span class="chip-dot" aria-hidden="true"></span><span class="chip-label">' + EC.escapeHtml(CAT_LABELS[cat] || cat) + '</span>' +
         (lvl === 1 && !opts.filter ? '<span class="pt-sr-only">, teilweise</span>' : '') +
+        (opts.unbelegt ? '<span class="pt-sr-only">, Beleg fehlt</span>' : '') +
         '</button>';
 }
 
@@ -3706,7 +3724,7 @@ function evidenceRowsHtml(record, editable) {
     const evidence = record.evidence || {};
     const basis = record.evidence_basis || {};
     const rows = [];
-    const expertOnly = [], missing = [];
+    const expertOnly = [], formalOnly = [], missing = [];
     const dotOf = function(c) {
         return '<span class="chip-dot" aria-hidden="true" style="--chip-color:' + EC.escapeHtml(CAT_COLOR[c] || '') + '"></span>';
     };
@@ -3717,7 +3735,7 @@ function evidenceRowsHtml(record, editable) {
         const dot = dotOf(c);
         const label = '<span class="pt-evid-cat">' + EC.escapeHtml(CAT_LABELS[c]) + '</span>';
         if (!pins.length) {
-            (basis[c] === 'expert_assessment' ? expertOnly : missing).push(c);
+            (basis[c] === 'expert_assessment' ? expertOnly : (basis[c] === 'formal_exclusion' ? formalOnly : missing)).push(c);
             return;
         }
         pins.forEach(function(ev, i) {
@@ -3744,7 +3762,8 @@ function evidenceRowsHtml(record, editable) {
     } else {
         summary(expertOnly, 'is-basis', 'Expert:innen-Urteil, ohne Textbeleg');
     }
-    if (!editable) summary(missing, 'is-missing', 'Paper-Beleg fehlt'); // while editing, the dock hint names it
+    summary(formalOnly, 'is-basis', 'Formaler Ausschluss, ohne Textbeleg');
+    if (!editable) summary(missing, 'is-missing', 'Paper-Beleg fehlt'); // while editing, the toggles and the dock hint name it
     if (!rows.length) return '';
     return '<section class="pt-evid" aria-labelledby="pt-evid-title"><h3 class="pt-sub-head" id="pt-evid-title">Belege</h3><ul class="pt-evid-list">' + rows.join('') + '</ul></section>';
 }
@@ -3775,12 +3794,13 @@ function referenceProposalsHtml(p, subject) {
 }
 
 // Lesen lists only the categories the record assigns; Bearbeiten offers all ten toggles.
-function dimHtml(label, keys, cats, editable, basis) {
+function dimHtml(label, keys, cats, editable, basis, unbelegt) {
     const headId = 'pt-dim-' + label.toLowerCase();
     const shown = editable ? keys : keys.filter(function(c) { return catLevel(cats[c]) > 0; });
     return '<div class="pt-dim"><h3 class="pt-sub-head" id="' + headId + '">' + label + '</h3><div class="category-chips" role="group" aria-labelledby="' + headId + '">' +
         (shown.length ? shown.map(function(c) {
-            return categoryChipHtml(c, cats[c], { disabled: !editable, expertBasis: !!(basis && basis[c]), inlineDefinition: editable });
+            return categoryChipHtml(c, cats[c], { disabled: !editable, expertBasis: !!(basis && basis[c] === 'expert_assessment'),
+                unbelegt: !!(unbelegt && unbelegt.indexOf(c) !== -1), inlineDefinition: editable });
         }).join('') : '<span class="pt-dim-none">keine</span>') +
         '</div></div>';
 }
@@ -3904,8 +3924,10 @@ function railHtml(p) {
     const basis = record ? (record.evidence_basis || {}) : {};
     // without a record, Lesen has no assignment to list
     if (editable || (record && !(subject.kind === 'empty' && !work.dirty))) {
-        h += dimHtml('Gegenstand', TECH_CATS, cats, editable, basis);
-        h += dimHtml('Perspektive', SOCIAL_CATS, cats, editable, basis);
+        // while editing, a set category without its Paper Beleg is marked at the toggle itself
+        const unbelegt = editable && record ? paperEvidenceMissing(cats, record.evidence, basis) : [];
+        h += dimHtml('Gegenstand', TECH_CATS, cats, editable, basis, unbelegt);
+        h += dimHtml('Perspektive', SOCIAL_CATS, cats, editable, basis, unbelegt);
     }
     if (editable) h += '<div class="pt-cat-def" id="pt-cat-def" role="note" hidden></div>';
     if (record && verdict) {
@@ -4248,13 +4270,31 @@ function syncDockHint(p) {
     refreshSaveGate();
 }
 
+// Moves to the first thing the save gate is waiting for: an unbelegt category, else the
+// exclusion reasons.
+function focusFirstGap() {
+    const target = document.querySelector('#pt-assess-col .pt-chip-unbelegt') ||
+        (document.getElementById('pt-actions-hint') && /Ausschlussgrund/.test(document.getElementById('pt-actions-hint').textContent)
+            ? document.querySelector('#pt-assess-col .pt-reason-chip') : null);
+    if (!target) return;
+    target.focus();
+    target.classList.remove('pt-gap-flash');
+    void target.offsetWidth; // restart the cue on a repeated click
+    target.classList.add('pt-gap-flash');
+}
+
 // The one save action: a draft over no record, an expert prefill or an own record
 // writes the reviewer's decision record.
 function saveCurrent() {
     const p = papers[state.index];
     if (!p || !canEdit()) return Promise.resolve(false);
     const gate = saveGate(p);
-    if (!gate.ok) { syncDockHint(p); announce(gate.storage || gate.reasons[0] || gate.label); return Promise.resolve(false); }
+    if (!gate.ok) {
+        syncDockHint(p);
+        announce(gate.storage || gate.reasons[0] || gate.label);
+        focusFirstGap();
+        return Promise.resolve(false);
+    }
     if (gate.mode === 'file') return save().then(function(ok) { refreshSaveGate(); return ok; });
     return Promise.resolve(commit());
 }

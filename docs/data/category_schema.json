@@ -23,6 +23,12 @@
     "Language": "Sprache",
     "Consolidated_expert_exclusion": "Expert:innen-Entscheidung übernommen"
   },
+  "formal_exclusion_reasons": [
+    "Duplicate",
+    "Wrong_publication_type",
+    "No_full_text",
+    "Language"
+  ],
   "categories": [
     {
       "key": "AI_Literacies",

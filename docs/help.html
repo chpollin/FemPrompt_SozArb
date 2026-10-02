@@ -221,7 +221,7 @@
             <p>Das Panel &bdquo;Bewertung&ldquo; zeigt die aktuelle Annotation mit einer Herkunftszeile, etwa
             &bdquo;Vorbelegt: Expert:innen-Entscheidung&ldquo;, &bdquo;Noch keine Bewertung&ldquo; oder
             &bdquo;Deine Bewertung, gespeichert &lt;Datum&gt;&ldquo;. Die aus den Kategorien abgeleitete
-            Entscheidung (Include, Exclude, Unclear) steht im Kopf des Panels. Ein Punkt daneben heißt nicht
+            Entscheidung (Include, Exclude, Unclear) steht im Kopf des Panels. Ein Stift daneben heißt nicht
             gespeichert, ein Haken gespeichert. Beruht die Bewertung nur auf dem Abstract oder auf keinem Papertext,
             steht das als Warnung darunter. Im Modus &bdquo;Lesen&ldquo; nennt das Panel nur die vergebenen
             Kategorien. Im Modus &bdquo;Bearbeiten&ldquo; sind alle zehn Kategorien farbige Schalter in den Gruppen
@@ -234,7 +234,12 @@
                     ist als &bdquo;Expert:innen-Urteil, ohne Textbeleg&ldquo; markiert.</li>
                 <li>Jede Kategorie, die du ergänzt oder anhebst, braucht einen Paper-Beleg. Du markierst eine
                     Textstelle oder heftest den aktuellen Treffer der Suche im Text mit &bdquo;Treffer
-                    anheften&ldquo; an. Belege aus dem LLM-Wissensdestillat zählen nicht.</li>
+                    anheften&ldquo; an. Belege aus dem LLM-Wissensdestillat zählen nicht. Eine gesetzte Kategorie
+                    ohne Beleg ist gestrichelt umrandet.</li>
+                <li>Bei einem formalen Ausschluss, also Duplikat, Falscher Publikationstyp, Kein Volltext oder
+                    Sprache, brauchen die Kategorien keinen Beleg. Sie werden als &bdquo;Formaler Ausschluss, ohne
+                    Textbeleg&ldquo; gespeichert. &bdquo;Thema nicht einschlägig&ldquo; ist ein inhaltlicher Grund
+                    und braucht die Belege.</li>
                 <li>Exclude braucht einen Ausschlussgrund. Für eine bestätigte Expert:innen-Exclude-Entscheidung
                     steht &bdquo;Expert:innen-Entscheidung übernommen&ldquo; bereit. &bdquo;Abweichend
                     einschließen&ldquo; braucht eine kurze Begründung.</li>
@@ -250,7 +255,8 @@
             <p>PRISM zeigt keine KI-Vorbewertung. In PRISM vergibst du die Kategorien und entscheidest über Einschluss
             oder Ausschluss. Die Analysefelder eingeschlossener Dokumente kodieren ausschließlich KI-Agenten.</p>
             <p>Gespeichert wird mit &bdquo;Speichern&ldquo; unten im Panel oder mit Strg+S. Was noch fehlt, steht
-            darüber. Bei einer vorbelegten oder leeren Bewertung schreibt es deine eigene Bewertung. Nicht
+            darüber. Ist die Bewertung noch unvollständig, springt ein Klick auf &bdquo;Speichern&ldquo; zur ersten
+            offenen Stelle. Bei einer vorbelegten oder leeren Bewertung schreibt es deine eigene Bewertung. Nicht
             gespeicherte Änderungen behält der Browser je Dokument.</p>
             <p>Nach der Arbeit committest du in GitHub Desktop deine Datei
             <code>docs/data/screening/sabine.json</code> bzw. <code>susi.json</code> und pushst sie. Andere
