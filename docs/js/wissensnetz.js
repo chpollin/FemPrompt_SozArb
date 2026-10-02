@@ -19,11 +19,6 @@ const DECISIONS = {
     none: { label: 'ohne Entscheidung', mark: '' },
 };
 const DECISION_ORDER = ['include', 'exclude', 'unclear', 'none'];
-const SIDES = {
-    expert: { mark: 'H', label: 'nur Expert:innen' },
-    llm: { mark: 'L', label: 'nur LLM' },
-    both: { mark: 'H+L', label: 'Expert:innen und LLM' },
-};
 const SIDE_ORDER = { expert: 0, llm: 1, both: 2 };
 const BASES = {
     expert: { label: 'Expert:innen', caption: 'Einschätzung der Expert:innen' },
@@ -40,6 +35,7 @@ let available = [];
 let state = { basis: 'expert', sel: null, min: 1, scope: 'all' };
 let net = null; // { works, nodes: {cat: stats}, edges: [stats] } for the current basis and scope
 const cache = {};
+let tip = null;
 
 function label(cat) { return LABEL_OVERRIDE[cat] || EC.catLabel(cat); }
 function esc(text) { return EC.escapeHtml(text); }
@@ -47,6 +43,11 @@ function round(value) { return Math.round(value * 10) / 10; }
 function workCount(n) { return n + (n === 1 ? ' Werk' : ' Werke'); }
 function inWorks(n) { return n + (n === 1 ? ' Werk' : ' Werken'); }
 function pct(value) { return Math.round(value * 100) + ' %'; }
+
+// The schema carries no residual flag yet, so a residual category is recognised by its
+// name ("Sonstige"). Upgrade path: a residual flag in assessment/categories.yaml, emitted
+// into category_schema.json, replaces this match.
+function isResidual(cat) { return /(^|_)Sonstige$/.test(cat) || /\bSonstige\b/.test(label(cat)); }
 
 // The current human decision of the Korpus stage table: the newest saved reviewer
 // record, else the consolidated expert decision.
@@ -137,8 +138,31 @@ function tallyText(papers) {
     return DECISION_ORDER.filter(function (k) { return counts[k]; }).map(function (k) { return counts[k] + ' ' + DECISIONS[k].label; }).join(', ');
 }
 
+// With one node selected, the other category of an edge is its partner.
+function partnerOf(s) {
+    const sel = state.sel;
+    if (!sel || sel.length !== 1 || s.set.length !== 2 || s.set.indexOf(sel[0]) < 0) return null;
+    return s.set[0] === sel[0] ? s.set[1] : s.set[0];
+}
+
+// The joint count as a share of the partner category's own works, from the node counts
+// of the same basis and scope. Under Übereinstimmung a node counts the works coded by
+// either side, which is no base for a share, so the share is left out there.
+function partnerShare(s) {
+    const partner = partnerOf(s);
+    if (!partner || state.basis === 'agree') return null;
+    const base = net.nodes[partner].value;
+    return { partner: partner, part: s.value, base: base, value: base ? s.value / base : null };
+}
+
+function shareText(share) {
+    return share.part + ' von ' + inWorks(share.base) + ' der Kategorie ' + label(share.partner);
+}
+
 function edgePhrase(s) {
-    return label(s.set[0]) + ' und ' + label(s.set[1]) + ', gemeinsam codiert in ' + inWorks(s.value);
+    const share = partnerShare(s);
+    const names = share ? label(share.partner) + ' und ' + label(state.sel[0]) : label(s.set[0]) + ' und ' + label(s.set[1]);
+    return names + ', gemeinsam codiert in ' + inWorks(s.value) + (share ? ', ' + shareText(share) : '');
 }
 
 function itemName(s) {
@@ -206,6 +230,42 @@ function positions() {
     return pos;
 }
 
+// Label positions along an edge, as a fraction of the way from the selected node to the
+// partner node; the first steps lie near the partner end.
+const PARTNER_STEPS = [0.75, 0.68, 0.82, 0.6, 0.52, 0.44, 0.36, 0.28];
+const MID_STEPS = [0.5, 0.42, 0.58, 0.34, 0.66];
+
+function curvePoint(a, c, b, t) {
+    const u = 1 - t;
+    return [u * u * a[0] + 2 * u * t * c[0] + t * t * b[0], u * u * a[1] + 2 * u * t * c[1] + t * t * b[1]];
+}
+
+function overlapArea(p, q) {
+    const w = Math.min(p.x + p.w, q.x + q.w) - Math.max(p.x, q.x);
+    const h = Math.min(p.y + p.h, q.y + q.h) - Math.max(p.y, q.y);
+    return w > 0 && h > 0 ? w * h : 0;
+}
+
+// items: [{ from, via, to, w, h, steps }] in placement order; obstacles: boxes { x, y, w, h }.
+// Each label takes the first step whose box, with a small margin, overlaps no obstacle
+// and no label placed before it, else the step with the least overlap.
+function placeLabels(items, obstacles) {
+    const placed = [];
+    return items.map(function (item) {
+        let best = null;
+        const steps = item.steps || PARTNER_STEPS;
+        for (let i = 0; i < steps.length; i += 1) {
+            const p = curvePoint(item.from, item.via, item.to, steps[i]);
+            const box = { x: p[0] - item.w / 2 - 2, y: p[1] - item.h / 2 - 2, w: item.w + 4, h: item.h + 4 };
+            const cost = obstacles.concat(placed).reduce(function (sum, o) { return sum + overlapArea(box, o); }, 0);
+            if (!best || cost < best.cost) best = { cost: cost, x: p[0], y: p[1], box: box };
+            if (!cost) break;
+        }
+        placed.push(best.box);
+        return best;
+    });
+}
+
 function figureHtml() {
     const font = narrow.matches ? 22 : 13;
     const charW = font * 0.56;
@@ -231,12 +291,11 @@ function figureHtml() {
     const ordered = visible.slice().sort(function (a, b) {
         return (near(a) ? 1 : 0) - (near(b) ? 1 : 0) || a.value - b.value;
     });
-    const pills = [];
+    const control = function (a, b) { return [(a[0] + b[0]) * 0.18, (a[1] + b[1]) * 0.18]; };
     const edges = ordered.map(function (s) {
         const a = point[s.set[0]], b = point[s.set[1]];
-        const c = [(a[0] + b[0]) * 0.18, (a[1] + b[1]) * 0.18];
+        const c = control(a, b);
         const d = 'M' + round(a[0]) + ' ' + round(a[1]) + 'Q' + round(c[0]) + ' ' + round(c[1]) + ' ' + round(b[0]) + ' ' + round(b[1]);
-        const on = near(s);
         const chosen = selKey(s.set) === key;
         const opacity = round(0.15 + 0.6 * s.value / edgeMax);
         let strokes = '<path class="wn-hit" d="' + d + '" stroke-width="' + round(Math.max(width(s.value), 12)) + '"/>';
@@ -246,16 +305,32 @@ function figureHtml() {
         } else {
             strokes += '<path class="wn-line" d="' + d + '" stroke-width="' + round(width(s.value)) + '" style="--o:' + opacity + '"/>';
         }
-        if (on) {
-            const mid = [0.25 * a[0] + 0.5 * c[0] + 0.25 * b[0], 0.25 * a[1] + 0.5 * c[1] + 0.25 * b[1]];
-            const text = state.basis === 'agree' ? s.both.length + '/' + s.union.length : String(s.value);
-            const w = text.length * font * 0.62 + font;
-            pills.push('<g class="wn-pill" transform="translate(' + round(mid[0]) + ' ' + round(mid[1]) + ')" aria-hidden="true">' +
-                '<rect x="' + round(-w / 2) + '" y="' + round(-font * 0.75) + '" width="' + round(w) + '" height="' + round(font * 1.5) + '" rx="' + round(font * 0.75) + '"/>' +
-                '<text text-anchor="middle" dy=".35em" font-size="' + font + '">' + text + '</text></g>');
-        }
-        return '<g class="wn-item wn-edge' + (on ? ' is-near' : '') + (chosen ? ' is-selected' : '') + '" role="button" tabindex="-1" aria-pressed="' + chosen +
-            '" data-sel="' + esc(selKey(s.set)) + '" aria-label="' + esc(itemName(s)) + '"><title>' + esc(itemName(s)) + '</title>' + strokes + '</g>';
+        // The custom tooltip (showTip) replaces a native <title>, whose box the browser
+        // places over the figure and the work list.
+        return '<g class="wn-item wn-edge' + (near(s) ? ' is-near' : '') + (chosen ? ' is-selected' : '') + '" role="button" tabindex="-1" aria-pressed="' + chosen +
+            '" data-sel="' + esc(selKey(s.set)) + '" aria-label="' + esc(itemName(s)) + '">' + strokes + '</g>';
+    });
+
+    // Count labels of the selected connections: with a node selected each sits near the
+    // partner end of its edge, a single selected edge starts at its middle, and every
+    // label slides along its curve until it covers no node and no other label.
+    const nodeBoxes = cats.map(function (cat) {
+        const r = radius(net.nodes[cat].value) + 1;
+        return { x: point[cat][0] - r, y: point[cat][1] - r, w: 2 * r, h: 2 * r };
+    });
+    const labelled = visible.filter(near).sort(function (x, y) { return y.value - x.value || cats.indexOf(x.set[0]) - cats.indexOf(y.set[0]); });
+    const labelItems = labelled.map(function (s) {
+        const partner = partnerOf(s);
+        const from = point[partner === s.set[0] ? s.set[1] : s.set[0]];
+        const to = point[partner || s.set[1]];
+        const text = state.basis === 'agree' ? s.both.length + '/' + s.union.length : String(s.value);
+        return { text: text, from: from, via: control(from, to), to: to, w: text.length * font * 0.62 + font, h: font * 1.5, steps: partner ? null : MID_STEPS };
+    });
+    const pills = placeLabels(labelItems, nodeBoxes).map(function (spot, i) {
+        const item = labelItems[i];
+        return '<g class="wn-pill" transform="translate(' + round(spot.x) + ' ' + round(spot.y) + ')" aria-hidden="true">' +
+            '<rect x="' + round(-item.w / 2) + '" y="' + round(-item.h / 2) + '" width="' + round(item.w) + '" height="' + round(item.h) + '" rx="' + round(item.h / 2) + '"/>' +
+            '<text text-anchor="middle" dy=".35em" font-size="' + font + '">' + item.text + '</text></g>';
     });
 
     const nodes = cats.map(function (cat) {
@@ -278,9 +353,9 @@ function figureHtml() {
         const chosen = selKey(sel) === cat;
         const on = sel && sel.indexOf(cat) >= 0;
         const inner = state.basis === 'agree' && s.union.length ? '<circle class="wn-dot-both" r="' + round(radius(s.both.length) * (s.both.length ? 1 : 0)) + '"/>' : '';
-        return '<g class="wn-item wn-node' + (on ? ' is-near' : '') + (chosen ? ' is-selected' : '') + '" role="button" tabindex="-1" aria-pressed="' + chosen +
+        return '<g class="wn-item wn-node' + (on ? ' is-near' : '') + (chosen ? ' is-selected' : '') + (isResidual(cat) ? ' wn-node--residual' : '') +
+            '" role="button" tabindex="-1" aria-pressed="' + chosen +
             '" data-sel="' + esc(cat) + '" aria-label="' + esc(itemName(s)) + '" style="--node:' + esc(EC.CAT_COLORS[cat] || 'var(--gray-500)') + '">' +
-            '<title>' + esc(itemName(s)) + '</title>' +
             '<circle class="wn-hit" cx="' + round(p[0]) + '" cy="' + round(p[1]) + '" r="' + round(Math.max(r, 14)) + '"/>' +
             '<g transform="translate(' + round(p[0]) + ' ' + round(p[1]) + ')"><circle class="wn-dot' + (state.basis === 'agree' ? ' wn-dot--union' : '') + '" r="' + round(r) + '"/>' + inner + '</g>' +
             '<text class="wn-label" x="' + round(lx) + '" y="' + round(ly) + '" font-size="' + font + '" text-anchor="' + (right ? 'start' : 'end') + '">' +
@@ -300,42 +375,60 @@ function legendHtml() {
         return '<svg class="wn-legend-line" viewBox="0 0 28 14" width="28" height="14" aria-hidden="true"><path class="' + cls + '" d="M2 7H26" stroke-width="' + w + '"/></svg>';
     };
     const dot = '<svg viewBox="0 0 30 16" width="30" height="16" aria-hidden="true"><circle class="wn-legend-dot" cx="6" cy="8" r="3"/><circle class="wn-legend-dot" cx="20" cy="8" r="7"/></svg>';
+    const residual = cats.filter(isResidual);
+    const rest = residual.length
+        ? '<li><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle class="wn-legend-dot wn-legend-dot--residual" cx="8" cy="8" r="6"/></svg> Sammelkategorie ' +
+            esc(residual.map(label).join(', ')) + '</li>'
+        : '';
     if (state.basis === 'agree') {
         return '<li>' + dot + ' Werke mit der Kategorie, innen von beiden codiert</li>' +
             '<li>' + swatch('wn-line wn-line--both', 4) + ' von beiden codiert</li>' +
-            '<li>' + swatch('wn-line wn-line--union', 8) + ' von einer Seite codiert</li>';
+            '<li>' + swatch('wn-line wn-line--union', 8) + ' von einer Seite codiert</li>' + rest;
     }
-    return '<li>' + dot + ' Werke mit der Kategorie</li><li>' + swatch('wn-line', 6) + ' gemeinsam codiert in denselben Werken</li>';
+    return '<li>' + dot + ' Werke mit der Kategorie</li><li>' + swatch('wn-line', 6) + ' gemeinsam codiert in denselben Werken</li>' + rest;
 }
 
 // Table and detail
 
+// With a node selected each row names only the partner category, and outside
+// Übereinstimmung a column states the joint count as a share of the partner's works.
 function tableHtml() {
     const sel = state.sel;
     const key = selKey(sel);
+    const node = sel && sel.length === 1 ? sel[0] : null;
     let rows = net.edges.filter(function (s) { return s.value >= state.min && s.value > 0; });
-    if (sel && sel.length === 1) rows = rows.filter(function (s) { return s.set.indexOf(sel[0]) >= 0; });
+    if (node) rows = rows.filter(function (s) { return s.set.indexOf(node) >= 0; });
     // The first count column orders the rows: works in total, or under Übereinstimmung those both sides coded.
     const first = function (s) { return state.basis === 'agree' ? s.both.length : s.value; };
     rows.sort(function (a, b) { return first(b) - first(a) || b.value - a.value || cats.indexOf(a.set[0]) - cats.indexOf(b.set[0]); });
+    const top = Math.max.apply(null, rows.map(first).concat([1]));
     const agree = state.basis === 'agree';
-    const caption = sel && sel.length === 1 ? 'Verbindungen von ' + label(sel[0]) : 'Verbindungen';
-    const head = agree
-        ? '<th scope="col">Kategorien</th><th scope="col">Beide</th><th scope="col">Eine Seite</th><th scope="col">Anteil</th>'
-        : '<th scope="col">Kategorien</th><th scope="col">Werke</th>';
+    const caption = node ? 'Verbindungen von ' + label(node) : 'Verbindungen';
+    const heads = [node ? 'Kategorie' : 'Kategorien'].concat(agree ? ['Beide', 'Eine Seite', 'Anteil'] : node ? ['Werke', 'Anteil an der Kategorie'] : ['Werke']);
+    const head = heads.map(function (text, i) { return '<th scope="col"' + (i ? ' class="wn-num"' : '') + '>' + text + '</th>'; }).join('');
     const body = rows.map(function (s) {
         const chosen = selKey(s.set) === key;
-        const name = label(s.set[0]) + ' und ' + label(s.set[1]);
-        const button = '<button type="button" class="wn-pick" data-sel="' + esc(selKey(s.set)) + '" aria-pressed="' + chosen + '">' +
-            (agree ? s.both.length : s.value) + '<span class="sr-only"> ' + esc(agree ? 'von beiden codiert, ' + name : 'Werke, ' + name) + '</span></button>';
-        const cells = agree
-            ? '<td>' + button + '</td><td class="wn-num">' + (s.union.length - s.both.length) + '</td><td class="wn-num">' + (s.union.length ? pct(s.both.length / s.union.length) : '–') + '</td>'
-            : '<td>' + button + '</td>';
-        return '<tr' + (chosen ? ' class="is-selected"' : '') + '><th scope="row" class="wn-pair">' + chip(s.set[0], key === s.set[0]) +
-            '<span class="lk-and" aria-hidden="true">+</span>' + chip(s.set[1], key === s.set[1]) + '</th>' + cells + '</tr>';
+        const partner = partnerOf(s);
+        const pair = label(s.set[0]) + ' und ' + label(s.set[1]);
+        const name = agree ? 'von beiden codiert, ' + pair : partner ? edgePhrase(s) : 'Werke, ' + pair;
+        const count = first(s);
+        const button = '<span class="wn-bar" aria-hidden="true"><span style="width:' + (count / top * 100).toFixed(1) + '%"></span></span>' +
+            '<button type="button" class="wn-pick" data-sel="' + esc(selKey(s.set)) + '" aria-pressed="' + chosen + '">' +
+            count + '<span class="sr-only"> ' + esc(name) + '</span></button>';
+        let cells = '<td class="wn-num"><span class="wn-count-cell">' + button + '</span></td>';
+        if (agree) {
+            cells += '<td class="wn-num">' + (s.union.length - s.both.length) + '</td><td class="wn-num">' + (s.union.length ? pct(s.both.length / s.union.length) : '–') + '</td>';
+        } else if (node) {
+            const share = partnerShare(s);
+            cells += '<td class="wn-num">' + (share.value === null ? '–' : pct(share.value)) + '</td>';
+        }
+        const names = partner
+            ? chip(partner, false)
+            : chip(s.set[0], key === s.set[0]) + '<span class="lk-and" aria-hidden="true">+</span>' + chip(s.set[1], key === s.set[1]);
+        return '<tr' + (chosen ? ' class="is-selected"' : '') + '><th scope="row" class="wn-pair">' + names + '</th>' + cells + '</tr>';
     }).join('');
     return '<caption id="wn-table-caption">' + esc(caption) + '</caption><thead><tr>' + head + '</tr></thead><tbody>' +
-        (body || '<tr><td colspan="' + (agree ? 4 : 2) + '" class="empty-state">Keine Verbindung ab dieser Schwelle.</td></tr>') + '</tbody>';
+        (body || '<tr><td colspan="' + heads.length + '" class="empty-state">Keine Verbindung ab dieser Schwelle.</td></tr>') + '</tbody>';
 }
 
 function sortWorks(papers, s) {
@@ -346,22 +439,6 @@ function sortWorks(papers, s) {
         if (state.basis === 'agree') return SIDE_ORDER[sideOf(a, s)] - SIDE_ORDER[sideOf(b, s)] || byDecision(a, b) || byYear(a, b) || byAuthor(a, b);
         return byDecision(a, b) || byYear(a, b) || byAuthor(a, b);
     });
-}
-
-function itemHtml(paper, s) {
-    const k = decisionKey(paper);
-    const dec = DECISIONS[k];
-    const side = state.basis === 'agree' ? sideOf(paper, s) : null;
-    const id = encodeURIComponent(paper.id);
-    const who = paper.author_year || (paper.year ? String(paper.year) : '');
-    return '<li class="lk-item" data-decision="' + k + '"' + (side ? ' data-side="' + side + '"' : '') + '>' +
-        '<span class="lk-mark lk-mark--' + k + '" aria-hidden="true">' + dec.mark + '</span>' +
-        '<span class="lk-item-body"><a class="lk-item-title" href="#view=korpus&amp;paper=' + id + '">' + esc(paper.title) + '</a>' +
-        '<span class="lk-item-meta">' +
-        (side ? '<span class="lk-side lk-side--' + side + '" title="' + SIDES[side].label + '"><span aria-hidden="true">' + SIDES[side].mark +
-            '</span><span class="sr-only">' + SIDES[side].label + '</span></span> ' : '') +
-        '<span class="lk-dec">' + esc(dec.label) + '</span>' + (who ? ', ' + esc(who) : '') +
-        ' <a class="wn-prism" href="prisma.html?paper=' + id + '">PRISM<span class="sr-only">, ' + esc(paper.title) + '</span></a></span></span></li>';
 }
 
 function detailHtml() {
@@ -387,8 +464,13 @@ function detailHtml() {
         html += '<div class="lk-cmp" role="group" aria-label="Expert:innen und LLM im Vergleich">' +
             row('Expert:innen', s.human.length, 'lk-cmp-fill--human') + row('LLM', s.llm.length, 'lk-cmp-fill--llm') + '</div>';
     }
+    // Under Übereinstimmung each decision group keeps the divergent works first.
     html += papers.length
-        ? '<ol class="lk-list wn-list" role="list">' + papers.map(function (p) { return itemHtml(p, s); }).join('') + '</ol>'
+        ? EC.workGroupsHtml(papers, {
+            cls: 'wn-list',
+            decision: decisionKey,
+            item: function (p, k) { return EC.workItemHtml(p, { decision: k, side: state.basis === 'agree' ? sideOf(p, s) : null }); },
+        })
         : '<p class="empty-state">Kein Werk mit dieser Auswahl.</p>';
     return html;
 }
@@ -442,6 +524,7 @@ function paint() {
 }
 
 function select(sel, fromTable) {
+    hideTip();
     const next = parseSel(selKey(sel));
     state.sel = next && selKey(next) === selKey(state.sel) ? null : next;
     paint();
@@ -508,6 +591,82 @@ function onHover(event) {
     });
 }
 
+// Tooltip of a figure item, beside the pointer on an edge, or beside the node itself on a
+// node or a focused item. Four corners around that anchor box are scored by what each
+// would cover: the anchor and the selected node must stay visible, count labels and the
+// work list should, other nodes and their labels rather. The corner covering least wins,
+// a tie keeps the order below right, below left, above right, above left, and every
+// corner is clamped into the viewport, so near an edge it flips.
+const TIP_GAP = 16;
+function tipPosition(at, size, view, avoid) {
+    const right = at.x + (at.w || 0) + TIP_GAP;
+    const left = at.x - TIP_GAP - size.w;
+    const below = at.y + (at.h || 0) + TIP_GAP;
+    const above = at.y - TIP_GAP - size.h;
+    const corners = [[right, below], [left, below], [right, above], [left, above]];
+    const all = [{ x: at.x - 6, y: at.y - 6, w: (at.w || 0) + 12, h: (at.h || 0) + 12, weight: 1000 }].concat(avoid);
+    let best = null;
+    corners.forEach(function (c) {
+        const box = {
+            x: Math.max(8, Math.min(c[0], view.w - size.w - 8)),
+            y: Math.max(8, Math.min(c[1], view.h - size.h - 8)),
+            w: size.w, h: size.h,
+        };
+        const cost = all.reduce(function (sum, o) { return sum + overlapArea(box, o) * (o.weight || 1); }, 0);
+        if (!best || cost < best.cost) best = { cost: cost, left: box.x, top: box.y };
+    });
+    return best;
+}
+
+function rectOf(el, weight) {
+    const r = el.getBoundingClientRect();
+    return { x: r.left, y: r.top, w: r.width, h: r.height, weight: weight };
+}
+
+// The tooltip repeats the item's aria-label, so it is hidden from assistive technology.
+function showTip(item, at) {
+    if (!tip) {
+        tip = document.createElement('div');
+        tip.className = 'rich-tooltip wn-tip';
+        tip.setAttribute('aria-hidden', 'true');
+        tip.innerHTML = '<div class="tip-text"></div>';
+        document.body.appendChild(tip);
+    }
+    tip.firstChild.textContent = item.getAttribute('aria-label');
+    tip.hidden = false;
+    const box = tip.getBoundingClientRect();
+    const avoid = [];
+    root.querySelectorAll('#wn-figure .wn-node.is-selected .wn-dot').forEach(function (el) { avoid.push(rectOf(el, 1000)); });
+    root.querySelectorAll('#wn-figure .wn-pill').forEach(function (el) { avoid.push(rectOf(el, 20)); });
+    const detail = root.querySelector('#wn-detail');
+    if (!detail.hidden) avoid.push(rectOf(detail, 50));
+    root.querySelectorAll('#wn-figure .wn-label, #wn-figure .wn-node:not(.is-selected) .wn-dot').forEach(function (el) { avoid.push(rectOf(el, 2)); });
+    const spot = tipPosition(at, { w: box.width, h: box.height }, { w: document.documentElement.clientWidth, h: window.innerHeight }, avoid);
+    tip.style.left = spot.left + window.scrollX + 'px';
+    tip.style.top = spot.top + window.scrollY + 'px';
+}
+
+function hideTip() { if (tip) tip.hidden = true; }
+
+// A node anchors the tooltip at its dot, so the tooltip never covers the node it names.
+function anchorOf(item, event) {
+    const dot = item.querySelector('.wn-dot');
+    if (dot || !event) { const r = (dot || item).getBoundingClientRect(); return { x: r.left, y: r.top, w: r.width, h: r.height }; }
+    return { x: event.clientX, y: event.clientY, w: 0, h: 0 };
+}
+
+function onPointerMove(event) {
+    const item = event.target.closest && event.target.closest('#wn-figure .wn-item');
+    if (item) showTip(item, anchorOf(item, event));
+    else hideTip();
+}
+
+function onFocusIn(event) {
+    const item = event.target.closest && event.target.closest('#wn-figure .wn-item');
+    if (!item || !item.matches(':focus-visible')) { hideTip(); return; }
+    showTip(item, anchorOf(item, null));
+}
+
 function readParams(vp) {
     const basis = available.indexOf(vp.basis) >= 0 ? vp.basis : available[0];
     const min = Number(vp.min);
@@ -525,6 +684,9 @@ function apply(vp) {
     state = readParams(vp || {});
     paint();
 }
+
+// The pure layout functions, exposed for tests/companion.mjs.
+EC.wissensnetz = { placeLabels: placeLabels, tipPosition: tipPosition, overlapArea: overlapArea };
 
 EC.viewParams.register('wissensnetz', {
     keys: ['basis', 'scope', 'min', 'sel'],
@@ -564,6 +726,12 @@ window.initializeWissensnetz = function () {
     root.addEventListener('keydown', onKeydown);
     root.addEventListener('mouseover', onHover);
     root.addEventListener('mouseleave', onHover);
+    root.addEventListener('mousemove', onPointerMove);
+    root.addEventListener('mouseleave', hideTip);
+    root.addEventListener('focusin', onFocusIn);
+    root.addEventListener('focusout', hideTip);
+    root.addEventListener('scroll', hideTip, true);
+    document.addEventListener('keydown', function (event) { if (event.key === 'Escape') hideTip(); });
     // Label size and wrapping differ on narrow screens, so crossing the query redraws.
     narrow.addEventListener('change', function () { if (root.getClientRects().length) paint(); });
     if (pending) { apply(pending); pending = null; } else paint();
