@@ -1124,12 +1124,13 @@ try {
     url: location.search
   }));
   check('assignment: the Zuteilung segment narrows the open list to the assignee',
-    allIds.length === 3 && labelled === 3 && susiIds.join('|') === 'PILOT-B|AIGLDZ4C' && assignState.pressed === 'susi' &&
+    allIds.length === 3 && labelled === 3 && [...susiIds].sort().join('|') === 'AIGLDZ4C|PILOT-B' && assignState.pressed === 'susi' &&
       assignState.labels === 0 && /assignee=susi/.test(assignState.url) && /status=offen/.test(assignState.url),
     { allIds, labelled, susiIds, assignState });
   await assignPage.reload();
   await assignPage.waitForFunction(() => window.__PRISMA_TEST__ && document.querySelector('.pt-assignee-seg'), null, { timeout: 15000 });
-  check('assignment: the selected assignee is restored from the URL', (await listIds()).join('|') === 'PILOT-B|AIGLDZ4C');
+  // membership, not order: the Offen list orders by reading basis
+  check('assignment: the selected assignee is restored from the URL', (await listIds()).sort().join('|') === 'AIGLDZ4C|PILOT-B');
   await assignContext.close();
 
   // Operator screen review of 1 October 2026 (provisional, knowledge/plan.md): a paper with

@@ -2453,12 +2453,31 @@ function matchesAssigneeFilter(p, key) {
     return key === 'alle' || assigneeOf(p) === key;
 }
 
+// The reading basis a paper offers: 0 full text, 1 abstract only, 2 no paper text.
+function textTier(p) {
+    if (hasFullText(p)) return 0;
+    return abstractUsableForReading(p) ? 1 : 2;
+}
+
+// The open list is the reviewers' work queue. Papers that can be read in full come
+// first, so a session does not open on a paper without text; within a tier the corpus
+// order stays. Search results keep their relevance order.
+function tieredOrder() {
+    return statusFilterAvailable() && state.statusFilter === 'offen' && !corpusQuery.trim() && !acceptanceMode && fulltextManifest !== null;
+}
+
+function rowOrder(paper, index) {
+    return tieredOrder() ? textTier(paper) * papers.length + index : index;
+}
+
 function visibleRows() {
     const status = statusFilterAvailable() ? state.statusFilter : 'alle';
     const assignee = activeAssignee();
-    return baseRows().filter(function(row) {
+    const rows = baseRows().filter(function(row) {
         return matchesStatusFilter(row.paper, status) && matchesAssigneeFilter(row.paper, assignee);
     });
+    if (tieredOrder()) rows.sort(function(a, b) { return rowOrder(a.paper, a.index) - rowOrder(b.paper, b.index); });
+    return rows;
 }
 
 // Surface: Screening (read + search + pin evidence)
@@ -2625,7 +2644,8 @@ function corpusListHtml() {
             '<span class="pt-nav-text"><span class="pt-nav-t" title="' + EC.escapeHtml(p.title || '(ohne Titel)') + '">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
             '<span class="pt-nav-m">' + EC.escapeHtml(p.author_year || p.authors || 'Autor:in/Jahr unbekannt') +
             (who ? '<span class="pt-nav-assignee">, ' + EC.escapeHtml(who) + '</span>' : '') +
-            (drafts[p.id] && drafts[p.id].dirty ? '<span class="pt-nav-draft">, nicht gespeichert</span>' : '') + '</span>' +
+            (drafts[p.id] && drafts[p.id].dirty ? '<span class="pt-nav-draft">, nicht gespeichert</span>' : '') +
+            (fulltextManifest !== null && textTier(p) ? '<span class="pt-nav-textstate">, ' + (textTier(p) === 1 ? 'nur Abstract' : 'kein Papertext') + '</span>' : '') + '</span>' +
             (q && result.kind === 'DOI' && p.doi ? '<span class="pt-nav-id">DOI ' + EC.escapeHtml(p.doi) + '</span>' : '') +
             '</span>' + categoryDotsHtml(cats) + badge +
             '<span class="pt-sr-only">, ' + statusLabel(st) + (who ? ', zugeteilt: ' + EC.escapeHtml(who) : '') + (catNames.length ? ', ' + EC.escapeHtml(catNames.join(', ')) : '') + '</span>' +
@@ -4437,9 +4457,10 @@ function gotoNextOpen() {
     }
     let at = rows.findIndex(function(row) { return row.index === state.index; });
     // a paper that just left the list (saved under Offen) keeps its place: the search
-    // continues after it in corpus order instead of restarting at the top
+    // continues after it in list order instead of restarting at the top
     if (at === -1 && !corpusQuery.trim()) {
-        const after = rows.findIndex(function(row) { return row.index > state.index; });
+        const here = rowOrder(papers[state.index], state.index);
+        const after = rows.findIndex(function(row) { return rowOrder(row.paper, row.index) > here; });
         at = (after === -1 ? rows.length : after) - 1;
     }
     for (let k = 1; k <= rows.length; k++) {
@@ -4965,6 +4986,7 @@ const TEST_HOOK = {
     syncUrl: syncUrl, gotoNextOpen: gotoNextOpen, renderScreening: renderScreening, workspaceBarHtml: workspaceBarHtml,
     modeSwitchAvailable: modeSwitchAvailable, localEditingAvailable: localEditingAvailable,
     setManifestReachable: function(value) { manifestReachable = !!value; },
+    setFulltextManifest: function(value) { fulltextManifest = value; },
     setFsSupported: function(value) { fsOverride = value === undefined ? null : !!value; },
     serializeAll: serializeAll, loadLocal: loadLocal, attachHumanContract: attachHumanContract,
     resolveReviewerConflict: resolveReviewerConflict, reviewerConflicts: function() { return JSON.parse(JSON.stringify(reviewerConflicts)); },

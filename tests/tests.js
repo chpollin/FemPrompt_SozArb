@@ -2313,6 +2313,26 @@ test('Nächstes offen continues after a paper that a save removed from the Offen
     assertEqual(T.getState().index, 0, 'past the end of the list it wraps to the first open paper');
     S.statusFilter = 'alle'; delete S.reviewers.nx; S.reviewer = prevRev;
 });
+test('the Offen list puts full texts first, then abstracts, then papers without text, and names the weaker basis', function() {
+    var abstract = 'An abstract long enough to be read as the paper layer of this record, well over the short-abstract limit of the reader.';
+    T.setPapers([{ id: 'X1', title: 'none' }, { id: 'X2', title: 'abstract', abstract: abstract }, { id: 'X3', title: 'full' }, { id: 'X4', title: 'none too' }]);
+    T.setFulltextManifest({ X3: { src: 'clean' } });
+    var S = T.getState(), prevRev = S.reviewer;
+    S.reviewer = 'tx'; S.reviewers.tx = {}; S.catFilter = []; S.assigneeFilter = 'alle';
+    T.setCorpusQuery('');
+    var order = function() { return T.visibleRows().map(function(r) { return r.paper.id; }).join('|'); };
+    S.statusFilter = 'offen';
+    assertEqual(order(), 'X3|X2|X1|X4', 'full text, abstract, then no text, corpus order within a tier');
+    var html = T.corpusListHtml();
+    assertContains(html, 'nur Abstract'); assertContains(html, 'kein Papertext');
+    S.statusFilter = 'alle';
+    assertEqual(order(), 'X1|X2|X3|X4', 'other lists keep the corpus order');
+    S.statusFilter = 'offen'; S.index = 2;
+    S.reviewers.tx.X3 = { decision: 'Exclude', reason: 'Duplicate', categories: {}, ts: '2026-10-02T00:00:00Z' };
+    T.gotoNextOpen();
+    assertEqual(T.getState().index, 1, 'after saving the full-text paper the next open one follows in list order');
+    S.statusFilter = 'alle'; delete S.reviewers.tx; S.reviewer = prevRev; T.setFulltextManifest({});
+});
 test('removing the last Paper pin clears the teilweise it had set, a ja stays', function() {
     var paper = { id: 'UP1', title: 'unpin' };
     T.setPapers([paper]);
