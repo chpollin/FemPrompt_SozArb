@@ -16,7 +16,7 @@ manuscript_status: draft
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-09-05
+updated: 2026-10-02
 authors: [Christopher Pollin, Susanne Sackl-Sharif, Sabine Klinger] # [OPEN: author set and order, three named here vs. four on the Evidence Companion; co-author decision]
 generated-with: Claude Code, Codex (GPT-6)
 method:
@@ -173,6 +173,19 @@ Two further points concern the divergence analysis. Expert and LLM agreement stu
 The workflow was built for reuse, and its parts remain separable. PRISM is a static, dependency-free web tool over published research data; because its record generation is driven by the data model rather than by anything specific to this corpus, a third party can connect a different corpus and produce the same conformant flow diagram and disclosure section for a foreign review. Configuring the instrument for such an external review is a planned continuation. The replay pattern, a committed script that re-derives every published figure from the raw files and self-tests against the canonical result, transfers to any review that keeps its decisions as data. The update protocol and the coding instructions serve as templates for a pre-registered round. The distillation layer is the most corpus-specific part and the most expensive to rebuild; a team can run the workflow without it and forgoes the knowledge-document input condition.
 
 An adoption has several prerequisites. The workflow uses a version-controlled repository as the record carrier, assigns final scholarly authority to domain experts, and treats every screening decision as a datum with an actor, a controlled reason, and an evidence anchor. PRISM requires no build tooling or institutional platform because it runs as a static page over files. The workflow makes AI-agent contributions inspectable and re-derivable. Each review must still evaluate the quality of those contributions against its own sources and scholarly criteria.
+
+### Prompted research artifacts
+
+The Promptotyping approach that produced PRISM also yields artifacts whose purpose is epistemic. A tool is judged by how reliably it performs a recurring task. A research preview is judged by what it makes visible or testable, and it keeps that value when it never enters routine use. This review produced several such previews alongside the instrument. The decomposition of the round-one divergence (section 5.2) showed that most of the apparent inclusion bias of the LLM track follows from task design, a finding about the method that no screening tool was built to deliver. The matrix of the Evidence Companion lets a reader cross two analysis fields and inspect the Works coded with both, which raises questions to the corpus without establishing a relation between the fields. The Literature Landscape previews the field from the source-reviewed subset before the coding is complete.
+
+Researchers and educators in social work can prompt comparable artifacts from the material of their own field.
+
+- A map of research literature and funding calls for one field of practice, such as homelessness services or child and youth welfare, makes that field explorable by period and topic.
+- An exploratory analysis of open answers from a survey of service users runs as a static page in the browser, so the responses never leave the researcher's machine.
+- A simulated counselling conversation lets students observe when an LLM agrees prematurely with a client or normalises a problem situation.
+- An exercise on synthetic case vignettes lets students mark risk indicators and receive predefined feedback.
+
+Two boundaries apply to all of them. A research preview generates questions and supplies no evidence, so an observation made with it needs the same source binding and expert verification as any other result of this review. Functions that prepare decisions about people stay outside this category even when all data are processed locally, because their use requires an institutional assessment that a prototype cannot replace. Learning and research artifacts are therefore the first candidates for social work, and case-processing tools follow only after that assessment.
 
 ## 8. Limitations
 

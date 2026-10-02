@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-10-01
+updated: 2026-10-02
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -23,6 +23,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 ---
 
 ## PRISM and the epistemic infrastructure (2026)
+
+### 2026-10-02: Prompted research artifacts in the manuscript discussion
+
+The discussion of the canonical manuscript gains the subsection "Prompted research artifacts". It separates research previews, judged by what they make visible, from tools for a recurring task, names the divergence decomposition, the Companion matrix and the Literature Landscape as the review's own previews, and proposes four social-work analogues. The spectrum follows the use cases of the VetMed AI Academy, which stay unnamed in the text because their institutional material is not released. The boundary that decision-preparing functions about people need an institutional assessment is taken from the same source. Whether the subsection fits the paper architecture for the Adult Literacy Education issue stays with the open architecture decision in [[plan]].
 
 ### 2026-10-01: Wissen tab withheld for open works
 
