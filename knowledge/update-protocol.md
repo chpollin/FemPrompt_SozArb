@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.8"
 created: 2026-06-09
-updated: 2026-10-02
+updated: 2026-10-03
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-5.6), Claude Code (Claude Opus 5.5)
 topics: ["[[Pre-Registration]]", "[[Coding Scheme]]", "[[AI Agents]]"]
@@ -87,7 +87,7 @@ The canonical Work-Version registry follows Zotero curation. One stable `work_id
 
 ## Text preparation and source gate
 
-PDFs are converted to Markdown with Docling. The conversion-review interface supports visual inspection of the resulting structure. A Work becomes screenable only after its identity is stable and reviewed Paper Markdown for its preferred available Version is bound to it. The generated queue records unavailable, ambiguous, unbound, version-mismatched, or conversion-pending sources before an agent receives an assignment.
+PDFs are converted to Markdown with Docling. The conversion-review interface supports visual inspection of the resulting structure. Productive agent assignment requires stable identity and reading Markdown bound to the preferred available Version or to a valid explicitly governed alternative source Version. The generated queue checks the available representation, exact Version match and source holds before assignment. Conversion fidelity and knowledge-document review have separate evidence contracts. A ready queue entry alone does not establish those reviews. [[data#Conditions for using the literature]] defines the distinct use conditions.
 
 The Paper layer is the evidence basis for screening. The LLM-Wissensdestillat remains a separately labelled reference layer and cannot satisfy a positive-category evidence requirement.
 
@@ -103,7 +103,7 @@ A coding run is an AI harness run. Two agent tracks receive the same frozen crit
 
 The orchestrator validates each coding packet and projects it through PRISM's production `validateReviewerPayload`, `importReviewerPayload`, `recordRequirements`, and `reviewerFileText` functions. New schema-0.4 tracks preserve the packet values, record the codebook version in each annotation's analysis and bind every decision and Paper evidence item to the assigned `work_id` and `version_id`. Historical schema-0.3 tracks remain valid immutable inputs to AI Agent Review. Run schema 1.4 binds the codebook version and hash, Work and Version assignments, sources, prompts, per-track execution environments, packets, reports, projected tracks, review outputs, and hashes. A run under schema 1.4 may code works that human screening already covers and records that coverage.
 
-Visible PRISM interaction remains the domain-expert verification and correction surface and the basis of browser acceptance tests. Historical visible trial exports retain their original execution provenance.
+Visible PRISM interaction is the human screening surface without AI pre-assessment and the basis of browser acceptance tests. Under ADR-044 it records no new domain-expert verification of agent records. Historical visible trial exports retain their original execution provenance, and existing verification receipts remain readable under [[verification#The domain-expert verification path in PRISM]].
 
 ### Source-grounded AI Agent Review
 

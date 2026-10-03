@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-07-18
-updated: 2026-10-01
+updated: 2026-10-03
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 topics: ["[[Grounded Vault]]", "[[Systematic Review]]", "[[Context Engineering]]"]
@@ -127,6 +127,8 @@ The comparison connects each finding to its Work and exact source Version, task,
 Structured fields support reproducible descriptive comparisons. Source-bound knowledge documents preserve arguments and qualifications beyond those fields. Cross-source interpretations become separate Assertions with supporting and contradicting evidence. Their verification does not follow automatically from a checked input. [[governance#Verification scope decision, 22 September 2026]] defines the accepted granularity of human review.
 
 The comparison records insufficient study reporting and conflicting findings explicitly. Source-backed explanations can be prepared now. Cases that require a substantive judgement are presented with their evidence for domain-expert review. Field-level acceptance must state whether it checks faithful coding of the source or a further scholarly interpretation. The current synthesis scope grants no empirical efficacy or practice-transfer claim beyond what the cited studies support.
+
+Corrected live Zotero metadata and deferred local enrichments are governed by [[data#Bibliographic correction and provenance projections]]. A corrected bibliography does not rewrite a historical distillate or renew its scholarly authority. The evidence chain retains the exact source and artifact dependencies of each review.
 
 ## Current implementation state
 

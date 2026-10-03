@@ -79,6 +79,52 @@ The correction contract supports Zotero's native `proceedingsTitle`, `institutio
 
 `corpus/source_tool_mapping.json` preserves the legacy mappings consumed by historical replay. Its `documented_item_provenance` and `confirmed_source_tool_mapping` fields record the current evidenced discovery paths, allowing several systems per record. `inferred_source_tool_mapping` preserves the earlier title-based inference separately. Current collection names, historical names, source-access dates and established search runs have distinct fields. Current provenance is not retroactively substituted into the historical PRISMA replay. A later consumer change must explicitly select the documented provenance and preserve the original research-round boundaries.
 
+### Discovery history and date meanings
+
+`documented_item_provenance` records each evidenced discovery independently. A publication found by several systems retains all supported discovery paths. `confirmed_source_tool_mapping` carries the established system attributions, while `inferred_source_tool_mapping` identifies historical title-based inference. Collection membership can preserve a search context without proving that the publication's contents belong to that subject.
+
+| Date | Meaning | Evidence limit |
+|---|---|---|
+| `search_date` | Date the documented search was executed | Requires a run protocol or equivalent source evidence |
+| `source_access_date` | Date the search output records access to a cited source | Does not establish the search execution date |
+| Zotero `dateAdded` | Timestamp the current record was created in Zotero | Can reflect import or reimport and does not establish first discovery |
+| Zotero `dateModified` | Timestamp of the last change to that record | Includes organisational and metadata edits |
+| Bibliographic `date` | Publication date of the selected expression | Online publication and issue dates may differ |
+
+The DIVERSIFAIR toolkit (`AHUSFEEA`) is attributed to round-one Gemini by its exact URL in `corpus/deep-research/raw/Gemini_deep-research.md`, line 240. The recorded source-access date is 30 July 2025. Its search date and exact run remain unknown. The targeted follow-up of 5 September 2026 has a documented date but no established executing system. Round-one dates remain incompletely established. [[methods#Zotero organisation and provenance]] records the evidence and the conflict between the earlier round-one summary and Zotero creation timestamps.
+
+### Bibliographic questions requiring reconciliation
+
+The entries below carry the Zotero tag `Prüfung: Quellenidentität offen`. Their audit notes retain the conflicting values and the checked source. The private frozen plan at `generated/zotero-sync/2026-10-03-curation/curation-plan.json`, field `identity_conflicts`, records the dispositions. The [live verification receipt](../corpus/source-acquisition/zotero-curation-2026-10-03/live-verification.json) confirms the applied operation. It grants no scholarly identity judgement beyond the documented field checks.
+
+| Recorded publication | Zotero key | Unresolved question |
+|---|---|---|
+| Exploring complex mental health symptoms via classifying social media data with explainable LLMs | `VEJBIZRR` | The original abstract describes SepLLM. It is preserved in the audit note and removed from the active field. The intended publication remains unidentified. |
+| Homoglyph unlearning: A novel approach to bias mitigation | `JRG3B3LE` | The original URL and abstract describe another publication. Both are preserved in the audit note and removed from active fields. The intended work remains unidentified. |
+| An empirical study of structural social and ethical challenges in AI | `PC75954S` | The recorded title disagrees with the linked publication. |
+| Intersectional analysis of visual generative AI: the case of stable diffusion | `HLBXNWAZ` | The recorded title disagrees with the linked publication. |
+| Das verflixte Problem mit Klassifikationen: Zum Einfluss der Digitalisierung auf die Soziale Diagnostik in der Sozialen Arbeit | `44AA6ETH` | The DOI identifies a different book chapter. |
+| Are "Intersectionally Fair" AI Algorithms Really Fair to Women of Color? A Philosophical Analysis | `Q4LK53XW` | The DOI identifies another ACM publication. |
+| Prompten nach Plan: Das PCRR-Framework als pädagogisches Werkzeug für den Einsatz von Künstlicher Intelligenz. | `EB7PZUZZ` | The recorded title disagrees with the DataCite registration. |
+| Feminist AI: Confronting Bias, Power, and the Promise of Justice-Oriented Technology | `YW3UAXFP` | The DOI identifies a journal issue. Article-level identity remains unestablished. |
+
+The tag is a bibliographic reconciliation signal. The analysis generators do not import it as an automatic source hold. In the curation snapshot, *Intersectional analysis of visual generative AI* remains analysis eligible in the completion package despite its Zotero tag. That generated flag cannot establish resolution of the bibliographic discrepancy. A change to the bound source, its canonical identity or its admissibility requires a separate evidence-bound reconciliation under [[governance#Targeted reconciliation and data maintenance]]. Unknown discovery origin alone establishes neither a false source identity nor an exclusion decision.
+
+Selected-expression questions are recorded separately in the private `type-review.json`. *A survey on fairness in large language models* (`NVZA58ML`) retains its prior bibliography because the bound Procedia Computer Science text does not establish selection of the proposed arXiv expression. The ResearchGate expression of the cultural-bias systematic review (`6MJYP7ZX`) has not been reconciled with the withdrawn arXiv expression. *Large language models are zero-shot reasoners* (`H3STST88`), *Counterfactual fairness in text classification through robustness* (`ST9UCTJE`) and *BBQ: A hand-built bias benchmark for question answering* (`QY6P4RGQ`) retain their conference-paper type because an arXiv full-text URL alone does not select a preprint bibliography. These retained types do not imply that every source and coding requirement has passed. The actual synthesis holds are recorded in [[plan#Works with conflicts or holds]].
+
+### Conditions for using the literature
+
+| Intended use | Required evidence | Canonical carrier |
+|---|---|---|
+| Bibliographic orientation and search history | Inspectable record and attributed discovery evidence, with unknown values explicit | Zotero provenance notes and `corpus/source_tool_mapping.json` |
+| Productive agent full-text screening | Stable Work and exact source Version, available reading Markdown, preferred source or valid governed alternative binding, and no source hold | `generated/agent-screening-queue.json`, registry and source bindings |
+| Complete preparation for source-based assessment | Source identity, conversion fidelity and source-specific knowledge-document preparation and review are separately checked | Source-readiness and conversion-QC records, knowledge bindings and [[plan#Controlled corpus completion]] |
+| Interim analysis of coded Works | Effective Include, eligible current-source AI-reviewed coding and no applicable decision, source or integrity block. Individual missing, conflicting or undecidable fields retain their own denominators | `generated/completion/completion-package.json` and `field-states.csv` |
+| Qualitative synthesis claim | Source-linked Assertions and a review valid for the exact statement and its evidence. Findings used as scholarly conclusions additionally require the declared domain-expert review | [[research-vault#Comparative synthesis scope]] and [[verification]] |
+| Preliminary public projection | Allowed lifecycle state and valid exact-artifact/source review under the approved policy, including any applicable person-attributed event | `config/publication_policy.json` and the indexed review ledger |
+
+A ready assignment queue reports the implemented source-assignment gate. It does not substitute for conversion QC, a reviewed knowledge document, human inclusion, study-quality appraisal or review of an answer chapter. A relation in Zotero preserves a publication connection while canonical Work consolidation remains a separately governed operation. [[data#Analysis field states and coverage]] defines the field-level interpretation limits, and [[governance#Publication boundary]] defines final scholarly publication authority.
+
 ## Analysis vocabulary projection
 
 `src/publish/build_analysis_fields.py` projects the frozen `analysis_fields` and `study_types` of `assessment/categories.yaml` into `docs/data/analysis_fields.json`. Each field carries `name`, `multi` and `values` and, as presentation metadata, a German `label` and `definition` together with `value_labels` and `value_definitions` keyed by the controlled value. The study types remain the `study_types` list for existing consumers and additionally form a `study_type` object shaped like a field. Labels and definitions come from the `analysis_presentation` block of the YAML. They are presentation only, and stored or exported coding always uses the controlled value. The projection fails when a field or value lacks a label or definition, or when an entry names a field or value outside the vocabulary.
@@ -354,7 +400,7 @@ Versioning uses Git outside PRISM. Schema 0.4 is the version-aware isolated capt
 
 `generated/agent-screening-queue.json` derives work-level coverage from the committed corpus, productive screening files, and the reviewed full-text manifest. Human coverage and governed AI-agent coverage apply to every alias of the same identified work. Each uncovered work carries its available text basis and a readiness reason. The queue blocks screening before an agent receives a source when reviewed Paper Markdown is absent. This state can identify a missing binding or conversion even when a PDF exists elsewhere.
 
-`generated/round2-intake.json` audits the committed round-2 RIS lanes before productive screening. Three separately executed agent reviews record identity relations, bibliographic conflicts, and available source versions. `generated/round2-intake-package.json` joins those findings with the canonical registry and classifies every candidate as already curated, import-ready, needing review, or blocked. Only import-ready records enter `generated/round2-zotero-import.ris`. Zotero import, conflict resolution, curated re-export, and Markdown review remain operator actions. The generated manifests carry the current counts.
+`generated/round2-intake.json` audits the committed round-2 RIS lanes before productive screening. Three separately executed agent reviews record identity relations, bibliographic conflicts, and available source versions. `generated/round2-intake-package.json` joins those findings with the canonical registry and classifies every candidate as already curated, import-ready, needing review, or blocked. Only import-ready records enter `generated/round2-zotero-import.ris`. The additive import and bounded bibliographic curation are authorised under [[governance]]. Unresolved source identities, canonical Work consolidation and governed export replacement retain their own reconciliation requirements. Manual downloads are assigned to the colleague, who adds the texts to Zotero. The generated manifests carry the current counts.
 
 The dated supplement under `corpus/deep-research/round2/contextual-update-2026-08-24/` uses one shared lane schema for its three searches. `src/analysis/build_contextual_update_package.py` deduplicates Tier-A candidates across lanes and writes `generated/contextual-update-2026-08-24-intake-package.json` plus the corresponding Zotero RIS file. Each generated record retains its source lanes, bibliographic and access evidence, relation to an existing Work where applicable, and position relative to the original round-two publication window. The package lifecycle state is `identified`; Zotero import does not change the screening status.
 

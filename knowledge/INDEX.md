@@ -15,7 +15,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-29
-updated: 2026-10-02
+updated: 2026-10-03
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5), Codex (GPT-6)
 related: [project, analysis-methods, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, codebook-v1.4-proposal, research-vault, analysis-divergence, analysis-sq-advisory, project-review-2026-09-05]
@@ -63,6 +63,7 @@ In function order, not alphabetical.
 - Understand a tool decision through the ADR register and the design system in [[specification]] and the [[journal]].
 - Evaluate conformance through [[standards]] and the machine-readable item status in `generated/conformance/conformance_map.yaml`.
 - Prepare the literature update and source readiness through [[plan#Controlled corpus completion]], [[update-protocol]] and [[standards]]. `generated/literature-readiness.json` and its CSV projection, rebuilt by `npm run build`, distinguish live Zotero membership, reading material, knowledge-document authority and remaining preparation.
+- Inspect current Zotero discovery evidence and dates through [[data#Discovery history and date meanings]], unresolved bibliography through [[data#Bibliographic questions requiring reconciliation]], and admissibility for each use through [[data#Conditions for using the literature]]. The historical replay mapping remains separately preserved.
 - Inspect retained local sources through [[data#Local source preservation]] and reproduce technical guarantees through [[testing]].
 - Add missing prepared references to Zotero through [[governance#Authorised additive Zotero import]] for the write scope and [[methods#Zotero reconciliation and import]] for commands and receipts.
 - Set up a clone through the README and [[testing#Clean-checkout verification]].

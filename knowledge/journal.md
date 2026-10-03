@@ -22,6 +22,12 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## October 2026
 
+### 2026-10-03: Literature use and remaining source questions
+
+The operator commissioned concretisation of the knowledge documents after Zotero curation. Read-only subagent audits identified stale statements about provenance integration, the pending blanket metadata patch, manual acquisition and the presence and review of answer drafts. The maintained documents now distinguish discovery dates, bibliographic discrepancies, selected-expression reconciliation and admissibility for each use. Zotero identity tags are explicitly separate from generated synthesis holds. The source-Version hold for *Towards a Feminist Metaethics of AI* is named in the plan. Manual downloads remain the colleague's responsibility, with source inspection and binding following attachment availability.
+
+[[data#Discovery history and date meanings]], [[data#Bibliographic questions requiring reconciliation]] and [[data#Conditions for using the literature]] own these distinctions. The verification register preserves artifact-local review authority, and the round-two protocol follows the current human-screening contract of ADR-044. Historical source material and annotations are unchanged. Canonical Work consolidation and review renewal for deferred fields remain governed decisions.
+
 ### 2026-10-03: Source-reviewed Zotero curation
 
 The operator commissioned the remaining bibliographic curation with subagents. Independent source and version reviews rejected unsupported author expansions, overly broad thematic additions and ambiguous publication-type changes before application. Conditional Web API writes corrected the supported metadata, added subject memberships and reciprocal publication relations, and documented one recovered Gemini discovery. An interrupted batch caused by Zotero's automatic reciprocal links was reconciled against a complete intermediate snapshot before the remaining changes were applied. Complete read-back and an independent comparison verified the final library state.

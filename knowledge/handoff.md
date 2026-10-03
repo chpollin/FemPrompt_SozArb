@@ -39,12 +39,14 @@ The rebuilt and self-tested reviewer path is merged into `main` and pushed. Revi
 
 The Zotero organisation and subsequent source-reviewed curation approved on 3 October 2026 have been applied and fully read back. Source-backed metadata corrections, additive thematic membership, reciprocal publication relations and the recovered Gemini provenance are documented in Zotero. Existing item keys, attachments and historical notes remain intact. The committed raw export stays unchanged, while hash-bound corrections and explicit current provenance reconcile the local project data. Unresolved source identities remain marked. Identifier changes that would migrate research identities are deferred locally, and the selected arXiv record for *Towards a Feminist Metaethics of AI* carries a synthesis hold because its bound text identifies the ACM conference version. [[methods#Source-reviewed bibliographic curation]] and [[data#Bibliographic correction and provenance projections]] describe the evidence and limits. Manual full-text downloads remain assigned to the colleague, who adds the files to Zotero.
 
+The curation changes and subsequent knowledge clarification are on `codex/zotero-curation` and await operator integration into `main`. They have not been deployed. [[data#Conditions for using the literature]] distinguishes source preparation, eligible interim coding and scholarly use. The remaining bibliographic discrepancies are named in [[data#Bibliographic questions requiring reconciliation]]. Existing summary text, historical annotations and canonical record identities were preserved in the verified projection.
+
 ## Continuation point
 
 1. Accept or revise the provisional decisions of 2 October in [[plan#Decisions taken]], give the second reviewer write access to the repository and retain the reminder that the colleague supplies missing full texts through Zotero under decision 21. A fresh clone of `main` carries the reviewer start.
 2. The two reviewers screen their assigned open papers in PRISM, started with `start-prism.cmd` in a local clone, following the README and `docs/help.html#prism`. A first guided session with each is the remaining usability check. Then the operator review on the phone.
 3. The domain experts take the spot checks in each run's `spot-check-sample.json` and decide the human and agent decision divergences the completion package lists.
-4. Decide the Version binding of `JFDBPUBN`, `BDI6XU5A` and `XIYX5HJS`, and resolve the Work duplicates ([[plan#Source and corpus readiness]]).
+4. Reconcile the unfinished exact-Version recode assignments and canonical Work duplicates without invalidating the currently eligible coding ([[plan#Analysis tool follow-ups]], [[plan#Source and corpus readiness]]).
 5. Refresh the answer drafts for SQ1 to SQ5 to the recoded state and continue with Assertions under step 4 of [[plan#Answering the research questions]].
 
 ## Checkout and local material
@@ -79,4 +81,4 @@ The build reconstructs the ignored reading layer and projections and needs no ex
 
 ## Verification state
 
-The knowledge refactoring of the evening of 1 October 2026 ran `npm run build` and `npm run check` on its branch. The other verification rounds of the day are recorded with their scope in the [[journal]] entries of 1 October. These checks establish technical behaviour, not domain-expert acceptance. No record, Assertion or output carries domain-expert verification ([[verification]]). The native browser folder-permission check and the expert acceptance session remain open.
+The knowledge refactoring of the evening of 1 October 2026 ran `npm run build` and `npm run check` on its branch. The other verification rounds of the day are recorded with their scope in the [[journal]] entries of 1 October. These checks establish technical behaviour, not domain-expert acceptance. No record, Assertion or output carries domain-expert verification ([[verification]]). The curation baseline passed the complete build, project check and screening browser pilot on 3 October 2026. Those checks establish the bounded technical result and preserved historical knowledge. [[verification]] records its authority limits. The native browser folder-permission check and the expert acceptance session remain open.
