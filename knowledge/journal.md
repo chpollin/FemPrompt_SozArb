@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-10-02
+updated: 2026-10-03
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -21,6 +21,10 @@ related: [INDEX, plan, specification, governance, verification, handoff]
 Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen fest, die Git nicht erfasst, sodass alte Zustände, verworfene Richtungen und später umgestoßene Entscheidungen lesbar bleiben. Ein Eintrag je substanzieller Sitzung nennt, was sich änderte, was entschieden wurde und was offen bleibt, und verweist auf das Dokument, das den Gegenstand trägt. Commits und Diffs leben in der Git-Historie, Zahlen in den Daten und im Evidence Companion. Die Einträge stehen chronologisch, der neueste zuerst.
 
 ## October 2026
+
+### 2026-10-03: Zotero organisation and provenance recovery
+
+The operator approved separate provenance and thematic collections with readable names and per-item source history. The live library was reorganised through the Web API, preserving every pre-existing collection key and item. Original collection paths, exact historical key links and explicit import markers provided the evidence for provenance notes and restored memberships. Unestablished origins and search dates remain explicit, and a structure note in Zotero preserves the original hierarchy. Conditional writes, saved attempt receipts and a complete live read-back verified retained item fields and memberships together with the new notes. The private before/after record remains under `generated/zotero-sync/2026-10-03-organization/`. [[methods#Zotero organisation and provenance]] and [[governance#Authorised Zotero organisation]] own the contract. Bibliographic verification and reconciliation into the committed corpus remain separate work. The operator assigned all required manual full-text downloads to the colleague, who adds them to Zotero, resolving decision 21 as an acquisition reminder.
 
 ### 2026-10-02: Integration of the day's branches
 

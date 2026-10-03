@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-02
+updated: 2026-10-03
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -219,7 +219,7 @@ The numbers are referenced from the steps above. The status column states how fa
 | 18 | Final scholarly release of verified research records and outputs | Open. The preliminary AI-source-reviewed release is authorised | Person-attributed publication approval |
 | 19 | Final submission package | Open | Approval of manuscript, supplement, disclosures and venue requirements |
 | 20 | Whether PRISM drops the analysis-coding step that it still required of a human reviewer on an Include (FR-14 in [[specification]]) | Taken on 1 October 2026. PRISM has no human analysis step (ADR-045) | None |
-| 21 | Whether the assigned open papers without paper text are acquired before the reviewers reach them, or screened on their metadata and excluded as Kein Volltext, which ADR-048 makes a formal exclusion. A sweep of 2 October 2026 found a substantial share of both reviewers' lists without paper text and some with only an abstract ([[testing#Run of 2 October 2026]]) | Open | Operator decision before the screening sessions |
+| 21 | Manual acquisition of the missing full texts | Taken on 3 October 2026. The colleague performs all required manual downloads and adds the texts to the Zotero library. Outstanding texts remain a reminder until their attachments are available | Await the additions to Zotero |
 
 ### Decisions taken
 
@@ -227,6 +227,7 @@ These decisions left the open list. Their content lives at the linked place.
 
 | Date | Decision | Recorded in |
 |---|---|---|
+| 3 October 2026 | The colleague handles manual full-text downloads and adds the texts to Zotero. The operator approved the provenance and thematic collection structure with source-backed item notes | [[methods#Zotero organisation and provenance]], decision 21 |
 | 24 September 2026 | The editors of Adult Literacy Education accepted the expression of interest, which fixes the venue | [[project#Publication context]] |
 | 1 October 2026 | The main question and the five sub-questions SQ1 to SQ5 were merged | [[project#Research questions]] |
 | 1 October 2026 | Human reviewers screen without AI pre-assessment | ADR-044 in [[specification]] |

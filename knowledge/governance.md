@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-02
+updated: 2026-10-03
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 topics: ["[[Research Governance]]", "[[Provenance]]", "[[Human-in-the-Loop]]"]
@@ -97,6 +97,12 @@ The operator authorised agents to add missing prepared records to the `FemPrompt
 Each import uses a source-hash-bound plan and a consistent live library snapshot. Application checks the library version and reads back every creation. Uncertain writes stop with a receipt and require reconciliation before continuation. Existing-item corrections require their own explicitly scoped operation and evidence. [[methods#Zotero reconciliation and import]] owns the commands, matching rules and persistence procedure.
 
 Local snapshots, payload plans and receipts remain under ignored `generated/zotero-sync/` because they may contain private notes. The completed imports and the separately authorised title correction are documented in [[journal]]. The canonical corpus preserves original raw records and appends reconciled additions, while `corpus/zotero_sync.json` records membership and confirmed aliases. This authority grants bibliographic ingestion only.
+
+## Authorised Zotero organisation
+
+On 3 October 2026 the operator authorised the proposed provenance and thematic collection structure, readable collection names and source-backed provenance notes in group `6080294`. This bounded operation may rename and reparent collections, add memberships and create research-protocol and item-provenance notes. It preserves bibliographic fields, original records, attachments, historical notes and research identities. Unknown source attribution and dates remain explicit. The operation establishes organisational traceability, with no scholarly verification or publication approval.
+
+The operator-selected credential also permits read access to other groups. This operation addresses only `FemPrompt_SozArb` and does not read other libraries. The existing creation-only importer and read-only reconciler retain their stricter credential contracts. [[methods#Zotero organisation and provenance]] owns the live structure, evidence and read-back checks.
 
 ## Targeted reconciliation and data maintenance
 

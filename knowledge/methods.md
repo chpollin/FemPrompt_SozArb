@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-02-21
-updated: 2026-10-02
+updated: 2026-10-03
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
@@ -27,7 +27,7 @@ Two knowledge places frame the chain. `knowledge/` carries the steering knowledg
 
 | Stage | Period | Tool | Scholarly authority |
 |---|---|---|---|
-| 1 Identification round 1 | October 2025 | four deep-research systems, manual search, Zotero | Zotero curation |
+| 1 Identification round 1 | 2025, exact search dates incompletely documented | four deep-research systems, manual search, Zotero | Zotero curation |
 | 2 Acquisition and text conversion | from November 2025 | `src/acquire/`, Docling | Markdown review |
 | 3 Knowledge distillation | from November 2025 | `src/distill/distill_knowledge.py` | domain verification deferred |
 | 4 Dual assessment and benchmark | until March 2026 | Excel/Google Sheets, `src/assess/` | expert track (binding) |
@@ -65,9 +65,21 @@ Artefacts (committed): `corpus/deep-research/*.ris`, `prompts/deep-research-temp
 
 Named gaps. The exactly instantiated round-1 prompt was not committed at run time and is lost; only the parametric template was restored from Git history. The RIS conversion is documented but not reproducible. A preregistered protocol was absent (PRISMA-trAIce M1). All three gaps are named in [[standards]], not hidden.
 
-Source attribution. Only the four per-system Zotero collections and the restored RIS files tie a round-1 record to a deep-research system, and both hold the same small subset of the library. Most round-1 records sit in thematic collections of unknown provenance or in no collection, so the committed data cannot tell whether a given record came from one of the four systems or from the manual search. Per-system identification counts for round one are therefore lower bounds, and the multiple-finds overlap of round one rests on the restored RIS alone. The Zotero collection hierarchy of the group library, if it still holds parent collections per system, is the one place where this attribution could be recovered.
+Source attribution. The committed source mapping and restored RIS files retain the earlier, incomplete attribution. The live Zotero collection names recovered on 3 October 2026 also identify system-specific searches by topic and language. Import-source markers and exact historical item keys recover further collection memberships. The live organisation described below preserves this evidence. The committed source mapping, corpus export and published identification counts have not been regenerated from this recovery, so their earlier limitations continue to apply. Full reconstruction of all independent discoveries and cross-system overlaps remains incomplete.
 
 Scholarly authority. Zotero curation covers import, duplicate checking, metadata correction, and PDF attachments in the group library.
+
+## Zotero organisation and provenance
+
+The operator approved the live organisation on 3 October 2026. `Rechercheherkunft` holds the research rounds, their systems and individual searches, supplementary dated searches and manual research. `Themen` provides an additional subject view. Existing collection keys and memberships are retained, and thematic membership is additive. Subject assignments transferred from a search collection describe that search context and do not establish a source-grounded content classification.
+
+Every literature item carries a child note named `Rechercheherkunft`. The note records each evidenced discovery separately, with system, search or collection identity, documented search date, publication window where established, original collection path or import source, evidence location and the native Zotero creation timestamp. Multiple sources may coexist. An exact historical key recorded in an import marker can reconnect an item to its former collection. A title-only inference cannot establish that link. `Herkunft nicht belegt` keeps the remaining unassigned origins visible without inventing an attribution.
+
+The search date, publication date and Zotero creation timestamp have separate meanings. Round-two ChatGPT, Claude, Gemini and Claude Code searches are documented for 17 July 2026 in `corpus/deep-research/round2/LAUFPROTOKOLL.md`. The Codex supplement dates come from their run manifest and protocol. Round-one dates remain incompletely established. The earlier October 2025 summary conflicts with Zotero creation timestamps from 31 July 2025 in the initial bibliographies, and creation timestamps alone do not prove search dates. Missing prompts or dates remain explicitly unknown.
+
+Standalone research-protocol notes document each supported run. `Sammlungsstruktur vor der Ordnung` records every original collection key and full path in Zotero itself. The former `New Deep Research` grouping container is reused for `Ergänzende Recherchen` after its original children move to the appropriate round-one systems. Their former grouping remains explicit in the structure note and per-item provenance.
+
+The private operation record is `generated/zotero-sync/2026-10-03-organization/`. It holds the before snapshot, source-hash-bound plan, recovered import evidence, attempted-write receipts, live after snapshot and verification result. Writes are conditional on library versions and stop on uncertainty. The read-back compares all pre-existing item fields except modification/version bookkeeping, checks additive collection membership and every new note including its parent and collection. Bibliographic fields, attachments, existing notes and screening records are preserved. This organisation is separate from the outstanding bibliographic review and from reconciliation of a new export into the pipeline.
 
 ## Stage 2: Acquisition and text conversion
 

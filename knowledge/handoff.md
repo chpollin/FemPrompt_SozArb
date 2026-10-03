@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-02
+updated: 2026-10-03
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Claude Code (Claude Opus 5.5)
 related: [INDEX, plan, journal, project, analysis-methods, governance, verification, testing, standards]
@@ -37,9 +37,11 @@ On 2 October 2026 the analysis-coding run under codebook 1.4.1 coded the include
 
 The rebuilt and self-tested reviewer path is merged into `main` and pushed. Reviewers start PRISM with `start-prism.cmd`, which needs Python alone and changes no tracked file, the local server writes their files without a folder step (ADR-047), formal exclusions need no Paper Beleg (ADR-048), the save action sits in the assessment panel, and the `Offen` list puts full texts first. The interface and rule decisions are provisional in [[plan#Decisions taken]], and the self-test is recorded in [[testing#Run of 2 October 2026]]. The Wissensnetz, Kategorien and Landkarte corrections of `ui-evidence-map` and the recode branch `recode-v13-works` are merged as well, and further work on `ui-evidence-map` continues in the worktree `FemPrompt_ui`.
 
+The Zotero organisation approved on 3 October 2026 has been applied and read back. Collection keys, existing records and attachments remain intact, and source-backed provenance notes accompany the literature items. Unknown origins remain explicit. The live snapshot has not been reconciled into the committed corpus or source mapping. The next separate curation step is the bibliographic review, followed by deliberate export reconciliation under [[methods#Zotero organisation and provenance]].
+
 ## Continuation point
 
-1. Accept or revise the provisional decisions of 2 October in [[plan#Decisions taken]], take decision 21 on the assigned papers without paper text and give the second reviewer write access to the repository. A fresh clone of `main` carries the reviewer start.
+1. Accept or revise the provisional decisions of 2 October in [[plan#Decisions taken]], give the second reviewer write access to the repository and retain the reminder that the colleague supplies missing full texts through Zotero under decision 21. A fresh clone of `main` carries the reviewer start.
 2. The two reviewers screen their assigned open papers in PRISM, started with `start-prism.cmd` in a local clone, following the README and `docs/help.html#prism`. A first guided session with each is the remaining usability check. Then the operator review on the phone.
 3. The domain experts take the spot checks in each run's `spot-check-sample.json` and decide the human and agent decision divergences the completion package lists.
 4. Decide the Version binding of `JFDBPUBN`, `BDI6XU5A` and `XIYX5HJS`, and resolve the Work duplicates ([[plan#Source and corpus readiness]]).
