@@ -1,0 +1,119 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "V4GTLMED",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1177%2F20539517231221780",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/ddd569a280ec086454af.json",
+      "origin_artifact_sha256": "sha256:bfc99092154663c4a9c21c7c79c4eb69ed5292fe9650201d75f19b54a74fc980",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              3
+            ]
+          ]
+        },
+        "DOI": "10.1177/20539517231221780",
+        "type": "journal-article",
+        "title": [
+          "Tech workers’ perspectives on ethical issues in AI development: Foregrounding feminist approaches"
+        ],
+        "volume": "11",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2492-2627",
+            "authenticated-orcid": false,
+            "given": "Jude",
+            "family": "Browne",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Centre for Gender Studies, University of Cambridge, Cambridge, UK"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-1696-4536",
+            "authenticated-orcid": false,
+            "given": "Eleanor",
+            "family": "Drage",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Leverhulme Centre for the Future of Intelligence, University of Cambridge, Cambridge, UK"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0053-4657",
+            "authenticated-orcid": false,
+            "given": "Kerry",
+            "family": "McInerney",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Leverhulme Centre for the Future of Intelligence, University of Cambridge, Cambridge, UK"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              8
+            ]
+          ]
+        },
+        "container-title": [
+          "Big Data &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              8
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/20539517231221780",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              8
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

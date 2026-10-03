@@ -1,0 +1,50 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "CF6T2RD7",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://jswve.org/volume-20/issue-2/item-05/",
+      "locator": "key=CF6T2RD7, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_firstpage": [
+            "52"
+          ],
+          "citation_volume": [
+            "20"
+          ],
+          "citation_issue": [
+            "2"
+          ],
+          "citation_lastpage": [
+            "71"
+          ],
+          "citation_publication_date": [
+            "2023"
+          ],
+          "citation_publisher": [
+            "IFSW"
+          ],
+          "citation_title": [
+            "Artificial Intelligence in Social Work: Emerging Ethical Issues"
+          ],
+          "citation_doi": [
+            "10.55521/10-020-205"
+          ],
+          "citation_journal_title": [
+            "International Journal of Social Work Values and Ethics"
+          ],
+          "citation_authors": [
+            "Reamer, Frederic G."
+          ],
+          "citation_pdf_url": [
+            "https://jswve.org/wp-content/uploads/2023/10/10-020-205-IJSWVE-2023.pdf"
+          ]
+        }
+      ]
+    }
+  ]
+}

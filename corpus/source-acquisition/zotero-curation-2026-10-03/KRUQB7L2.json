@@ -1,0 +1,156 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "KRUQB7L2",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1038%2Fs42256-024-00976-7",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/654e1919a63abcdefc62.json",
+      "origin_artifact_sha256": "sha256:cc1a7b8956dc2eb7a44f676653ea271bfcb90d870819254df2c7639127a9d084",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "2",
+        "DOI": "10.1038/s42256-024-00976-7",
+        "type": "journal-article",
+        "page": "221-231",
+        "title": [
+          "What large language models know and what people think they know"
+        ],
+        "volume": "7",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-1466-5647",
+            "authenticated-orcid": false,
+            "given": "Mark",
+            "family": "Steyvers",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Heliodoro",
+            "family": "Tejeda",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Aakriti",
+            "family": "Kumar",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Catarina",
+            "family": "Belem",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sheer",
+            "family": "Karny",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xinyue",
+            "family": "Hu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lukas W.",
+            "family": "Mayer",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Padhraic",
+            "family": "Smyth",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              21
+            ]
+          ]
+        },
+        "container-title": [
+          "Nature Machine Intelligence"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              21
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1038/s42256-024-00976-7",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              21
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

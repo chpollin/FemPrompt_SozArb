@@ -1,0 +1,85 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "SHJQQTI6",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.24963%2Fijcai.2023%2F742",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/67a073a3bba73886fd42.json",
+      "origin_artifact_sha256": "sha256:d9c63fecb8f4e029c5a7f61e3ca9c0ff2d73809ce36494f4d96de1d91d61fcfc",
+      "bibliographic_metadata": {
+        "publisher": "International Joint Conferences on Artificial Intelligence Organization",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              8
+            ]
+          ]
+        },
+        "DOI": "10.24963/ijcai.2023/742",
+        "type": "proceedings-article",
+        "page": "6619-6627",
+        "title": [
+          "A Survey on Intersectional Fairness in Machine Learning: Notions, Mitigation, and Challenges"
+        ],
+        "author": [
+          {
+            "given": "Usman",
+            "family": "Gohar",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Iowa State University"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lu",
+            "family": "Cheng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Illinois Chicago"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Proceedings of the Thirty-Second International Joint Conference on Artificial Intelligence"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              8
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.24963/ijcai.2023/742",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              8
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

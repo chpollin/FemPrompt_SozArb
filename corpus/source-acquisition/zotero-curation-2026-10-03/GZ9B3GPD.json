@@ -1,0 +1,82 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "GZ9B3GPD",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs12592-023-00472-6",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/a1a671b6009d8f5366c2.json",
+      "origin_artifact_sha256": "sha256:b3516230fc5b326adf17ffd78310bfa230fc7d0f25ba46bba846385e9a8b4d62",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "2",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              12
+            ]
+          ]
+        },
+        "DOI": "10.1007/s12592-023-00472-6",
+        "type": "journal-article",
+        "page": "497-512",
+        "title": [
+          "Rationalisierung durch Digitalisierung?",
+          "Rationalization through digitalization?"
+        ],
+        "volume": "15",
+        "author": [
+          {
+            "given": "Philipp",
+            "family": "Waag",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              14
+            ]
+          ]
+        },
+        "container-title": [
+          "Soziale Passagen"
+        ],
+        "subtitle": [
+          "Eine soziologische Perspektive auf den Einsatz digitaler Technologien in der Sozialen Arbeit",
+          "A sociological perspective on the use of digital technologies in social work"
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              14
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s12592-023-00472-6",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              14
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

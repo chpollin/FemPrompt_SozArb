@@ -1,0 +1,72 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "BKSU66QB",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2F978-3-658-42542-5_8",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/1ae07eb524609d07cf70.json",
+      "origin_artifact_sha256": "sha256:1d6d96c1fceec7b04d68c96331dc866774928cf364ae2705e066a2ea74f99d53",
+      "bibliographic_metadata": {
+        "publisher": "Springer Fachmedien Wiesbaden",
+        "published-print": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "DOI": "10.1007/978-3-658-42542-5_8",
+        "type": "book-chapter",
+        "page": "121-144",
+        "title": [
+          "Digitalität und Digitalisierung als Gegenstand der Sozialen Arbeit"
+        ],
+        "author": [
+          {
+            "given": "Nadia",
+            "family": "Kutscher",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              2
+            ]
+          ]
+        },
+        "container-title": [
+          "Medienbildung und Gesellschaft",
+          "Digitale Medien und die Produktion von Wissenschaft"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/978-3-658-42542-5_8",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

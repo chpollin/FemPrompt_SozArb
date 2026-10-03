@@ -1,0 +1,116 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "MT54YHER",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2F978-3-031-98417-4_5",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/65298291e21c053dc8d1.json",
+      "origin_artifact_sha256": "sha256:5e978bb40f463398001e9fbbe4368e49e17b27b2fa723c4b299a0b8bbec615e9",
+      "bibliographic_metadata": {
+        "publisher": "Springer Nature Switzerland",
+        "published-print": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "DOI": "10.1007/978-3-031-98417-4_5",
+        "type": "book-chapter",
+        "page": "60-74",
+        "title": [
+          "Thinking Like a Scientist: Can Interactive Simulations Foster Critical AI Literacy?"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-1374-4952",
+            "authenticated-orcid": false,
+            "given": "Yiling",
+            "family": "Zhao",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0304-4012",
+            "authenticated-orcid": false,
+            "given": "Audrey",
+            "family": "Michal",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7367-0916",
+            "authenticated-orcid": false,
+            "given": "Nithum",
+            "family": "Thain",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3450-0447",
+            "authenticated-orcid": false,
+            "given": "Hari",
+            "family": "Subramonyam",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              15
+            ]
+          ]
+        },
+        "container-title": [
+          "Lecture Notes in Computer Science",
+          "Artificial Intelligence in Education"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/978-3-031-98417-4_5",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

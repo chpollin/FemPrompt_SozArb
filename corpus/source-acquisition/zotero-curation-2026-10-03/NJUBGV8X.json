@@ -1,0 +1,113 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "NJUBGV8X",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1038%2Fs41467-025-68004-9",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/33c24d2e79bf4f6decb2.json",
+      "origin_artifact_sha256": "sha256:d719bf5d0542a3652c57619dbecef0b4296f752d579d7b0580da0d7672e66c11",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "DOI": "10.1038/s41467-025-68004-9",
+        "type": "journal-article",
+        "title": [
+          "Intersectional biases in narratives produced by open-ended prompting of generative language models"
+        ],
+        "volume": "17",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0005-3864-3161",
+            "authenticated-orcid": false,
+            "given": "Evan",
+            "family": "Shieh",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5721-6473",
+            "authenticated-orcid": false,
+            "given": "Faye-Marie",
+            "family": "Vassel",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8608-3203",
+            "authenticated-orcid": false,
+            "given": "Cassidy R.",
+            "family": "Sugimoto",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9212-5430",
+            "authenticated-orcid": false,
+            "given": "Thema",
+            "family": "Monroe-White",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              8
+            ]
+          ]
+        },
+        "container-title": [
+          "Nature Communications"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              8
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1038/s41467-025-68004-9",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              8
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

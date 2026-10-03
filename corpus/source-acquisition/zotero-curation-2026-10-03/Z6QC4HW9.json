@@ -1,0 +1,44 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "Z6QC4HW9",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/abs/2606.18649",
+      "locator": "key=Z6QC4HW9, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "Gender Bias in LLM Hiring Decisions: Evidence from a Japanese Context and Evaluation of Mitigation Strategies"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2606.18649"
+          ],
+          "citation_date": [
+            "2026/06/17"
+          ],
+          "citation_abstract": [
+            "Large language models (LLMs) are increasingly deployed in hiring workflows, yet most research on gender bias in LLM hiring decisions has focused on English-language, Western-format resumes. This study examines whether pro-female gender bias extends to a Japanese corporate context and evaluates two practical mitigation strategies. Using a counterfactual resume design with 60 Japanese rirekisho-format resumes, 12 name pairs selected on linguistically grounded gender-signal criteria, and five state-of-the-art LLMs (Claude Sonnet 4.6, GPT-4o, DeepSeek-V3, Gemini 2.5 Flash, Llama 3.3 70B), we conducted 43,200 API calls across baseline, prompt instruction, and privacy filter conditions. A crossed random-effects linear mixed model confirms a significant pro-female bias across all five models, replicating Western findings in a non-Western context. A prompt-level gender-neutrality instruction produces no meaningful reduction in bias. A name-reliance analysis formally identifies the candidate name as the primary gender channel: removing the name from the prompt reduces the female effect by nearly its full magnitude. An unexpected incompatibility between the privacy filter and GPT-4o's content safety filter, resulting in a 42% refusal rate, highlights a practical deployment challenge for name anonymization in LLM-assisted recruitment pipelines."
+          ],
+          "citation_online_date": [
+            "2026/06/17"
+          ],
+          "citation_author": [
+            "Hoffstedde, Serena A.",
+            "Hirota, Machiko",
+            "Kanna, Akshara Nadayanur Sathis",
+            "Kotani, Rihito",
+            "Kumar, Ujwal",
+            "Trovato, Gabriele",
+            "Tan, Phan Xuan"
+          ],
+          "citation_arxiv_id": [
+            "2606.18649"
+          ]
+        }
+      ]
+    }
+  ]
+}

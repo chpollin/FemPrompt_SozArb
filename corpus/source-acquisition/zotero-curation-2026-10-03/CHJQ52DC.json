@@ -1,0 +1,40 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "CHJQ52DC",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/html/2312.10833v4",
+      "locator": "key=CHJQ52DC, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "AI Gender Bias, Disparities, and Fairness: Does Training Data Matter?"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2312.10833"
+          ],
+          "citation_date": [
+            "2023/12/17"
+          ],
+          "citation_abstract": [
+            "This study delves into the pervasive issue of gender issues in artificial intelligence (AI), specifically within automatic scoring systems for student-written responses. The primary objective is to investigate the presence of gender biases, disparities, and fairness in generally targeted training samples with mixed-gender datasets in AI scoring outcomes. Utilizing a fine-tuned version of BERT and GPT-3.5, this research analyzes more than 1000 human-graded student responses from male and female participants across six assessment items. The study employs three distinct techniques for bias analysis: Scoring accuracy difference to evaluate bias, mean score gaps by gender (MSG) to evaluate disparity, and Equalized Odds (EO) to evaluate fairness. The results indicate that scoring accuracy for mixed-trained models shows an insignificant difference from either male- or female-trained models, suggesting no significant scoring bias. Consistently with both BERT and GPT-3.5, we found that mixed-trained models generated fewer MSG and non-disparate predictions compared to humans. In contrast, compared to humans, gender-specifically trained models yielded larger MSG, indicating that unbalanced training data may create algorithmic models to enlarge gender disparities. The EO analysis suggests that mixed-trained models generated more fairness outcomes compared with gender-specifically trained models. Collectively, the findings suggest that gender-unbalanced data do not necessarily generate scoring bias but can enlarge gender disparities and reduce scoring fairness."
+          ],
+          "citation_online_date": [
+            "2025/01/27"
+          ],
+          "citation_author": [
+            "Latif, Ehsan",
+            "Zhai, Xiaoming",
+            "Liu, Lei"
+          ],
+          "citation_arxiv_id": [
+            "2312.10833"
+          ]
+        }
+      ]
+    }
+  ]
+}

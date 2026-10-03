@@ -1,0 +1,86 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "PYN6HB3E",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1080%2F26408066.2025.2547219",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/d19c3b36a1a87cc6850c.json",
+      "origin_artifact_sha256": "sha256:1616066d501a983030edac45b2e44e70d44eadb165f374054841f67cfe3f94fe",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              2
+            ]
+          ]
+        },
+        "DOI": "10.1080/26408066.2025.2547219",
+        "type": "journal-article",
+        "page": "123-134",
+        "title": [
+          "Social Work in the Age of Artificial Intelligence: A rights-Based Framework for evidence-Based Practice Through Social Psychology, Group Dynamics, and Institutional Analysis"
+        ],
+        "volume": "23",
+        "author": [
+          {
+            "given": "Nafees",
+            "family": "Alam",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Nebraska",
+                "place": [
+                  "Kearney, USA"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              13
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Evidence-Based Social Work"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              13
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/26408066.2025.2547219",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              13
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

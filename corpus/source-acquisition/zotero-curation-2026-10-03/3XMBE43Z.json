@@ -1,0 +1,229 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "3XMBE43Z",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs44230-025-00109-2",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/275474f20477e023509d.json",
+      "origin_artifact_sha256": "sha256:d18e255dbf189a4304326def5dafe3890c3d49156a8c6f164a7d7a115106d7d3",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "3",
+        "DOI": "10.1007/s44230-025-00109-2",
+        "type": "journal-article",
+        "page": "385-417",
+        "title": [
+          "Algorithmic Governance: Gender Bias in AI-Generated Policymaking?"
+        ],
+        "volume": "5",
+        "author": [
+          {
+            "given": "Dialekti Athina",
+            "family": "Voutyrakou",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Constantine",
+            "family": "Skordoulis",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              1
+            ]
+          ]
+        },
+        "container-title": [
+          "Human-Centric Intelligent Systems"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s44230-025-00109-2",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://doi.org/10.1007/s44230-025-00109-2",
+      "locator": "key=3XMBE43Z, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_volume": [
+            "5"
+          ],
+          "citation_firstpage": [
+            "385"
+          ],
+          "citation_article_type": [
+            "Research Article"
+          ],
+          "citation_fulltext_html_url": [
+            "https://link.springer.com/article/10.1007/s44230-025-00109-2"
+          ],
+          "citation_fulltext_world_readable": [
+            ""
+          ],
+          "DOI": [
+            "10.1007/s44230-025-00109-2"
+          ],
+          "citation_author_institution": [
+            "National and Kapodistrian University of Athens, Athens, Greece",
+            "National and Kapodistrian University of Athens, Athens, Greece"
+          ],
+          "citation_doi": [
+            "10.1007/s44230-025-00109-2"
+          ],
+          "citation_issn": [
+            "2667-1336"
+          ],
+          "citation_issue": [
+            "3"
+          ],
+          "citation_publisher": [
+            "Springer Netherlands"
+          ],
+          "citation_journal_abbrev": [
+            "Hum-Cent Intell Syst"
+          ],
+          "citation_journal_title": [
+            "Human-Centric Intelligent Systems"
+          ],
+          "citation_author_email": [
+            "dianavout@primedu.uoa.gr"
+          ],
+          "citation_author": [
+            "Voutyrakou, Dialekti Athina",
+            "Skordoulis, Constantine"
+          ],
+          "citation_language": [
+            "en"
+          ],
+          "citation_pdf_url": [
+            "https://link.springer.com/content/pdf/10.1007/s44230-025-00109-2.pdf"
+          ],
+          "citation_publication_date": [
+            "2025/09"
+          ],
+          "citation_reference": [
+            "Dandotiya AS, Gupta SK, Dandotiya N, Sharma MP (2024). AI in everyday life: Transforming society. Navi International Book Publication house.",
+            "Lee RST. Artificial intelligence in daily life. Springer; 2020. \n                  https://doi.org/10.1007/978-981-15-7695-9\n                  \n                .",
+            "Bender EM, Gebru T, McMillan-Major A, Shmitchell S (2021). On the dangers of stochastic parrots: Can language models be too big? In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (pp. 610–623).",
+            "citation_journal_title=NPJ Digit Med; citation_title=Sex and gender differences and biases in artificial intelligence for biomedicine and healthcare; citation_author=D Cirillo, S Catuara-Solarz, C Morey, E Guney, L Subirats, S Mellino, A Gigante, A Valencia, MJ Rementeria, AS Chadha, N Mavridis; citation_volume=1; citation_issue=3; citation_publication_date=2020; citation_pages=81; citation_doi=10.1038/s41746-020-0288-5; citation_id=CR4",
+            "citation_journal_title=Int J Intell Inf Technol; citation_title=A comprehensive study on bias in artificial intelligence systems: biased or unbiased AI, That’s the Question!; citation_author=E Kartal; citation_volume=18; citation_publication_date=2022; citation_pages=1-23; citation_doi=10.4018/IJIIT.309582; citation_id=CR5",
+            "citation_journal_title=AI & Soc; citation_title=Exposing implicit biases and stereotypes in human and artificial intelligence: state of the art and challenges with a focus on gender; citation_author=L Marinucci, C Mazzuca, A Gangemi; citation_volume=38; citation_publication_date=2023; citation_pages=747-761; citation_doi=10.1007/s00146-022-01474-3; citation_id=CR6",
+            "citation_journal_title=Hum Mente J Philos Stud; citation_title=When AI is gender-biased; citation_author=GP Wellner; citation_volume=13; citation_publication_date=2020; citation_pages=127-150; citation_id=CR7",
+            "citation_journal_title=Sci; citation_title=Fairness and bias in artificial intelligence: a brief survey of sources, impacts, and mitigation strategies; citation_author=E Ferrara; citation_publication_date=2023; citation_doi=10.3390/sci6010003; citation_id=CR8",
+            "citation_journal_title=J Med Internet Res; citation_title=What’s in a Name? experimental evidence of gender bias in recommendation letters generated by ChatGPT; citation_author=DM Kaplan; citation_volume=26; citation_publication_date=2024; citation_pages=e51837; citation_doi=10.2196/51837; citation_id=CR9",
+            "citation_journal_title=AI & Soc; citation_title=Gender bias perpetuation and mitigation in AI technologies: challenges and opportunities; citation_author=S O’Connor, H Liu; citation_volume=39; citation_publication_date=2024; citation_pages=2045-2057; citation_doi=10.1007/s00146-023-01675-4; citation_id=CR10",
+            "Busker T, Choenni S, Shoae Bargh M. \"Stereotypes in ChatGPT: an empirical study.\" Proceedings of the 16th International Conference on Theory and Practice of Electronic Governance. 2023.",
+            "West SM, Whittaker M, Crawford K (2019) Discriminating Systems: Gender, Race and Power in AI. AI Now Institute.",
+            "Reuben B. Fairness in Machine Learning: Lessons from Political Philosophy. In Sorelle A. Friedler, Christo Wilson, editors, Conference on Fairness, Accountability and Transparency, FAT 2018, 23–24 February 2018, New York, NY, USA. Volume 81 of Proceedings of Machine Learning Research, pages 149–159, PMLR, 2018. ",
+            "citation_journal_title=Adv Appl Sociol; citation_title=Fairness in AI: when are AI tools gender-biased?; citation_author=D Voutyrakou, G Katsiampoura, C Skordoulis; citation_volume=15; citation_publication_date=2025; citation_pages=204-235; citation_doi=10.4236/aasoci.2025.153011; citation_id=CR14",
+            "citation_journal_title=Int J Inf Manag; citation_title=Is This AI Sexist? The effects of a biased AI’s anthropomorphic appearance and explainability on users’ bias perceptions and trust; citation_author=T Hou, Y Tseng, CW Yuan; citation_volume=76; citation_publication_date=2024; citation_pages=102775; citation_id=CR15",
+            "citation_journal_title=J Comput-Med Commun; citation_title=Smiling women pitching down: auditing representational and presentational gender biases in image-generative AI; citation_author=L Sun, M Wei, Y Sun, YJ Suh, L Shen, S Yang; citation_volume=29; citation_publication_date=2024; citation_pages=zmad045; citation_doi=10.1093/jcmc/zmad045; citation_id=CR16",
+            "citation_journal_title=ERA Forum; citation_title=Gender equality and artificial intelligence in Europe. addressing direct and indirect impacts of algorithms on gender-based discrimination; citation_author=F Lütz; citation_volume=23; citation_publication_date=2022; citation_pages=33-52; citation_doi=10.1007/s12027-022-00709-6; citation_id=CR17",
+            "citation_journal_title=J Digit Life Learn; citation_title=Deepfakes and harm to women; citation_author=J Laffier, A Rehman; citation_volume=3; citation_issue=1; citation_publication_date=2023; citation_pages=1-21; citation_doi=10.51357/jdll.v3i1.218; citation_id=CR18",
+            "citation_journal_title=Harv Data Sci Rev; citation_title=Is ChatGPT more biased than you?; citation_author=G Babaei, D Banks, C Bosone, P Giudici, Y Shan; citation_volume=6; citation_issue=3; citation_publication_date=2024; citation_pages=52; citation_id=CR19",
+            "Urchs S, Thurner V, Aßenmacher M, Heumann C, Thiemichen S \"How Prevalent is Gender Bias in ChatGPT?--Exploring German and English ChatGPT Responses.\" arXiv preprint \n                  arXiv:2310.03031\n                  \n                 (2023).",
+            "Fulgu RA, Capraro V. \"Surprising gender biases in GPT.\" arXiv preprint \n                  arXiv:2407.06003\n                  \n                 (2024).",
+            "Soundararajan S, Delany SJ, \"Investigating gender bias in large language models through text generation,\" in Proceedings of the 7th International Conference on Natural Language and Speech Processing (ICNLSP 2024), 2024, pp. 410–424.",
+            "Lorentzen B (2022). Social Biases in Language Models : Gender Stereotypes in GPT-3 Generated Stories (Dissertation).",
+            "Kotek H, Dockum R, Sun D, \"Gender bias and stereotypes in large language models,\" in Proceedings of the ACM Collective Intelligence Conference, 2023, pp. 12–24.",
+            "Ghosh S, Caliskan A (2023). Chatgpt perpetuates gender bias in machine translation and ignores non-gendered pronouns: Findings across bengali and five other low-resource languages. In Proceedings of the 2023 AAAI/ACM Conference on AI, Ethics, and Society (pp. 901–912).",
+            "Zhou KZ, Sanfilippo MR (2023). Public perceptions of gender bias in large language models: Cases of chatgpt and ernie. arXiv preprint \n                  arXiv:2309.09120\n                  \n                .",
+            "citation_journal_title=Edelweiss Appl Sci Technol; citation_title=Are AI tools biased storytellers? Examining gender-bias in AI-generated narratives; citation_author=DA Voutyrakou, G Katsiampoura, C Skordoulis; citation_volume=9; citation_issue=4; citation_publication_date=2025; citation_pages=1032-1049; citation_doi=10.55214/25768484.v9i4.6169; citation_id=CR27",
+            "Bano M, Gunatilake H, Hoda R (2025). What Does a Software Engineer Look Like? Exploring Societal Stereotypes in LLMs. arXiv preprint \n                  arXiv:2501.03569\n                  \n                .",
+            "citation_journal_title=Soc Sci; citation_title=Perpetuation of gender bias in visual representation of professions in the generative ai tools dall· e and bing image creator; citation_author=T Sandoval-Martin, E Martínez-Sanzo; citation_volume=13; citation_issue=5; citation_publication_date=2024; citation_pages=250; citation_doi=10.3390/socsci13050250; citation_id=CR29",
+            "citation_journal_title=Gend Technol Dev; citation_title=Mirroring the bias: gender and artificial intelligence; citation_author=A Manasi, S Panchanadeswaran, E Sours, SJ Lee; citation_volume=26; citation_publication_date=2022; citation_pages=295-305; citation_doi=10.1080/09718524.2022.2128254; citation_id=CR30",
+            "citation_journal_title=Online Inf Rev; citation_title=A systematic review of socio-technical gender bias in AI algorithms; citation_author=P Hall, D Ellis; citation_volume=47; citation_publication_date=2023; citation_pages=1264-1279; citation_doi=10.1108/OIR-08-2021-0452; citation_id=CR31",
+            "Berge J. J. C. Nunnally and I. H. Bernstein. Psychometric Theory. New York: McGraw-Hill, 1994, xxiv+752 pages, £51.95. Psychometrika 2025;60:313-315. \n                  https://doi.org/10.1007/BF02301419\n                  \n                .",
+            "citation_title=Multivariate data analysis; citation_publication_date=2010; citation_id=CR33; citation_author=JF Hair; citation_author=WC Black; citation_author=BJ Babin; citation_author=RE Anderson; citation_publisher=Pearson",
+            "citation_journal_title=Int J Med Educ; citation_title=Making sense of Cronbach's alpha; citation_author=M Tavakol, R Dennick; citation_volume=2; citation_publication_date=2011; citation_pages=53-55; citation_doi=10.5116/ijme.4dfb.8dfd; citation_id=CR34",
+            "citation_journal_title=U Miami L Rev; citation_title=The bring your own tampon policy: Why menstrual hygiene products should be provided for free in restrooms; citation_author=E Montano; citation_volume=73; citation_publication_date=2018; citation_pages=370; citation_id=CR35",
+            "citation_journal_title=UC Davis L Rev; citation_title=Menstrual justice; citation_author=ME Johnson; citation_volume=53; citation_publication_date=2019; citation_pages=1; citation_id=CR36",
+            "Perez CC. Invisible women: Data bias in a world designed for men. Abrams; 2019.",
+            "citation_journal_title=Nat Clim Chang; citation_title=Energy consumption in buildings and female thermal demand; citation_author=B Kingma, WD Marken Lichtenbelt; citation_volume=5; citation_issue=12; citation_publication_date=2015; citation_pages=1054-1056; citation_doi=10.1038/nclimate2741; citation_id=CR38",
+            "citation_title=The second shift: working parents and the revolution at home; citation_publication_date=1989; citation_id=CR39; citation_author=AR Hochschild; citation_publisher=Viking",
+            "citation_title=Gender in world perspective; citation_publication_date=2009; citation_id=CR40; citation_author=RW Connell; citation_publisher=Polity Press",
+            "citation_title=Feminist city; citation_publication_date=2021; citation_id=CR41; citation_author=L Kern; citation_publisher=Verso Books",
+            "citation_journal_title=Urban Geogr; citation_title=Feminist spatial praxis: toward an ethics of care in urban design; citation_author=L Kern; citation_volume=41; citation_issue=9; citation_publication_date=2020; citation_pages=1217-1237; citation_doi=10.1080/02723638.2020.1732847; citation_id=CR42",
+            "Bobel C, editor. The managed body: developing girls and menstrual health in the global south. Cham: Springer; 2019. \n                  https://doi.org/10.1007/978-3-319-89414-0_1\n                  \n                .",
+            "citation_journal_title=Sex Roles; citation_title=The menstrual mark: menstruation as social stigma; citation_author=I Johnston-Robledo, JC Chrisler; citation_volume=68; citation_issue=1; citation_publication_date=2020; citation_pages=9-18; citation_doi=10.1007/s11199-011-0052-z; citation_id=CR44",
+            "citation_title=Volatile bodies; citation_publication_date=1994; citation_id=CR45; citation_author=EA Grosz; citation_publisher=Indiana University Press",
+            "citation_journal_title=Gend Place Cult; citation_title='Bold Walk and Breakings': women's spatial confidence versus fear of violence; citation_author=H Koskela; citation_volume=4; citation_issue=3; citation_publication_date=1997; citation_pages=301-320; citation_doi=10.1080/09663699725369; citation_id=CR46",
+            "citation_title=Space, Place, and Gender; citation_publication_date=1994; citation_id=CR47; citation_author=D Massey; citation_publisher=University of Minnesota Press",
+            "Crenshaw K (1991). Mapping the margins: Intersectionality, identity politics, and violence against women of color. Stanford Law Review, 43(6), 1241–1299",
+            "citation_title=Artificial unintelligence: how computers misunderstand the world; citation_publication_date=2019; citation_id=CR49; citation_author=M Broussard; citation_publisher=MIT Press",
+            "citation_journal_title=Front Psychol; citation_title=A comparative study of gender differences in healthy office building strategies; citation_author=X Xie, R Wang, Z Gou, S Chen; citation_volume=14; citation_publication_date=2023; citation_pages=1146260; citation_doi=10.3389/fpsyg.2023.1146260; citation_id=CR50",
+            "citation_title=The second shift: Working families and the revolution at home; citation_publication_date=1989; citation_id=CR51; citation_author=A Hochschild; citation_author=A Machung; citation_publisher=Penguin Books",
+            "citation_journal_title=ACM Comput Surv (CSUR); citation_title=A survey on bias and fairness in machine learning; citation_author=N Mehrabi, F Morstatter, N Saxena, K Lerman, A Galstyan; citation_volume=54; citation_issue=6; citation_publication_date=2021; citation_pages=1-35; citation_doi=10.1145/3457607; citation_id=CR52",
+            "citation_title=Moral boundaries: a political argument for an ethic of care; citation_publication_date=1993; citation_id=CR53; citation_author=J Tronto; citation_publisher=Routledge",
+            "citation_title=Inclusion and democracy; citation_publication_date=2002; citation_id=CR54; citation_author=IM Young; citation_publisher=Oxford University Press",
+            "citation_title=Development as freedom; citation_publication_date=1999; citation_id=CR55; citation_author=A Sen; citation_publisher=Oxford University Press",
+            "citation_title=Creating capabilities: the human development approach; citation_publication_date=2011; citation_id=CR56; citation_author=MC Nussbaum; citation_publisher=Harvard University Press",
+            "citation_title=The ethics of care: Personal, political, and global; citation_publication_date=2005; citation_id=CR57; citation_author=V Held; citation_publisher=Oxford University Press",
+            "D'ignazio C, Klein LF. Data feminism. Cambridge, MA: MIT press; 2020.",
+            "citation_title=Design justice: community-led practices to build the worlds we need; citation_publication_date=2020; citation_id=CR59; citation_author=S Costanza-Chock; citation_publisher=The MIT Press",
+            "Raji I, Smart A, White R, Mitchell M, Gebru T, Hutchinson B, Smith-Loud J, Theron D, Barnes P. (2020). Closing the AI accountability gap: defining an end-to-end framework for internal algorithmic auditing. 33–44",
+            "Buolamwini J, Gebru T (2018) Gender shades: Intersectional accuracy disparities in commercial gender classification. Proceedings of the 1st Conference on Fairness, Accountability and Transparency, PMLR 81:77–91. \n                  https://proceedings.mlr.press/v81/buolamwini18a.html\n                  \n                ",
+            "Amershi S, Weld D, Vorvoreanu M, Fourney A, Nushi B, Collisson P, Suh J, Iqbal S, Bennett PN, Inkpen K, Teevan J, Kikin-Gil R, Horvitz E. 2019. Guidelines for Human-AI Interaction. In Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems (CHI '19). Association for Computing Machinery, New York, NY, USA, Paper 3, 1–13",
+            "Doshi-Velez F, Kim B (2017) Towards a rigorous science of interpretable machine learning. arXiv preprint \n                  arXiv:1702.08608\n                  \n                . \n                  https://doi.org/10.48550/arXiv.1702.08608\n                  \n                ",
+            "citation_journal_title=Nat Mach Intell; citation_title=From local explanations to global understanding with explainable AI for trees; citation_author=SM Lundberg, G Erion, H Chen, A DeGrave, JM Prutkin, B Nair, R Katz, J Himmelfarb, N Bansal, SI Lee; citation_volume=2; citation_issue=1; citation_publication_date=2020; citation_pages=56-67; citation_doi=10.1038/s42256-019-0138-9; citation_id=CR64"
+          ],
+          "citation_springer_api_url": [
+            "http://api.springer.com/xmldata/jats?q=doi:10.1007/s44230-025-00109-2&api_key="
+          ],
+          "citation_lastpage": [
+            "417"
+          ],
+          "citation_online_date": [
+            "2025/08/01"
+          ],
+          "citation_title": [
+            "Algorithmic Governance: Gender Bias in AI-Generated Policymaking?"
+          ],
+          "citation_cover_date": [
+            "2025/09/01"
+          ]
+        }
+      ]
+    }
+  ]
+}

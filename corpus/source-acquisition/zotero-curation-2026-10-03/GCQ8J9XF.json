@@ -1,0 +1,103 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "GCQ8J9XF",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs10676-024-09778-2",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/670e45d46b5c89780498.json",
+      "origin_artifact_sha256": "sha256:51116af6cbbb8914b6bf860cfe83d19b5bbc1ce65613baf054b3957c4342ad95",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              9
+            ]
+          ]
+        },
+        "DOI": "10.1007/s10676-024-09778-2",
+        "type": "journal-article",
+        "title": [
+          "Beyond transparency and explainability: on the need for adequate and contextualized user guidelines for LLM use"
+        ],
+        "volume": "26",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-7277-7351",
+            "authenticated-orcid": false,
+            "given": "Kristian González",
+            "family": "Barman",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nathan",
+            "family": "Wood",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Pawel",
+            "family": "Pawlowski",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              17
+            ]
+          ]
+        },
+        "container-title": [
+          "Ethics and Information Technology"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              17
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s10676-024-09778-2",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              17
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

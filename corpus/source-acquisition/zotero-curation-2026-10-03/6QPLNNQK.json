@@ -1,0 +1,31 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "6QPLNNQK",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes",
+      "locator": "line 20",
+      "origin_path": "generated/markdown_clean/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+      "origin_artifact_sha256": "sha256:c5adaa629c69ae639e8922126cb80312abd16d9c58b274777a0a1c5d7043d1c6",
+      "bibliographic_metadata": {
+        "existing_source_path": "generated/markdown_clean/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+        "existing_sha256": "sha256:c5adaa629c69ae639e8922126cb80312abd16d9c58b274777a0a1c5d7043d1c6",
+        "locator": "line 20",
+        "quote": "Cite as: UNESCO, IRCAI (2024). ' Challenging systematic prejudices: an Investigation into Gender Bias in Large Language Models '."
+      }
+    },
+    {
+      "source_url": "https://www.unesco.org/en/articles/generative-ai-unesco-study-reveals-alarming-evidence-regressive-gender-stereotypes",
+      "locator": "line 20",
+      "origin_path": "generated/markdown_clean/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+      "origin_artifact_sha256": "sha256:c5adaa629c69ae639e8922126cb80312abd16d9c58b274777a0a1c5d7043d1c6",
+      "bibliographic_metadata": {
+        "existing_source_path": "generated/markdown_clean/UNESCO_2024_Bias_against_women_and_girls_in_large_language.md",
+        "existing_sha256": "sha256:c5adaa629c69ae639e8922126cb80312abd16d9c58b274777a0a1c5d7043d1c6",
+        "locator": "line 20",
+        "quote": "Cite as: UNESCO, IRCAI (2024)."
+      }
+    }
+  ]
+}

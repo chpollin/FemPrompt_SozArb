@@ -30,6 +30,7 @@ from typing import Any
 
 from src.analysis.metadata_corrections import (
     apply_metadata_corrections,
+    bibliographic_container,
     corrected_csv_metadata,
 )
 from src.analysis.work_versions import load_registry, lookup_by_record
@@ -330,7 +331,7 @@ def corpus_metadata() -> dict[str, dict[str, Any]]:
                 "URL": item.get("url", ""),
                 "Abstract": item.get("abstractNote", ""),
                 "Item_Type": item.get("itemType", ""),
-                "Journal": item.get("publicationTitle", ""),
+                "Journal": bibliographic_container(item),
             },
         )
     metadata = corrected_csv_metadata(REPO_ROOT, metadata)

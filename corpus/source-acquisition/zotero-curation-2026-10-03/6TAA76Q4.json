@@ -1,0 +1,44 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "6TAA76Q4",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://www.nber.org/papers/w34255",
+      "locator": "key=6TAA76Q4, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_technical_report_number": [
+            "w34255"
+          ],
+          "citation_publication_date": [
+            "2025/09/15"
+          ],
+          "citation_author": [
+            "Aaron Chatterji",
+            "Thomas Cunningham",
+            "David J. Deming",
+            "Zoe Hitzig",
+            "Christopher Ong",
+            "Carl Yan Shan",
+            "Kevin Wadman"
+          ],
+          "citation_title": [
+            "How People Use ChatGPT"
+          ],
+          "citation_technical_report_institution": [
+            "National Bureau of Economic Research"
+          ],
+          "citation_doi": [
+            "10.3386/w34255"
+          ],
+          "citation_pdf_url": [
+            "https://www.nber.org/system/files/working_papers/w34255/w34255.pdf"
+          ]
+        }
+      ]
+    }
+  ]
+}

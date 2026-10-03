@@ -1,0 +1,81 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "JKF6VAQB",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1057%2Fs41599-025-05116-z",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/fa8d8a2230d73a846d39.json",
+      "origin_artifact_sha256": "sha256:c41f29aa60fbb098dad89eb42d48e9f89eecad82cfcbb66397619ae835c279e9",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "DOI": "10.1057/s41599-025-05116-z",
+        "type": "journal-article",
+        "title": [
+          "AI algorithm transparency, pipelines for trust not prisms: mitigating general negative attitudes and enhancing trust toward AI"
+        ],
+        "volume": "12",
+        "author": [
+          {
+            "given": "Keonyoung",
+            "family": "Park",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ho Young",
+            "family": "Yoon",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              23
+            ]
+          ]
+        },
+        "container-title": [
+          "Humanities and Social Sciences Communications"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              23
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1057/s41599-025-05116-z",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              23
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "7D3ICY7Z",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1177%2F14407833241260890",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/3ea6337db70ffc7f1616.json",
+      "origin_artifact_sha256": "sha256:654c7d943e8dd2fb8a73a2e835434e6f36e60a2c4e2f5f4d8c44f626339ce4a5",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              9
+            ]
+          ]
+        },
+        "DOI": "10.1177/14407833241260890",
+        "type": "journal-article",
+        "page": "507-522",
+        "title": [
+          "Introduction to the digital welfare state: Contestations, considerations and entanglements"
+        ],
+        "volume": "60",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-6660-8479",
+            "authenticated-orcid": false,
+            "given": "Georgia",
+            "family": "van Toorn",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of New South Wales, Australia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Paul",
+            "family": "Henman",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Queensland, Australia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Karen",
+            "family": "Soldatić",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "CERC – Health Equity and Community Wellbeing, Canada; \rToronto Metropolitan University, Canada"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              26
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Sociology"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              26
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/14407833241260890",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              26
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

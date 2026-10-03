@@ -104,6 +104,8 @@ On 3 October 2026 the operator authorised the proposed provenance and thematic c
 
 The operator-selected credential also permits read access to other groups. This operation addresses only `FemPrompt_SozArb` and does not read other libraries. The existing creation-only importer and read-only reconciler retain their stricter credential contracts. [[methods#Zotero organisation and provenance]] owns the live structure, evidence and read-back checks.
 
+The operator subsequently authorised source-reviewed metadata correction, duplicate and publication-version checking, provenance recovery, thematic additions and reconciliation with the research data, using subagents. This extends the earlier organisation-only scope. It permits conditional corrections with retained old values and evidence, together with reciprocal relations. It does not authorise destructive deduplication, historical annotation changes, implicit Work/Version migration or publication. Unresolved identities carry an explicit audit note and the Zotero tag `Prüfung: Quellenidentität offen`.
+
 ## Targeted reconciliation and data maintenance
 
 The indexed AI-review ledger uses hash-pinned immutable batches. It resolves the complete positive and negative review history before applying the latest-outcome rule. A changed, missing, nested or duplicated batch fails validation; an unlisted new file cannot grant publication.

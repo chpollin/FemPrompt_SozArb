@@ -1,0 +1,106 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "THVKEETD",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1086%2F735187",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/8b59e9bd7cec60522ebd.json",
+      "origin_artifact_sha256": "sha256:b69ed3a339b5c5014211d0c0749de2062a299c6086c533d3bc44e7c0177c68a2",
+      "bibliographic_metadata": {
+        "publisher": "University of Chicago Press",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1086/735187",
+        "type": "journal-article",
+        "page": "9-26",
+        "title": [
+          "Artificial Intelligence (AI) Literacy for Social Work: Implications for Core Competencies"
+        ],
+        "volume": "16",
+        "author": [
+          {
+            "given": "Eunhye",
+            "family": "Ahn",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Moon",
+            "family": "Choi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Patrick",
+            "family": "Fowler",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "In Han",
+            "family": "Song",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Journal of the Society for Social Work and Research"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1086/735187",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              1
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

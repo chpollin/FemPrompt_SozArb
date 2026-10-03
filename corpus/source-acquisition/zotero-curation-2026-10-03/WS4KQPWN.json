@@ -1,0 +1,94 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "WS4KQPWN",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://doi.org/api/handles/10.17645/si.v12i1.7543",
+      "locator": "responseCode 100 (handle not found)",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/WS4KQPWN-doiorg-v12i1.json",
+      "origin_artifact_sha256": "sha256:3ad1c924cacf485b97162ed0f32c5dc479bab1eb3833fb50ca925c997d19a1aa",
+      "bibliographic_metadata": {
+        "existing_source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/WS4KQPWN-doiorg-v12i1.json",
+        "locator": "responseCode 100 (handle not found)",
+        "note": "No unique automated extraction; retain original public evidence reference for manual integration review."
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.17645/si.7543",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/WS4KQPWN-crossref.json",
+      "origin_artifact_sha256": "sha256:3f9643058c7a490e6ad8db2ca4b9b313cf5cc420ebd62a5c98ddfb687e72eb98",
+      "bibliographic_metadata": {
+        "publisher": "Cogitatio",
+        "DOI": "10.17645/si.7543",
+        "type": "journal-article",
+        "title": [
+          "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action"
+        ],
+        "volume": "12",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2051-1265",
+            "authenticated-orcid": false,
+            "given": "Inga",
+            "family": "Ulnicane",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              18
+            ]
+          ]
+        },
+        "container-title": [
+          "Social Inclusion"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              18
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.17645/si.7543",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              18
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://www.cogitatiopress.com/socialinclusion/article/view/7543",
+      "locator": "Article title/byline/publication date/DOI lines 54-70",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/metadata-primary-web-evidence.json",
+      "origin_artifact_sha256": "sha256:67524e7bc00cd9189f52fcc206ae15c9c3da53d686ca4c5ba3799267f4a5bdbe",
+      "bibliographic_metadata": [
+        {
+          "source_url": "https://www.cogitatiopress.com/socialinclusion/article/view/7543",
+          "finding": "Correct DOI 10.17645/si.7543, author Inga Ulnicane, 18 April 2024.",
+          "locator": "Article title/byline/publication date/DOI lines 54-70"
+        }
+      ]
+    }
+  ]
+}

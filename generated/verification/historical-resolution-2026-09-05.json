@@ -2220,6 +2220,29 @@
       "withhold_from_current_synthesis": true,
       "workflow_action": "withhold_from_current_synthesis",
       "related_existing_hold_work_id": "work:8e01ec71-65ff-5273-b5b9-a582fec48008"
+    },
+    "work:5b80164e-81e9-5fdc-8569-06ef0abdf431": {
+      "agent_id": "/root/metadata_review",
+      "model": "GPT-6",
+      "reviewed_at": "2026-10-03T07:32:12.011142+00:00",
+      "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+      "record_ids": [
+        "LT3D3ZQ2"
+      ],
+      "outcome": "pending",
+      "resolution_kind": "source_version_mismatch",
+      "withhold_from_current_synthesis": true,
+      "human_annotations_unchanged": true,
+      "reason": "LT3D3ZQ2 selects arXiv 2311.14700, but the currently bound text prints the ACM AIES 2022 conference DOI 10.1145/3514094.3534197. Its source Version is not established as the selected arXiv expression. Withhold current synthesis until source-version reconciliation; no historical decisions or Work/Version IDs are changed.",
+      "evidence": [
+        {
+          "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
+          "sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
+          "source_url": "https://doi.org/10.1145/3514094.3534197",
+          "locator": "ACM Reference format in opening masthead",
+          "quote": "Anastasia Siapka. 2022. Towards  a  Feminist Metaethics of AI. In Proceedings of the 2022 AAAI/ACM Conference on AI, Ethics, and Society (AIES'22), August 1-3, 2022, Oxford, United Kingdom. ACM, New York, NY, USA, 10 pages. hps://doi.org/10.1145/3514094.3534197"
+        }
+      ]
     }
   },
   "counts": {
@@ -2244,6 +2267,11 @@
       "observed_at": "2026-09-21T18:42:39.727669+00:00",
       "work_id": "work:f911df3d-1d6b-55f2-bc39-f06d4d4af206",
       "reason": "Extend the confirmed withdrawal restriction to separately registered live-library records while preserving the original dated audit scope."
+    },
+    {
+      "observed_at": "2026-10-03T07:37:14.285790+00:00",
+      "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
+      "reason": "Add evidence-bound selected-source-version hold after bibliographic curation; historical decisions remain unchanged."
     }
   ]
 }

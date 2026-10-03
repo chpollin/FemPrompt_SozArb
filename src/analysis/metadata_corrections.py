@@ -14,7 +14,31 @@ from pathlib import Path
 from src.assess.artifact_verification import artifact_hash, record_hash
 
 CORRECTIONS_PATH = "corpus/metadata_corrections.json"
-ALLOWED_FIELDS = {"title", "creators", "date", "DOI", "url", "itemType", "publicationTitle", "publisher", "repository", "abstractNote"}
+ALLOWED_FIELDS = {
+    "title", "creators", "date", "DOI", "url", "itemType", "publicationTitle",
+    "publisher", "repository", "abstractNote", "volume", "issue", "pages",
+    "proceedingsTitle", "institution", "university",
+}
+
+
+def bibliographic_container(item: dict) -> str:
+    """Project Zotero's type-specific container fields without rewriting them."""
+    preferred = {
+        "journalArticle": "publicationTitle",
+        "conferencePaper": "proceedingsTitle",
+        "preprint": "repository",
+        "report": "institution",
+        "thesis": "university",
+        "book": "publisher",
+    }.get(item.get("itemType"), "publicationTitle")
+    return next(
+        (item[field] for field in (
+            preferred, "publicationTitle", "proceedingsTitle", "repository",
+            "institution", "university", "publisher",
+        ) if item.get(field)),
+        "",
+    )
+
 
 
 def apply_metadata_corrections(repo: Path, items: list[dict]) -> list[dict]:
@@ -85,6 +109,16 @@ def corrected_csv_metadata(repo: Path, metadata: dict[str, dict]) -> dict[str, d
                 value = item.get(field) or ""
                 row[columns[field]] = str(value)[:4] if field == "date" else value
             elif field == "creators":
-                row["Authors"] = "; ".join(" ".join(filter(None, (c.get("firstName"), c.get("lastName") or c.get("name")))) for c in item[field] if c.get("creatorType") == "author")
+                row["Authors"] = "; ".join(
+                    c.get("name") or ", ".join(
+                        filter(None, (c.get("lastName"), c.get("firstName")))
+                    )
+                    for c in item[field] if c.get("creatorType") == "author"
+                )
+        if any(change["field"] in {
+            "itemType", "publicationTitle", "proceedingsTitle", "repository",
+            "institution", "university", "publisher",
+        } for change in item["_metadata_correction"]["changes"]):
+            row["Journal"] = bibliographic_container(item)
         row["_metadata_correction"] = item["_metadata_correction"]
     return result

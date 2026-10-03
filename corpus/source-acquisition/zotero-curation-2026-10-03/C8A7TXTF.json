@@ -1,0 +1,191 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "C8A7TXTF",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1145%2F3593013.3594094",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/b450ada78f994d59de4c.json",
+      "origin_artifact_sha256": "sha256:e4aa8d29bd6c9bc7e6affc9f8eefd705b37295601468ad762fdc048cbf89160f",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              12
+            ]
+          ]
+        },
+        "DOI": "10.1145/3593013.3594094",
+        "type": "proceedings-article",
+        "page": "1479-1492",
+        "title": [
+          "Examining risks of racial biases in NLP tools for child protective services"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-6955-746X",
+            "authenticated-orcid": false,
+            "given": "Anjalie",
+            "family": "Field",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Computer Science Department, Johns Hopkins University, USA and Language Technologies Institute, Carnegie Mellon University, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9282-9921",
+            "authenticated-orcid": false,
+            "given": "Amanda",
+            "family": "Coston",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Heinz College of Information Systems and Public Policy and Machine Learning Department, Carnegie Mellon University, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0008-2491-4938",
+            "authenticated-orcid": false,
+            "given": "Nupoor",
+            "family": "Gandhi",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Heinz College of Information Systems and Public Policy and Machine Learning Department, Carnegie Mellon University, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2337-9610",
+            "authenticated-orcid": false,
+            "given": "Alexandra",
+            "family": "Chouldechova",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Microsoft Research NYC, USA and Heinz College of Information Systems and Public Policy, Carnegie Mellon University, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-1581-6582",
+            "authenticated-orcid": false,
+            "given": "Emily",
+            "family": "Putnam-Hornstein",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Social Work, University of North Carolina at Chapel Hill, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-4184-6209",
+            "authenticated-orcid": false,
+            "given": "David",
+            "family": "Steier",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Heinz College of Information Systems and Public Policy, Carnegie Mellon University, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-4634-7128",
+            "authenticated-orcid": false,
+            "given": "Yulia",
+            "family": "Tsvetkov",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Paul G. Allen School of Computer Science &amp; Engineering, University of Washington, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              12
+            ]
+          ]
+        },
+        "container-title": [
+          "2023 ACM Conference on Fairness, Accountability, and Transparency"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              12
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3593013.3594094",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              12
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

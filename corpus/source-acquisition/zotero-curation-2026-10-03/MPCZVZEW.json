@@ -1,0 +1,349 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "MPCZVZEW",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2504.16148",
+      "locator": "data.attributes.creators",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/MPCZVZEW-datacite.json",
+      "origin_artifact_sha256": "sha256:998d24c367d1e826828f27f8bbdb2aaf2f3aef07072aad2232c6ca052a530df3",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2504.16148",
+        "creators": [
+          {
+            "name": "Hooshyar, Danial",
+            "nameType": "Personal",
+            "givenName": "Danial",
+            "familyName": "Hooshyar",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Šír, Gustav",
+            "nameType": "Personal",
+            "givenName": "Gustav",
+            "familyName": "Šír",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Yang, Yeongwook",
+            "nameType": "Personal",
+            "givenName": "Yeongwook",
+            "familyName": "Yang",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Kikas, Eve",
+            "nameType": "Personal",
+            "givenName": "Eve",
+            "familyName": "Kikas",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Hämäläinen, Raija",
+            "nameType": "Personal",
+            "givenName": "Raija",
+            "familyName": "Hämäläinen",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Kärkkäinen, Tommi",
+            "nameType": "Personal",
+            "givenName": "Tommi",
+            "familyName": "Kärkkäinen",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Gašević, Dragan",
+            "nameType": "Personal",
+            "givenName": "Dragan",
+            "familyName": "Gašević",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Azevedo, Roger",
+            "nameType": "Personal",
+            "givenName": "Roger",
+            "familyName": "Azevedo",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-04-22T13:20:43Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-12-03T01:54:25Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-04",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "1",
+        "url": "https://arxiv.org/abs/2504.16148",
+        "published": "2025"
+      }
+    },
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2504.16148",
+      "locator": "data.attributes.doi",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/MPCZVZEW-datacite.json",
+      "origin_artifact_sha256": "sha256:998d24c367d1e826828f27f8bbdb2aaf2f3aef07072aad2232c6ca052a530df3",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2504.16148",
+        "creators": [
+          {
+            "name": "Hooshyar, Danial",
+            "nameType": "Personal",
+            "givenName": "Danial",
+            "familyName": "Hooshyar",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Šír, Gustav",
+            "nameType": "Personal",
+            "givenName": "Gustav",
+            "familyName": "Šír",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Yang, Yeongwook",
+            "nameType": "Personal",
+            "givenName": "Yeongwook",
+            "familyName": "Yang",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Kikas, Eve",
+            "nameType": "Personal",
+            "givenName": "Eve",
+            "familyName": "Kikas",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Hämäläinen, Raija",
+            "nameType": "Personal",
+            "givenName": "Raija",
+            "familyName": "Hämäläinen",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Kärkkäinen, Tommi",
+            "nameType": "Personal",
+            "givenName": "Tommi",
+            "familyName": "Kärkkäinen",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Gašević, Dragan",
+            "nameType": "Personal",
+            "givenName": "Dragan",
+            "familyName": "Gašević",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Azevedo, Roger",
+            "nameType": "Personal",
+            "givenName": "Roger",
+            "familyName": "Azevedo",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-04-22T13:20:43Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-12-03T01:54:25Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-04",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "1",
+        "url": "https://arxiv.org/abs/2504.16148",
+        "published": "2025"
+      }
+    },
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2504.16148",
+      "locator": "data.attributes.publisher",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/MPCZVZEW-datacite.json",
+      "origin_artifact_sha256": "sha256:998d24c367d1e826828f27f8bbdb2aaf2f3aef07072aad2232c6ca052a530df3",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2504.16148",
+        "creators": [
+          {
+            "name": "Hooshyar, Danial",
+            "nameType": "Personal",
+            "givenName": "Danial",
+            "familyName": "Hooshyar",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Šír, Gustav",
+            "nameType": "Personal",
+            "givenName": "Gustav",
+            "familyName": "Šír",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Yang, Yeongwook",
+            "nameType": "Personal",
+            "givenName": "Yeongwook",
+            "familyName": "Yang",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Kikas, Eve",
+            "nameType": "Personal",
+            "givenName": "Eve",
+            "familyName": "Kikas",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Hämäläinen, Raija",
+            "nameType": "Personal",
+            "givenName": "Raija",
+            "familyName": "Hämäläinen",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Kärkkäinen, Tommi",
+            "nameType": "Personal",
+            "givenName": "Tommi",
+            "familyName": "Kärkkäinen",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Gašević, Dragan",
+            "nameType": "Personal",
+            "givenName": "Dragan",
+            "familyName": "Gašević",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Azevedo, Roger",
+            "nameType": "Personal",
+            "givenName": "Roger",
+            "familyName": "Azevedo",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "Towards responsible AI for education: Hybrid human-AI to confront the Elephant in the room"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-04-22T13:20:43Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-12-03T01:54:25Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-04",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "1",
+        "url": "https://arxiv.org/abs/2504.16148",
+        "published": "2025"
+      }
+    }
+  ]
+}

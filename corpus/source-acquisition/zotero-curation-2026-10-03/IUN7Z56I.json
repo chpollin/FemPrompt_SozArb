@@ -1,0 +1,70 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "IUN7Z56I",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.55521%2F10-020-205",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/17907c034868321b807b.json",
+      "origin_artifact_sha256": "sha256:d63cbd56f9c42924a219ea1ccb2b7885d22ded715e72607fe5aabca31aeb5581",
+      "bibliographic_metadata": {
+        "publisher": "International Federation of Social Workers",
+        "issue": "2",
+        "DOI": "10.55521/10-020-205",
+        "type": "journal-article",
+        "page": "52-71",
+        "title": [
+          "Artificial Intelligence in Social Work: Emerging Ethical Issues"
+        ],
+        "volume": "20",
+        "author": [
+          {
+            "given": "Frederic G.",
+            "family": "Reamer",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              30
+            ]
+          ]
+        },
+        "container-title": [
+          "International Journal of Social Work Values and Ethics"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              30
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.55521/10-020-205",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              30
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "K2KL8WH8",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/abs/2410.17433",
+      "locator": "key=K2KL8WH8, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "Revisiting Technical Bias Mitigation Strategies"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2410.17433"
+          ],
+          "citation_date": [
+            "2024/10/22"
+          ],
+          "citation_abstract": [
+            "Efforts to mitigate bias and enhance fairness in the artificial intelligence (AI) community have predominantly focused on technical solutions. While numerous reviews have addressed bias in AI, this review uniquely focuses on the practical limitations of technical solutions in healthcare settings, providing a structured analysis across five key dimensions affecting their real-world implementation: who defines bias and fairness; which mitigation strategy to use and prioritize among dozens that are inconsistent and incompatible; when in the AI development stages the solutions are most effective; for which populations; and the context in which the solutions are designed. We illustrate each limitation with empirical studies focusing on healthcare and biomedical applications. Moreover, we discuss how value-sensitive AI, a framework derived from technology design, can engage stakeholders and ensure that their values are embodied in bias and fairness mitigation solutions. Finally, we discuss areas that require further investigation and provide practical recommendations to address the limitations covered in the study."
+          ],
+          "citation_online_date": [
+            "2024/10/22"
+          ],
+          "citation_author": [
+            "Mahamadou, Abdoul Jalil Djiberou",
+            "Trotsyuk, Artem A."
+          ],
+          "citation_arxiv_id": [
+            "2410.17433"
+          ]
+        }
+      ]
+    }
+  ]
+}

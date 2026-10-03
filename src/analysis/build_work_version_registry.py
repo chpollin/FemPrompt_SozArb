@@ -30,6 +30,7 @@ from typing import Any
 from src.analysis.metadata_corrections import (
     CORRECTIONS_PATH,
     apply_metadata_corrections,
+    bibliographic_container,
 )
 from src.analysis.work_versions import (
     ADDED_SOURCE_VERSION_TYPES,
@@ -365,12 +366,7 @@ def _version_from_zotero(item: dict[str, Any]) -> dict[str, Any]:
             "version_type": _infer_version_type(item.get("itemType"), identifiers),
             "version_date": str(item.get("date") or "").strip(),
             "item_type": str(item.get("itemType") or "").strip(),
-            "journal_or_repository": str(
-                item.get("publicationTitle")
-                or item.get("repository")
-                or item.get("publisher")
-                or ""
-            ).strip(),
+            "journal_or_repository": bibliographic_container(item).strip(),
             "identifiers": identifiers,
             "landing_url": _normalise_url(item.get("url")),
             "provenance": [

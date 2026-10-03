@@ -1,0 +1,12 @@
+{
+  "status": "verified",
+  "verified_at": "2026-10-03T07:32:32.070819+00:00",
+  "version": "3141",
+  "all_existing_items_preserved": true,
+  "notes_read_back": true,
+  "errors": [],
+  "plan_sha256": "sha256:e4013509b62ff254e333437923b383ee503cf9a0635353e42ea5f1be57b87e93",
+  "before_sha256": "52c0291f3cb1537539a898c926617ff466ceb2fbe4a4feec40e2c33b97726ceb",
+  "after_sha256": "sha256:4c56ec512a03ec4257ad41fae71b5f3384776cfd4e91a9ac0d55cb16e3b4e336",
+  "scope": "Verified all pre-existing items, planned metadata, memberships, reciprocal links and new audit notes. No claim of complete bibliographic or scholarly verification."
+}

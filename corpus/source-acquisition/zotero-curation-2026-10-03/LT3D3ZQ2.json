@@ -1,0 +1,41 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "LT3D3ZQ2",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/abs/2311.14700",
+      "locator": "key=LT3D3ZQ2, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_doi": [
+            "10.1145/3514094.3534197"
+          ],
+          "citation_title": [
+            "Towards a Feminist Metaethics of AI"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2311.14700"
+          ],
+          "citation_date": [
+            "2023/11/10"
+          ],
+          "citation_abstract": [
+            "The proliferation of Artificial Intelligence (AI) has sparked an overwhelming number of AI ethics guidelines, boards and codes of conduct. These outputs primarily analyse competing theories, principles and values for AI development and deployment. However, as a series of recent problematic incidents about AI ethics/ethicists demonstrate, this orientation is insufficient. Before proceeding to evaluate other professions, AI ethicists should critically evaluate their own; yet, such an evaluation should be more explicitly and systematically undertaken in the literature. I argue that these insufficiencies could be mitigated by developing a research agenda for a feminist metaethics of AI. Contrary to traditional metaethics, which reflects on the nature of morality and moral judgements in a non-normative way, feminist metaethics expands its scope to ask not only what ethics is but also what our engagement with it should be like. Applying this perspective to the context of AI, I suggest that a feminist metaethics of AI would examine: (i) the continuity between theory and action in AI ethics; (ii) the real-life effects of AI ethics; (iii) the role and profile of those involved in AI ethics; and (iv) the effects of AI on power relations through methods that pay attention to context, emotions and narrative."
+          ],
+          "citation_online_date": [
+            "2023/11/10"
+          ],
+          "citation_author": [
+            "Siapka, Anastasia"
+          ],
+          "citation_arxiv_id": [
+            "2311.14700"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "99QJDBSV",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2507.00088",
+      "locator": "data.attributes.titles[0].title",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/99QJDBSV-datacite.json",
+      "origin_artifact_sha256": "sha256:69cf1343f59f4f8d8cd1ddd2f92ec2eb3faa5d943926d62a90ef241536c9cdf7",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2507.00088",
+        "creators": [
+          {
+            "name": "Pires, Alexandre S.",
+            "nameType": "Personal",
+            "givenName": "Alexandre S.",
+            "familyName": "Pires",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Samson, Laurens",
+            "nameType": "Personal",
+            "givenName": "Laurens",
+            "familyName": "Samson",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Ghebreab, Sennay",
+            "nameType": "Personal",
+            "givenName": "Sennay",
+            "familyName": "Ghebreab",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Santos, Fernando P.",
+            "nameType": "Personal",
+            "givenName": "Fernando P.",
+            "familyName": "Santos",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "How large language models judge and influence human cooperation"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-06-30T09:14:42Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-07-02T00:02:15Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-07",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "1",
+        "url": "https://arxiv.org/abs/2507.00088",
+        "published": "2025"
+      }
+    },
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2507.00088",
+      "locator": "data.attributes.creators",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/99QJDBSV-datacite.json",
+      "origin_artifact_sha256": "sha256:69cf1343f59f4f8d8cd1ddd2f92ec2eb3faa5d943926d62a90ef241536c9cdf7",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2507.00088",
+        "creators": [
+          {
+            "name": "Pires, Alexandre S.",
+            "nameType": "Personal",
+            "givenName": "Alexandre S.",
+            "familyName": "Pires",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Samson, Laurens",
+            "nameType": "Personal",
+            "givenName": "Laurens",
+            "familyName": "Samson",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Ghebreab, Sennay",
+            "nameType": "Personal",
+            "givenName": "Sennay",
+            "familyName": "Ghebreab",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Santos, Fernando P.",
+            "nameType": "Personal",
+            "givenName": "Fernando P.",
+            "familyName": "Santos",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "How large language models judge and influence human cooperation"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-06-30T09:14:42Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-07-02T00:02:15Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-07",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "1",
+        "url": "https://arxiv.org/abs/2507.00088",
+        "published": "2025"
+      }
+    },
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2507.00088",
+      "locator": "data.attributes.doi",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/99QJDBSV-datacite.json",
+      "origin_artifact_sha256": "sha256:69cf1343f59f4f8d8cd1ddd2f92ec2eb3faa5d943926d62a90ef241536c9cdf7",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2507.00088",
+        "creators": [
+          {
+            "name": "Pires, Alexandre S.",
+            "nameType": "Personal",
+            "givenName": "Alexandre S.",
+            "familyName": "Pires",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Samson, Laurens",
+            "nameType": "Personal",
+            "givenName": "Laurens",
+            "familyName": "Samson",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Ghebreab, Sennay",
+            "nameType": "Personal",
+            "givenName": "Sennay",
+            "familyName": "Ghebreab",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Santos, Fernando P.",
+            "nameType": "Personal",
+            "givenName": "Fernando P.",
+            "familyName": "Santos",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "How large language models judge and influence human cooperation"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-06-30T09:14:42Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-07-02T00:02:15Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-07",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "1",
+        "url": "https://arxiv.org/abs/2507.00088",
+        "published": "2025"
+      }
+    },
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2507.00088",
+      "locator": "data.attributes.publisher",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/99QJDBSV-datacite.json",
+      "origin_artifact_sha256": "sha256:69cf1343f59f4f8d8cd1ddd2f92ec2eb3faa5d943926d62a90ef241536c9cdf7",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2507.00088",
+        "creators": [
+          {
+            "name": "Pires, Alexandre S.",
+            "nameType": "Personal",
+            "givenName": "Alexandre S.",
+            "familyName": "Pires",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Samson, Laurens",
+            "nameType": "Personal",
+            "givenName": "Laurens",
+            "familyName": "Samson",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Ghebreab, Sennay",
+            "nameType": "Personal",
+            "givenName": "Sennay",
+            "familyName": "Ghebreab",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Santos, Fernando P.",
+            "nameType": "Personal",
+            "givenName": "Fernando P.",
+            "familyName": "Santos",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "How large language models judge and influence human cooperation"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-06-30T09:14:42Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-07-02T00:02:15Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-07",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "1",
+        "url": "https://arxiv.org/abs/2507.00088",
+        "published": "2025"
+      }
+    }
+  ]
+}

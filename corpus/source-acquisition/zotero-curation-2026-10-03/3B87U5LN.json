@@ -1,0 +1,93 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "3B87U5LN",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1038%2Fs44184-024-00097-4",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/1631d3884637930ddcb2.json",
+      "origin_artifact_sha256": "sha256:e2df27f5f4c0571bdf3e4a2c412daf30b7da17b5d0c5abba944268dfd84468e2",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "DOI": "10.1038/s44184-024-00097-4",
+        "type": "journal-article",
+        "title": [
+          "“It happened to be the perfect thing”: experiences of generative AI chatbots for mental health"
+        ],
+        "volume": "3",
+        "author": [
+          {
+            "given": "Steven",
+            "family": "Siddals",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "John",
+            "family": "Torous",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Astrid",
+            "family": "Coxon",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              27
+            ]
+          ]
+        },
+        "container-title": [
+          "npj Mental Health Research"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1038/s44184-024-00097-4",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              27
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "64DQYVVB",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2506.03923",
+      "locator": "data.attributes.creators",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/64DQYVVB-datacite.json",
+      "origin_artifact_sha256": "sha256:822105d3f0c4c12ea85af005485d7891847910900d0f468ea3e4a8e1cca7bd5c",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2506.03923",
+        "creators": [
+          {
+            "name": "Shafiei, Mohammadamin",
+            "nameType": "Personal",
+            "givenName": "Mohammadamin",
+            "familyName": "Shafiei",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Saffari, Hamidreza",
+            "nameType": "Personal",
+            "givenName": "Hamidreza",
+            "familyName": "Saffari",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Moosavi, Nafise Sadat",
+            "nameType": "Personal",
+            "givenName": "Nafise Sadat",
+            "familyName": "Moosavi",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "More or Less Wrong: A Benchmark for Directional Bias in LLM Comparative Reasoning"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-06-04T13:15:01Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-06-05T00:47:04Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-06",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "1",
+        "url": "https://arxiv.org/abs/2506.03923",
+        "published": "2025"
+      }
+    },
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2506.03923",
+      "locator": "data.attributes.doi",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/64DQYVVB-datacite.json",
+      "origin_artifact_sha256": "sha256:822105d3f0c4c12ea85af005485d7891847910900d0f468ea3e4a8e1cca7bd5c",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2506.03923",
+        "creators": [
+          {
+            "name": "Shafiei, Mohammadamin",
+            "nameType": "Personal",
+            "givenName": "Mohammadamin",
+            "familyName": "Shafiei",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Saffari, Hamidreza",
+            "nameType": "Personal",
+            "givenName": "Hamidreza",
+            "familyName": "Saffari",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Moosavi, Nafise Sadat",
+            "nameType": "Personal",
+            "givenName": "Nafise Sadat",
+            "familyName": "Moosavi",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "More or Less Wrong: A Benchmark for Directional Bias in LLM Comparative Reasoning"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-06-04T13:15:01Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-06-05T00:47:04Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-06",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "1",
+        "url": "https://arxiv.org/abs/2506.03923",
+        "published": "2025"
+      }
+    },
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2506.03923",
+      "locator": "data.attributes.publisher",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/64DQYVVB-datacite.json",
+      "origin_artifact_sha256": "sha256:822105d3f0c4c12ea85af005485d7891847910900d0f468ea3e4a8e1cca7bd5c",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2506.03923",
+        "creators": [
+          {
+            "name": "Shafiei, Mohammadamin",
+            "nameType": "Personal",
+            "givenName": "Mohammadamin",
+            "familyName": "Shafiei",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Saffari, Hamidreza",
+            "nameType": "Personal",
+            "givenName": "Hamidreza",
+            "familyName": "Saffari",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Moosavi, Nafise Sadat",
+            "nameType": "Personal",
+            "givenName": "Nafise Sadat",
+            "familyName": "Moosavi",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "More or Less Wrong: A Benchmark for Directional Bias in LLM Comparative Reasoning"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-06-04T13:15:01Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-06-05T00:47:04Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-06",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "1",
+        "url": "https://arxiv.org/abs/2506.03923",
+        "published": "2025"
+      }
+    },
+    {
+      "source_url": "https://arxiv.org/html/2506.03923v1",
+      "locator": "key=64DQYVVB, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "More or Less Wrong: A Benchmark for Directional Bias in LLM Comparative Reasoning"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2506.03923"
+          ],
+          "citation_date": [
+            "2025/06/04"
+          ],
+          "citation_abstract": [
+            "Large language models (LLMs) are known to be sensitive to input phrasing, but the mechanisms by which semantic cues shape reasoning remain poorly understood. We investigate this phenomenon in the context of comparative math problems with objective ground truth, revealing a consistent and directional framing bias: logically equivalent questions containing the words ``more'', ``less'', or ``equal'' systematically steer predictions in the direction of the framing term. To study this effect, we introduce MathComp, a controlled benchmark of 300 comparison scenarios, each evaluated under 14 prompt variants across three LLM families. We find that model errors frequently reflect linguistic steering, systematic shifts toward the comparative term present in the prompt. Chain-of-thought prompting reduces these biases, but its effectiveness varies: free-form reasoning is more robust, while structured formats may preserve or reintroduce directional drift. Finally, we show that including demographic identity terms (e.g., ``a woman'', ``a Black person'') in input scenarios amplifies directional drift, despite identical underlying quantities, highlighting the interplay between semantic framing and social referents. These findings expose critical blind spots in standard evaluation and motivate framing-aware benchmarks for diagnosing reasoning robustness and fairness in LLMs."
+          ],
+          "citation_online_date": [
+            "2025/06/04"
+          ],
+          "citation_author": [
+            "Shafiei, Mohammadamin",
+            "Saffari, Hamidreza",
+            "Moosavi, Nafise Sadat"
+          ],
+          "citation_arxiv_id": [
+            "2506.03923"
+          ]
+        }
+      ]
+    }
+  ]
+}

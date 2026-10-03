@@ -1,0 +1,106 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "LGYFN6JK",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1086%2F726042",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/5df73141c90ffa4e8881.json",
+      "origin_artifact_sha256": "sha256:ce168b5d61a3221621607da10b6c0739b2fd5cc8753b53108893d1b7d1919df3",
+      "bibliographic_metadata": {
+        "publisher": "University of Chicago Press",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1086/726042",
+        "type": "journal-article",
+        "page": "553-562",
+        "title": [
+          "ChatGPT for Social Work Science: Ethical Challenges and Opportunities"
+        ],
+        "volume": "14",
+        "author": [
+          {
+            "given": "Desmond Upton",
+            "family": "Patton",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Aviv Y.",
+            "family": "Landau",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Siva",
+            "family": "Mathiyazhagan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Journal of the Society for Social Work and Research"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1086/726042",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://doi.org/10.1086/726042",
+      "locator": "Publisher title page and author block in existing Docling conversion",
+      "origin_path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+      "origin_artifact_sha256": "sha256:fbd051643e9b25e079948ddeef2d9a7d70e0a1a1343f5b8e953a233e25a96330",
+      "bibliographic_metadata": {
+        "existing_source_path": "generated/markdown_clean/Patton_2023_ChatGPT_for_Social_Work_Science_Ethical.md",
+        "existing_sha256": "sha256:fbd051643e9b25e079948ddeef2d9a7d70e0a1a1343f5b8e953a233e25a96330",
+        "locator": "Publisher title page and author block in existing Docling conversion",
+        "quote": null
+      }
+    }
+  ]
+}

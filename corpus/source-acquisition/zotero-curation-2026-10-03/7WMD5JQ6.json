@@ -1,0 +1,144 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "7WMD5JQ6",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1002/pra2.1472",
+      "locator": "message.title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/7WMD5JQ6-crossref.json",
+      "origin_artifact_sha256": "sha256:c12a990997800cf66db2c938cf7498f653304aca77a10ddd30cf7de5197ff6d1",
+      "bibliographic_metadata": {
+        "publisher": "Wiley",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              10
+            ]
+          ]
+        },
+        "DOI": "10.1002/pra2.1472",
+        "type": "journal-article",
+        "page": "1575-1577",
+        "title": [
+          "Toward Agency‐Centered\n                    <scp>AI</scp>\n                    Literacy: A Scoping Review"
+        ],
+        "volume": "62",
+        "author": [
+          {
+            "given": "Takuya",
+            "family": "Maeda",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Western University  Canada"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hillary",
+            "family": "Anderson",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Western University  Canada"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Anabel",
+            "family": "Quan‐Haase",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Western University  Canada"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Katharine",
+            "family": "Willis",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Plymouth  UK"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Selena",
+            "family": "Gignac",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Western University  Canada"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              16
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the Association for Information Science and Technology"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              10
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1002/pra2.1472",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              10
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

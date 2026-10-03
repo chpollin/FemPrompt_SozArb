@@ -1,0 +1,121 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "7L78MV2V",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1145%2F3597307",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/b558da2d74d4b0276957.json",
+      "origin_artifact_sha256": "sha256:ab257a9bc81bcfdd0f34f100de827dce0a2c1ec2ee5562e01a1623b2fe01db62",
+      "bibliographic_metadata": {
+        "publisher": "Association for Computing Machinery (ACM)",
+        "issue": "2",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              30
+            ]
+          ]
+        },
+        "DOI": "10.1145/3597307",
+        "type": "journal-article",
+        "page": "1-21",
+        "title": [
+          "Biases in Large Language Models: Origins, Inventory, and Discussion"
+        ],
+        "volume": "15",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-3831-9706",
+            "authenticated-orcid": false,
+            "given": "Roberto",
+            "family": "Navigli",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Sapienza University of Rome, Italy"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6238-7816",
+            "authenticated-orcid": false,
+            "given": "Simone",
+            "family": "Conia",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sapienza University of Rome, Italy"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2717-3705",
+            "authenticated-orcid": false,
+            "given": "Björn",
+            "family": "Ross",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Edinburgh, United Kingdom"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              22
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Data and Information Quality"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              22
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3597307",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              22
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "9YYPYEGY",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1086%2F726021",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/0defda02a77637e1a29e.json",
+      "origin_artifact_sha256": "sha256:a4362205b5529ff39f542a9368d33f5988e4650e52b49298cfedf5d6728a6bda",
+      "bibliographic_metadata": {
+        "publisher": "University of Chicago Press",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1086/726021",
+        "type": "journal-article",
+        "page": "563-577",
+        "title": [
+          "Recommendations for Social Work Researchers and Journal Editors on the Use of Generative AI and Large Language Models"
+        ],
+        "volume": "14",
+        "author": [
+          {
+            "given": "Bryan G.",
+            "family": "Victor",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Rebeccah L.",
+            "family": "Sokol",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lauri",
+            "family": "Goldkind",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Brian E.",
+            "family": "Perron",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Journal of the Society for Social Work and Research"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1086/726021",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://doi.org/10.1086/726021",
+      "locator": "Publisher title page and author block in existing Docling conversion",
+      "origin_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+      "origin_artifact_sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+      "bibliographic_metadata": {
+        "existing_source_path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
+        "existing_sha256": "sha256:faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225",
+        "locator": "Publisher title page and author block in existing Docling conversion",
+        "quote": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "NPFRWPAN",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1177%2F14614448261435197",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/e8525be390a46c28c557.json",
+      "origin_artifact_sha256": "sha256:1c420f27b2f8edccb6e057111ff7b3678a0d75565bba32005e359603ce9fc3f2",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "DOI": "10.1177/14614448261435197",
+        "type": "journal-article",
+        "title": [
+          "Gender bias in text-to-image generative artificial intelligence: Neglect and stereotypical presentations across three popular platforms"
+        ],
+        "author": [
+          {
+            "given": "Hannah",
+            "family": "Weinmann",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Würzburg, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-6737-8997",
+            "authenticated-orcid": false,
+            "given": "Tanja V",
+            "family": "Messingschlager",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Würzburg, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4111-1308",
+            "authenticated-orcid": false,
+            "given": "Markus",
+            "family": "Appel",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Würzburg, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              16
+            ]
+          ]
+        },
+        "container-title": [
+          "New Media &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              16
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/14614448261435197",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              16
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -20,28 +20,28 @@
     "corpus_total": 463,
     "corpus_record_total": 463,
     "corpus_work_total": 361,
-    "annotated_total": 138,
-    "published_record_total": 196,
-    "published_work_total": 138,
+    "annotated_total": 137,
+    "published_record_total": 195,
+    "published_work_total": 137,
     "source_annotated_total": 199,
     "source_annotated_record_total": 199,
     "source_annotated_work_total": 141,
-    "withheld_total": 3,
-    "withheld_record_total": 3,
-    "unpublished_work_total": 3,
-    "included_total": 104,
+    "withheld_total": 4,
+    "withheld_record_total": 4,
+    "unpublished_work_total": 4,
+    "included_total": 103,
     "excluded_total": 12,
     "unclear_total": 22,
-    "thematic_total": 104,
+    "thematic_total": 103,
     "aggregation_unit": "work",
     "record_decision_counts": {
       "Exclude": 16,
-      "Include": 153,
+      "Include": 152,
       "Unclear": 27
     },
     "work_decision_counts": {
       "Exclude": 12,
-      "Include": 104,
+      "Include": 103,
       "Unclear": 22
     },
     "denominators": {
@@ -60,7 +60,7 @@
       "scope": {
         "work_total": 154,
         "recorded_include_work_total": 153,
-        "released_include_work_total": 104,
+        "released_include_work_total": 103,
         "released_include_outside_recorded_include_work_total": 1
       },
       "states": [
@@ -82,13 +82,13 @@
       "fields": {
         "AN_Prompting_Role": {
           "value": 44,
-          "none": 60,
+          "none": 59,
           "undecidable": 0,
           "absent": 0,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -98,13 +98,13 @@
         },
         "AN_Prompt_Techniques": {
           "value": 31,
-          "none": 73,
+          "none": 72,
           "undecidable": 0,
           "absent": 0,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -114,13 +114,13 @@
         },
         "AN_Bias_Axes": {
           "value": 84,
-          "none": 20,
+          "none": 19,
           "undecidable": 0,
           "absent": 0,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -130,13 +130,13 @@
         },
         "AN_Harm_Types": {
           "value": 79,
-          "none": 24,
+          "none": 23,
           "undecidable": 1,
           "absent": 0,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -145,14 +145,14 @@
           }
         },
         "AN_Mitigation_Stage": {
-          "value": 96,
+          "value": 95,
           "none": 8,
           "undecidable": 0,
           "absent": 0,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -161,14 +161,14 @@
           }
         },
         "AN_Mitigation_Status": {
-          "value": 96,
+          "value": 95,
           "none": 8,
           "undecidable": 0,
           "absent": 0,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -177,14 +177,14 @@
           }
         },
         "AN_Population": {
-          "value": 104,
+          "value": 103,
           "none": 0,
           "undecidable": 0,
           "absent": 0,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -194,13 +194,13 @@
         },
         "AN_Task": {
           "value": 51,
-          "none": 50,
+          "none": 49,
           "undecidable": 0,
           "absent": 3,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -209,14 +209,14 @@
           }
         },
         "AN_Gender_Definition": {
-          "value": 101,
+          "value": 100,
           "none": 0,
           "undecidable": 0,
           "absent": 3,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -225,14 +225,14 @@
           }
         },
         "AN_Bias_Definition": {
-          "value": 101,
+          "value": 100,
           "none": 0,
           "undecidable": 0,
           "absent": 3,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -241,14 +241,14 @@
           }
         },
         "AN_Gender_Understanding": {
-          "value": 101,
+          "value": 100,
           "none": 0,
           "undecidable": 0,
           "absent": 3,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -257,14 +257,14 @@
           }
         },
         "AN_Theory_Reference": {
-          "value": 101,
+          "value": 100,
           "none": 0,
           "undecidable": 0,
           "absent": 3,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -273,14 +273,14 @@
           }
         },
         "AN_Coding_Basis": {
-          "value": 104,
+          "value": 103,
           "none": 0,
           "undecidable": 0,
           "absent": 0,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -289,14 +289,14 @@
           }
         },
         "Studientyp": {
-          "value": 104,
+          "value": 103,
           "none": 0,
           "undecidable": 0,
           "absent": 0,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -305,14 +305,14 @@
           }
         },
         "object": {
-          "value": 104,
+          "value": 103,
           "none": 0,
           "undecidable": 0,
           "absent": 0,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -321,14 +321,14 @@
           }
         },
         "perspective": {
-          "value": 104,
+          "value": 103,
           "none": 0,
           "undecidable": 0,
           "absent": 0,
           "not_coded": 22,
-          "withheld": 28,
+          "withheld": 29,
           "withheld_by_reason": {
-            "source_hold": 1,
+            "source_hold": 2,
             "decision_conflict": 25,
             "open_negative_review": 0,
             "stale_source_review": 2,
@@ -3426,8 +3426,8 @@
       "year": 2023,
       "doi": "",
       "url": "https://arxiv.org/abs/2302.12683",
-      "item_type": "report",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:135fb923-b32d-521c-9393-f5c6e4491369",
       "version_id": "version:96febd23-a639-517d-91b9-8169623975b9",
       "bibliographic_version_id": "version:96febd23-a639-517d-91b9-8169623975b9",
@@ -3735,8 +3735,8 @@
           "year": 2023,
           "doi": "",
           "url": "https://arxiv.org/abs/2302.12683",
-          "item_type": "report",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:135fb923-b32d-521c-9393-f5c6e4491369",
           "version_id": "version:96febd23-a639-517d-91b9-8169623975b9",
           "bibliographic_version_id": "version:96febd23-a639-517d-91b9-8169623975b9",
@@ -7948,7 +7948,7 @@
         {
           "version_id": "version:90faf9e0-b434-58d6-b13f-fac33e8c09b3",
           "version_type": "unknown",
-          "version_date": "2024",
+          "version_date": "2024-11",
           "identifiers": {
             "zotero_key": [
               "DWS4KXBW"
@@ -8289,7 +8289,7 @@
             {
               "version_id": "version:90faf9e0-b434-58d6-b13f-fac33e8c09b3",
               "version_type": "unknown",
-              "version_date": "2024",
+              "version_date": "2024-11",
               "identifiers": {
                 "zotero_key": [
                   "DWS4KXBW"
@@ -9174,7 +9174,7 @@
       "doi": "10.1093/bjsw/bcab168",
       "url": "https://doi.org/10.1093/bjsw/bcab168",
       "item_type": "journalArticle",
-      "journal": "",
+      "journal": "The British Journal of Social Work",
       "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
       "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
       "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
@@ -9582,7 +9582,7 @@
           "doi": "10.1093/bjsw/bcab168",
           "url": "https://doi.org/10.1093/bjsw/bcab168",
           "item_type": "journalArticle",
-          "journal": "",
+          "journal": "The British Journal of Social Work",
           "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
           "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
           "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
@@ -9877,7 +9877,7 @@
           "doi": "10.1093/bjsw/bcab168",
           "url": "",
           "item_type": "journalArticle",
-          "journal": "",
+          "journal": "The British Journal of Social Work",
           "work_id": "work:1dff2609-2e68-5911-bf56-71ad8122b6a5",
           "version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
           "bibliographic_version_id": "version:b2b10532-00e5-592e-8f16-6a4d6191dc2e",
@@ -10169,12 +10169,12 @@
       "id": "SQYLQFRU",
       "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
       "author_year": "Kabra et al. (2025)",
-      "authors": "Sanchit Kabra; Akshita Jha; Chandan K. Reddy",
+      "authors": "Kabra, Sanchit; Jha, Akshita; Reddy, Chandan K.",
       "year": 2025,
       "doi": "10.48550/arXiv.2504.05632",
       "url": "https://arxiv.org/abs/2504.05632v3",
       "item_type": "preprint",
-      "journal": "",
+      "journal": "arXiv",
       "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
       "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
       "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
@@ -10516,12 +10516,12 @@
           "id": "SQYLQFRU",
           "title": "Reasoning towards fairness: Mitigating bias in language models through reasoning-guided fine-tuning",
           "author_year": "Kabra et al. (2025)",
-          "authors": "Sanchit Kabra; Akshita Jha; Chandan K. Reddy",
+          "authors": "Kabra, Sanchit; Jha, Akshita; Reddy, Chandan K.",
           "year": 2025,
           "doi": "10.48550/arXiv.2504.05632",
           "url": "https://arxiv.org/abs/2504.05632v3",
           "item_type": "preprint",
-          "journal": "",
+          "journal": "arXiv",
           "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
           "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
           "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
@@ -10783,7 +10783,7 @@
           "doi": "10.48550/arXiv.2504.05632",
           "url": "https://arxiv.org/abs/2504.05632v3",
           "item_type": "preprint",
-          "journal": "",
+          "journal": "arXiv",
           "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
           "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
           "bibliographic_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
@@ -13236,7 +13236,7 @@
       "doi": "10.1145/3630106.3658543",
       "url": "",
       "item_type": "conferencePaper",
-      "journal": "",
+      "journal": "The 2024 ACM Conference on Fairness Accountability and Transparency",
       "work_id": "work:2fdf147d-7703-5e47-9b0b-a917aa7aa559",
       "version_id": "version:3bfb93db-fd4b-54cf-b0c9-b8a8460a0198",
       "bibliographic_version_id": "version:3bfb93db-fd4b-54cf-b0c9-b8a8460a0198",
@@ -13614,7 +13614,7 @@
           "doi": "10.1145/3630106.3658543",
           "url": "",
           "item_type": "conferencePaper",
-          "journal": "",
+          "journal": "The 2024 ACM Conference on Fairness Accountability and Transparency",
           "work_id": "work:2fdf147d-7703-5e47-9b0b-a917aa7aa559",
           "version_id": "version:3bfb93db-fd4b-54cf-b0c9-b8a8460a0198",
           "bibliographic_version_id": "version:3bfb93db-fd4b-54cf-b0c9-b8a8460a0198",
@@ -13881,7 +13881,7 @@
           "doi": "10.1145/3630106.3658543",
           "url": "https://doi.org/10.1145/3630106.3658543",
           "item_type": "conferencePaper",
-          "journal": "",
+          "journal": "The 2024 ACM Conference on Fairness Accountability and Transparency",
           "work_id": "work:2fdf147d-7703-5e47-9b0b-a917aa7aa559",
           "version_id": "version:3bfb93db-fd4b-54cf-b0c9-b8a8460a0198",
           "bibliographic_version_id": "version:3bfb93db-fd4b-54cf-b0c9-b8a8460a0198",
@@ -16903,7 +16903,7 @@
       "doi": "10.1007/978-3-031-98417-4_5",
       "url": "",
       "item_type": "conferencePaper",
-      "journal": "",
+      "journal": "Artificial Intelligence in Education",
       "work_id": "work:370aa2bd-ee09-51cb-ba06-4b6d70ffd322",
       "version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c",
       "bibliographic_version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c",
@@ -17215,7 +17215,7 @@
           "doi": "10.1007/978-3-031-98417-4_5",
           "url": "",
           "item_type": "conferencePaper",
-          "journal": "",
+          "journal": "Artificial Intelligence in Education",
           "work_id": "work:370aa2bd-ee09-51cb-ba06-4b6d70ffd322",
           "version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c",
           "bibliographic_version_id": "version:b7d91192-4c8b-55f5-8d8b-b437184b4a1c",
@@ -17503,8 +17503,8 @@
       "year": 2022,
       "doi": "",
       "url": "https://arxiv.org/pdf/2505.17045",
-      "item_type": "report",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:388f576d-3ce3-55a3-8f75-18511b662ed8",
       "version_id": "version:0b32f577-41da-5577-bf28-4ba788da6032",
       "bibliographic_version_id": "version:0b32f577-41da-5577-bf28-4ba788da6032",
@@ -17925,8 +17925,8 @@
           "year": 2022,
           "doi": "",
           "url": "https://arxiv.org/pdf/2505.17045",
-          "item_type": "report",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:388f576d-3ce3-55a3-8f75-18511b662ed8",
           "version_id": "version:0b32f577-41da-5577-bf28-4ba788da6032",
           "bibliographic_version_id": "version:0b32f577-41da-5577-bf28-4ba788da6032",
@@ -18234,8 +18234,8 @@
           "year": 2023,
           "doi": "",
           "url": "https://arxiv.org/pdf/2505.17045",
-          "item_type": "report",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:388f576d-3ce3-55a3-8f75-18511b662ed8",
           "version_id": "version:0b32f577-41da-5577-bf28-4ba788da6032",
           "bibliographic_version_id": "version:0b32f577-41da-5577-bf28-4ba788da6032",
@@ -22520,15 +22520,15 @@
       "year": 2025,
       "doi": "",
       "url": "https://arxiv.org/html/2402.14875v3",
-      "item_type": "report",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
       "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
       "bibliographic_version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
       "source_version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
       "source_binding": null,
       "version_type": "preprint",
-      "version_date": "2025",
+      "version_date": "2025-01-24",
       "peer_review_status": "not_established",
       "peer_review_basis": "unknown",
       "preferred_version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
@@ -22538,7 +22538,7 @@
         {
           "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
           "version_type": "preprint",
-          "version_date": "2025",
+          "version_date": "2025-01-24",
           "identifiers": {
             "zotero_key": [
               "YMABYPKF"
@@ -22776,15 +22776,15 @@
           "year": 2025,
           "doi": "",
           "url": "https://arxiv.org/html/2402.14875v3",
-          "item_type": "report",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:47cf72d3-1308-5052-8041-9358c1472888",
           "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
           "bibliographic_version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
           "source_version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
           "source_binding": null,
           "version_type": "preprint",
-          "version_date": "2025",
+          "version_date": "2025-01-24",
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "preferred_version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
@@ -22794,7 +22794,7 @@
             {
               "version_id": "version:561510b7-b930-59d2-92ad-b9422fd5c6fe",
               "version_type": "preprint",
-              "version_date": "2025",
+              "version_date": "2025-01-24",
               "identifiers": {
                 "zotero_key": [
                   "YMABYPKF"
@@ -25611,7 +25611,7 @@
       "doi": "10.1145/3641237.3691655",
       "url": "https://www.researchgate.net/publication/385325948_Inclusive_Prompt_Engineering_A_Methodology_for_Hacking_Biased_AI_Image_Generation",
       "item_type": "conferencePaper",
-      "journal": "",
+      "journal": "Proceedings of the 42nd ACM International Conference on Design of Communication",
       "work_id": "work:4be22e9f-c3e2-5871-bb6a-c75011374e59",
       "version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2",
       "bibliographic_version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2",
@@ -25868,7 +25868,7 @@
           "doi": "10.1145/3641237.3691655",
           "url": "https://www.researchgate.net/publication/385325948_Inclusive_Prompt_Engineering_A_Methodology_for_Hacking_Biased_AI_Image_Generation",
           "item_type": "conferencePaper",
-          "journal": "",
+          "journal": "Proceedings of the 42nd ACM International Conference on Design of Communication",
           "work_id": "work:4be22e9f-c3e2-5871-bb6a-c75011374e59",
           "version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2",
           "bibliographic_version_id": "version:0842bb02-839c-5e80-b2e9-a38298bb52f2",
@@ -26842,12 +26842,12 @@
       "id": "RAY6G2R7",
       "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
       "author_year": "Lin et al. (2023)",
-      "authors": "Bill Yuchen Lin; Yicheng Fu; Karina Yang; Faeze Brahman; Shiyu Huang; Chandra Bhagavatula; Prithviraj Ammanabrolu; Yejin Choi; Xiang Ren",
+      "authors": "Lin, Bill Yuchen; Fu, Yicheng; Yang, Karina; Brahman, Faeze; Huang, Shiyu; Bhagavatula, Chandra; Ammanabrolu, Prithviraj; Choi, Yejin; Ren, Xiang",
       "year": 2023,
       "doi": "10.48550/arXiv.2305.17390",
       "url": "https://arxiv.org/abs/2305.17390v2",
       "item_type": "preprint",
-      "journal": "",
+      "journal": "arXiv",
       "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
       "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
       "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
@@ -27063,12 +27063,12 @@
           "id": "RAY6G2R7",
           "title": "SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks",
           "author_year": "Lin et al. (2023)",
-          "authors": "Bill Yuchen Lin; Yicheng Fu; Karina Yang; Faeze Brahman; Shiyu Huang; Chandra Bhagavatula; Prithviraj Ammanabrolu; Yejin Choi; Xiang Ren",
+          "authors": "Lin, Bill Yuchen; Fu, Yicheng; Yang, Karina; Brahman, Faeze; Huang, Shiyu; Bhagavatula, Chandra; Ammanabrolu, Prithviraj; Choi, Yejin; Ren, Xiang",
           "year": 2023,
           "doi": "10.48550/arXiv.2305.17390",
           "url": "https://arxiv.org/abs/2305.17390v2",
           "item_type": "preprint",
-          "journal": "",
+          "journal": "arXiv",
           "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
           "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
           "bibliographic_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
@@ -27267,12 +27267,12 @@
       "id": "ACDF4FL9",
       "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
       "author_year": "Kamruzzaman et al. (2024)",
-      "authors": "Mahammed Kamruzzaman; Gene Louis Kim",
+      "authors": "Kamruzzaman, Mahammed; Kim, Gene Louis",
       "year": 2024,
       "doi": "",
       "url": "https://arxiv.org/html/2404.17218v3",
       "item_type": "preprint",
-      "journal": "",
+      "journal": "arXiv",
       "work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400",
       "version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583",
       "bibliographic_version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583",
@@ -27379,7 +27379,7 @@
         {
           "version_id": "version:eb085657-c0a4-564e-a9ec-614804323fc1",
           "version_type": "preprint",
-          "version_date": "2024",
+          "version_date": "2024-04-26",
           "identifiers": {
             "zotero_key": [
               "RARE5UFC"
@@ -27664,12 +27664,12 @@
           "id": "ACDF4FL9",
           "title": "Prompting techniques for reducing social bias in LLMs through System 1 and System 2 cognitive processes",
           "author_year": "Kamruzzaman et al. (2024)",
-          "authors": "Mahammed Kamruzzaman; Gene Louis Kim",
+          "authors": "Kamruzzaman, Mahammed; Kim, Gene Louis",
           "year": 2024,
           "doi": "",
           "url": "https://arxiv.org/html/2404.17218v3",
           "item_type": "preprint",
-          "journal": "",
+          "journal": "arXiv",
           "work_id": "work:55f0efa8-e433-5588-9afe-3f708043a400",
           "version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583",
           "bibliographic_version_id": "version:27a927ae-6f49-562f-bf62-9556487ad583",
@@ -27776,7 +27776,7 @@
             {
               "version_id": "version:eb085657-c0a4-564e-a9ec-614804323fc1",
               "version_type": "preprint",
-              "version_date": "2024",
+              "version_date": "2024-04-26",
               "identifiers": {
                 "zotero_key": [
                   "RARE5UFC"
@@ -31799,598 +31799,6 @@
             }
           ],
           "analysis": null
-        }
-      ]
-    },
-    {
-      "id": "LT3D3ZQ2",
-      "title": "Towards a Feminist Metaethics of AI",
-      "author_year": "Siapka (2023)",
-      "authors": "Siapka, A.",
-      "year": 2023,
-      "doi": "",
-      "url": "https://arxiv.org/abs/2311.14700",
-      "item_type": "journalArticle",
-      "journal": "",
-      "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-      "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-      "bibliographic_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-      "source_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-      "source_binding": {
-        "record_id": "LT3D3ZQ2",
-        "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-        "bibliographic_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-        "source_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-        "source_version_type": "preprint",
-        "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-        "is_preferred_version": true,
-        "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-        "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-        "binding_mode": "acquisition_receipt",
-        "bibliographic_identity": {
-          "title": "Towards a Feminist Metaethics of AI"
-        },
-        "acquisition_receipt": {
-          "repo_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-          "retrieved_at": "2026-02-03T09:23:59+01:00",
-          "sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-          "route": "repository: earlier Docling conversion of an acquired PDF",
-          "note": "Original PDF Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.pdf is not versioned; the receipt time is the conversion time."
-        },
-        "identity_check": {
-          "title": "pass",
-          "first_author": "pass",
-          "doi": "not_registered",
-          "year": "not_printed"
-        },
-        "version_relation": {
-          "source_version_type": "preprint",
-          "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-          "difference_to_preferred": "none: the bound text is the preferred version"
-        }
-      },
-      "version_type": "preprint",
-      "version_date": "2023",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
-      "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-      "latest_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-      "is_preferred_version": true,
-      "work_versions": [
-        {
-          "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-          "version_type": "preprint",
-          "version_date": "2023",
-          "identifiers": {
-            "zotero_key": [
-              "LT3D3ZQ2"
-            ],
-            "url": [
-              "https://arxiv.org/abs/2311.14700"
-            ]
-          },
-          "peer_review_status": "not_established",
-          "peer_review_basis": "unknown",
-          "integrity_status": "current",
-          "access_status": "unknown",
-          "landing_url": "https://arxiv.org/abs/2311.14700",
-          "fulltext_url": "",
-          "relations": [],
-          "is_preferred": true,
-          "is_latest": true
-        }
-      ],
-      "identity_basis": "work_version_registry",
-      "knowledge_coverage": "linked",
-      "decision": "Include",
-      "reason": null,
-      "text_source": "raw",
-      "reviewer": "ar2",
-      "actor": "agent",
-      "lifecycle_state": "ai-agent-reviewed",
-      "publication_basis": "ai-source-review",
-      "recorded_identity": {
-        "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-        "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
-      },
-      "ai_verification": {
-        "artifact": "docs/data/screening/ar2.json#/decisions/LT3D3ZQ2",
-        "sha256": "sha256:f40e77ad29dccfb298521ef020a65839c224461035d8750da7514eb983497b2c",
-        "result": "accepted",
-        "review_type": "ai-source-review",
-        "agent_id": "claude-code/codebook-v141-record-review",
-        "model": "Claude Opus 5.5",
-        "reviewed_at": "2026-10-02T07:16:08.367226Z",
-        "findings": "The current productive record equals tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/product-v0.5.json and the final coding of LT3D3ZQ2 in ai-agent-review.json (categories, decision, reason, evidence and analysis); the active annotation body matches; all 5 evidence terms and snippets resolve in generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md; the Work-Version identity equals the registry record index; the lifecycle state is ai-agent-reviewed without human verification or publication approval.",
-        "canonical_binding": {
-          "paper_id": "LT3D3ZQ2",
-          "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-          "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
-        },
-        "source_binding": {
-          "record_id": "LT3D3ZQ2",
-          "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-          "bibliographic_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-          "source_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-          "source_version_type": "preprint",
-          "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-          "is_preferred_version": true,
-          "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-          "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-          "binding_mode": "acquisition_receipt",
-          "bibliographic_identity": {
-            "title": "Towards a Feminist Metaethics of AI"
-          },
-          "acquisition_receipt": {
-            "repo_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-            "retrieved_at": "2026-02-03T09:23:59+01:00",
-            "sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-            "route": "repository: earlier Docling conversion of an acquired PDF",
-            "note": "Original PDF Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.pdf is not versioned; the receipt time is the conversion time."
-          },
-          "identity_check": {
-            "title": "pass",
-            "first_author": "pass",
-            "doi": "not_registered",
-            "year": "not_printed"
-          },
-          "version_relation": {
-            "source_version_type": "preprint",
-            "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-            "difference_to_preferred": "none: the bound text is the preferred version"
-          }
-        }
-      },
-      "verification": null,
-      "publication_approval": null,
-      "categories": [
-        {
-          "key": "Bias_Ungleichheit",
-          "level": 1,
-          "evidence": [
-            {
-              "term": "Contrary to mainstream ethics, which, following ideal theory approaches, tends t",
-              "snippet": "Contrary to mainstream ethics, which, following ideal theory approaches, tends to 'abstract away from relations of structural domination, exploitation, coercion, and oppression' [54:168] , a feminist metaethics of AI would make such relations visible and asses",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "recorded_work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "recorded_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-              "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-              "source_record_id": "LT3D3ZQ2"
-            }
-          ]
-        },
-        {
-          "key": "Diversitaet",
-          "level": 1,
-          "evidence": [
-            {
-              "term": "include research into the composition of AI ethics boards and committees in term",
-              "snippet": "include research into the composition of AI ethics boards and committees in terms of their diversity and representativeness",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "recorded_work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "recorded_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-              "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-              "source_record_id": "LT3D3ZQ2"
-            }
-          ]
-        },
-        {
-          "key": "Feministisch",
-          "level": 2,
-          "evidence": [
-            {
-              "term": "In this paper, I set out to argue that the foregoing insufficiencies could be mi",
-              "snippet": "In this paper, I set out to argue that the foregoing insufficiencies could be mitigated by developing a new research agenda for a feminist metaethics of AI.",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "recorded_work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "recorded_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-              "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-              "source_record_id": "LT3D3ZQ2"
-            }
-          ]
-        },
-        {
-          "key": "Gender",
-          "level": 1,
-          "evidence": [
-            {
-              "term": "Likewise, feminist metaethics focuses its theoretical and practical enquiry on s",
-              "snippet": "Likewise, feminist metaethics focuses its theoretical and practical enquiry on specific topics, particularly -yet not exclusively -on those relevant to women's lives and experiences.",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "recorded_work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "recorded_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-              "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-              "source_record_id": "LT3D3ZQ2"
-            }
-          ]
-        },
-        {
-          "key": "KI_Sonstige",
-          "level": 2,
-          "evidence": [
-            {
-              "term": "Applying this perspective to the context of AI, I suggest that a feminist metaet",
-              "snippet": "Applying this perspective to the context of AI, I suggest that a feminist metaethics of AI would examine",
-              "source_layer": "paper",
-              "actor": "agent",
-              "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "recorded_work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "recorded_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-              "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-              "source_record_id": "LT3D3ZQ2"
-            }
-          ]
-        }
-      ],
-      "analysis": {
-        "fields": {
-          "AN_Prompting_Role": [
-            "None"
-          ],
-          "AN_Prompt_Techniques": [
-            "None"
-          ],
-          "AN_Bias_Axes": [
-            "None"
-          ],
-          "AN_Harm_Types": [
-            "None"
-          ],
-          "AN_Mitigation_Stage": [
-            "Organisational_Process"
-          ],
-          "AN_Mitigation_Status": "Proposed",
-          "AN_Population": [
-            "Not_SW_Specific"
-          ],
-          "AN_Task": [
-            "None"
-          ],
-          "AN_Gender_Definition": "Implicit_Only",
-          "AN_Bias_Definition": "Implicit_Only",
-          "AN_Gender_Understanding": [
-            "Intersectional"
-          ],
-          "AN_Theory_Reference": "Yes",
-          "AN_Coding_Basis": "Fulltext",
-          "Studientyp": "Theoretisch"
-        },
-        "field_states": {
-          "AN_Prompting_Role": "none",
-          "AN_Prompt_Techniques": "none",
-          "AN_Bias_Axes": "none",
-          "AN_Harm_Types": "none",
-          "AN_Mitigation_Stage": "value",
-          "AN_Mitigation_Status": "value",
-          "AN_Population": "value",
-          "AN_Task": "none",
-          "AN_Gender_Definition": "value",
-          "AN_Bias_Definition": "value",
-          "AN_Gender_Understanding": "value",
-          "AN_Theory_Reference": "value",
-          "AN_Coding_Basis": "value",
-          "Studientyp": "value"
-        },
-        "notes": "Research agenda for a feminist metaethics of AI; object is AI ethics as a field, AI in general. Mitigation: proposed research into the diversity of AI ethics boards and the inclusion of those hitherto ignored in decision-making (Organisational_Process, Proposed). AN_Bias_Axes None: gender, class, race, disability and sexuality appear only as a programmatic enumeration and outlook, cited case studies are suggestions, no bias is analysed. AN_Gender_Understanding Intersectional rests on the work's own argument that AI impact is to be examined depending on gender in interaction with other identity markers; boundary case, since the argument is programmatic and no definition of gender is given (Implicit_Only from the intersectional feminist frame). Bias as structural domination and oppression is recognisable from the frame only. AI Agent Review: AN_Bias_Axes stays None because the work analyses no bias along any axis; gender with class, race, disability and sexuality appears as a programmatic research direction of the agenda (Section 3.4) and cited AI cases are illustrative case studies. AN_Gender_Understanding Intersectional is kept from both tracks because the argument of this theoretical work itself makes privilege and disadvantage depend on gender in interaction with other identity markers.",
-        "undecidable": []
-      },
-      "aggregation_unit": "work",
-      "record_ids": [
-        "LT3D3ZQ2"
-      ],
-      "corpus_record_ids": [
-        "LT3D3ZQ2"
-      ],
-      "version_ids": [
-        "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
-      ],
-      "source_version_ids": [
-        "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
-      ],
-      "source_records": [
-        {
-          "id": "LT3D3ZQ2",
-          "title": "Towards a Feminist Metaethics of AI",
-          "author_year": "Siapka (2023)",
-          "authors": "Siapka, A.",
-          "year": 2023,
-          "doi": "",
-          "url": "https://arxiv.org/abs/2311.14700",
-          "item_type": "journalArticle",
-          "journal": "",
-          "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-          "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-          "bibliographic_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-          "source_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-          "source_binding": {
-            "record_id": "LT3D3ZQ2",
-            "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-            "bibliographic_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-            "source_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-            "source_version_type": "preprint",
-            "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-            "is_preferred_version": true,
-            "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-            "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-            "binding_mode": "acquisition_receipt",
-            "bibliographic_identity": {
-              "title": "Towards a Feminist Metaethics of AI"
-            },
-            "acquisition_receipt": {
-              "repo_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-              "retrieved_at": "2026-02-03T09:23:59+01:00",
-              "sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-              "route": "repository: earlier Docling conversion of an acquired PDF",
-              "note": "Original PDF Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.pdf is not versioned; the receipt time is the conversion time."
-            },
-            "identity_check": {
-              "title": "pass",
-              "first_author": "pass",
-              "doi": "not_registered",
-              "year": "not_printed"
-            },
-            "version_relation": {
-              "source_version_type": "preprint",
-              "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "difference_to_preferred": "none: the bound text is the preferred version"
-            }
-          },
-          "version_type": "preprint",
-          "version_date": "2023",
-          "peer_review_status": "not_established",
-          "peer_review_basis": "unknown",
-          "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-          "latest_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-          "is_preferred_version": true,
-          "work_versions": [
-            {
-              "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "version_type": "preprint",
-              "version_date": "2023",
-              "identifiers": {
-                "zotero_key": [
-                  "LT3D3ZQ2"
-                ],
-                "url": [
-                  "https://arxiv.org/abs/2311.14700"
-                ]
-              },
-              "peer_review_status": "not_established",
-              "peer_review_basis": "unknown",
-              "integrity_status": "current",
-              "access_status": "unknown",
-              "landing_url": "https://arxiv.org/abs/2311.14700",
-              "fulltext_url": "",
-              "relations": [],
-              "is_preferred": true,
-              "is_latest": true
-            }
-          ],
-          "identity_basis": "work_version_registry",
-          "knowledge_coverage": "linked",
-          "decision": "Include",
-          "reason": null,
-          "text_source": "raw",
-          "reviewer": "ar2",
-          "actor": "agent",
-          "lifecycle_state": "ai-agent-reviewed",
-          "publication_basis": "ai-source-review",
-          "recorded_identity": {
-            "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-            "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
-          },
-          "ai_verification": {
-            "artifact": "docs/data/screening/ar2.json#/decisions/LT3D3ZQ2",
-            "sha256": "sha256:f40e77ad29dccfb298521ef020a65839c224461035d8750da7514eb983497b2c",
-            "result": "accepted",
-            "review_type": "ai-source-review",
-            "agent_id": "claude-code/codebook-v141-record-review",
-            "model": "Claude Opus 5.5",
-            "reviewed_at": "2026-10-02T07:16:08.367226Z",
-            "findings": "The current productive record equals tests/review-cases/agent-runs/codebook-v141-includes-12-9-20261002/product-v0.5.json and the final coding of LT3D3ZQ2 in ai-agent-review.json (categories, decision, reason, evidence and analysis); the active annotation body matches; all 5 evidence terms and snippets resolve in generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md; the Work-Version identity equals the registry record index; the lifecycle state is ai-agent-reviewed without human verification or publication approval.",
-            "canonical_binding": {
-              "paper_id": "LT3D3ZQ2",
-              "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c"
-            },
-            "source_binding": {
-              "record_id": "LT3D3ZQ2",
-              "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-              "bibliographic_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "source_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "source_version_type": "preprint",
-              "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-              "is_preferred_version": true,
-              "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-              "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-              "binding_mode": "acquisition_receipt",
-              "bibliographic_identity": {
-                "title": "Towards a Feminist Metaethics of AI"
-              },
-              "acquisition_receipt": {
-                "repo_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-                "retrieved_at": "2026-02-03T09:23:59+01:00",
-                "sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691",
-                "route": "repository: earlier Docling conversion of an acquired PDF",
-                "note": "Original PDF Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.pdf is not versioned; the receipt time is the conversion time."
-              },
-              "identity_check": {
-                "title": "pass",
-                "first_author": "pass",
-                "doi": "not_registered",
-                "year": "not_printed"
-              },
-              "version_relation": {
-                "source_version_type": "preprint",
-                "preferred_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-                "difference_to_preferred": "none: the bound text is the preferred version"
-              }
-            }
-          },
-          "verification": null,
-          "publication_approval": null,
-          "categories": [
-            {
-              "key": "Bias_Ungleichheit",
-              "level": 1,
-              "evidence": [
-                {
-                  "term": "Contrary to mainstream ethics, which, following ideal theory approaches, tends t",
-                  "snippet": "Contrary to mainstream ethics, which, following ideal theory approaches, tends to 'abstract away from relations of structural domination, exploitation, coercion, and oppression' [54:168] , a feminist metaethics of AI would make such relations visible and asses",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-                  "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-                  "recorded_work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-                  "recorded_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-                  "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-                  "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691"
-                }
-              ]
-            },
-            {
-              "key": "Diversitaet",
-              "level": 1,
-              "evidence": [
-                {
-                  "term": "include research into the composition of AI ethics boards and committees in term",
-                  "snippet": "include research into the composition of AI ethics boards and committees in terms of their diversity and representativeness",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-                  "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-                  "recorded_work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-                  "recorded_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-                  "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-                  "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691"
-                }
-              ]
-            },
-            {
-              "key": "Feministisch",
-              "level": 2,
-              "evidence": [
-                {
-                  "term": "In this paper, I set out to argue that the foregoing insufficiencies could be mi",
-                  "snippet": "In this paper, I set out to argue that the foregoing insufficiencies could be mitigated by developing a new research agenda for a feminist metaethics of AI.",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-                  "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-                  "recorded_work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-                  "recorded_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-                  "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-                  "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691"
-                }
-              ]
-            },
-            {
-              "key": "Gender",
-              "level": 1,
-              "evidence": [
-                {
-                  "term": "Likewise, feminist metaethics focuses its theoretical and practical enquiry on s",
-                  "snippet": "Likewise, feminist metaethics focuses its theoretical and practical enquiry on specific topics, particularly -yet not exclusively -on those relevant to women's lives and experiences.",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-                  "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-                  "recorded_work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-                  "recorded_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-                  "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-                  "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691"
-                }
-              ]
-            },
-            {
-              "key": "KI_Sonstige",
-              "level": 2,
-              "evidence": [
-                {
-                  "term": "Applying this perspective to the context of AI, I suggest that a feminist metaet",
-                  "snippet": "Applying this perspective to the context of AI, I suggest that a feminist metaethics of AI would examine",
-                  "source_layer": "paper",
-                  "actor": "agent",
-                  "work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-                  "version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-                  "recorded_work_id": "work:5b80164e-81e9-5fdc-8569-06ef0abdf431",
-                  "recorded_version_id": "version:b252ecd6-be77-52a4-866f-949864bdbf1c",
-                  "source_path": "generated/markdown_clean/Siapka_2023_Towards_a_Feminist_Metaethics_of_AI.md",
-                  "source_sha256": "sha256:e55fe3a11269f15c1a51f2a89168e4060237dd857af85f45d955247a96d71691"
-                }
-              ]
-            }
-          ],
-          "analysis": {
-            "fields": {
-              "AN_Prompting_Role": [
-                "None"
-              ],
-              "AN_Prompt_Techniques": [
-                "None"
-              ],
-              "AN_Bias_Axes": [
-                "None"
-              ],
-              "AN_Harm_Types": [
-                "None"
-              ],
-              "AN_Mitigation_Stage": [
-                "Organisational_Process"
-              ],
-              "AN_Mitigation_Status": "Proposed",
-              "AN_Population": [
-                "Not_SW_Specific"
-              ],
-              "AN_Task": [
-                "None"
-              ],
-              "AN_Gender_Definition": "Implicit_Only",
-              "AN_Bias_Definition": "Implicit_Only",
-              "AN_Gender_Understanding": [
-                "Intersectional"
-              ],
-              "AN_Theory_Reference": "Yes",
-              "AN_Coding_Basis": "Fulltext",
-              "Studientyp": "Theoretisch"
-            },
-            "field_states": {
-              "AN_Prompting_Role": "none",
-              "AN_Prompt_Techniques": "none",
-              "AN_Bias_Axes": "none",
-              "AN_Harm_Types": "none",
-              "AN_Mitigation_Stage": "value",
-              "AN_Mitigation_Status": "value",
-              "AN_Population": "value",
-              "AN_Task": "none",
-              "AN_Gender_Definition": "value",
-              "AN_Bias_Definition": "value",
-              "AN_Gender_Understanding": "value",
-              "AN_Theory_Reference": "value",
-              "AN_Coding_Basis": "value",
-              "Studientyp": "value"
-            },
-            "notes": "Research agenda for a feminist metaethics of AI; object is AI ethics as a field, AI in general. Mitigation: proposed research into the diversity of AI ethics boards and the inclusion of those hitherto ignored in decision-making (Organisational_Process, Proposed). AN_Bias_Axes None: gender, class, race, disability and sexuality appear only as a programmatic enumeration and outlook, cited case studies are suggestions, no bias is analysed. AN_Gender_Understanding Intersectional rests on the work's own argument that AI impact is to be examined depending on gender in interaction with other identity markers; boundary case, since the argument is programmatic and no definition of gender is given (Implicit_Only from the intersectional feminist frame). Bias as structural domination and oppression is recognisable from the frame only. AI Agent Review: AN_Bias_Axes stays None because the work analyses no bias along any axis; gender with class, race, disability and sexuality appears as a programmatic research direction of the agenda (Section 3.4) and cited AI cases are illustrative case studies. AN_Gender_Understanding Intersectional is kept from both tracks because the argument of this theoretical work itself makes privilege and disadvantage depend on gender in interaction with other identity markers.",
-            "undecidable": []
-          }
         }
       ]
     },
@@ -36426,7 +35834,7 @@
           "id": "QI5AYE4V",
           "title": "Algorithmic decision-making in social work practice and pedagogy: Confronting the competency/critique dilemma",
           "author_year": "James et al. (2023)",
-          "authors": "Paul James; Jason Lal; Ashley Liao; Liam Magee; Karen Soldatic",
+          "authors": "James, Paul; Lal, Jason; Liao, Ashley; Magee, Liam; Soldatic, Karen",
           "year": 2023,
           "doi": "10.1080/02615479.2023.2195425",
           "url": "",
@@ -39495,8 +38903,8 @@
       "year": 2025,
       "doi": "10.48550/arXiv.2502.21028",
       "url": "https://arxiv.org/html/2502.21028v1",
-      "item_type": "journalArticle",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:66a2db59-a313-5f57-848f-8e987c9cd2da",
       "version_id": "version:5a86e619-97ec-5d78-9406-796aa1e5dc65",
       "bibliographic_version_id": "version:5a86e619-97ec-5d78-9406-796aa1e5dc65",
@@ -39700,8 +39108,8 @@
           "year": 2025,
           "doi": "10.48550/arXiv.2502.21028",
           "url": "https://arxiv.org/html/2502.21028v1",
-          "item_type": "journalArticle",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:66a2db59-a313-5f57-848f-8e987c9cd2da",
           "version_id": "version:5a86e619-97ec-5d78-9406-796aa1e5dc65",
           "bibliographic_version_id": "version:5a86e619-97ec-5d78-9406-796aa1e5dc65",
@@ -39842,8 +39250,8 @@
           "year": 2025,
           "doi": "10.48550/arXiv.2502.21028",
           "url": "https://arxiv.org/html/2502.21028v1",
-          "item_type": "journalArticle",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:66a2db59-a313-5f57-848f-8e987c9cd2da",
           "version_id": "version:5a86e619-97ec-5d78-9406-796aa1e5dc65",
           "bibliographic_version_id": "version:5a86e619-97ec-5d78-9406-796aa1e5dc65",
@@ -39987,7 +39395,7 @@
       "doi": "10.1177/20539517211020332",
       "url": "",
       "item_type": "journalArticle",
-      "journal": "",
+      "journal": "Big Data & Society",
       "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
       "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
       "bibliographic_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
@@ -40350,7 +39758,7 @@
           "doi": "10.1177/20539517211020332",
           "url": "",
           "item_type": "journalArticle",
-          "journal": "",
+          "journal": "Big Data & Society",
           "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
           "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
           "bibliographic_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
@@ -40614,7 +40022,7 @@
           "doi": "10.1177/20539517211020332",
           "url": "https://doi.org/10.1177/20539517211020332",
           "item_type": "journalArticle",
-          "journal": "",
+          "journal": "Big Data & Society",
           "work_id": "work:691469f6-881f-5e13-8df5-69dc64025556",
           "version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
           "bibliographic_version_id": "version:7b302d9d-e176-554e-a8aa-5e02f7334833",
@@ -46257,9 +45665,9 @@
         {
           "id": "L48P8FBG",
           "title": "Artificial intelligence in social work: An EPIC model for practice",
-          "author_year": "Goldkind et al. (2024)",
+          "author_year": "Goldkind et al. (2025)",
           "authors": "Goldkind, L.; Hamama-Raz, Y.; Levitats, Z.; Levin, L.; Ben-Ezra, M.",
-          "year": 2024,
+          "year": 2025,
           "doi": "10.1080/0312407X.2025.2488345",
           "url": "https://doi.org/10.1080/0312407X.2025.2488345",
           "item_type": "journalArticle",
@@ -46557,9 +45965,9 @@
         {
           "id": "RR5MJRBZ",
           "title": "Artificial intelligence in social work: An EPIC model for practice",
-          "author_year": "Goldkind et al. (2024)",
+          "author_year": "Goldkind et al. (2025)",
           "authors": "Goldkind, L.; Hamama-Raz, Y.; Levitats, Z.; Levin, L.; Ben-Ezra, M.",
-          "year": 2024,
+          "year": 2025,
           "doi": "10.1080/0312407X.2025.2488345",
           "url": "https://doi.org/10.1080/0312407X.2025.2488345",
           "item_type": "journalArticle",
@@ -46857,9 +46265,9 @@
         {
           "id": "ZGM7K3H6",
           "title": "Artificial intelligence in social work: An EPIC model for practice",
-          "author_year": "Goldkind et al. (2024)",
+          "author_year": "Goldkind et al. (2025)",
           "authors": "Goldkind, L.; Hamama-Raz, Y.; Levitats, Z.; Levin, L.; Ben-Ezra, M.",
-          "year": 2024,
+          "year": 2025,
           "doi": "10.1080/0312407X.2025.2488345",
           "url": "https://doi.org/10.1080/0312407X.2025.2488345",
           "item_type": "journalArticle",
@@ -47165,7 +46573,7 @@
       "doi": "10.1145/3658644.3670284",
       "url": "https://dl.acm.org/doi/10.1145/3658644.3670284",
       "item_type": "conferencePaper",
-      "journal": "",
+      "journal": "Proceedings of the 2024 on ACM SIGSAC Conference on Computer and Communications Security",
       "work_id": "work:71aad4e6-de5a-546a-9dfe-008a4fd5aa28",
       "version_id": "version:e388b2e6-914d-5839-aad2-5bd47afd57d1",
       "bibliographic_version_id": "version:e388b2e6-914d-5839-aad2-5bd47afd57d1",
@@ -47586,7 +46994,7 @@
           "doi": "10.1145/3658644.3670284",
           "url": "https://dl.acm.org/doi/10.1145/3658644.3670284",
           "item_type": "conferencePaper",
-          "journal": "",
+          "journal": "Proceedings of the 2024 on ACM SIGSAC Conference on Computer and Communications Security",
           "work_id": "work:71aad4e6-de5a-546a-9dfe-008a4fd5aa28",
           "version_id": "version:e388b2e6-914d-5839-aad2-5bd47afd57d1",
           "bibliographic_version_id": "version:e388b2e6-914d-5839-aad2-5bd47afd57d1",
@@ -49818,7 +49226,7 @@
       "doi": "10.3389/fdgth.2023.1133987",
       "url": "",
       "item_type": "journalArticle",
-      "journal": "",
+      "journal": "Frontiers in Digital Health",
       "work_id": "work:7473ae67-3f6b-5cb7-befc-df628bc87911",
       "version_id": "version:c3159829-537d-5900-9362-078e15396691",
       "bibliographic_version_id": "version:c3159829-537d-5900-9362-078e15396691",
@@ -49955,7 +49363,7 @@
           "doi": "10.3389/fdgth.2023.1133987",
           "url": "",
           "item_type": "journalArticle",
-          "journal": "",
+          "journal": "Frontiers in Digital Health",
           "work_id": "work:7473ae67-3f6b-5cb7-befc-df628bc87911",
           "version_id": "version:c3159829-537d-5900-9362-078e15396691",
           "bibliographic_version_id": "version:c3159829-537d-5900-9362-078e15396691",
@@ -50079,7 +49487,7 @@
       "doi": "",
       "url": "https://arxiv.org/html/2507.21075v1",
       "item_type": "preprint",
-      "journal": "",
+      "journal": "arXiv",
       "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
       "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
       "bibliographic_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
@@ -50266,7 +49674,7 @@
           "doi": "",
           "url": "https://arxiv.org/html/2507.21075v1",
           "item_type": "preprint",
-          "journal": "",
+          "journal": "arXiv",
           "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
           "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
           "bibliographic_version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
@@ -50436,8 +49844,8 @@
       "year": 2024,
       "doi": "10.48550/arXiv.2404.17218",
       "url": "https://doi.org/10.48550/arXiv.2404.17218",
-      "item_type": "journalArticle",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
       "version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
       "bibliographic_version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
@@ -50885,8 +50293,8 @@
           "year": 2024,
           "doi": "10.48550/arXiv.2404.17218",
           "url": "https://doi.org/10.48550/arXiv.2404.17218",
-          "item_type": "journalArticle",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
           "version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
           "bibliographic_version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
@@ -51133,8 +50541,8 @@
           "year": 2024,
           "doi": "10.48550/arXiv.2404.17218",
           "url": "https://doi.org/10.48550/arXiv.2404.17218",
-          "item_type": "journalArticle",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
           "version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
           "bibliographic_version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
@@ -51381,8 +50789,8 @@
           "year": 2024,
           "doi": "10.48550/arXiv.2404.17218",
           "url": "https://doi.org/10.48550/arXiv.2404.17218",
-          "item_type": "journalArticle",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
           "version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
           "bibliographic_version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
@@ -58009,8 +57417,8 @@
       "year": 2024,
       "doi": "",
       "url": "https://arxiv.org/abs/2401.15585",
-      "item_type": "report",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
       "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
       "bibliographic_version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
@@ -58252,8 +57660,8 @@
           "year": 2024,
           "doi": "",
           "url": "https://arxiv.org/abs/2401.15585",
-          "item_type": "report",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:843c90a1-99ba-5cbf-9c92-df165923d2b2",
           "version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
           "bibliographic_version_id": "version:5d14f904-8bae-5aae-80af-d807533bd251",
@@ -61519,7 +60927,7 @@
       "doi": "10.18653/v1/2023.findings-emnlp.575",
       "url": "https://aclanthology.org/2023.findings-emnlp.575.pdf",
       "item_type": "conferencePaper",
-      "journal": "",
+      "journal": "Findings of the Association for Computational Linguistics: EMNLP 2023",
       "work_id": "work:911db802-eb4b-502b-89b8-d4325036409f",
       "version_id": "version:20aa2ad6-fa2b-5845-8886-faacb95676dc",
       "bibliographic_version_id": "version:20aa2ad6-fa2b-5845-8886-faacb95676dc",
@@ -61776,7 +61184,7 @@
           "doi": "10.18653/v1/2023.findings-emnlp.575",
           "url": "https://aclanthology.org/2023.findings-emnlp.575.pdf",
           "item_type": "conferencePaper",
-          "journal": "",
+          "journal": "Findings of the Association for Computational Linguistics: EMNLP 2023",
           "work_id": "work:911db802-eb4b-502b-89b8-d4325036409f",
           "version_id": "version:20aa2ad6-fa2b-5845-8886-faacb95676dc",
           "bibliographic_version_id": "version:20aa2ad6-fa2b-5845-8886-faacb95676dc",
@@ -64790,7 +64198,7 @@
       "doi": "10.3390/socsci8100281",
       "url": "",
       "item_type": "journalArticle",
-      "journal": "",
+      "journal": "Social Sciences",
       "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
       "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
       "bibliographic_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
@@ -65174,7 +64582,7 @@
           "doi": "10.3390/socsci8100281",
           "url": "",
           "item_type": "journalArticle",
-          "journal": "",
+          "journal": "Social Sciences",
           "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
           "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
           "bibliographic_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
@@ -65459,7 +64867,7 @@
           "doi": "10.3390/socsci8100281",
           "url": "https://doi.org/10.3390/socsci8100281",
           "item_type": "journalArticle",
-          "journal": "",
+          "journal": "Social Sciences",
           "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
           "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
           "bibliographic_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
@@ -67033,15 +66441,15 @@
       "year": 2024,
       "doi": "",
       "url": "https://arxiv.org/html/2409.13935v1",
-      "item_type": "report",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:a590b918-812f-5ef1-b5ca-d0fd24168a0b",
       "version_id": "version:6308aeed-c452-582e-bba9-06207e8d81d3",
       "bibliographic_version_id": "version:6308aeed-c452-582e-bba9-06207e8d81d3",
       "source_version_id": "version:6308aeed-c452-582e-bba9-06207e8d81d3",
       "source_binding": null,
       "version_type": "preprint",
-      "version_date": "2024",
+      "version_date": "2024-09-20",
       "peer_review_status": "not_established",
       "peer_review_basis": "unknown",
       "preferred_version_id": "version:6308aeed-c452-582e-bba9-06207e8d81d3",
@@ -67051,7 +66459,7 @@
         {
           "version_id": "version:6308aeed-c452-582e-bba9-06207e8d81d3",
           "version_type": "preprint",
-          "version_date": "2024",
+          "version_date": "2024-09-20",
           "identifiers": {
             "zotero_key": [
               "UDZLIJWX"
@@ -67263,15 +66671,15 @@
           "year": 2024,
           "doi": "",
           "url": "https://arxiv.org/html/2409.13935v1",
-          "item_type": "report",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:a590b918-812f-5ef1-b5ca-d0fd24168a0b",
           "version_id": "version:6308aeed-c452-582e-bba9-06207e8d81d3",
           "bibliographic_version_id": "version:6308aeed-c452-582e-bba9-06207e8d81d3",
           "source_version_id": "version:6308aeed-c452-582e-bba9-06207e8d81d3",
           "source_binding": null,
           "version_type": "preprint",
-          "version_date": "2024",
+          "version_date": "2024-09-20",
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "preferred_version_id": "version:6308aeed-c452-582e-bba9-06207e8d81d3",
@@ -67281,7 +66689,7 @@
             {
               "version_id": "version:6308aeed-c452-582e-bba9-06207e8d81d3",
               "version_type": "preprint",
-              "version_date": "2024",
+              "version_date": "2024-09-20",
               "identifiers": {
                 "zotero_key": [
                   "UDZLIJWX"
@@ -69225,8 +68633,8 @@
       "year": 2024,
       "doi": "",
       "url": "https://arxiv.org/abs/2406.05602",
-      "item_type": "report",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:ac1e84f3-7dd6-56fd-935e-2b5eb606b361",
       "version_id": "version:be0ae248-5dd8-5796-bf3e-d40f3e69195a",
       "bibliographic_version_id": "version:be0ae248-5dd8-5796-bf3e-d40f3e69195a",
@@ -69487,8 +68895,8 @@
           "year": 2024,
           "doi": "",
           "url": "https://arxiv.org/abs/2406.05602",
-          "item_type": "report",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:ac1e84f3-7dd6-56fd-935e-2b5eb606b361",
           "version_id": "version:be0ae248-5dd8-5796-bf3e-d40f3e69195a",
           "bibliographic_version_id": "version:be0ae248-5dd8-5796-bf3e-d40f3e69195a",
@@ -78457,7 +77865,7 @@
           "id": "ZITLBM8A",
           "title": "ChatGPT for social work science: Ethical challenges and opportunities",
           "author_year": "Patton et al. (2023)",
-          "authors": "Desmond Upton Patton; Aviv Y. Landau; Siva Mathiyazhagan",
+          "authors": "Patton, Desmond Upton; Landau, Aviv Y.; Mathiyazhagan, Siva",
           "year": 2023,
           "doi": "10.1086/726042",
           "url": "",
@@ -80536,7 +79944,7 @@
       "doi": "10.18653/v1/2024.gebnlp-1.7",
       "url": "https://doi.org/10.18653/v1/2024.gebnlp-1.7",
       "item_type": "conferencePaper",
-      "journal": "",
+      "journal": "Proceedings of the 5th Workshop on Gender Bias in Natural Language Processing (GeBNLP)",
       "work_id": "work:cfde9315-c968-5cb3-871c-b78b3feebfb1",
       "version_id": "version:26d8700f-ecf9-5573-967f-cb8dfc1ba7a0",
       "bibliographic_version_id": "version:26d8700f-ecf9-5573-967f-cb8dfc1ba7a0",
@@ -80862,7 +80270,7 @@
           "doi": "10.18653/v1/2024.gebnlp-1.7",
           "url": "https://doi.org/10.18653/v1/2024.gebnlp-1.7",
           "item_type": "conferencePaper",
-          "journal": "",
+          "journal": "Proceedings of the 5th Workshop on Gender Bias in Natural Language Processing (GeBNLP)",
           "work_id": "work:cfde9315-c968-5cb3-871c-b78b3feebfb1",
           "version_id": "version:26d8700f-ecf9-5573-967f-cb8dfc1ba7a0",
           "bibliographic_version_id": "version:26d8700f-ecf9-5573-967f-cb8dfc1ba7a0",
@@ -82127,20 +81535,20 @@
     {
       "id": "3AHQEHDF",
       "title": "Multilingual Prompting for Improving LLM Generation Diversity",
-      "author_year": "Wang et al. (2024)",
+      "author_year": "Wang et al. (2025)",
       "authors": "Wang, Q.; Pan, S.; Linzen, T.; Black, E.",
-      "year": 2024,
+      "year": 2025,
       "doi": "",
       "url": "https://arxiv.org/html/2505.15229v1",
-      "item_type": "report",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
       "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
       "bibliographic_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
       "source_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
       "source_binding": null,
       "version_type": "preprint",
-      "version_date": "2024",
+      "version_date": "2025-05-21",
       "peer_review_status": "not_established",
       "peer_review_basis": "unknown",
       "preferred_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
@@ -82150,7 +81558,7 @@
         {
           "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
           "version_type": "preprint",
-          "version_date": "2024",
+          "version_date": "2025-05-21",
           "identifiers": {
             "zotero_key": [
               "3AHQEHDF",
@@ -82172,7 +81580,7 @@
         }
       ],
       "identity_basis": "work_version_registry",
-      "knowledge_coverage": "fulltext_ready",
+      "knowledge_coverage": "linked",
       "decision": "Include",
       "reason": null,
       "text_source": "raw",
@@ -82435,20 +81843,20 @@
         {
           "id": "3AHQEHDF",
           "title": "Multilingual Prompting for Improving LLM Generation Diversity",
-          "author_year": "Wang et al. (2024)",
+          "author_year": "Wang et al. (2025)",
           "authors": "Wang, Q.; Pan, S.; Linzen, T.; Black, E.",
-          "year": 2024,
+          "year": 2025,
           "doi": "",
           "url": "https://arxiv.org/html/2505.15229v1",
-          "item_type": "report",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
           "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
           "bibliographic_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
           "source_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
           "source_binding": null,
           "version_type": "preprint",
-          "version_date": "2024",
+          "version_date": "2025-05-21",
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "preferred_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
@@ -82458,7 +81866,7 @@
             {
               "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
               "version_type": "preprint",
-              "version_date": "2024",
+              "version_date": "2025-05-21",
               "identifiers": {
                 "zotero_key": [
                   "3AHQEHDF",
@@ -82480,7 +81888,7 @@
             }
           ],
           "identity_basis": "work_version_registry",
-          "knowledge_coverage": "fulltext_ready",
+          "knowledge_coverage": "linked",
           "decision": "Include",
           "reason": null,
           "text_source": "raw",
@@ -82661,15 +82069,15 @@
           "year": 2025,
           "doi": "",
           "url": "https://arxiv.org/html/2505.15229v1",
-          "item_type": "report",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:d7b6a6c3-e1e3-56fb-9a31-018321e78184",
           "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
           "bibliographic_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
           "source_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
           "source_binding": null,
           "version_type": "preprint",
-          "version_date": "2024",
+          "version_date": "2025-05-21",
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "preferred_version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
@@ -82679,7 +82087,7 @@
             {
               "version_id": "version:9cbc194f-bc9a-5b84-a2b2-9c654f8d56ca",
               "version_type": "preprint",
-              "version_date": "2024",
+              "version_date": "2025-05-21",
               "identifiers": {
                 "zotero_key": [
                   "3AHQEHDF",
@@ -84915,8 +84323,8 @@
       "year": 2023,
       "doi": "",
       "url": "https://arxiv.org/abs/2305.06969",
-      "item_type": "conferencePaper",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:dc0ed550-b389-5fef-bfbe-1f9f335aa7a9",
       "version_id": "version:d05b8a44-c2b0-5a04-9cd0-73f6b59f0518",
       "bibliographic_version_id": "version:d05b8a44-c2b0-5a04-9cd0-73f6b59f0518",
@@ -85196,8 +84604,8 @@
           "year": 2023,
           "doi": "",
           "url": "https://arxiv.org/abs/2305.06969",
-          "item_type": "conferencePaper",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:dc0ed550-b389-5fef-bfbe-1f9f335aa7a9",
           "version_id": "version:d05b8a44-c2b0-5a04-9cd0-73f6b59f0518",
           "bibliographic_version_id": "version:d05b8a44-c2b0-5a04-9cd0-73f6b59f0518",
@@ -85458,8 +84866,8 @@
       "year": 2024,
       "doi": "",
       "url": "https://arxiv.org/html/2405.01286v1",
-      "item_type": "report",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:df97aeb3-d0d0-511e-a919-6e535ce3cb3b",
       "version_id": "version:3a40ee22-5db9-569d-b8fc-8dfbed340b11",
       "bibliographic_version_id": "version:3a40ee22-5db9-569d-b8fc-8dfbed340b11",
@@ -85498,7 +84906,7 @@
         }
       },
       "version_type": "preprint",
-      "version_date": "2024",
+      "version_date": "2024-05-02",
       "peer_review_status": "not_established",
       "peer_review_basis": "unknown",
       "preferred_version_id": "version:3a40ee22-5db9-569d-b8fc-8dfbed340b11",
@@ -85508,7 +84916,7 @@
         {
           "version_id": "version:3a40ee22-5db9-569d-b8fc-8dfbed340b11",
           "version_type": "preprint",
-          "version_date": "2024",
+          "version_date": "2024-05-02",
           "identifiers": {
             "zotero_key": [
               "UFJ7ERFF"
@@ -85856,8 +85264,8 @@
           "year": 2024,
           "doi": "",
           "url": "https://arxiv.org/html/2405.01286v1",
-          "item_type": "report",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:df97aeb3-d0d0-511e-a919-6e535ce3cb3b",
           "version_id": "version:3a40ee22-5db9-569d-b8fc-8dfbed340b11",
           "bibliographic_version_id": "version:3a40ee22-5db9-569d-b8fc-8dfbed340b11",
@@ -85896,7 +85304,7 @@
             }
           },
           "version_type": "preprint",
-          "version_date": "2024",
+          "version_date": "2024-05-02",
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "preferred_version_id": "version:3a40ee22-5db9-569d-b8fc-8dfbed340b11",
@@ -85906,7 +85314,7 @@
             {
               "version_id": "version:3a40ee22-5db9-569d-b8fc-8dfbed340b11",
               "version_type": "preprint",
-              "version_date": "2024",
+              "version_date": "2024-05-02",
               "identifiers": {
                 "zotero_key": [
                   "UFJ7ERFF"
@@ -87812,7 +87220,7 @@
           "id": "AMYZFAPH",
           "title": "Recommendations for social work researchers and journal editors on the use of generative AI and large language models",
           "author_year": "Victor et al. (2023)",
-          "authors": "Bryan G. Victor; Rebeccah L. Sokol; Lauri Goldkind; Brian E. Perron",
+          "authors": "Victor, Bryan G.; Sokol, Rebeccah L.; Goldkind, Lauri; Perron, Brian E.",
           "year": 2023,
           "doi": "10.1086/726021",
           "url": "",
@@ -88882,8 +88290,8 @@
       "year": 2025,
       "doi": "",
       "url": "https://arxiv.org/abs/2506.21898",
-      "item_type": "journalArticle",
-      "journal": "",
+      "item_type": "preprint",
+      "journal": "arXiv",
       "work_id": "work:e71afce5-ff3c-58e5-b8b8-6089b5b46f4d",
       "version_id": "version:bc43c4bd-7369-561e-9f60-5cbde9219634",
       "bibliographic_version_id": "version:bc43c4bd-7369-561e-9f60-5cbde9219634",
@@ -89434,8 +88842,8 @@
           "year": 2025,
           "doi": "",
           "url": "https://arxiv.org/abs/2506.21898",
-          "item_type": "journalArticle",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:e71afce5-ff3c-58e5-b8b8-6089b5b46f4d",
           "version_id": "version:bc43c4bd-7369-561e-9f60-5cbde9219634",
           "bibliographic_version_id": "version:bc43c4bd-7369-561e-9f60-5cbde9219634",
@@ -89779,8 +89187,8 @@
           "year": 2025,
           "doi": "",
           "url": "https://arxiv.org/abs/2506.21898",
-          "item_type": "journalArticle",
-          "journal": "",
+          "item_type": "preprint",
+          "journal": "arXiv",
           "work_id": "work:e71afce5-ff3c-58e5-b8b8-6089b5b46f4d",
           "version_id": "version:bc43c4bd-7369-561e-9f60-5cbde9219634",
           "bibliographic_version_id": "version:bc43c4bd-7369-561e-9f60-5cbde9219634",

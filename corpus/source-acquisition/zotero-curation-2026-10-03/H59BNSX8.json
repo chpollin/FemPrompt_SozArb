@@ -1,0 +1,180 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "H59BNSX8",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1080%2F02615479.2023.2195425",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/c38187ee5d4b2c82c490.json",
+      "origin_artifact_sha256": "sha256:1c741c83fcfa812900a5a2a8f988af3aad6ca3afa043466c645a0a74e91a357c",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "issue": "6",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              17
+            ]
+          ]
+        },
+        "DOI": "10.1080/02615479.2023.2195425",
+        "type": "journal-article",
+        "page": "1552-1569",
+        "title": [
+          "Algorithmic decision-making in social work practice and pedagogy: confronting the competency/critique dilemma"
+        ],
+        "volume": "43",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-8591-4594",
+            "authenticated-orcid": false,
+            "given": "Paul",
+            "family": "James",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Western Sydney",
+                "place": [
+                  "Sydney, Australia"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jason",
+            "family": "Lal",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Western Sydney",
+                "place": [
+                  "Sydney, Australia"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ashley",
+            "family": "Liao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Western Sydney",
+                "place": [
+                  "Sydney, Australia"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2696-1064",
+            "authenticated-orcid": false,
+            "given": "Liam",
+            "family": "Magee",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Western Sydney",
+                "place": [
+                  "Sydney, Australia"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8139-2912",
+            "authenticated-orcid": false,
+            "given": "Karen",
+            "family": "Soldatic",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Western Sydney",
+                "place": [
+                  "Sydney, Australia"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              3,
+              27
+            ]
+          ]
+        },
+        "container-title": [
+          "Social Work Education"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              3,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/02615479.2023.2195425",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              3,
+              27
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://doi.org/10.1080/02615479.2023.2195425",
+      "locator": "Publisher title page and author block in existing Docling conversion",
+      "origin_path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+      "origin_artifact_sha256": "sha256:0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a",
+      "bibliographic_metadata": {
+        "existing_source_path": "generated/markdown_clean/James_2023_Algorithmic_decision-making_in_social_work.md",
+        "existing_sha256": "sha256:0eaf52a70efb9579f2b1b8bf5df9e674cf57690b8e3f78c654d2bfea232ea95a",
+        "locator": "Publisher title page and author block in existing Docling conversion",
+        "quote": null
+      }
+    }
+  ]
+}

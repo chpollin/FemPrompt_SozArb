@@ -1,0 +1,40 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "YMABYPKF",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/html/2402.14875v3",
+      "locator": "key=YMABYPKF, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "What's in a Name? Auditing Large Language Models for Race and Gender Bias"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2402.14875"
+          ],
+          "citation_date": [
+            "2024/02/21"
+          ],
+          "citation_abstract": [
+            "We employ an audit design to investigate biases in state-of-the-art large language models, including GPT-4. In our study, we prompt the models for advice involving a named individual across a variety of scenarios, such as during car purchase negotiations or election outcome predictions. We find that the advice systematically disadvantages names that are commonly associated with racial minorities and women. Names associated with Black women receive the least advantageous outcomes. The biases are consistent across 42 prompt templates and several models, indicating a systemic issue rather than isolated incidents. While providing numerical, decision-relevant anchors in the prompt can successfully counteract the biases, qualitative details have inconsistent effects and may even increase disparities. Our findings underscore the importance of conducting audits at the point of LLM deployment and implementation to mitigate their potential for harm against marginalized communities."
+          ],
+          "citation_online_date": [
+            "2025/01/24"
+          ],
+          "citation_author": [
+            "Salinas, Alejandro",
+            "Haim, Amit",
+            "Nyarko, Julian"
+          ],
+          "citation_arxiv_id": [
+            "2402.14875"
+          ]
+        }
+      ]
+    }
+  ]
+}

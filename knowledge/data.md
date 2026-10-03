@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-02
+updated: 2026-10-03
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -68,6 +68,16 @@ Ten three-level categories (nein/teilweise/ja = 0/1/2), split into two dimension
 - Exclusion reasons (controlled): `Duplicate`, `Not_relevant_topic`, `Wrong_publication_type`, `No_full_text`, `Language`, and `Consolidated_expert_exclusion`. The last one confirms a consolidated expert Exclude in PRISM without a substantive reason of its own (ADR-042) and is offered only on a draft seeded from the expert decision.
 
 Canonical definitions stay in `assessment/categories.yaml`. `src/publish/build_category_schema.py` publishes the frontend projection `docs/data/category_schema.json`, which contains keys, groups, labels, definitions, colours, decision options, exclusion reasons and their German display labels (`exclusion_reason_labels`). Stored records always use the codes. PRISM, its CSV converter, the Companion, and the Literature Landscape consume this projection. The repository test compares it with the canonical YAML and blocks schema drift.
+
+## Bibliographic correction and provenance projections
+
+`corpus/zotero_export.json` remains the historical input. `corpus/metadata_corrections.json` applies reviewed field changes through original-record hashes, exact before values and source hashes. Bibliographic evidence for the 3 October 2026 curation lives under `corpus/source-acquisition/zotero-curation-2026-10-03/`. Private whole-library snapshots and notes remain outside Git. The live verification receipt establishes which external operation was read back without treating all remaining records as bibliographically verified.
+
+The correction contract supports Zotero's native `proceedingsTitle`, `institution`, `university`, `volume`, `issue` and `pages` fields. Container projection prefers the field appropriate to the current document type, then retains legacy fallback behavior. A type change preserves the original export fields as historical data and uses the corrected type for display. Every correction retains its reviewing actor and evidence. Local identifier enrichment is explicitly deferred where it would silently combine established Work/Version identities. A correct identifier in Zotero therefore does not imply that the historical research registry has been migrated. `deferred_metadata_enrichments` likewise preserves verified live identity-field enrichments that would invalidate historical knowledge links, candidate links or explicit recovery contracts, including their same-Version aliases. These local deferrals keep the original historical projection and the corrected live bibliography distinct.
+
+`corpus/source_version_bindings.json` retains the original source hashes, identities and identity-check values required by immutable AI-review receipts. Candidate rechecks against corrected metadata are preserved separately in `source-rechecks.json`. Where a changed check would invalidate those historical receipts, the corresponding local metadata enrichment is deferred. The validators and historical receipts remain unchanged. A genuine source-version mismatch becomes an evidence-bound synthesis hold in the historical-resolution contract. The selected arXiv record for *Towards a Feminist Metaethics of AI* remains separate from its currently bound ACM conference text until their expression relationship has been reconciled.
+
+`corpus/source_tool_mapping.json` preserves the legacy mappings consumed by historical replay. Its `documented_item_provenance` and `confirmed_source_tool_mapping` fields record the current evidenced discovery paths, allowing several systems per record. `inferred_source_tool_mapping` preserves the earlier title-based inference separately. Current collection names, historical names, source-access dates and established search runs have distinct fields. Current provenance is not retroactively substituted into the historical PRISMA replay. A later consumer change must explicitly select the documented provenance and preserve the original research-round boundaries.
 
 ## Analysis vocabulary projection
 

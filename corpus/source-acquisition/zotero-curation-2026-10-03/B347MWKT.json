@@ -1,0 +1,78 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "B347MWKT",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1215%2F2834703x-12095946",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/00857e27edc7e19c6319.json",
+      "origin_artifact_sha256": "sha256:2fc4b74d2fcc78339d158d2c9779a17570c0fd0ef971c8f4e295281c9dcb621a",
+      "bibliographic_metadata": {
+        "publisher": "Duke University Press",
+        "issue": "2",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1215/2834703x-12095946",
+        "type": "journal-article",
+        "title": [
+          "The Politics of Prompt Engineering"
+        ],
+        "volume": "3",
+        "author": [
+          {
+            "given": "Matthew",
+            "family": "Halm",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              1
+            ]
+          ]
+        },
+        "container-title": [
+          "Critical AI"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1215/2834703x-12095946",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              1
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -5,11 +5,11 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "f29da32b20c1b4f4250d7371097489e45de0a972535f0753c53e010f017efe94",
+    "research_vault_sha256": "14307a8f236a9095cacdbf025f792dbe65a8ad56765a64486f17cc6a29e2cd27",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "2aae636d9d09e735053b48684c983acd23211567de1d16e534110ae99aa67874",
+    "fulltext_manifest_sha256": "51549532113e21ab271d920486a2c88f4163d95c1dd75faef2b9ac0b9b101834",
     "work_version_registry": "corpus/work_version_registry.json",
-    "work_version_registry_sha256": "36a562a6ad952bffed8b27118c2dad65ad057ec003011dbd1f2250a9ba916abb",
+    "work_version_registry_sha256": "ff6ce0407577968b0ffa88af557a93e24b96b93132f567dedc320aa1dab6cd4d",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
@@ -5628,7 +5628,7 @@
         "VXDH5KWP"
       ],
       "title": "AI Literacy and Gender Bias: Comparative Perspectives from the UK and Indonesia",
-      "author_year": "Andryani (2025)",
+      "author_year": "Tunjungbiru et al. (2025)",
       "doi": "10.3390/educsci15091143",
       "url": "https://www.mdpi.com/2227-7102/15/9/1143",
       "abstract_available": true,

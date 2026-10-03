@@ -1,0 +1,155 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "ZMW228P6",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1145%2F3600211.3604705",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/88a326c2c01bf269d8ad.json",
+      "origin_artifact_sha256": "sha256:5fd2ac1c3ff130e09c8f5b7909d8274055e4c7d6740c40c36950ef7fe4d07c48",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              8
+            ]
+          ]
+        },
+        "DOI": "10.1145/3600211.3604705",
+        "type": "proceedings-article",
+        "page": "496-511",
+        "title": [
+          "Factoring the Matrix of Domination: A Critical Review and Reimagination of Intersectionality in AI Fairness"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-0531-7520",
+            "authenticated-orcid": false,
+            "given": "Anaelia",
+            "family": "Ovalle",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Computer Science, University of California, Los Angeles, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0415-3800",
+            "authenticated-orcid": false,
+            "given": "Arjun",
+            "family": "Subramonian",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Computer Science, University of California, Los Angeles, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7263-8578",
+            "authenticated-orcid": false,
+            "given": "Vagrant",
+            "family": "Gautam",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Computer Science, Saarland University, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1716-9465",
+            "authenticated-orcid": false,
+            "given": "Gilbert",
+            "family": "Gee",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Community Health Sciences, University of California, Los Angeles, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5365-0072",
+            "authenticated-orcid": false,
+            "given": "Kai-Wei",
+            "family": "Chang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Computer Science, University of California, Los Angeles, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              29
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the 2023 AAAI/ACM Conference on AI, Ethics, and Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              8
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3600211.3604705",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              8
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

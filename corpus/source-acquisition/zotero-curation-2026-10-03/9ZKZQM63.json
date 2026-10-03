@@ -1,0 +1,125 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "9ZKZQM63",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550%2Farxiv.2406.12033",
+      "locator": "keys contains 9ZKZQM63, metadata.creators/types/url",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry-results.json",
+      "origin_artifact_sha256": "sha256:f261a17c9cee9fdc126f44b1c2d516760eef553ce21146a2d441d0cecb21596c",
+      "bibliographic_metadata": [
+        {
+          "doi": "10.48550/arxiv.2406.12033",
+          "creators": [
+            {
+              "name": "Wang, Yuqing",
+              "nameType": "Personal",
+              "givenName": "Yuqing",
+              "familyName": "Wang",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Zhao, Yun",
+              "nameType": "Personal",
+              "givenName": "Yun",
+              "familyName": "Zhao",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Keller, Sara Alessandra",
+              "nameType": "Personal",
+              "givenName": "Sara Alessandra",
+              "familyName": "Keller",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "de Hond, Anne",
+              "nameType": "Personal",
+              "givenName": "Anne",
+              "familyName": "de Hond",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "van Buchem, Marieke M.",
+              "nameType": "Personal",
+              "givenName": "Marieke M.",
+              "familyName": "van Buchem",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Pillai, Malvika",
+              "nameType": "Personal",
+              "givenName": "Malvika",
+              "familyName": "Pillai",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Hernandez-Boussard, Tina",
+              "nameType": "Personal",
+              "givenName": "Tina",
+              "familyName": "Hernandez-Boussard",
+              "affiliation": [],
+              "nameIdentifiers": []
+            }
+          ],
+          "titles": [
+            {
+              "title": "Unveiling and Mitigating Bias in Mental Health Analysis with Large Language Models"
+            }
+          ],
+          "publisher": "arXiv",
+          "publicationYear": 2024,
+          "dates": [
+            {
+              "date": "2024-06-17T19:05:32Z",
+              "dateType": "Submitted",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2024-06-19T00:08:09Z",
+              "dateType": "Updated",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2024-06-19T18:28:22Z",
+              "dateType": "Submitted",
+              "dateInformation": "v2"
+            },
+            {
+              "date": "2024-06-21T00:57:31Z",
+              "dateType": "Updated",
+              "dateInformation": "v2"
+            },
+            {
+              "date": "2024-06",
+              "dateType": "Available",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2024",
+              "dateType": "Issued"
+            }
+          ],
+          "types": {
+            "ris": "GEN",
+            "bibtex": "misc",
+            "citeproc": "article",
+            "schemaOrg": "CreativeWork",
+            "resourceType": "Article",
+            "resourceTypeGeneral": "Preprint"
+          },
+          "version": "2",
+          "url": "https://arxiv.org/abs/2406.12033",
+          "published": "2024"
+        }
+      ]
+    }
+  ]
+}

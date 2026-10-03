@@ -1,0 +1,126 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "Y4BMCI2J",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://doi.org/10.48550/arXiv.2506.18199",
+      "locator": "key=Y4BMCI2J, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models: A Systematic Review"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2506.18199"
+          ],
+          "citation_date": [
+            "2025/06/22"
+          ],
+          "citation_abstract": [
+            "Large language models have demonstrated remarkable capabilities across various domains, yet concerns about cultural bias - particularly towards Arabs and Muslims - pose significant ethical challenges by perpetuating harmful stereotypes and marginalization. Despite growing recognition of bias in LLMs, prompt engineering strategies specifically addressing Arab and Muslim representation remain understudied. This mixed-methods systematic review examines such techniques, offering evidence-based guidance for researchers and practitioners. Following PRISMA guidelines and Kitchenham's systematic review methodology, we analyzed 8 empirical studies published between 2021-2024 investigating bias mitigation strategies. Our findings reveal five primary prompt engineering approaches: cultural prompting, affective priming, self-debiasing techniques, structured multi-step pipelines, and parameter-optimized continuous prompts. Although all approaches show potential for reducing bias, effectiveness varied substantially across studies and bias types. Evidence suggests that certain bias types may be more resistant to prompt-based mitigation than others. Structured multi-step pipelines demonstrated the highest overall effectiveness, achieving up to 87.7% reduction in bias, though they require greater technical expertise. Cultural prompting offers broader accessibility with substantial effectiveness. These results underscore the accessibility of prompt engineering for mitigating cultural bias without requiring access to model parameters. The limited number of studies identified highlights a significant research gap in this critical area. Future research should focus on developing culturally adaptive prompting techniques, creating Arab and Muslim-specific evaluation resources, and integrating prompt engineering with complementary debiasing methods to address deeper stereotypes while maintaining model utility."
+          ],
+          "citation_online_date": [
+            "2025/07/30"
+          ],
+          "citation_author": [
+            "Asseri, Bushra",
+            "Abdelaziz, Estabrag",
+            "Al-Wabil, Areej"
+          ],
+          "citation_arxiv_id": [
+            "2506.18199"
+          ]
+        }
+      ]
+    },
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550%2Farxiv.2506.18199",
+      "locator": "keys contains Y4BMCI2J, metadata.creators/types/url",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry-results.json",
+      "origin_artifact_sha256": "sha256:f261a17c9cee9fdc126f44b1c2d516760eef553ce21146a2d441d0cecb21596c",
+      "bibliographic_metadata": [
+        {
+          "doi": "10.48550/arxiv.2506.18199",
+          "creators": [
+            {
+              "name": "Asseri, Bushra",
+              "nameType": "Personal",
+              "givenName": "Bushra",
+              "familyName": "Asseri",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Abdelaziz, Estabrag",
+              "nameType": "Personal",
+              "givenName": "Estabrag",
+              "familyName": "Abdelaziz",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Al-Wabil, Areej",
+              "nameType": "Personal",
+              "givenName": "Areej",
+              "familyName": "Al-Wabil",
+              "affiliation": [],
+              "nameIdentifiers": []
+            }
+          ],
+          "titles": [
+            {
+              "title": "Prompt Engineering Techniques for Mitigating Cultural Bias Against Arabs and Muslims in Large Language Models: A Systematic Review"
+            }
+          ],
+          "publisher": "arXiv",
+          "publicationYear": 2025,
+          "dates": [
+            {
+              "date": "2025-06-22T23:15:25Z",
+              "dateType": "Submitted",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2025-06-24T00:52:03Z",
+              "dateType": "Updated",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2025-07-30T19:07:18Z",
+              "dateType": "Withdrawn",
+              "dateInformation": "v2; Research is incomplete"
+            },
+            {
+              "date": "2025-08-01T00:04:22Z",
+              "dateType": "Updated",
+              "dateInformation": "v2"
+            },
+            {
+              "date": "2025-06",
+              "dateType": "Available",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2025",
+              "dateType": "Issued"
+            }
+          ],
+          "types": {
+            "ris": "GEN",
+            "bibtex": "misc",
+            "citeproc": "article",
+            "schemaOrg": "CreativeWork",
+            "resourceType": "Article",
+            "resourceTypeGeneral": "Preprint"
+          },
+          "version": "2",
+          "url": "https://arxiv.org/abs/2506.18199",
+          "published": "2025"
+        }
+      ]
+    }
+  ]
+}

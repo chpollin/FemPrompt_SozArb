@@ -1,0 +1,212 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "22KJL3PC",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1177%2F18344909251355673",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/cc0ccd021b1030dc696b.json",
+      "origin_artifact_sha256": "sha256:fe42b368769c6754a8c3d94739c8ba4992fdc53634bfe6c3f3b303b8084e7eb9",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              9
+            ]
+          ]
+        },
+        "DOI": "10.1177/18344909251355673",
+        "type": "journal-article",
+        "title": [
+          "The cultural stereotype and cultural bias of ChatGPT"
+        ],
+        "volume": "19",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-4988-4383",
+            "authenticated-orcid": false,
+            "given": "Hang",
+            "family": "Yuan",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Psychology, Guangdong Provincial Key Laboratory of Social Cognitive Neuroscience and Mental Health, Guangdong Provincial Key Laboratory of Brain Function and Disease, Sun Yat-Sen University, Guangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhongyue",
+            "family": "Che",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Psychology, Guangdong Provincial Key Laboratory of Social Cognitive Neuroscience and Mental Health, Guangdong Provincial Key Laboratory of Brain Function and Disease, Sun Yat-Sen University, Guangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yue",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Psychology, Guangdong Provincial Key Laboratory of Social Cognitive Neuroscience and Mental Health, Guangdong Provincial Key Laboratory of Brain Function and Disease, Sun Yat-Sen University, Guangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Shao",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Psychology, Guangdong Provincial Key Laboratory of Social Cognitive Neuroscience and Mental Health, Guangdong Provincial Key Laboratory of Brain Function and Disease, Sun Yat-Sen University, Guangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xianger",
+            "family": "Yuan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Psychology, Guangdong Provincial Key Laboratory of Social Cognitive Neuroscience and Mental Health, Guangdong Provincial Key Laboratory of Brain Function and Disease, Sun Yat-Sen University, Guangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Liqin",
+            "family": "Huang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Psychology, Guangdong Provincial Key Laboratory of Social Cognitive Neuroscience and Mental Health, Guangdong Provincial Key Laboratory of Brain Function and Disease, Sun Yat-Sen University, Guangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xiaomeng",
+            "family": "Hu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Psychology, Renmin University of China, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kaiping",
+            "family": "Peng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Psychology, Tsinghua University, Beijing, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-1067-7560",
+            "authenticated-orcid": false,
+            "given": "Siyang",
+            "family": "Luo",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Psychology, Guangdong Provincial Key Laboratory of Social Cognitive Neuroscience and Mental Health, Guangdong Provincial Key Laboratory of Brain Function and Disease, Sun Yat-Sen University, Guangzhou, China"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              4
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Pacific Rim Psychology"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              4
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/18344909251355673",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              4
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

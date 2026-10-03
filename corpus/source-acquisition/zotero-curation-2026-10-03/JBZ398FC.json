@@ -1,0 +1,116 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "JBZ398FC",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1016%2Fj.childyouth.2023.107117",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/8e164c72f634bc1eaadd.json",
+      "origin_artifact_sha256": "sha256:5d93e032f025f97f7c1b219c6f82e1e9a9d22d5ab72145c372b4e7e4b4c1a245",
+      "bibliographic_metadata": {
+        "publisher": "Elsevier BV",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              10
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.childyouth.2023.107117",
+        "type": "journal-article",
+        "page": "107117",
+        "title": [
+          "Predicting successful placements for youth in child welfare with machine learning"
+        ],
+        "volume": "153",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-0615-0590",
+            "authenticated-orcid": false,
+            "given": "Kimberlee J.",
+            "family": "Trudeau",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jichen",
+            "family": "Yang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jiaming",
+            "family": "Di",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yi",
+            "family": "Lu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "David R.",
+            "family": "Kraus",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Children and Youth Services Review"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              10
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.childyouth.2023.107117",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              10
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "5G2VPZR8",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2F978-3-032-07830-8_12",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/5f437132774350ec71e5.json",
+      "origin_artifact_sha256": "sha256:9678b984d52ca0ba57621e40821fa6325092d9de762a735c139e053eca40ab51",
+      "bibliographic_metadata": {
+        "publisher": "Springer Nature Switzerland",
+        "published-print": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "DOI": "10.1007/978-3-032-07830-8_12",
+        "type": "book-chapter",
+        "page": "113-121",
+        "title": [
+          "AI Ethics for the Global Majority: lessons from Decolonial Feminist Bioethics"
+        ],
+        "author": [
+          {
+            "given": "Alice",
+            "family": "Rangel Teixeira",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              1
+            ]
+          ]
+        },
+        "container-title": [
+          "AI from the Global Majority"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/978-3-032-07830-8_12",
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

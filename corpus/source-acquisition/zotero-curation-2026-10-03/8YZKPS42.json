@@ -1,0 +1,77 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "8YZKPS42",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs43681-026-01161-9",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/9fc33c16b69cb6ff605a.json",
+      "origin_artifact_sha256": "sha256:253fb6fef468a5160a046a0f0a006b03391cf104fe7d06e627939d9f0644d3fe",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1007/s43681-026-01161-9",
+        "type": "journal-article",
+        "title": [
+          "Beyond inclusion: feminist AI for transformative justice in STEM"
+        ],
+        "volume": "6",
+        "author": [
+          {
+            "given": "Tanja",
+            "family": "Kubes",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              20
+            ]
+          ]
+        },
+        "container-title": [
+          "AI and Ethics"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              20
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s43681-026-01161-9",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              20
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

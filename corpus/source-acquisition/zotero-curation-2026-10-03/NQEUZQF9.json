@@ -1,0 +1,101 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "NQEUZQF9",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1177%2F20539517241306363",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/219a3f37ba5e9ec818aa.json",
+      "origin_artifact_sha256": "sha256:503767a02e942c3924122b180732d7eee3db15986e4d6cad28fc412baa88e476",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              3
+            ]
+          ]
+        },
+        "DOI": "10.1177/20539517241306363",
+        "type": "journal-article",
+        "title": [
+          "Datafied ageing futures: Regimes of anticipation and participatory futuring"
+        ],
+        "volume": "12",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-8349-2298",
+            "authenticated-orcid": false,
+            "given": "Juliane",
+            "family": "Jarke",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "BANDAS-Center, Department of Sociology, University of Graz, Graz, Austria"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8311-3841",
+            "authenticated-orcid": false,
+            "given": "Helen",
+            "family": "Manchester",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Education, University of Bristol, Bristol, United Kingdom"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              15
+            ]
+          ]
+        },
+        "container-title": [
+          "Big Data &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              15
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/20539517241306363",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              15
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

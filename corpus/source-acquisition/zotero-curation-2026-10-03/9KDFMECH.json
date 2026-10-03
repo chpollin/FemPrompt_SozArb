@@ -1,0 +1,167 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "9KDFMECH",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1177%2F20539517211020332",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/e63bc54908eb6b389091.json",
+      "origin_artifact_sha256": "sha256:4dd39d083b25d59cd0c182aa6778a97d835568fbb26c7ccbbe5b46d5e62a7d1f",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "issue": "2",
+        "published-print": {
+          "date-parts": [
+            [
+              2021,
+              7
+            ]
+          ]
+        },
+        "DOI": "10.1177/20539517211020332",
+        "type": "journal-article",
+        "title": [
+          "Algorithmic management in a work context"
+        ],
+        "volume": "8",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-5685-7156",
+            "authenticated-orcid": false,
+            "given": "Mohammad Hossein",
+            "family": "Jarrahi",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of North Carolina at Chapel Hill, Chapel Hill, NC, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-0851-384X",
+            "authenticated-orcid": false,
+            "given": "Gemma",
+            "family": "Newlands",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Bi Norwegian Business School, Oslo, Norway"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2696-6546",
+            "authenticated-orcid": false,
+            "given": "Min Kyung",
+            "family": "Lee",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "The University of Texas at Austin, Austin, TX, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Christine T.",
+            "family": "Wolf",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Independent Researcher, San Jose, CA, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Eliscia",
+            "family": "Kinder",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of North Carolina at Chapel Hill, Chapel Hill, NC, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3731-3129",
+            "authenticated-orcid": false,
+            "given": "Will",
+            "family": "Sutherland",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Washington, Seattle, WA, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2021,
+              7,
+              1
+            ]
+          ]
+        },
+        "container-title": [
+          "Big Data &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2021,
+              7
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/20539517211020332",
+        "published": {
+          "date-parts": [
+            [
+              2021,
+              7
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

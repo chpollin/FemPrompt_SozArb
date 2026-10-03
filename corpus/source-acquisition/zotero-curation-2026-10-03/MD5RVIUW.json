@@ -1,0 +1,83 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "MD5RVIUW",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1080%2F1369118x.2021.1934069",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/27ed0550f217e075a06a.json",
+      "origin_artifact_sha256": "sha256:b0c04f12c329cedd6672cde254d3d5baf9f299721a55858f87591525c7af417a",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              1,
+              2
+            ]
+          ]
+        },
+        "DOI": "10.1080/1369118x.2021.1934069",
+        "type": "journal-article",
+        "page": "123-138",
+        "title": [
+          "Data and rights in the digital welfare state: the case of Denmark"
+        ],
+        "volume": "26",
+        "author": [
+          {
+            "given": "Rikke Frank",
+            "family": "Jørgensen",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Danish Institute for Human Rights, Copenhagen, Denmark"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2021,
+              6,
+              2
+            ]
+          ]
+        },
+        "container-title": [
+          "Information, Communication &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2021,
+              6,
+              2
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/1369118x.2021.1934069",
+        "published": {
+          "date-parts": [
+            [
+              2021,
+              6,
+              2
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

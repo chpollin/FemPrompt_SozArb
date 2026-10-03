@@ -1,0 +1,70 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "SJLJ2GHC",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.17645%2Fsi.7543",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/5f49288c5c2b33b55dc5.json",
+      "origin_artifact_sha256": "sha256:79d16ea4a1c93ea6efb5dfdb0c6c2cc80ee6180a6f97d9e9976f37d241f79840",
+      "bibliographic_metadata": {
+        "publisher": "Cogitatio",
+        "DOI": "10.17645/si.7543",
+        "type": "journal-article",
+        "title": [
+          "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action"
+        ],
+        "volume": "12",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2051-1265",
+            "authenticated-orcid": false,
+            "given": "Inga",
+            "family": "Ulnicane",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              18
+            ]
+          ]
+        },
+        "container-title": [
+          "Social Inclusion"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              18
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.17645/si.7543",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              18
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

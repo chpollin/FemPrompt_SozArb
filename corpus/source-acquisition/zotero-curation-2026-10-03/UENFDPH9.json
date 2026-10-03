@@ -1,0 +1,82 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "UENFDPH9",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs41134-024-00326-y",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/c4ff29048c7d40d2addf.json",
+      "origin_artifact_sha256": "sha256:e699515717a73cc4f6339ac38f8f2a0812cb2fd6ab6ff2ab926408d4843e586f",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "DOI": "10.1007/s41134-024-00326-y",
+        "type": "journal-article",
+        "page": "23-42",
+        "title": [
+          "Considering a Unified Model of Artificial Intelligence Enhanced Social Work: A Systematic Review"
+        ],
+        "volume": "10",
+        "author": [
+          {
+            "given": "Michael",
+            "family": "Garkisch",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lauri",
+            "family": "Goldkind",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              10
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Human Rights and Social Work"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              10
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s41134-024-00326-y",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              10
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

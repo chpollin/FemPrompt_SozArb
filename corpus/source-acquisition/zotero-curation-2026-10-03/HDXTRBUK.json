@@ -1,0 +1,157 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "HDXTRBUK",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1093%2Fbjsw%2Fbcab168",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/6aff36d4152c36a0159b.json",
+      "origin_artifact_sha256": "sha256:9a2cc3a462c67b2198dff6452ca678b032b0991401aa153ea1020e3b2d9a9c6c",
+      "bibliographic_metadata": {
+        "publisher": "Oxford University Press (OUP)",
+        "issue": "4",
+        "published-print": {
+          "date-parts": [
+            [
+              2022,
+              6,
+              22
+            ]
+          ]
+        },
+        "DOI": "10.1093/bjsw/bcab168",
+        "type": "journal-article",
+        "page": "1878-1895",
+        "title": [
+          "Problematising Artificial Intelligence in Social Work Education: Challenges, Issues and Possibilities"
+        ],
+        "volume": "52",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-0100-6274",
+            "authenticated-orcid": false,
+            "given": "David",
+            "family": "Hodgson",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Curtin School of Allied Health, Curtin University , Perth, Western Australia 6845, Australia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0776-1086",
+            "authenticated-orcid": false,
+            "given": "Sophie",
+            "family": "Goldingay",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Health and Social Development, Deakin University , Geelong Waterfront Campus Locked Bag , Victoria 20001, Australia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-0338-4460",
+            "authenticated-orcid": false,
+            "given": "Jennifer",
+            "family": "Boddy",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Health Sciences and Social Work, Griffith University , Gold Coast Campus, Parklands Drive , Southport, Queensland 4222, Australia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9258-7990",
+            "authenticated-orcid": false,
+            "given": "Sharlene",
+            "family": "Nipperess",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Global Urban and Social Studies, RMIT University , Melbourne, VIC 3001, Australia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-5886-5889",
+            "authenticated-orcid": false,
+            "given": "Lynelle",
+            "family": "Watts",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Curtin School of Allied Health, Curtin University , Perth, Western Australia 6845, Australia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2021,
+              8,
+              2
+            ]
+          ]
+        },
+        "container-title": [
+          "The British Journal of Social Work"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2021,
+              8,
+              2
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1093/bjsw/bcab168",
+        "published": {
+          "date-parts": [
+            [
+              2021,
+              8,
+              2
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

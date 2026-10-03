@@ -1,0 +1,71 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "6Y5EPQRR",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://link.springer.com/chapter/10.1007/978-3-658-39664-0_3",
+      "locator": "key=6Y5EPQRR, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_issn": [
+            "2662-9496"
+          ],
+          "citation_fulltext_html_url": [
+            "https://link.springer.com/chapter/10.1007/978-3-658-39664-0_3"
+          ],
+          "citation_springer_api_url": [
+            "http://api.springer.com/xmldata/jats?q=doi:10.1007/978-3-658-39664-0_3&api_key="
+          ],
+          "citation_firstpage": [
+            "59"
+          ],
+          "citation_doi": [
+            "10.1007/978-3-658-39664-0_3"
+          ],
+          "citation_title": [
+            "Positionings, Challenges, and Ambivalences in Children’s and Parents’ Perspectives in Digitalized Familial Contexts"
+          ],
+          "DOI": [
+            "10.1007/978-3-658-39664-0_3"
+          ],
+          "citation_pdf_url": [
+            "https://link.springer.com/content/pdf/10.1007/978-3-658-39664-0_3.pdf"
+          ],
+          "citation_isbn": [
+            "978-3-658-39664-0"
+          ],
+          "citation_publisher": [
+            "Springer, Wiesbaden"
+          ],
+          "citation_abstract_html_url": [
+            "https://link.springer.com/chapter/10.1007/978-3-658-39664-0_3"
+          ],
+          "citation_inbook_title": [
+            "Families and New Media"
+          ],
+          "citation_lastpage": [
+            "72"
+          ],
+          "citation_author_email": [
+            "nadia.kutscher@uni-koeln.de"
+          ],
+          "citation_author_institution": [
+            "University of Cologne"
+          ],
+          "citation_publication_date": [
+            "2023"
+          ],
+          "citation_language": [
+            "en"
+          ],
+          "citation_author": [
+            "Kutscher, Nadia"
+          ]
+        }
+      ]
+    }
+  ]
+}

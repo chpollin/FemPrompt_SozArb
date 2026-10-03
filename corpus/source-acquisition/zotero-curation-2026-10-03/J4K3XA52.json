@@ -1,0 +1,69 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "J4K3XA52",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1186%2Fs12911-025-03118-0",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/88ff7356d3cc0466b229.json",
+      "origin_artifact_sha256": "sha256:5ad29532c1ae9c93fc3e8bd1433772ce8b32bdfdc33eb585c6b21322e1ebe9c2",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "DOI": "10.1186/s12911-025-03118-0",
+        "type": "journal-article",
+        "title": [
+          "Evaluating gender bias in large language models in long-term care"
+        ],
+        "volume": "25",
+        "author": [
+          {
+            "given": "Sam",
+            "family": "Rickman",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              11
+            ]
+          ]
+        },
+        "container-title": [
+          "BMC Medical Informatics and Decision Making"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              11
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1186/s12911-025-03118-0",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              11
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "JFDBPUBN",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.datacite.org/dois/10.57720%2F5510",
+      "locator": "keys contains JFDBPUBN, metadata.creators/types/url",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry-results.json",
+      "origin_artifact_sha256": "sha256:f261a17c9cee9fdc126f44b1c2d516760eef553ce21146a2d441d0cecb21596c",
+      "bibliographic_metadata": [
+        {
+          "doi": "10.57720/5510",
+          "creators": [
+            {
+              "name": "Mauritz, Nina",
+              "nameType": "Personal",
+              "givenName": "Nina",
+              "familyName": "Mauritz",
+              "nameIdentifiers": [
+                {
+                  "schemeUri": "https://orcid.org",
+                  "nameIdentifier": "https://orcid.org/0009-0001-1286-4370",
+                  "nameIdentifierScheme": "ORCID"
+                }
+              ],
+              "affiliation": []
+            },
+            {
+              "name": "Franken, Swetlana",
+              "nameType": "Personal",
+              "givenName": "Swetlana",
+              "familyName": "Franken",
+              "affiliation": [],
+              "nameIdentifiers": []
+            }
+          ],
+          "titles": [
+            {
+              "title": "Gender und KI-Anwendungen. Trägt KI zum Genderproblem oder zu seiner Lösung bei?"
+            }
+          ],
+          "publisher": "FH Bielefeld Publikationsserver",
+          "publicationYear": 2021,
+          "dates": [
+            {
+              "date": "2025-02-04T12:24:25Z",
+              "dateType": "Created"
+            },
+            {
+              "date": "2025-02-05T13:44:19Z",
+              "dateType": "Updated"
+            },
+            {
+              "date": "2021",
+              "dateType": "Issued"
+            }
+          ],
+          "types": {
+            "ris": "RPRT",
+            "bibtex": "article",
+            "citeproc": "article-journal",
+            "schemaOrg": "ScholarlyArticle",
+            "resourceType": "working_paper",
+            "resourceTypeGeneral": "Text"
+          },
+          "version": null,
+          "url": "https://www.hsbi.de/publikationsserver/record/5510",
+          "published": "2021"
+        }
+      ]
+    }
+  ]
+}

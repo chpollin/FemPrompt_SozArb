@@ -1,0 +1,122 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "8MDXCTA6",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs10560-023-00931-2",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/8d9473c54a8cf86831e7.json",
+      "origin_artifact_sha256": "sha256:d7d99509f8725affd027b7e127ce1415b83c3af9d7d889ad27886addc4d9e052",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "6",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              12
+            ]
+          ]
+        },
+        "DOI": "10.1007/s10560-023-00931-2",
+        "type": "journal-article",
+        "page": "831-847",
+        "title": [
+          "A Systematic Review of Sophisticated Predictive and Prescriptive Analytics in Child Welfare: Accuracy, Equity, and Bias"
+        ],
+        "volume": "41",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-7266-4496",
+            "authenticated-orcid": false,
+            "given": "Seventy F.",
+            "family": "Hall",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3385-9650",
+            "authenticated-orcid": false,
+            "given": "Melanie",
+            "family": "Sage",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5811-0518",
+            "authenticated-orcid": false,
+            "given": "Carol F.",
+            "family": "Scott",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2233-3976",
+            "authenticated-orcid": false,
+            "given": "Kenneth",
+            "family": "Joseph",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              23
+            ]
+          ]
+        },
+        "container-title": [
+          "Child and Adolescent Social Work Journal"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              23
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s10560-023-00931-2",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              23
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

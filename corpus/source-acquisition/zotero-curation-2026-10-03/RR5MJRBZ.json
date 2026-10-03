@@ -1,0 +1,88 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "RR5MJRBZ",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1080%2F0312407x.2025.2488345",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/18d8f81b0444732fe033.json",
+      "origin_artifact_sha256": "sha256:854d1b9c0b532cef65e2533f208ecdd1f45edb72aa863344876f3c47c505da97",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              7,
+              3
+            ]
+          ]
+        },
+        "DOI": "10.1080/0312407x.2025.2488345",
+        "type": "journal-article",
+        "page": "292-305",
+        "title": [
+          "Artificial Intelligence in Social Work: An EPIC Model for Practice"
+        ],
+        "volume": "79",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-3606-7878",
+            "authenticated-orcid": false,
+            "given": "Heather",
+            "family": "Boetto",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Charles Sturt University",
+                "place": [
+                  "Wagga Wagga, Australia"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              27
+            ]
+          ]
+        },
+        "container-title": [
+          "Australian Social Work"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/0312407x.2025.2488345",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              27
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "TNLGELEQ",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2F978-3-032-02515-9_7",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/efb076c34af1e2850a99.json",
+      "origin_artifact_sha256": "sha256:d32d0017f86881e1bf35ac3102972170917c1290a0e4e32ff48a0024d04bf963",
+      "bibliographic_metadata": {
+        "publisher": "Springer Nature Switzerland",
+        "published-print": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "DOI": "10.1007/978-3-032-02515-9_7",
+        "type": "book-chapter",
+        "page": "102-117",
+        "title": [
+          "ReflectAI: Design and Evaluation of an AI Coach to Support Public Servants’ Self-Reflection"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0002-0443-4829",
+            "authenticated-orcid": false,
+            "given": "Hans-Henning",
+            "family": "Näscher",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0004-5900-6359",
+            "authenticated-orcid": false,
+            "given": "Jan",
+            "family": "Schaffner",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2362-8522",
+            "authenticated-orcid": false,
+            "given": "Michael",
+            "family": "Koddebusch",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              21
+            ]
+          ]
+        },
+        "container-title": [
+          "Lecture Notes in Computer Science",
+          "Electronic Participation"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              21
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/978-3-032-02515-9_7",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              21
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "2WHGF83D",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.14512%2Ftatup.33.1.08",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/a58dfa399eb41fe8484c.json",
+      "origin_artifact_sha256": "sha256:9821f9b9c99d39760c592701caa22a34d67f1e1e9908fb8405de0e28420dbebb",
+      "bibliographic_metadata": {
+        "publisher": "Oekom Publishers GmbH",
+        "issue": "1",
+        "DOI": "10.14512/tatup.33.1.08",
+        "type": "journal-article",
+        "page": "8-54",
+        "title": [
+          "AI for decision support: What are possible futures, social impacts, regulatory options, ethical conundrums and agency constellations?"
+        ],
+        "volume": "33",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-7131-5005",
+            "authenticated-orcid": false,
+            "given": "Diana",
+            "family": "Schneider",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8875-2386",
+            "authenticated-orcid": false,
+            "given": "Karsten",
+            "family": "Weber",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              15
+            ]
+          ]
+        },
+        "container-title": [
+          "TATuP - Zeitschrift für Technikfolgenabschätzung in Theorie und Praxis"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              15
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.14512/tatup.33.1.08",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              15
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

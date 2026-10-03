@@ -1,0 +1,32 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "RM833D5N",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://aclanthology.org/2025.naacl-long.400.pdf",
+      "locator": "printed title on the first page",
+      "origin_path": "generated/source-acquisition/oa-batch-2026-10-01/RM833D5N.md",
+      "origin_artifact_sha256": "sha256:b150ad32770fe3e48e960049a8aad94ebfeccbb95bd45b7ff9062fbb119a47d6",
+      "bibliographic_metadata": {
+        "existing_source_path": "generated/source-acquisition/oa-batch-2026-10-01/RM833D5N.md",
+        "existing_sha256": "sha256:b150ad32770fe3e48e960049a8aad94ebfeccbb95bd45b7ff9062fbb119a47d6",
+        "locator": "printed title on the first page",
+        "quote": "Evaluating the Prompt Steerability of Large Language Models"
+      }
+    },
+    {
+      "source_url": "https://aclanthology.org/2025.naacl-long.400/",
+      "locator": "BibTeX lines 105-128 and author byline",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/metadata-primary-web-evidence.json",
+      "origin_artifact_sha256": "sha256:67524e7bc00cd9189f52fcc206ae15c9c3da53d686ca4c5ba3799267f4a5bdbe",
+      "bibliographic_metadata": [
+        {
+          "source_url": "https://aclanthology.org/2025.naacl-long.400/",
+          "finding": "ACL record identifies NAACL 2025, April, DOI 10.18653/v1/2025.naacl-long.400; byline has 11 authors.",
+          "locator": "BibTeX lines 105-128 and author byline"
+        }
+      ]
+    }
+  ]
+}

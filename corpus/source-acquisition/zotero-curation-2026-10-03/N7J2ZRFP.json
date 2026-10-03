@@ -1,0 +1,66 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "N7J2ZRFP",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://www.cambridge.org/core/journals/perspectives-on-politics/article/algorithmic-governance-and-the-international-politics-of-big-tech/3C04908735A5F2EE8A70AFED647741FB",
+      "locator": "key=N7J2ZRFP, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_issn": [
+            "1537-5927",
+            "1541-0986"
+          ],
+          "citation_online_date": [
+            "2021/11/23"
+          ],
+          "citation_issue": [
+            "3"
+          ],
+          "citation_doi": [
+            "10.1017/S1537592721003145"
+          ],
+          "citation_title": [
+            "Algorithmic Governance and the International Politics of Big Tech"
+          ],
+          "citation_fulltext_world_readable": [
+            ""
+          ],
+          "citation_pdf_url": [
+            "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3C04908735A5F2EE8A70AFED647741FB/S1537592721003145a.pdf/div-class-title-algorithmic-governance-and-the-international-politics-of-big-tech-div.pdf"
+          ],
+          "citation_author_orcid": [
+            "0000-0002-2396-1635"
+          ],
+          "citation_volume": [
+            "21"
+          ],
+          "citation_abstract": [
+            "Big technology companies like Facebook, Google, and Amazon amass global power through classification algorithms. These algorithms use unsupervised and semi-supervised machine learning on massive databases to detect objects, such as faces, and to process texts, such as speech, to model predictions for commercial and political purposes. Such governance by algorithms—or “algorithmic governance”—has received critical scrutiny from a vast interdisciplinary scholarship that points to algorithmic harms related to mass surveillance, information pollution, behavioral herding, bias, and discrimination. Big Tech’s algorithmic governance implicates core IR research in two ways: (1) it creates new private authorities as corporations control critical bottlenecks of knowledge, connection, and desire; and (2) it mediates the scope of state–corporate relations as states become dependent on Big Tech, Big Tech circumvents state overreach, and states curtail Big Tech. As such, IR scholars should become more involved in the global research on algorithmic governance."
+          ],
+          "citation_firstpage": [
+            "989"
+          ],
+          "citation_publisher": [
+            "Cambridge University Press"
+          ],
+          "citation_lastpage": [
+            "1000"
+          ],
+          "citation_publication_date": [
+            "2023/09"
+          ],
+          "citation_author": [
+            "Swati Srivastava"
+          ],
+          "citation_journal_title": [
+            "Perspectives on Politics"
+          ]
+        }
+      ]
+    }
+  ]
+}

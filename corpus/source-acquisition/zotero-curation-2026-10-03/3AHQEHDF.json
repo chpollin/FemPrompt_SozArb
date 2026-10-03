@@ -1,0 +1,41 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "3AHQEHDF",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/html/2505.15229v1",
+      "locator": "key=3AHQEHDF, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "Multilingual Prompting for Improving LLM Generation Diversity"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2505.15229"
+          ],
+          "citation_date": [
+            "2025/05/21"
+          ],
+          "citation_abstract": [
+            "Large Language Models (LLMs) are known to lack cultural representation and overall diversity in their generations, from expressing opinions to answering factual questions. To mitigate this problem, we propose multilingual prompting: a prompting method which generates several variations of a base prompt with added cultural and linguistic cues from several cultures, generates responses, and then combines the results. Building on evidence that LLMs have language-specific knowledge, multilingual prompting seeks to increase diversity by activating a broader range of cultural knowledge embedded in model training data. Through experiments across multiple models (GPT-4o, GPT-4o-mini, LLaMA 70B, and LLaMA 8B), we show that multilingual prompting consistently outperforms existing diversity-enhancing techniques such as high-temperature sampling, step-by-step recall, and personas prompting. Further analyses show that the benefits of multilingual prompting vary with language resource level and model size, and that aligning the prompting language with the cultural cues reduces hallucination about culturally-specific information."
+          ],
+          "citation_online_date": [
+            "2025/05/21"
+          ],
+          "citation_author": [
+            "Wang, Qihan",
+            "Pan, Shidong",
+            "Linzen, Tal",
+            "Black, Emily"
+          ],
+          "citation_arxiv_id": [
+            "2505.15229"
+          ]
+        }
+      ]
+    }
+  ]
+}

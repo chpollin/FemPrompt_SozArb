@@ -1,6 +1,6 @@
 # Completion package
 
-Source fingerprint: `sha256:4a0bcbc5beed6a3bd332c75cb043bd3a41e5805f90aaf4e686ac6a7b71825f0f`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:5ae31ebf4aba533e7a4a2ac9d02eec29f7276c1bb0d150a5ff4ab0de2278274a`. Deterministic internal preparation; no approval is created.
 
 Scope: existing corpus plus all already identified 2026 candidates (search cutoff 2026-08-24) and the separate targeted gap-fill intake from 2026-09-05. Candidate membership does not imply inclusion. New search should address a concrete evidence gap with excellent sources.
 
@@ -11,7 +11,7 @@ Scope: existing corpus plus all already identified 2026 candidates (search cutof
 | All registry works, including pending candidates | 362 |
 | Works with recorded human annotations | 238 |
 | Works with recorded AI-review records | 141 |
-| Works with decision or coding conflicts | 29 |
+| Works with decision or coding conflicts | 30 |
 | Works with an unresolved negative AI source review | 1 |
 | Records using an accepted immutable AI correction | 2 |
 | Historical human records missing canonical identity binding | 1 |
@@ -32,12 +32,12 @@ Scope: existing corpus plus all already identified 2026 candidates (search cutof
 
 | Availability measure (not verification) | Count |
 |---|---:|
-| Canonical records linked to an existing Knowledge Document | 285 / 463 |
+| Canonical records linked to an existing Knowledge Document | 289 / 463 |
 | Distinct linked Knowledge Documents | 209 |
-| Work IDs with a linked Knowledge Document | 208 / 361 |
-| Work IDs without a linked Knowledge Document | 153 |
+| Work IDs with a linked Knowledge Document | 209 / 361 |
+| Work IDs without a linked Knowledge Document | 152 |
 | Broken document links | 0 |
-| Documents shared across multiple Work IDs (identity-review candidates) | 4 |
+| Documents shared across multiple Work IDs (identity-review candidates) | 5 |
 | Canonical records mapped in the exploratory concept graph | 208 |
 | Graph keys without canonical record binding | 12 |
 

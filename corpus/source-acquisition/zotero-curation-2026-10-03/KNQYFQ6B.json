@@ -1,0 +1,110 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "KNQYFQ6B",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.18653%2Fv1%2F2024.gebnlp-1.7",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/bb32c30decf2ee21a92c.json",
+      "origin_artifact_sha256": "sha256:6ef06f90b142677bdc98af1d6c6107485c46ea86bb34de58aee31363dd2258a2",
+      "bibliographic_metadata": {
+        "publisher": "Association for Computational Linguistics",
+        "published-print": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "DOI": "10.18653/v1/2024.gebnlp-1.7",
+        "type": "proceedings-article",
+        "page": "94-139",
+        "title": [
+          "The power of Prompts: Evaluating and Mitigating Gender Bias in MT with LLMs"
+        ],
+        "author": [
+          {
+            "given": "Aleix",
+            "family": "Sant",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Carlos",
+            "family": "Escolano",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Audrey",
+            "family": "Mash",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Francesca",
+            "family": "De Luca Fornaciari",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Maite",
+            "family": "Melero",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Proceedings of the 5th Workshop on Gender Bias in Natural Language Processing (GeBNLP)"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.18653/v1/2024.gebnlp-1.7",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

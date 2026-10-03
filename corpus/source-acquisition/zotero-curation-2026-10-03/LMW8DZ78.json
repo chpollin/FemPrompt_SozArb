@@ -1,0 +1,1137 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "LMW8DZ78",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1177%2F20552076251339522",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/b35c7cb7dddff19e1fce.json",
+      "origin_artifact_sha256": "sha256:7fe8f8628a2d8c6d2b0b309d7d948b51fcf46eb602ec7d91792ab0822061a838",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1177/20552076251339522",
+        "type": "journal-article",
+        "title": [
+          "Indecision on the use of artificial intelligence in healthcare—A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS"
+        ],
+        "volume": "11",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-7131-5005",
+            "authenticated-orcid": false,
+            "given": "Diana",
+            "family": "Schneider",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1433-658X",
+            "authenticated-orcid": false,
+            "given": "Wenke",
+            "family": "Liedtke",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Faculty of Theology, University of Greifswald, Greifswald, Germany"
+              },
+              {
+                "name": "Department of Social Work, Protestant University of Applied Sciences Rhineland-Westphalia-Lippe, Bochum, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0003-4026-8730",
+            "authenticated-orcid": false,
+            "given": "Andrea Diana",
+            "family": "Klausen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Medical Informatics, University Medical Center—RWTH Aachen, Aachen, Germany"
+              },
+              {
+                "name": "Health Services Research, Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9371-0551",
+            "authenticated-orcid": false,
+            "given": "Myriam",
+            "family": "Lipprandt",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Medical Informatics, University Medical Center—RWTH Aachen, Aachen, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9242-0827",
+            "authenticated-orcid": false,
+            "given": "Florian",
+            "family": "Funer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Ethics, History and Philosophy of Medicine Hannover, Hannover Medical School (MHH), Hannover, Germany"
+              },
+              {
+                "name": "Institute for Ethics and History of Medicine, Eberhard Karls University Tuebingen, Tuebingen, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3558-2373",
+            "authenticated-orcid": false,
+            "given": "Tanja",
+            "family": "Bratan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9354-1388",
+            "authenticated-orcid": false,
+            "given": "Nils B.",
+            "family": "Heyen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7478-7182",
+            "authenticated-orcid": false,
+            "given": "Heike",
+            "family": "Aichinger",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7861-0771",
+            "authenticated-orcid": false,
+            "given": "Martin",
+            "family": "Langanke",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Social Work, Protestant University of Applied Sciences Rhineland-Westphalia-Lippe, Bochum, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              30
+            ]
+          ]
+        },
+        "container-title": [
+          "DIGITAL HEALTH"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/20552076251339522",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1177/20552076251339522",
+      "locator": "message.author",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/LMW8DZ78-crossref-file.json",
+      "origin_artifact_sha256": "sha256:13bbfd2d3daa23e7bfdc5b3140158d93f51aaf376dcb391134506e5f3b26e90f",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1177/20552076251339522",
+        "type": "journal-article",
+        "title": [
+          "Indecision on the use of artificial intelligence in healthcare—A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS"
+        ],
+        "volume": "11",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-7131-5005",
+            "authenticated-orcid": false,
+            "given": "Diana",
+            "family": "Schneider",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1433-658X",
+            "authenticated-orcid": false,
+            "given": "Wenke",
+            "family": "Liedtke",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Faculty of Theology, University of Greifswald, Greifswald, Germany"
+              },
+              {
+                "name": "Department of Social Work, Protestant University of Applied Sciences Rhineland-Westphalia-Lippe, Bochum, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0003-4026-8730",
+            "authenticated-orcid": false,
+            "given": "Andrea Diana",
+            "family": "Klausen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Medical Informatics, University Medical Center—RWTH Aachen, Aachen, Germany"
+              },
+              {
+                "name": "Health Services Research, Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9371-0551",
+            "authenticated-orcid": false,
+            "given": "Myriam",
+            "family": "Lipprandt",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Medical Informatics, University Medical Center—RWTH Aachen, Aachen, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9242-0827",
+            "authenticated-orcid": false,
+            "given": "Florian",
+            "family": "Funer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Ethics, History and Philosophy of Medicine Hannover, Hannover Medical School (MHH), Hannover, Germany"
+              },
+              {
+                "name": "Institute for Ethics and History of Medicine, Eberhard Karls University Tuebingen, Tuebingen, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3558-2373",
+            "authenticated-orcid": false,
+            "given": "Tanja",
+            "family": "Bratan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9354-1388",
+            "authenticated-orcid": false,
+            "given": "Nils B.",
+            "family": "Heyen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7478-7182",
+            "authenticated-orcid": false,
+            "given": "Heike",
+            "family": "Aichinger",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7861-0771",
+            "authenticated-orcid": false,
+            "given": "Martin",
+            "family": "Langanke",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Social Work, Protestant University of Applied Sciences Rhineland-Westphalia-Lippe, Bochum, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              30
+            ]
+          ]
+        },
+        "container-title": [
+          "DIGITAL HEALTH"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/20552076251339522",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1177/20552076251339522",
+      "locator": "message.DOI",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/LMW8DZ78-crossref-file.json",
+      "origin_artifact_sha256": "sha256:13bbfd2d3daa23e7bfdc5b3140158d93f51aaf376dcb391134506e5f3b26e90f",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1177/20552076251339522",
+        "type": "journal-article",
+        "title": [
+          "Indecision on the use of artificial intelligence in healthcare—A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS"
+        ],
+        "volume": "11",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-7131-5005",
+            "authenticated-orcid": false,
+            "given": "Diana",
+            "family": "Schneider",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1433-658X",
+            "authenticated-orcid": false,
+            "given": "Wenke",
+            "family": "Liedtke",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Faculty of Theology, University of Greifswald, Greifswald, Germany"
+              },
+              {
+                "name": "Department of Social Work, Protestant University of Applied Sciences Rhineland-Westphalia-Lippe, Bochum, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0003-4026-8730",
+            "authenticated-orcid": false,
+            "given": "Andrea Diana",
+            "family": "Klausen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Medical Informatics, University Medical Center—RWTH Aachen, Aachen, Germany"
+              },
+              {
+                "name": "Health Services Research, Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9371-0551",
+            "authenticated-orcid": false,
+            "given": "Myriam",
+            "family": "Lipprandt",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Medical Informatics, University Medical Center—RWTH Aachen, Aachen, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9242-0827",
+            "authenticated-orcid": false,
+            "given": "Florian",
+            "family": "Funer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Ethics, History and Philosophy of Medicine Hannover, Hannover Medical School (MHH), Hannover, Germany"
+              },
+              {
+                "name": "Institute for Ethics and History of Medicine, Eberhard Karls University Tuebingen, Tuebingen, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3558-2373",
+            "authenticated-orcid": false,
+            "given": "Tanja",
+            "family": "Bratan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9354-1388",
+            "authenticated-orcid": false,
+            "given": "Nils B.",
+            "family": "Heyen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7478-7182",
+            "authenticated-orcid": false,
+            "given": "Heike",
+            "family": "Aichinger",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7861-0771",
+            "authenticated-orcid": false,
+            "given": "Martin",
+            "family": "Langanke",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Social Work, Protestant University of Applied Sciences Rhineland-Westphalia-Lippe, Bochum, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              30
+            ]
+          ]
+        },
+        "container-title": [
+          "DIGITAL HEALTH"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/20552076251339522",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1177/20552076251339522",
+      "locator": "message.resource.primary.URL",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/LMW8DZ78-crossref-file.json",
+      "origin_artifact_sha256": "sha256:13bbfd2d3daa23e7bfdc5b3140158d93f51aaf376dcb391134506e5f3b26e90f",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1177/20552076251339522",
+        "type": "journal-article",
+        "title": [
+          "Indecision on the use of artificial intelligence in healthcare—A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS"
+        ],
+        "volume": "11",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-7131-5005",
+            "authenticated-orcid": false,
+            "given": "Diana",
+            "family": "Schneider",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1433-658X",
+            "authenticated-orcid": false,
+            "given": "Wenke",
+            "family": "Liedtke",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Faculty of Theology, University of Greifswald, Greifswald, Germany"
+              },
+              {
+                "name": "Department of Social Work, Protestant University of Applied Sciences Rhineland-Westphalia-Lippe, Bochum, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0003-4026-8730",
+            "authenticated-orcid": false,
+            "given": "Andrea Diana",
+            "family": "Klausen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Medical Informatics, University Medical Center—RWTH Aachen, Aachen, Germany"
+              },
+              {
+                "name": "Health Services Research, Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9371-0551",
+            "authenticated-orcid": false,
+            "given": "Myriam",
+            "family": "Lipprandt",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Medical Informatics, University Medical Center—RWTH Aachen, Aachen, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9242-0827",
+            "authenticated-orcid": false,
+            "given": "Florian",
+            "family": "Funer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Ethics, History and Philosophy of Medicine Hannover, Hannover Medical School (MHH), Hannover, Germany"
+              },
+              {
+                "name": "Institute for Ethics and History of Medicine, Eberhard Karls University Tuebingen, Tuebingen, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3558-2373",
+            "authenticated-orcid": false,
+            "given": "Tanja",
+            "family": "Bratan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9354-1388",
+            "authenticated-orcid": false,
+            "given": "Nils B.",
+            "family": "Heyen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7478-7182",
+            "authenticated-orcid": false,
+            "given": "Heike",
+            "family": "Aichinger",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7861-0771",
+            "authenticated-orcid": false,
+            "given": "Martin",
+            "family": "Langanke",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Social Work, Protestant University of Applied Sciences Rhineland-Westphalia-Lippe, Bochum, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              30
+            ]
+          ]
+        },
+        "container-title": [
+          "DIGITAL HEALTH"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/20552076251339522",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1177/20552076251339522",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/LMW8DZ78-crossref-file.json",
+      "origin_artifact_sha256": "sha256:13bbfd2d3daa23e7bfdc5b3140158d93f51aaf376dcb391134506e5f3b26e90f",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1177/20552076251339522",
+        "type": "journal-article",
+        "title": [
+          "Indecision on the use of artificial intelligence in healthcare—A qualitative study of patient perspectives on trust, responsibility and self-determination using AI-CDSS"
+        ],
+        "volume": "11",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-7131-5005",
+            "authenticated-orcid": false,
+            "given": "Diana",
+            "family": "Schneider",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1433-658X",
+            "authenticated-orcid": false,
+            "given": "Wenke",
+            "family": "Liedtke",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Faculty of Theology, University of Greifswald, Greifswald, Germany"
+              },
+              {
+                "name": "Department of Social Work, Protestant University of Applied Sciences Rhineland-Westphalia-Lippe, Bochum, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0003-4026-8730",
+            "authenticated-orcid": false,
+            "given": "Andrea Diana",
+            "family": "Klausen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Medical Informatics, University Medical Center—RWTH Aachen, Aachen, Germany"
+              },
+              {
+                "name": "Health Services Research, Carl von Ossietzky University of Oldenburg, Oldenburg, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9371-0551",
+            "authenticated-orcid": false,
+            "given": "Myriam",
+            "family": "Lipprandt",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Medical Informatics, University Medical Center—RWTH Aachen, Aachen, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9242-0827",
+            "authenticated-orcid": false,
+            "given": "Florian",
+            "family": "Funer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Institute for Ethics, History and Philosophy of Medicine Hannover, Hannover Medical School (MHH), Hannover, Germany"
+              },
+              {
+                "name": "Institute for Ethics and History of Medicine, Eberhard Karls University Tuebingen, Tuebingen, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3558-2373",
+            "authenticated-orcid": false,
+            "given": "Tanja",
+            "family": "Bratan",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9354-1388",
+            "authenticated-orcid": false,
+            "given": "Nils B.",
+            "family": "Heyen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7478-7182",
+            "authenticated-orcid": false,
+            "given": "Heike",
+            "family": "Aichinger",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Emerging Technologies, Fraunhofer Institute for Systems and Innovation Research ISI, Karlsruhe, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7861-0771",
+            "authenticated-orcid": false,
+            "given": "Martin",
+            "family": "Langanke",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Social Work, Protestant University of Applied Sciences Rhineland-Westphalia-Lippe, Bochum, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              30
+            ]
+          ]
+        },
+        "container-title": [
+          "DIGITAL HEALTH"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/20552076251339522",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

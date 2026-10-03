@@ -1,0 +1,99 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "QG8IAB53",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1080%2F1369118x.2024.2320917",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/b48478b75032b92a2903.json",
+      "origin_artifact_sha256": "sha256:7e77c4927050154e182be395244e65eb55c6c37a089e6f075ab1a8533cc4edf2",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "issue": "4",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              11
+            ]
+          ]
+        },
+        "DOI": "10.1080/1369118x.2024.2320917",
+        "type": "journal-article",
+        "page": "702-718",
+        "title": [
+          "Who cares about data? Data care arrangements in everyday organisational practice"
+        ],
+        "volume": "27",
+        "author": [
+          {
+            "given": "Juliane",
+            "family": "Jarke",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "BANDAS-Center &amp; Department of Sociology, University of Graz, Graz, Austria"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Stefanie",
+            "family": "Büchner",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Digital Societies, Institute of Sociology, University of Hannover, Hannover, Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              28
+            ]
+          ]
+        },
+        "container-title": [
+          "Information, Communication &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              28
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/1369118x.2024.2320917",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              28
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

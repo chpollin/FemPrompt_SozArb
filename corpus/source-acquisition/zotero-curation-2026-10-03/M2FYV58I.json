@@ -1,0 +1,106 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "M2FYV58I",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/doi.org%2F10.3790%2Fsfo.71.6-7.489",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/8a9ca50a5abdc0657b61.json",
+      "origin_artifact_sha256": "sha256:d08c28a7f8610b43a479c6ca19b4089b07b1ecd051b617d81a3f1b8c41fcce96",
+      "bibliographic_metadata": {
+        "publisher": "Duncker & Humblot GmbH",
+        "issue": "6-7",
+        "DOI": "10.3790/sfo.71.6-7.489",
+        "type": "journal-article",
+        "page": "489-511",
+        "title": [
+          "Exploring Opportunities and Risks in Decision Support Technologies for Social Workers: An Empirical Study in the Field of Disabled People’s Services"
+        ],
+        "volume": "71",
+        "author": [
+          {
+            "given": "Diana",
+            "family": "Schneider",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Angelika",
+            "family": "Maier",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Philipp",
+            "family": "Cimiano",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Udo",
+            "family": "Seelmeyer",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2022,
+              6,
+              1
+            ]
+          ]
+        },
+        "container-title": [
+          "Sozialer Fortschritt"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2022,
+              6,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3790/sfo.71.6-7.489",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              6,
+              1
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

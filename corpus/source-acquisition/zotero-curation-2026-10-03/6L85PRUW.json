@@ -1,0 +1,101 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "6L85PRUW",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1145%2F3641237.3691655",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/958f2f53c2094efa33fb.json",
+      "origin_artifact_sha256": "sha256:141773c078027f3ab12da7c80cf80af02e228bd14af83f7fd56ef8782f182297",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              20
+            ]
+          ]
+        },
+        "DOI": "10.1145/3641237.3691655",
+        "type": "proceedings-article",
+        "page": "76-80",
+        "title": [
+          "Inclusive Prompt Engineering: A Methodology for Hacking Biased AI Image Generation"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0008-3768-6794",
+            "authenticated-orcid": false,
+            "given": "Rachel",
+            "family": "Skilton",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Washington Tacoma, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5507-630X",
+            "authenticated-orcid": false,
+            "given": "Alison",
+            "family": "Cardinal",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Washington Tacoma, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              28
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the 42nd ACM International Conference on Design of Communication"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              20
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3641237.3691655",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              20
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

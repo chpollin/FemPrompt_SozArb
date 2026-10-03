@@ -1,0 +1,150 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "QD2CXE9I",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1093%2Fpnasnexus%2Fpgaf089",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/440f09a6eaf2e4929076.json",
+      "origin_artifact_sha256": "sha256:36eed50d397037da665c21952151e3f3e7753bb347fce8c9a76d080a038c0a7e",
+      "bibliographic_metadata": {
+        "publisher": "Oxford University Press (OUP)",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              27
+            ]
+          ]
+        },
+        "DOI": "10.1093/pnasnexus/pgaf089",
+        "type": "journal-article",
+        "title": [
+          "Measuring gender and racial biases in large language models: Intersectional evidence from automated resume evaluation"
+        ],
+        "volume": "4",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-3025-3119",
+            "authenticated-orcid": false,
+            "given": "Jiafu",
+            "family": "An",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Real Estate and Construction, University of Hong Kong, Hong Kong SAR 999077 ,",
+                "place": [
+                  "China"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1159-3134",
+            "authenticated-orcid": false,
+            "given": "Difang",
+            "family": "Huang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Academy of Mathematics and Systems Science, Chinese Academy of Sciences, Beijing 100190 ,",
+                "place": [
+                  "China"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4205-8633",
+            "authenticated-orcid": false,
+            "given": "Chen",
+            "family": "Lin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Faculty of Business and Economics, University of Hong Kong, Hong Kong SAR 999077 ,",
+                "place": [
+                  "China"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9496-0728",
+            "authenticated-orcid": false,
+            "given": "Mingzhu",
+            "family": "Tai",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Faculty of Business and Economics, University of Hong Kong, Hong Kong SAR 999077 ,",
+                "place": [
+                  "China"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              12
+            ]
+          ]
+        },
+        "container-title": [
+          "PNAS Nexus"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1093/pnasnexus/pgaf089",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              27
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

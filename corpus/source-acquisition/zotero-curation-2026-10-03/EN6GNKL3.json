@@ -1,0 +1,120 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "EN6GNKL3",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1177%2F00224871251325083",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/707dbdf1b92f41e6b6fb.json",
+      "origin_artifact_sha256": "sha256:d955f7abd92f295e4b2345e23870485c94a7e34e6f96dbc98b3a681b688e66e5",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1177/00224871251325083",
+        "type": "journal-article",
+        "page": "294-311",
+        "title": [
+          "AI Literacy in Teacher Education: Empowering Educators Through Critical Co-Discovery"
+        ],
+        "volume": "76",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-5678-931X",
+            "authenticated-orcid": false,
+            "given": "Melis",
+            "family": "Dilek",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Iowa State University, Ames, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1935-0188",
+            "authenticated-orcid": false,
+            "given": "Evrim",
+            "family": "Baran",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Iowa State University, Ames, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0912-2210",
+            "authenticated-orcid": false,
+            "given": "Ezequiel",
+            "family": "Aleman",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Universidad Tecnológica de Uruguay, Montevideo, Uruguay"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              18
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Teacher Education"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              18
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/00224871251325083",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              18
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

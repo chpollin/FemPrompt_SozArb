@@ -1,0 +1,147 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "RAV6DAFQ",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1093%2Fsw%2Fswad044",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/e146292b5382da64179c.json",
+      "origin_artifact_sha256": "sha256:4b639bfe0c1ef515d0d53e69ad64732823890dab96e1dbad8f519101e8fdb756",
+      "bibliographic_metadata": {
+        "publisher": "Oxford University Press (OUP)",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              12,
+              23
+            ]
+          ]
+        },
+        "DOI": "10.1093/sw/swad044",
+        "type": "journal-article",
+        "page": "103-105",
+        "title": [
+          "The End of the World as We Know It? ChatGPT and Social Work"
+        ],
+        "volume": "69",
+        "author": [
+          {
+            "given": "Lauri",
+            "family": "Goldkind",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "School of Social Service, Fordham University PhD, LMSW, is associate professor, Graduate , 113 West 60th Street, New York, NY 10023, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lea",
+            "family": "Wolf",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Graduate Center, City University of New York LMSW, is a doctoral candidate, , New York, NY, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Alexis",
+            "family": "Glennon",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Social Work, University of Buffalo LMSW, is a doctoral candidate, , Buffalo, NY, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Juan",
+            "family": "Rios",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Sociology, Anthropology, Social Work and Criminal Justice, Seton Hall University DSW, LMSW, is assistant professor, , South Orange, NJ, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Laura",
+            "family": "Nissen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Social Work, Portland State University PhD, LMSW, is professor, , Portland, OR, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              11,
+              16
+            ]
+          ]
+        },
+        "container-title": [
+          "Social Work"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              11,
+              16
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1093/sw/swad044",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              11,
+              16
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

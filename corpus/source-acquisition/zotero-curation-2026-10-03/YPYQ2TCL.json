@@ -1,0 +1,42 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "YPYQ2TCL",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/pdf/2505.17045",
+      "locator": "key=YPYQ2TCL, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_doi": [
+            "10.5281/zenodo.15353102"
+          ],
+          "citation_title": [
+            "Assessing GPT's Bias Towards Stigmatized Social Groups: An Intersectional Case Study on Nationality Prejudice and Psychophobia"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2505.17045"
+          ],
+          "citation_date": [
+            "2025/05/15"
+          ],
+          "citation_abstract": [
+            "Recent studies have separately highlighted significant biases within foundational large language models (LLMs) against certain nationalities and stigmatized social groups. This research investigates the ethical implications of these biases intersecting with outputs of widely-used GPT-3.5/4/4o LLMS. Through structured prompt series, we evaluate model responses to several scenarios involving American and North Korean nationalities with various mental disabilities. Findings reveal significant discrepancies in empathy levels with North Koreans facing greater negative bias, particularly when mental disability is also a factor. This underscores the need for improvements in LLMs designed with a nuanced understanding of intersectional identity."
+          ],
+          "citation_online_date": [
+            "2025/05/15"
+          ],
+          "citation_author": [
+            "Kashif, Afifah",
+            "Patel, Heer"
+          ],
+          "citation_arxiv_id": [
+            "2505.17045"
+          ]
+        }
+      ]
+    }
+  ]
+}

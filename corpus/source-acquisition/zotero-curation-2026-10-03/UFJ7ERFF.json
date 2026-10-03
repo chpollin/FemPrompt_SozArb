@@ -1,0 +1,42 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "UFJ7ERFF",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/html/2405.01286v1",
+      "locator": "key=UFJ7ERFF, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_doi": [
+            "10.1145/3630106.3658543"
+          ],
+          "citation_title": [
+            "Data Feminism for AI"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2405.01286"
+          ],
+          "citation_date": [
+            "2024/05/02"
+          ],
+          "citation_abstract": [
+            "This paper presents a set of intersectional feminist principles for conducting equitable, ethical, and sustainable AI research. In Data Feminism (2020), we offered seven principles for examining and challenging unequal power in data science. Here, we present a rationale for why feminism remains deeply relevant for AI research, rearticulate the original principles of data feminism with respect to AI, and introduce two potential new principles related to environmental impact and consent. Together, these principles help to 1) account for the unequal, undemocratic, extractive, and exclusionary forces at work in AI research, development, and deployment; 2) identify and mitigate predictable harms in advance of unsafe, discriminatory, or otherwise oppressive systems being released into the world; and 3) inspire creative, joyful, and collective ways to work towards a more equitable, sustainable world in which all of us can thrive."
+          ],
+          "citation_online_date": [
+            "2024/05/02"
+          ],
+          "citation_author": [
+            "Klein, Lauren",
+            "D'Ignazio, Catherine"
+          ],
+          "citation_arxiv_id": [
+            "2405.01286"
+          ]
+        }
+      ]
+    }
+  ]
+}

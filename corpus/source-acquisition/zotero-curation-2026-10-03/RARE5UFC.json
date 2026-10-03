@@ -1,0 +1,39 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "RARE5UFC",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/html/2404.17218v1",
+      "locator": "key=RARE5UFC, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2404.17218"
+          ],
+          "citation_date": [
+            "2024/04/26"
+          ],
+          "citation_abstract": [
+            "Dual process theory posits that human cognition arises via two systems. System 1, which is a quick, emotional, and intuitive process, which is subject to cognitive biases, and System 2, a slow, onerous, and deliberate process. NLP researchers often compare zero-shot prompting in LLMs to System 1 reasoning and chain-of-thought (CoT) prompting to System 2. In line with this interpretation, prior research has found that using CoT prompting in LLMs leads to reduced gender bias. We investigate the relationship between bias, CoT prompting, and dual process theory in LLMs directly. We compare zero-shot, CoT, and a variety of dual process theory-based prompting strategies on two bias datasets spanning nine different social bias categories. We also use human and machine personas to determine whether the effects of dual process theory in LLMs are based on modeling human cognition or inherent to the system. We find that a human persona, System 2, and CoT prompting all tend to reduce social biases in LLMs, though the best combination of features depends on the exact model and bias category -- resulting in up to a 13 percent drop in stereotypical judgments by an LLM."
+          ],
+          "citation_online_date": [
+            "2024/04/26"
+          ],
+          "citation_author": [
+            "Kamruzzaman, Mahammed",
+            "Kim, Gene Louis"
+          ],
+          "citation_arxiv_id": [
+            "2404.17218"
+          ]
+        }
+      ]
+    }
+  ]
+}

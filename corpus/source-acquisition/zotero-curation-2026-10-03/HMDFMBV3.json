@@ -1,0 +1,110 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "HMDFMBV3",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.18653%2Fv1%2F2023.findings-emnlp.575",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/5711ebda5ed6dada6d64.json",
+      "origin_artifact_sha256": "sha256:d165b787ab6782b5688e9cd83d843b8214c2e34494e1e8015455710a4c5e82da",
+      "bibliographic_metadata": {
+        "publisher": "Association for Computational Linguistics",
+        "published-print": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "DOI": "10.18653/v1/2023.findings-emnlp.575",
+        "type": "proceedings-article",
+        "page": "8589-8597",
+        "title": [
+          "Intersectional Stereotypes in Large Language Models: Dataset and Analysis"
+        ],
+        "author": [
+          {
+            "given": "Weicheng",
+            "family": "Ma",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Brian",
+            "family": "Chiang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tong",
+            "family": "Wu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lili",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Soroush",
+            "family": "Vosoughi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Findings of the Association for Computational Linguistics: EMNLP 2023"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.18653/v1/2023.findings-emnlp.575",
+        "published": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

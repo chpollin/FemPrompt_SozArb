@@ -1,0 +1,47 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "BX2UPC4N",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/9f26a2d143a227376dff99a279f93f99-Abstract-Conference.html",
+      "locator": "key=BX2UPC4N, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_pdf_url": [
+            "https://proceedings.iclr.cc/paper_files/paper/2025/file/9f26a2d143a227376dff99a279f93f99-Paper-Conference.pdf"
+          ],
+          "citation_title": [
+            "Prompting Fairness: Integrating Causality to Debias Large Language Models"
+          ],
+          "citation_lastpage": [
+            "63629"
+          ],
+          "citation_firstpage": [
+            "63606"
+          ],
+          "citation_publication_date": [
+            "2025-05-01"
+          ],
+          "citation_journal_title": [
+            "International Conference on Learning Representations"
+          ],
+          "citation_volume": [
+            "2025"
+          ],
+          "citation_author": [
+            "Li, Jingling",
+            "Tang, Zeyu",
+            "Liu, Xiaoyu",
+            "Spirtes, Peter",
+            "Zhang, Kun",
+            "Leqi, Liu",
+            "Liu, Yang"
+          ]
+        }
+      ]
+    }
+  ]
+}

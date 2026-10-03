@@ -1,0 +1,103 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "9SHEQHDW",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1080%2F03085147.2020.1733842",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/d0f1ec6c0b49fae327d2.json",
+      "origin_artifact_sha256": "sha256:2b38be275128d3713334932aa123353572b0a5f50b90d2c5592d2134c27bd6b7",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              7,
+              2
+            ]
+          ]
+        },
+        "DOI": "10.1080/03085147.2020.1733842",
+        "type": "journal-article",
+        "page": "433-454",
+        "title": [
+          "‘Meaningless work’: How the datafication of health reconfigures knowledge about work and erodes professional judgement"
+        ],
+        "volume": "49",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-2780-4784",
+            "authenticated-orcid": false,
+            "given": "Klaus",
+            "family": "Hoeyer",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Klaus Hoeyer (corresponding author), Department of Public Health, Centre for Medical Science and Technology Studies, University of Copenhagen, Øster Farimagsgade 5A, Copenhagen K, DK 1014, Denmark."
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3357-5479",
+            "authenticated-orcid": false,
+            "given": "Sarah",
+            "family": "Wadmann",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sarah Wadmann, Danish Center for Social Science Research, VIVE Government and Management, Herluf Trolles Gade 11, Copenhagen K DK 1052, Denmark."
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2020,
+              7,
+              28
+            ]
+          ]
+        },
+        "container-title": [
+          "Economy and Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2020,
+              7,
+              2
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/03085147.2020.1733842",
+        "published": {
+          "date-parts": [
+            [
+              2020,
+              7,
+              2
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

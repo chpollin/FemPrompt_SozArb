@@ -1,0 +1,137 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "6IU5JG5Y",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1145%2F3715275.3732210",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/0c6dfe311aa7988fd848.json",
+      "origin_artifact_sha256": "sha256:272078c84d7a0109c84e35bb8c88f867d60f09d4c0876dc55070ebbae96ec661",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              23
+            ]
+          ]
+        },
+        "DOI": "10.1145/3715275.3732210",
+        "type": "proceedings-article",
+        "page": "3276-3290",
+        "title": [
+          "Fairness Beyond the Algorithmic Frame: Actionable Recommendations for an Intersectional Approach"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-5435-8671",
+            "authenticated-orcid": false,
+            "given": "Steven",
+            "family": "Vethman",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Sciences Po Law School, Paris, France and TNO, The Hague, Netherlands"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0008-8890-4261",
+            "authenticated-orcid": false,
+            "given": "Quirine T. S.",
+            "family": "Smit",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "TNO, The Hague, Netherlands"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0006-7544-9138",
+            "authenticated-orcid": false,
+            "given": "Nina M.",
+            "family": "van Liebergen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "TNO, The Hague, Netherlands"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2645-1198",
+            "authenticated-orcid": false,
+            "given": "Cor J.",
+            "family": "Veenman",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "LIACS, Leiden University, Leiden, Netherlands and TNO, The Hague, Netherlands"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              23
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the 2025 ACM Conference on Fairness, Accountability, and Transparency"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              23
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3715275.3732210",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              6,
+              23
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

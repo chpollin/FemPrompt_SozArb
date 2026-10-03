@@ -1,0 +1,987 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "E4G328PD",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1056/AIoa2400802",
+      "locator": "message.title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/E4G328PD-crossref.json",
+      "origin_artifact_sha256": "sha256:76275c49097442568fe0a5f3d1baf88730550142ba1b845b17ac9f27f85bc1be",
+      "bibliographic_metadata": {
+        "publisher": "Massachusetts Medical Society",
+        "issue": "4",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        },
+        "DOI": "10.1056/aioa2400802",
+        "type": "journal-article",
+        "title": [
+          "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment"
+        ],
+        "volume": "2",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-0866-0508",
+            "authenticated-orcid": false,
+            "given": "Michael V.",
+            "family": "Heinz",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2188-2968",
+            "authenticated-orcid": false,
+            "given": "Daniel M.",
+            "family": "Mackin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4466-7926",
+            "authenticated-orcid": false,
+            "given": "Brianna M.",
+            "family": "Trudeau",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7814-7278",
+            "authenticated-orcid": false,
+            "given": "Sukanya",
+            "family": "Bhattacharya",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-6355-2551",
+            "authenticated-orcid": false,
+            "given": "Yinzhou",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0006-0476-371X",
+            "authenticated-orcid": false,
+            "given": "Haley A.",
+            "family": "Banta",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0007-1390-7380",
+            "authenticated-orcid": false,
+            "given": "Abi D.",
+            "family": "Jewett",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-3210-6807",
+            "authenticated-orcid": false,
+            "given": "Abigail J.",
+            "family": "Salzhauer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5462-575X",
+            "authenticated-orcid": false,
+            "given": "Tess Z.",
+            "family": "Griffin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8832-4741",
+            "authenticated-orcid": false,
+            "given": "Nicholas C.",
+            "family": "Jacobson",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              },
+              {
+                "name": "Quantitative Biomedical Sciences Program, Dartmouth College, Hanover, NH"
+              },
+              {
+                "name": "Department of Biomedical Data Science, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "NEJM AI"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1056/aioa2400802",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1056/AIoa2400802",
+      "locator": "message.author",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/E4G328PD-crossref.json",
+      "origin_artifact_sha256": "sha256:76275c49097442568fe0a5f3d1baf88730550142ba1b845b17ac9f27f85bc1be",
+      "bibliographic_metadata": {
+        "publisher": "Massachusetts Medical Society",
+        "issue": "4",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        },
+        "DOI": "10.1056/aioa2400802",
+        "type": "journal-article",
+        "title": [
+          "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment"
+        ],
+        "volume": "2",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-0866-0508",
+            "authenticated-orcid": false,
+            "given": "Michael V.",
+            "family": "Heinz",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2188-2968",
+            "authenticated-orcid": false,
+            "given": "Daniel M.",
+            "family": "Mackin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4466-7926",
+            "authenticated-orcid": false,
+            "given": "Brianna M.",
+            "family": "Trudeau",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7814-7278",
+            "authenticated-orcid": false,
+            "given": "Sukanya",
+            "family": "Bhattacharya",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-6355-2551",
+            "authenticated-orcid": false,
+            "given": "Yinzhou",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0006-0476-371X",
+            "authenticated-orcid": false,
+            "given": "Haley A.",
+            "family": "Banta",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0007-1390-7380",
+            "authenticated-orcid": false,
+            "given": "Abi D.",
+            "family": "Jewett",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-3210-6807",
+            "authenticated-orcid": false,
+            "given": "Abigail J.",
+            "family": "Salzhauer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5462-575X",
+            "authenticated-orcid": false,
+            "given": "Tess Z.",
+            "family": "Griffin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8832-4741",
+            "authenticated-orcid": false,
+            "given": "Nicholas C.",
+            "family": "Jacobson",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              },
+              {
+                "name": "Quantitative Biomedical Sciences Program, Dartmouth College, Hanover, NH"
+              },
+              {
+                "name": "Department of Biomedical Data Science, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "NEJM AI"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1056/aioa2400802",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1056/AIoa2400802",
+      "locator": "message.DOI",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/E4G328PD-crossref.json",
+      "origin_artifact_sha256": "sha256:76275c49097442568fe0a5f3d1baf88730550142ba1b845b17ac9f27f85bc1be",
+      "bibliographic_metadata": {
+        "publisher": "Massachusetts Medical Society",
+        "issue": "4",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        },
+        "DOI": "10.1056/aioa2400802",
+        "type": "journal-article",
+        "title": [
+          "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment"
+        ],
+        "volume": "2",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-0866-0508",
+            "authenticated-orcid": false,
+            "given": "Michael V.",
+            "family": "Heinz",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2188-2968",
+            "authenticated-orcid": false,
+            "given": "Daniel M.",
+            "family": "Mackin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4466-7926",
+            "authenticated-orcid": false,
+            "given": "Brianna M.",
+            "family": "Trudeau",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7814-7278",
+            "authenticated-orcid": false,
+            "given": "Sukanya",
+            "family": "Bhattacharya",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-6355-2551",
+            "authenticated-orcid": false,
+            "given": "Yinzhou",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0006-0476-371X",
+            "authenticated-orcid": false,
+            "given": "Haley A.",
+            "family": "Banta",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0007-1390-7380",
+            "authenticated-orcid": false,
+            "given": "Abi D.",
+            "family": "Jewett",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-3210-6807",
+            "authenticated-orcid": false,
+            "given": "Abigail J.",
+            "family": "Salzhauer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5462-575X",
+            "authenticated-orcid": false,
+            "given": "Tess Z.",
+            "family": "Griffin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8832-4741",
+            "authenticated-orcid": false,
+            "given": "Nicholas C.",
+            "family": "Jacobson",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              },
+              {
+                "name": "Quantitative Biomedical Sciences Program, Dartmouth College, Hanover, NH"
+              },
+              {
+                "name": "Department of Biomedical Data Science, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "NEJM AI"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1056/aioa2400802",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1056/AIoa2400802",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/E4G328PD-crossref.json",
+      "origin_artifact_sha256": "sha256:76275c49097442568fe0a5f3d1baf88730550142ba1b845b17ac9f27f85bc1be",
+      "bibliographic_metadata": {
+        "publisher": "Massachusetts Medical Society",
+        "issue": "4",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        },
+        "DOI": "10.1056/aioa2400802",
+        "type": "journal-article",
+        "title": [
+          "Randomized Trial of a Generative AI Chatbot for Mental Health Treatment"
+        ],
+        "volume": "2",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-0866-0508",
+            "authenticated-orcid": false,
+            "given": "Michael V.",
+            "family": "Heinz",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2188-2968",
+            "authenticated-orcid": false,
+            "given": "Daniel M.",
+            "family": "Mackin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4466-7926",
+            "authenticated-orcid": false,
+            "given": "Brianna M.",
+            "family": "Trudeau",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7814-7278",
+            "authenticated-orcid": false,
+            "given": "Sukanya",
+            "family": "Bhattacharya",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-6355-2551",
+            "authenticated-orcid": false,
+            "given": "Yinzhou",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0006-0476-371X",
+            "authenticated-orcid": false,
+            "given": "Haley A.",
+            "family": "Banta",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0007-1390-7380",
+            "authenticated-orcid": false,
+            "given": "Abi D.",
+            "family": "Jewett",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-3210-6807",
+            "authenticated-orcid": false,
+            "given": "Abigail J.",
+            "family": "Salzhauer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5462-575X",
+            "authenticated-orcid": false,
+            "given": "Tess Z.",
+            "family": "Griffin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8832-4741",
+            "authenticated-orcid": false,
+            "given": "Nicholas C.",
+            "family": "Jacobson",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Technology and Behavioral Health, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              },
+              {
+                "name": "Department of Psychiatry, Geisel School of Medicine, Dartmouth College, Hanover, NH"
+              },
+              {
+                "name": "Quantitative Biomedical Sciences Program, Dartmouth College, Hanover, NH"
+              },
+              {
+                "name": "Department of Biomedical Data Science, Geisel School of Medicine, Dartmouth College, Lebanon, NH"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "NEJM AI"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1056/aioa2400802",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              27
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

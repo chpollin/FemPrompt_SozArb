@@ -1,0 +1,207 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "MS3CNU3S",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1162%2Fcoli_a_00524",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/050860814eca4cb047d9.json",
+      "origin_artifact_sha256": "sha256:f77d81eea49ce366d917bb63543a6bbfa8ccec7baa1a563f7b9655be0000a41d",
+      "bibliographic_metadata": {
+        "publisher": "MIT Press",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1162/coli_a_00524",
+        "type": "journal-article",
+        "page": "1097-1179",
+        "title": [
+          "Bias and Fairness in Large Language Models: A Survey"
+        ],
+        "volume": "50",
+        "author": [
+          {
+            "given": "Isabel O.",
+            "family": "Gallegos",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science, Stanford University. iogalle@stanford.edu"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ryan A.",
+            "family": "Rossi",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Adobe Research. ryrossi@adobe.com"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Joe",
+            "family": "Barrow",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Pattern Data. joe.barrow@patterndataworks.com"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Md Mehrab",
+            "family": "Tanjim",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Adobe Research. tanjim@adobe.com"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sungchul",
+            "family": "Kim",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Adobe Research. sukim@adobe.com"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Franck",
+            "family": "Dernoncourt",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Adobe Research. dernonco@adobe.com"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tong",
+            "family": "Yu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Adobe Research. tyu@adobe.com"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ruiyi",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Adobe Research. ruizhang@adobe.com"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nesreen K.",
+            "family": "Ahmed",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Intel Labs. nesreen.k.ahmed@intel.com"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              1
+            ]
+          ]
+        },
+        "container-title": [
+          "Computational Linguistics"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1162/coli_a_00524",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

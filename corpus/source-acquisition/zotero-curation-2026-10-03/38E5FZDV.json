@@ -1,0 +1,172 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "38E5FZDV",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1073%2Fpnas.2416228122",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/836d2952898e15d3fa7f.json",
+      "origin_artifact_sha256": "sha256:61c906753e40e94aaccb713b6d5c075cb1b513044528a67ae22fda8ee0cb4e58",
+      "bibliographic_metadata": {
+        "publisher": "National Academy of Sciences",
+        "issue": "8",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              25
+            ]
+          ]
+        },
+        "DOI": "10.1073/pnas.2416228122",
+        "type": "journal-article",
+        "title": [
+          "Explicitly unbiased large language models still form biased associations"
+        ],
+        "volume": "122",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-2277-5451",
+            "authenticated-orcid": false,
+            "given": "Xuechunzi",
+            "family": "Bai",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Psychology",
+                "place": [
+                  "Chicago"
+                ]
+              },
+              {
+                "name": "The University of Chicago",
+                "place": [
+                  "Chicago"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9140-3523",
+            "authenticated-orcid": false,
+            "given": "Angelina",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science",
+                "place": [
+                  "Palo Alto"
+                ]
+              },
+              {
+                "name": "Stanford University",
+                "place": [
+                  "Palo Alto"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4121-7479",
+            "authenticated-orcid": false,
+            "given": "Ilia",
+            "family": "Sucholutsky",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Data Science",
+                "place": [
+                  "New York"
+                ]
+              },
+              {
+                "name": "New York University",
+                "place": [
+                  "New York"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Thomas L.",
+            "family": "Griffiths",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Departments of Psychology and Computer Science",
+                "place": [
+                  "Princeton"
+                ]
+              },
+              {
+                "name": "Princeton University",
+                "place": [
+                  "Princeton"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              20
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the National Academy of Sciences"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              20
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1073/pnas.2416228122",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              20
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

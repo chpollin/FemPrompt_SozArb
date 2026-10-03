@@ -1,0 +1,99 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "7IY7AX7D",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1038%2Fs44271-025-00262-1",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/a754cbdefc4385f736f0.json",
+      "origin_artifact_sha256": "sha256:a527786bc09228d394da929897b827498dcca773234e0754d932e0a75ecc4654",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "DOI": "10.1038/s44271-025-00262-1",
+        "type": "journal-article",
+        "title": [
+          "The influence of mental state attributions on trust in large language models"
+        ],
+        "volume": "3",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-3293-8741",
+            "authenticated-orcid": false,
+            "given": "Clara",
+            "family": "Colombatto",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7517-4759",
+            "authenticated-orcid": false,
+            "given": "Jonathan",
+            "family": "Birch",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-0233-4891",
+            "authenticated-orcid": false,
+            "given": "Stephen M.",
+            "family": "Fleming",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              25
+            ]
+          ]
+        },
+        "container-title": [
+          "Communications Psychology"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              25
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1038/s44271-025-00262-1",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              25
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

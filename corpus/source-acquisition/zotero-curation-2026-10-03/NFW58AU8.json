@@ -1,0 +1,109 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "NFW58AU8",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1155%2F2023%2F5550418",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/14f2d663280c2b75150f.json",
+      "origin_artifact_sha256": "sha256:2abd3e66ffd6404ebfc8136da46fff9a2afab443512161eee0f35a23658abc10",
+      "bibliographic_metadata": {
+        "publisher": "Wiley",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1155/2023/5550418",
+        "type": "journal-article",
+        "page": "1-15",
+        "title": [
+          "Transparency Enhances Positive Perceptions of Social Artificial Intelligence"
+        ],
+        "volume": "2023",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2079-2394",
+            "authenticated-orcid": true,
+            "given": "Ying",
+            "family": "Xu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Marsal Family School of Education, University of Michigan, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8154-3784",
+            "authenticated-orcid": true,
+            "given": "Nora",
+            "family": "Bradford",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Cognitive Sciences, University of California Irvine, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Radhika",
+            "family": "Garg",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Independent Researcher United States of America, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Human Behavior and Emerging Technologies"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              6
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1155/2023/5550418",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              6
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

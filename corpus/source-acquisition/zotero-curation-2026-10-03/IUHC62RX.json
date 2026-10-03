@@ -1,0 +1,68 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "IUHC62RX",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.35468%2Fwbeb2022-155",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/9e0063f0f046602b5edb.json",
+      "origin_artifact_sha256": "sha256:32ec63dc2d9ee5fd06d6e90796c27b6de6ad48edadd829404c9f652d4b2bc0c1",
+      "bibliographic_metadata": {
+        "publisher": "Verlag Julius Klinkhardt",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              4,
+              3
+            ]
+          ]
+        },
+        "DOI": "10.35468/wbeb2022-155",
+        "type": "book-chapter",
+        "page": "236-237",
+        "title": [
+          "Intersektionalität"
+        ],
+        "author": [
+          {
+            "given": "Katharina",
+            "family": "Walgenbach",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Wörterbuch Erwachsenen- und Weiterbildung"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              4,
+              3
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.35468/wbeb2022-155",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              4,
+              3
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

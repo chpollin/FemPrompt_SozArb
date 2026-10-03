@@ -1,0 +1,117 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "UNGYENLB",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1080%2F17439884.2026.2652638",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/86d7693ec714bc99cf67.json",
+      "origin_artifact_sha256": "sha256:abe27b4f920c7a5bc6bfccb7c75fac375a2ff84d248e58fda93613cc7357c8b5",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "DOI": "10.1080/17439884.2026.2652638",
+        "type": "journal-article",
+        "page": "1-15",
+        "title": [
+          "Metacognitive AI literacy: going beyond the AI skills gap agenda"
+        ],
+        "author": [
+          {
+            "given": "Hanne",
+            "family": "Shapiro",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Bristol",
+                "place": [
+                  "Bristol, UK"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8768-514X",
+            "authenticated-orcid": false,
+            "given": "Manuel",
+            "family": "Souto-Otero",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Bristol",
+                "place": [
+                  "Bristol, UK"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2365-3771",
+            "authenticated-orcid": false,
+            "given": "Richard",
+            "family": "Watermeyer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Bristol",
+                "place": [
+                  "Bristol, UK"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              13
+            ]
+          ]
+        },
+        "container-title": [
+          "Learning, Media and Technology"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              13
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/17439884.2026.2652638",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              13
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "VYCF5NCB",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2F978-3-031-80119-8_6",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/aff775048d327b946ac0.json",
+      "origin_artifact_sha256": "sha256:4a352d5070ab987c904c0012a72f7075e1ec06c05a5344a8d8e598c2489b2fb1",
+      "bibliographic_metadata": {
+        "publisher": "Springer Nature Switzerland",
+        "published-print": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "DOI": "10.1007/978-3-031-80119-8_6",
+        "type": "book-chapter",
+        "page": "89-97",
+        "title": [
+          "Power Imbalances in Society and AI: On the Need to Expand the Feminist Approach"
+        ],
+        "author": [
+          {
+            "given": "Eva Johanna",
+            "family": "Gengler",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Marco",
+            "family": "Wedel",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Alexandra",
+            "family": "Wudel",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sven",
+            "family": "Laumer",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              13
+            ]
+          ]
+        },
+        "container-title": [
+          "Lecture Notes in Information Systems and Organisation",
+          "Conceptualizing Digital Responsibility for the Information Age"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/978-3-031-80119-8_6",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

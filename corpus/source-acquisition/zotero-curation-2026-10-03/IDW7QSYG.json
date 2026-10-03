@@ -1,0 +1,136 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "IDW7QSYG",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1108%2Fmd-04-2024-0884",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/bf62a1ef4f38902274c8.json",
+      "origin_artifact_sha256": "sha256:fd8dff0485382e2616421fadb268dff9c86c89e20253887117fc6f9508e14e28",
+      "bibliographic_metadata": {
+        "publisher": "Emerald",
+        "issue": "9",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              18
+            ]
+          ]
+        },
+        "DOI": "10.1108/md-04-2024-0884",
+        "type": "journal-article",
+        "page": "3042-3065",
+        "title": [
+          "Female perspectives on algorithmic bias: implications for AI researchers and practitioners"
+        ],
+        "volume": "63",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-3380-6014",
+            "authenticated-orcid": true,
+            "given": "Belen",
+            "family": "Fraile-Rojas",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Escuela Internacional de Doctorado, Universidad Rey Juan Carlos , ,",
+                "place": [
+                  "Madrid, Spain"
+                ]
+              },
+              {
+                "name": "Department of Market Research and Quantitative Methods, ESIC University , ,",
+                "place": [
+                  "Madrid, Spain"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-0457-3730",
+            "authenticated-orcid": true,
+            "given": "Carmen",
+            "family": "De-Pablos-Heredero",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Departamento de Economía de la Empresa (Administración, Dirección, y Organización), Economía Aplicada II y Fundamentos de Análisis Económico, Universidad Rey Juan Carlos , ,",
+                "place": [
+                  "Madrid, Spain"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6018-6463",
+            "authenticated-orcid": true,
+            "given": "Mariano",
+            "family": "Mendez-Suarez",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "ESIC University - ESIC Business & Marketing School , ,",
+                "place": [
+                  "Madrid, Spain"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              8
+            ]
+          ]
+        },
+        "container-title": [
+          "Management Decision"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              8
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1108/md-04-2024-0884",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              8
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

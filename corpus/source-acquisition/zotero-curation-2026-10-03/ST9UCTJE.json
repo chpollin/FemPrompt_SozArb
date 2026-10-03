@@ -1,0 +1,117 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "ST9UCTJE",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550%2Farxiv.1809.10610",
+      "locator": "keys contains ST9UCTJE, metadata.creators/types/url",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry-results.json",
+      "origin_artifact_sha256": "sha256:f261a17c9cee9fdc126f44b1c2d516760eef553ce21146a2d441d0cecb21596c",
+      "bibliographic_metadata": [
+        {
+          "doi": "10.48550/arxiv.1809.10610",
+          "creators": [
+            {
+              "name": "Garg, Sahaj",
+              "nameType": "Personal",
+              "givenName": "Sahaj",
+              "familyName": "Garg",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Perot, Vincent",
+              "nameType": "Personal",
+              "givenName": "Vincent",
+              "familyName": "Perot",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Limtiaco, Nicole",
+              "nameType": "Personal",
+              "givenName": "Nicole",
+              "familyName": "Limtiaco",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Taly, Ankur",
+              "nameType": "Personal",
+              "givenName": "Ankur",
+              "familyName": "Taly",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Chi, Ed H.",
+              "nameType": "Personal",
+              "givenName": "Ed H.",
+              "familyName": "Chi",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Beutel, Alex",
+              "nameType": "Personal",
+              "givenName": "Alex",
+              "familyName": "Beutel",
+              "affiliation": [],
+              "nameIdentifiers": []
+            }
+          ],
+          "titles": [
+            {
+              "title": "Counterfactual Fairness in Text Classification through Robustness"
+            }
+          ],
+          "publisher": "arXiv",
+          "publicationYear": 2018,
+          "dates": [
+            {
+              "date": "2018-09-27T16:21:39Z",
+              "dateType": "Submitted",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2018-09-28T00:13:39Z",
+              "dateType": "Updated",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2019-02-13T19:09:40Z",
+              "dateType": "Submitted",
+              "dateInformation": "v2"
+            },
+            {
+              "date": "2019-02-15T01:00:33Z",
+              "dateType": "Updated",
+              "dateInformation": "v2"
+            },
+            {
+              "date": "2018-09",
+              "dateType": "Available",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2018",
+              "dateType": "Issued"
+            }
+          ],
+          "types": {
+            "ris": "GEN",
+            "bibtex": "misc",
+            "citeproc": "article",
+            "schemaOrg": "CreativeWork",
+            "resourceType": "Article",
+            "resourceTypeGeneral": "Preprint"
+          },
+          "version": "2",
+          "url": "https://arxiv.org/abs/1809.10610",
+          "published": "2018"
+        }
+      ]
+    }
+  ]
+}

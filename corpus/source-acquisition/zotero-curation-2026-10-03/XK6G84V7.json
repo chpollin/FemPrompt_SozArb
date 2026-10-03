@@ -1,0 +1,104 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "XK6G84V7",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.3389%2Ffrai.2024.1320277",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/c85b21a153fb476dc68c.json",
+      "origin_artifact_sha256": "sha256:a6b823ed39b798284b3bd944f4c7a3bf72bc99f6f2f2467bd2b6a654f1728cd4",
+      "bibliographic_metadata": {
+        "publisher": "Frontiers Media SA",
+        "DOI": "10.3389/frai.2024.1320277",
+        "type": "journal-article",
+        "title": [
+          "Algorithmic discrimination: examining its types and regulatory measures with emphasis on US legal practices"
+        ],
+        "volume": "7",
+        "author": [
+          {
+            "given": "Xukang",
+            "family": "Wang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ying Cheng",
+            "family": "Wu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xueliang",
+            "family": "Ji",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hongpeng",
+            "family": "Fu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              21
+            ]
+          ]
+        },
+        "container-title": [
+          "Frontiers in Artificial Intelligence"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              21
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3389/frai.2024.1320277",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              21
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

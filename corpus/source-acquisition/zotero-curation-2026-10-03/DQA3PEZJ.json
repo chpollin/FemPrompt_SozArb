@@ -1,0 +1,120 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "DQA3PEZJ",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1080%2F0960085x.2021.1934130",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/463299ad4c71c499ab0f.json",
+      "origin_artifact_sha256": "sha256:a52df026dee5495e18e7abc7f8ab160244c83e782b0f6063b60277bdc278679d",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2022,
+              5,
+              4
+            ]
+          ]
+        },
+        "DOI": "10.1080/0960085x.2021.1934130",
+        "type": "journal-article",
+        "page": "269-287",
+        "title": [
+          "Theorising Algorithmic Justice"
+        ],
+        "volume": "31",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-8362-0982",
+            "authenticated-orcid": false,
+            "given": "Olivera",
+            "family": "Marjanovic",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Technology Sydney Faculty of Engineering and Information Technology, School of Professional Practice & Leadership, Sydney, Australia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Dubravka",
+            "family": "Cecez-Kecmanovic",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of New South Wales Business School, Sydney, Australia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Richard",
+            "family": "Vidgen",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of New South Wales Business School, Sydney, Australia"
+              },
+              {
+                "name": "University of Hull, School of Management, UK"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2021,
+              6,
+              21
+            ]
+          ]
+        },
+        "container-title": [
+          "European Journal of Information Systems"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2021,
+              6,
+              21
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/0960085x.2021.1934130",
+        "published": {
+          "date-parts": [
+            [
+              2021,
+              6,
+              21
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

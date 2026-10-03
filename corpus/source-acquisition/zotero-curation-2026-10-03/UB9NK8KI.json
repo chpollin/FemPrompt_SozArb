@@ -1,0 +1,385 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "UB9NK8KI",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.3390/app14083483",
+      "locator": "message.author",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/UB9NK8KI-crossref.json",
+      "origin_artifact_sha256": "sha256:00d42dd1994ac5487fef559941b14a88d1905490378f829590f032f09a589939",
+      "bibliographic_metadata": {
+        "publisher": "MDPI AG",
+        "issue": "8",
+        "DOI": "10.3390/app14083483",
+        "type": "journal-article",
+        "page": "3483",
+        "title": [
+          "Scaling Implicit Bias Analysis across Transformer-Based Language Models through Embedding Association Test and Prompt Engineering"
+        ],
+        "volume": "14",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0007-2156-7937",
+            "authenticated-orcid": false,
+            "given": "Ravi Varma Kumar",
+            "family": "Bevara",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Information Science, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6423-4899",
+            "authenticated-orcid": false,
+            "given": "Nishith Reddy",
+            "family": "Mannuru",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Information Science, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0003-0857-3022",
+            "authenticated-orcid": false,
+            "given": "Sai Pranathi",
+            "family": "Karedla",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science and Engineering, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8548-5710",
+            "authenticated-orcid": false,
+            "given": "Ting",
+            "family": "Xiao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Information Science, University of North Texas, Denton, TX 76205, USA"
+              },
+              {
+                "name": "Department of Computer Science and Engineering, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              20
+            ]
+          ]
+        },
+        "container-title": [
+          "Applied Sciences"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              20
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3390/app14083483",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.3390/app14083483",
+      "locator": "message.DOI",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/UB9NK8KI-crossref.json",
+      "origin_artifact_sha256": "sha256:00d42dd1994ac5487fef559941b14a88d1905490378f829590f032f09a589939",
+      "bibliographic_metadata": {
+        "publisher": "MDPI AG",
+        "issue": "8",
+        "DOI": "10.3390/app14083483",
+        "type": "journal-article",
+        "page": "3483",
+        "title": [
+          "Scaling Implicit Bias Analysis across Transformer-Based Language Models through Embedding Association Test and Prompt Engineering"
+        ],
+        "volume": "14",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0007-2156-7937",
+            "authenticated-orcid": false,
+            "given": "Ravi Varma Kumar",
+            "family": "Bevara",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Information Science, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6423-4899",
+            "authenticated-orcid": false,
+            "given": "Nishith Reddy",
+            "family": "Mannuru",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Information Science, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0003-0857-3022",
+            "authenticated-orcid": false,
+            "given": "Sai Pranathi",
+            "family": "Karedla",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science and Engineering, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8548-5710",
+            "authenticated-orcid": false,
+            "given": "Ting",
+            "family": "Xiao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Information Science, University of North Texas, Denton, TX 76205, USA"
+              },
+              {
+                "name": "Department of Computer Science and Engineering, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              20
+            ]
+          ]
+        },
+        "container-title": [
+          "Applied Sciences"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              20
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3390/app14083483",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              20
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.3390/app14083483",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/UB9NK8KI-crossref.json",
+      "origin_artifact_sha256": "sha256:00d42dd1994ac5487fef559941b14a88d1905490378f829590f032f09a589939",
+      "bibliographic_metadata": {
+        "publisher": "MDPI AG",
+        "issue": "8",
+        "DOI": "10.3390/app14083483",
+        "type": "journal-article",
+        "page": "3483",
+        "title": [
+          "Scaling Implicit Bias Analysis across Transformer-Based Language Models through Embedding Association Test and Prompt Engineering"
+        ],
+        "volume": "14",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0007-2156-7937",
+            "authenticated-orcid": false,
+            "given": "Ravi Varma Kumar",
+            "family": "Bevara",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Information Science, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6423-4899",
+            "authenticated-orcid": false,
+            "given": "Nishith Reddy",
+            "family": "Mannuru",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Information Science, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0003-0857-3022",
+            "authenticated-orcid": false,
+            "given": "Sai Pranathi",
+            "family": "Karedla",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Computer Science and Engineering, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8548-5710",
+            "authenticated-orcid": false,
+            "given": "Ting",
+            "family": "Xiao",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Information Science, University of North Texas, Denton, TX 76205, USA"
+              },
+              {
+                "name": "Department of Computer Science and Engineering, University of North Texas, Denton, TX 76205, USA"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              20
+            ]
+          ]
+        },
+        "container-title": [
+          "Applied Sciences"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              20
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3390/app14083483",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              20
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

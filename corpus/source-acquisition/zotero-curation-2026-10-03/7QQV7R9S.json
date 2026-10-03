@@ -1,0 +1,19 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "7QQV7R9S",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://basw.co.uk/policy-and-practice/resources/generative-ai-social-work-practice-guidance",
+      "locator": "line 8",
+      "origin_path": "generated/markdown_clean/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md",
+      "origin_artifact_sha256": "sha256:e65682722507a93955e4a04c2e3dbcbd46139562892883cd86758facad5e1f63",
+      "bibliographic_metadata": {
+        "existing_source_path": "generated/markdown_clean/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md",
+        "existing_sha256": "sha256:e65682722507a93955e4a04c2e3dbcbd46139562892883cd86758facad5e1f63",
+        "locator": "line 8",
+        "quote": "## Generative AI and\n\n## Social Work:\n\nInitial Guidance for Practice and Ethics"
+      }
+    }
+  ]
+}

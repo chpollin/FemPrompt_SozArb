@@ -1,0 +1,226 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "BR2LG8LD",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs43681-024-00423-8",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/6714b1c4ae1c038e7e7d.json",
+      "origin_artifact_sha256": "sha256:521e6a5c9a0365d5996b1d8c760f2ae056f38496dba5e29c33eae5132922d036",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              8
+            ]
+          ]
+        },
+        "DOI": "10.1007/s43681-024-00423-8",
+        "type": "journal-article",
+        "page": "771-790",
+        "title": [
+          "How AI hype impacts the LGBTQ + community"
+        ],
+        "volume": "4",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0005-3601-6981",
+            "authenticated-orcid": false,
+            "given": "Dawn",
+            "family": "McAra-Hunter",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              14
+            ]
+          ]
+        },
+        "container-title": [
+          "AI and Ethics"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              14
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s43681-024-00423-8",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              14
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1007/s43681-024-00423-8",
+      "locator": "message.author",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/BR2LG8LD-crossref.json",
+      "origin_artifact_sha256": "sha256:548082effaab7c7d056a6c8ba44550eeca2ff096494648c3af673a6052e085f1",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              8
+            ]
+          ]
+        },
+        "DOI": "10.1007/s43681-024-00423-8",
+        "type": "journal-article",
+        "page": "771-790",
+        "title": [
+          "How AI hype impacts the LGBTQ + community"
+        ],
+        "volume": "4",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0005-3601-6981",
+            "authenticated-orcid": false,
+            "given": "Dawn",
+            "family": "McAra-Hunter",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              14
+            ]
+          ]
+        },
+        "container-title": [
+          "AI and Ethics"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              14
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s43681-024-00423-8",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              14
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1007/s43681-024-00423-8",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/BR2LG8LD-crossref.json",
+      "origin_artifact_sha256": "sha256:548082effaab7c7d056a6c8ba44550eeca2ff096494648c3af673a6052e085f1",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              8
+            ]
+          ]
+        },
+        "DOI": "10.1007/s43681-024-00423-8",
+        "type": "journal-article",
+        "page": "771-790",
+        "title": [
+          "How AI hype impacts the LGBTQ + community"
+        ],
+        "volume": "4",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0005-3601-6981",
+            "authenticated-orcid": false,
+            "given": "Dawn",
+            "family": "McAra-Hunter",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              14
+            ]
+          ]
+        },
+        "container-title": [
+          "AI and Ethics"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              14
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s43681-024-00423-8",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              2,
+              14
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

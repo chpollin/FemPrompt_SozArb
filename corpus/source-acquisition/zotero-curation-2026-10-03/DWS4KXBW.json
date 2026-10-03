@@ -1,0 +1,43 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "DWS4KXBW",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://datapopalliance.org/publications/towards-real-diversity-and-gender-equality-in-ai/",
+      "locator": "line 57",
+      "origin_path": "generated/markdown_clean/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
+      "origin_artifact_sha256": "sha256:164f39c1a39cdc016a617f8f01d5294f0ca798080691518e601edb7977aecd64",
+      "bibliographic_metadata": {
+        "existing_source_path": "generated/markdown_clean/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
+        "existing_sha256": "sha256:164f39c1a39cdc016a617f8f01d5294f0ca798080691518e601edb7977aecd64",
+        "locator": "line 57",
+        "quote": "GPAI 2024. Towards Substantive Equality in Artificial Intelligence: Transformative AI Policy for Gender Equality and Diversity , Report, November 2024, Global Partnership on AI."
+      }
+    },
+    {
+      "source_url": "https://datapopalliance.org/publications/towards-real-diversity-and-gender-equality-in-ai/",
+      "locator": "line 57",
+      "origin_path": "generated/markdown_clean/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
+      "origin_artifact_sha256": "sha256:164f39c1a39cdc016a617f8f01d5294f0ca798080691518e601edb7977aecd64",
+      "bibliographic_metadata": {
+        "existing_source_path": "generated/markdown_clean/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
+        "existing_sha256": "sha256:164f39c1a39cdc016a617f8f01d5294f0ca798080691518e601edb7977aecd64",
+        "locator": "line 57",
+        "quote": "Report, November 2024, Global Partnership on AI."
+      }
+    },
+    {
+      "source_url": "https://datapopalliance.org/publications/towards-real-diversity-and-gender-equality-in-ai/",
+      "locator": "line 12",
+      "origin_path": "generated/markdown_clean/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
+      "origin_artifact_sha256": "sha256:164f39c1a39cdc016a617f8f01d5294f0ca798080691518e601edb7977aecd64",
+      "bibliographic_metadata": {
+        "existing_source_path": "generated/markdown_clean/Ricaurte Quijano_2024_Towards_Substantive_Equality_in_Artificial.md",
+        "existing_sha256": "sha256:164f39c1a39cdc016a617f8f01d5294f0ca798080691518e601edb7977aecd64",
+        "locator": "line 12",
+        "quote": "November 2024"
+      }
+    }
+  ]
+}

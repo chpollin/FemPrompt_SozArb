@@ -1,0 +1,40 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "K6JQ7SVA",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/abs/2302.12683",
+      "locator": "key=K6JQ7SVA, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "Intersectional Fairness: A Fractal Approach"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2302.12683"
+          ],
+          "citation_date": [
+            "2023/02/24"
+          ],
+          "citation_abstract": [
+            "The issue of fairness in AI has received an increasing amount of attention in recent years. The problem can be approached by looking at different protected attributes (e.g., ethnicity, gender, etc) independently, but fairness for individual protected attributes does not imply intersectional fairness. In this work, we frame the problem of intersectional fairness within a geometrical setting. We project our data onto a hypercube, and split the analysis of fairness by levels, where each level encodes the number of protected attributes we are intersecting over. We prove mathematically that, while fairness does not propagate \"down\" the levels, it does propagate \"up\" the levels. This means that ensuring fairness for all subgroups at the lowest intersectional level (e.g., black women, white women, black men and white men), will necessarily result in fairness for all the above levels, including each of the protected attributes (e.g., ethnicity and gender) taken independently. We also derive a formula describing the variance of the set of estimated success rates on each level, under the assumption of perfect fairness. Using this theoretical finding as a benchmark, we define a family of metrics which capture overall intersectional bias. Finally, we propose that fairness can be metaphorically thought of as a \"fractal\" problem. In fractals, patterns at the smallest scale repeat at a larger scale. We see from this example that tackling the problem at the lowest possible level, in a bottom-up manner, leads to the natural emergence of fair AI. We suggest that trustworthiness is necessarily an emergent, fractal and relational property of the AI system."
+          ],
+          "citation_online_date": [
+            "2023/02/24"
+          ],
+          "citation_author": [
+            "Filippi, Giulio",
+            "Zannone, Sara",
+            "Koshiyama, Adriano"
+          ],
+          "citation_arxiv_id": [
+            "2302.12683"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "L6PH7GDL",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.3262%2F978-3-7799-8562-4",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/66693e652b45f7f7b63e.json",
+      "origin_artifact_sha256": "sha256:ef749620a77499457ba1853323306ab944d0f3585c297f1063f70371ff2b41e8",
+      "bibliographic_metadata": {
+        "publisher": "Beltz Juventa",
+        "DOI": "10.3262/978-3-7799-8562-4",
+        "type": "monograph",
+        "title": [
+          "Künstliche Intelligenz in der Sozialen Arbeit: Grundlagen für Theorie und Praxis"
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              18
+            ]
+          ]
+        },
+        "container-title": [],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              18
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3262/978-3-7799-8562-4",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              18
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "YUVR5YNQ",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.18653/v1/2025.naacl-short.74",
+      "locator": "message.author",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YUVR5YNQ-crossref.json",
+      "origin_artifact_sha256": "sha256:f69c6f5f9ebc6fb76956278b9945cbeeeeee77be8d7e469f5d011a48d4be5a33",
+      "bibliographic_metadata": {
+        "publisher": "Association for Computational Linguistics",
+        "published-print": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "DOI": "10.18653/v1/2025.naacl-short.74",
+        "type": "proceedings-article",
+        "page": "873-888",
+        "title": [
+          "Self-Debiasing Large Language Models: Zero-Shot Recognition and Reduction of Stereotypes"
+        ],
+        "author": [
+          {
+            "given": "Isabel O.",
+            "family": "Gallegos",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ryan",
+            "family": "Aponte",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ryan A.",
+            "family": "Rossi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Joe",
+            "family": "Barrow",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Mehrab",
+            "family": "Tanjim",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tong",
+            "family": "Yu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hanieh",
+            "family": "Deilamsalehy",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ruiyi",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sungchul",
+            "family": "Kim",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Franck",
+            "family": "Dernoncourt",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nedim",
+            "family": "Lipka",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Deonna",
+            "family": "Owens",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jiuxiang",
+            "family": "Gu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 2: Short Papers)"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.18653/v1/2025.naacl-short.74",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.18653/v1/2025.naacl-short.74",
+      "locator": "message.DOI",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YUVR5YNQ-crossref.json",
+      "origin_artifact_sha256": "sha256:f69c6f5f9ebc6fb76956278b9945cbeeeeee77be8d7e469f5d011a48d4be5a33",
+      "bibliographic_metadata": {
+        "publisher": "Association for Computational Linguistics",
+        "published-print": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "DOI": "10.18653/v1/2025.naacl-short.74",
+        "type": "proceedings-article",
+        "page": "873-888",
+        "title": [
+          "Self-Debiasing Large Language Models: Zero-Shot Recognition and Reduction of Stereotypes"
+        ],
+        "author": [
+          {
+            "given": "Isabel O.",
+            "family": "Gallegos",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ryan",
+            "family": "Aponte",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ryan A.",
+            "family": "Rossi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Joe",
+            "family": "Barrow",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Mehrab",
+            "family": "Tanjim",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tong",
+            "family": "Yu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hanieh",
+            "family": "Deilamsalehy",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ruiyi",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sungchul",
+            "family": "Kim",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Franck",
+            "family": "Dernoncourt",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nedim",
+            "family": "Lipka",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Deonna",
+            "family": "Owens",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jiuxiang",
+            "family": "Gu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 2: Short Papers)"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.18653/v1/2025.naacl-short.74",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.18653/v1/2025.naacl-short.74",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YUVR5YNQ-crossref.json",
+      "origin_artifact_sha256": "sha256:f69c6f5f9ebc6fb76956278b9945cbeeeeee77be8d7e469f5d011a48d4be5a33",
+      "bibliographic_metadata": {
+        "publisher": "Association for Computational Linguistics",
+        "published-print": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "DOI": "10.18653/v1/2025.naacl-short.74",
+        "type": "proceedings-article",
+        "page": "873-888",
+        "title": [
+          "Self-Debiasing Large Language Models: Zero-Shot Recognition and Reduction of Stereotypes"
+        ],
+        "author": [
+          {
+            "given": "Isabel O.",
+            "family": "Gallegos",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ryan",
+            "family": "Aponte",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ryan A.",
+            "family": "Rossi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Joe",
+            "family": "Barrow",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Mehrab",
+            "family": "Tanjim",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Tong",
+            "family": "Yu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hanieh",
+            "family": "Deilamsalehy",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ruiyi",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Sungchul",
+            "family": "Kim",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Franck",
+            "family": "Dernoncourt",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nedim",
+            "family": "Lipka",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Deonna",
+            "family": "Owens",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jiuxiang",
+            "family": "Gu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 2: Short Papers)"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.18653/v1/2025.naacl-short.74",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://aclanthology.org/2025.naacl-short.74/",
+      "locator": "Byline line 34",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/metadata-primary-web-evidence.json",
+      "origin_artifact_sha256": "sha256:67524e7bc00cd9189f52fcc206ae15c9c3da53d686ca4c5ba3799267f4a5bdbe",
+      "bibliographic_metadata": [
+        {
+          "source_url": "https://aclanthology.org/2025.naacl-short.74/",
+          "finding": "13 authors including Jiuxiang Gu exactly once; agrees with stored Crossref JSON.",
+          "locator": "Byline line 34"
+        }
+      ]
+    }
+  ]
+}

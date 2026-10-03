@@ -1,0 +1,87 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "DGLWM93D",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.35468%2F6166-16",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/8726a6c2aefd546dfc6c.json",
+      "origin_artifact_sha256": "sha256:09ad575d61b4bce888536b82ccf90acebe7acf2c8b7bbd509e30728b581a1e69",
+      "bibliographic_metadata": {
+        "publisher": "Verlag Julius Klinkhardt",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.35468/6166-16",
+        "type": "book-chapter",
+        "page": "251-264",
+        "title": [
+          "Voll (dia)logisch? Ein Werkstattbericht über den Einsatz von generativer KI in der Hochschulbildung für Soziale Arbeit. Curriculare Überlegungen und veränderte Akteurskonstellationen"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0006-4395-2943",
+            "authenticated-orcid": false,
+            "given": "Emily",
+            "family": "Engelhardt",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Thomas",
+            "family": "Ley",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "container-title": [
+          "Digitalisierung in der Hochschulbildung für Soziale Arbeit"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.35468/6166-16",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              5
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "ED6C8LD2",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.2196%2F56764",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/f5e920e1c6b7438e0f77.json",
+      "origin_artifact_sha256": "sha256:2785bb690de94d9a417791964393916ffca7e910eedeeb5fa9bdaefee0920285",
+      "bibliographic_metadata": {
+        "publisher": "JMIR Publications Inc.",
+        "DOI": "10.2196/56764",
+        "type": "journal-article",
+        "page": "e56764",
+        "title": [
+          "Large Language Models and User Trust: Consequence of Self-Referential Learning Loop and the Deskilling of Health Care Professionals"
+        ],
+        "volume": "26",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-5342-0709",
+            "authenticated-orcid": false,
+            "given": "Avishek",
+            "family": "Choudhury",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2855-0667",
+            "authenticated-orcid": false,
+            "given": "Zaira",
+            "family": "Chaudhry",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              25
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Medical Internet Research"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              25
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.2196/56764",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              25
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

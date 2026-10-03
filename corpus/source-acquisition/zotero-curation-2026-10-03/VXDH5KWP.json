@@ -1,0 +1,178 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "VXDH5KWP",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.3390%2Feducsci15091143",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/cea69c56dc773700f6f2.json",
+      "origin_artifact_sha256": "sha256:c25332e64a5fdd13ef0d89ffaeb76434a5c36e3f23a160635b3916a506fb366a",
+      "bibliographic_metadata": {
+        "publisher": "MDPI AG",
+        "issue": "9",
+        "DOI": "10.3390/educsci15091143",
+        "type": "journal-article",
+        "page": "1143",
+        "title": [
+          "AI Literacy and Gender Bias: Comparative Perspectives from the UK and Indonesia"
+        ],
+        "volume": "15",
+        "author": [
+          {
+            "given": "Amrita Deviayu",
+            "family": "Tunjungbiru",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Department of Electrical Engineering, Faculty of Engineering, Universitas Indonesia, Depok 16424, Indonesia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2992-697X",
+            "authenticated-orcid": false,
+            "given": "Bernardi",
+            "family": "Pranggono",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Computing and Information Science, Anglia Ruskin University, Cambridge CB1 1PT, UK"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8841-8078",
+            "authenticated-orcid": false,
+            "given": "Riri Fitri",
+            "family": "Sari",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Electrical Engineering, Faculty of Engineering, Universitas Indonesia, Depok 16424, Indonesia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1167-5316",
+            "authenticated-orcid": false,
+            "given": "Erika",
+            "family": "Sanchez-Velazquez",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Computing and Information Science, Anglia Ruskin University, Cambridge CB1 1PT, UK"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Prima Dewi",
+            "family": "Purnamasari",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Electrical Engineering, Faculty of Engineering, Universitas Indonesia, Depok 16424, Indonesia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-9574-703X",
+            "authenticated-orcid": false,
+            "given": "Dewi Yanti",
+            "family": "Liliana",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Informatics and Computer Engineering, Politeknik Negeri Jakarta, Depok 16424, Indonesia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Nur Afny Catur",
+            "family": "Andryani",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Computer Science Department, BINUS Graduate Program-Doctor of Computer Science, Bina Nusantara University, Jakarta 11530, Indonesia"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              2
+            ]
+          ]
+        },
+        "container-title": [
+          "Education Sciences"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              2
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3390/educsci15091143",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              2
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

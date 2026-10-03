@@ -1,0 +1,259 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "S8WGUVQT",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.24908/ss.v21i3.16107",
+      "locator": "message.author",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/S8WGUVQT-crossref.json",
+      "origin_artifact_sha256": "sha256:f673deb70c486d1343086f2f9fc4e6b537d7f1f73e3e87a153024a89ee9892d3",
+      "bibliographic_metadata": {
+        "publisher": "Queen's University Library",
+        "issue": "3",
+        "DOI": "10.24908/ss.v21i3.16107",
+        "type": "journal-article",
+        "page": "246-258",
+        "title": [
+          "Automated Government Benefits and Welfare Surveillance"
+        ],
+        "volume": "21",
+        "author": [
+          {
+            "given": "Mike",
+            "family": "Zajko",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        },
+        "container-title": [
+          "Surveillance &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.24908/ss.v21i3.16107",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.24908/ss.v21i3.16107",
+      "locator": "message.issued.date-parts",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/S8WGUVQT-crossref.json",
+      "origin_artifact_sha256": "sha256:f673deb70c486d1343086f2f9fc4e6b537d7f1f73e3e87a153024a89ee9892d3",
+      "bibliographic_metadata": {
+        "publisher": "Queen's University Library",
+        "issue": "3",
+        "DOI": "10.24908/ss.v21i3.16107",
+        "type": "journal-article",
+        "page": "246-258",
+        "title": [
+          "Automated Government Benefits and Welfare Surveillance"
+        ],
+        "volume": "21",
+        "author": [
+          {
+            "given": "Mike",
+            "family": "Zajko",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        },
+        "container-title": [
+          "Surveillance &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.24908/ss.v21i3.16107",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.24908/ss.v21i3.16107",
+      "locator": "message.DOI",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/S8WGUVQT-crossref.json",
+      "origin_artifact_sha256": "sha256:f673deb70c486d1343086f2f9fc4e6b537d7f1f73e3e87a153024a89ee9892d3",
+      "bibliographic_metadata": {
+        "publisher": "Queen's University Library",
+        "issue": "3",
+        "DOI": "10.24908/ss.v21i3.16107",
+        "type": "journal-article",
+        "page": "246-258",
+        "title": [
+          "Automated Government Benefits and Welfare Surveillance"
+        ],
+        "volume": "21",
+        "author": [
+          {
+            "given": "Mike",
+            "family": "Zajko",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        },
+        "container-title": [
+          "Surveillance &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.24908/ss.v21i3.16107",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.24908/ss.v21i3.16107",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/S8WGUVQT-crossref.json",
+      "origin_artifact_sha256": "sha256:f673deb70c486d1343086f2f9fc4e6b537d7f1f73e3e87a153024a89ee9892d3",
+      "bibliographic_metadata": {
+        "publisher": "Queen's University Library",
+        "issue": "3",
+        "DOI": "10.24908/ss.v21i3.16107",
+        "type": "journal-article",
+        "page": "246-258",
+        "title": [
+          "Automated Government Benefits and Welfare Surveillance"
+        ],
+        "volume": "21",
+        "author": [
+          {
+            "given": "Mike",
+            "family": "Zajko",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        },
+        "container-title": [
+          "Surveillance &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.24908/ss.v21i3.16107",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              9,
+              24
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

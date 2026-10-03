@@ -1,0 +1,110 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "3QUWCYVW",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1016%2Fj.clsr.2024.106053",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/f37602eabec877107d45.json",
+      "origin_artifact_sha256": "sha256:887cbca5d30be2c0ac056f1198f55ef3d0f89df4b3cf048b654667b820a2470a",
+      "bibliographic_metadata": {
+        "publisher": "Elsevier BV",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              11
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.clsr.2024.106053",
+        "type": "journal-article",
+        "page": "106053",
+        "title": [
+          "Assessing trustworthy AI: Technical and legal perspectives of fairness in AI"
+        ],
+        "volume": "55",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0001-2657-2555",
+            "authenticated-orcid": false,
+            "given": "Markus",
+            "family": "Kattnig",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-9209-6676",
+            "authenticated-orcid": false,
+            "given": "Alessa",
+            "family": "Angerschmid",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-9862-4260",
+            "authenticated-orcid": false,
+            "given": "Thomas",
+            "family": "Reichel",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-0202-6100",
+            "authenticated-orcid": false,
+            "given": "Roman",
+            "family": "Kern",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Computer Law &amp; Security Review"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              11
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.clsr.2024.106053",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              11
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "7L93JBLR",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1017%2Fcfl.2025.12",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/61ab50f5c912fc99ef3b.json",
+      "origin_artifact_sha256": "sha256:e143ea0da3d1bd003f4915dd2207a2dc8a8bb0894d14bcb67cb8d0bd02dd51d6",
+      "bibliographic_metadata": {
+        "publisher": "Cambridge University Press (CUP)",
+        "published-print": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "DOI": "10.1017/cfl.2025.12",
+        "type": "journal-article",
+        "title": [
+          "Gender in a stereo-(gender)typical EU AI law: A feminist reading of the AI act"
+        ],
+        "volume": "1",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-4647-5311",
+            "authenticated-orcid": false,
+            "given": "Anastasia",
+            "family": "Karagianni",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              5,
+              28
+            ]
+          ]
+        },
+        "container-title": [
+          "Cambridge Forum on AI: Law and Governance"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1017/cfl.2025.12",
+        "published": {
+          "date-parts": [
+            [
+              2025
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

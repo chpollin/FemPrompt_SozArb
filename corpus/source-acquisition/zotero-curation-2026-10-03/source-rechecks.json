@@ -1,0 +1,374 @@
+{
+  "schema": "femprompt-source-recheck/0.1",
+  "authority": "deterministic-source-identity-check",
+  "agent_id": "/root",
+  "reviewed_at": "2026-10-03T07:37:14.285790+00:00",
+  "method": "Re-run unchanged receipt_identity_check against the same source hashes after source-reviewed metadata correction. No source or Version rebinding.",
+  "records": {
+    "2YS85B49": {
+      "record_id": "2YS85B49",
+      "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+      "source_sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
+      "before": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_registered",
+        "year": "not_printed"
+      },
+      "after": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "not_printed"
+      },
+      "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+      "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "failures": [],
+      "primary_metadata_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+          "sha256": "sha256:7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303",
+          "source_url": "https://arxiv.org/abs/2507.21075v1",
+          "locator": "citation_meta.citation_date, citation_online_date; Submission history [v1]",
+          "quote": "2025/06/11"
+        },
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/2YS85B49.json",
+          "sha256": "sha256:8827194bbb1b0d8674f892a99390fcb7be5b56f8a7cb940271467f6444dd3bdb",
+          "source_url": "https://arxiv.org/abs/2507.21075v1",
+          "locator": "/sources/0/bibliographic_metadata"
+        },
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/2YS85B49.json",
+          "sha256": "sha256:8827194bbb1b0d8674f892a99390fcb7be5b56f8a7cb940271467f6444dd3bdb",
+          "source_url": "https://arxiv.org/abs/2507.21075",
+          "locator": "/sources/1/bibliographic_metadata"
+        },
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/2YS85B49.json",
+          "sha256": "sha256:8827194bbb1b0d8674f892a99390fcb7be5b56f8a7cb940271467f6444dd3bdb",
+          "source_url": "https://arxiv.org/html/2507.21075v1",
+          "locator": "/sources/2/bibliographic_metadata"
+        }
+      ]
+    },
+    "3GB9B4IJ": {
+      "record_id": "3GB9B4IJ",
+      "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+      "source_sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
+      "before": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_registered",
+        "year": "not_printed"
+      },
+      "after": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "not_printed"
+      },
+      "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+      "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "failures": [],
+      "primary_metadata_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+          "sha256": "sha256:7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303",
+          "source_url": "https://arxiv.org/abs/2507.21075v1",
+          "locator": "citation_meta.citation_date, citation_online_date; Submission history [v1]",
+          "quote": "2025/06/11"
+        },
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/3GB9B4IJ.json",
+          "sha256": "sha256:1cf4a467bedd4179724642330a0b8505b91c15a5388d82a47423724f2ada905d",
+          "source_url": "https://arxiv.org/abs/2507.21075v1",
+          "locator": "/sources/0/bibliographic_metadata"
+        },
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/3GB9B4IJ.json",
+          "sha256": "sha256:1cf4a467bedd4179724642330a0b8505b91c15a5388d82a47423724f2ada905d",
+          "source_url": "https://arxiv.org/abs/2507.21075",
+          "locator": "/sources/1/bibliographic_metadata"
+        },
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/3GB9B4IJ.json",
+          "sha256": "sha256:1cf4a467bedd4179724642330a0b8505b91c15a5388d82a47423724f2ada905d",
+          "source_url": "https://arxiv.org/html/2507.21075v1",
+          "locator": "/sources/2/bibliographic_metadata"
+        }
+      ]
+    },
+    "BCBWSU3Z": {
+      "record_id": "BCBWSU3Z",
+      "source_path": "generated/markdown_clean/Debnath_2024_Can_LLMs_reason_about_trust_A_pilot_study.md",
+      "source_sha256": "sha256:b67422d94a5bcab9072fd9f9a29530d91b3dbc5614984d8c55e23c371b0a5af4",
+      "before": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_registered",
+        "year": "not_printed"
+      },
+      "after": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "not_printed"
+      },
+      "work_id": "work:74af2ae3-5411-5def-aa3b-c205e7b5ba88",
+      "version_id": "version:22472bba-e54e-5015-a13a-3e2aad654ba3",
+      "failures": [],
+      "primary_metadata_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+          "sha256": "sha256:7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303",
+          "source_url": "https://arxiv.org/abs/2507.21075v1",
+          "locator": "citation_meta.citation_date, citation_online_date; Submission history [v1]",
+          "quote": "2025/06/11"
+        },
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/BCBWSU3Z.json",
+          "sha256": "sha256:b6456d266a8d27599ae018121429c2258bcd2d531ab9ac3b4eaf863aad91fa17",
+          "source_url": "https://arxiv.org/abs/2507.21075v1",
+          "locator": "/sources/0/bibliographic_metadata"
+        },
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/BCBWSU3Z.json",
+          "sha256": "sha256:b6456d266a8d27599ae018121429c2258bcd2d531ab9ac3b4eaf863aad91fa17",
+          "source_url": "https://arxiv.org/abs/2507.21075",
+          "locator": "/sources/1/bibliographic_metadata"
+        },
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/BCBWSU3Z.json",
+          "sha256": "sha256:b6456d266a8d27599ae018121429c2258bcd2d531ab9ac3b4eaf863aad91fa17",
+          "source_url": "https://arxiv.org/html/2507.21075v1",
+          "locator": "/sources/2/bibliographic_metadata"
+        }
+      ]
+    },
+    "BX2UPC4N": {
+      "record_id": "BX2UPC4N",
+      "source_path": "generated/source-acquisition/oa-batch-2026-10-01/BX2UPC4N.md",
+      "source_sha256": "sha256:4bfd003b8adaad5dc1d9425f8027d7b65cd3bd77c633b2d746f797d727414d9e",
+      "before": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "not_registered",
+        "year": "not_printed"
+      },
+      "after": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_registered",
+        "year": "not_printed"
+      },
+      "work_id": "work:04a0acc2-9533-58d5-b53c-7d931f30d34f",
+      "version_id": "version:01823f24-d998-5b14-a34f-63a5598f2d8c",
+      "failures": [],
+      "primary_metadata_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/BX2UPC4N.json",
+          "sha256": "sha256:08c33ece77f34307a0d7892154b16dcd9f022e9ecdf130433e90793b4307a505",
+          "source_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/9f26a2d143a227376dff99a279f93f99-Abstract-Conference.html",
+          "locator": "/sources/0/bibliographic_metadata"
+        }
+      ]
+    },
+    "CHJQ52DC": {
+      "record_id": "CHJQ52DC",
+      "source_path": "corpus/source-acquisition/historical-resolution-2026-09-05/latif-v4.txt",
+      "source_sha256": "sha256:fa9a2f3f7766fe5a5bd63ce65c9ad412122e42221e9c01e5453679fbac21c18f",
+      "before": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_registered",
+        "year": "not_printed"
+      },
+      "after": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "pass"
+      },
+      "work_id": "work:1bbf69b4-ba85-5bc0-82e5-e3554b788658",
+      "version_id": "version:ed0cecb4-269e-54d9-9f4c-0f2a35588a17",
+      "failures": [],
+      "primary_metadata_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/CHJQ52DC.json",
+          "sha256": "sha256:9f1a7edd00a07108643debd12fae3969a38bad6a1e97549b423d7c1e4c3e0e18",
+          "source_url": "https://arxiv.org/html/2312.10833v4",
+          "locator": "/sources/0/bibliographic_metadata"
+        }
+      ]
+    },
+    "K6JQ7SVA": {
+      "record_id": "K6JQ7SVA",
+      "source_path": "generated/markdown_clean/Zannone_2023_Intersectional_Fairness_A_Fractal_Approach.md",
+      "source_sha256": "sha256:995108b423e5da69ddb61950ced396d9fcc26bed1dd408f2134115f7133f5cf6",
+      "before": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_registered",
+        "year": "not_printed"
+      },
+      "after": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "not_printed"
+      },
+      "work_id": "work:135fb923-b32d-521c-9393-f5c6e4491369",
+      "version_id": "version:96febd23-a639-517d-91b9-8169623975b9",
+      "failures": [],
+      "primary_metadata_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/K6JQ7SVA.json",
+          "sha256": "sha256:c2507885cf1b154dac77907a2fbdf18999edb17848ec1d056fa141223ce1d822",
+          "source_url": "https://arxiv.org/abs/2302.12683",
+          "locator": "/sources/0/bibliographic_metadata"
+        }
+      ]
+    },
+    "TFMETSCH": {
+      "record_id": "TFMETSCH",
+      "source_path": "generated/source-acquisition/oa-batch-2026-10-01/TFMETSCH.md",
+      "source_sha256": "sha256:a307529cf5c1f25fcbc397243c827b342692612464f7bc37accc550d6a0867c5",
+      "before": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "not_registered",
+        "year": "not_printed"
+      },
+      "after": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_registered",
+        "year": "not_printed"
+      },
+      "work_id": "work:acf1ac10-2b58-5eab-b1ff-5a139ee5afce",
+      "version_id": "version:766d4fbd-f251-567f-a0f9-d1dced745cb4",
+      "failures": [],
+      "primary_metadata_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/TFMETSCH.json",
+          "sha256": "sha256:a90773ef8e9138d071baed7a8859f0d91aa0efd5e696bb32b7139c1086ed0bde",
+          "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c3451f6cd6a4f82bb822db25cea4fd-Abstract-Conference.html",
+          "locator": "/sources/0/bibliographic_metadata"
+        }
+      ]
+    },
+    "UFJ7ERFF": {
+      "record_id": "UFJ7ERFF",
+      "source_path": "generated/markdown_clean/Klein_2024_Data_Feminism_for_AI.md",
+      "source_sha256": "sha256:c16a072051f0a571de8255d1dd28296cfb5648732292507c0643a9af63404b76",
+      "before": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_registered",
+        "year": "pass"
+      },
+      "after": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "pass"
+      },
+      "work_id": "work:df97aeb3-d0d0-511e-a919-6e535ce3cb3b",
+      "version_id": "version:e0cae2d4-642a-50a3-95eb-a23b19237a2c",
+      "failures": [],
+      "primary_metadata_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/UFJ7ERFF.json",
+          "sha256": "sha256:51f7b7c4a71612a3d7c011d4366dbf4772b8981289a755831905ae82c0cc75b8",
+          "source_url": "https://arxiv.org/html/2405.01286v1",
+          "locator": "/sources/0/bibliographic_metadata"
+        }
+      ]
+    },
+    "YPYQ2TCL": {
+      "record_id": "YPYQ2TCL",
+      "source_path": "generated/markdown_clean/Jiang_2022_Assessing_GPT's_bias_towards_stigmatized_social.md",
+      "source_sha256": "sha256:d655a6bc8ce11566dd2c502f7d8bf5c618a6ea74cc68a9d5df3e5971a2fd928f",
+      "before": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_registered",
+        "year": "pass"
+      },
+      "after": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "pass"
+      },
+      "work_id": "work:388f576d-3ce3-55a3-8f75-18511b662ed8",
+      "version_id": "version:0b32f577-41da-5577-bf28-4ba788da6032",
+      "failures": [],
+      "primary_metadata_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/YPYQ2TCL.json",
+          "sha256": "sha256:e11799207ae93bf06838496d7ba2c9c6c6d2496979b719f3131b7385eebfff65",
+          "source_url": "https://arxiv.org/pdf/2505.17045",
+          "locator": "/sources/0/bibliographic_metadata"
+        }
+      ]
+    },
+    "Z6QC4HW9": {
+      "record_id": "Z6QC4HW9",
+      "source_path": "generated/source-acquisition/oa-batch-2026-10-01/Z6QC4HW9.md",
+      "source_sha256": "sha256:7960e9fd82cc875b8f6e6a9433fa8a8a7b335bf6be16dcb6c659abe5abf7cc01",
+      "before": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "not_registered",
+        "year": "not_printed"
+      },
+      "after": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "not_printed"
+      },
+      "work_id": "work:6b23f3bc-ecce-551d-b7f4-8c1b00fcf117",
+      "version_id": "version:6c3f114f-3fd1-5751-a224-23bf9353cb86",
+      "failures": [],
+      "primary_metadata_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/Z6QC4HW9.json",
+          "sha256": "sha256:4d8d2eee45e0b9d82eea80790d54010f2b28d32dcb8e96a521cf53db57131f05",
+          "source_url": "https://arxiv.org/abs/2606.18649",
+          "locator": "/sources/0/bibliographic_metadata"
+        }
+      ]
+    },
+    "7IVS7X63": {
+      "record_id": "7IVS7X63",
+      "source_path": "generated/markdown_clean/Jiang_2022_Assessing_GPT's_bias_towards_stigmatized_social.md",
+      "source_sha256": "sha256:d655a6bc8ce11566dd2c502f7d8bf5c618a6ea74cc68a9d5df3e5971a2fd928f",
+      "before": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_registered",
+        "year": "pass"
+      },
+      "after": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "pass"
+      },
+      "work_id": "work:388f576d-3ce3-55a3-8f75-18511b662ed8",
+      "version_id": "version:0b32f577-41da-5577-bf28-4ba788da6032",
+      "failures": [],
+      "primary_metadata_evidence": [
+        {
+          "source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/7IVS7X63.json",
+          "sha256": "sha256:6fc5144f2849d3f8f0c7afbf2dbec326613a293d3ab0d46a4b464b6a18a93c41",
+          "source_url": "https://arxiv.org/pdf/2505.17045",
+          "locator": "/sources/0/bibliographic_metadata"
+        }
+      ]
+    }
+  }
+}

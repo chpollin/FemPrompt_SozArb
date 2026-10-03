@@ -1,0 +1,80 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "22XEFRWP",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1016%2Fj.chb.2025.108563",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/010c48b3f4a86e44d220.json",
+      "origin_artifact_sha256": "sha256:80b114c4385bcbe639b8de50f427631e80d99d43f9d762f60c29d8e92cba0a85",
+      "bibliographic_metadata": {
+        "publisher": "Elsevier BV",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              4
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.chb.2025.108563",
+        "type": "journal-article",
+        "page": "108563",
+        "title": [
+          "Prejudiced interactions with large language models (LLMs) reduce trustworthiness and behavioral intentions among members of stigmatized groups"
+        ],
+        "volume": "165",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-4503-3781",
+            "authenticated-orcid": false,
+            "given": "Zachary W.",
+            "family": "Petzel",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Leanne",
+            "family": "Sowerby",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Computers in Human Behavior"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              4
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1016/j.chb.2025.108563",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              4
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

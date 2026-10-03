@@ -1,0 +1,119 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "BBSHTIMH",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1111%2Fejed.70602",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/acd43dd4bfc76c6e2250.json",
+      "origin_artifact_sha256": "sha256:222c32777a6be6bde5599077bb5d14ffd0b517e9a6833ea479079b64af3b72d8",
+      "bibliographic_metadata": {
+        "publisher": "Wiley",
+        "issue": "2",
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1111/ejed.70602",
+        "type": "journal-article",
+        "title": [
+          "AI For Whom? Participation, Power and Educational Pathways in the Age of Artificial Intelligence"
+        ],
+        "volume": "61",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-9235-4193",
+            "authenticated-orcid": false,
+            "given": "Daniel",
+            "family": "Autenrieth",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Autenrieth &amp; Partner  Greven Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2321-0054",
+            "authenticated-orcid": false,
+            "given": "Jan‐René",
+            "family": "Schluchter",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Media Education, Institute of Educational Science Ludwigsburg University of Education  Ludwigsburg Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1071-4010",
+            "authenticated-orcid": false,
+            "given": "Lea",
+            "family": "Schulz",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Education for Speech and Communication Impairments, Institute of Special Education Europa‐Universität Flensburg  Flensburg Germany"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              21
+            ]
+          ]
+        },
+        "container-title": [
+          "European Journal of Education"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              21
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1111/ejed.70602",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              21
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

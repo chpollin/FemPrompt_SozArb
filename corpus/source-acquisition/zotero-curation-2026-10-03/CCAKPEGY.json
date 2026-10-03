@@ -1,0 +1,119 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "CCAKPEGY",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1108%2Fijssp-02-2026-0125",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/2950d80a7875cc99e004.json",
+      "origin_artifact_sha256": "sha256:ff3bb843f20a28a80edf4e13b8b7f57f6cefe9ca2bb99f31461a864e687bcb95",
+      "bibliographic_metadata": {
+        "publisher": "Emerald",
+        "DOI": "10.1108/ijssp-02-2026-0125",
+        "type": "journal-article",
+        "page": "1-17",
+        "title": [
+          "Does being literate in AI make workplaces more equal? The mediating role of psychological capital"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-3676-8559",
+            "authenticated-orcid": true,
+            "given": "Aluisius Hery",
+            "family": "Pratono",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Faculty of Business and Economics, Universitas Surabaya , ,",
+                "place": [
+                  "Surabaya, Indonesia"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0875-1613",
+            "authenticated-orcid": true,
+            "given": "Honey Wahyuni Sugiharto",
+            "family": "Elgeka",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Faculty of Psychology, Universitas Surabaya , ,",
+                "place": [
+                  "Surabaya, Indonesia"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8802-6330",
+            "authenticated-orcid": true,
+            "given": "Bok Gyo",
+            "family": "Jeong",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "College of Business and Public Management, Kean University , , ,",
+                "place": [
+                  "Union, New Jersey, USA"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              31
+            ]
+          ]
+        },
+        "container-title": [
+          "International Journal of Sociology and Social Policy"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              31
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1108/ijssp-02-2026-0125",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              31
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

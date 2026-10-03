@@ -1,0 +1,76 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "UBYTNGNV",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs12027-024-00785-w",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/9d52fa02b9202b404c7b.json",
+      "origin_artifact_sha256": "sha256:eb15d62af64f9d6a5144d11bc1adba107a8e413a54a6a8b75f356467013ce953",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              3
+            ]
+          ]
+        },
+        "DOI": "10.1007/s12027-024-00785-w",
+        "type": "journal-article",
+        "page": "79-95",
+        "title": [
+          "The AI Act, gender equality and non-discrimination: what role for the AI office?"
+        ],
+        "volume": "25",
+        "author": [
+          {
+            "given": "Fabian",
+            "family": "Lütz",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              12
+            ]
+          ]
+        },
+        "container-title": [
+          "ERA Forum"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              3
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s12027-024-00785-w",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              3
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

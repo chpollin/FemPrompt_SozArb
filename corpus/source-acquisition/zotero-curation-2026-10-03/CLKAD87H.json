@@ -1,0 +1,559 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "CLKAD87H",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1145%2F3706598.3713365",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/18e58c03902987296ea7.json",
+      "origin_artifact_sha256": "sha256:fed8165a074c600fed4d5a457251eb60fc7507aad6030f27162377430fe4492b",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              26
+            ]
+          ]
+        },
+        "DOI": "10.1145/3706598.3713365",
+        "type": "proceedings-article",
+        "page": "1-30",
+        "title": [
+          "Responsible Prompting Recommendation: Fostering Responsible AI Practices in Prompting-Time"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-0325-1596",
+            "authenticated-orcid": false,
+            "given": "Vagner Figueredo de",
+            "family": "Santana",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Yorktown Heights, IBM Research, Yorktown Heights, New York, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7531-4421",
+            "authenticated-orcid": false,
+            "given": "Sara E",
+            "family": "Berger",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Yorktown Heights, IBM Research, Yorktown Heights, New York, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0365-8057",
+            "authenticated-orcid": false,
+            "given": "Heloisa",
+            "family": "Candello",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "São Paulo, IBM Research, São Paulo, Brazil"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-4802-4955",
+            "authenticated-orcid": false,
+            "given": "Tiago",
+            "family": "Machado",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "São Paulo, IBM, São Paulo, Brazil"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7648-6970",
+            "authenticated-orcid": false,
+            "given": "Cassia Sampaio",
+            "family": "Sanctos",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "São Paulo, IBM Research, São Paulo, Brazil"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-1702-8600",
+            "authenticated-orcid": false,
+            "given": "Tianyu",
+            "family": "Su",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Harvard University, Cambridge, Massachusetts, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0008-1921-5120",
+            "authenticated-orcid": false,
+            "given": "Lemara",
+            "family": "Williams",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sanghani Center for Artificial Intelligence and Data Analytics, Virginia Tech, Blacksburg, Virginia, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              25
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              25
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3706598.3713365",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1145/3706598.3713365",
+      "locator": "message.author",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/CLKAD87H-crossref.json",
+      "origin_artifact_sha256": "sha256:849f4c828d8e2fa21c1babc7933102f4c2d1da52bdf5777931228458cc67d8cb",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              26
+            ]
+          ]
+        },
+        "DOI": "10.1145/3706598.3713365",
+        "type": "proceedings-article",
+        "page": "1-30",
+        "title": [
+          "Responsible Prompting Recommendation: Fostering Responsible AI Practices in Prompting-Time"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-0325-1596",
+            "authenticated-orcid": false,
+            "given": "Vagner Figueredo de",
+            "family": "Santana",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Yorktown Heights, IBM Research, Yorktown Heights, New York, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7531-4421",
+            "authenticated-orcid": false,
+            "given": "Sara E",
+            "family": "Berger",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Yorktown Heights, IBM Research, Yorktown Heights, New York, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0365-8057",
+            "authenticated-orcid": false,
+            "given": "Heloisa",
+            "family": "Candello",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "São Paulo, IBM Research, São Paulo, Brazil"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-4802-4955",
+            "authenticated-orcid": false,
+            "given": "Tiago",
+            "family": "Machado",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "São Paulo, IBM, São Paulo, Brazil"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7648-6970",
+            "authenticated-orcid": false,
+            "given": "Cassia Sampaio",
+            "family": "Sanctos",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "São Paulo, IBM Research, São Paulo, Brazil"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-1702-8600",
+            "authenticated-orcid": false,
+            "given": "Tianyu",
+            "family": "Su",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Harvard University, Cambridge, Massachusetts, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0008-1921-5120",
+            "authenticated-orcid": false,
+            "given": "Lemara",
+            "family": "Williams",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sanghani Center for Artificial Intelligence and Data Analytics, Virginia Tech, Blacksburg, Virginia, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              25
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              25
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3706598.3713365",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              25
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1145/3706598.3713365",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/CLKAD87H-crossref.json",
+      "origin_artifact_sha256": "sha256:849f4c828d8e2fa21c1babc7933102f4c2d1da52bdf5777931228458cc67d8cb",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              26
+            ]
+          ]
+        },
+        "DOI": "10.1145/3706598.3713365",
+        "type": "proceedings-article",
+        "page": "1-30",
+        "title": [
+          "Responsible Prompting Recommendation: Fostering Responsible AI Practices in Prompting-Time"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-0325-1596",
+            "authenticated-orcid": false,
+            "given": "Vagner Figueredo de",
+            "family": "Santana",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Yorktown Heights, IBM Research, Yorktown Heights, New York, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7531-4421",
+            "authenticated-orcid": false,
+            "given": "Sara E",
+            "family": "Berger",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Yorktown Heights, IBM Research, Yorktown Heights, New York, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0365-8057",
+            "authenticated-orcid": false,
+            "given": "Heloisa",
+            "family": "Candello",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "São Paulo, IBM Research, São Paulo, Brazil"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-4802-4955",
+            "authenticated-orcid": false,
+            "given": "Tiago",
+            "family": "Machado",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "São Paulo, IBM, São Paulo, Brazil"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7648-6970",
+            "authenticated-orcid": false,
+            "given": "Cassia Sampaio",
+            "family": "Sanctos",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "São Paulo, IBM Research, São Paulo, Brazil"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-1702-8600",
+            "authenticated-orcid": false,
+            "given": "Tianyu",
+            "family": "Su",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Harvard University, Cambridge, Massachusetts, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0008-1921-5120",
+            "authenticated-orcid": false,
+            "given": "Lemara",
+            "family": "Williams",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Sanghani Center for Artificial Intelligence and Data Analytics, Virginia Tech, Blacksburg, Virginia, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              25
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              25
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3706598.3713365",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              4,
+              25
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

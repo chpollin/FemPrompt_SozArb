@@ -1,0 +1,274 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "YV53DKI2",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007/s11023-025-09738-9",
+      "locator": "message.author",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YV53DKI2-crossref.json",
+      "origin_artifact_sha256": "sha256:c5ea80fa1a27e25b3ff1c0e4f42f7cef83806e0fd8bb4da649af0d9847e4c40c",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "3",
+        "DOI": "10.1007/s11023-025-09738-9",
+        "type": "journal-article",
+        "title": [
+          "Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence"
+        ],
+        "volume": "35",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-6644-9992",
+            "authenticated-orcid": false,
+            "given": "Matthieu",
+            "family": "Queloz",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        },
+        "container-title": [
+          "Minds and Machines"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s11023-025-09738-9",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1007/s11023-025-09738-9",
+      "locator": "message.issued.date-parts",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YV53DKI2-crossref.json",
+      "origin_artifact_sha256": "sha256:c5ea80fa1a27e25b3ff1c0e4f42f7cef83806e0fd8bb4da649af0d9847e4c40c",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "3",
+        "DOI": "10.1007/s11023-025-09738-9",
+        "type": "journal-article",
+        "title": [
+          "Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence"
+        ],
+        "volume": "35",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-6644-9992",
+            "authenticated-orcid": false,
+            "given": "Matthieu",
+            "family": "Queloz",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        },
+        "container-title": [
+          "Minds and Machines"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s11023-025-09738-9",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://www.ncbi.nlm.nih.gov/pmc/utils/idconv/v1.0/?ids=PMC12307450&format=json",
+      "locator": "records[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YV53DKI2-pmc-idconv.json",
+      "origin_artifact_sha256": "sha256:f6a58f4bdaf002fb06927de06db3387ec311b401e621cd5549c7a403fa817524",
+      "bibliographic_metadata": {
+        "existing_source_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YV53DKI2-pmc-idconv.json",
+        "locator": "records[0]",
+        "note": "No unique automated extraction; retain original public evidence reference for manual integration review."
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1007/s11023-025-09738-9",
+      "locator": "message.title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YV53DKI2-crossref.json",
+      "origin_artifact_sha256": "sha256:c5ea80fa1a27e25b3ff1c0e4f42f7cef83806e0fd8bb4da649af0d9847e4c40c",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "3",
+        "DOI": "10.1007/s11023-025-09738-9",
+        "type": "journal-article",
+        "title": [
+          "Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence"
+        ],
+        "volume": "35",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-6644-9992",
+            "authenticated-orcid": false,
+            "given": "Matthieu",
+            "family": "Queloz",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        },
+        "container-title": [
+          "Minds and Machines"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s11023-025-09738-9",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1007/s11023-025-09738-9",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/YV53DKI2-crossref.json",
+      "origin_artifact_sha256": "sha256:c5ea80fa1a27e25b3ff1c0e4f42f7cef83806e0fd8bb4da649af0d9847e4c40c",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "3",
+        "DOI": "10.1007/s11023-025-09738-9",
+        "type": "journal-article",
+        "title": [
+          "Explainability Through Systematicity: The Hard Systematicity Challenge for Artificial Intelligence"
+        ],
+        "volume": "35",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-6644-9992",
+            "authenticated-orcid": false,
+            "given": "Matthieu",
+            "family": "Queloz",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        },
+        "container-title": [
+          "Minds and Machines"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s11023-025-09738-9",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              29
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

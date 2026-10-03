@@ -1,0 +1,133 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "YRBP6IEJ",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1080%2F10437797.2024.2340931",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/dc1b30cfe14d696badf3.json",
+      "origin_artifact_sha256": "sha256:bb40849b938985c68e2691fe4ab9489069e49661413282a7efdf2f83be8a0758",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "issue": "2",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              2
+            ]
+          ]
+        },
+        "DOI": "10.1080/10437797.2024.2340931",
+        "type": "journal-article",
+        "page": "174-182",
+        "title": [
+          "Introducing Generative Artificial Intelligence Into the MSW Curriculum: A Proposal for the 2029 Educational Policy and Accreditation Standards"
+        ],
+        "volume": "60",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-1401-2099",
+            "authenticated-orcid": false,
+            "given": "Maria Y.",
+            "family": "Rodriguez",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0967-3960",
+            "authenticated-orcid": false,
+            "given": "Lauri",
+            "family": "Goldkind",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-2092-912X",
+            "authenticated-orcid": false,
+            "given": "Bryan G.",
+            "family": "Victor",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Barbara",
+            "family": "Hiltz",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Brian E.",
+            "family": "Perron",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              30
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Social Work Education"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              2
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/10437797.2024.2340931",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              2
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

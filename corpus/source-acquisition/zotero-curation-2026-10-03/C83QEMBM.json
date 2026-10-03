@@ -1,0 +1,242 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "C83QEMBM",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.3389%2Ffdgth.2023.1133987",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/591afbe4601bc9e1c3a2.json",
+      "origin_artifact_sha256": "sha256:3bcaf172171ccc53f153ab937d5299a2648bf092cc73fd55c7ccbfd27c1ea51b",
+      "bibliographic_metadata": {
+        "publisher": "Frontiers Media SA",
+        "DOI": "10.3389/fdgth.2023.1133987",
+        "type": "journal-article",
+        "title": [
+          "A chatbot for mental health support: exploring the impact of Emohaa on reducing mental distress in China"
+        ],
+        "volume": "5",
+        "author": [
+          {
+            "given": "Sahand",
+            "family": "Sabour",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Wen",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Xiyao",
+            "family": "Xiao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yuwei",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yinhe",
+            "family": "Zheng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jiaxin",
+            "family": "Wen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jialu",
+            "family": "Zhao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Minlie",
+            "family": "Huang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              4
+            ]
+          ]
+        },
+        "container-title": [
+          "Frontiers in Digital Health"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              4
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3389/fdgth.2023.1133987",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              5,
+              4
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://doi.org/10.3389/fdgth.2023.1133987",
+      "locator": "key=C83QEMBM, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_issn": [
+            "2673-253X"
+          ],
+          "citation_keywords": [
+            "Chatbots; conversational agents; Emotional support; mental health support; Cognitive behavioral therapy (CBT); deep learning"
+          ],
+          "citation_volume": [
+            "5"
+          ],
+          "citation_firstpage": [
+            "1133987"
+          ],
+          "citation_xml_url": [
+            "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2023.1133987/xml"
+          ],
+          "citation_doi": [
+            "10.3389/fdgth.2023.1133987"
+          ],
+          "citation_title": [
+            "A chatbot for mental health support: exploring the impact of Emohaa on reducing mental distress in China"
+          ],
+          "citation_fulltext_world_readable": [
+            "yes"
+          ],
+          "citation_pdf_url": [
+            "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2023.1133987/pdf"
+          ],
+          "url": [
+            "https://www.frontiersin.org/journals/digital-health/articles/10.3389/fdgth.2023.1133987/full"
+          ],
+          "citation_author_institution": [
+            "Tsinghua University, China",
+            "Beijing Normal University, China",
+            "Department of Research and Development, Beijing Lingxin Intelligent Technology Co., Ltd, China",
+            "Department of Research and Development, Beijing Lingxin Intelligent Technology Co., Ltd, China",
+            "Department of Research and Development, Beijing Lingxin Intelligent Technology Co., Ltd, China",
+            "Tsinghua University, China",
+            "Tsinghua University, China",
+            "Tsinghua University, China"
+          ],
+          "citation_article_type": [
+            "Original Research"
+          ],
+          "citation_abstract": [
+            "The growing demand for mental health support has highlighted the importance of conversational agents as human supporters worldwide and in China. These agents could increase availability and reduce the relative costs of mental health support. The provided support can be divided into two main types: cognitive and emotional support.Existing work on this topic mainly focuses on constructing agents that adopt Cognitive Behavioral Therapy (CBT) principles. Such agents operate based on pre-defined templates and exercises to provide cognitive support.However, research on emotional support using such agents is limited.In addition, most of the constructed agents operate in English, highlighting the importance of conducting such studies in China.In this study, we analyze the effectiveness of Emohaa in reducing symptoms of mental distress.Emohaa is a conversational agent that provides cognitive support through CBT-Bot exercises and guided conversations. It also emotionally supports users through ES-Bot, enabling them to vent their emotional problems. Following the RCT design, the current study randomly assigned participants into three groups: Emohaa (CBT-Bot), Emohaa (Full), and control. With both Intention-To-Treat ($N = 247$) and PerProtocol ($N = 134$) analyses, the results demonstrated that compared to the control group, participants who used two types of Emohaa experienced considerably more significant improvements in symptoms of mental distress, including depression(\\emph{F} [2, 244] = 6.26, \\emph{p} = 0.002), negative affect(\\emph{F} [2, 244] = 6.09, \\emph{p} = 0.003), and insomnia(\\emph{F} [2, 244] = 3.69, \\emph{p} = 0.026).Based on the obtained results and participants"
+          ],
+          "citation_journal_abbrev": [
+            "Front. Digit. Health"
+          ],
+          "title": [
+            "Frontiers | A chatbot for mental health support: exploring the impact of Emohaa on reducing mental distress in China"
+          ],
+          "citation_online_date": [
+            "2023/04/17"
+          ],
+          "citation_publisher": [
+            "Frontiers"
+          ],
+          "type": [
+            "article"
+          ],
+          "citation_publication_date": [
+            "2023/05/04"
+          ],
+          "citation_language": [
+            "English"
+          ],
+          "citation_author": [
+            "Sabour, Sahand ",
+            "Zhang, Wen ",
+            "Xiao, Xiyao ",
+            "Zhang, Yuwei ",
+            "Zheng, Yinhe ",
+            "Wen, Jiaxin ",
+            "Zhao, Jialu ",
+            "Huang, Minlie "
+          ],
+          "citation_journal_title": [
+            "Frontiers in Digital Health"
+          ]
+        }
+      ]
+    }
+  ]
+}

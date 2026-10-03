@@ -1,0 +1,76 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "EF9TQIRK",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.3828%2Fdap.2026.7",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/697787ec028ca0a234b7.json",
+      "origin_artifact_sha256": "sha256:bbaf8bd1a48b9acfa36046518b4f02221de4a405aa6c9bc3ad60a3e19bdf8e65",
+      "bibliographic_metadata": {
+        "publisher": "Liverpool University Press",
+        "issue": "Special",
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              29
+            ]
+          ]
+        },
+        "DOI": "10.3828/dap.2026.7",
+        "type": "journal-article",
+        "page": "19-25",
+        "title": [
+          "Unveiling gender bias in AI: A classroom reflection on media representation and AI literacy in postgraduate education"
+        ],
+        "volume": "2026",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-6479-0337",
+            "authenticated-orcid": false,
+            "given": "Tingting",
+            "family": "Hu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Xi’an Jiaotong–Liverpool University"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "container-title": [
+          "Developing Academic Practice"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              29
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3828/dap.2026.7",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              29
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

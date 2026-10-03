@@ -1,0 +1,102 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "Y6M97SWQ",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1177%2F10497315251350933",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/3026f76666039c7b2c16.json",
+      "origin_artifact_sha256": "sha256:aac162867eec8106e8aa94cf0b9782fb49bcbeecdfafbc0486e021abd599190f",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "issue": "4",
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              5
+            ]
+          ]
+        },
+        "DOI": "10.1177/10497315251350933",
+        "type": "journal-article",
+        "page": "382-397",
+        "title": [
+          "Algorithmic-Assisted Decision-Making Tools in Child Welfare Practice: A Systematic Review"
+        ],
+        "volume": "36",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2746-1512",
+            "authenticated-orcid": false,
+            "given": "Meng-Hsuan",
+            "family": "Yu",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Maryland School of Social Work, Baltimore, MD, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5309-4547",
+            "authenticated-orcid": false,
+            "given": "Roderick A.",
+            "family": "Rose",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Maryland School of Social Work, Baltimore, MD, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              8
+            ]
+          ]
+        },
+        "container-title": [
+          "Research on Social Work Practice"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              8
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/10497315251350933",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              8
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

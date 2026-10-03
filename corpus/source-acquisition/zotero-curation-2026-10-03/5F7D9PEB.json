@@ -1,0 +1,719 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "5F7D9PEB",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs10676-024-09746-w",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/29ecc430bec389a8456f.json",
+      "origin_artifact_sha256": "sha256:11d492af9467fb143caca68a6247198e7f2c8428020f1d6b2f1eb141f6e48159",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "2",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1007/s10676-024-09746-w",
+        "type": "journal-article",
+        "title": [
+          "Policy advice and best practices on bias and fairness in AI"
+        ],
+        "volume": "26",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-9412-9013",
+            "authenticated-orcid": false,
+            "given": "Jose M.",
+            "family": "Alvarez",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7968-9853",
+            "authenticated-orcid": false,
+            "given": "Alejandra Bringas",
+            "family": "Colmenarejo",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0009-2399-9754",
+            "authenticated-orcid": false,
+            "given": "Alaa",
+            "family": "Elobaid",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4374-5806",
+            "authenticated-orcid": false,
+            "given": "Simone",
+            "family": "Fabbrizzi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0619-3160",
+            "authenticated-orcid": false,
+            "given": "Miriam",
+            "family": "Fahimi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0784-1115",
+            "authenticated-orcid": false,
+            "given": "Antonio",
+            "family": "Ferrara",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3306-4233",
+            "authenticated-orcid": false,
+            "given": "Siamak",
+            "family": "Ghodsi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3137-6890",
+            "authenticated-orcid": false,
+            "given": "Carlos",
+            "family": "Mougan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Ioanna",
+            "family": "Papageorgiou",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5238-4550",
+            "authenticated-orcid": false,
+            "given": "Paula",
+            "family": "Reyero",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7080-6331",
+            "authenticated-orcid": false,
+            "given": "Mayra",
+            "family": "Russo",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3920-5017",
+            "authenticated-orcid": false,
+            "given": "Kristen M.",
+            "family": "Scott",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8084-5297",
+            "authenticated-orcid": false,
+            "given": "Laura",
+            "family": "State",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-6560-8947",
+            "authenticated-orcid": false,
+            "given": "Xuan",
+            "family": "Zhao",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1917-6087",
+            "authenticated-orcid": false,
+            "given": "Salvatore",
+            "family": "Ruggieri",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              29
+            ]
+          ]
+        },
+        "container-title": [
+          "Ethics and Information Technology"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              29
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s10676-024-09746-w",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              29
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://link.springer.com/article/10.1007/s10676-024-09746-w",
+      "locator": "key=5F7D9PEB, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_volume": [
+            "26"
+          ],
+          "citation_firstpage": [
+            "31"
+          ],
+          "citation_article_type": [
+            "Original Paper"
+          ],
+          "citation_fulltext_html_url": [
+            "https://link.springer.com/article/10.1007/s10676-024-09746-w"
+          ],
+          "citation_fulltext_world_readable": [
+            ""
+          ],
+          "DOI": [
+            "10.1007/s10676-024-09746-w"
+          ],
+          "citation_author_institution": [
+            "Scuola Normale Superiore, Pisa, Italy",
+            "University of Pisa, Pisa, Italy",
+            "University of Southampton, Southampton, UK",
+            "CERTH, Thessaloniki, Greece",
+            "Free University of Berlin, Berlin, Germany",
+            "CERTH, Thessaloniki, Greece",
+            "Leibniz University Hannover, Hannover, Germany",
+            "Free University of Bozen-Bolzano, Bolzano, Italy",
+            "University of Klagenfurt, Klagenfurt, Austria",
+            "GESIS - Leibniz Institute, Mannheim, Germany",
+            "RWTH Aachen University, Aachen, Germany",
+            "Free University of Berlin, Berlin, Germany",
+            "Leibniz University Hannover, Hannover, Germany",
+            "University of Southampton, Southampton, UK",
+            "Leibniz University Hannover, Hannover, Germany",
+            "The Open University, Milton Keynes, UK",
+            "Leibniz University Hannover, Hannover, Germany",
+            "KU Leuven, Leuven, Belgium",
+            "Scuola Normale Superiore, Pisa, Italy",
+            "University of Pisa, Pisa, Italy",
+            "SCHUFA Holding AG, Wiesbaden, Germany",
+            "University of Pisa, Pisa, Italy"
+          ],
+          "citation_doi": [
+            "10.1007/s10676-024-09746-w"
+          ],
+          "citation_issn": [
+            "1572-8439"
+          ],
+          "citation_issue": [
+            "2"
+          ],
+          "citation_publisher": [
+            "Springer Netherlands"
+          ],
+          "citation_journal_abbrev": [
+            "Ethics Inf Technol"
+          ],
+          "citation_journal_title": [
+            "Ethics and Information Technology"
+          ],
+          "citation_author_email": [
+            "jose.alvarez@sns.it",
+            "Alejandra.Bringas-Colmenarejo@soton.ac.uk",
+            "elobaida@iti.gr",
+            "simone.fabbrizzi@unibz.it",
+            "miriam.fahimi@aau.at",
+            "antonio.ferrara@centai.eu",
+            "ghodsi@l3s.de",
+            "c.mougan@soton.ac.uk",
+            "ioanna.papageorgiou@iri.uni-hannover.de",
+            "paula.reyero-lobo@open.ac.uk",
+            "mrusso@l3s.de",
+            "kristen.scott@kuleuven.be",
+            "laura.state@di.unipi.it",
+            "xuan.zhao@schufa.de",
+            "salvatore.ruggieri@unipi.it"
+          ],
+          "citation_author": [
+            "Alvarez, Jose M.",
+            "Colmenarejo, Alejandra Bringas",
+            "Elobaid, Alaa",
+            "Fabbrizzi, Simone",
+            "Fahimi, Miriam",
+            "Ferrara, Antonio",
+            "Ghodsi, Siamak",
+            "Mougan, Carlos",
+            "Papageorgiou, Ioanna",
+            "Reyero, Paula",
+            "Russo, Mayra",
+            "Scott, Kristen M.",
+            "State, Laura",
+            "Zhao, Xuan",
+            "Ruggieri, Salvatore"
+          ],
+          "citation_language": [
+            "en"
+          ],
+          "citation_pdf_url": [
+            "https://link.springer.com/content/pdf/10.1007/s10676-024-09746-w.pdf"
+          ],
+          "citation_publication_date": [
+            "2024/06"
+          ],
+          "citation_reference": [
+            "citation_journal_title=Computer Networks; citation_title=Internet censorship detection: A survey; citation_author=G Aceto, A Pescapè; citation_volume=83; citation_publication_date=2015; citation_pages=381-421; citation_doi=10.1016/j.comnet.2015.03.008; citation_id=CR1",
+            "Afzal, S., C., R., Kesarwani, M., et al. (2021). Data readiness report. In SMDS. IEEE, pp. 42–51",
+            "Aiello, L. M., Barrat, A., & Schifanella, R., et al. (2012). Friendship prediction and homophily in social media. ACM Transactions on the Web, 6(2), 1–33.",
+            "Alkhatib, A. (2021). To live in their utopia: Why algorithmic systems create absurd outcomes. In: CHI. ACM, pp. 95:1–9",
+            "Almada, M. (2021). Automated decision-making as a data protection issue. Available at SSRN 3817472",
+            "citation_title=Discrimination; citation_inbook_title=The Stanford encyclopedia of philosophy; citation_publication_date=2020; citation_id=CR6; citation_author=A Altman; citation_publisher=Stanford University",
+            "Álvarez, J.M., & Ruggieri, S. (2023). Counterfactual situation testing: Uncovering discrimination under fairness given the difference. In: EAAMO. ACM, pp. 2:1–11",
+            "Álvarez, J.M., Scott, K.M., & Berendt, B., et al. (2023). Domain adaptive decision trees: Implications for accuracy and fairness. In: FAccT. ACM, pp. 423–433",
+            "citation_journal_title=EURO Journal on Decision Processes; citation_title=Survey on fairness notions and related tensions; citation_author=G Alves, F Bernier, M Couceiro; citation_volume=11; citation_publication_date=2023; citation_doi=10.1016/j.ejdp.2023.100033; citation_id=CR9",
+            "citation_journal_title=IEEE Internet Computing; citation_title=Rethinking certification for trustworthy machine-learning-based applications; citation_author=M Anisetti, CA Ardagna, N Bena; citation_volume=27; citation_issue=6; citation_publication_date=2023; citation_pages=22-28; citation_doi=10.1109/MIC.2023.3322327; citation_id=CR10",
+            "Article 29 Data Protection Working Party. (2018). Guidelines on automated individual decision-making and profiling for the purposes of regulation 2016/679 (wp251rev.01). \n                  https://ec.europa.eu/newsroom/article29/items/612053\n                  \n                ",
+            "Asai, A., Min, S., & Zhong, Z., et al. (2023). Retrieval-based language models and applications. In: ACL (tutorial). Association for Computational Linguistics, pp. 41–46",
+            "Ashurst, C., & Weller, A. (2023). Fairness without demographic data: A survey of approaches. In: EAAMO. ACM, pp 14:1–14",
+            "Asplund, J., Eslami, M., & Sundaram, H., et al. (2020). Auditing race and gender discrimination in online housing markets. In: ICWSM. AAAI Press, pp. 24–35",
+            "Balagopalan, A., Zhang, H., & Hamidieh, K., et al. (2022). The road to explainability is paved with bias: Measuring the fairness of explanations. In: FAccT. ACM, pp. 1194–1206",
+            "Balayn, A., & Gürses, S. (2021). Beyond debiasing: Regulating AI and its inequalities. European Digital Rights (EDRi): Tech. rep.",
+            "citation_journal_title=The VLDB Journal; citation_title=Managing bias and unfairness in data for decision support: A survey of machine learning and data engineering approaches to identify and mitigate bias and unfairness within data management and analytics systems; citation_author=A Balayn, C Lofi, G Houben; citation_volume=30; citation_issue=5; citation_publication_date=2021; citation_pages=739-768; citation_doi=10.1007/s00778-021-00671-8; citation_id=CR17",
+            "Balayn, A., Yurrita, M., & Yang, J., et al. (2023). Fairness toolkits, a checkbox culture?\" On the factors that fragment developer practices in handling algorithmic harms. In: AIES. ACM, pp. 482–495",
+            "Balkir, E., Kiritchenko, S., Nejadgholi, I., et al. (2022). Challenges in applying explainability methods to improve the fairness of NLP models. CoRR abs/2206.03945",
+            "Bao, M., Zhou, A., Zottola, S., et al. (2021). It’s compaslicated: The messy relationship between RAI datasets and algorithmic fairness benchmarks. In: NeurIPS Datasets and Benchmarks",
+            "citation_journal_title=California Law Review; citation_title=Big data’s disparate impact; citation_author=S Barocas, AD Selbst; citation_volume=104; citation_publication_date=2016; citation_pages=671-732; citation_id=CR21",
+            "Barocas, S., Hardt, M., & Narayanan, A. (2019). Fairness and machine learning. fairmlbook.org, \n                  http://www.fairmlbook.org\n                  \n                ",
+            "Barocas, S., Selbst, A.D., & Raghavan, M. (2020). The hidden assumptions behind counterfactual explanations and principal reasons. In: FAT\n                  \n                    \n                  \n                  $$^{*}$$\n                  \n                    \n                  \n                . ACM, pp. 80–89",
+            "citation_journal_title=Journal of Intelligent Information Systems; citation_title=Segregation discovery in a social network of companies; citation_author=A  Baroni, S Ruggieri; citation_volume=51; citation_issue=1; citation_publication_date=2018; citation_pages=71-96; citation_doi=10.1007/s10844-017-0485-0; citation_id=CR24",
+            "Barrainkua, A., Gordaliza, P., & Lozano, J.A., et al. (2022). A survey on preserving fairness guarantees in changing environments. CoRR abs/2211.07530",
+            "citation_journal_title=Harvard Journal of Law & Technology; citation_title=The Artificial Intelligence black box and the failure of intent and causation; citation_author=Y Bathaee; citation_volume=31; citation_issue=2; citation_publication_date=2018; citation_pages=889-938; citation_id=CR26",
+            "citation_journal_title=Transactions of the Association for Computational Linguistics; citation_title=Data statements for natural language processing: Toward mitigating system bias and enabling better science; citation_author=EM Bender, B Friedman; citation_volume=6; citation_publication_date=2018; citation_pages=587-604; citation_doi=10.1162/tacl_a_00041; citation_id=CR27",
+            "citation_journal_title=Sociological Methods & Research; citation_title=Fairness in criminal justice risk assessments: The state of the art; citation_author=R Berk, H Heidari, S Jabbari; citation_volume=50; citation_issue=1; citation_publication_date=2021; citation_pages=3-44; citation_doi=10.1177/0049124118782533; citation_id=CR28",
+            "Beutel, A., Chen, J., & Doshi, T., et al. (2019). Putting fairness principles into practice: Challenges, metrics, and improvements. In: AIES. ACM, pp. 453–459",
+            "Bias (2023) Merriam-Webster.com Dictionary. Merriam-Webster, Inc.",
+            "Binkyte-Sadauskiene, R., Makhlouf, K., & Pinzón, C., et al. (2022). Causal discovery for fairness. CoRR abs/2206.06685",
+            "citation_journal_title=Proceedings of Machine Learning Research; citation_title=Fairness in machine learning: Lessons from political philosophy; citation_author=R Binns; citation_volume=81; citation_publication_date=2018; citation_pages=149-159; citation_id=CR32",
+            "citation_journal_title=IEEE Security & Privacy; citation_title=What can political philosophy teach us about algorithmic fairness?; citation_author=R Binns; citation_volume=16; citation_issue=3; citation_publication_date=2018; citation_pages=73-80; citation_doi=10.1109/MSP.2018.2701147; citation_id=CR33",
+            "Binns, R. (2020). On the apparent conflict between individual and group fairness. In: FAT*. ACM, pp. 514–524",
+            "Binns, R., Adams-Prassl, J., & Kelly-Lyth, A. (2023). Legal taxonomies of machine bias: Revisiting direct discrimination. In: FAccT. ACM, pp. 1850–1858",
+            "Birhane, A., & Prabhu, V.U. (2021). Large image datasets: A pyrrhic win for computer vision? In: WACV. IEEE, pp. 1536–1546",
+            "Birhane, A., Prabhu, V.U., Kahembwe, E. (2021). Multimodal datasets: Misogyny, pornography, and malignant stereotypes. CoRR abs/2110.01963",
+            "Blodgett, S.L., Barocas, S., & III, H.D., et al. (2020). Language (technology) is power: A critical survey of bias in NLP. In: ACL. Association for Computational Linguistics, pp. 5454–5476",
+            "Bordt, S., Finck, M., & Raidl, E., et al. (2022). Post-hoc explanations fail to achieve their purpose in adversarial contexts. In: FAccT. ACM, pp. 891–905",
+            "citation_journal_title=American Sociological Review; citation_title=The wage penalty for motherhood; citation_author=MJ Budig, P England; citation_volume=66; citation_issue=2; citation_publication_date=2001; citation_pages=204-225; citation_doi=10.1177/000312240106600203; citation_id=CR40",
+            "Buijsman, S .(2023). Navigating fairness measures and trade-offs. AI and Ethics",
+            "Buolamwini, J., & Gebru, T. (2018). Gender shades: Intersectional accuracy disparities in commercial gender classification. Proceedings of Machine Learning Research, 81, 77–91.",
+            "Buyl, M., Bie, T.D. (2024). Inherent limitations of AI fairness. Commun ACM p to appear",
+            "Cabitza, F., Campagner, A., & Basile, V. (2023). Toward a perspectivist turn in ground truthing for predictive computing. In: AAAI. AAAI Press, pp. 6860–6868",
+            "citation_journal_title=Intelligenza Artificiale; citation_title=On the integration of symbolic and sub-symbolic techniques for XAI: A survey; citation_author=R Calegari, G Ciatto, A Omicini; citation_volume=14; citation_issue=1; citation_publication_date=2020; citation_pages=7-32; citation_doi=10.3233/IA-190036; citation_id=CR45",
+            "Camilleri, H., Ashurst, C., & Jaisankar, N., et al .(2023). Media coverage of predictive policing: Bias, police engagement, and the future of transparency. In: EAAMO. ACM, pp. 28:1–28:19",
+            "citation_journal_title=Frontiers Big Data; citation_title=The causal fairness field guide: Perspectives from social and formal sciences; citation_author=AN Carey, X Wu; citation_volume=5; citation_publication_date=2022; citation_doi=10.3389/fdata.2022.892837; citation_id=CR47",
+            "citation_journal_title=AI Ethics; citation_title=The statistical fairness field guide: Perspectives from social and formal sciences; citation_author=AN Carey, X Wu; citation_volume=3; citation_issue=1; citation_publication_date=2023; citation_pages=1-23; citation_doi=10.1007/s43681-022-00183-3; citation_id=CR48",
+            "citation_journal_title=Scientific Reports; citation_title=A clarification of the nuances in the fairness metrics landscape; citation_author=A Castelnovo, R Crupi, G Greco; citation_volume=12; citation_issue=1; citation_publication_date=2022; citation_pages=4209; citation_doi=10.1038/s41598-022-07939-1; citation_id=CR49",
+            "Castelnovo, A., Inverardi, N., & Nanino, G., et al. (2023). Fair enough? A map of the current limitations of the requirements to have fair algorithms. CoRR abs/2311.12435",
+            "Caton, S., & Haas, C. (2024). Fairness in machine learning: A survey. ACM Comput Surv p to appear",
+            "citation_journal_title=Journal of Artificial Intelligence Research; citation_title=Impact of imputation strategies on fairness in machine learning; citation_author=S Caton, S Malisetty, C Haas; citation_volume=74; citation_publication_date=2022; citation_pages=1011-1035; citation_doi=10.1613/jair.1.13197; citation_id=CR52",
+            "citation_journal_title=ACM Transactions on Information Systems; citation_title=Bias and debias in recommender system: A survey and future directions; citation_author=J Chen, H Dong, X Wang; citation_volume=41; citation_issue=3; citation_publication_date=2023; citation_pages=1-39; citation_id=CR53",
+            "citation_journal_title=Nature Biomedical Engineering; citation_title=Algorithmic fairness in Artificial Intelligence for medicine and healthcare; citation_author=RJ Chen, JJ Wang, DFK Williamson; citation_volume=7; citation_issue=6; citation_publication_date=2023; citation_pages=719-742; citation_doi=10.1038/s41551-023-01056-8; citation_id=CR54",
+            "Chen, Z., Zhang, JM., & Hort, M., et al. (2022). Fairness testing: A comprehensive survey and analysis of trends. CoRR abs/2207.10223",
+            "citation_journal_title=Journal of Artificial Intelligence Research; citation_title=Socially responsible AI algorithms: Issues, purposes, and challenges; citation_author=L Cheng, KR Varshney, H Liu; citation_volume=71; citation_publication_date=2021; citation_pages=1137-1181; citation_doi=10.1613/jair.1.12814; citation_id=CR56",
+            "citation_journal_title=IEEE Access; citation_title=An overview of fairness in clustering; citation_author=A Chhabra, K Masalkovaite, P Mohapatra; citation_volume=9; citation_publication_date=2021; citation_pages=130698-130720; citation_doi=10.1109/ACCESS.2021.3114099; citation_id=CR57",
+            "citation_journal_title=Cognitive Computation; citation_title=Emotionally informed hate speech detection: A multi-target perspective; citation_author=P Chiril, EW Pamungkas, F Benamara; citation_volume=14; citation_issue=1; citation_publication_date=2022; citation_pages=322-352; citation_doi=10.1007/s12559-021-09862-5; citation_id=CR58",
+            "Chmielinski, KS., Newman, S., Taylor, M., et al. (2022). The dataset nutrition label (2nd gen): Leveraging context to mitigate harms in Artificial Intelligence. CoRR abs/2201.03954",
+            "Choudhary, M., Laclau, C., Largeron, C. (2022). A survey on fairness for machine learning on graphs. CoRR abs/2205.05396",
+            "citation_journal_title=Big Data; citation_title=Fair prediction with disparate impact: A study of bias in recidivism prediction instruments; citation_author=A Chouldechova; citation_volume=5; citation_issue=2; citation_publication_date=2017; citation_pages=153-163; citation_doi=10.1089/big.2016.0047; citation_id=CR61",
+            "Cobbe, J., Lee, MSA., & Singh, J. (2021). Reviewable automated decision-making: A framework for accountable algorithmic systems. In: FAccT. ACM, pp. 598–609",
+            "citation_journal_title=Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery; citation_title=A historical perspective of explainable Artificial Intelligence; citation_author=R Confalonieri, L Coba, B Wagner; citation_volume=11; citation_issue=1; citation_publication_date=2021; citation_pages=e1391; citation_id=CR63",
+            "Cooper, AF., Lee, K., Barocas, S., et al. (2023). Is my prediction arbitrary? Measuring self-consistency in fair classification. CoRR abs/2301.11562",
+            "Corbett-Davies, S., Pierson, E., Feller, A., et al. (2017). Algorithmic decision making and the cost of fairness. In: KDD. ACM, pp. 797–806",
+            "citation_title=Design justice: Community-led practices to build the worlds we need; citation_publication_date=2020; citation_id=CR66; citation_author=S Costanza-Chock; citation_publisher=The MIT Press",
+            "Coston, A., Guha, N., & Ouyang, D., et al. (2021). Leveraging administrative data for bias audits: Assessing disparate coverage with mobility data for COVID-19 policy. In: FAccT. ACM, pp. 173–184",
+            "Council of the European Union (2000a) Council Directive 2000/43/EC of 29 June 2000 implementing the principle of equal treatment between persons irrespective of racial or ethnic origin. Official Journal of the European Communities L 180. \n                  http://data.europa.eu/eli/dir/2000/43/oj\n                  \n                ",
+            "Council of the European Union (2000b) Council Directive 2000/78/EC of 27 November 2000 establishing a general framework for equal treatment in employment and occupation. Official Journal of the European Communities L 303. \n                  http://data.europa.eu/eli/dir/2000/78/oj\n                  \n                ",
+            "Council of the European Union (2004) Council Directive 2004/113/EC of 13 December 2004 implementing the principle of equal treatment between men and women in the access to and supply of goods and services. Official Journal of the European Union L 373. \n                  http://data.europa.eu/eli/dir/2004/113/oj\n                  \n                ",
+            "Cummings, R., Gupta, V., & Kimpara, D., et al. (2019). On the compatibility of privacy and fairness. In: UMAP (Adjunct Publication). ACM, pp. 309–315",
+            "citation_journal_title=Transactions of the Association for Computational Linguistics; citation_title=Quantifying social biases in NLP: A generalization and empirical comparison of extrinsic fairness metrics; citation_author=P Czarnowska, Y Vyas, K Shah; citation_volume=9; citation_publication_date=2021; citation_pages=1249-1267; citation_doi=10.1162/tacl_a_00425; citation_id=CR72",
+            "Danks, D., & London, A.J. (2017). Algorithmic bias in autonomous systems. In: IJCAI. ijcai.org, pp. 4691–4697",
+            "citation_journal_title=Artificial Intelligence; citation_title=Levels of explainable Artificial Intelligence for human-aligned conversational explanations; citation_author=R Dazeley, P Vamplew, C Foale; citation_volume=299; citation_publication_date=2021; citation_doi=10.1016/j.artint.2021.103525; citation_id=CR74",
+            "Deck, L., Schoeffer, J., & De-Arteaga, M., et al. (2023). A critical survey on fairness benefits of XAI. CoRR abs/2310.13007",
+            "citation_journal_title=Communication ACM; citation_title=Data bias management; citation_author=G Demartini, K Roitero, S Mizzaro; citation_volume=67; citation_issue=1; citation_publication_date=2023; citation_pages=28-32; citation_doi=10.1145/3611641; citation_id=CR76",
+            "Denton, E., Hanna, A., & Amironesei, R., et al. (2021). On the genealogy of machine learning datasets: A critical history of ImageNet. Big Data Society. \n                  https://doi.org/10.1177/20539517211035955\n                  \n                ",
+            "citation_title=Data feminism; citation_publication_date=2020; citation_id=CR78; citation_author=C D’Ignazio; citation_author=LF Klein; citation_publisher=MIT press",
+            "Dong, Y., Ma, J., Chen, C., et al. (2023). Fairness in graph mining: A survey. IEEE Transactions on Knowledge and Data Engineering, pp. 1–22",
+            "Doshi-Velez, F., Kortz, M., & Budish, R., et al. (2017). Accountability of AI under the law: The role of explanation. CoRR abs/1711.01134",
+            "citation_journal_title=Online Information Review; citation_title=Situated algorithms a sociotechnical systemic approach to bias; citation_author=C Draude, G Klumbyte, P Lücking; citation_volume=44; citation_issue=2; citation_publication_date=2019; citation_pages=325-342; citation_doi=10.1108/OIR-10-2018-0332; citation_id=CR81",
+            "Dwork, C., Ilvento, C. (2019). Fairness under composition. In: ITCS, LIPIcs, vol 124. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, pp. 1–33",
+            "citation_journal_title=Tech Rev; citation_title=Slave to the algorithm? Why a right to an explanation is probably not the remedy you are looking for; citation_author=L Edwards, M Veale; citation_volume=16; citation_publication_date=2017; citation_pages=18; citation_id=CR83",
+            "citation_journal_title=Journal of Applied Statistics; citation_title=Reject inference methods in credit scoring; citation_author=A Ehrhardt, C Biernacki, V Vandewalle; citation_volume=48; citation_publication_date=2021; citation_pages=2734-2754; citation_doi=10.1080/02664763.2021.1929090; citation_id=CR84",
+            "EU Agency for Fundamental Rights (2022) Bias in algorithms: Artificial intelligence and discrimination. Publications Office of the European Union, \n                  https://data.europa.eu/doi/10.2811/25847\n                  \n                ",
+            "European Commission (2021) Proposal for a Regulation of the European Parliament and of the Council Laying down harmonised rules on Artificial Intelligence (AI Act) and amending certain Union legislative acts. \n                  https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52021PC0206\n                  \n                ",
+            "European Commission, Directorate-General for Justice and Consumers, & Gerards J, et al. (2021). Algorithmic discrimination in Europe: Challenges and opportunities for gender equality and non-discrimination law. Publications Office, \n                  https://data.europa.eu/doi/10.2838/544956\n                  \n                ",
+            "European Court of Justice. (2016). Parris v trinity college Dublin and others. (Case C-443/15)",
+            "European Parliament, Council of the European Union. (2006). Directive 2006/54/EC of the European Parliament and of the Council of 5 July 2006 on the implementation of the principle of equal opportunities and equal treatment of men and women in matters of employment and occupation (recast). Official Journal of the European Union L 204. \n                  http://data.europa.eu/eli/dir/2006/54/oj\n                  \n                ",
+            "European Parliament, Council of the European Union. (2016). Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation). Official Journal of the European Union L 119. \n                  http://data.europa.eu/eli/reg/2016/679/oj\n                  \n                ",
+            "European Parliament, Directorate-General for Parliamentary Research Services, & Beriain M., et al. (2022). Auditing the quality of datasets used in algorithmic decision-making systems. \n                  https://data.europa.eu/doi/10.2861/98930\n                  \n                ",
+            "European Union. (2000). Charter of Fundamental Rights of the European Union. Official Journal of the European Union C 364. \n                  http://data.europa.eu/eli/treaty/char_2012/oj\n                  \n                ",
+            "citation_journal_title=Computer Vision and Image Understanding; citation_title=A survey on bias in visual datasets; citation_author=S Fabbrizzi, S Papadopoulos, E Ntoutsi; citation_volume=223; citation_publication_date=2022; citation_doi=10.1016/j.cviu.2022.103552; citation_id=CR93",
+            "Fabris, A., Messina, S., & Silvello, G., et al. (2022). Algorithmic fairness datasets: The story so far. Data Mining and Knowledge Discovery, 36, 2074–2152",
+            "Fabris, A., Baranowska, N., & Dennis, M.J., et al. (2023). Fairness and bias in algorithmic hiring. CoRR abs/2309.13933",
+            "Fang, Z., Li, Y., & Lu, J., et al. (2022). Is out-of-distribution detection learnable? In: NeurIPS",
+            "Feffer, M., Skirpan, M., & Lipton, Z., et al. (2023). From preference elicitation to participatory ML: A critical survey & guidelines for future research. In: AIES. ACM, pp. 38–48",
+            "Feng, S., Park, CY., & Liu, Y., et al. (2023). From pretraining data to language models to downstream tasks: Tracking the trails of political biases leading to unfair NLP models. In: ACL (1). Association for Computational Linguistics, pp. 11737–11762",
+            "Ferrara, A., Noboa, LE., & Karimi, F., et al. (2022). Link recommendations: Their impact on network structure and minorities. In: WebSci. ACM, pp. 228–238",
+            "Fiesler, C., Garrett, N., Beard, N. (2020). What do we teach when we teach tech ethics?: A syllabi analysis. In: SIGCSE. ACM, pp. 289–295",
+            "Fioretto, F., Tran, C., & Hentenryck, PV, et al. (2022). Differential privacy and fairness in decisions and learning tasks: A survey. In: IJCAI. ijcai.org, pp. 5470–5477",
+            "Foster, S. R. (2004). Causation in antidiscrimination law: Beyond intent versus impact. Houston Law Review, 41(5), 1469–1548",
+            "citation_journal_title=Communications of the ACM; citation_title=The (im)possibility of fairness: Different value systems require different mechanisms for fair decision making; citation_author=SA Friedler, C Scheidegger, S Venkatasubramanian; citation_volume=64; citation_issue=4; citation_publication_date=2021; citation_pages=136-143; citation_doi=10.1145/3433949; citation_id=CR103",
+            "citation_journal_title=ACM Transactions on Information Systems; citation_title=Bias in computer systems; citation_author=B Friedman, H Nissenbaum; citation_volume=14; citation_issue=3; citation_publication_date=1996; citation_pages=330-347; citation_doi=10.1145/230538.230561; citation_id=CR104",
+            "Future of Privacy Forum. (2017). Unfairness by algorithm: Distilling the harms of automated decision-making, \n                  https://fpf.org/blog/unfairness-by-algorithm-distilling-the-harms-of-automated-decision-making/\n                  \n                ",
+            "Gajane, P., Saxena, A., Tavakol, M., et al. (2022). Survey on fair reinforcement learning: Theory and practice. CoRR abs/2205.10032",
+            "Galhotra, S., Shanmugam, K., & Sattigeri, P, et al. (2022). Causal feature selection for algorithmic fairness. In: SIGMOD Conference. ACM, pp. 276–285",
+            "Gallegos, IO., Rossi, RA., Barrow, J., et al. (2023). Bias and fairness in large language models: A survey. CoRR abs/2309.00770",
+            "Ganguly, N., Fazlija, D., & Badar, M., et al. (2023). A review of the role of causality in developing trustworthy AI systems. CoRR abs/2302.06975",
+            "Garg, S., Balakrishnan, S., Lipton, ZC., et al. (2022). Leveraging unlabeled data to predict out-of-distribution performance. In: ICLR. OpenReview.net",
+            "citation_journal_title=International Journal of Human-Computer Interaction; citation_title=Six human-centered Artificial Intelligence grand challenges; citation_author=ÖÖ Garibay; citation_volume=39; citation_issue=3; citation_publication_date=2023; citation_pages=391-437; citation_doi=10.1080/10447318.2022.2153320; citation_id=CR111",
+            "citation_journal_title=Communications of the ACM; citation_title=Datasheets for datasets; citation_author=T Gebru, J Morgenstern, B Vecchione; citation_volume=64; citation_issue=12; citation_publication_date=2021; citation_pages=86-92; citation_doi=10.1145/3458723; citation_id=CR112",
+            "Gellert, R., Vries, K.D., de Hert, P., et al. (2013). A comparative analysis of anti-discrimination and data protection legislations. In: Discrimination and Privacy in the Information Society, Studies in Applied Philosophy, Epistemology and Rational Ethics, vol 3. Springer, pp. 61–89",
+            "citation_journal_title=Colorado Technology Law Journal; citation_title=Protected grounds and the system of non-discrimination law in the context of algorithmic decision-making and Artificial Intelligence; citation_author=J Gerards, FJ Zuiderveen Borgesius; citation_volume=20; citation_publication_date=2022; citation_pages=1; citation_id=CR114",
+            "citation_journal_title=Lancet Digit Health; citation_title=The false hope of current approaches to explainable Artificial Intelligence in health care; citation_author=M Ghassemi, L Oakden-Rayner, AL Beam; citation_volume=3; citation_issue=11; citation_publication_date=2021; citation_pages=e745-e750; citation_doi=10.1016/S2589-7500(21)00208-9; citation_id=CR115",
+            "citation_title=Raw data is an oxymoron; citation_publication_date=2013; citation_id=CR116; citation_author=L Gitelman; citation_publisher=MIT Press",
+            "Goel, N., Amayuelas, A., Deshpande, A., et al. (2021). The importance of modeling data missingness in algorithmic fairness: A causal perspective. In: AAAI. AAAI Press, pp. 7564–7573",
+            "Gohar, U., Cheng, L. (2023). A survey on intersectional fairness in machine learning: Notions, mitigation, and challenges. In: IJCAI. ijcai.org, pp. 6619–6627.",
+            "Grabowicz, P.A., Perello, N., & Mishra, A. (2022). Marrying fairness and explainability in supervised learning. In: FAccT. ACM, pp. 1905–1916.",
+            "Green, B., & Hu, L. (2018). The myth in the methodology: Towards a recontextualization of fairness in machine learning. In: Debates@ICML, \n                  https://econcs.seas.harvard.edu/files/econcs/files/green_icml18.pdf\n                  \n                ",
+            "citation_journal_title=Lancet; citation_title=Bias and causal associations in observational research; citation_author=DA Grimes, KF Schulz; citation_volume=359; citation_publication_date=2002; citation_pages=248-252; citation_doi=10.1016/S0140-6736(02)07451-2; citation_id=CR121",
+            "citation_journal_title=ACM Computing Surveys; citation_title=A survey of methods for explaining black box models; citation_author=R Guidotti, A Monreale, S Ruggieri; citation_volume=51; citation_issue=5; citation_publication_date=2019; citation_pages=1-42; citation_doi=10.1145/3236009; citation_id=CR122",
+            "citation_journal_title=AI Magazine; citation_title=The reproducibility crisis is real; citation_author=OE Gundersen; citation_volume=41; citation_issue=3; citation_publication_date=2020; citation_pages=103-106; citation_doi=10.1609/aimag.v41i3.5318; citation_id=CR123",
+            "Gururangan, S., Card, D., Dreier, S.K., et al. (2022). Whose language counts as high quality? Measuring language ideologies in text data selection. In: EMNLP. Association for Computational Linguistics, pp. 2562–2580",
+            "citation_journal_title=Common Market Law Review; citation_title=Teaching fairness to Artificial Intelligence: Existing and novel strategies against algorithmic discrimination under EU law; citation_author=P Hacker; citation_volume=55; citation_issue=4; citation_publication_date=2018; citation_pages=1; citation_id=CR125",
+            "Haeri, M.A., Zweig, K.A. (2020). The crucial role of sensitive attributes in fair classification. In: SSCI. IEEE, pp. 2993–3002",
+            "Harris, C., Halevy, M., Howard, A.M., et al. (2022). Exploring the role of grammar and word choice in bias toward African American English (AAE) in hate speech classification. In: FAccT. ACM, pp. 789–798",
+            "Haselton, M.G., Nettle, D., Andrews, P.W. (2005). The evolution of cognitive bias. In: Zalta EN (Eds.) Handbook of Evolutionary Psychology. John Wiley & Sons Inc., pp. 724–746",
+            "Hellström, T., Dignum, V., Bensch, S. (2020). Bias in machine learning - what is it good for? In: NeHuAI@ECAI, CEUR Workshop Proceedings, vol 2659. CEUR-WS.org, pp. 3–10",
+            "Hendrickx, K., Perini, L., der Plas, D.V., et al. (2021). Machine learning with a reject option: A survey. CoRR \n                  http://arxiv.org/abs/2107.11277\n                  \n                ",
+            "citation_journal_title=AI Society; citation_title=Beyond explainability: Justifiability and contestability of algorithmic decision systems; citation_author=C Henin, DL Métayer; citation_volume=37; citation_issue=4; citation_publication_date=2022; citation_pages=1397-1410; citation_doi=10.1007/s00146-021-01251-8; citation_id=CR131",
+            "Hertweck, C., Heitz, C., & Loi, M. (2021). On the moral justification of statistical parity. In: FAccT. ACM, pp. 747–757",
+            "citation_journal_title=Technology, Knowledge and Learning; citation_title=The inscription, translation and re-inscription of technology for mathematical learning; citation_author=T Hillman; citation_volume=16; citation_issue=2; citation_publication_date=2011; citation_pages=103; citation_id=CR133",
+            "Hort, M., Chen, Z., Zhang, J.M., et al. (2022). Bias mitigation for machine learning classifiers: A comprehensive survey. CoRR \n                  http://arxiv.org/abs/2207.07068\n                  \n                ",
+            "citation_journal_title=Proceedings of the National Academy of Sciences; citation_title=A framing effect in the judgment of discrimination; citation_author=CK Hsee, X Li; citation_volume=119; citation_issue=47; citation_publication_date=2022; citation_doi=10.1073/pnas.2205988119; citation_id=CR135",
+            "Hu, L., & Kohler-Hausmann, I. (2020). What’s sex got to do with machine learning? In: FAT*. ACM, p. 513",
+            "citation_journal_title=American Political Science Review; citation_title=Intersectionality, quotas, and minority women’s political representation worldwide; citation_author=MM Hughes; citation_volume=105; citation_issue=3; citation_publication_date=2011; citation_pages=604-620; citation_doi=10.1017/S0003055411000293; citation_id=CR137",
+            "Hutchinson, B., Mitchell, M. (2019). 50 years of test (un)fairness: Lessons for machine learning. In: FAT. ACM, pp. 49–58",
+            "Hutchinson, B., Smart, A., Hanna, A., et al. (2021). Towards accountability for machine learning datasets: Practices from software engineering and infrastructure. In: FAccT. ACM, pp. 560–575",
+            "ISO/IEC. (2021). ISO/IEC TR 24027:2021 - Information Technology - Artificial Intelligence (AI) - Bias in AI systems and AI-aided decision making. \n                  https://www.iso.org/standard/77607.html\n                  \n                ",
+            "Jacobs, A.Z. (2021). Measurement and fairness. In: FAccT. ACM, pp. 375–385",
+            "Jaton, F. (2020). The Constitution of Algorithms. Ground-Truthing, Programming, Formulating: Inside technology, The MIT Press",
+            "Ji, D., Smyth, P., Steyvers, M. (2020). Can I trust my fairness metric? assessing fairness with unlabeled data and bayesian inference. In: NeurIPS",
+            "Ji, J., Qiu, T., Chen, B., et al. (2023). AI alignment: A comprehensive survey. CoRR \n                  http://arxiv.org/abs/2310.19852\n                  \n                ",
+            "Jin, X., Barbieri, F., Kennedy, B., et al. (2021). On transferability of bias mitigation effects in language model fine-tuning. In: NAACL-HLT. Association for Computational Linguistics, pp. 3770–3783",
+            "Jo, E.S., Gebru, T. (2020). Lessons from archives: Strategies for collecting sociocultural data in machine learning. In: FAT*. ACM, pp. 306–316",
+            "citation_journal_title=Nature Machine Intelligence; citation_title=The global landscape of AI ethics guidelines; citation_author=A Jobin, M Ienca, E Vayena; citation_volume=1; citation_issue=9; citation_publication_date=2019; citation_pages=389-399; citation_doi=10.1038/s42256-019-0088-2; citation_id=CR147",
+            "Jorgensen, M., Richert, H., Black, E., et al. (2023). Not so fair: The impact of presumably fair machine learning models. In: AIES. ACM, pp. 297–311",
+            "Kahneman, D. (2011). Thinking. Farrar, Straus and Giroux: Fast and Slow",
+            "Kahneman, D., Sibony, O., Sunstein, C. (2021). Noise: A Flaw in Human Judgment. William Collins",
+            "Kamiran, F., Calders, T. (2009). Classifying without discriminating. In: International conference on computer, control and communication. IEEE, pp. 1–6",
+            "Kamishima, T., Akaho. S., Asoh, H., et al. (2012). Fairness-aware classifier with prejudice remover regularizer. In: ECML/PKDD (2), LNCS, vol 7524. Springer, pp. 35–50",
+            "citation_journal_title=ACM Computing Surveys; citation_title=A survey of algorithmic recourse: Contrastive explanations and consequential recommendations; citation_author=A Karimi, G Barthe, B Schölkopf; citation_volume=55; citation_issue=5; citation_publication_date=2023; citation_pages=1-29; citation_doi=10.1145/3527848; citation_id=CR153",
+            "Kasirzadeh, A., & Smart, A. (2021). The use and misuse of counterfactuals in ethical machine learning. In: FAccT. ACM, pp. 228–236",
+            "Katell, M.A., Young, M., Herman, B., et al. (2019). An algorithmic equity toolkit for technology audits by community advocates and activists. CoRR \n                  http://arxiv.org/abs/1912.02943\n                  \n                ",
+            "citation_journal_title=ACM Computing Surveys; citation_title=Trustworthy artificial intelligence: A review; citation_author=D Kaur, S Uslu, KJ Rittichier; citation_volume=55; citation_issue=2; citation_publication_date=2023; citation_pages=1-38; citation_doi=10.1145/3491209; citation_id=CR156",
+            "citation_journal_title=Journal of Intelligence; citation_title=Systematizing audit in algorithmic recruitment; citation_author=E Kazim, AS Koshiyama, A Hilliard; citation_volume=9; citation_issue=3; citation_publication_date=2021; citation_pages=46; citation_doi=10.3390/jintelligence9030046; citation_id=CR157",
+            "Keane, M.T., Kenny, E.M., Delaney, E., et al. (2021). If only we had better counterfactual explanations: Five key deficits to rectify in the evaluation of counterfactual XAI techniques. In: IJCAI. ijcai.org, pp. 4466–4474",
+            "Kenthapadi, K., Lakkaraju, H., Natarajan, P., et al. (2022). Model monitoring in practice: Lessons learned and open challenges. In: KDD. ACM, pp. 4800–4801",
+            "citation_journal_title=Socio-Economic Review; citation_title=The art of deciding with data: evidence from how employers translate credit reports into hiring decisions; citation_author=B Kiviat; citation_volume=17; citation_issue=2; citation_publication_date=2019; citation_pages=283-309; citation_id=CR160",
+            "Kleinberg, J.M., Mullainathan, S., Raghavan, M. (2017). Inherent trade-offs in the fair determination of risk scores. In: ITCS, LIPIcs, vol 67. Schloss Dagstuhl - Leibniz-Zentrum für Informatik, pp. 43:1–23",
+            "Knowles, B., Richards, J.T., Kroeger, F. (2022). The many facets of trust in AI: Formalizing the relation between trust and fairness, accountability, and transparency. CoRR \n                  http://arxiv.org/abs/2208.00681\n                  \n                ",
+            "citation_journal_title=Historical Social Research; citation_title=Source criticism of data platform logics on the internet; citation_author=G Koch, K Kinder-Kurlanda; citation_volume=45; citation_issue=3; citation_publication_date=2020; citation_pages=270-287; citation_id=CR163",
+            "citation_journal_title=Northwestern University Law Review; citation_title=Eddie murphy and the dangers of counterfactual causal thinking about detecting racial discrimination; citation_author=I Kohler-Hausmann; citation_volume=113; citation_issue=5; citation_publication_date=2019; citation_pages=1163-1227; citation_id=CR164",
+            "Koshiyama, A., Kazim, E., Treleaven, P., et al. (2021). Towards algorithm auditing: A survey on managing legal, ethical and technological risks of AI, ML and associated algorithms. Available at SSRN: \n                  https://doi.org/10.2139/ssrn.3778998\n                  \n                ",
+            "Kraft, A., & Usbeck, R. (2022). The lifecycle of \"facts\": A survey of social bias in knowledge graphs. In: AACL/IJCNLP (1). Association for Computational Linguistics, pp. 639–652",
+            "Krishna, S., Han, T., Gu, A., et al. (2022). The disagreement problem in explainable machine learning: A practitioner’s perspective. CoRR \n                  http://arxiv.org/abs/2202.01602\n                  \n                ",
+            "citation_journal_title=U of Penn Law Review; citation_title=Accountable algorithms; citation_author=JA Kroll, J Huey, S Barocas; citation_volume=165; citation_publication_date=2017; citation_pages=633-705; citation_id=CR168",
+            "Kulynych, B., Overdorf, R., Troncoso, C., et al. (2020). Pots: protective optimization technologies. In: FAT*. ACM, pp. 177–188",
+            "Kusner, M.J., Loftus, J.R., Russell, C., et al. (2017). Counterfactual fairness. In: NIPS, pp. 4066–4076",
+            "Ladhak, F., Durmus, E., Suzgun, M., et al. (2023). When do pre-training biases propagate to downstream tasks? A case study in text summarization. In: EACL. Association for Computational Linguistics, pp. 3198–3211",
+            "Lakkaraju, H., Kleinberg, J.M., Leskovec, J., et al. (2017). The selective labels problem: Evaluating algorithmic predictions in the presence of unobservables. In: KDD. ACM, pp. 275–284",
+            "citation_journal_title=IEEE transactions on Pattern Analysis and Machine Intelligence; citation_title=A continual learning survey: Defying forgetting in classification tasks; citation_author=MD Lange, R Aljundi, M Masana; citation_volume=44; citation_issue=7; citation_publication_date=2022; citation_pages=3366-3385; citation_id=CR173",
+            "Lazar, S. (2022). Legitimacy, authority, and the political value of explanations. CoRR abs/2208.08628",
+            "Lebovitz, S., Levina, N, & Lifshitz-Assaf, H. (2021). Is AI ground truth really true? The dangers of training and evaluating AI tools based on experts’ know-what. MIS Q 45(3)",
+            "Lee, J., Roh, Y., Song, H., et al. (2021a). Machine learning robustness, fairness, and their convergence. In: KDD. ACM, pp. 4046–4047",
+            "citation_journal_title=Minds and Machines; citation_title=Algorithmic fairness in mortgage lending: from absolute conditions to relational trade-offs; citation_author=MSA Lee, L Floridi; citation_volume=31; citation_issue=1; citation_publication_date=2021; citation_pages=165-191; citation_doi=10.1007/s11023-020-09529-4; citation_id=CR177",
+            "Lee, M.S.A., Singh, J. (2021). The landscape and gaps in open source fairness toolkits. In: CHI. ACM, pp. 1–13",
+            "citation_journal_title=AI Ethics; citation_title=Formalising trade-offs beyond algorithmic fairness: Lessons from ethical philosophy and welfare economics; citation_author=MSA Lee, L Floridi, J Singh; citation_volume=1; citation_issue=4; citation_publication_date=2021; citation_pages=529-544; citation_doi=10.1007/s43681-021-00067-y; citation_id=CR179",
+            "Li, H., Vincent, N., Chancellor, S., et al. (2023). The dimensions of data labor: A road map for researchers, activists, and policymakers to empower data producers. In: FAccT. ACM, pp. 1151–1161",
+            "citation_journal_title=Proceedings of the ACM on Human-Computer Interaction; citation_title=From bias to repair: Error as a site of collaboration and negotiation in applied data science work; citation_author=CK Lin, SJ Jackson; citation_volume=7; citation_issue=CSCW1; citation_publication_date=2023; citation_pages=1-32; citation_doi=10.1145/3579607; citation_id=CR181",
+            "citation_journal_title=Science Advances; citation_title=The limits of human predictions of recidivism; citation_author=ZJ Lin, J Jung, S Goel; citation_volume=6; citation_issue=7; citation_publication_date=2020; citation_pages=0652; citation_doi=10.1126/sciadv.aaz0652; citation_id=CR182",
+            "citation_journal_title=International Conference on Machine Learning; citation_title=Delayed impact of fair machine learning; citation_author=LT Liu, S Dean, E Rolf; citation_volume=80; citation_publication_date=2018; citation_pages=3156-3164; citation_id=CR183",
+            "citation_journal_title=Semantic Web; citation_title=Semantic web technologies and bias in Artificial Intelligence: A systematic literature review; citation_author=PR Lobo, E Daga, H Alani; citation_volume=14; citation_issue=4; citation_publication_date=2023; citation_pages=745-770; citation_doi=10.3233/SW-223041; citation_id=CR184",
+            "Lopez, P. (2019). Reinforcing intersectional inequality via the AMS algorithm in Austria. In: Proc. of the STS Conference. Verlag der Technischen Universität Graz, pp. 289–309",
+            "citation_journal_title=British Medical Journal; citation_title=A blot on the profession; citation_author=S Lowry, G Macpherson; citation_volume=296; citation_issue=6623; citation_publication_date=1986; citation_pages=657-658; citation_doi=10.1136/bmj.296.6623.657; citation_id=CR186",
+            "citation_journal_title=Proceedings of the ACM on Human-Computer Interaction; citation_title=Assessing the fairness of AI systems: AI practitioners processes, challenges, and needs for support; citation_author=M Madaio, L Egede, H Subramonyam; citation_volume=6; citation_publication_date=2022; citation_pages=1-26; citation_doi=10.1145/3512899; citation_id=CR187",
+            "citation_journal_title=ACM Transactions on Software Engineering and Methodology; citation_title=Fair enough: Searching for sufficient measures of fairness; citation_author=S Majumder, J Chakraborty, GR Bai; citation_volume=32; citation_issue=6; citation_publication_date=2023; citation_pages=1-22; citation_doi=10.1145/3585006; citation_id=CR188",
+            "Makhlouf, K., Zhioua, S., & Palamidessi, C. (2020). Survey on causal-based machine learning fairness notions. CoRR abs/2010.09553",
+            "citation_journal_title=Information Processing & Management; citation_title=Machine learning fairness notions: Bridging the gap with real-world applications; citation_author=K Makhlouf, S Zhioua, C Palamidessi; citation_volume=58; citation_issue=5; citation_publication_date=2021; citation_doi=10.1016/j.ipm.2021.102642; citation_id=CR190",
+            "citation_journal_title=SIGKDD Explorations Newsletter; citation_title=On the applicability of machine learning fairness notions; citation_author=K Makhlouf, S Zhioua, C Palamidessi; citation_volume=23; citation_issue=1; citation_publication_date=2021; citation_pages=14-23; citation_doi=10.1145/3468507.3468511; citation_id=CR191",
+            "Makhlouf, K., Zhioua, S., & Palamidessi, C. (2022). Identifiability of causal-based fairness notions: A state of the art. CoRR abs/2203.05900",
+            "Mallen, A., Asai, A., Zhong, V., et al. (2023). When not to trust language models: Investigating effectiveness of parametric and non-parametric memories. In: ACL (1). Association for Computational Linguistics, pp. 9802–9822",
+            "Manerba, M.M., & Guidotti, R. (2021). Fairshades: Fairness auditing via explainability in abusive language detection systems. In: CogMI. IEEE, pp. 34–43",
+            "citation_journal_title=Journal of Business Ethics; citation_title=Ethical implications and accountability of algorithms; citation_author=K Martin; citation_volume=160; citation_issue=4; citation_publication_date=2019; citation_pages=835-850; citation_doi=10.1007/s10551-018-3921-3; citation_id=CR195",
+            "citation_journal_title=ACM Computing Surveys; citation_title=A survey on bias and fairness in machine learning; citation_author=N Mehrabi, F Morstatter, N Saxena; citation_volume=54; citation_issue=6; citation_publication_date=2021; citation_pages=1-35; citation_doi=10.1145/3457607; citation_id=CR196",
+            "citation_journal_title=Computers and Education: Artificial Intelligence; citation_title=Fairness, accountability, transparency, and ethics (FATE) in Artificial Intelligence (AI) and higher education: A systematic review; citation_author=B Memarian, T Doleck; citation_volume=5; citation_publication_date=2023; citation_id=CR197",
+            "Mendoza, I., & Bygrave, L. A. (2017). The right not to be subject to automated decisions based on profiling (pp. 77–98). EU Internet Law: Regulation and Enforcement",
+            "citation_journal_title=Proceedings of Machine Learning Research; citation_title=The cost of fairness in binary classification; citation_author=AK Menon, RC Williamson; citation_volume=81; citation_publication_date=2018; citation_pages=107-118; citation_id=CR199",
+            "Metcalf, J., Moss, E., Watkins, E.A., et al. (2021). Algorithmic impact assessments and accountability: The co-construction of impacts. In: FAccT. ACM, pp. 735–746",
+            "citation_journal_title=Proceedings of the ACM on Human-Computer Interaction; citation_title=Studying up machine learning data: Why talk about bias when we mean power?; citation_author=M Miceli, J Posada, T Yang; citation_volume=6; citation_publication_date=2022; citation_pages=1-14; citation_id=CR201",
+            "citation_journal_title=Proceedings of the ACM on Human-Computer Interaction; citation_title=Documenting data production processes: A participatory approach for data work; citation_author=M Miceli, T Yang, AA Garcia; citation_volume=6; citation_issue=CSCW2; citation_publication_date=2022; citation_pages=1-34; citation_id=CR202",
+            "Miller, A.P. (2018). Want less-biased decisions? Use algorithms. Harvard Business Review",
+            "citation_journal_title=Artificial Intelligence Review; citation_title=Explainable Artificial Intelligence: A comprehensive review; citation_author=D Minh, HX Wang, YF Li; citation_volume=55; citation_issue=5; citation_publication_date=2022; citation_pages=3503-3568; citation_doi=10.1007/s10462-021-10088-y; citation_id=CR204",
+            "citation_journal_title=American Journal of Law and Equality; citation_title=Equality vs. Equity; citation_author=M Minow; citation_volume=1; citation_publication_date=2021; citation_pages=167-193; citation_doi=10.1162/ajle_a_00019; citation_id=CR205",
+            "Mitchell, M., Wu, S., Zaldivar, A., et al. (2019). Model cards for model reporting. In: FAT. ACM, pp. 220–229",
+            "citation_journal_title=Annual Review of Statistics and Its Application; citation_title=Algorithmic fairness: Choices, assumptions, and definitions; citation_author=S Mitchell, E Potash, S Barocas; citation_volume=8; citation_publication_date=2021; citation_pages=141-163; citation_doi=10.1146/annurev-statistics-042720-125902; citation_id=CR207",
+            "Mittelstadt, B.D., Wachter, S., & Russell, C. (2023). The unfairness of fair machine learning: Levelling down and strict egalitarianism by default. CoRR abs/2302.02404",
+            "citation_journal_title=Digital Society; citation_title=Auditing of AI: legal, ethical and technical approaches; citation_author=J Mökander; citation_volume=2; citation_issue=3; citation_publication_date=2023; citation_pages=49; citation_doi=10.1007/s44206-023-00074-y; citation_id=CR209",
+            "citation_journal_title=SIGKDD Explorations Newsletter; citation_title=Causal interpretability for machine learning - problems, methods and evaluation; citation_author=R Moraffah, M Karami, R Guo; citation_volume=22; citation_issue=1; citation_publication_date=2020; citation_pages=18-33; citation_doi=10.1145/3400051.3400058; citation_id=CR210",
+            "citation_journal_title=Artificial Intelligence Review; citation_title=Human-in-the-loop machine learning: A state of the art; citation_author=E Mosqueira-Rey, E Hernández-Pereira, D Alonso-Ríos; citation_volume=56; citation_issue=4; citation_publication_date=2023; citation_pages=3005-3054; citation_doi=10.1007/s10462-022-10246-w; citation_id=CR211",
+            "Mougan, C., & Nielsen, D.S. (2023). Monitoring model deterioration with explainable uncertainty estimation via non-parametric bootstrap. In: AAAI. AAAI Press, pp. 15037–15045",
+            "Mougan, C., Kanellos, G., & Gottron, T. (2021). Desiderata for explainable AI in statistical production systems of the european central bank. In: PKDD/ECML Workshops (1), Communications in Computer and Information Science, vol 1524. Springer, pp. 575–590",
+            "Mougan, C., Broelemann, K., Kasneci, G., et al. (2022). Explanation shift: Detecting distribution shifts on tabular data via the explanation space. In: NeurIPS 2022 Workshop on Distribution Shifts: Connecting Methods and Applications",
+            "Mougan, C., Álvarez, J.M., Ruggieri, S., et al. (2023). Fairness implications of encoding protected categorical attributes. In: AIES. ACM, pp. 454–465",
+            "citation_journal_title=Proceedings of the ACM on Human-Computer Interaction; citation_title=This thing called fairness: Disciplinary confusion realizing a value in technology; citation_author=DK Mulligan, JA Kroll, N Kohli; citation_volume=3; citation_publication_date=2019; citation_pages=1-36; citation_doi=10.1145/3359221; citation_id=CR216",
+            "Nader, L. (1972). Up the anthropologist: Perspectives gained from studying up. Tech. Rep. ED065375, ERIC, \n                  https://eric.ed.gov/?id=ED065375\n                  \n                ",
+            "citation_journal_title=Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery; citation_title=Methods and tools for causal discovery and causal inference; citation_author=AR Nogueira, A Pugnana, S Ruggieri; citation_volume=12; citation_issue=2; citation_publication_date=2022; citation_id=CR218",
+            "citation_journal_title=Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery; citation_title=Bias in data-driven Artificial Intelligence systems - An introductory survey; citation_author=E Ntoutsi, P Fafalios, U Gadiraju; citation_volume=10; citation_issue=3; citation_publication_date=2020; citation_id=CR219",
+            "citation_journal_title=Proceedings of the ACM on Human-Computer Interaction; citation_title=Intersectional experiences of unfair treatment caused by automated computational systems; citation_author=T Nuenen, JM Such, M Coté; citation_volume=6; citation_issue=CSCW2; citation_publication_date=2022; citation_pages=1-30; citation_doi=10.1145/3555546; citation_id=CR220",
+            "citation_journal_title=Frontiers Big Data; citation_title=Social data: Biases, methodological pitfalls, and ethical boundaries; citation_author=A Olteanu, C Castillo, F Diaz; citation_volume=2; citation_publication_date=2019; citation_pages=13; citation_doi=10.3389/fdata.2019.00013; citation_id=CR221",
+            "Organizers Of QueerinAI, et al. (2023). Queer in AI: A case study in community-led participatory AI. In: FAccT. ACM, pp. 1882–1895",
+            "Ovalle, A., Subramonian, A., Gautam, V., et al. (2023). Factoring the matrix of domination: A critical review and reimagination of intersectionality in AI fairness. In: AIES. ACM, pp. 496–511",
+            "Pagan, N., Baumann, J., Elokda, E., et al. (2023). A classification of feedback loops and their relation to biases in automated decision-making systems. CoRR abs/2305.06055",
+            "citation_title=The filter bubble: What the Internet is hiding from you; citation_publication_date=2011; citation_id=CR225; citation_author=E Pariser; citation_publisher=Penguin Press",
+            "Parmar, M., Mishra, S., Geva, M., et al. (2023). Don’t blame the annotator: Bias already starts in the annotation instructions. In: EACL. Association for Computational Linguistics, pp. 1771–1781",
+            "Passi, S., Barocas, S. (2019). Problem formulation and fairness. In: FAT. ACM, pp. 39–48",
+            "Pearl, J. (2009). Causality: models, reasoning and inference, Second Edition. Cambridge University Press",
+            "Pearl, J., Mackenzie, D. (2018). The book of why: The new science of cause and effect. Basic Books",
+            "Pedreschi, D., Ruggieri, S., Turini, F. (2008). Discrimination-aware data mining. In: KDD. ACM, pp. 560–568",
+            "Pedreschi, D., Ruggieri, S., Turini, F. (2012). A study of top-k measures for discrimination discovery. In: SAC. ACM, pp. 126–131",
+            "Peng, K., Mathur, A., Narayanan, A. (2021). Mitigating dataset harms requires stewardship: Lessons from 1000 papers. In: NeurIPS Datasets and Benchmarks",
+            "citation_journal_title=AI Communications; citation_title=Accountability in AI: from principles to industry-specific accreditation; citation_author=C Percy, S Dragicevic, S Sarkar; citation_volume=34; citation_issue=3; citation_publication_date=2021; citation_pages=181-196; citation_doi=10.3233/AIC-210080; citation_id=CR233",
+            "citation_journal_title=Proceedings of Machine Learning Research; citation_title=Performative prediction; citation_author=JC Perdomo, T Zrnic, C Mendler-Dünner; citation_volume=119; citation_publication_date=2020; citation_pages=7599-7609; citation_id=CR234",
+            "citation_journal_title=ACM Computing Surveys; citation_title=A review on fairness in machine learning; citation_author=D Pessach, E Shmueli; citation_volume=55; citation_issue=3; citation_publication_date=2022; citation_pages=1-44; citation_doi=10.1145/3494672; citation_id=CR235",
+            "Petroni, F., Piktus, A., Fan. A., et al. (2021). KILT: a benchmark for knowledge intensive language tasks. In: NAACL-HLT. Association for Computational Linguistics, pp. 2523–2544",
+            "Pleiss, G., Raghavan, M., Wu, F., et al. (2017). On fairness and calibration. In: NIPS, pp. 5680–5689",
+            "Pruss, D. (2023). Ghosting the machine: Judicial resistance to a recidivism risk assessment instrument. In: FAccT. ACM, pp. 312–323",
+            "citation_title=Dataset shift in machine learning; citation_publication_date=2009; citation_id=CR239; citation_author=J Quiñonero-Candela; citation_author=M Sugiyama; citation_author=ND Lawrence; citation_publisher=MIT Press",
+            "citation_journal_title=Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery; citation_title=A survey on datasets for fairness-aware machine learning; citation_author=TL Quy, A Roy, V Iosifidis; citation_volume=12; citation_issue=3; citation_publication_date=2022; citation_id=CR240",
+            "Rahmattalabi, A., Xiang, A. (2022). Promises and challenges of causality for ethical machine learning. CoRR abs/2201.10683",
+            "Raji, I. D., Yang, J. (2019). ABOUT ML: annotation and benchmarking on understanding and transparency of machine learning lifecycles. CoRR abs/1912.06166",
+            "Raji, I. D., Smart, A., White, R. N., et al. (2020). Closing the AI accountability gap: defining an end-to-end framework for internal algorithmic auditing. In: FAT*. ACM, pp. 33–44",
+            "Raji, I. D., Bender, E. M. et al. (2021a). AI and the everything in the whole wide world benchmark. In: NeurIPS Datasets and Benchmarks",
+            "Raji, I. D., Scheuerman, M. K., Amironesei, R. (2021b). You can’t sit with us: Exclusionary pedagogy in AI ethics education. In: FAccT. ACM, pp. 515–525",
+            "citation_journal_title=IEEE Transactions on Artificial Intelligence; citation_title=Recent advances in trustworthy explainable Artificial Intelligence: Status, challenges, and perspectives; citation_author=A Rawal, J McCoy, DB Rawat; citation_volume=3; citation_issue=6; citation_publication_date=2022; citation_pages=852-866; citation_doi=10.1109/TAI.2021.3133846; citation_id=CR246",
+            "Räz T (2021) Group fairness: Independence revisited. In: FAccT. ACM, pp. 129–137",
+            "Richardson, B., Gilbert, J. E. (2021). A framework for fairness: A systematic review of existing fair AI solutions. CoRR abs/2112.05700",
+            "Rismani, S., Moon, A. (2023). What does it mean to be a responsible AI practitioner: An ontology of roles and skills. In: AIES. ACM, pp. 584–595",
+            "citation_journal_title=The Knowledge Engineering Review; citation_title=A multidisciplinary survey on discrimination analysis; citation_author=A Romei, S Ruggieri; citation_volume=29; citation_issue=5; citation_publication_date=2014; citation_pages=582-638; citation_doi=10.1017/S0269888913000039; citation_id=CR250",
+            "Rong, Y., Leemann, T., Nguyen, T., et al. (2024). Towards human-centered explainable AI: A survey of user studies for model explanations. IEEE Trans Pattern Anal Mach Intell p to appear",
+            "Rovatsos, M., Mittelstadt, B., Koene, A. (2019). Landscape Summary: Bias In Algorithmic Decision-Making: What is bias in algorithmic decision-making, how can we identify it, and how can we mitigate it? UK Government",
+            "Roy, A., Horstmann, J., Ntoutsi, E. (2023). Multi-dimensional discrimination in law and machine learning - A comparative overview. In: FAccT. ACM, pp. 89–100",
+            "Ruggieri, S., Álvarez, J. M., Pugnana, A., et al. (2023). Can we trust fair-AI? In: AAAI. AAAI Press, pp. 15421–15430",
+            "citation_journal_title=The VLDB Journal; citation_title=Information resilience: the nexus of responsible and agile approaches to information use; citation_author=SW Sadiq, A Aryani, G Demartini; citation_volume=31; citation_issue=5; citation_publication_date=2022; citation_pages=1059-1084; citation_doi=10.1007/s00778-021-00720-2; citation_id=CR255",
+            "citation_journal_title=Proceedings of Machine Learning Research; citation_title=Measuring non-expert comprehension of machine learning fairness metrics; citation_author=D Saha, C Schumann, DC McElfresh; citation_volume=119; citation_publication_date=2020; citation_pages=8377-8387; citation_id=CR256",
+            "Salman, H., Jain, S., Ilyas, A., et al. (2022). When does bias transfer in transfer learning? CoRR abs/2207.02842",
+            "citation_journal_title=ACM Transactions on Computing Education; citation_title=Integrating ethics within machine learning courses; citation_author=JS Saltz, M Skirpan, C Fiesler; citation_volume=19; citation_issue=4; citation_publication_date=2019; citation_pages=1-26; citation_doi=10.1145/3341164; citation_id=CR258",
+            "citation_journal_title=Ethics and Information Technology; citation_title=Non-empirical problems in fair machine learning; citation_author=T Scantamburlo; citation_volume=23; citation_issue=4; citation_publication_date=2021; citation_pages=703-712; citation_doi=10.1007/s10676-021-09608-9; citation_id=CR259",
+            "Schölkopf, B., Locatello, F., Bauer, S., et al. (2021). Toward causal representation learning. Proc IEEE 109(5), 612–634.",
+            "Schwartz, R., Vassilev, A., Greene, K., et al. (2022). Towards a standard for identifying and managing bias in Artificial Intelligence. Tech. Rep. 1270, NIST Special Publication",
+            "Scott, K. M., Wang, S. M., Miceli, M., et al. (2022). Algorithmic tools in public employment services: Towards a jobseeker-centric perspective. In: FAccT. ACM, pp. 2138–2148",
+            "citation_journal_title=Big Data & Society; citation_title=Algorithms as culture. Some tactics for the ethnography of algorithmic systems; citation_author=N Seaver; citation_volume=4; citation_issue=2; citation_publication_date=2017; citation_pages=2053951717738104; citation_doi=10.1177/2053951717738104; citation_id=CR263",
+            "citation_journal_title=ACM Computing Surveys; citation_title=Representation bias in data: A survey on identification and resolution techniques; citation_author=N Shahbazi, Y Lin, A Asudeh; citation_publication_date=2023; citation_doi=10.1145/3588433; citation_id=CR264",
+            "citation_journal_title=IEEE Access; citation_title=A survey of privacy risks and mitigation strategies in the Artificial Intelligence life cycle; citation_author=S Shahriar, S Allana, SM Hazratifard; citation_volume=11; citation_publication_date=2023; citation_pages=61829-61854; citation_doi=10.1109/ACCESS.2023.3287195; citation_id=CR265",
+            "Shelby, R., Rismani, S., Henne, K., et al. (2023). Sociotechnical harms of algorithmic systems: Scoping a taxonomy for harm reduction. In: AIES. ACM, pp. 723–741",
+            "citation_journal_title=Nature; citation_title=Crowdsourced research: Many hands make tight work; citation_author=R Silberzahn, EL Uhlmann; citation_volume=526; citation_publication_date=2015; citation_pages=189-191; citation_doi=10.1038/526189a; citation_id=CR267",
+            "citation_journal_title=Royal Society Open Science; citation_title=Quota-based debiasing can decrease representation of the most under-represented groups; citation_author=I Smirnov, F Lemmerich, M Strohmaier; citation_volume=8; citation_issue=9; citation_publication_date=2021; citation_doi=10.1098/rsos.210821; citation_id=CR268",
+            "citation_journal_title=Applied Informatics; citation_title=Causal discovery and inference: concepts and recent methodological advances; citation_author=P Spirtes, K Zhang; citation_volume=3; citation_issue=3; citation_publication_date=2016; citation_pages=1-38; citation_id=CR269",
+            "Spirtes, P., Glymour, C., & Scheines, R. (2000). Causation, Prediction, and Search (2nd ed.). Adaptive computation and machine learning: MIT Press.",
+            "Srivastava, M., Heidari, H., Krause, A. (2019). Mathematical notions vs. human perception of fairness: A descriptive approach to fairness for machine learning. In: KDD. ACM, pp. 2459–2468",
+            "State, L. (2022). Constructing meaningful explanations: Logic-based approaches. In: AIES. ACM, p. 916",
+            "State, L., Fahimi, M. (2023). Careful explanations: A feminist perspective on XAI. In: EWAF, CEUR Workshop Proceedings, vol 3442. CEUR-WS.org",
+            "State, L., Salat, H., Rubrichi, S., et al. (2022). Explainability in practice: Estimating electrification rates from mobile phone data in senegal. CoRR abs/2211.06277",
+            "Steed, R., Panda, S., Kobren, A., et al. (2022). Upstream mitigation is not all you need: Testing the bias transfer hypothesis in pre-trained language models. In: ACL (1). Association for Computational Linguistics, pp. 3524–3542",
+            "citation_journal_title=Communications of the ACM; citation_title=Responsible data management; citation_author=J Stoyanovich, S Abiteboul, B Howe; citation_volume=65; citation_issue=6; citation_publication_date=2022; citation_pages=64-74; citation_doi=10.1145/3488717; citation_id=CR276",
+            "Suresh, H., Guttag, J. V. (2021). A framework for understanding sources of harm throughout the machine learning life cycle. In: EAAMO. ACM, pp. 17:1–17:9",
+            "citation_journal_title=NPJ Digit Medicine; citation_title=The impact of inconsistent human annotations on AI driven clinical decision making; citation_author=A Sylolypavan, DH Sleeman, H Wu; citation_volume=6; citation_publication_date=2023; citation_pages=26; citation_doi=10.1038/s41746-023-00773-3; citation_id=CR278",
+            "Szczekocka, E., Tarnec, C., Pieczerak, J. (2022). Standardization on bias in Artificial Intelligence as industry support. In: Big Data. IEEE, pp. 5090–5099",
+            "citation_journal_title=Ethics and Information Technology; citation_title=Fairness, explainability and in-between: Understanding the impact of different explanation methods on non-expert users’ perceptions of fairness toward an algorithmic system; citation_author=AS Tal, T Kuflik, D Kliger; citation_volume=24; citation_issue=1; citation_publication_date=2022; citation_pages=2; citation_doi=10.1007/s10676-022-09623-4; citation_id=CR280",
+            "Tal, E. (2023). Target specification bias, counterfactual prediction, and algorithmic fairness in healthcare. In: AIES. ACM, pp. 312–321",
+            "citation_journal_title=ACM Computing Surveys; citation_title=What-is and how-to for fairness in machine learning: A survey, reflection, and perspective; citation_author=Z Tang, J Zhang, K Zhang; citation_volume=55; citation_publication_date=2023; citation_pages=1-37; citation_doi=10.1145/3597199; citation_id=CR282",
+            "Tizpaz-Niari, S., Kumar, A., Tan, G., et al. (2022). Fairness-aware configuration of machine learning libraries. In: ICSE. ACM, pp. 909–920",
+            "Tolan, S. (2019). Fair and unbiased algorithmic decision making: Current state and future challenges. arXiv preprint \n                  arXiv:1901.04730\n                  \n                ",
+            "Tölle, L., Trier, M. (2023). Polarization in online social networks: A review of mechanisms and dimensions. In: ECIS",
+            "Turri, V., Dzombak, R. (2023). Why we need to know more: Exploring the state of AI incident documentation practices. In: AIES. ACM, pp. 576–583",
+            "Vainio-Pekka, H., otse Agbese MO, Jantunen M, et al. (2023). The role of explainable AI in the research field of AI ethics. ACM Transactions on Interactive Intelligent Systems, 13(4), 1.",
+            "citation_journal_title=Big Data & Society; citation_title=Fairer machine learning in the real world: Mitigating discrimination without collecting sensitive data; citation_author=M Veale, R Binns; citation_volume=4; citation_issue=2; citation_publication_date=2017; citation_pages=2053951717743530; citation_doi=10.1177/2053951717743530; citation_id=CR288",
+            "citation_journal_title=International Review of Law, Computers & Technology; citation_title=Accountability for the use of algorithms in a big data environment; citation_author=A Vedder, L Naudts; citation_volume=31; citation_issue=2; citation_publication_date=2017; citation_pages=206-224; citation_doi=10.1080/13600869.2017.1298547; citation_id=CR289",
+            "Verma, S., Rubin, J. (2018). Fairness definitions explained. In: FairWare@ICSE. ACM, pp. 1–7",
+            "citation_journal_title=W Va L Rev; citation_title=Bias preservation in machine learning: The legality of fairness metrics under EU non-discrimination law; citation_author=S Wachter, B Mittelstadt, C Russell; citation_volume=123; citation_issue=3; citation_publication_date=2021; citation_pages=735-790; citation_id=CR291",
+            "citation_journal_title=Computer Law & Security Review; citation_title=Why fairness cannot be automated: Bridging the gap between EU non-discrimination law and AI; citation_author=S Wachter, B Mittelstadt, C Russell; citation_volume=41; citation_publication_date=2021; citation_doi=10.1016/j.clsr.2021.105567; citation_id=CR292",
+            "Wagstaff, K. (2012). Machine learning that matters. In: ICML. icml.cc/Omnipress",
+            "citation_journal_title=ACM Transactions on Knowledge Discovery from Data; citation_title=In-processing modeling techniques for machine learning fairness: A survey; citation_author=M Wan, D Zha, N Liu; citation_volume=17; citation_issue=3; citation_publication_date=2023; citation_pages=1-27; citation_doi=10.1145/3551390; citation_id=CR294",
+            "Wang, A., Kapoor, S., Barocas, S., et al. (2023). Against predictive optimization: On the legitimacy of decision-making algorithms that optimize predictive accuracy. In: FAccT. ACM, p. 626",
+            "citation_journal_title=Statistical Analysis and Data Mining; citation_title=The fairness-accuracy Pareto front; citation_author=S Wei, M Niethammer; citation_volume=15; citation_issue=3; citation_publication_date=2022; citation_pages=287-302; citation_doi=10.1002/sam.11560; citation_id=CR296",
+            "citation_journal_title=Journal of Artificial Intelligence Research; citation_title=Rethinking fairness: An interdisciplinary survey of critiques of hegemonic ML fairness approaches; citation_author=L Weinberg; citation_volume=74; citation_publication_date=2022; citation_pages=75-109; citation_doi=10.1613/jair.1.13196; citation_id=CR297",
+            "Wick, M. L., Panda, S., Tristan, J. (2019). Unlocking fairness: A trade-off revisited. In: NeurIPS, pp. 8780–8789",
+            "Wiegand, M., Eder, E., Ruppenhofer, J. (2022). Identifying implicitly abusive remarks about identity groups using a linguistically informed approach. In: NAACL-HLT. ACL, pp. 5600–5612",
+            "Wieringa, M. (2020). What to account for when accounting for algorithms: A systematic literature review on algorithmic accountability. In: FAT*. ACM, pp. 1–18",
+            "Wu, D., Liu, J. (2022). Involve humans in algorithmic fairness issue: A systematic review. In: iConference (1), LNCS, vol 13192. Springer, pp. 161–176",
+            "Xenidis, R. (2018). Multiple discrimination in EU anti-discrimination law: Towards redressing complex inequality? In: Belavusau, U., Henrard, K. (Eds.) EU anti-discrimination law beyond gender. Hart Publishing, pp. 41–74",
+            "citation_journal_title=Maastricht Journal of European and Comparative Law; citation_title=Tuning EU equality law to algorithmic discrimination: Three pathways to resilience; citation_author=R Xenidis; citation_volume=27; citation_issue=6; citation_publication_date=2020; citation_pages=736-758; citation_doi=10.1177/1023263X20982173; citation_id=CR303",
+            "citation_title=EU non-discrimination law in the era of Artificial Intelligence: Mapping the challenges of algorithmic discrimination; citation_inbook_title=General principles of EU law and the EU digital order; citation_publication_date=2020; citation_pages=151-182; citation_id=CR304; citation_author=R Xenidis; citation_author=L Senden; citation_publisher=Kluwer Law International",
+            "citation_journal_title=Interactions; citation_title=Toward human-centered AI: A perspective from human-computer interaction; citation_author=W Xu; citation_volume=26; citation_issue=4; citation_publication_date=2019; citation_pages=42-46; citation_doi=10.1145/3328485; citation_id=CR305",
+            "citation_journal_title=Sociology Compass; citation_title=Artificial Intelligence, algorithms, and social inequality: Sociological contributions to contemporary debates; citation_author=M Zajko; citation_volume=16; citation_issue=3; citation_publication_date=2022; citation_doi=10.1111/soc4.12962; citation_id=CR306",
+            "citation_journal_title=ACM Computing Surveys; citation_title=Fairness in ranking, part I: Score-based ranking; citation_author=M Zehlike, K Yang, J Stoyanovich; citation_volume=55; citation_publication_date=2023; citation_pages=1-36; citation_id=CR307",
+            "Zhang, J., Bareinboim, E. (2018). Fairness in decision-making - the causal explanation formula. In: AAAI. AAAI Press, pp. 2037–2045",
+            "Zhang, L., Wu, Y., Wu, X. (2017). A causal framework for discovering and removing direct and indirect discrimination. In: IJCAI. ijcai.org, pp. 3929–3935",
+            "citation_journal_title=Proceedings of Machine Learning Research; citation_title=Understanding failures in out-of-distribution detection with deep generative models; citation_author=LH Zhang, M Goldstein, R Ranganath; citation_volume=139; citation_publication_date=2021; citation_pages=12427-12436; citation_id=CR310",
+            "citation_title=A review on pre-processing methods for fairness in machine learning; citation_inbook_title=Advances in natural computation, Fuzzy Systems and Knowledge Discovery; citation_publication_date=2023; citation_pages=1185-1191; citation_id=CR311; citation_author=Z Zhang; citation_author=S Wang; citation_author=G Meng; citation_publisher=Springer",
+            "Ziems, C., Chen, J., Harris, C., et al. (2022). VALUE: understanding dialect disparity in NLU. In: ACL (1). Association for Computational Linguistics, pp. 3701–3720",
+            "citation_journal_title=Science Technology Human Values; citation_title=Governing algorithms. Myth, mess, and methods; citation_author=M Ziewitz; citation_volume=41; citation_issue=1; citation_publication_date=2016; citation_pages=3-16; citation_doi=10.1177/0162243915608948; citation_id=CR313",
+            "citation_journal_title=Data Mining and Knowledge Discovery; citation_title=Measuring discrimination in algorithmic decision making; citation_author=I Zliobaite; citation_volume=31; citation_issue=4; citation_publication_date=2017; citation_pages=1060-1089; citation_doi=10.1007/s10618-017-0506-1; citation_id=CR314",
+            "citation_journal_title=Artificial Intelligence and Law; citation_title=Using sensitive personal data may be necessary for avoiding discrimination in data-driven decision models; citation_author=I Zliobaite, B Custers; citation_volume=24; citation_issue=2; citation_publication_date=2016; citation_pages=183-201; citation_doi=10.1007/s10506-016-9182-5; citation_id=CR315",
+            "citation_journal_title=The International Journal of Human Rights; citation_title=Strengthening legal protection against discrimination by algorithms and Artificial Intelligence; citation_author=FJ Zuiderveen Borgesius; citation_volume=24; citation_issue=10; citation_publication_date=2020; citation_pages=1572-1593; citation_doi=10.1080/13642987.2020.1743976; citation_id=CR316"
+          ],
+          "citation_springer_api_url": [
+            "http://api.springer.com/xmldata/jats?q=doi:10.1007/s10676-024-09746-w&api_key="
+          ],
+          "citation_lastpage": [
+            ""
+          ],
+          "citation_online_date": [
+            "2024/04/29"
+          ],
+          "citation_title": [
+            "Policy advice and best practices on bias and fairness in AI"
+          ],
+          "citation_cover_date": [
+            "2024/06/01"
+          ]
+        }
+      ]
+    }
+  ]
+}

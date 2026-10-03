@@ -1,0 +1,39 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "QXDK8Z6I",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/abs/2205.02389",
+      "locator": "key=QXDK8Z6I, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "Artificial Intelligence and Structural Injustice: Foundations for Equity, Values, and Responsibility"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2205.02389"
+          ],
+          "citation_date": [
+            "2022/05/05"
+          ],
+          "citation_abstract": [
+            "This chapter argues for a structural injustice approach to the governance of AI. Structural injustice has an analytical and an evaluative component. The analytical component consists of structural explanations that are well-known in the social sciences. The evaluative component is a theory of justice. Structural injustice is a powerful conceptual tool that allows researchers and practitioners to identify, articulate, and perhaps even anticipate, AI biases. The chapter begins with an example of racial bias in AI that arises from structural injustice. The chapter then presents the concept of structural injustice as introduced by the philosopher Iris Marion Young. The chapter moreover argues that structural injustice is well suited as an approach to the governance of AI and compares this approach to alternative approaches that start from analyses of harms and benefits or from value statements. The chapter suggests that structural injustice provides methodological and normative foundations for the values and concerns of Diversity, Equity, and Inclusion. The chapter closes with an outlook onto the idea of structure and on responsibility. The idea of a structure is central to justice. An open theoretical research question is to what extent AI is itself part of the structure of society. Finally, the practice of responsibility is central to structural injustice. Even if they cannot be held responsible for the existence of structural injustice, every individual and every organization has some responsibility to address structural injustice going forward."
+          ],
+          "citation_online_date": [
+            "2022/05/05"
+          ],
+          "citation_author": [
+            "Himmelreich, Johannes",
+            "Lim, Désirée"
+          ],
+          "citation_arxiv_id": [
+            "2205.02389"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "GJF776AY",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1380252/full",
+      "locator": "key=GJF776AY, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_issn": [
+            "2297-900X"
+          ],
+          "citation_keywords": [
+            "boundary objects; hermeneutic reverse engineering; critical data studies; critical algorithm studies; critical code studies; critical artificial intelligence studies"
+          ],
+          "citation_volume": [
+            "10"
+          ],
+          "citation_firstpage": [
+            "1380252"
+          ],
+          "citation_xml_url": [
+            "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1380252/xml"
+          ],
+          "citation_doi": [
+            "10.3389/fcomm.2025.1380252"
+          ],
+          "citation_title": [
+            "Investigating AI systems: examining data and algorithmic bias through hermeneutic reverse engineering"
+          ],
+          "citation_fulltext_world_readable": [
+            "yes"
+          ],
+          "citation_pdf_url": [
+            "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1380252/pdf"
+          ],
+          "url": [
+            "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2025.1380252/full"
+          ],
+          "citation_author_institution": [
+            "Harry W. Bass. Jr. School of Arts, Humanities, and Technology, The University of Texas at Dallas, United States"
+          ],
+          "citation_article_type": [
+            "Perspective"
+          ],
+          "citation_abstract": [
+            "Considering Artificial Intelligence systems as boundary objects, which are interdisciplinary objects sustained differently by diverse fields while providing shared discourses between them, this essay summarizes the approaches of examining bias in AI systems. It argues that examining each part related to the building and working of AI systems is essential for unpacking the political play and potential insert points of biases in them. It concentrates on the critical analysis of data and algorithms as two core parts of AI systems by operationalizing hermeneutic reverse engineering. Hermeneutic reverse engineering is a framework to unpack and understand different elements of a technocultural object and/or system that contribute to the construction of its meaning and contexts. It employs a speculative imagination of what other realities can be designed and includes cultural analysis to identify existing meanings and assumptions behind the technocultural object, identifying key elements of signification, and speculating possibilities of reassembling different meanings for the object. The main results obtained by this method on AI systems is using cultural consideration and technological imagination to unpack existing meanings created by AI and design innovative approaches for AI to exert alternate/ inclusive meanings. The research perspectives presented in this article include critical examination of biases and politics within different elements of AI systems, and the impact of these biases on different social groups. The paper proposes using the method of hermeneutic reverse engineering to investigate AI systems and speculate possible alternate and more accountable futures for AI systems."
+          ],
+          "citation_journal_abbrev": [
+            "Front. Commun."
+          ],
+          "title": [
+            "Frontiers | Investigating AI systems: examining data and algorithmic bias through hermeneutic reverse engineering"
+          ],
+          "citation_online_date": [
+            "2025/01/20"
+          ],
+          "citation_publisher": [
+            "Frontiers"
+          ],
+          "type": [
+            "article"
+          ],
+          "citation_publication_date": [
+            "2025/01/30"
+          ],
+          "citation_language": [
+            "English"
+          ],
+          "citation_author": [
+            "Shukla, Nishanshi "
+          ],
+          "citation_journal_title": [
+            "Frontiers in Communication"
+          ]
+        }
+      ]
+    }
+  ]
+}

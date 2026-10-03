@@ -1,0 +1,103 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "HJ7BHX8J",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs10676-023-09739-1",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/732a034257fb04aa32ee.json",
+      "origin_artifact_sha256": "sha256:df4b6cd7bbc7edf66decd7a78fcedf003b5f65ee0eaa0b41bcaf857e36d5f821",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              3
+            ]
+          ]
+        },
+        "DOI": "10.1007/s10676-023-09739-1",
+        "type": "journal-article",
+        "title": [
+          "Engineers on responsibility: feminist approaches to who’s responsible for ethical AI"
+        ],
+        "volume": "26",
+        "author": [
+          {
+            "given": "Eleanor",
+            "family": "Drage",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0053-4657",
+            "authenticated-orcid": false,
+            "given": "Kerry",
+            "family": "McInerney",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jude",
+            "family": "Browne",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              2
+            ]
+          ]
+        },
+        "container-title": [
+          "Ethics and Information Technology"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              2
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s10676-023-09739-1",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              2
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

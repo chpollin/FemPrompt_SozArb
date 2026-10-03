@@ -1,0 +1,43 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "G53MCF3W",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/abs/2506.21898",
+      "locator": "key=G53MCF3W, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "Bias, Accuracy, and Trust: Gender-Diverse Perspectives on Large Language Models"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2506.21898"
+          ],
+          "citation_date": [
+            "2025/06/27"
+          ],
+          "citation_abstract": [
+            "Large language models (LLMs) are becoming increasingly ubiquitous in our daily lives, but numerous concerns about bias in LLMs exist. This study examines how gender-diverse populations perceive bias, accuracy, and trustworthiness in LLMs, specifically ChatGPT. Through 25 in-depth interviews with non-binary/transgender, male, and female participants, we investigate how gendered and neutral prompts influence model responses and how users evaluate these responses. Our findings reveal that gendered prompts elicit more identity-specific responses, with non-binary participants particularly susceptible to condescending and stereotypical portrayals. Perceived accuracy was consistent across gender groups, with errors most noted in technical topics and creative tasks. Trustworthiness varied by gender, with men showing higher trust, especially in performance, and non-binary participants demonstrating higher performance-based trust. Additionally, participants suggested improving the LLMs by diversifying training data, ensuring equal depth in gendered responses, and incorporating clarifying questions. This research contributes to the CSCW/HCI field by highlighting the need for gender-diverse perspectives in LLM development in particular and AI in general, to foster more inclusive and trustworthy systems."
+          ],
+          "citation_online_date": [
+            "2025/07/08"
+          ],
+          "citation_author": [
+            "Gaba, Aimen",
+            "Wall, Emily",
+            "Babu, Tejas Ramkumar",
+            "Brun, Yuriy",
+            "Hall, Kyle",
+            "Bearfield, Cindy Xiong"
+          ],
+          "citation_arxiv_id": [
+            "2506.21898"
+          ]
+        }
+      ]
+    }
+  ]
+}

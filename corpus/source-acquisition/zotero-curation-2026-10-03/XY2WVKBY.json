@@ -1,0 +1,364 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "XY2WVKBY",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1080/1369118X.2025.2537803",
+      "locator": "message.title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XY2WVKBY-crossref.json",
+      "origin_artifact_sha256": "sha256:1f7b374535d6f9ba8a6465223a488f95d8388fbc8d09b837c35fe9e4cd1a0cd3",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "issue": "6",
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              26
+            ]
+          ]
+        },
+        "DOI": "10.1080/1369118x.2025.2537803",
+        "type": "journal-article",
+        "page": "1855-1872",
+        "title": [
+          "Governance of discriminatory content in conversational AIs: a cross-platform and cross-cultural analysis"
+        ],
+        "volume": "29",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-6644-3467",
+            "authenticated-orcid": false,
+            "given": "Na",
+            "family": "Ta",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Renmin University of China",
+                "place": [
+                  "Beijing, People’s Republic of China"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jing",
+            "family": "Zeng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Zurich",
+                "place": [
+                  "Zurich, Switzerland"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhanghao",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Beijing Normal University",
+                "place": [
+                  "Zhuhai, People’s Republic of China"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              27
+            ]
+          ]
+        },
+        "container-title": [
+          "Information, Communication &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/1369118x.2025.2537803",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              27
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1080/1369118X.2025.2537803",
+      "locator": "message.author",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XY2WVKBY-crossref.json",
+      "origin_artifact_sha256": "sha256:1f7b374535d6f9ba8a6465223a488f95d8388fbc8d09b837c35fe9e4cd1a0cd3",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "issue": "6",
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              26
+            ]
+          ]
+        },
+        "DOI": "10.1080/1369118x.2025.2537803",
+        "type": "journal-article",
+        "page": "1855-1872",
+        "title": [
+          "Governance of discriminatory content in conversational AIs: a cross-platform and cross-cultural analysis"
+        ],
+        "volume": "29",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-6644-3467",
+            "authenticated-orcid": false,
+            "given": "Na",
+            "family": "Ta",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Renmin University of China",
+                "place": [
+                  "Beijing, People’s Republic of China"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jing",
+            "family": "Zeng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Zurich",
+                "place": [
+                  "Zurich, Switzerland"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhanghao",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Beijing Normal University",
+                "place": [
+                  "Zhuhai, People’s Republic of China"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              27
+            ]
+          ]
+        },
+        "container-title": [
+          "Information, Communication &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/1369118x.2025.2537803",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              27
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1080/1369118X.2025.2537803",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XY2WVKBY-crossref.json",
+      "origin_artifact_sha256": "sha256:1f7b374535d6f9ba8a6465223a488f95d8388fbc8d09b837c35fe9e4cd1a0cd3",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "issue": "6",
+        "published-print": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              26
+            ]
+          ]
+        },
+        "DOI": "10.1080/1369118x.2025.2537803",
+        "type": "journal-article",
+        "page": "1855-1872",
+        "title": [
+          "Governance of discriminatory content in conversational AIs: a cross-platform and cross-cultural analysis"
+        ],
+        "volume": "29",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-6644-3467",
+            "authenticated-orcid": false,
+            "given": "Na",
+            "family": "Ta",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Renmin University of China",
+                "place": [
+                  "Beijing, People’s Republic of China"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Jing",
+            "family": "Zeng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Zurich",
+                "place": [
+                  "Zurich, Switzerland"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhanghao",
+            "family": "Li",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Beijing Normal University",
+                "place": [
+                  "Zhuhai, People’s Republic of China"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              27
+            ]
+          ]
+        },
+        "container-title": [
+          "Information, Communication &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/1369118x.2025.2537803",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              27
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

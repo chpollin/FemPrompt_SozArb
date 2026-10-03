@@ -1,0 +1,435 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "XQM6WRU2",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs10826-024-02993-x",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/3704e74ad6a19621c04a.json",
+      "origin_artifact_sha256": "sha256:3bb2b1006e57ca9f2142c7755eaefad0c016768701d826ab5ca08a76e50fcbd4",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1007/s10826-024-02993-x",
+        "type": "journal-article",
+        "page": "282-297",
+        "title": [
+          "Exploring Machine Learning to Support Decision-Making for Placement Stabilization and Preservation in Child Welfare"
+        ],
+        "volume": "34",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2215-1830",
+            "authenticated-orcid": false,
+            "given": "Ka Ho Brian",
+            "family": "Chor",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhidi",
+            "family": "Luo",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kit T.",
+            "family": "Rodolfa",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Rayid",
+            "family": "Ghani",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              7
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Child and Family Studies"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s10826-024-02993-x",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1007/s10826-024-02993-x",
+      "locator": "message.author",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XQM6WRU2-crossref.json",
+      "origin_artifact_sha256": "sha256:f6a633f0b37cbf2e0885227efa30073de82d004b162513dc14697d809bbf2273",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1007/s10826-024-02993-x",
+        "type": "journal-article",
+        "page": "282-297",
+        "title": [
+          "Exploring Machine Learning to Support Decision-Making for Placement Stabilization and Preservation in Child Welfare"
+        ],
+        "volume": "34",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2215-1830",
+            "authenticated-orcid": false,
+            "given": "Ka Ho Brian",
+            "family": "Chor",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhidi",
+            "family": "Luo",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kit T.",
+            "family": "Rodolfa",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Rayid",
+            "family": "Ghani",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              7
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Child and Family Studies"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s10826-024-02993-x",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1007/s10826-024-02993-x",
+      "locator": "message.issued.date-parts",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XQM6WRU2-crossref.json",
+      "origin_artifact_sha256": "sha256:f6a633f0b37cbf2e0885227efa30073de82d004b162513dc14697d809bbf2273",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1007/s10826-024-02993-x",
+        "type": "journal-article",
+        "page": "282-297",
+        "title": [
+          "Exploring Machine Learning to Support Decision-Making for Placement Stabilization and Preservation in Child Welfare"
+        ],
+        "volume": "34",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2215-1830",
+            "authenticated-orcid": false,
+            "given": "Ka Ho Brian",
+            "family": "Chor",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhidi",
+            "family": "Luo",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kit T.",
+            "family": "Rodolfa",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Rayid",
+            "family": "Ghani",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              7
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Child and Family Studies"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s10826-024-02993-x",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.1007/s10826-024-02993-x",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/XQM6WRU2-crossref.json",
+      "origin_artifact_sha256": "sha256:f6a633f0b37cbf2e0885227efa30073de82d004b162513dc14697d809bbf2273",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1007/s10826-024-02993-x",
+        "type": "journal-article",
+        "page": "282-297",
+        "title": [
+          "Exploring Machine Learning to Support Decision-Making for Placement Stabilization and Preservation in Child Welfare"
+        ],
+        "volume": "34",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0003-2215-1830",
+            "authenticated-orcid": false,
+            "given": "Ka Ho Brian",
+            "family": "Chor",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhidi",
+            "family": "Luo",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kit T.",
+            "family": "Rodolfa",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Rayid",
+            "family": "Ghani",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              7
+            ]
+          ]
+        },
+        "container-title": [
+          "Journal of Child and Family Studies"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s10826-024-02993-x",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              1
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

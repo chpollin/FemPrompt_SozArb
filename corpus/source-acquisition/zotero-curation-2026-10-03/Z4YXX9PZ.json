@@ -1,0 +1,105 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "Z4YXX9PZ",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550%2Farxiv.2404.17218",
+      "locator": "keys contains Z4YXX9PZ, metadata.creators/types/url",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry-results.json",
+      "origin_artifact_sha256": "sha256:f261a17c9cee9fdc126f44b1c2d516760eef553ce21146a2d441d0cecb21596c",
+      "bibliographic_metadata": [
+        {
+          "doi": "10.48550/arxiv.2404.17218",
+          "creators": [
+            {
+              "name": "Kamruzzaman, Mahammed",
+              "nameType": "Personal",
+              "givenName": "Mahammed",
+              "familyName": "Kamruzzaman",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Kim, Gene Louis",
+              "nameType": "Personal",
+              "givenName": "Gene Louis",
+              "familyName": "Kim",
+              "affiliation": [],
+              "nameIdentifiers": []
+            }
+          ],
+          "titles": [
+            {
+              "title": "Prompting Techniques for Reducing Social Bias in LLMs through System 1 and System 2 Cognitive Processes"
+            }
+          ],
+          "publisher": "arXiv",
+          "publicationYear": 2024,
+          "dates": [
+            {
+              "date": "2024-04-26T07:46:29Z",
+              "dateType": "Submitted",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2024-04-29T00:23:32Z",
+              "dateType": "Updated",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2024-06-28T23:54:49Z",
+              "dateType": "Submitted",
+              "dateInformation": "v2"
+            },
+            {
+              "date": "2024-07-02T00:15:49Z",
+              "dateType": "Updated",
+              "dateInformation": "v2"
+            },
+            {
+              "date": "2024-09-23T02:20:13Z",
+              "dateType": "Submitted",
+              "dateInformation": "v3"
+            },
+            {
+              "date": "2024-09-24T01:20:50Z",
+              "dateType": "Updated",
+              "dateInformation": "v3"
+            },
+            {
+              "date": "2025-08-22T05:59:31Z",
+              "dateType": "Submitted",
+              "dateInformation": "v4"
+            },
+            {
+              "date": "2025-08-25T00:17:27Z",
+              "dateType": "Updated",
+              "dateInformation": "v4"
+            },
+            {
+              "date": "2024-04",
+              "dateType": "Available",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2024",
+              "dateType": "Issued"
+            }
+          ],
+          "types": {
+            "ris": "GEN",
+            "bibtex": "misc",
+            "citeproc": "article",
+            "schemaOrg": "CreativeWork",
+            "resourceType": "Article",
+            "resourceTypeGeneral": "Preprint"
+          },
+          "version": "4",
+          "url": "https://arxiv.org/abs/2404.17218",
+          "published": "2024"
+        }
+      ]
+    }
+  ]
+}

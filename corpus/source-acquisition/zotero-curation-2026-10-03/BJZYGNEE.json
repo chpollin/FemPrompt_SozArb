@@ -1,0 +1,84 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "BJZYGNEE",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1177%2F14614448221150776",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/1ac5c7b1987b204d5f70.json",
+      "origin_artifact_sha256": "sha256:80eefe8b455d577dd3427bada9edcd049feaac81dcf2741cad5fd364e631bf13",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "issue": "1",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1177/14614448221150776",
+        "type": "journal-article",
+        "page": "580-595",
+        "title": [
+          "Shaping feminist artificial intelligence"
+        ],
+        "volume": "26",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0001-7639-8180",
+            "authenticated-orcid": false,
+            "given": "Sophie",
+            "family": "Toupin",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Concordia University, Canada"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              17
+            ]
+          ]
+        },
+        "container-title": [
+          "New Media &amp; Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              17
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/14614448221150776",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              17
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

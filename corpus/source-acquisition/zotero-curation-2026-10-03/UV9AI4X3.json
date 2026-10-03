@@ -1,0 +1,140 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "UV9AI4X3",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1080%2F14680777.2025.2593317",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/da949a11d0e0872305d8.json",
+      "origin_artifact_sha256": "sha256:f962c9faf62945a2d0ff8ec8a7bfae68d7d7acc37dc8eb62e3e40936d1275f23",
+      "bibliographic_metadata": {
+        "publisher": "Informa UK Limited",
+        "DOI": "10.1080/14680777.2025.2593317",
+        "type": "journal-article",
+        "page": "1-26",
+        "title": [
+          "From salad bar feminism to denotative portraiture: How neoliberalism shapes feminism in AI-Generated visuals"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-4663-7344",
+            "authenticated-orcid": false,
+            "given": "Catherine",
+            "family": "Bouko",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Universiteit Gent",
+                "place": [
+                  "Gent, Belgium"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-0845-1757",
+            "authenticated-orcid": false,
+            "given": "Gabriele",
+            "family": "Colombo",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Politecnico di Milano",
+                "place": [
+                  "Milano, Italy"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3074-5372",
+            "authenticated-orcid": false,
+            "given": "Tiago",
+            "family": "Joseph",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Universiteit Gent",
+                "place": [
+                  "Gent, Belgium"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-0052-095X",
+            "authenticated-orcid": false,
+            "given": "Irene",
+            "family": "Cenni",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Universiteit Gent",
+                "place": [
+                  "Gent, Belgium"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              7
+            ]
+          ]
+        },
+        "container-title": [
+          "Feminist Media Studies"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              7
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1080/14680777.2025.2593317",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              12,
+              7
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "GP4JDSI8",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1145%2F3630106.3658543",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/df6701c78dd33fc8ff3d.json",
+      "origin_artifact_sha256": "sha256:48ca63e4a97150811948d8a20cb6aa2759c52b8d7b19f1987419db72a59f5cb8",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              3
+            ]
+          ]
+        },
+        "DOI": "10.1145/3630106.3658543",
+        "type": "proceedings-article",
+        "page": "100-112",
+        "title": [
+          "Data Feminism for AI"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-1511-0910",
+            "authenticated-orcid": false,
+            "given": "Lauren",
+            "family": "Klein",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Quantitative Theory &amp; Methods and English, Emory University, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-8673-1941",
+            "authenticated-orcid": false,
+            "given": "Catherine",
+            "family": "D'Ignazio",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Department of Urban Studies and Planning, MIT, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              5
+            ]
+          ]
+        },
+        "container-title": [
+          "The 2024 ACM Conference on Fairness Accountability and Transparency"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              3
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3630106.3658543",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              3
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

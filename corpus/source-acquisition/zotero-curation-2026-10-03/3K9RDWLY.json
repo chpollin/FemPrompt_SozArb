@@ -1,0 +1,74 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "3K9RDWLY",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.24251%2Fhicss.2023.021",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/3009d31716b036c6632b.json",
+      "origin_artifact_sha256": "sha256:0f73ea19e2fd45ec8337407805a4c30b1c50719c94e54068ac1bb520aa72e6d6",
+      "bibliographic_metadata": {
+        "publisher": "Hawaii International Conference on System Sciences",
+        "DOI": "10.24251/hicss.2023.021",
+        "type": "proceedings-article",
+        "title": [
+          "AI Literacy - Towards Measuring Human Competency in Artificial Intelligence"
+        ],
+        "author": [
+          {
+            "given": "Marc",
+            "family": "Pinski",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Alexander",
+            "family": "Benlian",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the Annual Hawaii International Conference on System Sciences",
+          "Proceedings of the 56th Hawaii International Conference on System Sciences"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.24251/hicss.2023.021",
+        "published": {
+          "date-parts": [
+            [
+              2023
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

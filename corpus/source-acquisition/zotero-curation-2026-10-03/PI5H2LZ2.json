@@ -1,0 +1,119 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "PI5H2LZ2",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1145%2F3630106.3658906",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/aeed6177b89ab3ae7c47.json",
+      "origin_artifact_sha256": "sha256:9607e08395dd43cd6470969134778c34ed7804a6fef9f5d1b50700677690230f",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              3
+            ]
+          ]
+        },
+        "DOI": "10.1145/3630106.3658906",
+        "type": "proceedings-article",
+        "page": "290-300",
+        "title": [
+          "Failing Our Youngest: On the Biases, Pitfalls, and Risks in a Decision Support Algorithm Used for Child Protection"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0009-0003-6724-7761",
+            "authenticated-orcid": false,
+            "given": "Therese",
+            "family": "Moreau",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "NEtwoRks, Data, and Society (NERDS), IT University of Copenhagen, Denmark"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7558-1028",
+            "authenticated-orcid": false,
+            "given": "Roberta",
+            "family": "Sinatra",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Center for Social Data Science (SODAS), University of Copenhagen, Denmark and NEtwoRks, Data, and Society (NERDS), IT University of Copenhagen, Denmark and ISI Foundation, Italy"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4490-3757",
+            "authenticated-orcid": false,
+            "given": "Vedran",
+            "family": "Sekara",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "NEtwoRks, Data, and Society (NERDS), IT University of Copenhagen, Denmark and Pioneer Centre for AI (P1), Denmark"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              5
+            ]
+          ]
+        },
+        "container-title": [
+          "The 2024 ACM Conference on Fairness Accountability and Transparency"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              3
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3630106.3658906",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              3
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

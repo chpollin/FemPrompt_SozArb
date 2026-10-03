@@ -1,0 +1,81 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "XW8NHCIE",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1609%2Faies.v7i1.31748",
+      "locator": "metadata",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/b5f441f72885ad97c6fc.json",
+      "origin_artifact_sha256": "sha256:34a1356e513be86b329bb3afda401c2f44ad8f37d21c6ba56310c2cf77dd87c1",
+      "bibliographic_metadata": {
+        "publisher": "Association for the Advancement of Artificial Intelligence (AAAI)",
+        "DOI": "10.1609/aies.v7i1.31748",
+        "type": "journal-article",
+        "page": "1578-1590",
+        "title": [
+          "Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval"
+        ],
+        "volume": "7",
+        "author": [
+          {
+            "given": "Kyra",
+            "family": "Wilson",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Aylin",
+            "family": "Caliskan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              16
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              16
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1609/aies.v7i1.31748",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              16
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "QZRHHAE2",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.3390%2Fsocsci8100281",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/ec56d86d0930cc250a03.json",
+      "origin_artifact_sha256": "sha256:42b2e0939db40fb206145b26ab0403b48327071cf48969468ac0ee1736ff5cba",
+      "bibliographic_metadata": {
+        "publisher": "MDPI AG",
+        "issue": "10",
+        "DOI": "10.3390/socsci8100281",
+        "type": "journal-article",
+        "page": "281",
+        "title": [
+          "Algorithmic Justice in Child Protection: Statistical Fairness, Social Justice and the Implications for Practice"
+        ],
+        "volume": "8",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-7217-6561",
+            "authenticated-orcid": false,
+            "given": "Emily",
+            "family": "Keddell",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Social and Community Work Programme, School of Social Science, University of Otago, Dunedin 9054, Aotearoa, New Zealand"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2019,
+              10,
+              8
+            ]
+          ]
+        },
+        "container-title": [
+          "Social Sciences"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2019,
+              10,
+              8
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3390/socsci8100281",
+        "published": {
+          "date-parts": [
+            [
+              2019,
+              10,
+              8
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

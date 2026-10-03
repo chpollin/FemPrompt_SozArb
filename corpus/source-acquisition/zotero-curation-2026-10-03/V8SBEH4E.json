@@ -1,0 +1,131 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "V8SBEH4E",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.2991%2F978-94-6239-618-0_20",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/d73f7e604c5c849a9387.json",
+      "origin_artifact_sha256": "sha256:9a3e3ba03e7fa9bee10cd7f8cf04cd84ad66301007d4af1038b5b153ce87de0f",
+      "bibliographic_metadata": {
+        "publisher": "Atlantis Press International BV",
+        "published-print": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "DOI": "10.2991/978-94-6239-618-0_20",
+        "type": "book-chapter",
+        "page": "262-275",
+        "title": [
+          "Algorithm beyond Neutrality: Feminist Approaches to Redefining Artificial Intelligence"
+        ],
+        "author": [
+          {
+            "given": "Manavi",
+            "family": "Shahi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Harleen",
+            "family": "Kaur",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Deepa",
+            "family": "Tyagi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Rati",
+            "family": "Sood",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Vipin",
+            "family": "Kumar",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "family": "Tikaram",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              15
+            ]
+          ]
+        },
+        "container-title": [
+          "Advances in Intelligent Systems Research",
+          "Proceedings of 3rd International Conference of Library &amp; Technology on Artificial Intelligence and Humanities in Library and Education 4.0 (AIHLE 2025)"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.2991/978-94-6239-618-0_20",
+        "published": {
+          "date-parts": [
+            [
+              2026
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,395 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "JGZDWMN3",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2501.10484",
+      "locator": "data.attributes.creators",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JGZDWMN3-datacite.json",
+      "origin_artifact_sha256": "sha256:a99c9f99af08c9f745e2eeabe2b04391f265939257da1b6f9c2f46b427ced691",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2501.10484",
+        "creators": [
+          {
+            "name": "Xu, Wentao",
+            "nameType": "Personal",
+            "givenName": "Wentao",
+            "familyName": "Xu",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Yan, Yile",
+            "nameType": "Personal",
+            "givenName": "Yile",
+            "familyName": "Yan",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Zhu, Yuqi",
+            "nameType": "Personal",
+            "givenName": "Yuqi",
+            "familyName": "Zhu",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "Bias in Decision-Making for AI's Ethical Dilemmas: A Comparative Study of ChatGPT and Claude"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-01-17T05:20:38Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-01-22T01:03:19Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-07-18T12:09:59Z",
+            "dateType": "Submitted",
+            "dateInformation": "v2"
+          },
+          {
+            "date": "2025-07-21T00:33:14Z",
+            "dateType": "Updated",
+            "dateInformation": "v2"
+          },
+          {
+            "date": "2025-09-08T15:16:05Z",
+            "dateType": "Submitted",
+            "dateInformation": "v3"
+          },
+          {
+            "date": "2025-09-09T01:25:00Z",
+            "dateType": "Updated",
+            "dateInformation": "v3"
+          },
+          {
+            "date": "2025-10-29T03:27:46Z",
+            "dateType": "Submitted",
+            "dateInformation": "v4"
+          },
+          {
+            "date": "2025-10-30T00:24:00Z",
+            "dateType": "Updated",
+            "dateInformation": "v4"
+          },
+          {
+            "date": "2025-10-30T17:48:05Z",
+            "dateType": "Submitted",
+            "dateInformation": "v5"
+          },
+          {
+            "date": "2025-11-03T01:02:38Z",
+            "dateType": "Updated",
+            "dateInformation": "v5"
+          },
+          {
+            "date": "2025-01",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "5",
+        "url": "https://arxiv.org/abs/2501.10484",
+        "published": "2025"
+      }
+    },
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2501.10484",
+      "locator": "data.attributes.doi",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JGZDWMN3-datacite.json",
+      "origin_artifact_sha256": "sha256:a99c9f99af08c9f745e2eeabe2b04391f265939257da1b6f9c2f46b427ced691",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2501.10484",
+        "creators": [
+          {
+            "name": "Xu, Wentao",
+            "nameType": "Personal",
+            "givenName": "Wentao",
+            "familyName": "Xu",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Yan, Yile",
+            "nameType": "Personal",
+            "givenName": "Yile",
+            "familyName": "Yan",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Zhu, Yuqi",
+            "nameType": "Personal",
+            "givenName": "Yuqi",
+            "familyName": "Zhu",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "Bias in Decision-Making for AI's Ethical Dilemmas: A Comparative Study of ChatGPT and Claude"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-01-17T05:20:38Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-01-22T01:03:19Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-07-18T12:09:59Z",
+            "dateType": "Submitted",
+            "dateInformation": "v2"
+          },
+          {
+            "date": "2025-07-21T00:33:14Z",
+            "dateType": "Updated",
+            "dateInformation": "v2"
+          },
+          {
+            "date": "2025-09-08T15:16:05Z",
+            "dateType": "Submitted",
+            "dateInformation": "v3"
+          },
+          {
+            "date": "2025-09-09T01:25:00Z",
+            "dateType": "Updated",
+            "dateInformation": "v3"
+          },
+          {
+            "date": "2025-10-29T03:27:46Z",
+            "dateType": "Submitted",
+            "dateInformation": "v4"
+          },
+          {
+            "date": "2025-10-30T00:24:00Z",
+            "dateType": "Updated",
+            "dateInformation": "v4"
+          },
+          {
+            "date": "2025-10-30T17:48:05Z",
+            "dateType": "Submitted",
+            "dateInformation": "v5"
+          },
+          {
+            "date": "2025-11-03T01:02:38Z",
+            "dateType": "Updated",
+            "dateInformation": "v5"
+          },
+          {
+            "date": "2025-01",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "5",
+        "url": "https://arxiv.org/abs/2501.10484",
+        "published": "2025"
+      }
+    },
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550/arxiv.2501.10484",
+      "locator": "data.attributes.publisher",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JGZDWMN3-datacite.json",
+      "origin_artifact_sha256": "sha256:a99c9f99af08c9f745e2eeabe2b04391f265939257da1b6f9c2f46b427ced691",
+      "bibliographic_metadata": {
+        "doi": "10.48550/arxiv.2501.10484",
+        "creators": [
+          {
+            "name": "Xu, Wentao",
+            "nameType": "Personal",
+            "givenName": "Wentao",
+            "familyName": "Xu",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Yan, Yile",
+            "nameType": "Personal",
+            "givenName": "Yile",
+            "familyName": "Yan",
+            "affiliation": [],
+            "nameIdentifiers": []
+          },
+          {
+            "name": "Zhu, Yuqi",
+            "nameType": "Personal",
+            "givenName": "Yuqi",
+            "familyName": "Zhu",
+            "affiliation": [],
+            "nameIdentifiers": []
+          }
+        ],
+        "titles": [
+          {
+            "title": "Bias in Decision-Making for AI's Ethical Dilemmas: A Comparative Study of ChatGPT and Claude"
+          }
+        ],
+        "publisher": "arXiv",
+        "publicationYear": 2025,
+        "dates": [
+          {
+            "date": "2025-01-17T05:20:38Z",
+            "dateType": "Submitted",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-01-22T01:03:19Z",
+            "dateType": "Updated",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025-07-18T12:09:59Z",
+            "dateType": "Submitted",
+            "dateInformation": "v2"
+          },
+          {
+            "date": "2025-07-21T00:33:14Z",
+            "dateType": "Updated",
+            "dateInformation": "v2"
+          },
+          {
+            "date": "2025-09-08T15:16:05Z",
+            "dateType": "Submitted",
+            "dateInformation": "v3"
+          },
+          {
+            "date": "2025-09-09T01:25:00Z",
+            "dateType": "Updated",
+            "dateInformation": "v3"
+          },
+          {
+            "date": "2025-10-29T03:27:46Z",
+            "dateType": "Submitted",
+            "dateInformation": "v4"
+          },
+          {
+            "date": "2025-10-30T00:24:00Z",
+            "dateType": "Updated",
+            "dateInformation": "v4"
+          },
+          {
+            "date": "2025-10-30T17:48:05Z",
+            "dateType": "Submitted",
+            "dateInformation": "v5"
+          },
+          {
+            "date": "2025-11-03T01:02:38Z",
+            "dateType": "Updated",
+            "dateInformation": "v5"
+          },
+          {
+            "date": "2025-01",
+            "dateType": "Available",
+            "dateInformation": "v1"
+          },
+          {
+            "date": "2025",
+            "dateType": "Issued"
+          }
+        ],
+        "types": {
+          "ris": "GEN",
+          "bibtex": "misc",
+          "citeproc": "article",
+          "schemaOrg": "CreativeWork",
+          "resourceType": "Article",
+          "resourceTypeGeneral": "Preprint"
+        },
+        "version": "5",
+        "url": "https://arxiv.org/abs/2501.10484",
+        "published": "2025"
+      }
+    },
+    {
+      "source_url": "https://arxiv.org/html/2501.10484v2",
+      "locator": "Byline lines 43-47",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/metadata-primary-web-evidence.json",
+      "origin_artifact_sha256": "sha256:67524e7bc00cd9189f52fcc206ae15c9c3da53d686ca4c5ba3799267f4a5bdbe",
+      "bibliographic_metadata": [
+        {
+          "source_url": "https://arxiv.org/html/2501.10484v2",
+          "finding": "Printed selected-v2 author order is Yile Yan, Yuqi Zhu, Wentao Xu, unlike repository deposit order.",
+          "locator": "Byline lines 43-47"
+        }
+      ]
+    },
+    {
+      "source_url": "https://arxiv.org/html/2501.10484v2",
+      "locator": "key=JGZDWMN3, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "Bias in Decision-Making for AI's Ethical Dilemmas: A Comparative Study of ChatGPT and Claude"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2501.10484"
+          ],
+          "citation_date": [
+            "2025/01/17"
+          ],
+          "citation_abstract": [
+            "Recent advances in Large Language Models (LLMs) have enabled human-like responses across various tasks, raising questions about their ethical decision-making capabilities and potential biases. This study investigates protected attributes in LLMs through systematic evaluation of their responses to ethical dilemmas. Using two prominent models - GPT-3.5 Turbo and Claude 3.5 Sonnet - we analyzed their decision-making patterns across multiple protected attributes including age, gender, race, appearance, and disability status. Through 11,200 experimental trials involving both single-factor and two-factor protected attribute combinations, we evaluated the models' ethical preferences, sensitivity, stability, and clustering of preferences. Our findings reveal significant protected attributeses in both models, with consistent preferences for certain features (e.g., \"good-looking\") and systematic neglect of others. Notably, while GPT-3.5 Turbo showed stronger preferences aligned with traditional power structures, Claude 3.5 Sonnet demonstrated more diverse protected attribute choices. We also found that ethical sensitivity significantly decreases in more complex scenarios involving multiple protected attributes. Additionally, linguistic referents heavily influence the models' ethical evaluations, as demonstrated by differing responses to racial descriptors (e.g., \"Yellow\" versus \"Asian\"). These findings highlight critical concerns about the potential impact of LLM biases in autonomous decision-making systems and emphasize the need for careful consideration of protected attributes in AI development. Our study contributes to the growing body of research on AI ethics by providing a systematic framework for evaluating protected attributes in LLMs' ethical decision-making capabilities."
+          ],
+          "citation_online_date": [
+            "2025/07/18"
+          ],
+          "citation_author": [
+            "Yan, Yile",
+            "Zhu, Yuqi",
+            "Xu, Wentao"
+          ],
+          "citation_arxiv_id": [
+            "2501.10484"
+          ]
+        }
+      ]
+    }
+  ]
+}

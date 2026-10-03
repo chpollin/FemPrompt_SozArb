@@ -1,0 +1,225 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "JC7X3MM7",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1145%2F3491102.3517439",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/907353548e6cd2e2334e.json",
+      "origin_artifact_sha256": "sha256:3bd384f2ab6c2b09dd62ab0403380a949d0aac7ab9cfd838ff23abdd5ab9f8ab",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              27
+            ]
+          ]
+        },
+        "DOI": "10.1145/3491102.3517439",
+        "type": "proceedings-article",
+        "page": "1-18",
+        "title": [
+          "Improving Human-AI Partnerships in Child Welfare: Understanding Worker Practices, Challenges, and Desires for Algorithmic Decision Support"
+        ],
+        "author": [
+          {
+            "given": "Anna",
+            "family": "Kawakami",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Human-Computer Interaction Institute, Carnegie Mellon University, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Venkatesh",
+            "family": "Sivaraman",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Human-Computer Interaction Institute, Carnegie Mellon University, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Hao-Fei",
+            "family": "Cheng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Human-Computer Interaction Institute, Carnegie Mellon University, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Logan",
+            "family": "Stapleton",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Computer Science, University of Minnesota, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Yanghuidi",
+            "family": "Cheng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Human-Computer Interaction Institute, Carnegie Mellon University, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Diana",
+            "family": "Qing",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of California, Berkeley, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Adam",
+            "family": "Perer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Human-Computer Interaction Institute, Carnegie Mellon University, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhiwei Steven",
+            "family": "Wu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "School of Computer Science, Carnegie Mellon University, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Haiyi",
+            "family": "Zhu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Human Computer Interaction Institute, Carnegie Mellon University, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Kenneth",
+            "family": "Holstein",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Human-Computer Interaction Institute, Carnegie Mellon University, United States"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              28
+            ]
+          ]
+        },
+        "container-title": [
+          "CHI Conference on Human Factors in Computing Systems"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              27
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3491102.3517439",
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              27
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

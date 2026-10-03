@@ -1,0 +1,131 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "9WIGR47Y",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1177%2F21582440241274842",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/cdb324e6feb9791a51db.json",
+      "origin_artifact_sha256": "sha256:9e15d7d35287a480f16ac0d4e0e1ac1d8cfee4f7aead4d36611dadc2b608c8a3",
+      "bibliographic_metadata": {
+        "publisher": "SAGE Publications",
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              7
+            ]
+          ]
+        },
+        "DOI": "10.1177/21582440241274842",
+        "type": "journal-article",
+        "title": [
+          "Ethical Issues Related to the Use of Technology in Social Work Practice. A Systematic Review"
+        ],
+        "volume": "14",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-9920-5203",
+            "authenticated-orcid": false,
+            "given": "Antonia",
+            "family": "Rodríguez-Martínez",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Jaén, Spain"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "María Teresa",
+            "family": "Amezcua Aguilar",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Jaén, Spain"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Javier",
+            "family": "Cortés Moreno",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Jaén, Spain"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3014-0496",
+            "authenticated-orcid": false,
+            "given": "Juan José",
+            "family": "Jiménez-Delgado",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Jaén, Spain"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              20
+            ]
+          ]
+        },
+        "container-title": [
+          "Sage Open"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              7
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1177/21582440241274842",
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              7
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

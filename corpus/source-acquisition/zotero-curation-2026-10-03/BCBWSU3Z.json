@@ -1,0 +1,87 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "BCBWSU3Z",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/abs/2507.21075v1",
+      "locator": "citation_meta.citation_date, citation_online_date; Submission history [v1]",
+      "origin_path": "corpus/source-acquisition/checklist-resolution-2026-09-05/debnath-arxiv-metadata.json",
+      "origin_artifact_sha256": "sha256:7f6d5cb01d26b6cd43ac7689b20d82f9f6a5b95a6a90b6a03d6eff574fd67303",
+      "bibliographic_metadata": {
+        "source_url": "https://arxiv.org/abs/2507.21075v1",
+        "citation_meta": {
+          "citation_title": [
+            "Can LLMs Reason About Trust?: A Pilot Study"
+          ],
+          "citation_author": [
+            "Debnath, Anushka",
+            "Cranefield, Stephen",
+            "Lorini, Emiliano",
+            "Savarimuthu, Bastin Tony Roy"
+          ],
+          "citation_date": [
+            "2025/06/11"
+          ],
+          "citation_online_date": [
+            "2025/06/11"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2507.21075"
+          ],
+          "citation_arxiv_id": [
+            "2507.21075"
+          ]
+        },
+        "submission_history": "[v1] Wed, 11 Jun 2025 09:38:21 UTC (1,980 KB)"
+      }
+    },
+    {
+      "source_url": "https://arxiv.org/abs/2507.21075",
+      "locator": "Submission history and Cite as, lines 8-26",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/metadata-primary-web-evidence.json",
+      "origin_artifact_sha256": "sha256:67524e7bc00cd9189f52fcc206ae15c9c3da53d686ca4c5ba3799267f4a5bdbe",
+      "bibliographic_metadata": [
+        {
+          "source_url": "https://arxiv.org/abs/2507.21075",
+          "finding": "Submission 11 June 2025 confirmed even though identifier starts 2507; DOI 10.48550/arXiv.2507.21075.",
+          "locator": "Submission history and Cite as, lines 8-26"
+        }
+      ]
+    },
+    {
+      "source_url": "https://arxiv.org/html/2507.21075v1",
+      "locator": "key=BCBWSU3Z, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "Can LLMs Reason About Trust?: A Pilot Study"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2507.21075"
+          ],
+          "citation_date": [
+            "2025/06/11"
+          ],
+          "citation_abstract": [
+            "In human society, trust is an essential component of social attitude that helps build and maintain long-term, healthy relationships which creates a strong foundation for cooperation, enabling individuals to work together effectively and achieve shared goals. As many human interactions occur through electronic means such as using mobile apps, the potential arises for AI systems to assist users in understanding the social state of their relationships. In this paper we investigate the ability of Large Language Models (LLMs) to reason about trust between two individuals in an environment which requires fostering trust relationships. We also assess whether LLMs are capable of inducing trust by role-playing one party in a trust based interaction and planning actions which can instil trust."
+          ],
+          "citation_online_date": [
+            "2025/06/11"
+          ],
+          "citation_author": [
+            "Debnath, Anushka",
+            "Cranefield, Stephen",
+            "Lorini, Emiliano",
+            "Savarimuthu, Bastin Tony Roy"
+          ],
+          "citation_arxiv_id": [
+            "2507.21075"
+          ]
+        }
+      ]
+    }
+  ]
+}

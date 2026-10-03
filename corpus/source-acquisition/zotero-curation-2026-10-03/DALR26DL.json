@@ -1,0 +1,155 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "DALR26DL",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1145%2F3769994.3770037",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/79ddb4606d0d106870da.json",
+      "origin_artifact_sha256": "sha256:fe66b789c292e39926dc9740d4816f3007e32451b078e2da9e349f83ba55964f",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              11
+            ]
+          ]
+        },
+        "DOI": "10.1145/3769994.3770037",
+        "type": "proceedings-article",
+        "page": "1-11",
+        "title": [
+          "\"Grillz on a hijabi\": Intersectional Identities in Fostering Critical AI Literacy"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-0549-0454",
+            "authenticated-orcid": false,
+            "given": "Jaemarie",
+            "family": "Solyst",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "University of Washington, Seattle, WA, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0006-0357-3834",
+            "authenticated-orcid": false,
+            "given": "Chloe",
+            "family": "Fong",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Washington, Seattle, WA, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0007-1440-1154",
+            "authenticated-orcid": false,
+            "given": "Faisal",
+            "family": "Nurdin",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Washington, Seattle, WA, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0009-0001-5429-7538",
+            "authenticated-orcid": false,
+            "given": "Rotem",
+            "family": "Landesman",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Washington, Seattle, WA, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-1359-7120",
+            "authenticated-orcid": false,
+            "given": "R. Benjamin",
+            "family": "Shapiro",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "University of Washington, Seattle, WA, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              10
+            ]
+          ]
+        },
+        "container-title": [
+          "Proceedings of the 25th Koli Calling International Conference on Computing Education Research"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              10
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3769994.3770037",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              11,
+              10
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

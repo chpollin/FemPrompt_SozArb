@@ -1,0 +1,137 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "XZ6Z8A9C",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1145%2F3593013.3593986",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/6d6b7853bac55bbb9870.json",
+      "origin_artifact_sha256": "sha256:0d4ff75c947db1ab4ad007460148894a1eb33ef64ef640b057bc8c2477869951",
+      "bibliographic_metadata": {
+        "publisher": "ACM",
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              12
+            ]
+          ]
+        },
+        "DOI": "10.1145/3593013.3593986",
+        "type": "proceedings-article",
+        "page": "172-182",
+        "title": [
+          "Trustworthy AI and the Logics of Intersectional Resistance"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-2554-1896",
+            "authenticated-orcid": false,
+            "given": "Bran",
+            "family": "Knowles",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Lancaster University, United Kingdom"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4952-7658",
+            "authenticated-orcid": false,
+            "given": "Jasmine",
+            "family": "Fledderjohann",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Lancaster University, United Kingdom"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8489-2170",
+            "authenticated-orcid": false,
+            "given": "John T.",
+            "family": "Richards",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "TJ Watson Research Center, IBM, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-7376-5536",
+            "authenticated-orcid": false,
+            "given": "Kush R.",
+            "family": "Varshney",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "TJ Watson Research Center, IBM, USA"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              12
+            ]
+          ]
+        },
+        "container-title": [
+          "2023 ACM Conference on Fairness Accountability and Transparency"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              12
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1145/3593013.3593986",
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              6,
+              12
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

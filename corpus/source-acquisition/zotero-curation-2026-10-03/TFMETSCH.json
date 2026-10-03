@@ -1,0 +1,46 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "TFMETSCH",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/71c3451f6cd6a4f82bb822db25cea4fd-Abstract-Conference.html",
+      "locator": "key=TFMETSCH, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_pdf_url": [
+            "https://proceedings.iclr.cc/paper_files/paper/2026/file/71c3451f6cd6a4f82bb822db25cea4fd-Paper-Conference.pdf"
+          ],
+          "citation_title": [
+            "BiasFreeBench: a Benchmark for Mitigating Bias in Large Language Model Responses"
+          ],
+          "citation_lastpage": [
+            "69595"
+          ],
+          "citation_firstpage": [
+            "69565"
+          ],
+          "citation_publication_date": [
+            "2026-04-20"
+          ],
+          "citation_journal_title": [
+            "International Conference on Learning Representations"
+          ],
+          "citation_volume": [
+            "2026"
+          ],
+          "citation_author": [
+            "Xu, Xin",
+            "He, Xunzhi",
+            "Zhi, Churan",
+            "Chen, Ruizhe",
+            "McAuley, Julian ",
+            "He, Zexue"
+          ]
+        }
+      ]
+    }
+  ]
+}

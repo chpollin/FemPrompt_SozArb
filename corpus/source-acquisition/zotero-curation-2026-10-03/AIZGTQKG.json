@@ -1,0 +1,76 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "AIZGTQKG",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.70389%2Fpjai.1000088",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/6a2128050ab879640182.json",
+      "origin_artifact_sha256": "sha256:f55a3a284bf1b92d529738057c6415d9153b7cb6b7fb2acba49cdb6c11d0d49d",
+      "bibliographic_metadata": {
+        "publisher": "Premier Science",
+        "DOI": "10.70389/pjai.1000088",
+        "type": "journal-article",
+        "title": [
+          "Gender Bias in Artificial Intelligence: Empowering Women Through Digital Literacy"
+        ],
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-4739-4014",
+            "authenticated-orcid": true,
+            "given": "Syed Sibghatullah",
+            "family": "Shah",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Quaid-i-Azam University",
+                "place": [
+                  "Islamabad"
+                ]
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              8
+            ]
+          ]
+        },
+        "container-title": [
+          "Premier Journal of Artificial Intelligence"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              8
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.70389/pjai.1000088",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              8
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

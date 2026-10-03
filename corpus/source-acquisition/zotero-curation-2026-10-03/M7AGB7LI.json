@@ -1,0 +1,176 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "M7AGB7LI",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=7888&context=open_access_etds",
+      "locator": "line 30",
+      "origin_path": "generated/markdown_clean/Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md",
+      "origin_artifact_sha256": "sha256:c8dde56e1eb9474ce7c019a16121f68658ab0ef28febec5ea8ff73a4744a34bf",
+      "bibliographic_metadata": {
+        "existing_source_path": "generated/markdown_clean/Salecha_2025_Model_explanations_for_gender_and_ethnicity_bias.md",
+        "existing_sha256": "sha256:c8dde56e1eb9474ce7c019a16121f68658ab0ef28febec5ea8ff73a4744a34bf",
+        "locator": "line 30",
+        "quote": "Dimgba, Martha Otisi, \"Model Explanations for Gender and Ethnicity Bias Mitigation in AI-Generated Narratives\" (2025)."
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.15760/etd.3923",
+      "locator": "message.DOI",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/M7AGB7LI-crossref.json",
+      "origin_artifact_sha256": "sha256:efd75a562c8b0c30adae9208bfa6c801caa4b90e1b60d5a57f9b67900600889a",
+      "bibliographic_metadata": {
+        "publisher": "Portland State University Library",
+        "DOI": "10.15760/etd.3923",
+        "type": "dissertation",
+        "title": [
+          "Model Explanations for Gender and Ethnicity Bias Mitigation in AI-Generated Narratives"
+        ],
+        "author": [
+          {
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Martha",
+            "family": "Dimgba",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "container-title": [],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              null
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.15760/etd.3923"
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.15760/etd.3923",
+      "locator": "message.publisher",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/M7AGB7LI-crossref.json",
+      "origin_artifact_sha256": "sha256:efd75a562c8b0c30adae9208bfa6c801caa4b90e1b60d5a57f9b67900600889a",
+      "bibliographic_metadata": {
+        "publisher": "Portland State University Library",
+        "DOI": "10.15760/etd.3923",
+        "type": "dissertation",
+        "title": [
+          "Model Explanations for Gender and Ethnicity Bias Mitigation in AI-Generated Narratives"
+        ],
+        "author": [
+          {
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Martha",
+            "family": "Dimgba",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "container-title": [],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              null
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.15760/etd.3923"
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.15760/etd.3923",
+      "locator": "message.resource.primary.URL",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/M7AGB7LI-crossref.json",
+      "origin_artifact_sha256": "sha256:efd75a562c8b0c30adae9208bfa6c801caa4b90e1b60d5a57f9b67900600889a",
+      "bibliographic_metadata": {
+        "publisher": "Portland State University Library",
+        "DOI": "10.15760/etd.3923",
+        "type": "dissertation",
+        "title": [
+          "Model Explanations for Gender and Ethnicity Bias Mitigation in AI-Generated Narratives"
+        ],
+        "author": [
+          {
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Martha",
+            "family": "Dimgba",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "container-title": [],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              null
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.15760/etd.3923"
+      }
+    },
+    {
+      "source_url": "https://pdxscholar.library.pdx.edu/open_access_etds/6800/",
+      "locator": "Title, byline, document type and DOI",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/metadata-primary-web-evidence.json",
+      "origin_artifact_sha256": "sha256:67524e7bc00cd9189f52fcc206ae15c9c3da53d686ca4c5ba3799267f4a5bdbe",
+      "bibliographic_metadata": [
+        {
+          "source_url": "https://pdxscholar.library.pdx.edu/open_access_etds/6800/",
+          "finding": "Martha Otisi Dimgba, thesis, DOI 10.15760/etd.3923; official landing URL confirmed.",
+          "locator": "Title, byline, document type and DOI"
+        }
+      ]
+    }
+  ]
+}

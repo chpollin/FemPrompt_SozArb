@@ -1,0 +1,133 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "QY6P4RGQ",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550%2Farxiv.2110.08193",
+      "locator": "keys contains QY6P4RGQ, metadata.creators/types/url",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry-results.json",
+      "origin_artifact_sha256": "sha256:f261a17c9cee9fdc126f44b1c2d516760eef553ce21146a2d441d0cecb21596c",
+      "bibliographic_metadata": [
+        {
+          "doi": "10.48550/arxiv.2110.08193",
+          "creators": [
+            {
+              "name": "Parrish, Alicia",
+              "nameType": "Personal",
+              "givenName": "Alicia",
+              "familyName": "Parrish",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Chen, Angelica",
+              "nameType": "Personal",
+              "givenName": "Angelica",
+              "familyName": "Chen",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Nangia, Nikita",
+              "nameType": "Personal",
+              "givenName": "Nikita",
+              "familyName": "Nangia",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Padmakumar, Vishakh",
+              "nameType": "Personal",
+              "givenName": "Vishakh",
+              "familyName": "Padmakumar",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Phang, Jason",
+              "nameType": "Personal",
+              "givenName": "Jason",
+              "familyName": "Phang",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Thompson, Jana",
+              "nameType": "Personal",
+              "givenName": "Jana",
+              "familyName": "Thompson",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Htut, Phu Mon",
+              "nameType": "Personal",
+              "givenName": "Phu Mon",
+              "familyName": "Htut",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Bowman, Samuel R.",
+              "nameType": "Personal",
+              "givenName": "Samuel R.",
+              "familyName": "Bowman",
+              "affiliation": [],
+              "nameIdentifiers": []
+            }
+          ],
+          "titles": [
+            {
+              "title": "BBQ: A Hand-Built Bias Benchmark for Question Answering"
+            }
+          ],
+          "publisher": "arXiv",
+          "publicationYear": 2021,
+          "dates": [
+            {
+              "date": "2021-10-15T16:43:46Z",
+              "dateType": "Submitted",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2021-10-18T00:26:13Z",
+              "dateType": "Updated",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2022-03-16T01:35:45Z",
+              "dateType": "Submitted",
+              "dateInformation": "v2"
+            },
+            {
+              "date": "2022-03-17T00:12:42Z",
+              "dateType": "Updated",
+              "dateInformation": "v2"
+            },
+            {
+              "date": "2021-10",
+              "dateType": "Available",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2021",
+              "dateType": "Issued"
+            }
+          ],
+          "types": {
+            "ris": "GEN",
+            "bibtex": "misc",
+            "citeproc": "article",
+            "schemaOrg": "CreativeWork",
+            "resourceType": "Article",
+            "resourceTypeGeneral": "Preprint"
+          },
+          "version": "2",
+          "url": "https://arxiv.org/abs/2110.08193",
+          "published": "2021"
+        }
+      ]
+    }
+  ]
+}

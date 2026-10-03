@@ -1,0 +1,119 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "5ERYSQCK",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.datacite.org/dois/10.48550%2Farxiv.2502.21028",
+      "locator": "keys contains 5ERYSQCK, metadata.creators/types/url",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry-results.json",
+      "origin_artifact_sha256": "sha256:f261a17c9cee9fdc126f44b1c2d516760eef553ce21146a2d441d0cecb21596c",
+      "bibliographic_metadata": [
+        {
+          "doi": "10.48550/arxiv.2502.21028",
+          "creators": [
+            {
+              "name": "De Duro, Edoardo Sebastiano",
+              "nameType": "Personal",
+              "givenName": "Edoardo Sebastiano",
+              "familyName": "De Duro",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Veltri, Giuseppe Alessandro",
+              "nameType": "Personal",
+              "givenName": "Giuseppe Alessandro",
+              "familyName": "Veltri",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Golino, Hudson",
+              "nameType": "Personal",
+              "givenName": "Hudson",
+              "familyName": "Golino",
+              "affiliation": [],
+              "nameIdentifiers": []
+            },
+            {
+              "name": "Stella, Massimo",
+              "nameType": "Personal",
+              "givenName": "Massimo",
+              "familyName": "Stella",
+              "affiliation": [],
+              "nameIdentifiers": []
+            }
+          ],
+          "titles": [
+            {
+              "title": "Measuring and identifying factors of individuals' trust in Large Language Models"
+            }
+          ],
+          "publisher": "arXiv",
+          "publicationYear": 2025,
+          "dates": [
+            {
+              "date": "2025-02-28T13:16:34Z",
+              "dateType": "Submitted",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2025-03-03T01:49:56Z",
+              "dateType": "Updated",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2025-03-05T15:52:43Z",
+              "dateType": "Submitted",
+              "dateInformation": "v2"
+            },
+            {
+              "date": "2025-03-06T01:56:40Z",
+              "dateType": "Updated",
+              "dateInformation": "v2"
+            },
+            {
+              "date": "2025-02",
+              "dateType": "Available",
+              "dateInformation": "v1"
+            },
+            {
+              "date": "2025",
+              "dateType": "Issued"
+            }
+          ],
+          "types": {
+            "ris": "GEN",
+            "bibtex": "misc",
+            "citeproc": "article",
+            "schemaOrg": "CreativeWork",
+            "resourceType": "Article",
+            "resourceTypeGeneral": "Preprint"
+          },
+          "version": "2",
+          "url": "https://arxiv.org/abs/2502.21028",
+          "published": "2025"
+        }
+      ]
+    },
+    {
+      "source_url": "https://arxiv.org/abs/2502.21028v1",
+      "locator": "Byline and submission history",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/trust-v1-primary-evidence.json",
+      "origin_artifact_sha256": "sha256:329bccbfa177c228cf1f4d4a3be2812e4889abf8ad98fb6e5c13a79fb89bd6b7",
+      "bibliographic_metadata": {
+        "locator": "Byline line 11 and submission history line 28",
+        "quote": "Edoardo Sebastiano De Duro, Giuseppe Alessandro Veltri, Hudson Golino, Massimo Stella",
+        "citation_title": "Measuring and identifying factors of individuals' trust in Large Language Models",
+        "source_url": "https://arxiv.org/abs/2502.21028v1",
+        "authors": [
+          "Edoardo Sebastiano De Duro",
+          "Giuseppe Alessandro Veltri",
+          "Hudson Golino",
+          "Massimo Stella"
+        ]
+      }
+    }
+  ]
+}

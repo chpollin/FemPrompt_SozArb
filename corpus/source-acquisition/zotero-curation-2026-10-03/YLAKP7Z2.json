@@ -1,0 +1,122 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "YLAKP7Z2",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.1007%2Fs00146-025-02207-y",
+      "locator": "metadata.title, DOI, author, container-title, volume, issue, page",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/registry/020026b1798a53952101.json",
+      "origin_artifact_sha256": "sha256:b036846cfb75a9f020485b9280f771953355ecce07fab831161d3dea55f226c0",
+      "bibliographic_metadata": {
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "6",
+        "published-print": {
+          "date-parts": [
+            [
+              2025,
+              8
+            ]
+          ]
+        },
+        "DOI": "10.1007/s00146-025-02207-y",
+        "type": "journal-article",
+        "page": "4341-4362",
+        "title": [
+          "Intersectional analysis of visual generative AI: the case of stable diffusion"
+        ],
+        "volume": "40",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-0028-9030",
+            "authenticated-orcid": false,
+            "given": "Petra",
+            "family": "Jääskeläinen",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-0549-2510",
+            "authenticated-orcid": false,
+            "given": "Nickhil Kumar",
+            "family": "Sharma",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5014-6356",
+            "authenticated-orcid": false,
+            "given": "Helen",
+            "family": "Pallett",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7794-3806",
+            "authenticated-orcid": false,
+            "given": "Cecilia",
+            "family": "Åsberg",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              17
+            ]
+          ]
+        },
+        "container-title": [
+          "AI &amp; SOCIETY"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              17
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.1007/s00146-025-02207-y",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              3,
+              17
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

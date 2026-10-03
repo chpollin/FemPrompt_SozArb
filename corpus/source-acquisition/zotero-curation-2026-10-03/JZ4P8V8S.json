@@ -1,0 +1,312 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "JZ4P8V8S",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://api.crossref.org/works/10.3389/fcomm.2025.1610111",
+      "locator": "message.author",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JZ4P8V8S-crossref-file.json",
+      "origin_artifact_sha256": "sha256:4fa4a664cca02603652c04b0baf623fb09a61da6c3690c9dc7057464099f9174",
+      "bibliographic_metadata": {
+        "publisher": "Frontiers Media SA",
+        "DOI": "10.3389/fcomm.2025.1610111",
+        "type": "journal-article",
+        "title": [
+          "Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption"
+        ],
+        "volume": "10",
+        "author": [
+          {
+            "given": "Maarit",
+            "family": "Jaakkola",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        },
+        "container-title": [
+          "Frontiers in Communication"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3389/fcomm.2025.1610111",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.3389/fcomm.2025.1610111",
+      "locator": "message.issued.date-parts",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JZ4P8V8S-crossref-file.json",
+      "origin_artifact_sha256": "sha256:4fa4a664cca02603652c04b0baf623fb09a61da6c3690c9dc7057464099f9174",
+      "bibliographic_metadata": {
+        "publisher": "Frontiers Media SA",
+        "DOI": "10.3389/fcomm.2025.1610111",
+        "type": "journal-article",
+        "title": [
+          "Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption"
+        ],
+        "volume": "10",
+        "author": [
+          {
+            "given": "Maarit",
+            "family": "Jaakkola",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        },
+        "container-title": [
+          "Frontiers in Communication"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3389/fcomm.2025.1610111",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.3389/fcomm.2025.1610111",
+      "locator": "message.DOI",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JZ4P8V8S-crossref-file.json",
+      "origin_artifact_sha256": "sha256:4fa4a664cca02603652c04b0baf623fb09a61da6c3690c9dc7057464099f9174",
+      "bibliographic_metadata": {
+        "publisher": "Frontiers Media SA",
+        "DOI": "10.3389/fcomm.2025.1610111",
+        "type": "journal-article",
+        "title": [
+          "Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption"
+        ],
+        "volume": "10",
+        "author": [
+          {
+            "given": "Maarit",
+            "family": "Jaakkola",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        },
+        "container-title": [
+          "Frontiers in Communication"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3389/fcomm.2025.1610111",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.3389/fcomm.2025.1610111",
+      "locator": "message.resource.primary.URL",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JZ4P8V8S-crossref-file.json",
+      "origin_artifact_sha256": "sha256:4fa4a664cca02603652c04b0baf623fb09a61da6c3690c9dc7057464099f9174",
+      "bibliographic_metadata": {
+        "publisher": "Frontiers Media SA",
+        "DOI": "10.3389/fcomm.2025.1610111",
+        "type": "journal-article",
+        "title": [
+          "Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption"
+        ],
+        "volume": "10",
+        "author": [
+          {
+            "given": "Maarit",
+            "family": "Jaakkola",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        },
+        "container-title": [
+          "Frontiers in Communication"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3389/fcomm.2025.1610111",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_url": "https://api.crossref.org/works/10.3389/fcomm.2025.1610111",
+      "locator": "message.container-title[0]",
+      "origin_path": "corpus/source-acquisition/metadata-resolution-2026-10-01/JZ4P8V8S-crossref-file.json",
+      "origin_artifact_sha256": "sha256:4fa4a664cca02603652c04b0baf623fb09a61da6c3690c9dc7057464099f9174",
+      "bibliographic_metadata": {
+        "publisher": "Frontiers Media SA",
+        "DOI": "10.3389/fcomm.2025.1610111",
+        "type": "journal-article",
+        "title": [
+          "Operationalizing positive-constructive pedagogy to artificial intelligence: the 3E model for scaffolding AI technology adoption"
+        ],
+        "volume": "10",
+        "author": [
+          {
+            "given": "Maarit",
+            "family": "Jaakkola",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        },
+        "container-title": [
+          "Frontiers in Communication"
+        ],
+        "subtitle": [],
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        },
+        "URL": "https://doi.org/10.3389/fcomm.2025.1610111",
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              7,
+              10
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}

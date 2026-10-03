@@ -22,11 +22,11 @@
     "corpus/deep-research/round2/contextual-update-2026-08-24/lane-b-feminist-social-work.json": "sha256:382f1facb1e9ceda8c42de6678dc249f978e10d58b580ee5df08705f07ff313f",
     "corpus/deep-research/round2/contextual-update-2026-08-24/lane-c-prompt-bias.json": "sha256:a05971cb18749bb74ab7156c94e0ea65694fea6302d4078b80a410bf7eaa5732",
     "corpus/deep-research/round2/targeted-followup-2026-09-05.json": "sha256:0e763accb88cd32962b7f5a1f571407c961b6a2811349e8a3f840d65a81f13ea",
-    "corpus/source_tool_mapping.json": "sha256:9feb96ce613a778cf76ac43f0b5dcd302170e0a8e5d8331bf3052cd0d5737c76",
+    "corpus/source_tool_mapping.json": "sha256:aff0d170441df5d44b1d966ab2c5ea008b0c7f0b9bfa2c066343316783afb51d",
     "corpus/zotero_export.json": "sha256:a6bddc7f5da07b5d4b6a9c67ccc861658cec4eeff317c32b075068117a551b68",
-    "corpus/zotero_sync.json": "sha256:a68c1242fa39cb279c830e374d5ec07d174dad2763e8773cbc2db6b8e07d272b",
-    "docs/data/research_vault_v2.json": "sha256:f29da32b20c1b4f4250d7371097489e45de0a972535f0753c53e010f017efe94",
-    "generated/completion/completion-package.json": "sha256:8b28a70ce76eff79709c750f550def76641aff19231217d8a93e55e7e6c709af",
+    "corpus/zotero_sync.json": "sha256:00946b06da449b44034064f83d832ba10403fb92a03519e719b6f8fa62842e0c",
+    "docs/data/research_vault_v2.json": "sha256:14307a8f236a9095cacdbf025f792dbe65a8ad56765a64486f17cc6a29e2cd27",
+    "generated/completion/completion-package.json": "sha256:179f40faedb8f172fb19b3ec765854ebb74926d2e85530493b6c1967823e6098",
     "generated/contextual-update-2026-08-24-intake-package.json": "sha256:b7266d89cd632346c67d0e4f7b09a574edfd11888a61c29731785c2c05e31a48",
     "generated/round2-intake-package.json": "sha256:b83bb42daff38d23ce3d7981797d92aabc15caf415e600c5558f03e4ef465d1a"
   },
@@ -746,9 +746,9 @@
       }
     },
     "fulltext_availability_records": {
-      "fulltext_ready": 77,
+      "fulltext_ready": 73,
       "identity_unresolved": 37,
-      "linked": 285,
+      "linked": 289,
       "source_missing": 64
     }
   },

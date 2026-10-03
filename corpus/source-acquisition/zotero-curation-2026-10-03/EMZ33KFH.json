@@ -1,0 +1,40 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "EMZ33KFH",
+  "reviewed_at": "2026-10-03T07:17:51.070037+00:00",
+  "sources": [
+    {
+      "source_url": "https://arxiv.org/abs/2507.15585",
+      "locator": "key=EMZ33KFH, metadata.citation_*",
+      "origin_path": "generated/zotero-sync/2026-10-03-curation/source-pages-results.json",
+      "origin_artifact_sha256": "sha256:747c6a1005840b72799d90695ebb6e87bacdf8d55c0ec0b1bf0f78e49057641d",
+      "bibliographic_metadata": [
+        {
+          "citation_title": [
+            "Unequal Voices: How LLMs Construct Constrained Queer Narratives"
+          ],
+          "citation_pdf_url": [
+            "https://arxiv.org/pdf/2507.15585"
+          ],
+          "citation_date": [
+            "2025/07/21"
+          ],
+          "citation_abstract": [
+            "One way social groups are marginalized in discourse is that the narratives told about them often default to a narrow, stereotyped range of topics. In contrast, default groups are allowed the full complexity of human existence. We describe the constrained representations of queer people in LLM generations in terms of harmful representations, narrow representations, and discursive othering and formulate hypotheses to test for these phenomena. Our results show that LLMs are significantly limited in their portrayals of queer personas."
+          ],
+          "citation_online_date": [
+            "2025/07/21"
+          ],
+          "citation_author": [
+            "Ghosal, Atreya",
+            "Gupta, Ashim",
+            "Srikumar, Vivek"
+          ],
+          "citation_arxiv_id": [
+            "2507.15585"
+          ]
+        }
+      ]
+    }
+  ]
+}
