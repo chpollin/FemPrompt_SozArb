@@ -3,211 +3,129 @@ type: chapter
 stage: draft
 status: grounded
 checked:
-  validation: '2026-10-02'
-assertions: []
+  validation: '2026-10-17'
+assertions:
+  - "[[30_assertions/binary-gender-benchmark-defines-bias-through-task-performance]]"
+  - "[[30_assertions/intersectional-ai-framing-connects-gender-to-power]]"
 posits: 5
-research-questions:
-  - SQ4
+research-questions: [SQ4]
 created: '2026-10-02'
-updated: '2026-10-02'
+updated: '2026-10-17'
 ---
 
 # Conceptual grounding of gender and bias (SQ4)
 
-SQ4 asks whether the literature defines gender and bias, which understanding of gender underlies it and on which theories it rests ([[project#Research questions]]). The question is answerable only from full texts, and codebook 1.4 gives it the four fields `AN_Gender_Definition`, `AN_Bias_Definition`, `AN_Gender_Understanding` and `AN_Theory_Reference` ([[update-protocol#Analysis coding]]). No Assertion with the research question SQ4 exists yet. This draft therefore rests only on the coded fields and on the located definition passages and theory references that the AI Agent Review of the coding runs of 2 October 2026 retained. All of these codings have the lifecycle state `ai-agent-reviewed`, and none has been verified by a domain expert. The chapter itself has the status `grounded`, which records a passed schema check and no review. A cell of a cross-tabulation counts Works in which two codes occur together and states no relation between them.
+The current coded subset more often records an explicit definition of bias than of gender. Its conceptual approaches include a binary operationalisation of bias in a word-counting benchmark and an intersectional account of identity, power and AI inequalities. The comparison is provisional. The mapping describes eligible agent coding, while the qualitative comparison below rests on two complete source texts read for this revision and linked through new, unreviewed Assertions.
 
-## Coverage on 2 October 2026
+SQ4 asks whether gender and bias are defined, how gender is understood and which theories frame the literature ([research questions](../../../knowledge/project.md#research-questions)). All four components are addressed below. This is an interim answer to the whole sub-question, not a complete qualitative synthesis of every eligible Work. No source selection, screening decision, canonical identity or verification state was changed.
 
-The SQ4 fields exist only in annotations coded under codebook 1.4 or 1.4.1. An annotation coded under 1.3 derives the state `not_collected`, which says nothing about the Work. The SQ4 denominator is therefore the set of included Works coded under codebook 1.4.1.
+## Coverage snapshot of 17 October 2026
 
-- The completion package records 154 Works with a recorded Include. Of these, 85 carry all four SQ4 fields, all coded under codebook 1.4.1 in the runs `codebook-v141-includes-*-20261002` (`generated/completion/field-states.csv`, track `all`, and `generated/completion/completion-package.json`, `works[].analysis_codebook_versions`).
-- 19 included Works are `not_collected` because their analysis coding dates from codebook 1.3 and the partial recode of these Works is still open ([[plan#Analysis tool follow-ups]]). All 19 have a full text in the reading layer. They are listed under [Works not collected](#works-not-collected).
-- 25 included Works carry no analysis coding because the agent tracks derived Unclear or Exclude against the human Include (`human_agent_decision_divergence`). They wait for a domain-expert decision ([[update-protocol#Coding run of 2 October 2026]]).
-- 22 included Works are uncoded because no full text of the preferred Version is in the reading layer (`docs/data/fulltext/`), so the run did not assign them.
-- 1 Work is under an integrity hold and 2 carry a stale source review (`generated/completion/field-states.csv`).
-- Every cross-tabulation below counts 85 Works coded on both fields and 69 included Works open (`generated/completion/sq-association-tables.csv`, matrix `AN_Gender_Understanding x AN_Theory_Reference`, and own computation over the same records).
-- All 85 codings have the lifecycle state `ai-agent-reviewed` and the decision authority of the human screening (`legacy_human`), and none carries an accepted AI correction or a domain-expert verification (`generated/completion/sq-analysis-tables.csv`, column `authority_breakdown`).
+The completion package was reproduced from the inspected repository state after rebuilding the ignored reading layer. Its SQ4 tables and field states are the quantitative sources. Counts refer to registered Works, which still include unresolved duplicates.
 
-Two pairs of these Works are bound to byte-identical full texts. "Data Feminism for AI" stands as Klein et al. (2024) and as D'Ignazio et al. (2024), and "Intersectional analysis of visual generative AI" stands as Sharma et al. (2024) and Jääskeläinen et al. (2025), where the full text of both names Jääskeläinen, Sharma, Pallett and Åsberg as authors (`docs/data/fulltext/HLBXNWAZ.md` and `YLAKP7Z2.md`, line 5). Both pairs are coded identically on all four fields and inflate the counts of the critical understandings below. The counts state Works as registered, and the theory table adds the number of distinct texts.
-
-## Answer in brief
-
-The coded subset allows four statements. None of them describes the included corpus, for the reasons given under [Not determinable and absent](#not-determinable-and-absent).
-
-1. Bias is defined more often than gender. 38 of 85 coded Works define bias explicitly and 44 only implicitly, whereas 12 define gender explicitly, 33 only implicitly and 9 treat gender without a recognisable understanding. 31 coded Works do not treat gender as an object at all.
-2. An explicit definition of gender and a binary categorical understanding do not occur together in any coded Work. All 21 Works coded `Binary_Categorical` define gender only implicitly, and all 12 explicit definitions come with a social-constructivist, non-binary inclusive or intersectional understanding.
-3. Of the 54 coded Works that treat gender, 30 carry at least one of the values `Social_Construct`, `Non_Binary_Inclusive` and `Intersectional`, and 15 carry `Binary_Categorical` alone. The critical understandings concentrate in conceptual, theoretical and review Works with feminist theory references, while the binary understanding is the most frequent code among experimental Works. That the two clusters reflect different research traditions is an inference of this draft.
-4. 50 of 85 coded Works frame gender or bias with a named theory. Intersectionality is by far the most frequently named frame, ahead of feminist science and technology studies, other named feminist frames and justice frames, and 29 of the 50 Works name at least one frame labelled feminist, intersectional or queer. The other theory references come from anti-discrimination law, formal fairness definitions, theories of justice and power, cognitive psychology and technology acceptance.
-
-## Definitions of gender and understanding of gender
-
-The definition field has one value per Work. The understanding field allows several values per Work, so column sums exceed the denominator.
-
-| `AN_Gender_Definition` | Works |
+| Population or field state | Works |
 |---|---:|
-| Explicit | 12 |
-| Implicit_Only | 33 |
-| Absent | 9 |
-| Not_Applicable | 31 |
+| Recorded Include denominator | 153 |
+| Coded on all four SQ4 fields | 100 |
+| Human and agent decision conflict | 25 |
+| Missing eligible coding | 22 |
+| Integrity or source hold | 2 |
+| Stale source review | 2 |
+| Not collected under the active older codebook | 2 |
+| Total unresolved for SQ4 | 53 |
 
-| `AN_Gender_Understanding` | Works |
+These are the `all` rows for the SQ4 fields in [field-states.csv](../../../generated/completion/field-states.csv). The identical coded Work-ID sets were compared across all four fields. A recorded Include is distinct from permission to use its analysis. No unresolved record is counted as having no gender definition or no theory.
+
+The earlier draft described the pre-recode state with 85 coded Works and 19 not-collected Works. The current files supersede that description. The remaining not-collected Works are *Towards Substantive Equality in Artificial Intelligence* (`XIYX5HJS`, `DWS4KXBW`) and *Gender und KI-Anwendungen* (`BDI6XU5A`, `JFDBPUBN`). Their older coding remains eligible for fields it actually collected. The SQ4 fields remain unavailable pending exact-Version reconciliation and recoding ([plan](../../../knowledge/plan.md#analysis-tool-follow-ups)).
+
+## Definitions and gender understandings
+
+All values below come from [sq-analysis-tables.csv](../../../generated/completion/sq-analysis-tables.csv), question SQ4. Each field has the same denominator of 100 coded Works. Gender understanding is multi-valued.
+
+| Definition state | Gender | Bias |
+|---|---:|---:|
+| Explicit | 13 | 46 |
+| Implicit_Only | 40 | 51 |
+| Absent | 10 | 1 |
+| Not_Applicable | 37 | 2 |
+
+| Gender understanding | Works |
 |---|---:|
-| Binary_Categorical | 21 |
-| Social_Construct | 16 |
-| Non_Binary_Inclusive | 14 |
-| Intersectional | 19 |
-| Unclear | 9 |
-| Not_Applicable | 31 |
+| Binary_Categorical | 27 |
+| Social_Construct | 17 |
+| Non_Binary_Inclusive | 15 |
+| Intersectional | 23 |
+| Unclear | 10 |
+| Not_Applicable | 37 |
 
-Both tables count 85 coded Works (`generated/completion/sq-analysis-tables.csv`, fields `AN_Gender_Definition` and `AN_Gender_Understanding`). The combinations per Work are Binary_Categorical alone 15, Binary_Categorical with Intersectional 6, all three critical values together 7, Social_Construct alone 6, Non_Binary_Inclusive alone 4, Intersectional alone 2, Social_Construct with Intersectional 2, Non_Binary_Inclusive with Intersectional 2, and Social_Construct with Non_Binary_Inclusive 1 (own computation over `works[].analysis_fields` in `generated/completion/completion-package.json`). Of the 7 Works with all three critical values, four belong to the two pairs of identical texts, so they stand for 5 distinct texts.
+The explicit-definition contrast therefore survives the recode as a description of coding. It establishes no population prevalence. `Not_Applicable` means that the field is outside the Work's coded subject, while `Absent` records that the relevant definition was not identified under the codebook.
 
-### Joint coding of definition and understanding
+The complete coded Work records show that every `Binary_Categorical` code occurs with `Implicit_Only`, and none with `Explicit`. This is an observed cross-classification, not an absence claim about the literature. The codebook itself defines `Binary_Categorical` as two fixed categories that the Work does not examine. This makes the result sensitive to the operational definitions and prevents interpreting it as an independent test of research traditions.
 
-Works coded jointly on `AN_Gender_Definition` and `AN_Gender_Understanding`, 85 coded on both fields, 69 included Works open.
+## Source-grounded conceptual comparison
 
-| Definition \ Understanding | Binary_Categorical | Social_Construct | Non_Binary_Inclusive | Intersectional | Unclear | Not_Applicable |
-|---|---:|---:|---:|---:|---:|---:|
-| Explicit | 0 | 10 | 8 | 8 | 0 | 0 |
-| Implicit_Only | 21 | 6 | 6 | 11 | 0 | 0 |
-| Absent | 0 | 0 | 0 | 0 | 9 | 0 |
-| Not_Applicable | 0 | 0 | 0 | 0 | 0 | 31 |
+Kaneko et al. (2024) operationalise bias through a performance difference when gender-associated occupational words are added to feminine and masculine word lists. They explicitly limit the evaluation to binary gender and caution that a low benchmark score does not establish freedom from bias. The conceptual object is a bounded property of test performance. This is supported by the [benchmark Assertion](../../30_assertions/binary-gender-benchmark-defines-bias-through-task-performance.md), grounded in section 2, Limitations and the Ethics Statement of the read preprint.
 
-The cells for Absent with Unclear and for Not_Applicable with Not_Applicable follow from the pairing rule of the codebook and carry no finding (`assessment/categories.yaml`, field `AN_Gender_Definition`). The zero cell for Explicit with Binary_Categorical is no pairing rule. Part of it is definitional, because `Binary_Categorical` describes two fixed categories that the Work does not examine, and an explicit determination of gender usually examines them. That the zero cell is therefore partly an artefact of the value definitions is an inference of this draft.
+Ulnicane (2024) adopts intersectionality to examine identity categories in relation to power, oppression and social hierarchy. Her analysis of four policy-oriented reports links workforce discrimination and biased AI systems as systemic concerns. She also shows that a non-binary conceptual position can coexist with binary and geographically restricted data. The article uses a framing approach and limits its conclusions to the examined reports and their context. The [framing Assertion](../../30_assertions/intersectional-ai-framing-connects-gender-to-power.md) anchors these statements in sections 2.1, 2.2, 3.1, 3.3 and 4.
 
-The explicit definitions take three forms in the located passages.
+The existing SQ4 coding records the benchmark as `Implicit_Only` for gender, `Binary_Categorical`, `Explicit` for bias and `No` for a framing theory. It records the framing article as `Explicit` for gender, `Social_Construct` and `Intersectional`, `Implicit_Only` for bias and `Yes` for theory. The read passages support this contrast at the level described above. Whether the framing article's adoption of socially constructed identity categories meets the exact threshold for an explicit gender definition remains a domain-expert judgement.
 
-- A determination of gender as relational, non-essential or materialised in technology. Klein et al. (2024) state that "neither sex nor gender are essential, 'natural', or fixed properties" (`docs/data/fulltext/GP4JDSI8.md`, line 141). Browne et al. (2024) adopt Butler's argument that gender is "fundamentally a relational category" (`docs/data/fulltext/HJ7BHX8J.md`, line 57).
-- A terminological determination that separates sex and gender and names genders beyond the binary. Tang et al. (2024) define gender as encompassing "a broader spectrum, including the array of identities beyond the male-female binary" (`docs/data/fulltext/9MDIBETZ.md`, line 120). Gaba et al. (2025) define men and women as cisgender and add non-binary and transgender participants as a third group (`docs/data/fulltext/G53MCF3W.md`, line 35).
-- A footnote that fixes the terminology of the Work. Kong (2022) adopts the term gender/sex to cover gender, sex and their interactions (`docs/data/fulltext/Q4LK53XW.md`, line 53), and the visual generative AI study warns that the terms man and woman risk "reinforcing the binary gender norm" (`docs/data/fulltext/HLBXNWAZ.md`, line 48).
-
-The binary understanding appears in experimental bias evaluations without a definition. Kaneko et al. (2024) state in their limitations that "the gender biases we considered in this paper cover only binary gender" (`docs/data/fulltext/CYZQ6XPK.md`, line 360), which the codebook anchors as Implicit_Only and Binary_Categorical. Among the 23 coded Works of study type Experimentell, 10 carry Binary_Categorical and 4 Non_Binary_Inclusive, whereas the 13 theoretical Works carry Binary_Categorical once (own computation, joint coding of `AN_Gender_Understanding` and `Studientyp`). The grounded Assertion [[30_assertions/bias-evaluations-name-binary-gender-operationalisation-as-limitation]], assigned to SQ2, records the same pattern for three further bias evaluations that name their binary operationalisation as a limitation. Its sources lie outside the 85 coded Works or carry no SQ4 coding, so it supports this observation only as a parallel.
-
-## Definitions of bias
-
-| `AN_Bias_Definition` | Works |
-|---|---:|
-| Explicit | 38 |
-| Implicit_Only | 44 |
-| Absent | 1 |
-| Not_Applicable | 2 |
-
-The table counts 85 coded Works (`generated/completion/sq-analysis-tables.csv`, field `AN_Bias_Definition`). 83 of the 85 coded Works treat bias as an object. That this reflects the identification strategy, which centred on bias and gender ([[analysis-methods#Answering the research questions]]), is an inference of this draft.
-
-The explicit determinations differ in kind. The grouping below is a reading of this draft over the located passages and no coded field, so it carries no counts.
-
-- Technical criteria and metrics, among them intersectional statistical parity in Zannone (2023) (`docs/data/fulltext/K6JQ7SVA.md`, line 129) and counterfactual fairness in Garg et al. (2019).
-- Legal doctrine, among them disparate treatment and disparate impact in Salinas et al. (2025) (`docs/data/fulltext/YMABYPKF.md`, line 43) and the anti-discrimination ratio rule in Gohar et al. (2023).
-- Structural and power-based determinations, among them social bias as "disparate treatment or outcomes between social groups that arise from historical and structural power asymmetries" in Gallegos et al. (2024) (`docs/data/fulltext/MS3CNU3S.md`, line 35), AI bias as a form of structural injustice in Lin et al. (2022) (`docs/data/fulltext/Y8J3HI9J.md`, line 11) and bias as the partial perspective of AI systems in Browne et al. (2024).
-- Bias as prejudice or systematic error of persons or systems, among them the influence of caseworkers' personal beliefs and attitudes on decisions in Hall et al. (2024) (`docs/data/fulltext/8MDXCTA6.md`, line 164) and systematic and unfair behaviour of AI systems in Kattnig et al. (2024).
+Taken together, these texts suggest that an explicit operational criterion for bias and a developed account of gender answer different conceptual questions. This is an interpretation of this draft, not a causal finding or an exhaustive typology. Neither text evaluates an LLM intervention in social-work practice. Their value for SQ4 is conceptual, and transfer to that practice remains to be established.
 
 ## Theory references
 
-### Joint coding of bias definition and theory reference
+The generated SQ4 table records a named theory reference in 58 of 100 coded Works and no reference meeting the codebook criterion in 42. This field alone does not identify which theory is used, whether it is applied consistently or whether the Work's definition is adequate.
 
-Works coded jointly on `AN_Bias_Definition` and `AN_Theory_Reference`, 85 coded on both fields, 69 included Works open.
+A read-only cross-tabulation of the same eligible Work IDs gives the following snapshot.
 
-| Bias definition \ Theory reference | Yes | No |
+| Bias definition | Theory Yes | Theory No |
 |---|---:|---:|
-| Explicit | 23 | 15 |
-| Implicit_Only | 27 | 17 |
+| Explicit | 27 | 19 |
+| Implicit_Only | 31 | 20 |
 | Absent | 0 | 1 |
 | Not_Applicable | 0 | 2 |
 
-Works with an explicit and Works with an only implicit bias definition carry a theory reference in the same proportion, 23 of 38 and 27 of 44, both 0.61 when rounded (own computation over `generated/completion/completion-package.json`). An explicit definition of bias and a theoretical frame thus occur independently of each other in the coded subset.
+The similar shares in the first two rows do not demonstrate statistical independence. The prior draft's independence claim has been removed. No significance test or causal inference is made.
 
-The generated matrix of understanding by theory reference shows that all 16 Works coded Social_Construct and 17 of the 19 Works coded Intersectional carry a theory reference, while the 21 Works coded Binary_Categorical split into 10 with and 11 without (`generated/completion/sq-association-tables.csv`, matrix `AN_Gender_Understanding x AN_Theory_Reference`). All 9 Works coded Unclear carry a theory reference. Since their understanding of gender is not determinable, their theory presumably frames bias rather than gender, which is an inference of this draft.
+Intersectionality and framing analysis are directly established in the read article by Ulnicane (2024). The earlier theory-family ranking was compiled from coding-review notes before the recode. It has not been reproduced or checked against all contributing full texts in this revision and is not presented as a current result. A complete answer about the distribution of named theories needs the remaining source-based Assertion work and review.
 
-### Named theories
+## Effects of unresolved decisions
 
-The 50 Works with `AN_Theory_Reference` Yes carry 123 located theory references with 104 distinct theory names in the final coding of the AI Agent Review (`tests/review-cases/agent-runs/codebook-v141-includes-*-20261002/ai-agent-review.json`, `records[].final_coding.analysis_evidence.AN_Theory_Reference[].theory`). The names were normalised into theory families as follows.
+### Exact source Versions and holds
 
-- Each name was lower-cased and matched against a fixed list of patterns, one per family. The patterns cover English and German spellings, so "Intersektionalität" joins intersectionality.
-- One name may join several families. "Intersectional technofeminism" counts for intersectionality and for feminist science and technology studies.
-- A Work counts once per family, however many of its references fall into that family.
-- A family is labelled feminist when its name contains feminist, intersectional or queer. Epistemic injustice, decolonial theory and critical race theory are counted separately, although parts of the literature place them in feminist thought.
-- Names that matched no pattern stay as single frames.
+The two not-collected Works above lack the SQ4 fields in their eligible older coding. Their open exact-Version recode assignments prevent treating a newly read or preferred expression as if it already supplied current reviewed SQ4 coding.
 
-| Theory family | Works | Distinct texts |
-|---|---:|---:|
-| Intersectionality, Black feminist thought and the matrix of domination | 21 | 19 |
-| Feminist science and technology studies and technofeminism | 8 | 7 |
-| Social justice and other justice frames (Rawls, Tyler, design justice, data justice) | 8 | 8 |
-| Feminist theory, feminist policy analysis and other named feminist frames | 8 | 7 |
-| Data feminism | 5 | 4 |
-| Structural injustice and justice after Young | 5 | 5 |
-| Decolonial theory and coloniality | 4 | 4 |
-| Critical race theory and antiracist frameworks | 4 | 4 |
-| Feminist standpoint theory and feminist epistemology | 3 | 3 |
-| Epistemic, testimonial and hermeneutic injustice | 3 | 3 |
-| Queer theory and heteronormativity | 3 | 3 |
-| Formal fairness definitions (group, individual, counterfactual) | 3 | 3 |
-| Feminist ethics and ethics of care | 3 | 3 |
-| Theories of power (Foucault, Weber, socio-technical power) | 3 | 3 |
-| Representational and allocational harms | 2 | 2 |
-| Anti-discrimination law | 2 | 2 |
-| Participatory and co-creative research traditions | 2 | 2 |
-| Algorithmic reparation | 2 | 1 |
-| Dual process theory | 2 | 2 |
-| Technology acceptance and trust models | 1 | 1 |
-| Hofstede's cultural dimensions | 1 | 1 |
-| Inclusion and exclusion in systems theory and critical theory | 1 | 1 |
-| Othering and structural discrimination | 1 | 1 |
+The two stale-review Works are *Examining risks of racial biases in NLP tools for child protective services* (`C8A7TXTF`, `R7V99ERA`) and *How child welfare workers reduce racial disparities in algorithmic decisions* (`64ZCWCBS`, `7FEFMCBZ`). Their historical reviews do not automatically transfer to the currently bound representations.
 
-The single frames are critical digital literacy (Hauck et al. 2025), critical legal studies (Ovalle et al. 2023), the digital divide (Studeny 2025), the framework of bias in computer systems by Friedman and Nissenbaum and positionality (Santy et al. 2023), hermeneutic reverse engineering (Shukla 2025), sociolinguistic research on stereotypes (Gallegos et al. 2024), stereotype threat (Shah 2025), tactical technical communication (Skilton et al. 2024) and technoliberalism (Toupin 2024).
+The hold set contains *Towards a Feminist Metaethics of AI* (`LT3D3ZQ2`) and the cultural-bias systematic-review Work (`5UAHQESQ`, `6MJYP7ZX`, `EHQBHVYV`). The former has the documented ACM/arXiv expression mismatch, and the latter retains an unresolved expression relationship to the withdrawn arXiv material. Their stored codes are not admissible SQ4 evidence while held. Details and governing decisions remain in [data](../../../knowledge/data.md#bibliographic-questions-requiring-reconciliation) and [plan](../../../knowledge/plan.md#works-with-conflicts-or-holds).
 
-29 of the 50 Works, or 27 of 48 distinct texts, name at least one feminist, intersectional or queer frame. Among these 29 Works, 15 carry Social_Construct, 15 Intersectional, 9 Non_Binary_Inclusive and 5 Binary_Categorical, so a feminist frame and a binary analysis meet in Zannone (2023), Shah (2025), Fraile-Rojas et al. (2025), Ahmed (2024) and Gohar et al. (2023). 15 of the 16 Works coded Social_Construct name such a frame. The Dual process theory family consists of the published and the extended version of Kamruzzaman et al. (2024), which stand as separate Works with different full texts ([[update-protocol#Coding run of 2 October 2026]]).
+### Duplicate identities
 
-## Boundary questions flagged by the run
+Hash comparison of the available reading texts for the coded Works identifies three pairs of registered Works sharing byte-identical texts.
 
-The two agent tracks differed before review on `AN_Gender_Understanding` in 12 of the 85 Works, on `AN_Gender_Definition` in 8, on `AN_Bias_Definition` in 5 and on `AN_Theory_Reference` in 4 (`records[].differences` of the AI Agent Review files). Agreement between two tracks on the same LLM is a workflow diagnostic and says nothing about accuracy. The review and the tracks flagged the following questions for the domain experts.
+| Reading records | Title | Effect |
+|---|---|---|
+| GP4JDSI8 / D2EGAVKZ | Data Feminism for AI | Both carry identical SQ4 codes, including an explicit gender definition and all three critical understanding values |
+| HLBXNWAZ / YLAKP7Z2 | Intersectional analysis of visual generative AI | Both carry the same SQ4 codes as each other |
+| YN9JAREI / 4KMMPA6A | Faires KI-Prompting | Both carry implicit gender, explicit bias and no theory, but only YN9JAREI carries Intersectional in addition to Binary_Categorical |
 
-- The threshold of `Social_Construct`. Gallegos et al. (2024) were coded Social_Construct on the statement that "social groups are often socially constructed" (`docs/data/fulltext/MS3CNU3S.md`, line 132), a statement about social groups in general and not about gender alone. Shukla (2025) was resolved to Unclear against a track that read a sentence on societal definitions of race and gender as Social_Construct.
-- The pair `Binary_Categorical` with `Intersectional`, which 6 Works carry. Gohar et al. (2023) compute bias scores "for a binary gender" (`docs/data/fulltext/VFD9ENG6.md`, line 217) while analysing subgroups such as Black females and Black males (line 417). The review notes for Salinas et al. (2025) that the authors claim no intersectional analysis although the field rule assigns Intersectional. For Shah (2025) and Fraile-Rojas et al. (2025) the review removed Intersectional against one track.
-- The threshold of an explicit gender definition, for an adopted determination that names gender only as a power-produced social division beside race and class in Ovalle et al. (2023), for the phrase "gender as a narrow social construct" in Fraile-Rojas et al. (2025) and for a terminological footnote in Jääskeläinen et al. (2025).
-- The line between a definition of power and a definition of bias. The review resolved Klein et al. (2024) and Jääskeläinen et al. (2025) to Implicit_Only and Vethman (2025) to Explicit through Young's determination of injustice, and flagged the consistency of these resolutions itself.
-- The line between a framing theory and an ethical evaluation framework in Yu et al. (2025), the separation of `Gender` and `Sexual_Orientation_Identity` for trans and non-binary groups in Tang et al. (2024), and `Non_Binary_Inclusive` for a test criterion without an analytic category in Wudel et al. (2025).
+As a sensitivity calculation only, retaining one text per pair gives 97 text units, 11 explicit gender definitions, 45 explicit bias definitions and 56 theory references. Binary categorical understanding becomes 26, social construct 15 and non-binary inclusive 13. Intersectional becomes either 20 or 21 depending on which existing coding of the guide is retained. The three removed rows and unchanged cases can be reconstructed from the Work IDs in the current completion package and the pairs above.
 
-The update protocol records these questions as open for rule revision after the spot check ([[update-protocol#Validation of the AI coding]]). Until then the counts of Social_Construct, Intersectional and the explicit definitions carry the uncertainty of these boundaries.
+This calculation creates neither a new corpus denominator nor a merge decision. Identical text does not settle publication identity or the appropriate coding. The guide's disagreement requires adjudication before a consolidated code is defensible. The explicit-definition contrast remains under either scenario, while exact frequencies remain provisional.
 
-## Not determinable and absent
+### Screening and missing evidence
 
-- The distribution in the 69 open included Works is not determinable. Every statement above describes the 85 coded Works.
-- The open Works are not a random remainder. The titles of the 19 not collected Works include several that centre on gender, intersectionality or gender equality, among them Ulnicane (2024), Smith et al. (2021), the UNESCO and IRCAI study (2024), Franken et al., Wilson et al. (2024) and the DIVERSIFAIR toolkit (2024). Their coding could shift the shares of the critical understandings and of the feminist theory frames. This expectation rests on titles and is an inference of this draft.
-- A Work coded `Not_Applicable` for gender does not treat gender as an object in the coded reading. This is a statement about the Work, not about the literature.
-- No absence in the literature can be stated. That no coded Work combines an explicit gender definition with a binary categorical understanding is an observation about the coded subset.
+The 25 human/agent decision conflicts are a different source of uncertainty. Choosing an eligible expression or consolidating a duplicate cannot settle them. Domain-expert screening governs inclusion, and a human screening decision would still not verify the SQ4 interpretation.
 
-## What is needed to complete the answer
+The 22 Works in the missing state have no eligible SQ4 coding in this package. Their current reason is recorded per Work, and this revision makes no renewed claim that all lack an obtainable full text. The unresolved set is not assumed random. Neither an empty cross-tabulation cell nor a code absent from the eligible subset establishes a gap in the literature.
 
-1. The partial recode of the 19 Works coded under codebook 1.3, which needs the packet and merge contract with `supersedes` ([[plan#Analysis tool follow-ups]]).
-2. Full texts of the preferred Version for the 22 uncoded included Works, with source binding, so that they can enter a coding run.
-3. Domain-expert decisions on the 25 Works with divergent human and agent decisions, and the resolution of the integrity hold and of the 2 stale source reviews.
-4. Resolution of the Work identities that affect the counts, the two pairs bound to identical texts (`GP4JDSI8` and `D2EGAVKZ`, `HLBXNWAZ` and `YLAKP7Z2`, where the metadata of `HLBXNWAZ` names other authors than its text), the two versions of Kamruzzaman et al. (2024) and the two Works titled "Intersectionality in artificial intelligence" (`WS4KQPWN` and the Work of `2EBHMYU4`), which may be one Work.
-5. The rule revision for the boundary questions above, then the domain-expert spot check of the runs, which covers the four SQ4 fields and every flagged Work.
-6. SQ4 Assertions grounded in distillates, for instance on the forms of explicit gender definition, on the binary operationalisation of experimental bias evaluations and on intersectionality as the dominant frame. Only 7 of the 85 coded Works have an active distillate, so this needs distillation first (`generated/completion/completion-package.json`, `knowledge_coverage.active.documents`, and [[research-vault#Assertions]]).
-7. AI Agent Review and domain-expert verification of those Assertions and of this chapter.
+## Decision points and completion boundary
 
-## Works not collected
+| Required judgement | Evidence | Recommendation and consequence |
+|---|---|---|
+| Which expressions should support the remaining recodes? | Exact-Version cases above and the existing plan | Resolve each source relationship before recoding. Until then retain older coding only for its collected fields |
+| Which registered Works should be consolidated? | The three identical-text pairs and the guide's conflicting Intersectional code | Decide Work identity with retained provenance, then adjudicate the guide. Without a decision, report registered-Work counts and sensitivity separately |
+| How should human/agent screening conflicts be resolved? | The 25 Work IDs in `conflict_decision_work_ids` of the SQ4 field-state rows | Domain experts decide inclusion per Work. Keep these Works outside the eligible mapping until reconciled |
+| Does adopted social-category theory qualify as an explicit gender definition? | Ulnicane (2024), sections 2.1 and 3.3, and the existing codebook boundary questions | Include this source in the expert spot check. Do not silently recode it or change the rule in this assignment |
 
-The following 19 included Works carry analysis coding under codebook 1.3 and therefore no SQ4 fields (`generated/completion/field-states.csv`, `not_collected_work_ids`).
-
-- Kong et al. (2021), "Evaluation of an artificial intelligence literacy course for university students"
-- Ricaurte Quijano et al. (2024), "Towards Substantive Equality in Artificial Intelligence"
-- Hodgson et al. (2022), "Problematising artificial intelligence in social work education"
-- Kabra et al. (2025), "Reasoning towards fairness"
-- Ulnicane (2024), "Intersectionality in Artificial Intelligence: Framing Concerns and Recommendations for Action"
-- Smith et al. (2021), "When Good Algorithms Go Sexist"
-- "Research on the application risks and countermeasures of ChatGPT generative artificial intelligence in social work", without author metadata in the corpus
-- UNESCO and IRCAI (2024), "Challenging systematic prejudices: an Investigation into Gender Bias in Large Language Models"
-- Navigli et al. (2023), "Biases in large language models: Origins, inventory and discussion"
-- Jarrahi et al. (2021), "Algorithmic management in a work context"
-- Wilson et al. (2024), "Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval"
-- Keddell (2019), "Algorithmic justice in child protection"
-- Washington (2025), "Fragile Foundations: Hidden Risks of Generative AI"
-- DIVERSIFAIR Project (2024), "AI & Intersectionality: A Toolkit For Fairness & Inclusion"
-- Franken et al., "Gender und KI-Anwendungen", without a year in the corpus
-- Gengler et al. (2024), "Faires KIPrompting – Ein Leitfaden für Unternehmen"
-- Chatterji et al. (2025), "How People Use ChatGPT"
-- Li et al. (2023), "Ethics & AI: A systematic review on ethical concerns and related strategies"
-- Linnemann et al. (2023), "Bedeutung von Künstlicher Intelligenz in der Sozialen Arbeit"
-
-The German practice guide by Gengler et al. (2024) may stand twice in the corpus. A Work with the record `YN9JAREI` and the title "Faires KI-Prompting – Ein Leitfaden für Unternehmen" is among the 85 coded Works, while the Work `4KMMPA6A` with the variant title above is not collected. The identity of the two rests on the titles and is unchecked.
+The complete local Markdown texts of the two cited works were read. Their short quotations, source identities, current coding eligibility and Assertion anchors were checked. The new distillates, Assertions and chapter were prepared and checked by the same session. They have no independent AI Agent Review, no domain-expert verification and no publication approval. The existing PRISM setup test of 17 October was read and not repeated. SQ1, SQ2, SQ3 and SQ5 remain outside this first answer revision.

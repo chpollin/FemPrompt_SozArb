@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-03
+updated: 2026-10-17
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Claude Code (Claude Opus 5.5)
 related: [INDEX, plan, journal, project, analysis-methods, governance, verification, testing, standards]
@@ -19,6 +19,10 @@ related: [INDEX, plan, journal, project, analysis-methods, governance, verificat
 # Handoff
 
 ## Current result
+
+On 17 October 2026 the bounded SocialAI assignment refreshed [SQ4](../research-vault/40_output/literature-report/sq4-conceptual-grounding.md) on the isolated branch `codex/socialai-sq4-evidence`, based on the inspected curation branch at `6e063b9`. The four-field mapping was reconciled to the recoded completion package. The author read the complete available Markdown texts of the benchmark and framing article used in the new conceptual comparison. New distillates and Assertions retain `grounded` and no independent review. The identical-text guide pair has conflicting Intersectional coding, so consolidation requires coding adjudication as well as identity resolution. Source-Version, screening and scholarly acceptance decisions remain open. Other answer chapters retain their older state. Integration remains with the operator.
+
+### Earlier handoff basis
 
 State of 2 October 2026. `main` is the integration branch and is ahead of `origin/main` by the unpushed commits of 2 October. The GitHub repository has been private since 1 October 2026. GitHub Pages stays public at https://chpollin.github.io/FemPrompt_SozArb/ and serves `docs/` from `main` as a legacy build, which exposes the internal working surfaces but not the git-ignored reading layer. The switch to `build/site/` is decision 3 in [[plan#Open decisions]].
 

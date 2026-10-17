@@ -299,6 +299,20 @@
     "xiao-et-al-find-no-fair-prompting-strategy-effective-in-every-tested-scenario": {
       "label": "Keine Fair-Prompting-Strategie wirkt überall",
       "statement_sha256": "sha256:29236040cd8574efd4b10d2d367fe3706920a4e58788f68afe6dddbf05e7efed"
+    },
+    "intersectional-ai-framing-connects-gender-to-power": {
+      "prepared_at": "2026-10-17",
+      "label": "Intersektionales Framing verbindet Gender und Macht",
+      "status": "provisional, no separate review",
+      "statement_sha256": "sha256:e85a6713ad0e8bc1b084fde3bbd276dbd3baff3625f0241c97bcf98f27caa80c",
+      "prepared_by": "codex/socialai/01a14a55-dac3-7632-9963-b13b212447d7"
+    },
+    "binary-gender-benchmark-defines-bias-through-task-performance": {
+      "prepared_at": "2026-10-17",
+      "label": "Binärer Benchmark misst Bias über Zählleistung",
+      "status": "provisional, no separate review",
+      "statement_sha256": "sha256:282ad2db2fdb09af17c8ebd159f14ba3d664c21a69dfb53c20221a3dd4b9cd53",
+      "prepared_by": "codex/socialai/01a14a55-dac3-7632-9963-b13b212447d7"
     }
   }
 }

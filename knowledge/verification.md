@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-03
+updated: 2026-10-17
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 topics: ["[[Verification]]", "[[Evidence Synthesis]]", "[[Research Integrity]]"]
@@ -35,6 +35,8 @@ This register states which externally relevant project claims have a reproducibl
 The productive round-two records reach at most `ai-agent-reviewed`. Domain-expert verification and final scholarly approval remain separate requirements. The active Assertion slice carries attributed AI Agent Review. The provisional receipts of 1 October 2026 also cover grounded Assertions, with artifact-specific outcomes and any proposed narrowing in `generated/verification/assertion-reviews-2026-10-01.json`. Their files retain their recorded maturity state. A valid review does not promote a grounded Assertion, and promotion or revision requires a receipt valid for the changed bytes. The [released Assertion index](../docs/data/assertion_index.json) requires the permitted state and a current accepted review. Review of an Assertion grants no chapter-level verification. [[research-vault#Current implementation state]] identifies the drafts and reviewed evidence actually available.
 
 ## Current claim register
+
+The SQ4 revision of 17 October 2026 adds a current mapping and an explicitly provisional comparison based on two completely read Markdown sources. Its new distillates and Assertions have structural validation and author checks only. They have no separate AI Agent Review or domain-expert verification and are not added to a release ledger. The reviewed status of older source or coding artifacts does not transfer to them. The answer names unresolved source expressions, duplicate coding and screening decisions separately. Its theory-family ranking is deferred pending a new source-based derivation.
 
 | Claim family | Current evidence | Current authority |
 |---|---|---|

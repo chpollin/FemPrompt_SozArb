@@ -15,7 +15,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-29
-updated: 2026-10-03
+updated: 2026-10-17
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5), Codex (GPT-6)
 related: [project, analysis-methods, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, codebook-v1.4-proposal, research-vault, analysis-divergence, analysis-sq-advisory, project-review-2026-09-05]
@@ -50,6 +50,8 @@ In function order, not alphabetical.
 | [[guides/manual-review-checklist]] | The human-in-the-loop markdown review checklist | rarely |
 
 ## Reading paths
+
+- Review the refreshed [SQ4 answer](../research-vault/40_output/literature-report/sq4-conceptual-grounding.md) for the current coded subset, source-grounded conceptual comparison and separate effects of source Versions, duplicate Works and screening conflicts. Its new Assertions remain unreviewed, and its counts are a dated preparation snapshot.
 
 - Resume the work through [[handoff]] (current branch state and continuation point), [[plan]] (remaining work and open decisions) and the newest [[journal]] entry.
 - Answer a sub-question through [[project#Research questions]], [[analysis-methods#Answering the research questions]] and [[plan#Answering the research questions]]. The [SQ1 chapter](../research-vault/40_output/literature-report/sq1-use.md) shows the answer form with coverage, Assertions and not determinable cells.
