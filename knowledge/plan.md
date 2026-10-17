@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-03
+updated: 2026-10-17
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -171,6 +171,20 @@ The accepted scope is defined in [[governance#Verification scope decision, 22 Se
 
 - Confirm the native Chromium directory-permission path in a disposable clone. Since ADR-047 it is only the fallback for a static server, and the operator's own test of 2 October 2026 connected a clone through it.
 - Exercise the setup path of the README with a person who did not build PRISM before, on a fresh Windows clone, and correct the documentation where it fails.
+
+### Reviewer setup meeting
+
+The operator confirmed on 17 October 2026 that the SocialAI meeting prepares the domain experts to screen the literature in PRISM on their own computers. The intended result is a working private repository clone for each reviewer, with independent saving and an understood exchange procedure. PRISM records screening decisions. Verification of agent-produced assertions and final scholarly approval remain separate under [[governance]].
+
+The isolated local rehearsal in [[testing#Run of 17 October 2026]] passed the reading, identity, evidence and save/read-back path for both reviewers. Complete the remaining preparation as follows.
+
+1. Confirm each reviewer's private repository access, GitHub Desktop login, supported Python installation and installation permissions. Select the shared repository revision before sending setup instructions. The locally rehearsed branch must not be assumed to be the remote integration branch.
+2. Follow the reviewer path in the README. Clone into a short local folder, install `requirements-build.txt` once and launch `start-prism.cmd`. Keep its terminal open. Reviewers do not need Node.js or the full integration build.
+3. In a clearly separate practice copy, use the existing cases named in [[testing#Run of 17 October 2026]] to open a full text, inspect the category definitions, pin evidence, select a reason, save and reopen the record. Explain that practice decisions are not research decisions and are never pushed.
+4. In each research clone, choose the correct reviewer identity and work only in that reviewer's assigned file. Demonstrate GitHub Desktop on a real, explicitly confirmed screening decision. Inspect the changed-file list, commit the own reviewer file, push it, fetch and pull the other reviewer's changes, then restart PRISM and read the saved decisions. Remote exchange still requires an actual meeting or authorised preflight on the participants' accounts.
+5. Finish when each reviewer can start PRISM independently, locate the next assigned item, save safely and explain the exchange procedure. Record setup problems separately from scholarly disagreements.
+
+The meeting time and duration remain to be confirmed. Device readiness determines how much installation work remains for the meeting. Article structure and co-author decisions are outside this setup agenda.
 
 ## Waiting on the project owner
 

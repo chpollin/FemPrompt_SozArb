@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-02
+updated: 2026-10-17
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 topics: ["[[Software Testing]]", "[[Research Software]]"]
@@ -167,6 +167,14 @@ A fresh clone from GitHub, moved onto the branch with ADR-047 and ADR-048, serve
 | Second start, occupied port | Opens the running PRISM, or names the occupied port |
 | Keyboard alone from reviewer choice to save | Pass, focus visible |
 | 1366 by 768 at 100 and 125 percent | Panel and save action visible after the compact header. Below about 900 pixels width the columns stack and the page scrolls |
+
+### Run of 17 October 2026
+
+A disposable local clone of revision `3dff620bfff7e2d45410222e2592b25d17ac77ea` reproduced the reviewer setup with Python 3.11.9 and the already installed pinned build dependencies. The actual `start_prism` entry built the reading layer and served the clone. The existing Chromium partner test passed for both assigned reviewers, including reviewer selection, full-text reading, a Paper evidence pin, saving through the local server and the resulting list state. Each run created only its own reviewer JSON file. Schema validation passed in the disposable clone. A new browser session read both saved records back through the server.
+
+The selected existing cases were *How People Use ChatGPT* (`BHXDU7VM`) and *Recommendations for social work researchers and journal editors on the use of generative AI and large language models* (`AMYZFAPH`). They support a walkthrough of text reading, category definitions and evidence selection. The automated Exclude decisions were arbitrary persistence fixtures confined to the disposable clone. They establish no scholarly judgement and must never be transferred into the research checkout.
+
+This run used local repository content and an existing Python environment. It did not test a fresh dependency installation, a remote GitHub clone, partner-device permissions, GitHub Desktop commit/push/pull, manual accessibility or expert usability. Node.js drove the technical browser check and was not used by the reviewer start. The meeting preparation and remaining checks are in [[plan#Reviewer setup meeting]]. The underlying scholarly verification boundary in [[governance]] is unchanged.
 
 ## Independent acceptance review of the result site
 

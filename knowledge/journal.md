@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-10-03
+updated: 2026-10-17
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -21,6 +21,10 @@ related: [INDEX, plan, specification, governance, verification, handoff]
 Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen fest, die Git nicht erfasst, sodass alte Zustände, verworfene Richtungen und später umgestoßene Entscheidungen lesbar bleiben. Ein Eintrag je substanzieller Sitzung nennt, was sich änderte, was entschieden wurde und was offen bleibt, und verweist auf das Dokument, das den Gegenstand trägt. Commits und Diffs leben in der Git-Historie, Zahlen in den Daten und im Evidence Companion. Die Einträge stehen chronologisch, der neueste zuerst.
 
 ## October 2026
+
+### 2026-10-17: Reviewer setup rehearsal
+
+The operator clarified that the SocialAI meeting installs the private repository and PRISM so the domain experts can screen literature. A fresh disposable local clone passed the existing Chromium partner test for both reviewer identities through the actual Python reviewer start and local-server save path. Schema validation and read-back in a new browser session passed. Only disposable reviewer files changed, and no test decision entered the research checkout. [[testing#Run of 17 October 2026]] records the tested basis and limits. [[plan#Reviewer setup meeting]] holds the meeting procedure and outstanding device, remote-revision and GitHub exchange checks. No product code, research data, remote access, deployment or calendar event changed.
 
 ### 2026-10-03: Literature use and remaining source questions
 
