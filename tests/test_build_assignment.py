@@ -56,7 +56,7 @@ def test_open_papers_alternate_within_each_kind(tmp_path):
     # the unassessed stratum starts with the reviewer holding fewer entries (a tie)
     assert [added[pid] for pid in ("P2", "P6", "P7")] == ["sabine", "susi", "sabine"]
     assert document["assigned_on"] == "2026-10-01"
-    assert [r["key"] for r in document["reviewers"]] == ["sabine", "susi"]
+    assert [r["key"] for r in document["reviewers"]] == ["sabine", "susi", "chrisi"]
 
 
 def test_rerun_is_idempotent_and_append_only(tmp_path):
@@ -97,4 +97,5 @@ def test_committed_file_is_current_and_balanced():
     )
     assert committed == document
     counts = Counter(committed["assignments"].values())
-    assert abs(counts["sabine"] - counts["susi"]) <= 1
+    assert counts["chrisi"] == 3
+    assert abs(counts["sabine"] - counts["susi"]) <= 2

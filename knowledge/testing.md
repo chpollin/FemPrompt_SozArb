@@ -203,7 +203,7 @@ npm run test:browser-companion
 npm run pilot
 ```
 
-On Windows, clone into a short path such as `C:\femprompt`, for example with GitHub Desktop, and use a python.org installation, since the Microsoft Store alias for `python` does not run the build. Continuous integration uses `npm ci`.
+On Windows, clone into a short path such as `C:\femprompt`, for example with GitHub Desktop, and install Python 3.11 or later from the Microsoft Store or from python.org (the unconfigured Windows Store redirect stub without an installed Python package does not run the build). Continuous integration uses `npm ci`.
 
 The build reconstructs the git-ignored reading layer under `docs/data/fulltext/` from the tracked `generated/markdown_clean/`, the source-readiness and completion queues, corpus projections, Assertion index, the PRISMA flow in `generated/prisma-flow/`, downloads and the separate result site at `build/site/`. It uses the local source representations and performs no new AI reviews or external API calls. Fresh acquisition, PDF conversion and LLM distillation require the broader research environment described in [[methods]].
 

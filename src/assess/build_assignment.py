@@ -33,7 +33,9 @@ ASSIGNMENT_FILE = "assignment.json"
 REVIEWERS = (
     {"key": "sabine", "label": "Expertin A"},
     {"key": "susi", "label": "Expertin B"},
+    {"key": "chrisi", "label": "Chrisi"},
 )
+SPLIT_KEYS = ("sabine", "susi")
 RULE = (
     "Every paper that is open in PRISM (no decision of the consolidated expert "
     "assessment, no own record, no own verification) is assigned to one reviewer. "
@@ -113,12 +115,12 @@ def build(repo: Path, today: str) -> tuple[dict, dict[str, str]]:
     if previous is not None and previous.get("schema") != SCHEMA:
         raise ValueError(f"{target}: unexpected schema {previous.get('schema')!r}")
     existing = dict((previous or {}).get("assignments") or {})
-    keys = [reviewer["key"] for reviewer in REVIEWERS]
-    unknown = sorted({key for key in existing.values() if key not in keys})
+    allowed = {reviewer["key"] for reviewer in REVIEWERS}
+    unknown = sorted({key for key in existing.values() if key not in allowed})
     if unknown:
         raise ValueError(f"{target}: assignments name unknown reviewers {unknown}")
     human, agent = screening_state(screening_dir)
-    added = assign(existing, open_papers(papers, human, agent), keys)
+    added = assign(existing, open_papers(papers, human, agent), list(SPLIT_KEYS))
     merged = {**existing, **added}
     position = {paper["id"]: index for index, paper in enumerate(papers)}
     ordered = sorted(merged, key=lambda pid: (pid not in position, position.get(pid, 0)))

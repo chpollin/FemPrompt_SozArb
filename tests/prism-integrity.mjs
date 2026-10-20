@@ -193,7 +193,7 @@ export async function runIntegrityChecks(root) {
     window.fetch = (url) => Promise.resolve({ ok: true, json: () => Promise.resolve(JSON.parse(assignmentText)), url });
     const loaded = await T.loadAssignment();
     check('assignment: the served file enables the filter with the declared reviewers',
-      loaded && loaded.reviewers.map((r) => r.key).join('|') === 'sabine|susi' && /data-assignee="susi"/.test(T.filtersHtml()));
+      loaded && loaded.reviewers.map((r) => r.key).join('|') === 'sabine|susi|chrisi' && /data-assignee="susi"/.test(T.filtersHtml()));
     const folder = memoryFolder({ 'ar2.json': ar2Text, 'assignment.json': assignmentText });
     T.setScreeningHandle(folder);
     T.selectReviewer('ev');
