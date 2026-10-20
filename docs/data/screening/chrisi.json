@@ -1,0 +1,516 @@
+{
+  "schema": "femprompt-prisma-reviewer/0.5",
+  "reviewer": "chrisi",
+  "actor": "human",
+  "updated": "2026-10-20T09:48:07.432Z",
+  "decisions": {
+    "978AV9KZ": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-10-20T09:35:22.990Z",
+      "reviewer": "chrisi",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
+      "version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+      "version_type": "unknown",
+      "preferred_version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "chrisi:978AV9KZ",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "chrisi",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "978AV9KZ:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-89ec5c6d-daef-49e7-9983-4aa865d5e7b3",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "chrisi"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:978AV9KZ",
+            "type": "paper",
+            "reference": "978AV9KZ",
+            "work_id": "work:4842d83e-8ed6-5633-b241-febb6e9c710f",
+            "version_id": "version:289ac267-2c86-54d2-a7ea-80ab49a289f3",
+            "version_type": "unknown"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "chrisi:978AV9KZ",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-20T09:35:22.990Z",
+          "actor_ids": [
+            "chrisi"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2,
+              "Prompting": 2
+            },
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Not_relevant_topic",
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-10-20T09:35:22.990Z",
+            "reviewer": "chrisi",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "chrisi:978AV9KZ",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-10-20T09:35:22.990Z",
+          "actor_ids": [
+            "chrisi"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
+    "RAY6G2R7": {
+      "categories": {
+        "Generative_KI": 1,
+        "Prompting": 1
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "SwiftSage integrates the strengths of behavior cloning and prompting large langu",
+            "snippet": "SwiftSage integrates the strengths of behavior cloning and prompting large language models (LLMs) to enhance task completion performance.",
+            "ts": "2026-10-20T09:47:09.767Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "human",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "Recent studies have also demonstrated that generative agents based on prompting",
+            "snippet": "Recent studies have also demonstrated that generative agents based on prompting LLMs, such as GPT-4, can produce reasonable plans and actions [18, 15, 32].",
+            "ts": "2026-10-20T09:47:36.207Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "human",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          },
+          {
+            "term": "It effectively integrates the strengths of behavior cloning (representing System",
+            "snippet": "It effectively integrates the strengths of behavior cloning (representing System 1) and prompting LLMs (emulating System 2), resulting in significant enhancements in task completion performance and efficiency.",
+            "ts": "2026-10-20T09:47:45.275Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "human",
+            "paper_id": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+          }
+        ]
+      },
+      "ts": "2026-10-20T09:48:07.432Z",
+      "reviewer": "chrisi",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+      "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "version_type": "preprint",
+      "preferred_version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "chrisi:RAY6G2R7",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "chrisi",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "RAY6G2R7:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-89ec5c6d-daef-49e7-9983-4aa865d5e7b3",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "chrisi"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:RAY6G2R7",
+            "type": "paper",
+            "reference": "RAY6G2R7",
+            "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+            "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460",
+            "version_type": "preprint"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "chrisi:RAY6G2R7",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-20T09:48:07.432Z",
+          "actor_ids": [
+            "chrisi"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 1,
+              "Prompting": 1
+            },
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Not_relevant_topic",
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "SwiftSage integrates the strengths of behavior cloning and prompting large langu",
+                  "snippet": "SwiftSage integrates the strengths of behavior cloning and prompting large language models (LLMs) to enhance task completion performance.",
+                  "ts": "2026-10-20T09:47:09.767Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "human",
+                  "paper_id": "RAY6G2R7",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "Recent studies have also demonstrated that generative agents based on prompting",
+                  "snippet": "Recent studies have also demonstrated that generative agents based on prompting LLMs, such as GPT-4, can produce reasonable plans and actions [18, 15, 32].",
+                  "ts": "2026-10-20T09:47:36.207Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "human",
+                  "paper_id": "RAY6G2R7",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+                },
+                {
+                  "term": "It effectively integrates the strengths of behavior cloning (representing System",
+                  "snippet": "It effectively integrates the strengths of behavior cloning (representing System 1) and prompting LLMs (emulating System 2), resulting in significant enhancements in task completion performance and efficiency.",
+                  "ts": "2026-10-20T09:47:45.275Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "human",
+                  "paper_id": "RAY6G2R7",
+                  "work_id": "work:55caaab5-78b3-5803-8666-2edc0743a202",
+                  "version_id": "version:e8b1830e-e8cd-5ab9-8794-acbb79c01460"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-10-20T09:48:07.432Z",
+            "reviewer": "chrisi",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "chrisi:RAY6G2R7",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-10-20T09:48:07.432Z",
+          "actor_ids": [
+            "chrisi"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
+    "SQYLQFRU": {
+      "categories": {
+        "Bias_Ungleichheit": 2,
+        "Generative_KI": 2,
+        "Prompting": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "Generative Models",
+            "snippet": "Generative Models",
+            "ts": "2026-10-20T09:38:45.461Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "human",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ],
+        "Prompting": [
+          {
+            "term": "prompting-based debiasing techniques designed to emulate reasoning",
+            "snippet": "prompting-based debiasing techniques designed to emulate reasoning",
+            "ts": "2026-10-20T09:46:44.860Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "human",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          },
+          {
+            "term": "prompting-based debiasing methods",
+            "snippet": "prompting-based debiasing methods",
+            "ts": "2026-10-20T09:46:49.019Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "human",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          },
+          {
+            "term": "prompting as a proxy for true reasoning",
+            "snippet": "prompting as a proxy for true reasoning",
+            "ts": "2026-10-20T09:46:53.237Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "human",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ],
+        "Bias_Ungleichheit": [
+          {
+            "term": "bias mitigation",
+            "snippet": "bias mitigation",
+            "ts": "2026-10-20T09:46:24.664Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "human",
+            "paper_id": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+          }
+        ]
+      },
+      "ts": "2026-10-20T09:46:54.209Z",
+      "reviewer": "chrisi",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+      "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "version_type": "preprint",
+      "preferred_version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "chrisi:SQYLQFRU",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "chrisi",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "SQYLQFRU:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-89ec5c6d-daef-49e7-9983-4aa865d5e7b3",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "chrisi"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:SQYLQFRU",
+            "type": "paper",
+            "reference": "SQYLQFRU",
+            "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+            "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb",
+            "version_type": "preprint"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "chrisi:SQYLQFRU",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-20T09:46:54.209Z",
+          "actor_ids": [
+            "chrisi"
+          ],
+          "body": {
+            "categories": {
+              "Bias_Ungleichheit": 2,
+              "Generative_KI": 2,
+              "Prompting": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "Generative Models",
+                  "snippet": "Generative Models",
+                  "ts": "2026-10-20T09:38:45.461Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "human",
+                  "paper_id": "SQYLQFRU",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+                }
+              ],
+              "Prompting": [
+                {
+                  "term": "prompting-based debiasing techniques designed to emulate reasoning",
+                  "snippet": "prompting-based debiasing techniques designed to emulate reasoning",
+                  "ts": "2026-10-20T09:46:44.860Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "human",
+                  "paper_id": "SQYLQFRU",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+                },
+                {
+                  "term": "prompting-based debiasing methods",
+                  "snippet": "prompting-based debiasing methods",
+                  "ts": "2026-10-20T09:46:49.019Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "human",
+                  "paper_id": "SQYLQFRU",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+                },
+                {
+                  "term": "prompting as a proxy for true reasoning",
+                  "snippet": "prompting as a proxy for true reasoning",
+                  "ts": "2026-10-20T09:46:53.237Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "human",
+                  "paper_id": "SQYLQFRU",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+                }
+              ],
+              "Bias_Ungleichheit": [
+                {
+                  "term": "bias mitigation",
+                  "snippet": "bias mitigation",
+                  "ts": "2026-10-20T09:46:24.664Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "human",
+                  "paper_id": "SQYLQFRU",
+                  "work_id": "work:22fdc9d9-45f1-5564-b5ec-13f1d0795dd2",
+                  "version_id": "version:8df649a5-eae4-54d8-9105-3768e0083beb"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-10-20T09:46:54.209Z",
+            "reviewer": "chrisi",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "chrisi:SQYLQFRU",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-10-20T09:46:54.209Z",
+          "actor_ids": [
+            "chrisi"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    }
+  }
+}
