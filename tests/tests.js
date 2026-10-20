@@ -228,11 +228,11 @@ test('computeFlow (reviewer perspective): exclusion reasons are aggregated', fun
         f1: { decision: 'Exclude', reason: 'Duplicate', categories: {} },
         f2: { decision: 'Exclude', reason: 'Duplicate', categories: {} },
         f3: { decision: 'Exclude', reason: 'Language', categories: {} },
-        f4: { decision: 'Include', categories: { Prompting: true, Gender: true } }
+        f4: { decision: 'Include', categories: { Prompting: true, Gender: true }, actor: 'agent' }
     };
     var f = T.computeFlow('r1');
     assertEqual(f.humanScreened, 3, 'only methodically complete reviewer records are counted');
-    assertEqual(f.humanIncl, 0, 'an Include without evidence is not counted as complete');
+    assertEqual(f.humanIncl, 0, 'an agent Include without evidence is not counted as complete');
     assertEqual(f.humanExcl, 3, 'humanExcl');
     assertEqual(f.humanUnclear, 0, 'humanUnclear');
     assertEqual(f.humanReasons.Duplicate, 2, 'Duplicate count');
@@ -637,7 +637,7 @@ test('commit: override on a derived Include yields Exclude and requires a reason
     assertEqual(rec.override, true);
     assertEqual(rec.reason, 'Duplicate');
 });
-test('commit: every selected category requires a paper-layer Beleg', function() {
+test('commit: agent track requires a paper-layer Beleg per selected category while human track keeps pins optional with advisory hint', function() {
     T.setPapers([{ id: 'c-evidence', title: 'evidence gate' }]);
     T.getState().reviewer = 'r1'; T.getState().reviewers.r1 = {}; T.getState().index = 0;
     T.resetWork({ id: 'c-evidence' });
@@ -645,13 +645,20 @@ test('commit: every selected category requires a paper-layer Beleg', function() 
     T.getWork().evidence.Prompting = [{ term: 'p', snippet: 'p', origin: 'ai' }];
     T.getWork().evidence.Gender = [{ term: 'g', snippet: 'g', origin: 'human' }];
     assertEqual(T.paperEvidenceMissing(T.getWork().cats, T.getWork().evidence).join('|'), 'Prompting');
-    T.commit();
-    assertEqual(T.curDec()['c-evidence'], undefined, 'LLM-distillate evidence cannot satisfy the paper evidence gate');
-    T.getWork().evidence.Prompting.push({ term: 'p2', snippet: 'p2', origin: 'human' });
+    T.setRunActor('agent');
     T.setTextSource('abstract');
     T.getWork().analysis = completeAnalysis('abstract');
     T.commit();
-    assert(T.curDec()['c-evidence'], 'record is stored after every selected category has paper evidence');
+    assertEqual(T.curDec()['c-evidence'], undefined, 'LLM-distillate evidence cannot satisfy the agent paper evidence gate');
+    T.setRunActor('human');
+    T.markDirty();
+    assertContains(T.dockHintText({ id: 'c-evidence', title: 'evidence gate' }), 'Optional: Textbeleg für Prompting',
+        'human reviewer gets advisory hint for unpinned categories');
+    T.setRunActor('agent');
+    T.getWork().evidence.Prompting.push({ term: 'p2', snippet: 'p2', origin: 'human' });
+    T.commit();
+    assert(T.curDec()['c-evidence'], 'agent record is stored after every selected category has paper evidence');
+    T.setRunActor('human');
 });
 test('exclusion reason vocabulary is the controlled set with the expert confirmation reason (ADR-042)', function() {
     assertEqual(T.EXCLUSION_REASONS.join('|'),
@@ -921,7 +928,7 @@ test('reviewer schema 0.1 to current: a pre-evidence file loads and is written b
     var file = JSON.parse(JSON.stringify(v01));
     S.reviewers.old = file.decisions;                              // load path
     assertEqual(T.humanDecision({ id: 'mg1' }, 'old').decision, 'Include', '0.1 decision loads');
-    assertEqual(T.computeFlow('old').humanScreened, 1, 'legacy Include remains loaded but incomplete until evidence is added');
+    assertEqual(T.computeFlow('old').humanScreened, 2, 'human Include without pins counts as complete');
     assertEqual(T.evidenceCount(file.decisions.mg1), 0, 'missing evidence map reads as zero, no throw');
     // a legacy Beleg without origin renders as a human pin (ADR-015 backward compatibility)
     var html = T.evidenceListHtml(file.decisions.mg2.evidence, true);
@@ -2201,9 +2208,11 @@ test('saving an expert prefill writes an own record with provenance and no verif
     S.reviewer = 'cp'; S.reviewers.cp = {}; S.index = 0;
     T.setTextSource('abstract');
     T.setWork(T.draftFor(p));
-    T.getWork().cats.Prompting = 2; // a raised category needs its own Paper Beleg
+    T.getWork().cats.Prompting = 2; // a raised category is tracked in paperEvidenceMissing and blocks an agent save
     T.markDirty();
-    assertEqual(T.commit(), false, 'an added category without a Paper Beleg blocks the save');
+    T.setRunActor('agent');
+    assertEqual(T.commit(), false, 'in agent mode an added category without a Paper Beleg blocks the save');
+    T.setRunActor('human');
     T.setWork(T.draftFor(p));
     assertEqual(T.getWork().dirty, true, 'the changed draft is kept per paper');
     delete T.getWork().cats.Prompting;
@@ -2885,7 +2894,9 @@ test('DOM click-flow covers all four human screening paths end-to-end in #pt-ass
     chip('Soziale_Arbeit').click();
     chip('Bias_Ungleichheit').click();
     assertEqual(assertSelector(document, '#pt-decision').textContent, 'Include');
-    assert(saveBlocked(), 'Include without paper pins marks save button aria-disabled');
+    assert(!saveBlocked(), 'human Include without paper pins still enables save button');
+    assertContains(assertSelector(document, '#pt-actions-hint').textContent, 'Optional: Textbeleg',
+        'advisory dock hint reminds human reviewer that text evidence can be pinned');
     var ov1 = assertSelector(document, '#pt-assess-col #pt-override', 'override checkbox');
     ov1.checked = true; ov1.dispatchEvent(new window.Event('change'));
     assertEqual(assertSelector(document, '#pt-decision').textContent, 'Exclude');
@@ -2896,6 +2907,17 @@ test('DOM click-flow covers all four human screening paths end-to-end in #pt-ass
     assertEqual(S.reviewers.cp.DOM_FLOW.decision, 'Exclude');
     assertEqual(S.reviewers.cp.DOM_FLOW.override, true);
     assertEqual(S.reviewers.cp.DOM_FLOW.reason, 'Not_relevant_topic');
+
+    // Path 2b: Human Include without pins saves directly when categories are clicked
+    resetFlow();
+    chip('Generative_KI').click();
+    chip('Soziale_Arbeit').click();
+    assertEqual(assertSelector(document, '#pt-decision').textContent, 'Include');
+    assert(!saveBlocked(), 'human Include with clicked categories is directly saveable without pins');
+    saveBtn().click();
+    assertEqual(S.reviewers.cp.DOM_FLOW.decision, 'Include');
+    assertEqual(S.reviewers.cp.DOM_FLOW.categories.Generative_KI, 2);
+    assertEqual(S.reviewers.cp.DOM_FLOW.categories.Soziale_Arbeit, 2);
 
     // Path 3: Include via both dimensions + paper pins -> save button enabled -> click saves
     resetFlow();
@@ -2930,6 +2952,33 @@ test('DOM click-flow covers all four human screening paths end-to-end in #pt-ass
 
     delete S.reviewers.cp;
     T.setManifestReachable(false); T.setFsSupported(undefined);
+});
+
+test('in-text search quick-picks: counts document occurrences, persists custom category terms and search history', function() {
+    window.localStorage.removeItem('femprompt-prisma-search-terms/0.1');
+    assert(T.DEFAULT_SEARCH_TERMS && T.DEFAULT_SEARCH_TERMS.Prompting.indexOf('prompt engineering') !== -1, 'default vocabulary includes prompt engineering');
+    var sampleText = 'This study examines prompt engineering and prompt design in social work practice, addressing gender diversity and intersectionality.';
+    var quickHtml = T.inTextQuickHtml(sampleText);
+    var frag = parseFragment(quickHtml);
+    var promptEngChip = assertSelector(frag, '.pt-intext-hits > .pt-qchip-wrap .pt-qchip[data-search-term="prompt engineering"]', 'prompt engineering hit chip');
+    assertEqual(assertSelector(promptEngChip, '.pt-qchip-count').textContent, '1');
+    var swChip = assertSelector(frag, '.pt-intext-hits > .pt-qchip-wrap .pt-qchip[data-search-term="social work"]', 'social work hit chip');
+    assertEqual(assertSelector(swChip, '.pt-qchip-count').textContent, '1');
+
+    T.rememberSearchTerm('electric workflow', 'Prompting');
+    var stored = T.readSearchTerms();
+    assertEqual(stored.history[0], 'electric workflow', 'term recorded in history');
+    assertEqual(stored.custom[0].term, 'electric workflow', 'custom term saved');
+    assertEqual(stored.custom[0].cat, 'Prompting', 'custom term linked to category');
+
+    var withCustom = parseFragment(T.inTextQuickHtml('An electric workflow for prompting.'));
+    var customChip = assertSelector(withCustom, '.pt-intext-hits > .pt-qchip-wrap .pt-qchip[data-search-term="electric workflow"]', 'custom term appears in quick hits when present in text');
+    assertEqual(customChip.getAttribute('data-search-cat'), 'Prompting');
+    assertEqual(assertSelector(customChip, '.pt-qchip-count').textContent, '1');
+
+    T.removeSearchTerm('electric workflow', 'Prompting');
+    assertEqual(T.readSearchTerms().custom.length, 0, 'custom term removed');
+    window.localStorage.removeItem('femprompt-prisma-search-terms/0.1');
 });
 
 // ============================================================

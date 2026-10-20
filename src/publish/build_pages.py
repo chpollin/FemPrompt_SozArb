@@ -100,7 +100,6 @@ FOOTER = """<footer class="site-footer">
 NAV_LINKS = [
     ("prisma.html", "PRISM", "prisma"),
     ("about.html", "About", "about"),
-    ("methoden.html", "Methoden", "methoden"),
     ("help.html", "Hilfe", "help"),
 ]
 
@@ -161,7 +160,7 @@ PAGES = {
     "about.html": {
         "head": head(
             "About -- Feministische AI Literacies",
-            "Ueber das Projekt: Systematischer Review zu feministischen AI Literacies im Feld der Sozialen Arbeit.",
+            "Über das Projekt und seine Methodik: Systematischer Review zu feministischen AI Literacies im Feld der Sozialen Arbeit.",
             fav=favicon("F", 60), fonts=FONTS_COMPANION,
         ),
         "header": "about",
@@ -180,7 +179,7 @@ PAGES = {
             "Methodik des systematischen Reviews: Forschungsfragen, Identifikation, Screening, Analyse, Synthese, Prüfstufen und Grenzen.",
             fav=favicon("F", 60), fonts=FONTS_COMPANION,
         ),
-        "header": "methoden",
+        "header": "about",
     },
     "prisma.html": {
         "head": head(

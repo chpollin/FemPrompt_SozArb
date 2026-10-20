@@ -2760,7 +2760,14 @@ function saveButtonHtml(p) {
 
 function dockHintText(p) {
     const gate = saveGate(p);
-    return (gate.storage ? [gate.storage] : []).concat(gate.reasons).join('. ');
+    const blocking = (gate.storage ? [gate.storage] : []).concat(gate.reasons);
+    if (blocking.length) return blocking.join('. ');
+    if (gate.ok && gate.mode === 'record' && runActor !== 'agent') {
+        const record = workingDecisionRecord();
+        const missing = excludeNeedsNoPin(record, !!(work && work.derivedFromExpert)) ? [] : paperEvidenceMissing(record.categories, record.evidence, record.evidence_basis);
+        if (missing.length) return 'Optional: Textbeleg für ' + missing.map(function(c) { return CAT_LABELS[c]; }).join(', ') + ' im Text markieren oder Suchtreffer anheften';
+    }
+    return '';
 }
 
 function filtersHtml() {
@@ -3010,6 +3017,275 @@ function versionMetaHtml(p) {
     return h;
 }
 
+const SEARCH_TERMS_KEY = 'femprompt-prisma-search-terms/0.1';
+const DEFAULT_SEARCH_TERMS = {
+    Prompting: ['prompt', 'prompt engineering', 'system prompt', 'few-shot', 'zero-shot', 'chain-of-thought'],
+    Generative_KI: ['large language model', 'generative ai', 'chatgpt', 'gpt-4', 'chatbot'],
+    AI_Literacies: ['ai literacy', 'critical ai', 'competenc', 'curriculum', 'training'],
+    KI_Sonstige: ['machine learning', 'predictive risk', 'decision support', 'algorithm'],
+    Soziale_Arbeit: ['social work', 'social service', 'child welfare', 'counsel', 'casework', 'soziale arbeit'],
+    Bias_Ungleichheit: ['bias', 'stereotyp', 'discriminat', 'inequalit', 'marginaliz', 'harm'],
+    Gender: ['gender', 'women', 'female', 'non-binary', 'queer', 'transgender'],
+    Diversitaet: ['diversity', 'intersection', 'inclusi', 'race', 'ethnic', 'disability'],
+    Feministisch: ['feminis', 'standpoint', 'data feminism', 'matrix of domination', 'care ethics'],
+    Fairness: ['fairness', 'mitigat', 'debias', 'audit', 'accountab']
+};
+let inTextCatalogOpen = false;
+let selectedTermCat = 'Prompting';
+
+function readSearchTerms() {
+    try {
+        const raw = window.localStorage && window.localStorage.getItem(SEARCH_TERMS_KEY);
+        const parsed = raw ? JSON.parse(raw) : null;
+        return {
+            history: parsed && Array.isArray(parsed.history)
+                ? parsed.history.filter(function(x) { return typeof x === 'string' && x.trim().length >= 2; }) : [],
+            custom: parsed && Array.isArray(parsed.custom)
+                ? parsed.custom.filter(function(x) { return x && typeof x.term === 'string' && x.term.trim().length >= 2; }) : []
+        };
+    } catch (e) {
+        return { history: [], custom: [] };
+    }
+}
+
+function writeSearchTerms(store) {
+    try {
+        if (window.localStorage) window.localStorage.setItem(SEARCH_TERMS_KEY, JSON.stringify(store));
+    } catch (e) {}
+}
+
+function rememberSearchTerm(term, cat) {
+    const clean = String(term || '').trim();
+    if (clean.length < 2) return false;
+    const store = readSearchTerms();
+    const lower = clean.toLowerCase();
+    store.history = [clean].concat(store.history.filter(function(x) { return x.toLowerCase() !== lower; })).slice(0, 24);
+    if (cat) {
+        store.custom = [{ term: clean, cat: cat }].concat(store.custom.filter(function(x) {
+            return !(x.term.toLowerCase() === lower && x.cat === cat);
+        })).slice(0, 40);
+    }
+    writeSearchTerms(store);
+    return true;
+}
+
+function removeSearchTerm(term, cat) {
+    const lower = String(term || '').trim().toLowerCase();
+    const store = readSearchTerms();
+    if (cat) {
+        store.custom = store.custom.filter(function(x) { return !(x.term.toLowerCase() === lower && x.cat === cat); });
+    } else {
+        store.history = store.history.filter(function(x) { return x.toLowerCase() !== lower; });
+    }
+    writeSearchTerms(store);
+}
+
+function allSearchCatalogEntries() {
+    const store = readSearchTerms();
+    const seen = {};
+    const out = [];
+    store.custom.forEach(function(item) {
+        const key = (item.cat || 'Allgemein') + ':' + item.term.toLowerCase();
+        if (seen[key]) return;
+        seen[key] = true;
+        out.push({ term: item.term, cat: item.cat || 'Allgemein', custom: true });
+    });
+    ALL_CATS.forEach(function(cat) {
+        (DEFAULT_SEARCH_TERMS[cat] || []).forEach(function(term) {
+            const key = cat + ':' + term.toLowerCase();
+            if (seen[key]) return;
+            seen[key] = true;
+            out.push({ term: term, cat: cat, custom: false });
+        });
+    });
+    return out;
+}
+
+function searchDatalistOptionsHtml() {
+    const store = readSearchTerms();
+    const entries = allSearchCatalogEntries();
+    const seen = {};
+    const opts = [];
+    store.history.forEach(function(term) {
+        const lower = term.toLowerCase();
+        if (seen[lower]) return;
+        seen[lower] = true;
+        const match = entries.find(function(e) { return e.term.toLowerCase() === lower; });
+        const label = match ? (CAT_LABELS[match.cat] || match.cat) + ' (zuletzt gesucht)' : 'Zuletzt gesucht';
+        opts.push('<option value="' + EC.escapeHtml(term) + '" label="' + EC.escapeHtml(label) + '"></option>');
+    });
+    entries.forEach(function(entry) {
+        const lower = entry.term.toLowerCase();
+        if (seen[lower]) return;
+        seen[lower] = true;
+        const label = (CAT_LABELS[entry.cat] || entry.cat) + (entry.custom ? ' (eigener Begriff)' : '');
+        opts.push('<option value="' + EC.escapeHtml(entry.term) + '" label="' + EC.escapeHtml(label) + '"></option>');
+    });
+    return opts.join('');
+}
+
+function quickChipHtml(term, cat, hits, isCustom, isHistory) {
+    const active = appliedInTextQuery && appliedInTextQuery.toLowerCase() === term.toLowerCase();
+    const catLabel = CAT_LABELS[cat] || (cat === 'Allgemein' ? 'Allgemein' : (isHistory ? 'Zuletzt gesucht' : 'Begriff'));
+    const color = CAT_COLOR[cat] || '';
+    const dot = color ? '<span class="chip-dot" aria-hidden="true" style="--chip-color:' + EC.escapeHtml(color) + '"></span>' : '';
+    const tip = catLabel + ': „' + term + '“ (' + hits + ' Treffer im Text)';
+    let h = '<span class="pt-qchip-wrap' + (hits === 0 ? ' is-zero' : '') + '">';
+    h += '<button type="button" class="pt-qchip' + (active ? ' active' : '') + (hits > 0 ? ' has-hits' : '') +
+        '" data-search-term="' + EC.escapeHtml(term) + '" data-search-cat="' + EC.escapeHtml(cat || '') +
+        '" aria-pressed="' + (active ? 'true' : 'false') + '" title="' + EC.escapeHtml(tip) + '">' +
+        dot + '<span class="pt-qchip-text">' + EC.escapeHtml(term) + '</span>' +
+        '<span class="pt-qchip-count">' + hits + '</span></button>';
+    if (isCustom || isHistory) {
+        h += '<button type="button" class="pt-qchip-del" data-del-term="' + EC.escapeHtml(term) + '" data-del-cat="' +
+            EC.escapeHtml(isCustom ? (cat || 'Allgemein') : '') + '" aria-label="Suchbegriff ' + EC.escapeHtml(term) + ' entfernen" title="Aus Liste entfernen">&times;</button>';
+    }
+    h += '</span>';
+    return h;
+}
+
+function inTextQuickHtml(docPlainText) {
+    const lowerText = String(docPlainText || '').toLowerCase();
+    const store = readSearchTerms();
+    const entries = allSearchCatalogEntries();
+    const hitChipHtml = [];
+    const seenQuick = {};
+    // 1. Custom and recent history terms that occur in this text (or the most recent 3 history terms)
+    store.custom.forEach(function(item) {
+        const lower = item.term.toLowerCase();
+        if (seenQuick[lower]) return;
+        const hits = lowerText ? countOcc(lowerText, lower) : 0;
+        if (hits > 0) {
+            seenQuick[lower] = true;
+            hitChipHtml.push(quickChipHtml(item.term, item.cat || 'Allgemein', hits, true, false));
+        }
+    });
+    store.history.slice(0, 6).forEach(function(term) {
+        const lower = term.toLowerCase();
+        if (seenQuick[lower]) return;
+        const hits = lowerText ? countOcc(lowerText, lower) : 0;
+        const linked = entries.find(function(e) { return e.term.toLowerCase() === lower; });
+        if (hits > 0) {
+            seenQuick[lower] = true;
+            hitChipHtml.push(quickChipHtml(term, linked ? linked.cat : '', hits, false, true));
+        }
+    });
+    // 2. Category terms that have hits in the active document
+    entries.forEach(function(entry) {
+        const lower = entry.term.toLowerCase();
+        if (seenQuick[lower]) return;
+        const hits = lowerText ? countOcc(lowerText, lower) : 0;
+        if (hits > 0) {
+            seenQuick[lower] = true;
+            hitChipHtml.push(quickChipHtml(entry.term, entry.cat, hits, entry.custom, false));
+        }
+    });
+
+    let h = '<div class="pt-intext-hits" role="group" aria-label="Treffer-Schlagworte im aktuellen Text">';
+    if (hitChipHtml.length) {
+        h += '<span class="pt-intext-qlabel">Im Text:</span>' + hitChipHtml.slice(0, 14).join('');
+    } else {
+        h += '<span class="pt-intext-qlabel">Keine Standard-Schlagworte im Text gefunden</span>';
+    }
+    h += '<button type="button" class="pt-intext-cat-toggle" id="pt-intext-cat-toggle" aria-expanded="' + (inTextCatalogOpen ? 'true' : 'false') + '">Schlagworte &amp; eigene Begriffe</button>';
+    h += '<div class="pt-intext-cat-panel" id="pt-intext-cat-panel"' + (inTextCatalogOpen ? '' : ' hidden') + '>';
+    h += '<div class="pt-intext-custom-bar">' +
+        '<label class="pt-intext-clabel" for="pt-term-input">Begriff merken:</label>' +
+        '<input id="pt-term-input" type="text" class="pt-term-input" placeholder="Schlagwort (z. B. prompt engineering)" value="' + EC.escapeHtml(appliedInTextQuery || '') + '">' +
+        '<label class="pt-sr-only" for="pt-term-cat">Kategorie für den Suchbegriff</label>' +
+        '<select id="pt-term-cat" class="pt-term-cat">' +
+        ALL_CATS.map(function(c) {
+            return '<option value="' + EC.escapeHtml(c) + '"' + (selectedTermCat === c ? ' selected' : '') + '>' +
+                'Kategorie: ' + EC.escapeHtml(CAT_LABELS[c] || c) + '</option>';
+        }).join('') +
+        '<option value="Allgemein"' + (selectedTermCat === 'Allgemein' ? ' selected' : '') + '>Allgemein (übergreifend)</option>' +
+        '</select>' +
+        '<button type="button" class="pt-btn pt-btn-sm" id="pt-term-save">Zu Kategorie speichern</button>' +
+        '</div>';
+    if (store.history.length) {
+        h += '<div class="pt-intext-cat-group"><span class="pt-intext-gname">Zuletzt verwendet</span><div class="pt-intext-gchips">' +
+            store.history.slice(0, 10).map(function(term) {
+                const lower = term.toLowerCase();
+                const hits = lowerText ? countOcc(lowerText, lower) : 0;
+                const linked = entries.find(function(e) { return e.term.toLowerCase() === lower; });
+                return quickChipHtml(term, linked ? linked.cat : '', hits, false, true);
+            }).join('') + '</div></div>';
+    }
+    ALL_CATS.concat(['Allgemein']).forEach(function(cat) {
+        const catEntries = entries.filter(function(e) { return e.cat === cat; });
+        if (!catEntries.length) return;
+        const label = CAT_LABELS[cat] || 'Allgemein';
+        h += '<div class="pt-intext-cat-group"><span class="pt-intext-gname">' + EC.escapeHtml(label) + '</span><div class="pt-intext-gchips">' +
+            catEntries.map(function(e) {
+                const hits = lowerText ? countOcc(lowerText, e.term.toLowerCase()) : 0;
+                return quickChipHtml(e.term, e.cat, hits, e.custom, false);
+            }).join('') + '</div></div>';
+    });
+    h += '</div></div>';
+    return h;
+}
+
+function refreshInTextQuick() {
+    const doc = document.getElementById('pt-doc');
+    const quick = document.getElementById('pt-intext-quick');
+    const dlist = document.getElementById('pt-intext-list');
+    if (dlist) dlist.innerHTML = searchDatalistOptionsHtml();
+    if (quick) {
+        const plain = doc && docHtmlCurrent ? (doc.textContent || '') : '';
+        quick.innerHTML = inTextQuickHtml(plain);
+        bindInTextQuick(quick);
+    }
+}
+
+function bindInTextQuick(quick) {
+    if (!quick) return;
+    const catToggle = quick.querySelector('#pt-intext-cat-toggle');
+    const catPanel = quick.querySelector('#pt-intext-cat-panel');
+    if (catToggle && catPanel) {
+        catToggle.addEventListener('click', function() {
+            inTextCatalogOpen = !inTextCatalogOpen;
+            catPanel.hidden = !inTextCatalogOpen;
+            catToggle.setAttribute('aria-expanded', inTextCatalogOpen ? 'true' : 'false');
+        });
+    }
+    const catSelect = quick.querySelector('#pt-term-cat');
+    if (catSelect) catSelect.addEventListener('change', function() { selectedTermCat = catSelect.value; });
+    const saveTermBtn = quick.querySelector('#pt-term-save');
+    const termInput = quick.querySelector('#pt-term-input');
+    const saveCustomTerm = function() {
+        const box = document.getElementById('pt-intext');
+        const val = ((termInput && termInput.value.trim()) || (box && box.value.trim()) || '').trim();
+        const cat = (catSelect && catSelect.value) || selectedTermCat || 'Prompting';
+        if (val.length < 2) return;
+        selectedTermCat = cat;
+        rememberSearchTerm(val, cat);
+        if (box) box.value = val;
+        applyInText(val);
+        refreshInTextQuick();
+    };
+    if (saveTermBtn) saveTermBtn.addEventListener('click', saveCustomTerm);
+    if (termInput) termInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') { e.preventDefault(); saveCustomTerm(); }
+    });
+    quick.querySelectorAll('.pt-qchip[data-search-term]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const term = btn.dataset.searchTerm || '';
+            const box = document.getElementById('pt-intext');
+            if (box) box.value = term;
+            rememberSearchTerm(term);
+            applyInText(term);
+            refreshInTextQuick();
+        });
+    });
+    quick.querySelectorAll('.pt-qchip-del[data-del-term]').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            removeSearchTerm(btn.dataset.delTerm, btn.dataset.delCat || '');
+            refreshInTextQuick();
+        });
+    });
+}
+
 function readingShellHtml(p) {
     const authority = p.knowledge_authority || {};
     const layerNote = authority.status === 'preparation'
@@ -3035,13 +3311,17 @@ function readingShellHtml(p) {
         '</div></div>';
     h += '<article class="pt-reading-surface" id="pt-reading-surface" aria-label="Papertext"><div class="pt-read-inner">';
     h += '<div class="pt-intext-bar" id="pt-intext-bar" hidden>' +
-        '<input id="pt-intext" type="search" aria-label="Im Text suchen" aria-keyshortcuts="Enter Shift+Enter" placeholder="Im Text suchen">' +
+        '<div class="pt-intext-row">' +
+        '<input id="pt-intext" type="search" list="pt-intext-list" aria-label="Im Text suchen" aria-keyshortcuts="Enter Shift+Enter" placeholder="Im Text suchen (Begriff tippen oder Schlagwort wählen)">' +
+        '<datalist id="pt-intext-list">' + searchDatalistOptionsHtml() + '</datalist>' +
         '<span class="pt-intext-count" id="pt-intext-count" aria-hidden="true"></span>' +
         '<button type="button" class="pt-intext-nav" id="pt-intext-prev" aria-label="Vorheriger Treffer" hidden>&lsaquo;</button>' +
         '<button type="button" class="pt-intext-nav" id="pt-intext-next" aria-label="Nächster Treffer" hidden>&rsaquo;</button>' +
         (canEdit() ? '<button type="button" class="pt-btn pt-pin-hit" id="pt-pin-hit" disabled aria-describedby="pt-pin-help">Treffer anheften</button>' +
             '<span class="pt-sr-only" id="pt-pin-help">Heftet den aktuellen Treffer als Beleg an eine Kategorie. Eine markierte Textstelle lässt sich ebenso anheften. ' +
             'Ein Paper-Beleg setzt eine leere Kategorie auf teilweise.</span>' : '') +
+        '</div>' +
+        '<div class="pt-intext-quick" id="pt-intext-quick">' + inTextQuickHtml('') + '</div>' +
         '</div>';
     h += '<div class="pt-layer-band" id="pt-layer-band" hidden>' + EC.escapeHtml(layerNote) + '</div>';
     h += '<div class="pt-doc" id="pt-doc"><p class="pt-muted">Text lädt…</p></div>';
@@ -3134,6 +3414,7 @@ function paintActiveLayer() {
     // search and pinning exist only where there is text to search
     const bar = document.getElementById('pt-intext-bar');
     if (bar) bar.hidden = !docHtmlCurrent;
+    if (docHtmlCurrent) refreshInTextQuick();
     const band = document.getElementById('pt-layer-band');
     if (band) band.hidden = !(state.readMode === 'ai' && docHtmlAi);
 }
@@ -3173,6 +3454,13 @@ function applyInText(q) {
     const setStepping = function(on) { stepBtns.forEach(function(b) { b.hidden = !on; }); };
     q = (q || '').trim();
     appliedInTextQuery = q;
+    document.querySelectorAll('#pt-intext-quick .pt-qchip[data-search-term]').forEach(function(btn) {
+        const match = q.length >= 2 && (btn.dataset.searchTerm || '').toLowerCase() === q.toLowerCase();
+        btn.classList.toggle('active', match);
+        btn.setAttribute('aria-pressed', match ? 'true' : 'false');
+    });
+    const termIn = document.getElementById('pt-term-input');
+    if (termIn && document.activeElement !== termIn) termIn.value = q;
     if (q.length < 2) { if (cnt) cnt.textContent = ''; if (pinBtn) pinBtn.disabled = true; setStepping(false); return; }
     const ql = q.toLowerCase();
     const walker = document.createTreeWalker(doc, NodeFilter.SHOW_TEXT, null);
@@ -3290,9 +3578,16 @@ function excludeNeedsNoPin(record, seededFromExpert) {
     return true;
 }
 
+// Human reviewers may save a decision without pinning text passages (pins stay optional and
+// recommended via the dock hint); the AI agent track requires a paper-layer pin per set category.
+function pinsRequiredForRecord(record, seededFromExpert) {
+    if (!record || excludeNeedsNoPin(record, seededFromExpert)) return false;
+    return record.actor === 'agent';
+}
+
 function recordRequirements(dec) {
     if (!dec) return { ok: false, missing: ['Entscheidung'] };
-    const missing = (excludeNeedsNoPin(dec, derivedFromExpert(dec)) ? [] : paperEvidenceMissing(dec.categories || {}, dec.evidence || {}, dec.evidence_basis))
+    const missing = (pinsRequiredForRecord(dec, derivedFromExpert(dec)) ? paperEvidenceMissing(dec.categories || {}, dec.evidence || {}, dec.evidence_basis) : [])
         .map(function(c) { return 'Paper-Beleg: ' + CAT_LABELS[c]; });
     // the formal basis holds only while the record is a formal exclusion
     if (!isFormalExclusion(dec) && Object.keys(dec.evidence_basis || {}).some(function(c) { return dec.evidence_basis[c] === 'formal_exclusion'; }))
@@ -3882,7 +4177,7 @@ function draftReasons(p, subject, mode) {
     if (paperIdentityRequired(p) && !paperIdentityReady(p)) return ['Werk- oder Fassungsbindung fehlt'];
     const reasons = [];
     const record = workingDecisionRecord();
-    const missing = excludeNeedsNoPin(record, !!(work && work.derivedFromExpert)) ? [] : paperEvidenceMissing(record.categories, record.evidence, record.evidence_basis);
+    const missing = pinsRequiredForRecord(record, !!(work && work.derivedFromExpert)) ? paperEvidenceMissing(record.categories, record.evidence, record.evidence_basis) : [];
     if (missing.length) reasons.push('Beleg fehlt für ' + missing.map(function(c) { return CAT_LABELS[c]; }).join(', ') +
         '. Textstelle markieren oder Suchtreffer anheften');
     if (record.decision === 'Exclude' && !record.reason) reasons.push('Ausschlussgrund wählen');
@@ -4031,7 +4326,10 @@ function evidenceRowsHtml(record, editable) {
         summary(expertOnly, 'is-basis', 'Expert:innen-Urteil, ohne Textbeleg');
     }
     summary(formalOnly, 'is-basis', 'Formaler Ausschluss, ohne Textbeleg');
-    if (!editable) summary(missing, 'is-missing', 'Paper-Beleg fehlt'); // while editing, the toggles and the dock hint name it
+    if (!editable) {
+        if (record.actor === 'agent') summary(missing, 'is-missing', 'Paper-Beleg fehlt');
+        else summary(missing, 'is-basis', 'Ohne Textbeleg');
+    }
     if (!rows.length) return '';
     return '<section class="pt-evid" aria-labelledby="pt-evid-title"><h3 class="pt-sub-head" id="pt-evid-title">Belege</h3><ul class="pt-evid-list">' + rows.join('') + '</ul></section>';
 }
@@ -4192,8 +4490,8 @@ function railHtml(p) {
     const basis = record ? (record.evidence_basis || {}) : {};
     // without a record, Lesen has no assignment to list
     if (editable || (record && !(subject.kind === 'empty' && !work.dirty))) {
-        // while editing, a set category without its Paper Beleg is marked at the toggle itself
-        const unbelegt = editable && record && !excludeNeedsNoPin(record, !!(work && work.derivedFromExpert))
+        // while editing in an agent session, a set category without its Paper Beleg is marked at the toggle itself
+        const unbelegt = editable && record && pinsRequiredForRecord(record, !!(work && work.derivedFromExpert))
             ? paperEvidenceMissing(cats, record.evidence, basis) : [];
         h += dimHtml('Gegenstand', TECH_CATS, cats, editable, basis, unbelegt);
         h += dimHtml('Perspektive', SOCIAL_CATS, cats, editable, basis, unbelegt);
@@ -4439,16 +4737,26 @@ function attachScreening(p) {
     if (intext) {
         const runIntext = debounce(function() { applyInText(intext.value); }, 120);
         intext.addEventListener('input', runIntext);
+        intext.addEventListener('change', function() {
+            const query = intext.value.trim();
+            if (query.length >= 2) {
+                rememberSearchTerm(query);
+                refreshInTextQuick();
+            }
+        });
         intext.addEventListener('keydown', function(e) {
             if (e.key !== 'Enter') return;
             e.preventDefault();
             const query = intext.value.trim();
+            if (query.length >= 2) rememberSearchTerm(query);
             if (query !== appliedInTextQuery) {
                 runIntext.cancel();
                 applyInText(query);
+                refreshInTextQuick();
             } else if (docMarks.length) setActiveMark(docMarkIdx + (e.shiftKey ? -1 : 1));
         });
     }
+    bindInTextQuick(document.getElementById('pt-intext-quick'));
     const prev = document.getElementById('pt-intext-prev');
     if (prev) prev.addEventListener('click', function() { if (docMarks.length) setActiveMark(docMarkIdx - 1); });
     const next = document.getElementById('pt-intext-next');
@@ -5243,8 +5551,11 @@ const TEST_HOOK = {
     setCorpusIndex: function(x) { corpusIndex = x; }, isScreenable: isScreenable, firstEntryIndex: firstEntryIndex,
     startIndexForPaper: startIndexForPaper,
     evidenceLayer: evidenceLayer, isPaperEvidence: isPaperEvidence,
-    paperEvidenceMissing: paperEvidenceMissing,
+    paperEvidenceMissing: paperEvidenceMissing, pinsRequiredForRecord: pinsRequiredForRecord,
     recordRequirements: recordRequirements, workingDecisionRecord: workingDecisionRecord,
+    DEFAULT_SEARCH_TERMS: DEFAULT_SEARCH_TERMS, readSearchTerms: readSearchTerms,
+    rememberSearchTerm: rememberSearchTerm, removeSearchTerm: removeSearchTerm,
+    inTextQuickHtml: inTextQuickHtml, dockHintText: dockHintText,
     // PRISM lifecycle verification (kept separate from ordinary screening commits)
     LIFECYCLE_STATES: LIFECYCLE_STATES, verificationView: verificationView, legacyBaseline: legacyBaseline,
     ensureVerificationContract: ensureVerificationContract, advanceVerification: advanceVerification,

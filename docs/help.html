@@ -32,7 +32,6 @@
                     <span class="nav-sep"></span>
                     <a href="prisma.html" class="nav-link" data-tip-key="prisma">PRISM</a>
                     <a href="about.html" class="nav-link" data-tip-key="about">About</a>
-                    <a href="methoden.html" class="nav-link" data-tip-key="methoden">Methoden</a>
                     <a href="help.html" class="nav-link nav-link-active" data-tip-key="help">Hilfe</a>
                     <span class="nav-sep"></span>
                     <a href="https://github.com/chpollin/FemPrompt_SozArb" class="nav-link nav-link-ext" target="_blank" rel="noopener" aria-label="Repository" data-tip-key="repo"><i class="fas fa-code-branch" aria-hidden="true"></i></a>
@@ -68,12 +67,14 @@
 
             <h3><i class="fas fa-comments"></i> Wissens-Chat</h3>
             <p>Stellen Sie Fragen an das synthetisierte Wissen des Korpus. Die Antworten werden von
-            Gemini 3 Flash generiert, mit Kontext aus dem Forschungskorpus.</p>
-            <p><strong>Wichtig:</strong> Die Antworten sind zweifach LLM-vermittelt -- einmal durch die
-            Wissensextraktion (Claude Haiku 4.5), einmal durch die Antwortgenerierung (Gemini 3 Flash).
-            Inline-Zitationen (z.B. <em>Zakharova et al. (2024)</em>) sind klickbar und fuehren direkt
-            zum Paper im Korpus zur Verifikation.</p>
-            <p>Sie benoetigen einen <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI API Key</a>. Der Key bleibt bis zum Schliessen des Browser-Tabs im Sitzungsspeicher. Eine Frage und die dafuer ausgewaehlten Forschungsdaten werden beim Absenden direkt an die Google API uebertragen.</p>
+            Gemini 3 Flash mit Kontext aus dem Forschungskorpus generiert.</p>
+            <p>Die Antworten sind zweifach LLM-vermittelt, zuerst durch die Wissensextraktion (Claude Haiku 4.5)
+            und danach durch die Antwortgenerierung (Gemini 3 Flash). Inline-Zitationen wie
+            <em>Zakharova et al. (2024)</em> sind klickbar und führen direkt zum Werk im Korpus zur
+            Verifikation.</p>
+            <p>Sie benötigen einen <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI API Key</a>.
+            Der Schlüssel bleibt bis zum Schließen des Browser-Tabs im Sitzungsspeicher. Eine Frage und die
+            dafür ausgewählten Forschungsdaten werden beim Absenden direkt an die Google API übertragen.</p>
 
             <h3><i class="fas fa-project-diagram"></i> Wissensnetz</h3>
             <p>Die zehn Screening-Kategorien als Netz. Ein Knoten ist eine Kategorie, seine Größe folgt der Zahl der Werke mit dieser Kategorie. Eine Linie verbindet zwei Kategorien, die in denselben Werken codiert sind, und wird mit der Zahl dieser Werke dicker. Sie zeigt gemeinsame Codierung und behauptet keine Beziehung zwischen den Kategorien.</p>
@@ -176,7 +177,7 @@
             ihr Dateiname nennt die gewählte Stufe oder Arbeitsliste. Alle Filter stehen in der URL, ein Link
             öffnet dieselbe Auswahl.</p>
 
-            <h3><i class="fas fa-keyboard"></i> Tastaturkuerzel</h3>
+            <h3><i class="fas fa-keyboard"></i> Tastaturkürzel</h3>
             <table class="help-shortcuts">
                 <tr><td><kbd>/</kbd></td><td>Suche fokussieren</td></tr>
                 <tr><td><kbd>Esc</kbd></td><td>Detail schließen</td></tr>
@@ -190,62 +191,76 @@
 
             <h4>Einrichtung</h4>
             <ol>
-                <li>Klone das Repositorium mit GitHub Desktop in einen kurzen Pfad wie <code>C:\femprompt</code>.</li>
+                <li>Klone das Repositorium mit GitHub Desktop in deinen lokalen Ordner
+                    <code>Dokumente\GitHub\FemPrompt_SozArb</code> (oder einen kurzen Pfad wie <code>C:\femprompt</code>).</li>
                 <li>Installiere Python und führe im Klon einmal
                     <code>python -m pip install -r requirements-build.txt</code> aus, wie die README beschreibt.</li>
-                <li>Starte PRISM mit einem Doppelklick auf <code>start-prism.cmd</code> im Klon. Das Fenster baut die
-                    Volltexte, öffnet PRISM im Browser und muss offen bleiben, solange du arbeitest. Bewertungen
-                    landen direkt im Klon, einen Ordner wählst du nicht.</li>
-                <li>Wähle &bdquo;Bearbeiten&ldquo; und dann dein Profil (Sabine, Susi oder Chrisi). PRISM schreibt ausschließlich
-                    <code>docs/data/screening/&lt;Kennung&gt;.json</code> mit der Kennung aus deinem Zuteilungslink.</li>
+                <li>Starte PRISM im Terminal oder per Doppelklick mit <code>start-prism.cmd</code> im Klon. Das
+                    Fenster baut die Lesefassung auf, öffnet PRISM im Browser und bleibt offen, solange du
+                    arbeitest. Bewertungen landen direkt im Klon, einen Ordner wählst du nicht.</li>
+                <li>Wähle &bdquo;Bearbeiten&ldquo; und dann dein Profil (Sabine, Susi oder Chrisi). PRISM schreibt
+                    ausschließlich <code>docs/data/screening/&lt;Kennung&gt;.json</code> mit der Kennung deines Profils.</li>
             </ol>
 
             <h4>Arbeiten</h4>
-            <p>Die linke Spalte listet alle Dokumente. Der Statusfilter &bdquo;Alle | Offen | Erfasst&ldquo; und
-            die Kategorie-Chips in den Kategoriefarben grenzen die Liste ein. Die Chips wirken auf die Kategorien
+            <p>Die linke Spalte listet alle Werke. Zotero-Dubletten zum selben Werk sind auf den bevorzugten
+            Haupteintrag zusammengeführt. Der Statusfilter &bdquo;Alle | Offen | Erfasst&ldquo; und die
+            Kategorie-Chips in den Kategoriefarben grenzen die Liste ein. Die Chips wirken auf die Kategorien
             der aktuellen Annotation, mehrere Chips kombinieren sich. &bdquo;Erfasst&ldquo; bedeutet, dass eine
             Expert:innen-Entscheidung aus dem Excel-Workflow oder eine in PRISM gespeicherte Bewertung vorliegt.
-            Alle übrigen Dokumente sind offen.
-            Filter und geöffnetes Dokument stehen in der URL, die Zurück-Taste des Browsers führt zum vorigen Dokument.
-            In der Liste wechseln die Pfeiltasten den Eintrag, die Eingabetaste öffnet ihn. Farbige Punkte am Listeneintrag
-            zeigen die Kategorien der aktuellen Annotation, eine kleine Marke den Stand.</p>
+            Alle übrigen Werke sind offen. Filter und geöffnetes Werk stehen in der URL, die Zurück-Taste des
+            Browsers führt zum vorigen Werk. In der Liste wechseln die Pfeiltasten den Eintrag, die Eingabetaste
+            öffnet ihn. Farbige Punkte am Listeneintrag zeigen die Kategorien der aktuellen Annotation, eine
+            kleine Marke den Stand.</p>
             <ul>
                 <li>Keine Marke heißt offen.</li>
                 <li>Ein grauer Haken heißt erfasst durch die Expert:innen-Entscheidung.</li>
                 <li>Ein farbiger Haken heißt erfasst in PRISM.</li>
             </ul>
-            <p>Die offenen Dokumente sind zwischen Sabine, Susi und Chrisi aufgeteilt. Der Filter &bdquo;Zuteilung&ldquo;
-            neben dem Statusfilter zeigt &bdquo;Alle&ldquo; oder nur die Dokumente einer Bearbeiterin und lässt sich
-            mit Status und Kategorien kombinieren. Unter &bdquo;Erfasst&ldquo; entfällt er, weil die Zuteilung nur
-            offene Dokumente betrifft. Unter &bdquo;Alle&ldquo; nennt jeder Listeneintrag die Bearbeiterin. Unter &bdquo;Offen&ldquo; stehen die Dokumente mit Volltext vorn, dann die mit nur einem Abstract, zuletzt die ohne Papertext. Die beiden letzten Gruppen sind im Listeneintrag benannt.</p>
+            <p>Die offenen Werke sind zwischen Sabine, Susi und Chrisi aufgeteilt. Beim Wechsel des Profils
+            setzt PRISM automatisch den passenden Zuteilungsfilter und öffnet das erste Werk der eigenen Liste.
+            Der Filter &bdquo;Zuteilung&ldquo; neben dem Statusfilter zeigt &bdquo;Alle&ldquo; oder nur die
+            Werke einer Person und lässt sich mit Status und Kategorien kombinieren. Unter &bdquo;Erfasst&ldquo;
+            entfällt er, weil die Zuteilung nur offene Werke betrifft. Unter &bdquo;Alle&ldquo; nennt jeder
+            Listeneintrag die zugeteilte Person. Unter &bdquo;Offen&ldquo; stehen die Werke mit Volltext vorn,
+            dann die mit nur einem Abstract, zuletzt die ohne Papertext. Die beiden letzten Gruppen sind im
+            Listeneintrag benannt.</p>
+            <p>Über dem Lesetext steht die Volltextsuche mit Autovervollständigung und kategorisierten
+            Suchbegriffen. Unter dem Suchfeld zeigt PRISM für die zehn Kategorien sowie für zuletzt gesuchte
+            Begriffe nur diejenigen Schlagworte als anklickbare Chips, die im aktuellen Text tatsächlich
+            vorkommen, jeweils mit ihrer Trefferzahl im Dokument. Ein Klick auf einen Chip springt direkt zum
+            ersten Treffer im Text und färbt die Fundstellen in der Farbe der zugehörigen Kategorie ein. Über
+            die Schaltfläche &bdquo;+ Begriff&ldquo; lässt sich jeder aktuell eingetippte Suchbegriff einer der
+            zehn Kategorien zuordnen und dauerhaft im Browser hinterlegen, sodass eigene Suchbegriffe für
+            Prompting, Bias, Gender, Diversität oder Methoden beim nächsten Paper sofort wieder mit Trefferzahl
+            angeboten werden.</p>
             <p>Das Panel &bdquo;Bewertung&ldquo; zeigt die aktuelle Annotation mit einer Herkunftszeile, etwa
             &bdquo;Vorbelegt: Expert:innen-Entscheidung&ldquo;, &bdquo;Noch keine Bewertung&ldquo; oder
             &bdquo;Deine Bewertung, gespeichert &lt;Datum&gt;&ldquo;. Die aus den Kategorien abgeleitete
             Entscheidung (Include, Exclude, Unclear) steht im Kopf des Panels. Ein Stift daneben heißt nicht
-            gespeichert, ein Haken gespeichert. Beruht die Bewertung nur auf dem Abstract oder auf keinem Papertext,
-            steht das als Warnung darunter. Im Modus &bdquo;Lesen&ldquo; nennt das Panel nur die vergebenen
-            Kategorien. Im Modus &bdquo;Bearbeiten&ldquo; sind alle zehn Kategorien farbige Schalter in den Gruppen
-            Gegenstand und Perspektive. Hat ein Schalter den Fokus oder steht der Mauszeiger darauf, erscheinen
-            darunter die Definition aus dem Codebuch und was nicht zählt. Ein Klick setzt eine Kategorie auf ja oder
-            schaltet sie ab. Die Stufe teilweise erscheint als hellerer Schalter, sobald ein Paper-Beleg an eine leere
-            Kategorie geheftet ist, ein Klick hebt sie auf ja. Für die Bewertung gilt:</p>
+            gespeichert, ein Haken gespeichert. Beruht die Bewertung nur auf dem Abstract oder auf keinem
+            Papertext, steht das als Warnung darunter. Im Modus &bdquo;Lesen&ldquo; nennt das Panel nur die
+            vergebenen Kategorien. Im Modus &bdquo;Bearbeiten&ldquo; sind alle zehn Kategorien farbige Schalter
+            in den Gruppen Gegenstand (AI Literacies, Generative KI, Prompting, KI Sonstige) und Perspektive
+            (Soziale Arbeit, Bias &amp; Ungleichheit, Gender, Diversität, Feministisch, Fairness). Hat ein
+            Schalter den Fokus oder steht der Mauszeiger darauf, erscheinen darunter die Definition aus dem
+            Codebuch und was nicht zählt. Ein Klick setzt eine Kategorie auf ja, auf teilweise oder schaltet
+            sie ab. Für die Bewertung gilt die folgende Regelung.</p>
             <ul>
-                <li>Eine unverändert übernommene Kategorie der Expert:innen-Entscheidung zählt ohne Textstelle und
-                    ist als &bdquo;Expert:innen-Urteil, ohne Textbeleg&ldquo; markiert.</li>
-                <li>Jede Kategorie, die du ergänzt oder anhebst, braucht einen Paper-Beleg. Du markierst eine
-                    Textstelle oder heftest den aktuellen Treffer der Suche im Text mit &bdquo;Treffer
-                    anheften&ldquo; an. Belege aus dem LLM-Wissensdestillat zählen nicht. Eine gesetzte Kategorie
-                    ohne Beleg ist gestrichelt umrandet.</li>
-                <li>Bei einem formalen Ausschluss, also Duplikat, Falscher Publikationstyp, Kein Volltext oder
-                    Sprache, brauchen die Kategorien keinen Beleg. Sie werden als &bdquo;Formaler Ausschluss, ohne
-                    Textbeleg&ldquo; gespeichert. &bdquo;Thema nicht einschlägig&ldquo; ist ein inhaltlicher Grund
-                    und braucht die Belege.</li>
-                <li>Exclude braucht einen Ausschlussgrund. Für eine bestätigte Expert:innen-Exclude-Entscheidung
-                    steht &bdquo;Expert:innen-Entscheidung übernommen&ldquo; bereit. &bdquo;Abweichend
-                    einschließen&ldquo; braucht eine kurze Begründung.</li>
-                <li>Haben die Expert:innen ausgeschlossen, obwohl ihre Kategorien Include ergäben, steht das als eine
-                    Zeile im Kopf des Panels. Im Modus &bdquo;Bearbeiten&ldquo; öffnet &bdquo;Ausschluss ändern&ldquo;
-                    den Schalter und die Ausschlussgründe.</li>
+                <li>Include folgt automatisch, sobald mindestens eine Kategorie unter Gegenstand und mindestens
+                    eine Kategorie unter Perspektive auf ja stehen.</li>
+                <li>Im menschlichen Screening sind Textbelege aus dem Paper optional. Du kannst Kategorien direkt
+                    setzen und die Bewertung ohne Textbeleg speichern oder zur Untermauerung eine Textstelle im
+                    Paper markieren beziehungsweise den aktuellen Suchtreffer mit &bdquo;Treffer anheften&ldquo;
+                    an eine Kategorie heften. Das Textauswahl-Dock und die Suchleiste weisen auf diese Möglichkeit
+                    hin, ohne das Speichern zu blockieren.</li>
+                <li>Exclude braucht einen Ausschlussgrund (Duplikat, Thema nicht einschlägig, Falscher
+                    Publikationstyp, Kein Volltext oder Sprache). Für eine bestätigte
+                    Expert:innen-Exclude-Entscheidung steht &bdquo;Expert:innen-Entscheidung übernommen&ldquo;
+                    bereit. &bdquo;Abweichend einschließen&ldquo; erlaubt einen begründeten Override.</li>
+                <li>Haben die Expert:innen ausgeschlossen, obwohl ihre Kategorien Include ergäben, steht das als
+                    eine Zeile im Kopf des Panels. Im Modus &bdquo;Bearbeiten&ldquo; öffnet &bdquo;Ausschluss
+                    ändern&ldquo; den Schalter und die Ausschlussgründe.</li>
             </ul>
             <p>Der Papertext beginnt nach einem Verlagsdeckblatt (etwa Taylor &amp; Francis oder ACM) beim ersten
             Abschnitt des Artikels. Autor:innen- und Affiliationszeilen am Textanfang erscheinen klein und
@@ -253,14 +268,16 @@
             Konverter als Glyphencode wie <code>/C15</code> hinterlassen hat, als Zeichen. Die gespeicherte
             Textfassung bleibt unverändert.</p>
             <p>PRISM zeigt keine KI-Vorbewertung. In PRISM vergibst du die Kategorien und entscheidest über Einschluss
-            oder Ausschluss. Die Analysefelder eingeschlossener Dokumente kodieren ausschließlich KI-Agenten.</p>
-            <p>Gespeichert wird mit &bdquo;Speichern&ldquo; unten im Panel oder mit Strg+S. Was noch fehlt, steht
-            darüber. Ist die Bewertung noch unvollständig, springt ein Klick auf &bdquo;Speichern&ldquo; zur ersten
-            offenen Stelle. Bei einer vorbelegten oder leeren Bewertung schreibt es deine eigene Bewertung. Nicht
-            gespeicherte Änderungen behält der Browser je Dokument.</p>
-            <p>Nach der Arbeit committest du in GitHub Desktop deine Datei
-            <code>docs/data/screening/&lt;Kennung&gt;.json</code> mit der Kennung aus deinem Zuteilungslink und pushst sie. Andere
-            geänderte Dateien committest du nicht. PRISM führt keine Git-Aktion aus.</p>
+            oder Ausschluss. Die Analysefelder eingeschlossener Werke kodieren ausschließlich KI-Agenten.</p>
+            <p>Gespeichert wird mit &bdquo;Speichern&ldquo; unten im Panel oder mit Strg+S. Was noch fehlt, etwa ein
+            Ausschlussgrund bei Exclude, steht darüber. Ist die Bewertung noch unvollständig, springt ein Klick
+            auf &bdquo;Speichern&ldquo; zur ersten offenen Stelle. Bei einer vorbelegten oder leeren Bewertung
+            schreibt es deine eigene Bewertung direkt in <code>docs/data/screening/&lt;Kennung&gt;.json</code>.
+            Nicht gespeicherte Änderungen behält der Browser je Werk.</p>
+            <p>Vor jeder Sitzung klickst du in GitHub Desktop auf Fetch origin (und bei neuen Änderungen auf Pull
+            origin). Nach der Arbeit prüfst du unter Changes, dass nur deine Datei
+            <code>docs/data/screening/&lt;Kennung&gt;.json</code> geändert ist, trägst eine kurze Commit-Nachricht
+            mit Namenskürzel ein, klickst auf Commit to main und danach auf Push origin.</p>
         </article>
     </main>
 

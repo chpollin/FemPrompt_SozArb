@@ -13,7 +13,7 @@
         vergleich: 'Landkarte der Screening-Kategorien, Gegenstand gegen Perspektive, wahlweise nach Werken, Einschluss, Übereinstimmung von Expert:innen und LLM oder Aktualität. Eine Zelle zeigt ihre Werke.',
         korpus: 'Alle erfassten Werke mit ihrem Stand in Screening und Auswertung, mit Arbeitslisten, Filtern und Export der Auswahl.',
         prisma: 'PRISM, das Prüfwerkzeug für Screening, Codierung und fachliche Verifikation. Lokal bearbeitbar, gespeichert wird in den eigenen Projektordner.',
-        about: 'Projekt, Beteiligte und Prüfstufen des Reviews.',
+        about: 'Projekt, Beteiligte, Methodik und Prüfstufen des Reviews.',
         methoden: 'Methodik des Reviews von der Suche über das Screening bis zur Analyse.',
         help: 'Anleitung zu den Ansichten und ihrer Bedienung.',
         repo: 'Repository des Projekts auf GitHub.',

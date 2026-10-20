@@ -1124,15 +1124,20 @@ try {
   check('the work lists offer every gap and the open split by reviewer',
     (await page.$$eval('#gap-list button', (b) => b.map((x) => x.dataset.stage))).sort().join() === gapKeys.sort().join());
   for (const key of [...gapKeys, ...AUSWERTUNG_KEYS, ...SUB_KEYS]) {
-    await page.locator(`#view-korpus button[data-stage="${key}"]`).click();
-    const ids = await page.$$eval('#papers-grid tr[data-id]', (rows) => rows.map((row) => row.dataset.id));
     const expectedIds = corpus.filter(stageRules[key]);
+    const btn = page.locator(`#view-korpus button[data-stage="${key}"]`);
+    if (expectedIds.length === 0) {
+      check(`the empty filter ${key} is disabled`, await btn.isDisabled(), `${key}: ${expectedIds.length}`);
+      continue;
+    }
+    await btn.click();
+    const ids = await page.$$eval('#papers-grid tr[data-id]', (rows) => rows.map((row) => row.dataset.id));
     check(`the filter ${key} lists exactly its works`,
       await resultCount() === expectedIds.length && hashParams().get('stage') === key &&
-      await page.locator(`#view-korpus button[data-stage="${key}"]`).getAttribute('aria-pressed') === 'true' &&
+      await btn.getAttribute('aria-pressed') === 'true' &&
       ids.every((id) => stageRules[key](corpus.find((p) => p.id === id))),
       `${await resultCount()}/${expectedIds.length}`);
-    await page.locator(`#view-korpus button[data-stage="${key}"]`).click();
+    await btn.click();
   }
   check('pressing the active stage again clears it', await resultCount() === corpus.length && !hashParams().has('stage'));
 
@@ -1216,7 +1221,8 @@ try {
       [contested.id]: { ...bind(contested), decision: 'Include', ts: '2026-10-03T09:00:00.000Z', actor: 'human' },
       [openA.id]: { ...bind(openA), decision: 'Exclude', ts: '2026-10-01T09:00:00.000Z', actor: 'human' },
     } };
-    const fixture = { [revA]: fileA, [revB]: fileB };
+    const diskFiles = Object.fromEntries(assignment.reviewers.map((r) => [r.key, readOptional(`screening/${r.key}.json`)]));
+    const fixture = { ...diskFiles, [revA]: fileA, [revB]: fileB };
     const fixtureRecords = reviewerRecords(fixture);
     const { rules: fixtureRules } = rulesFor(fixtureRecords);
     const fixtureCounts = countsBy(fixtureRules, corpus);

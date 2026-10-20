@@ -51,7 +51,7 @@ def test_every_nav_item_carries_a_tooltip() -> None:
         assert nav, filename
         items = re.findall(r"<(?:a|button)\b[^>]*>", nav.group(0))
         assert not any('href="onboarding.html"' in item for item in items), filename
-        assert len(items) == 11, filename
+        assert len(items) == 10, filename
         for item in items:
             key = re.search(r'data-tip-key="([^"]+)"', item)
             assert key and key.group(1) in defined, (filename, item)
