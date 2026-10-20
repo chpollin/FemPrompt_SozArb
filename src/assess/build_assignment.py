@@ -73,12 +73,34 @@ def screening_state(screening_dir: Path) -> tuple[set[str], set[str]]:
     return human, agent
 
 
+def _representative(group: list[dict], agent: set[str]) -> dict:
+    return min(
+        group,
+        key=lambda p: (
+            not bool(p.get("is_preferred_version", True)),
+            not bool(p.get("doi")),
+            not bool(p.get("abstract")),
+            p["id"] not in agent,
+        ),
+    )
+
+
 def open_papers(papers: list[dict], human: set[str], agent: set[str]) -> list[tuple[str, str]]:
     """Open papers in corpus order as (paper id, kind), kind 'agent' or 'unassessed'."""
+    by_work: dict[str, list[dict]] = {}
+    for paper in papers:
+        wid = paper.get("work_id") or paper["id"]
+        by_work.setdefault(wid, []).append(paper)
+    representatives: set[str] = set()
+    for group in by_work.values():
+        if any((p.get("human") or {}).get("decision") in DECIDED or p["id"] in human for p in group):
+            continue
+        rep = _representative(group, agent)
+        representatives.add(rep["id"])
     result = []
     for paper in papers:
         pid = paper["id"]
-        if (paper.get("human") or {}).get("decision") in DECIDED or pid in human:
+        if pid not in representatives:
             continue
         result.append((pid, "agent" if pid in agent else "unassessed"))
     return result

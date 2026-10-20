@@ -2781,6 +2781,29 @@ test('paperBodyMarkdown: reconstructs headings and inline fragments for direct a
     assertContains(out, '### 2.1 Complex Interactive Reasoning', 'subsection formatted as h3');
 });
 
+test('substantive Exclude (Not_relevant_topic) saves clicked categories without requiring a Paper Beleg', function() {
+    var p = { id: 'EX_SUB', title: 'Tech Paper', work_id: W1, version_id: V1, version_type: 'version_of_record',
+        preferred_version_id: V1, is_preferred_version: true };
+    T.setPapers([p]);
+    var S = T.getState();
+    S.reviewer = 'cp'; S.reviewers.cp = {}; S.index = 0;
+    T.setTextSource('clean');
+    T.setWork(T.draftFor(p));
+    // Matches the user screenshot: clicked categories (ja = 2) with override -> Exclude + Not_relevant_topic
+    T.getWork().cats = { Generative_KI: 2, Prompting: 2, Soziale_Arbeit: 2, Bias_Ungleichheit: 2 };
+    T.getWork().override = true;
+    T.getWork().reason = 'Not_relevant_topic';
+    T.markDirty();
+    var rec = T.workingDecisionRecord();
+    assertEqual(rec.decision, 'Exclude');
+    assertEqual(T.recordRequirements(rec).ok, true, 'Exclude with Not_relevant_topic needs no Paper Beleg');
+    assertEqual(T.saveGate(p).reasons.length, 0, 'saveGate has no draftReasons blocking Exclude without pins');
+    var rail = T.railHtml(p);
+    assertNotContains(rail, 'is-unbacked', 'set categories on Exclude do not show dashed unbelegt border');
+    assertEqual(T.commit(), true, 'Exclude with categories and no pins saves cleanly');
+    delete S.reviewers.cp;
+});
+
 // ============================================================
 // Restore localStorage and report
 // ============================================================

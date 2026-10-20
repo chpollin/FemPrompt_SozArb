@@ -2494,6 +2494,16 @@ function matchesStatusFilter(p, status) {
     return true;
 }
 
+function isDuplicateWorkAlias(p) {
+    if (!p || !p.work_id || isDone(p) || acceptanceMode) return false;
+    return papers.some(function(other) {
+        if (other === p || other.work_id !== p.work_id) return false;
+        if (isDone(other)) return true;
+        if (assignment && assignment.byPaper[other.id] && !assignment.byPaper[p.id]) return true;
+        return false;
+    });
+}
+
 // Rows before the status filter: the corpus search (if any) and the category filter.
 function baseRows() {
     let rows = papers.map(function(p, index) { return { paper: p, index: index, kind: '', count: 0 }; });
@@ -2501,6 +2511,8 @@ function baseRows() {
     if (corpusQuery.trim() && corpusIndex) {
         rows = corpusSearchResults(corpusQuery);
         if (acceptanceMode) rows = rows.filter(function(row) { return !!curDec()[row.paper.id]; });
+    } else if (!acceptanceMode) {
+        rows = rows.filter(function(row) { return !isDuplicateWorkAlias(row.paper); });
     }
     return rows.filter(function(row) { return matchesCategoryFilter(row.paper); });
 }
@@ -2797,6 +2809,12 @@ function bindFilters() {
     filters.querySelectorAll('[data-assignee]').forEach(function(btn) {
         btn.addEventListener('click', function() {
             state.assigneeFilter = btn.dataset.assignee;
+            const rows = visibleRows();
+            if (rows.length && !rows.some(function(r) { return r.index === state.index; })) {
+                state.index = rows[0].index;
+                renderScreening();
+                return;
+            }
             refreshCorpusList();
             syncUrl();
             const again = document.querySelector('.pt-nav [data-assignee="' + state.assigneeFilter + '"]');
@@ -3142,9 +3160,15 @@ function paperEvidenceMissing(cats, evidence, basis) {
     });
 }
 
+function excludeNeedsNoPin(record, seededFromExpert) {
+    if (!record || record.decision !== 'Exclude') return false;
+    if (seededFromExpert || record.reason === EXPERT_EXCLUSION_REASON) return false;
+    return true;
+}
+
 function recordRequirements(dec) {
     if (!dec) return { ok: false, missing: ['Entscheidung'] };
-    const missing = paperEvidenceMissing(dec.categories || {}, dec.evidence || {}, dec.evidence_basis)
+    const missing = (excludeNeedsNoPin(dec, derivedFromExpert(dec)) ? [] : paperEvidenceMissing(dec.categories || {}, dec.evidence || {}, dec.evidence_basis))
         .map(function(c) { return 'Paper-Beleg: ' + CAT_LABELS[c]; });
     // the formal basis holds only while the record is a formal exclusion
     if (!isFormalExclusion(dec) && Object.keys(dec.evidence_basis || {}).some(function(c) { return dec.evidence_basis[c] === 'formal_exclusion'; }))
@@ -3734,7 +3758,7 @@ function draftReasons(p, subject, mode) {
     if (paperIdentityRequired(p) && !paperIdentityReady(p)) return ['Werk- oder Fassungsbindung fehlt'];
     const reasons = [];
     const record = workingDecisionRecord();
-    const missing = paperEvidenceMissing(record.categories, record.evidence, record.evidence_basis);
+    const missing = excludeNeedsNoPin(record, !!(work && work.derivedFromExpert)) ? [] : paperEvidenceMissing(record.categories, record.evidence, record.evidence_basis);
     if (missing.length) reasons.push('Beleg fehlt für ' + missing.map(function(c) { return CAT_LABELS[c]; }).join(', ') +
         '. Textstelle markieren oder Suchtreffer anheften');
     if (record.decision === 'Exclude' && !record.reason) reasons.push('Ausschlussgrund wählen');
@@ -3847,6 +3871,7 @@ function evidenceRowsHtml(record, editable) {
     const dotOf = function(c) {
         return '<span class="chip-dot" aria-hidden="true" style="--chip-color:' + EC.escapeHtml(CAT_COLOR[c] || '') + '"></span>';
     };
+    const noPinNeeded = excludeNeedsNoPin(record, false);
     ALL_CATS.forEach(function(c) {
         const pins = evidence[c] || [];
         const level = catLevel((record.categories || {})[c]);
@@ -3854,7 +3879,7 @@ function evidenceRowsHtml(record, editable) {
         const dot = dotOf(c);
         const label = '<span class="pt-evid-cat">' + EC.escapeHtml(CAT_LABELS[c]) + '</span>';
         if (!pins.length) {
-            (basis[c] === 'expert_assessment' ? expertOnly : (basis[c] === 'formal_exclusion' ? formalOnly : missing)).push(c);
+            (basis[c] === 'expert_assessment' ? expertOnly : ((basis[c] === 'formal_exclusion' || noPinNeeded) ? formalOnly : missing)).push(c);
             return;
         }
         pins.forEach(function(ev, i) {
@@ -4044,7 +4069,8 @@ function railHtml(p) {
     // without a record, Lesen has no assignment to list
     if (editable || (record && !(subject.kind === 'empty' && !work.dirty))) {
         // while editing, a set category without its Paper Beleg is marked at the toggle itself
-        const unbelegt = editable && record ? paperEvidenceMissing(cats, record.evidence, basis) : [];
+        const unbelegt = editable && record && !excludeNeedsNoPin(record, !!(work && work.derivedFromExpert))
+            ? paperEvidenceMissing(cats, record.evidence, basis) : [];
         h += dimHtml('Gegenstand', TECH_CATS, cats, editable, basis, unbelegt);
         h += dimHtml('Perspektive', SOCIAL_CATS, cats, editable, basis, unbelegt);
     }
@@ -4723,7 +4749,12 @@ function renderData(targetEl) {
         group.querySelectorAll('[data-reviewer]').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 if (!selectReviewer(btn.dataset.reviewer)) return;
-                if (assigneeFilterAvailable()) { state.assigneeFilter = state.reviewer; saveLocal(); }
+                if (assigneeFilterAvailable()) {
+                    state.assigneeFilter = state.reviewer;
+                    const rows = visibleRows();
+                    if (rows.length && !rows.some(function(r) { return r.index === state.index; })) state.index = rows[0].index;
+                    saveLocal();
+                }
                 changingKey = false;
                 if (screeningHandle) setConnectedSaveStatus();
                 renderData(el);
