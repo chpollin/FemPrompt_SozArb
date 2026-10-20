@@ -2787,6 +2787,9 @@ test('substantive Exclude (Not_relevant_topic) saves clicked categories without 
     T.setPapers([p]);
     var S = T.getState();
     S.reviewer = 'cp'; S.reviewers.cp = {}; S.index = 0;
+    T.setManifestReachable(true); T.setFsSupported(true);
+    T.setScreeningHandle({ kind: 'directory', name: 'screening' });
+    T.setEditMode(true);
     T.setTextSource('clean');
     T.setWork(T.draftFor(p));
     // Matches the user screenshot: clicked categories (ja = 2) with override -> Exclude + Not_relevant_topic
@@ -2797,10 +2800,13 @@ test('substantive Exclude (Not_relevant_topic) saves clicked categories without 
     var rec = T.workingDecisionRecord();
     assertEqual(rec.decision, 'Exclude');
     assertEqual(T.recordRequirements(rec).ok, true, 'Exclude with Not_relevant_topic needs no Paper Beleg');
-    assertEqual(T.saveGate(p).reasons.length, 0, 'saveGate has no draftReasons blocking Exclude without pins');
+    assertEqual(T.saveGate(p).ok, true, 'saveGate allows saving Exclude without pins');
     var rail = T.railHtml(p);
-    assertNotContains(rail, 'is-unbacked', 'set categories on Exclude do not show dashed unbelegt border');
+    assertNotContains(rail, 'pt-chip-unbelegt', 'set categories on Exclude do not show dashed unbelegt border');
     assertEqual(T.commit(), true, 'Exclude with categories and no pins saves cleanly');
+    T.setEditMode(false);
+    T.setScreeningHandle(null);
+    T.setManifestReachable(false); T.setFsSupported(undefined);
     delete S.reviewers.cp;
 });
 
