@@ -97,5 +97,5 @@ def test_committed_file_is_current_and_balanced():
     )
     assert committed == document
     counts = Counter(committed["assignments"].values())
-    assert counts["chrisi"] == 3
-    assert abs(counts["sabine"] - counts["susi"]) <= 2
+    assert counts["chrisi"] == 6
+    assert abs(counts["sabine"] - counts["susi"]) <= 1

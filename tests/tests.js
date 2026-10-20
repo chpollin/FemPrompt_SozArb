@@ -2746,6 +2746,41 @@ test('paper head: the DOI is shown in full and in-text arrows wait for hits', fu
     assert(/id="pt-intext-prev"[^>]*hidden/.test(html) && /id="pt-intext-next"[^>]*hidden/.test(html), 'arrows start hidden');
 });
 
+test('paperBodyMarkdown: reconstructs headings and inline fragments for direct arXiv HTML extraction', function() {
+    var arxivRaw = [
+        '# Direct arXiv original-source HTML text extraction',
+        '- Source URL: https://arxiv.org/html/2305.17390v2',
+        '',
+        'SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks',
+        'Bill Yuchen Lin',
+        '1',
+        'Affiliation:1 Allen Institute for AI',
+        'Abstract',
+        'We introduce',
+        'SwiftSage',
+        ', a novel agent framework inspired by dual-process theory.',
+        'It combines',
+        'Swift',
+        'and',
+        'Sage',
+        'modules.',
+        '1',
+        'Introduction',
+        'Interactive reasoning remains challenging.',
+        '2.1',
+        'Complex Interactive Reasoning',
+        'Agents receive observations at each step.'
+    ].join('\n');
+    var out = T.paperBodyMarkdown(arxivRaw, { title: 'SwiftSage: A Generative Agent with Fast and Slow Thinking for Complex Interactive Tasks' });
+    assertNotContains(out, 'Direct arXiv original-source HTML text extraction', 'scraper header removed');
+    assertNotContains(out, 'Affiliation:', 'author affiliation lines skipped');
+    assert(out.indexOf('## Abstract') === 0, 'starts at ## Abstract');
+    assertContains(out, 'We introduce SwiftSage, a novel agent framework', 'inline fragments joined without spaces before comma');
+    assertContains(out, 'It combines Swift and Sage modules.', 'Swift and Sage preserved inline');
+    assertContains(out, '## 1 Introduction', 'top-level section formatted as h2');
+    assertContains(out, '### 2.1 Complex Interactive Reasoning', 'subsection formatted as h3');
+});
+
 // ============================================================
 // Restore localStorage and report
 // ============================================================

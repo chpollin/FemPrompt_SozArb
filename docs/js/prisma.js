@@ -1712,6 +1712,82 @@ function withoutTitleHeadings(lines, title) {
     });
 }
 
+const ARXIV_HTML_MARKER = /^#\s+Direct arXiv original-source HTML text extraction\s*$/i;
+const ARXIV_SEC_NUM = /^(?:[1-9](?:\.[1-9]){0,2}|[A-Z](?:\.[1-9]){1,2})$/;
+const ARXIV_SOLO_HEADING = /^(?:references|acknowledgm?ents|limitations|ethics statement|broader impact|appendix)\s*$/i;
+
+// BeautifulSoup line-per-node HTML extractions from arXiv have no blank lines between
+// paragraphs and split numbered headings and inline tags across separate lines. Reshape
+// them at render time into standard Markdown headings and paragraphs.
+function formatArxivHtmlExtraction(lines) {
+    let idx = lines.findIndex(function(l, k) { return k < 120 && /^abstract\s*$/i.test(l.trim()); });
+    if (idx === -1) idx = 0;
+    const out = ['## Abstract', ''];
+    let para = [];
+    function flushPara() {
+        if (!para.length) return;
+        let text = '';
+        for (let p = 0; p < para.length; p++) {
+            const tok = para[p];
+            if (!text) { text = tok; continue; }
+            if (/^[,.;:!?)\]]/.test(tok) || /[(\[]$/.test(text)) text += tok;
+            else text += ' ' + tok;
+        }
+        out.push(text, '');
+        para = [];
+    }
+    let i = idx + 1;
+    while (i < lines.length) {
+        const s = (lines[i] || '').trim();
+        if (!s) { i++; continue; }
+        // Drop standalone footnote numbers and Contact header between Abstract and 1 Introduction
+        if (out.length <= 4 && (/^contact:\s*$/i.test(s) || /^[\w.+-]+@[\w.-]+\.[a-z]{2,}$/i.test(s))) {
+            i++; continue;
+        }
+        const next = i + 1 < lines.length ? (lines[i + 1] || '').trim() : '';
+        if (ARXIV_SEC_NUM.test(s) && next && /^[A-Z][a-z]/.test(next) && next.length <= 90 &&
+            !/^(?:Contact:|We upload\b)/i.test(next)) {
+            flushPara();
+            let heading = s + ' ' + next;
+            i += 2;
+            while (i < lines.length) {
+                const cont = (lines[i] || '').trim();
+                if (!cont) { i++; break; }
+                if (/^:/.test(cont)) { heading += cont; i++; break; }
+                if (/(?:\bof|\bin|\()$/.test(heading) && cont.length <= 45) {
+                    heading += (/[(]$/.test(heading) ? '' : ' ') + cont;
+                    i++;
+                    if (/\)$/.test(cont)) break;
+                    continue;
+                }
+                break;
+            }
+            const hashes = s.indexOf('.') === -1 ? '##' : '###';
+            out.push(hashes + ' ' + heading.replace(/\.$/, ''), '');
+            continue;
+        }
+        if (ARXIV_SOLO_HEADING.test(s)) {
+            flushPara();
+            out.push('## ' + s, '');
+            i++; continue;
+        }
+        if (/^(?:Figure|Table)\s+\d+\s*:$/i.test(s) && next) {
+            flushPara();
+            out.push('**' + s + '** ' + next, '');
+            i += 2; continue;
+        }
+        para.push(s);
+        const joinedLen = para.reduce(function(n, t) { return n + t.length + 1; }, 0);
+        if (/[.!?]["')\]]?$/.test(s) && joinedLen >= 260 && !/\b(?:et al|Fig|Tab|Sec|Eq|vs|cf|e\.g|i\.e)\.$/i.test(s) &&
+            next && /^[A-Z"]/.test(next)) {
+            flushPara();
+        }
+        i++;
+    }
+    flushPara();
+    return out.join('\n').trim();
+}
+
 // Full-text sources vary between publisher Markdown and Docling output. Prefer an
 // explicit Abstract/Zusammenfassung heading near the document start. Otherwise only
 // remove a leading title and metadata lines that match the structured corpus record;
@@ -1719,6 +1795,9 @@ function withoutTitleHeadings(lines, title) {
 function paperBodyMarkdown(md, paper) {
     const clean = decodeConverterEntities(stripFrontmatter(md || ''));
     let lines = clean.split(/\r?\n/);
+    if (lines.length && ARXIV_HTML_MARKER.test(lines[0].trim())) {
+        return formatArxivHtmlExtraction(lines);
+    }
     const sourceUrl = normalizedSourceUrl(paper && paper.url);
     if (sourceUrl) lines = lines.filter(function(line) {
         const candidate = urlOnlyLine(line);
@@ -4644,6 +4723,7 @@ function renderData(targetEl) {
         group.querySelectorAll('[data-reviewer]').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 if (!selectReviewer(btn.dataset.reviewer)) return;
+                if (assigneeFilterAvailable()) { state.assigneeFilter = state.reviewer; saveLocal(); }
                 changingKey = false;
                 if (screeningHandle) setConnectedSaveStatus();
                 renderData(el);

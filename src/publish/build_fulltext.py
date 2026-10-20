@@ -616,7 +616,8 @@ def clean(text: str) -> str:
     text = HSPACE_RE.sub(
         " ", text
     )  # collapse the whitespace runs a stripped GLYPH leaves behind
-    text = drop_running_headers(text)
+    if not text.lstrip().startswith("# Direct arXiv original-source HTML text extraction"):
+        text = drop_running_headers(text)
     text = BLANKS_RE.sub("\n\n", text)
     return text.strip() + "\n"
 
