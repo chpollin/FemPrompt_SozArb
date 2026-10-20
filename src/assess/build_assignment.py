@@ -31,8 +31,8 @@ ASSIGNMENT_FILE = "assignment.json"
 # The labels are what the published pages show, so they name a role, not a person.
 # The keys stay as stored identifiers of the reviewer files and the assignee links.
 REVIEWERS = (
-    {"key": "sabine", "label": "Expertin A"},
-    {"key": "susi", "label": "Expertin B"},
+    {"key": "sabine", "label": "Sabine"},
+    {"key": "susi", "label": "Susi"},
     {"key": "chrisi", "label": "Chrisi"},
 )
 SPLIT_KEYS = ("sabine", "susi")

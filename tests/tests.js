@@ -2810,6 +2810,26 @@ test('substantive Exclude (Not_relevant_topic) saves clicked categories without 
     delete S.reviewers.cp;
 });
 
+test('open duplicate work aliases are suppressed in both the list and search results', function() {
+    var dupPapers = [
+        { id: 'FTJM5R8N', title: 'Defeating Nondeterminism in LLM Inference', work_id: 'work:dup-1', is_preferred_version: true },
+        { id: '978AV9KZ', title: 'Defeating Nondeterminism in LLM Inference', work_id: 'work:dup-1', is_preferred_version: true, doi: '10.48550/arXiv.2509.25729', abstract: 'Substantive abstract.' },
+        { id: 'ATWBQI7C', title: 'SwiftSage', work_id: 'work:dup-2', is_preferred_version: false, doi: '10.48550/arXiv.2305.17390' },
+        { id: 'RAY6G2R7', title: 'SwiftSage', work_id: 'work:dup-2', is_preferred_version: true, doi: '10.48550/arXiv.2305.17390', abstract: 'SwiftSage abstract.' }
+    ];
+    T.setPapers(dupPapers);
+    var S = T.getState();
+    S.statusFilter = 'alle'; S.catFilter = []; S.assigneeFilter = 'alle';
+    T.setAssignment(null);
+    T.setCorpusQuery('');
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), '978AV9KZ|RAY6G2R7', 'canonical versions win even before assignment loads');
+    T.setCorpusIndex({ '978AV9KZ': 'nondeterminism', 'FTJM5R8N': 'nondeterminism', 'RAY6G2R7': 'swiftsage', 'ATWBQI7C': 'swiftsage' });
+    T.setCorpusQuery('Nondeterminism');
+    assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), '978AV9KZ', 'search results also suppress duplicate work alias');
+    T.setCorpusQuery('');
+    T.setCorpusIndex(null);
+});
+
 // ============================================================
 // Restore localStorage and report
 // ============================================================

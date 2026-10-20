@@ -2185,9 +2185,10 @@ function workspaceBarHtml() {
     let html = '';
     if (modeSwitchAvailable()) {
         html += '<div class="pt-wsbar-top"><div class="pt-mode-seg" role="group" aria-label="Arbeitsmodus">' +
-            '<button class="pt-seg-btn pt-read-mode" id="pt-read-mode" type="button" aria-pressed="' + !canEdit() + '">Lesen</button>' +
+            '<button class="pt-seg-btn pt-read-mode" id="pt-read-mode" type="button" aria-pressed="' + !canEdit() +
+            '" data-tip="Korpus und bestehende Bewertungen lesen, ohne Änderungen zu schreiben.">Lesen</button>' +
             '<button class="pt-seg-btn pt-edit-mode" id="pt-edit-mode" type="button" aria-pressed="' + canEdit() +
-            '" title="Bewerten und speichern. Ein ungespeicherter Entwurf bleibt beim Wechsel erhalten.">Bearbeiten</button>' +
+            '" title="Bewerten und speichern. Ein ungespeicherter Entwurf bleibt beim Wechsel erhalten." data-tip="Bewerten und speichern. Ein ungespeicherter Entwurf bleibt beim Wechsel erhalten.">Bearbeiten</button>' +
             '</div></div>';
     }
     html += '<section class="pt-sync-inline" id="pt-data-inline" aria-label="Bearbeitung"></section>';
@@ -2200,6 +2201,107 @@ function bindWorkspaceBar(container) {
     const reader = container.querySelector('#pt-read-mode');
     if (reader) reader.addEventListener('click', function() { if (canEdit()) setEditMode(false); });
     renderData(container.querySelector('#pt-data-inline'));
+}
+
+let activeTipAnchor = null;
+
+function restoreTipTitle(anchor) {
+    if (!anchor) return;
+    const saved = anchor.getAttribute('data-tip-title');
+    if (saved !== null) {
+        if (!anchor.hasAttribute('title')) anchor.setAttribute('title', saved);
+        anchor.removeAttribute('data-tip-title');
+    }
+}
+
+function hideWorkspaceTooltip() {
+    restoreTipTitle(activeTipAnchor);
+    activeTipAnchor = null;
+    const tip = document.getElementById('pt-tooltip');
+    if (tip) tip.hidden = true;
+}
+
+function bindWorkspaceTooltips(container) {
+    if (!container || container.dataset.tipsBound === '1') return;
+    container.dataset.tipsBound = '1';
+    const SELECTOR = '[data-tip], .category-chip[title], .pt-save-btn[title], .pt-sync-identity[title], .pt-evid-snip[title], .pt-an-opt[title], .pt-save-mark[title], #pt-discard[title]';
+
+    function ensureTipEl() {
+        let tip = document.getElementById('pt-tooltip');
+        if (!tip) {
+            tip = document.createElement('div');
+            tip.id = 'pt-tooltip';
+            tip.className = 'rich-tooltip pt-tooltip';
+            tip.setAttribute('role', 'tooltip');
+            tip.hidden = true;
+            document.body.appendChild(tip);
+        }
+        return tip;
+    }
+
+    function showFor(anchor) {
+        if (!anchor || !container.contains(anchor)) { hideWorkspaceTooltip(); return; }
+        if (activeTipAnchor && activeTipAnchor !== anchor) restoreTipTitle(activeTipAnchor);
+        if (anchor.hasAttribute('title')) {
+            anchor.setAttribute('data-tip-title', anchor.getAttribute('title'));
+            anchor.removeAttribute('title');
+        }
+        const raw = anchor.getAttribute('data-tip') || anchor.getAttribute('data-tip-title') || '';
+        if (!raw) { hideWorkspaceTooltip(); return; }
+        activeTipAnchor = anchor;
+        const tip = ensureTipEl();
+        if (anchor.classList.contains('category-chip') && anchor.dataset.cat && CAT_LABELS[anchor.dataset.cat]) {
+            const cat = anchor.dataset.cat;
+            tip.innerHTML = '<div class="tip-text"><strong>' + EC.escapeHtml(CAT_LABELS[cat]) + '</strong> — ' +
+                EC.escapeHtml(CAT_DEFS[cat] || raw) +
+                (anchor.classList.contains('pt-chip-expert') ? ' <em>(Expert:innen-Urteil, ohne Textbeleg)</em>' : '') + '</div>';
+        } else {
+            tip.innerHTML = '<div class="tip-text">' + EC.escapeHtml(raw) + '</div>';
+        }
+        tip.hidden = false;
+        const rect = anchor.getBoundingClientRect();
+        const box = tip.getBoundingClientRect();
+        if (!rect.width && !rect.height) { tip.hidden = true; return; }
+        let left, top;
+        if (anchor.closest('.pt-cat-filter')) {
+            left = rect.right + 10;
+            top = rect.top + rect.height / 2 - box.height / 2;
+            if (left + box.width > window.innerWidth - 8) {
+                left = Math.max(8, rect.left + rect.width / 2 - box.width / 2);
+                top = rect.bottom + 8;
+            }
+        } else {
+            left = rect.left + rect.width / 2 - box.width / 2;
+            top = rect.bottom + 8;
+            if (top + box.height > window.innerHeight - 8) top = Math.max(8, rect.top - box.height - 8);
+        }
+        if (left < 8) left = 8;
+        if (left + box.width > window.innerWidth - 8) left = Math.max(8, window.innerWidth - box.width - 8);
+        if (top < 8) top = 8;
+        tip.style.left = Math.round(left) + 'px';
+        tip.style.top = Math.round(top) + 'px';
+    }
+
+    container.addEventListener('mouseover', function(e) {
+        const anchor = e.target && e.target.closest ? e.target.closest(SELECTOR) : null;
+        if (!anchor) return;
+        showFor(anchor);
+    });
+    container.addEventListener('mouseout', function(e) {
+        if (!activeTipAnchor) return;
+        const rel = e.relatedTarget;
+        if (rel && activeTipAnchor.contains(rel)) return;
+        hideWorkspaceTooltip();
+    });
+    container.addEventListener('focusin', function(e) {
+        const anchor = e.target && e.target.closest ? e.target.closest(SELECTOR) : null;
+        if (anchor) showFor(anchor);
+    });
+    container.addEventListener('focusout', hideWorkspaceTooltip);
+    container.addEventListener('pointerdown', hideWorkspaceTooltip);
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') hideWorkspaceTooltip();
+    });
 }
 
 // Kept for the test hook and browser traces; PRISM has one surface.
@@ -2494,12 +2596,28 @@ function matchesStatusFilter(p, status) {
     return true;
 }
 
+function duplicateWorkRank(p, index) {
+    return [
+        isDone(p) ? 0 : 1,
+        (assignment && assignment.byPaper[p.id]) ? 0 : 1,
+        p.is_preferred_version === false ? 1 : 0,
+        p.doi ? 0 : 1,
+        p.abstract ? 0 : 1,
+        index
+    ];
+}
+
 function isDuplicateWorkAlias(p) {
     if (!p || !p.work_id || isDone(p) || acceptanceMode) return false;
-    return papers.some(function(other) {
+    const pIdx = papers.indexOf(p);
+    const pRank = duplicateWorkRank(p, pIdx === -1 ? papers.length : pIdx);
+    return papers.some(function(other, oIdx) {
         if (other === p || other.work_id !== p.work_id) return false;
-        if (isDone(other)) return true;
-        if (assignment && assignment.byPaper[other.id] && !assignment.byPaper[p.id]) return true;
+        const oRank = duplicateWorkRank(other, oIdx);
+        for (let i = 0; i < pRank.length; i++) {
+            if (oRank[i] < pRank[i]) return true;
+            if (oRank[i] > pRank[i]) return false;
+        }
         return false;
     });
 }
@@ -2511,7 +2629,8 @@ function baseRows() {
     if (corpusQuery.trim() && corpusIndex) {
         rows = corpusSearchResults(corpusQuery);
         if (acceptanceMode) rows = rows.filter(function(row) { return !!curDec()[row.paper.id]; });
-    } else if (!acceptanceMode) {
+    }
+    if (!acceptanceMode) {
         rows = rows.filter(function(row) { return !isDuplicateWorkAlias(row.paper); });
     }
     return rows.filter(function(row) { return matchesCategoryFilter(row.paper); });
@@ -2599,6 +2718,7 @@ function renderScreening() {
 
     el.innerHTML = html;
     bindWorkspaceBar(el);
+    bindWorkspaceTooltips(el);
     // the load starts first: it raises readingPending synchronously, so the save gate
     // that attachScreening evaluates sees this paper's load rather than the previous one
     loadReadingInto(p);
@@ -2657,18 +2777,22 @@ function filtersHtml() {
             if (isDone(row.paper)) counts.erfasst++; else counts.offen++;
         });
         h += '<div class="pt-seg-row"><div class="pt-status-seg" role="group" aria-label="Status">';
-        [['alle', 'Alle'], ['offen', 'Offen'], ['erfasst', 'Erfasst']].forEach(function(item) {
-            h += '<button type="button" class="pt-seg-btn" data-status="' + item[0] + '" aria-pressed="' + (state.statusFilter === item[0]) + '">' +
+        [
+            ['alle', 'Alle', 'Alle Dokumente des Korpus anzeigen'],
+            ['offen', 'Offen', 'Noch zu bewertende Dokumente (Volltexte zuerst)'],
+            ['erfasst', 'Erfasst', 'Bereits gespeicherte eigene Bewertungen und Expert:innen-Entscheidungen']
+        ].forEach(function(item) {
+            h += '<button type="button" class="pt-seg-btn" data-tip="' + item[2] + '" data-status="' + item[0] + '" aria-pressed="' + (state.statusFilter === item[0]) + '">' +
                 item[1] + ' <span class="pt-seg-count">' + counts[item[0]] + '</span></button>';
         });
         h += '</div>';
         if (assigneeFilterAvailable()) {
             const statusRows = base.filter(function(row) { return matchesStatusFilter(row.paper, state.statusFilter); });
             h += '<div class="pt-assignee-seg" role="group" aria-label="Zuteilung">';
-            h += '<button type="button" class="pt-seg-btn" data-assignee="alle" aria-pressed="' + (assignee === 'alle') + '">Alle</button>';
+            h += '<button type="button" class="pt-seg-btn" data-tip="Alle zugeteilten Dokumente anzeigen" data-assignee="alle" aria-pressed="' + (assignee === 'alle') + '">Alle</button>';
             assignment.reviewers.forEach(function(r) {
                 const n = statusRows.filter(function(row) { return assigneeOf(row.paper) === r.key; }).length;
-                h += '<button type="button" class="pt-seg-btn" data-assignee="' + EC.escapeHtml(r.key) + '" aria-pressed="' + (assignee === r.key) + '">' +
+                h += '<button type="button" class="pt-seg-btn" data-tip="Arbeitsliste für ' + EC.escapeHtml(r.label) + ' (' + EC.escapeHtml(r.key) + '.json)" data-assignee="' + EC.escapeHtml(r.key) + '" aria-pressed="' + (assignee === r.key) + '">' +
                     EC.escapeHtml(r.label) + ' <span class="pt-seg-count">' + n + '</span></button>';
             });
             h += '</div>';
@@ -4701,8 +4825,10 @@ function rosterKeys() {
 
 function reviewerChoiceHtml() {
     return '<div class="pt-reviewer-choice" role="group" aria-label="Wer bewertet?">' +
+        '<span class="pt-sync-label">Kürzel</span>' +
         rosterKeys().map(function(r) {
-            return '<button type="button" class="pt-btn" data-reviewer="' + EC.escapeHtml(r.key) + '"' +
+            return '<button type="button" class="pt-btn pt-btn-sm" data-reviewer="' + EC.escapeHtml(r.key) + '"' +
+                ' data-tip="Bewertungen speichern in ' + EC.escapeHtml(reviewerPath(r.key)) + '"' +
                 (state.reviewer === r.key ? ' aria-pressed="true"' : '') + '>' + EC.escapeHtml(r.label) + '</button>';
         }).join('') + '</div>';
 }
@@ -4795,11 +4921,14 @@ function renderData(targetEl) {
     // hover away and is named again by every save result
     const person = roster.find(function(r) { return r.key === state.reviewer; });
     const identity = person
-        ? '<span class="pt-sync-identity" title="' + EC.escapeHtml(reviewerPath(state.reviewer)) + '"><strong>' + EC.escapeHtml(person.label) + '</strong></span>' +
-            '<button type="button" class="pt-link-btn pt-change-key">Wechseln</button>'
-        : '<span class="pt-sync-identity"><strong>' + EC.escapeHtml(state.reviewer) + '</strong>' +
+        ? '<span class="pt-sync-identity" title="' + EC.escapeHtml(reviewerPath(state.reviewer)) + '" data-tip="Zieldatei: ' + EC.escapeHtml(reviewerPath(state.reviewer)) + '">' +
+            '<span class="pt-sync-label">Kürzel</span><strong>' + EC.escapeHtml(person.label) + '</strong>' +
+            '<code>' + EC.escapeHtml(state.reviewer + '.json') + '</code></span>' +
+            '<button type="button" class="pt-link-btn pt-change-key" data-tip="Reviewer-Profil wechseln">Wechseln</button>'
+        : '<span class="pt-sync-identity" title="' + EC.escapeHtml(reviewerPath(state.reviewer)) + '" data-tip="Zieldatei: ' + EC.escapeHtml(reviewerPath(state.reviewer)) + '">' +
+            '<span class="pt-sync-label">Kürzel</span><strong>' + EC.escapeHtml(state.reviewer) + '</strong>' +
             '<code>' + EC.escapeHtml(reviewerPath(state.reviewer)) + '</code></span>' +
-            (trialMode ? '' : '<button type="button" class="pt-link-btn pt-change-key">Kürzel ändern</button>');
+            (trialMode ? '' : '<button type="button" class="pt-link-btn pt-change-key" data-tip="Reviewer-Kürzel ändern">Kürzel ändern</button>');
     let h;
     if (trialMode) {
         h = '<div class="pt-sync-ready pt-trial-ready">' + identity +
