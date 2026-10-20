@@ -832,3 +832,51 @@ def test_fallback_key_keeps_the_assessment_sheet_label_it_was_calibrated_on() ->
 
     assert bf.author_year_key(paper) == "mahammed2024"
 
+
+def test_every_open_assigned_work_with_any_fulltext_resolves_on_assigned_record() -> None:
+    """When a work has multiple Zotero records and at least one resolves to a full text,
+    the canonical open record in assignment.json must also resolve to a full text so the
+    assigned reviewer never sees 'Kein Volltext' while a duplicate alias holds the text."""
+    papers = json.loads(bf.DATA_IN.read_text(encoding="utf-8"))["papers"]
+    manifest = json.loads(bf.MANIFEST.read_text(encoding="utf-8"))
+    assignment = json.loads(
+        (ROOT / "docs/data/screening/assignment.json").read_text(encoding="utf-8")
+    )["assignments"]
+
+    by_work: dict[str, list[dict[str, object]]] = {}
+    for paper in papers:
+        work_id = paper.get("work_id")
+        if isinstance(work_id, str) and work_id:
+            by_work.setdefault(work_id, []).append(paper)
+
+    missing_on_assigned = []
+    for work_id, members in by_work.items():
+        if len(members) < 2:
+            continue
+        if not any(m["id"] in manifest for m in members):
+            continue
+        assigned_members = [m for m in members if m["id"] in assignment]
+        for member in assigned_members:
+            if member["id"] not in manifest:
+                missing_on_assigned.append((work_id, member["id"], member.get("title")))
+
+    assert missing_on_assigned == []
+
+
+def test_built_fulltexts_match_manifest_and_are_non_empty() -> None:
+    """Published full texts in docs/data/fulltext/*.md must match every resolved
+    entry in fulltext_manifest.json and be non-empty."""
+    manifest = json.loads(bf.MANIFEST.read_text(encoding="utf-8"))
+    resolved = {
+        pid: entry for pid, entry in manifest.items() if entry.get("src") != "none"
+    }
+    assert len(resolved) >= 240
+    for paper_id, entry in resolved.items():
+        md_path = bf.OUT_DIR / f"{paper_id}.md"
+        assert md_path.is_file(), f"Missing fulltext file for {paper_id}"
+        text = md_path.read_text(encoding="utf-8")
+        assert len(text.strip()) >= 200, f"Suspiciously short fulltext for {paper_id}"
+        assert entry["chars"] == len(text)
+
+
+

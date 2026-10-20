@@ -194,6 +194,31 @@ export async function runIntegrityChecks(root) {
     const loaded = await T.loadAssignment();
     check('assignment: the served file enables the filter with the declared reviewers',
       loaded && loaded.reviewers.map((r) => r.key).join('|') === 'sabine|susi|chrisi' && /data-assignee="susi"/.test(T.filtersHtml()));
+    const S = T.getState();
+    S.statusFilter = 'offen'; S.catFilter = [];
+    T.setCorpusQuery('');
+    const assigneeExpected = { alle: 123, sabine: 60, susi: 60, chrisi: 3 };
+    for (const [key, expectedCount] of Object.entries(assigneeExpected)) {
+      S.assigneeFilter = key;
+      const rows = T.visibleRows();
+      const workIds = rows.map((r) => r.paper.work_id).filter(Boolean);
+      const uniqueWorks = new Set(workIds);
+      check(`assignment (${key}): ${expectedCount} open papers and zero duplicate work_ids`,
+        rows.length === expectedCount && workIds.length === uniqueWorks.size,
+        { key, count: rows.length, uniqueWorks: uniqueWorks.size });
+    }
+    S.assigneeFilter = 'alle'; S.statusFilter = 'alle';
+    T.setCorpusIndex({});
+    for (const query of ['Defeating Nondeterminism', 'SwiftSage', 'Reasoning towards fairness']) {
+      T.setCorpusQuery(query);
+      const results = T.visibleRows();
+      const workIds = results.map((r) => r.paper.work_id).filter(Boolean);
+      check(`search (${query}): visibleRows returns canonical work without duplicate work_id alias`,
+        results.length >= 1 && workIds.length === new Set(workIds).size,
+        results.map((r) => ({ id: r.paper.id, work_id: r.paper.work_id })));
+    }
+    T.setCorpusQuery('');
+    T.setCorpusIndex(null);
     const folder = memoryFolder({ 'ar2.json': ar2Text, 'assignment.json': assignmentText });
     T.setScreeningHandle(folder);
     T.selectReviewer('ev');

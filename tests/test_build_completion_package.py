@@ -1305,3 +1305,38 @@ def test_recoded_record_with_an_old_receipt_needs_a_fresh_review(tmp_path):
     rows, _ = completion._work_rows(registry(), [], agents, {})
     assert "renew_ai_source_review_of_the_recoded_record" in rows[0]["next_actions"]
     assert rows[0]["analysis_codebook_versions"] == ["1.4.1"]
+
+
+def test_human_reviewer_screening_file_is_not_ingested_as_agent_record(tmp_path):
+    """Human PRISM files in docs/data/screening/ must not be ingested into agent_records."""
+    screening_dir = tmp_path / "docs/data/screening"
+    screening_dir.mkdir(parents=True)
+    (screening_dir / "chrisi.json").write_text(
+        json.dumps(
+            {
+                "schema": "femprompt-prisma-reviewer/0.5",
+                "reviewer": "chrisi",
+                "actor": "human",
+                "decisions": {
+                    "A": {
+                        "decision": "Exclude",
+                        "active_annotation_id": "chrisi:A",
+                        "lifecycle": {"state": "curated"},
+                        "annotations": [
+                            {
+                                "annotation_id": "chrisi:A",
+                                "body": {"decision": "Exclude"},
+                            }
+                        ],
+                    }
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+    inputs = set()
+    agents, issues = completion._agent_records(tmp_path, inputs)
+    assert not agents
+    assert not issues
+    assert "docs/data/screening/chrisi.json" not in inputs
+

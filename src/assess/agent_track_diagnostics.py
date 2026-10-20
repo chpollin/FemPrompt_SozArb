@@ -90,6 +90,8 @@ def productive_run_ids(repo: Path, inputs: set[str]) -> set[str]:
         data = _json(path)
         if not str(data.get("schema", "")).startswith("femprompt-prisma-reviewer/"):
             continue
+        if data.get("actor") == "human":
+            continue
         inputs.add(path.relative_to(repo).as_posix())
         ids.update(run["run_id"] for run in data.get("review_runs", []))
         if (data.get("ratification") or {}).get("run_id"):

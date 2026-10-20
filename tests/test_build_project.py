@@ -63,3 +63,25 @@ def test_original_converter_output_is_local_but_bound_source_is_portable(
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(source, encoding="utf-8")
     assert set(build_project.snapshot(tmp_path)["inputs"]) == {names[1]}
+
+
+def test_check_build_rejects_stale_page_chrome_or_asset_version(tmp_path, monkeypatch):
+    from src.publish import build_pages
+
+    monkeypatch.setattr(build_project, "OUTPUTS", ())
+    monkeypatch.setattr(build_project, "OUTPUT_DIRS", ())
+    monkeypatch.setattr(build_project, "INPUT_GLOBS", ("docs/prisma.html",))
+    docs = tmp_path / "docs"
+    docs.mkdir()
+    prisma_html = docs / "prisma.html"
+    prisma_html.write_text("<head></head>", encoding="utf-8")
+    manifest = tmp_path / build_project.MANIFEST
+    manifest.parent.mkdir()
+    manifest.write_text(json.dumps(build_project.snapshot(tmp_path)), encoding="utf-8")
+    monkeypatch.setattr(build_pages, "DOCS", docs)
+    monkeypatch.setattr(
+        build_pages, "render_pages", lambda: {"prisma.html": "<head>fresh</head>"}
+    )
+    with pytest.raises(ValueError, match="Page chrome / asset version is stale"):
+        build_project.check_build(tmp_path)
+

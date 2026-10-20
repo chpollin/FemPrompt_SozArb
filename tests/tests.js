@@ -41,6 +41,17 @@ function assertNotContains(hay, needle, msg) {
     if (String(hay).indexOf(needle) !== -1)
         throw new Error((msg ? msg + ': ' : '') + 'expected output NOT to contain ' + JSON.stringify(needle));
 }
+function parseFragment(html) {
+    var host = document.createElement('div');
+    host.innerHTML = String(html || '');
+    return host;
+}
+function assertSelector(rootOrHtml, selector, msg) {
+    var root = typeof rootOrHtml === 'string' ? parseFragment(rootOrHtml) : rootOrHtml;
+    var el = root && root.querySelector ? root.querySelector(selector) : null;
+    if (!el) throw new Error((msg ? msg + ': ' : '') + 'expected element matching ' + selector);
+    return el;
+}
 
 function finish() {
     var total = results.length;
@@ -2484,8 +2495,9 @@ test('list filters: status counts, category AND filter on the current annotation
     assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'F3');
     // the Erfasst facet carries the count, the position bar repeats no "n von N erfasst"
     assertNotContains(T.positionBarHtml(), 'erfasst', 'no captured counter beside the facets');
-    var filters = T.filtersHtml();
-    assertContains(filters, 'data-status="offen" aria-pressed="true">Offen <span class="pt-seg-count">1</span>');
+    var filtersDom = parseFragment(T.filtersHtml());
+    var offenBtn = assertSelector(filtersDom, 'button[data-status="offen"][aria-pressed="true"]', 'Offen status button active');
+    assertEqual(assertSelector(offenBtn, '.pt-seg-count').textContent, '1');
     S.statusFilter = 'alle';
     T.setManifestReachable(false); T.setFsSupported(undefined);
     delete S.reviewers.cp;
@@ -2515,17 +2527,16 @@ test('assignee filter: segment counts, combination with status, list label and U
     assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'A1|A2');
     S.statusFilter = 'offen';
     assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), 'A2', 'status and assignee combine');
-    var html = T.filtersHtml();
-    assertContains(html, 'data-assignee="sabine" aria-pressed="true">Sabine <span class="pt-seg-count">1</span>', 'assignee counts follow the status filter');
-    assertContains(html, 'data-assignee="susi" aria-pressed="false">Susi <span class="pt-seg-count">1</span>');
-    assertContains(html, 'data-status="offen" aria-pressed="true">Offen <span class="pt-seg-count">1</span>', 'status counts follow the assignee filter');
-    assertContains(html, 'data-status="alle" aria-pressed="false">Alle <span class="pt-seg-count">2</span>');
-    assertNotContains(T.corpusListHtml(), 'pt-nav-assignee', 'no label while one assignee is selected');
+    var filtersDom = parseFragment(T.filtersHtml());
+    assertEqual(assertSelector(filtersDom, 'button[data-assignee="sabine"][aria-pressed="true"] .pt-seg-count', 'Sabine active count').textContent, '1');
+    assertEqual(assertSelector(filtersDom, 'button[data-assignee="susi"][aria-pressed="false"] .pt-seg-count', 'Susi inactive count').textContent, '1');
+    assertEqual(assertSelector(filtersDom, 'button[data-status="offen"][aria-pressed="true"] .pt-seg-count', 'Offen active count').textContent, '1');
+    assertEqual(assertSelector(filtersDom, 'button[data-status="alle"][aria-pressed="false"] .pt-seg-count', 'Alle inactive count').textContent, '2');
+    assert(!parseFragment(T.corpusListHtml()).querySelector('.pt-nav-assignee'), 'no label while one assignee is selected');
     S.assigneeFilter = 'alle'; S.statusFilter = 'alle';
-    var list = T.corpusListHtml();
-    assertContains(list, 'X 2020<span class="pt-nav-assignee">, Sabine</span>');
-    assertContains(list, 'Y 2021<span class="pt-nav-assignee">, Susi</span>');
-    assertEqual((list.match(/pt-nav-assignee/g) || []).length, 3, 'an entry naming an undeclared reviewer shows no label');
+    var listDom = parseFragment(T.corpusListHtml());
+    var assigneeTags = Array.prototype.map.call(listDom.querySelectorAll('.pt-nav-assignee'), function(el) { return el.textContent; });
+    assertEqual(assigneeTags.join('|'), ', Sabine|, Sabine|, Susi', 'declared assignees render their label, undeclared reviewer shows none');
     var abstract = 'A substantive abstract that is long enough to support category screening and records the source basis without pretending that a full text was read. This sentence keeps the fixture above the quality threshold.';
     papersFix[1].abstract = abstract; papersFix[2].abstract = abstract;
     assertEqual(T.firstEntryIndex(), 1, 'without an assignee the first open paper of the corpus');
@@ -2828,6 +2839,97 @@ test('open duplicate work aliases are suppressed in both the list and search res
     assertEqual(T.visibleRows().map(function(r) { return r.paper.id; }).join('|'), '978AV9KZ', 'search results also suppress duplicate work alias');
     T.setCorpusQuery('');
     T.setCorpusIndex(null);
+});
+
+test('DOM click-flow covers all four human screening paths end-to-end in #pt-assess-col', function() {
+    mountAssessCol();
+    var p = { id: 'DOM_FLOW', title: 'End-to-end DOM Screening Test', work_id: W1, version_id: V1,
+        version_type: 'version_of_record', preferred_version_id: V1, is_preferred_version: true };
+    T.setPapers([p]);
+    var S = T.getState();
+    S.reviewer = 'cp'; S.reviewers.cp = {}; S.index = 0;
+    T.setManifestReachable(true); T.setFsSupported(true);
+    T.setScreeningHandle(TEST_SCREENING_HANDLE);
+    T.setEditMode(true);
+    T.setTextSource('raw');
+
+    function chip(cat) { return assertSelector(document, '#pt-assess-col .pt-dim .category-chip[data-cat="' + cat + '"]', 'chip ' + cat); }
+    function reasonBtn(r) { return assertSelector(document, '#pt-assess-col .pt-reason-chip[data-reason="' + r + '"]', 'reason ' + r); }
+    function saveBtn() { return assertSelector(document, '#pt-assess-col #pt-record', 'save button'); }
+    function saveBlocked() { return saveBtn().getAttribute('aria-disabled') === 'true'; }
+    function resetFlow() {
+        delete S.reviewers.cp.DOM_FLOW;
+        T.resetWork(p);
+        T.setTextSource('raw');
+        T.refreshAssess();
+    }
+
+    // Path 1: Exclude via single-dimension (tech-only) + reason click -> save button enabled -> click saves
+    resetFlow();
+    chip('Generative_KI').click();
+    assertEqual(assertSelector(document, '#pt-decision').textContent, 'Exclude');
+    assert(saveBlocked(), 'Exclude without reason marks save button aria-disabled');
+    saveBtn().click();
+    assert(!S.reviewers.cp.DOM_FLOW, 'clicking blocked save button does not commit');
+    reasonBtn('Not_relevant_topic').click();
+    assert(!saveBlocked(), 'Exclude with reason enables save button without requiring pins');
+    saveBtn().click();
+    assertEqual(S.reviewers.cp.DOM_FLOW.decision, 'Exclude');
+    assertEqual(S.reviewers.cp.DOM_FLOW.reason, 'Not_relevant_topic');
+    assertEqual(S.reviewers.cp.DOM_FLOW.categories.Generative_KI, 2);
+
+    // Path 2: Exclude via both dimensions + override checkbox + reason click -> save button enabled -> click saves
+    resetFlow();
+    chip('Generative_KI').click();
+    chip('Prompting').click();
+    chip('Soziale_Arbeit').click();
+    chip('Bias_Ungleichheit').click();
+    assertEqual(assertSelector(document, '#pt-decision').textContent, 'Include');
+    assert(saveBlocked(), 'Include without paper pins marks save button aria-disabled');
+    var ov1 = assertSelector(document, '#pt-assess-col #pt-override', 'override checkbox');
+    ov1.checked = true; ov1.dispatchEvent(new window.Event('change'));
+    assertEqual(assertSelector(document, '#pt-decision').textContent, 'Exclude');
+    assert(!document.querySelector('#pt-assess-col .pt-chip-unbelegt'), 'Exclude shows no unbelegt chip warning');
+    reasonBtn('Not_relevant_topic').click();
+    assert(!saveBlocked(), 'Override-Exclude with reason enables save button without pins');
+    saveBtn().click();
+    assertEqual(S.reviewers.cp.DOM_FLOW.decision, 'Exclude');
+    assertEqual(S.reviewers.cp.DOM_FLOW.override, true);
+    assertEqual(S.reviewers.cp.DOM_FLOW.reason, 'Not_relevant_topic');
+
+    // Path 3: Include via both dimensions + paper pins -> save button enabled -> click saves
+    resetFlow();
+    T.pinEvidence('Generative_KI', 'LLM', 'Large language models in social work', 'human');
+    T.pinEvidence('Soziale_Arbeit', 'social work', 'social work practice', 'human');
+    T.refreshAssess();
+    chip('Generative_KI').click(); // raises 1 -> 2
+    chip('Soziale_Arbeit').click(); // raises 1 -> 2
+    assertEqual(assertSelector(document, '#pt-decision').textContent, 'Include');
+    assert(!saveBlocked(), 'Include with paper pins for all selected categories enables save');
+    saveBtn().click();
+    assertEqual(S.reviewers.cp.DOM_FLOW.decision, 'Include');
+    assertEqual(S.reviewers.cp.DOM_FLOW.override, false);
+
+    // Path 4: Include via single dimension + override checkbox + justification input + pin -> click saves
+    resetFlow();
+    T.pinEvidence('Generative_KI', 'LLM', 'Large language models', 'human');
+    T.refreshAssess();
+    chip('Generative_KI').click(); // 1 -> 2
+    var ov2 = assertSelector(document, '#pt-assess-col #pt-override', 'override checkbox');
+    ov2.checked = true; ov2.dispatchEvent(new window.Event('change'));
+    assertEqual(assertSelector(document, '#pt-decision').textContent, 'Include');
+    assert(saveBlocked(), 'Override-Include without justification marks save button aria-disabled');
+    var reasonInput = assertSelector(document, '#pt-assess-col #pt-override-reason', 'override justification input');
+    reasonInput.value = 'Relevanter Grenzfall fuer Soziale Arbeit';
+    reasonInput.dispatchEvent(new window.Event('input'));
+    assert(!saveBlocked(), 'Override-Include with justification and pin enables save');
+    saveBtn().click();
+    assertEqual(S.reviewers.cp.DOM_FLOW.decision, 'Include');
+    assertEqual(S.reviewers.cp.DOM_FLOW.override, true);
+    assertEqual(S.reviewers.cp.DOM_FLOW.override_reason, 'Relevanter Grenzfall fuer Soziale Arbeit');
+
+    delete S.reviewers.cp;
+    T.setManifestReachable(false); T.setFsSupported(undefined);
 });
 
 // ============================================================

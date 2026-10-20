@@ -40948,7 +40948,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:6e14cc07e52a0f00aa44e3bc3c8750fb4e7771d10c8130fcf6aac759d56ec161",
+  "source_fingerprint": "sha256:0909a80b0069c65e1517161c306fd7da7e0e882cadda1aaa5b98a7aeb082b726",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -44624,7 +44624,7 @@
     },
     {
       "path": "src/analysis/build_completion_package.py",
-      "sha256": "8a4fd32438cd88a8378465564ff18f71317b2de8fc8f36a447aff54037c0559f"
+      "sha256": "0dea5b4a832457119bc983c6ec146179747765bbbdc74bcafea7da924d271737"
     },
     {
       "path": "src/analysis/historical_resolution.py",
@@ -44636,7 +44636,7 @@
     },
     {
       "path": "src/assess/agent_track_diagnostics.py",
-      "sha256": "dd2c88476d2ca1fc381f417a6592c1b471b43874d6081f98719c1c09bce906e1"
+      "sha256": "a0e9d41fb1d5223868105cd535be19c63d44a78623edb4ed33532db8caa48997"
     },
     {
       "path": "src/assess/artifact_verification.py",

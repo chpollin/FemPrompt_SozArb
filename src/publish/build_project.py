@@ -167,6 +167,20 @@ def check_build(repo: Path = ROOT) -> None:
     from src.assess.artifact_verification import load_reviews
 
     load_reviews(repo)
+    if (repo / "docs" / "prisma.html").is_file():
+        from src.publish import build_pages
+
+        if (repo / "docs").resolve() == build_pages.DOCS.resolve():
+            stale_pages = [
+                name
+                for name, html in build_pages.render_pages().items()
+                if (repo / "docs" / name).read_text(encoding="utf-8") != html
+            ]
+            if stale_pages:
+                raise ValueError(
+                    "Page chrome / asset version is stale; run npm run build: "
+                    + ", ".join(stale_pages)
+                )
     print(
         "OK: canonical inputs, generated data, review preparation and result site are current"
     )
@@ -223,6 +237,7 @@ def build() -> None:
     _run("src.replay.prisma_flow")
     _run("src.analysis.build_literature_readiness")
     _run("src.publish.build_downloads")
+    _run("src.publish.build_pages")
     _run("src.publish.build_release")
     from src.publish.generate_docs_data import write_json_atomic
 

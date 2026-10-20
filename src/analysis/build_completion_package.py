@@ -368,6 +368,8 @@ def _agent_records(
         data = _json(path)
         if not str(data.get("schema", "")).startswith("femprompt-prisma-reviewer/"):
             continue
+        if data.get("actor") == "human":
+            continue
         inputs.add(relative)
         for record_id, record in sorted(data.get("decisions", {}).items()):
             pointer = record_id.replace("~", "~0").replace("/", "~1")

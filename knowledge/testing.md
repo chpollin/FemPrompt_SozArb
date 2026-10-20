@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-17
+updated: 2026-10-20
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 topics: ["[[Software Testing]]", "[[Research Software]]"]
@@ -25,7 +25,7 @@ The test system establishes the technical behaviour of PRISM, the public result 
 
 `npm run check` is the integrated gate and runs four parts in order.
 
-1. `npm run check:data` runs `python -m src.publish.build_project --check`, which rejects changed inputs, missing outputs or stale hashes across the generated data, the completion package and `build/site/`, and then `npm run check:schemas`.
+1. `npm run check:data` runs `python -m src.publish.build_project --check`, which rejects changed inputs, missing outputs, stale generated page chrome / asset version tokens in `docs/*.html`, or stale hashes across the generated data, the completion package and `build/site/`, and then `npm run check:schemas`.
 2. `npm test` runs the Node suites, namely the PRISM suite `tests/run.mjs`, the working-application suite `tests/companion.mjs`, the grounded chat suite `tests/chat.mjs`, the Literaturbild suite `tests/literature-landscape.mjs` and the visual source-asset check `tests/review-cases/verify-source-assets.mjs`.
 3. `npm run test:python` runs `python -m pytest tests/ -q`.
 4. `npm run test:release` runs `tests/browser/release.mjs` against the built `build/site/`, so it needs a preceding `npm run build`.
@@ -75,7 +75,8 @@ It then serves `build/site/` locally and drives Chromium at 1440 by 900 pixels. 
 
 The automated suites cover the following contracts.
 
-- Every positive category requires Paper-layer evidence.
+- Every positive category on a human `Include` decision requires Paper-layer evidence; human `Exclude` decisions record their exclusion reason without requiring Paper pins on clicked categories.
+- Duplicate open Zotero records sharing the same `work_id` resolve to one canonical open work in the PRISM list, reviewer assignment and search results, and any resolved full text on a duplicate work is bound to the canonical assigned record.
 - Agent Include records require complete analysis coding under the controlled vocabulary. Human records need none and keep an existing analysis part unchanged (ADR-045).
 - Source identity conflicts fail closed before a full text can enter screening. Normalized filename collisions retain all candidates and cannot silently select an ambiguous fallback.
 - Full-text publication loads the Work-Version registry and explicit source bindings once per invocation. A later invocation reads fresh inputs.
