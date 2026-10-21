@@ -938,7 +938,7 @@ Effect. `docs/data/screening_lifecycle_contract.json` and `schemas/femprompt-pri
 
 ### ADR-047 The local server writes the reviewer files (revises ADR-029 and the Chromium requirement of ADR-042)
 
-Status. Provisional on 2026-10-02, implemented on request of the operator and pending acceptance in [[plan#Decisions taken]].
+Status. Provisional on 2026-10-02, implemented on request of the operator, accepted by the operator on 2026-10-21 ([[plan#Decisions taken]]).
 
 Context. A fresh-clone test showed that the folder setup of ADR-029 asked a reviewer to understand what a working folder is and which one to pick. A folder without a `docs` child was silently taken as the screening folder, so a wrong choice such as the Downloads folder wrote the reviewer file where Git never sees it. The permission had to be granted again after every browser restart, and saving required Chrome or Edge. The reviewers already start `src/publish/serve.py` inside their clone, so the process that serves PRISM knows the folder.
 
@@ -960,7 +960,7 @@ Effect. `src/publish/serve.py`, `src/publish/start_prism.py`, `start-prism.cmd`,
 
 ### ADR-048 A formal exclusion needs no Paper Beleg for its categories (refines ADR-042, decision 4)
 
-Status. Provisional on 2026-10-02. The operator asked for the case to be resolved and delegated the rule. Pending acceptance in [[plan#Decisions taken]].
+Status. Provisional on 2026-10-02. The operator asked for the case to be resolved and delegated the rule. Accepted by the operator on 2026-10-21 ([[plan#Decisions taken]]).
 
 Context. ADR-042 requires a Paper Beleg for every category the reviewer sets. In the operator's screen test a paper excluded as a duplicate could not be saved until each of six set categories had a passage, although a duplicate is excluded for a fact about the record, not for its content.
 
