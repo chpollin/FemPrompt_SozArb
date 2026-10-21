@@ -18540,11 +18540,11 @@
     {
       "id": "HLBXNWAZ",
       "title": "Intersectional analysis of visual generative AI: the case of stable diffusion",
-      "author_year": "Sharma et al. (2024)",
-      "authors": "Sharma, S.; Ovalle, A.; Subramonian, A.",
-      "year": 2024,
+      "author_year": "Jääskeläinen et al. (2025)",
+      "authors": "Jääskeläinen, Petra; Sharma, Nickhil Kumar; Pallett, Helen; Åsberg, Cecilia",
+      "year": 2025,
       "doi": "",
-      "url": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+      "url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
       "item_type": "journalArticle",
       "journal": "",
       "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
@@ -18553,7 +18553,7 @@
       "source_version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
       "source_binding": null,
       "version_type": "version_of_record",
-      "version_date": "2024",
+      "version_date": "2025-03-17",
       "peer_review_status": "not_established",
       "peer_review_basis": "unknown",
       "preferred_version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
@@ -18563,20 +18563,20 @@
         {
           "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
           "version_type": "version_of_record",
-          "version_date": "2024",
+          "version_date": "2025-03-17",
           "identifiers": {
             "zotero_key": [
               "HLBXNWAZ"
             ],
             "url": [
-              "https://link.springer.com/article/10.1007/s00146-025-02498-1"
+              "https://link.springer.com/article/10.1007/s00146-025-02207-y"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+          "landing_url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
           "fulltext_url": "",
           "relations": [],
           "is_preferred": true,
@@ -18842,11 +18842,11 @@
         {
           "id": "HLBXNWAZ",
           "title": "Intersectional analysis of visual generative AI: the case of stable diffusion",
-          "author_year": "Sharma et al. (2024)",
-          "authors": "Sharma, S.; Ovalle, A.; Subramonian, A.",
-          "year": 2024,
+          "author_year": "Jääskeläinen et al. (2025)",
+          "authors": "Jääskeläinen, Petra; Sharma, Nickhil Kumar; Pallett, Helen; Åsberg, Cecilia",
+          "year": 2025,
           "doi": "",
-          "url": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+          "url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
           "item_type": "journalArticle",
           "journal": "",
           "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
@@ -18855,7 +18855,7 @@
           "source_version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
           "source_binding": null,
           "version_type": "version_of_record",
-          "version_date": "2024",
+          "version_date": "2025-03-17",
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "preferred_version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
@@ -18865,20 +18865,20 @@
             {
               "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
               "version_type": "version_of_record",
-              "version_date": "2024",
+              "version_date": "2025-03-17",
               "identifiers": {
                 "zotero_key": [
                   "HLBXNWAZ"
                 ],
                 "url": [
-                  "https://link.springer.com/article/10.1007/s00146-025-02498-1"
+                  "https://link.springer.com/article/10.1007/s00146-025-02207-y"
                 ]
               },
               "peer_review_status": "not_established",
               "peer_review_basis": "unknown",
               "integrity_status": "current",
               "access_status": "unknown",
-              "landing_url": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+              "landing_url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
               "fulltext_url": "",
               "relations": [],
               "is_preferred": true,

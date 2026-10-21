@@ -28163,10 +28163,10 @@
       "id": "HLBXNWAZ",
       "stem": "Sharma_2024_Intersectional",
       "title": "Intersectional analysis of visual generative AI: the case of stable diffusion",
-      "author_year": "Sharma et al. (2024)",
-      "year": 2024,
+      "author_year": "Jääskeläinen et al. (2025)",
+      "year": 2025,
       "doi": "",
-      "url": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+      "url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
       "abstract": "This study conducts a critical intersectional analysis of Stable Diffusion, a widely used visual generative AI tool. The examination of 180 generated images shows how the system perpetuates prevailing power systems such as sexism, racism, heteronormativity, and ableism, assuming white, physically healthy, masculine-presenting individuals as the standard. The study identifies three levels of analysis: (1) the aesthetics of AI images (micro-level), (2) institutional contexts (meso-level), and (3) intersections between power systems (macro-level). The authors argue for a reparative, socially just approach to visual generative AI.",
       "stages": {
         "identification": {
@@ -28233,13 +28233,13 @@
       "concepts": [],
       "knowledge_summary": null,
       "knowledge_sections": null,
-      "authors": "Sharma, S.; Ovalle, A.; Subramonian, A.",
+      "authors": "Jääskeläinen, Petra; Sharma, Nickhil Kumar; Pallett, Helen; Åsberg, Cecilia",
       "item_type": "journalArticle",
       "journal": "",
       "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
       "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
       "version_type": "version_of_record",
-      "version_date": "2024",
+      "version_date": "2025-03-17",
       "peer_review_status": "not_established",
       "peer_review_basis": "unknown",
       "preferred_version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
@@ -52898,7 +52898,7 @@
     }
   ],
   "meta": {
-    "source_fingerprint": "sha256:48c45ee26b6dd00a37d20d155ad50c8a56fe1b989239952bdbd4ea6c38376f52",
+    "source_fingerprint": "sha256:cb046bade8fdc26ad45fb4f5ef3590fbf1eb53e5bef6363a49cf1a5c93d99453",
     "total_papers": 463,
     "corpus_record_total": 463,
     "corpus_work_total": 361,
