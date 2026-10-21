@@ -233,6 +233,7 @@ const lastDiskText = {};       // reviewerKey -> file text last read or written 
 let agentTrack = { reviewer: null, records: {} };
 let servedAgentEnvelope = null; // HTTP-served agent track, used while no folder supplies one
 let assignment = null;          // { reviewers: [{ key, label }], byPaper: { paperId -> key } } or null
+let peerTracks = {};            // reviewer key -> { label, records } read-only, see loadPeerTracks
 let localServer = null;         // { name, path, reviewers } of the clone serving this page, null elsewhere
 const verificationRecords = {}; // reviewerKey -> verification events this reviewer recorded
 // Unsaved drafts per paper. A draft starts as a copy of the current annotation and is
@@ -1111,6 +1112,29 @@ function loadAssignment() {
         .then(function(r) { return r.ok ? r.json() : null; })
         .catch(function() { return null; })
         .then(function(obj) { assignment = normalizeAssignment(obj); return assignment; });
+}
+
+// Read-only view of the other human reviewers' saved records, independent of the selected
+// Kürzel and of the mode. The reviewers are those declared in assignment.json; their files
+// are read as served, never merged into state.reviewers and never written. Agent tracks
+// stay out (ADR-044), and a record counts only with a valid decision.
+function loadPeerTracks() {
+    peerTracks = {};
+    if (acceptanceMode || trialMode || runActor !== 'human' || !assignment || typeof fetch !== 'function')
+        return Promise.resolve(peerTracks);
+    return Promise.all(assignment.reviewers.map(function(r) {
+        return fetch('data/screening/' + r.key + '.json', { cache: 'no-store' })
+            .then(function(res) { return res.ok ? res.json() : null; })
+            .catch(function() { return null; })
+            .then(function(obj) {
+                if (!obj || !validateReviewerEnvelope(obj).ok || obj.actor === 'agent' || isAgentTrackPayload(obj)) return;
+                const records = {};
+                Object.keys(obj.decisions).forEach(function(pid) {
+                    if (validLocalRecord(obj.decisions[pid])) records[pid] = obj.decisions[pid];
+                });
+                peerTracks[r.key] = { label: r.label, records: records };
+            });
+    })).then(function() { return peerTracks; });
 }
 
 // Expert verification lives in the expert's own file. The agent record shown is the
@@ -2105,7 +2129,7 @@ window.initializePrisma = function() {
     }
     // The first paint waits for the manifest and the served agent track: the manifest
     // decides whether editing is offered, the track which annotation a paper shows.
-    Promise.all([loadFulltextManifest(), loadServedAgentTracks(), loadAssignment(), loadLocalServer()]).then(function() {
+    Promise.all([loadFulltextManifest(), loadServedAgentTracks(), loadAssignment().then(loadPeerTracks), loadLocalServer()]).then(function() {
         // Trial and agent URLs explicitly select an authoring workflow. ?verify=1 is the
         // former verification entry and opens Bearbeiten where editing is available.
         // Ordinary links, including paper deep links and cached reviewer profiles,
@@ -2851,6 +2875,9 @@ function corpusListHtml() {
         const p = result.paper, i = result.index;
         const st = listState(p);
         const who = showAssignee ? assigneeLabel(assigneeOf(p)) : '';
+        const peers = peerKeysFor(p).map(function(key) {
+            return peerTracks[key].label + ': ' + peerTracks[key].records[p.id].decision;
+        }).join(', ');
         const cats = currentCategories(p);
         const catNames = ALL_CATS.filter(function(c) { return catLevel(cats[c]) > 0; }).map(function(c) { return CAT_LABELS[c]; });
         const badge = q ? '<span class="pt-hit-badge">' + EC.escapeHtml(result.kind === 'Text'
@@ -2866,6 +2893,7 @@ function corpusListHtml() {
             '<span class="pt-nav-text"><span class="pt-nav-t" title="' + EC.escapeHtml(p.title || '(ohne Titel)') + '">' + EC.escapeHtml(p.title || '(ohne Titel)') + '</span>' +
             '<span class="pt-nav-m">' + EC.escapeHtml(p.author_year || p.authors || 'Autor:in/Jahr unbekannt') +
             (who ? '<span class="pt-nav-assignee">, ' + EC.escapeHtml(who) + '</span>' : '') +
+            (peers ? '<span class="pt-nav-peers">, bewertet von ' + EC.escapeHtml(peers) + '</span>' : '') +
             (drafts[p.id] && drafts[p.id].dirty ? '<span class="pt-nav-draft">, nicht gespeichert</span>' : '') +
             (fulltextManifest !== null && textTier(p) ? '<span class="pt-nav-textstate">, ' + (textTier(p) === 1 ? 'nur Abstract' : 'kein Papertext') + '</span>' : '') + '</span>' +
             (q && result.kind === 'DOI' && p.doi ? '<span class="pt-nav-id">DOI ' + EC.escapeHtml(p.doi) + '</span>' : '') +
@@ -4617,10 +4645,49 @@ function railHtml(p) {
         h += analysisEntryHtml(record, editable);
     }
     h += referenceProposalsHtml(p, subject);
+    h += peerReviewsHtml(p);
     if (subject.kind === 'own' && isGovernedRecord(subject.record) && (runActor === 'agent' || acceptanceMode)) h += provenanceHtml(subject.record);
     h += '</div>';
     h += dockHtml(p, subject, editable);
     return h;
+}
+
+// The saved records of the other reviewers for this paper, as loaded at startup. The
+// own Kürzel is left out because its record is the subject of the panel above.
+function peerKeysFor(p) {
+    return Object.keys(peerTracks).filter(function(key) {
+        return key !== state.reviewer && peerTracks[key].records[p.id];
+    });
+}
+
+function peerReviewsHtml(p) {
+    const peers = peerKeysFor(p);
+    if (!peers.length) return '';
+    let h = '<section class="pt-peers" aria-labelledby="pt-peers-head"><h3 class="pt-sub-head" id="pt-peers-head">Andere Bewertungen</h3>';
+    peers.forEach(function(key) {
+        const r = peerTracks[key].records[p.id];
+        const cats = r.categories || {};
+        const set = ALL_CATS.filter(function(c) { return catLevel(cats[c]) > 0; });
+        const date = dateLabel(r.ts);
+        h += '<div class="pt-peer"><p class="pt-peer-head"><span class="pt-peer-name">' + EC.escapeHtml(peerTracks[key].label) + '</span>' +
+            '<span class="pt-decision pt-decision-' + decCls(r.decision) + '">' + EC.escapeHtml(r.decision) + '</span>' +
+            (date ? '<span class="pt-peer-date">' + EC.escapeHtml(date) + '</span>' : '') + '</p>';
+        h += '<div class="category-chips">' + (set.length ? set.map(function(c) {
+            return categoryChipHtml(c, cats[c], { disabled: true, compact: true });
+        }).join('') : '<span class="pt-dim-none">keine Kategorien</span>') + '</div>';
+        if (r.decision === 'Exclude' && r.reason) h += '<p class="pt-peer-note">Ausschlussgrund: ' + EC.escapeHtml(reasonLabel(r.reason)) + '</p>';
+        if (r.override && r.override_reason) h += '<p class="pt-peer-note">Begründung: ' + EC.escapeHtml(r.override_reason) + '</p>';
+        const pins = [];
+        Object.keys(r.evidence || {}).forEach(function(c) {
+            (r.evidence[c] || []).filter(isPaperEvidence).forEach(function(ev) {
+                pins.push('<li><span class="pt-peer-cat">' + EC.escapeHtml(CAT_LABELS[c] || c) + ':</span> „' +
+                    EC.escapeHtml(ev.snippet || ev.term || '') + '“</li>');
+            });
+        });
+        if (pins.length) h += '<ul class="pt-peer-pins">' + pins.join('') + '</ul>';
+        h += '</div>';
+    });
+    return h + '</section>';
 }
 
 function dockHtml(p, subject, editable) {

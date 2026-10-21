@@ -197,7 +197,7 @@ export async function runIntegrityChecks(root) {
     const S = T.getState();
     S.statusFilter = 'offen'; S.catFilter = [];
     T.setCorpusQuery('');
-    const assigneeExpected = { alle: 123, sabine: 60, susi: 60, chrisi: 3 };
+    const assigneeExpected = { alle: 123, sabine: 80, susi: 40, chrisi: 3 };
     for (const [key, expectedCount] of Object.entries(assigneeExpected)) {
       S.assigneeFilter = key;
       const rows = T.visibleRows();

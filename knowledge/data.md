@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-03
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -393,7 +393,7 @@ Versioning uses Git outside PRISM. Schema 0.4 is the version-aware isolated capt
 
 - Open means what PRISM counts as not done for every reviewer, neither a decision of the consolidated expert assessment nor a record or verification in a human reviewer file. An open paper with a record in an agent track belongs to the group `agent`, every other open paper to the group `unassessed`.
 - Within each group the papers alternate between the reviewers in corpus order, and each group starts with the reviewer holding fewer entries, ties following the order of `reviewers`.
-- Entries are append-only. A rerun adds open papers without an entry, never changes an existing one and keeps the entries of papers that have been done since. An entry naming a key outside `reviewers` makes the builder fail and is ignored by PRISM.
+- A rerun adds open papers without an entry, never changes an existing one and keeps the entries of papers that have been done since. Only an explicit `--move FROM TO COUNT` reassigns entries, the last still open papers of one reviewer in corpus order ([[specification#ADR-043 The open documents are split between the two reviewers]]). An entry naming a key outside `reviewers` makes the builder fail and is ignored by PRISM.
 - `schemas/femprompt-prisma-assignment-1.0.schema.json` describes the file, and a test compares the committed file with a fresh build, so a corpus that gains open papers shows up as a failing check until the builder is rerun.
 
 ## Current intake and screening gates

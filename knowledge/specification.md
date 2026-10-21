@@ -7,7 +7,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-02
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 4.8), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -866,14 +866,14 @@ Effect. `docs/js/prisma.js` resolves the subject with `paperSubject`, seeds draf
 
 ### ADR-043 The open documents are split between the two reviewers
 
-Status. Accepted on 2026-10-01 by operator decision. Extends decision 7 of ADR-042.
+Status. Accepted on 2026-10-01 by operator decision. Extends decision 7 of ADR-042. Decision 2 amended on 2026-10-21 by operator decision to allow a recorded move.
 
 Context. Since ADR-042 counts the decisions of the consolidated expert assessment as done, the open documents are those with only an agent record and those without any assessment. The operator divided them between the two reviewers and asked for the split as a further list filter.
 
 Decision.
 
 1. `docs/data/screening/assignment.json` (`femprompt-prisma-assignment/1.0`) names the reviewers with key and label, the date of the split, the rule as text and one assignee key per paper ([[data#Reviewer assignment]]). It is no reviewer file and carries no decision. The two reviewer keys are ordinary valid PRISM keys, and the file name `assignment` is a reserved key, so no reviewer can write over it.
-2. `src/assess/build_assignment.py` assigns every open paper. It separates papers with an agent record from unassessed papers and alternates between the reviewers within each group in corpus order, so each reviewer receives a balanced share of both kinds. Each group of new papers starts with the reviewer who holds fewer entries. The file is append-only. A rerun never reassigns an entry, keeps the entries of papers that have since been done, and adds only open papers without one.
+2. `src/assess/build_assignment.py` assigns every open paper. It separates papers with an agent record from unassessed papers and alternates between the reviewers within each group in corpus order, so each reviewer receives a balanced share of both kinds. Each group of new papers starts with the reviewer who holds fewer entries. A rerun never reassigns an entry, keeps the entries of papers that have since been done, and adds only open papers without one. An entry changes only through `--move FROM TO COUNT`, which moves the last still open papers of one reviewer in corpus order to the other. The operator used it on 21 October 2026 to move twenty open papers from susi to sabine.
 3. PRISM loads the file next to the served agent track. Where it is served, a segmented control `Zuteilung` with `Alle` and one segment per reviewer sits beside the status filter in every mode that has the status filter. Each segment counts the base rows as narrowed by the other segment, so a combined selection adds up. The choice lives in the URL as `assignee`, combines with the status and category filters, and a key the file does not declare falls back to `Alle`. Under `Alle` each list entry names its assignee in its subtitle line. `Nächstes offen` follows the filtered list as before, and a link without a paper opens on the first open paper of the filtered list, so an assignee's own link starts in that list. Choosing a reviewer key selects no assignee.
 4. A missing or malformed file removes the control without an error.
 
@@ -973,3 +973,20 @@ Decision.
 Rationale. The Beleg duty documents why a paper does or does not fall under a category. A formal exclusion does not rest on that judgement, so the duty adds work without evidence value. Keeping the categories with an explicit basis loses no input and lets an analysis leave out categories that no passage supports.
 
 Effect. `isFormalExclusion`, `draftEvidenceBasis`, `paperEvidenceMissing` and `recordRequirements` in `docs/js/prisma.js`, and the summary line in `evidenceRowsHtml`. `tests/tests.js` checks the formal and the substantive case.
+
+### ADR-049 Other reviewers' saved records are visible read-only (refines ADR-012, ADR-017 and ADR-043)
+
+Status. Decided by the operator on 2026-10-21 after the reviewer setup meeting.
+
+Context. In the meeting the reviewers asked why one reviewer's pushed and pulled changes did not appear for the others. PRISM showed a reviewer's records only under that reviewer's Kürzel, so seeing them required switching into the other person's write track, where a save would change the other person's file. Since ADR-043 the open papers are split between the reviewers, so a peer's decision on a paper does not anchor an independent second judgement of the same paper.
+
+Decision.
+
+1. The assessment rail of every paper lists, below the own assessment, the saved records of the other human reviewers under "Andere Bewertungen", with decision, set categories, exclusion reason or override reason, Paper Belege and date. It appears in Lesen and Bearbeiten and without a selected Kürzel. The own Kürzel is left out because its record is the subject of the panel.
+2. The reviewers are those declared in `assignment.json`. Their files are fetched as served at startup, never merged into the session state and never written. A pulled change appears after reloading PRISM.
+3. Each corpus list entry names the other reviewers who saved a record for the paper with their decision, as "bewertet von Sabine: Include" in its subtitle line, so a reviewer can survey the others' work without opening each paper.
+4. Agent tracks stay out (ADR-044). The view adds no comparison or agreement measure; agreement remains an external evaluation (ADR-017).
+
+Rationale. Reviewers coordinate their split and learn from each other's category use without a role switch that risks writing into a foreign file. Should a paper later be screened twice independently, the view would have to be withheld until the own record is saved.
+
+Effect. `loadPeerTracks`, `peerKeysFor`, `peerReviewsHtml` and the subtitle line of `corpusListHtml` in `docs/js/prisma.js`, styles `.pt-peers`, `.pt-peer*` and `.pt-nav-peers` in `docs/css/prisma.css`.

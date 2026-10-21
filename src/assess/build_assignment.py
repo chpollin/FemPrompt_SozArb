@@ -8,12 +8,14 @@ in a productive agent track and those without any assessment. Within each
 stratum the papers alternate between the reviewers in corpus order, so both
 receive a balanced share of each kind.
 
-The file is append-only. A rerun never reassigns a paper that already has an
-entry, keeps the entries of papers that have since become done, and assigns
-only papers that are open and not yet assigned. Each stratum of new papers
-starts with the reviewer who currently holds fewer assignments.
+A rerun never reassigns a paper that already has an entry, keeps the entries of
+papers that have since become done, and assigns only papers that are open and
+not yet assigned. Each stratum of new papers starts with the reviewer who
+currently holds fewer assignments. An entry changes only through an explicit
+``--move``, which the operator requests to rebalance the workload.
 
 Run: python -X utf8 -m src.assess.build_assignment [--date YYYY-MM-DD]
+     [--move FROM TO COUNT]
 """
 
 from __future__ import annotations
@@ -41,7 +43,8 @@ RULE = (
     "assessment, no own record, no own verification) is assigned to one reviewer. "
     "Open papers are split into papers with an agent record and unassessed papers; "
     "within each group they alternate between the reviewers in corpus order. "
-    "Existing entries are never changed; a rerun only adds newly open papers."
+    "A rerun only adds newly open papers; an existing entry changes only when the "
+    "operator moves open papers from one reviewer to another."
 )
 DECIDED = ("Include", "Exclude")
 
@@ -128,6 +131,24 @@ def assign(
     return added
 
 
+def move(
+    assignments: dict[str, str], candidates: list[tuple[str, str]], source: str, target: str, count: int
+) -> list[str]:
+    """Reassign the last ``count`` still open papers of ``source`` in corpus order.
+
+    Only open papers move, so no reviewer loses a paper she has already worked on,
+    and taking them from the end keeps the start of the source list unchanged.
+    """
+    open_ids = [pid for pid, _ in candidates]
+    movable = [pid for pid in open_ids if assignments.get(pid) == source]
+    if count < 1 or count > len(movable):
+        raise ValueError(f"cannot move {count} open papers from {source!r}, it holds {len(movable)}")
+    moved = movable[-count:]
+    for pid in moved:
+        assignments[pid] = target
+    return moved
+
+
 def build(repo: Path, today: str) -> tuple[dict, dict[str, str]]:
     """Return the assignment document and the entries added by this run."""
     papers = _json(repo / "docs/data/research_vault_v2.json")["papers"]
@@ -164,9 +185,19 @@ def build(repo: Path, today: str) -> tuple[dict, dict[str, str]]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--date", default=date.today().isoformat())
+    parser.add_argument("--move", nargs=3, metavar=("FROM", "TO", "COUNT"))
     args = parser.parse_args(argv)
     document, added = build(REPO, args.date)
     target = REPO / "docs/data/screening" / ASSIGNMENT_FILE
+    if args.move:
+        source, to, count = args.move[0], args.move[1], int(args.move[2])
+        if source not in SPLIT_KEYS or to not in SPLIT_KEYS or source == to:
+            raise SystemExit(f"--move needs two different reviewers of {SPLIT_KEYS}")
+        papers = _json(REPO / "docs/data/research_vault_v2.json")["papers"]
+        human, agent = screening_state(REPO / "docs/data/screening")
+        moved = move(document["assignments"], open_papers(papers, human, agent), source, to, count)
+        document["updated_on"] = args.date
+        print(f"moved {len(moved)} open papers from {source} to {to}: {', '.join(moved)}")
     text = json.dumps(document, ensure_ascii=False, indent=2) + "\n"
     if not target.exists() or target.read_text(encoding="utf-8") != text:
         target.write_text(text, encoding="utf-8", newline="\n")

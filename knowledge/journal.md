@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-10-17
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -21,6 +21,10 @@ related: [INDEX, plan, specification, governance, verification, handoff]
 Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen fest, die Git nicht erfasst, sodass alte Zustände, verworfene Richtungen und später umgestoßene Entscheidungen lesbar bleiben. Ein Eintrag je substanzieller Sitzung nennt, was sich änderte, was entschieden wurde und was offen bleibt, und verweist auf das Dokument, das den Gegenstand trägt. Commits und Diffs leben in der Git-Historie, Zahlen in den Daten und im Evidence Companion. Die Einträge stehen chronologisch, der neueste zuerst.
 
 ## October 2026
+
+### 2026-10-21: Reviewer meeting and read-only peer view
+
+PRISM was set up with the reviewers in the meeting. A reviewer's pushed test decision did not appear for the operator, first because the local clone had not been pulled and then because PRISM showed a record only under its own Kürzel. The operator decided that the other reviewers' saved records are visible without selecting a Kürzel. [[specification#ADR-049 Other reviewers' saved records are visible read-only (refines ADR-012, ADR-017 and ADR-043)]] records the decision. The abstract observation from the meeting stands in [[plan#Reviewer setup meeting]]. The change is on a branch for the operator to merge. On the operator's request twenty open papers moved from susi to sabine through the new `--move` option of `src/assess/build_assignment.py`, which amends the append-only rule of ADR-043.
 
 ### 2026-10-17: Reviewer setup rehearsal
 

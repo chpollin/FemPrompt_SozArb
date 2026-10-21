@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-17
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -184,7 +184,7 @@ The isolated local rehearsal in [[testing#Run of 17 October 2026]] passed the re
 4. In each research clone, choose the correct reviewer identity and work only in that reviewer's assigned file. Demonstrate GitHub Desktop on a real, explicitly confirmed screening decision. Inspect the changed-file list, commit the own reviewer file, push it, fetch and pull the other reviewer's changes, then restart PRISM and read the saved decisions. Remote exchange still requires an actual meeting or authorised preflight on the participants' accounts.
 5. Finish when each reviewer can start PRISM independently, locate the next assigned item, save safely and explain the exchange procedure. Record setup problems separately from scholarly disagreements.
 
-The meeting time and duration remain to be confirmed. Device readiness determines how much installation work remains for the meeting. Article structure and co-author decisions are outside this setup agenda.
+The meeting took place on 21 October 2026 and set up PRISM with the reviewers. One reviewer's first test decision reached `main` through the GitHub web interface rather than GitHub Desktop and was removed again on the operator's confirmation that it was a test. The reviewers always read the abstracts first; the reading surface already opens with the abstract, and the operator sees no further action. They also expected to see each other's changes, which ADR-049 now provides as a read-only view in [[specification]]. Whether every reviewer can work alone through the exchange procedure is not yet confirmed. Article structure and co-author decisions are outside this setup agenda.
 
 ## Waiting on the project owner
 
