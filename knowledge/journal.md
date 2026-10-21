@@ -22,6 +22,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## October 2026
 
+### 2026-10-21: Preserve duplicate records and check the Stable Diffusion identity
+
+In the follow-up discussion the operator confirmed that duplicate records and annotations remain intact under the agreement with the reviewers. Later analysis counts the underlying work once. This supersedes the earlier merge instruction recorded below. The only further check commissioned concerns the Stable Diffusion record. Publisher metadata and the local reading copies show that its title, abstract and text refer to the Stable Diffusion article, while its URL identifies *Understanding how users may work around algorithmic bias*. [[data#Stable Diffusion source-identity check of 21 October 2026]] records the evidence and the remaining limit on original import intent. [[plan#Source and corpus readiness]] and [[handoff]] now carry the clarified boundary. No research data, Zotero item, annotation, source binding, count or published output changed.
+
 ### 2026-10-21: Operator decisions after the reviewer meeting
 
 The operator accepted the provisional PRISM decisions of 2 October (ADR-047, ADR-048 and the list order by reading basis), decided that coding and analysis bind the Version whose text was actually read, decided to merge the three certain Work duplicates and examine the two uncertain pairs first, and authorised the switch of GitHub Pages to the result site. [[plan#Decisions taken]] records them. Carrying out the version binding, the merges and the Pages switch remains open.

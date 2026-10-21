@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-03
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Claude Code (Claude Opus 5.5)
 related: [INDEX, plan, journal, project, analysis-methods, governance, verification, testing, standards]
@@ -19,6 +19,8 @@ related: [INDEX, plan, journal, project, analysis-methods, governance, verificat
 # Handoff
 
 ## Current result
+
+The operator clarified on 21 October 2026 that duplicates and all annotations remain preserved. Later analysis counts each established underlying work once. This supersedes the earlier merge instruction. No duplicate consolidation or counting change was implemented. The only commissioned investigation checked the mixed Stable Diffusion bibliographic record and retained its existing text and annotations. [[plan#Source and corpus readiness]] owns the decision, and [[data#Stable Diffusion source-identity check of 21 October 2026]] records the evidence and limits.
 
 State of 2 October 2026. `main` is the integration branch and is ahead of `origin/main` by the unpushed commits of 2 October. The GitHub repository has been private since 1 October 2026. GitHub Pages stays public at https://chpollin.github.io/FemPrompt_SozArb/ and serves `docs/` from `main` as a legacy build, which exposes the internal working surfaces but not the git-ignored reading layer. The switch to `build/site/` is decision 3 in [[plan#Open decisions]].
 
@@ -46,7 +48,7 @@ The curation changes and subsequent knowledge clarification are on `codex/zotero
 1. Accept or revise the provisional decisions of 2 October in [[plan#Decisions taken]], give the second reviewer write access to the repository and retain the reminder that the colleague supplies missing full texts through Zotero under decision 21. A fresh clone of `main` carries the reviewer start.
 2. The two reviewers screen their assigned open papers in PRISM, started with `start-prism.cmd` in a local clone, following the README and `docs/help.html#prism`. A first guided session with each is the remaining usability check. Then the operator review on the phone.
 3. The domain experts take the spot checks in each run's `spot-check-sample.json` and decide the human and agent decision divergences the completion package lists.
-4. Reconcile the unfinished exact-Version recode assignments and canonical Work duplicates without invalidating the currently eligible coding ([[plan#Analysis tool follow-ups]], [[plan#Source and corpus readiness]]).
+4. Preserve duplicate records and annotations. Later analysis must count each established underlying work once under the clarified decision in [[plan#Source and corpus readiness]]. The current Stable Diffusion identity check is documented in [[data#Stable Diffusion source-identity check of 21 October 2026]]. Other source-Version and recoding work requires its existing separate assignment.
 5. Refresh the answer drafts for SQ1 to SQ5 to the recoded state and continue with Assertions under step 4 of [[plan#Answering the research questions]].
 
 ## Checkout and local material
