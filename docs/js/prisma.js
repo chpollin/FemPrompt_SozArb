@@ -2823,7 +2823,7 @@ function filtersHtml() {
             h += '<button type="button" class="pt-seg-btn" data-tip="Alle zugeteilten Dokumente anzeigen" data-assignee="alle" aria-pressed="' + (assignee === 'alle') + '">Alle</button>';
             assignment.reviewers.forEach(function(r) {
                 const n = statusRows.filter(function(row) { return assigneeOf(row.paper) === r.key; }).length;
-                h += '<button type="button" class="pt-seg-btn" data-tip="Arbeitsliste für ' + EC.escapeHtml(r.label) + ' (' + EC.escapeHtml(r.key) + '.json)" data-assignee="' + EC.escapeHtml(r.key) + '" aria-pressed="' + (assignee === r.key) + '">' +
+                h += '<button type="button" class="pt-seg-btn" data-tip="Arbeitsliste für ' + EC.escapeHtml(r.label) + '" data-assignee="' + EC.escapeHtml(r.key) + '" aria-pressed="' + (assignee === r.key) + '">' +
                     EC.escapeHtml(r.label) + ' <span class="pt-seg-count">' + n + '</span></button>';
             });
             h += '</div>';

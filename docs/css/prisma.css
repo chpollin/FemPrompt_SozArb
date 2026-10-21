@@ -144,6 +144,10 @@ body.pt-fullscreen [hidden] { display: none !important; }
 .pt-seg-btn[aria-pressed="true"] { background: var(--pt-human-bg); color: var(--pt-human); }
 .pt-seg-count { font-weight: 500; color: var(--pt-ink-3); }
 .pt-seg-btn[aria-pressed="true"] .pt-seg-count { color: inherit; }
+/* the assignee segments wrap inside the narrow list column, since the role labels are wider
+   than the column; the negative margins tuck each line's outer separator under the clipped edge */
+.pt-assignee-seg { flex-wrap: wrap; max-width: 100%; overflow: hidden; }
+.pt-assignee-seg .pt-seg-btn { margin: 0 0 -1px -1px; border-left: 1px solid var(--pt-border-2); border-bottom: 1px solid var(--pt-border-2); }
 
 .pt-ws-bar { display: flex; align-items: center; flex-wrap: wrap; gap: 0.15rem 0.55rem; padding: 0.3rem 0.75rem; font-size: var(--pt-sm); color: var(--pt-ink-2); min-height: 2.5rem; }
 .pt-ws-bar:empty { display: none; }

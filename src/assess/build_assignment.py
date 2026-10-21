@@ -30,12 +30,14 @@ REPO = Path(__file__).resolve().parents[2]
 SCHEMA = "femprompt-prisma-assignment/1.0"
 REVIEWER_SCHEMA_PREFIX = "femprompt-prisma-reviewer/"
 ASSIGNMENT_FILE = "assignment.json"
-# The labels are what the published pages show, so they name a role, not a person.
-# The keys stay as stored identifiers of the reviewer files and the assignee links.
+# The labels are what the published pages show, so they name a role, not a person:
+# Review A and B split the open papers, Review C holds the small technical list.
+# The keys stay as stored identifiers of the reviewer files, their records and the
+# assignee links, so renaming them would orphan saved work in the reviewers' clones.
 REVIEWERS = (
-    {"key": "sabine", "label": "Sabine"},
-    {"key": "susi", "label": "Susi"},
-    {"key": "chrisi", "label": "Chrisi"},
+    {"key": "sabine", "label": "Review A"},
+    {"key": "susi", "label": "Review B"},
+    {"key": "chrisi", "label": "Review C"},
 )
 SPLIT_KEYS = ("sabine", "susi")
 RULE = (

@@ -22,6 +22,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## October 2026
 
+### 2026-10-21: Neutral reviewer labels on the published pages
+
+The operator asked that the public Pages no longer show the first names of the people screening. The assignment labels and the help and about texts now name roles, Review A and Review B for the two who split the open papers and Review C for the small technical list, and the public assignee tooltip no longer names the reviewer file. The reviewer keys stay, since they key the reviewer files, every saved record and the local save path, so the reviewers change nothing in their clones. The served file names and the `reviewer` and `key` fields still carry the keys; [[specification#ADR-043 The open documents are split between the two reviewers]] records the decision.
+
 ### 2026-10-21: Apply the authorised Stable Diffusion metadata correction
 
 The operator explicitly authorised correcting the wrong URL, author list and year of the Stable Diffusion item while retaining duplicates, texts and annotations. A conditional PATCH of exactly those fields in project group 6080294 was read back against all unrelated item fields, the child record and the duplicate peer. The hash-bound local metadata correction retains the historical export and old field values. [[data#Applied bibliographic correction on 21 October 2026]] links the compact evidence and private complete receipts. Work and Version references, source text and annotation bytes are preserved. The full build and project check passed, including schema, Python and release-browser checks. The generated PRISM record displays the corrected citation and URL. Protected-file hashes and the complete record-to-Work/Version map were compared before and after the build. No merge, screening decision, recoding, publication or counting change was made.

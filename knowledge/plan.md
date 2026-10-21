@@ -245,6 +245,7 @@ These decisions left the open list. Their content lives at the linked place.
 
 | Date | Decision | Recorded in |
 |---|---|---|
+| 21 October 2026 | The published pages show no reviewer names. The assignment labels name roles, Review A and Review B for the split, Review C for the technical list, while the reviewer keys and files stay unchanged | ADR-043 in [[specification]] |
 | 21 October 2026 | Coding and analysis bind the Version whose text was actually read; the preferred bibliography stays recorded | [[#Analysis tool follow-ups]] |
 | 21 October 2026 | Duplicate records and annotations remain intact. Later analysis counts each established underlying work once. This clarification supersedes the earlier merge instruction. The subsequent Stable Diffusion metadata correction was separately authorised and applied without changing records or annotations | [[#Source and corpus readiness]] |
 | 21 October 2026 | GitHub Pages switches to the result site, decision 3 | [[#Deployment]] |

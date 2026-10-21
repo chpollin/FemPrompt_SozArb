@@ -394,7 +394,7 @@ Versioning uses Git outside PRISM. Schema 0.4 is the version-aware isolated capt
 
 ### Reviewer assignment
 
-`docs/data/screening/assignment.json` splits the open documents between the two reviewers (ADR-043). It is written only by `src/assess/build_assignment.py` and read by PRISM for the list filter `Zuteilung`. PRISM never writes it, and `assignment` is a reserved reviewer key.
+`docs/data/screening/assignment.json` splits the open documents between the two reviewers (ADR-043). It is written only by `src/assess/build_assignment.py` and read by PRISM for the list filter `Zuteilung`. PRISM never writes it, and `assignment` is a reserved reviewer key. Each `label` names a review role (Review A, B, C) and is all the published pages show of a reviewer, while the `key` remains the stored identifier of the reviewer file (ADR-043).
 
 ```json
 {

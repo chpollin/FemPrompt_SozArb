@@ -3,15 +3,15 @@
   "reviewers": [
     {
       "key": "sabine",
-      "label": "Sabine"
+      "label": "Review A"
     },
     {
       "key": "susi",
-      "label": "Susi"
+      "label": "Review B"
     },
     {
       "key": "chrisi",
-      "label": "Chrisi"
+      "label": "Review C"
     }
   ],
   "assigned_on": "2026-10-01",
