@@ -22,6 +22,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## October 2026
 
+### 2026-10-21: Apply the authorised Stable Diffusion metadata correction
+
+The operator explicitly authorised correcting the wrong URL, author list and year of the Stable Diffusion item while retaining duplicates, texts and annotations. A conditional PATCH of exactly those fields in project group 6080294 was read back against all unrelated item fields, the child record and the duplicate peer. The hash-bound local metadata correction retains the historical export and old field values. [[data#Applied bibliographic correction on 21 October 2026]] links the compact evidence and private complete receipts. Work and Version references, source text and annotation bytes are preserved. The full build and project check passed, including schema, Python and release-browser checks. The generated PRISM record displays the corrected citation and URL. Protected-file hashes and the complete record-to-Work/Version map were compared before and after the build. No merge, screening decision, recoding, publication or counting change was made.
+
 ### 2026-10-21: Preserve duplicate records and check the Stable Diffusion identity
 
 In the follow-up discussion the operator confirmed that duplicate records and annotations remain intact under the agreement with the reviewers. Later analysis counts the underlying work once. This supersedes the earlier merge instruction recorded below. The only further check commissioned concerns the Stable Diffusion record. Publisher metadata and the local reading copies show that its title, abstract and text refer to the Stable Diffusion article, while its URL identifies *Understanding how users may work around algorithmic bias*. [[data#Stable Diffusion source-identity check of 21 October 2026]] records the evidence and the remaining limit on original import intent. [[plan#Source and corpus readiness]] and [[handoff]] now carry the clarified boundary. No research data, Zotero item, annotation, source binding, count or published output changed.
