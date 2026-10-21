@@ -1,5 +1,6 @@
 # PDFs (too large for Git)
 *.pdf
+!/PRISM-Kurzanleitung.pdf
 
 # Environment variables (contains API keys!)
 .env
