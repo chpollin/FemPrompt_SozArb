@@ -3032,6 +3032,8 @@ const DEFAULT_SEARCH_TERMS = {
 };
 let inTextCatalogOpen = false;
 let selectedTermCat = 'Prompting';
+let inTextAcOpen = false;
+let inTextAcIndex = -1;
 
 function readSearchTerms() {
     try {
@@ -3101,39 +3103,126 @@ function allSearchCatalogEntries() {
     return out;
 }
 
-function searchDatalistOptionsHtml() {
+function searchSuggestionsFor(query, docPlainText) {
+    const q = String(query || '').trim().toLowerCase();
+    if (!q) return [];
+    const lowerText = String(docPlainText || '').toLowerCase();
     const store = readSearchTerms();
     const entries = allSearchCatalogEntries();
     const seen = {};
-    const opts = [];
+    const list = [];
     store.history.forEach(function(term) {
         const lower = term.toLowerCase();
-        if (seen[lower]) return;
+        if (seen[lower] || lower === q || lower.indexOf(q) === -1) return;
         seen[lower] = true;
-        const match = entries.find(function(e) { return e.term.toLowerCase() === lower; });
-        const label = match ? (CAT_LABELS[match.cat] || match.cat) + ' (zuletzt gesucht)' : 'Zuletzt gesucht';
-        opts.push('<option value="' + EC.escapeHtml(term) + '" label="' + EC.escapeHtml(label) + '"></option>');
+        const linked = entries.find(function(e) { return e.term.toLowerCase() === lower; });
+        const hits = lowerText ? countOcc(lowerText, lower) : 0;
+        list.push({
+            term: term,
+            cat: linked ? linked.cat : '',
+            catLabel: linked ? (CAT_LABELS[linked.cat] || linked.cat) : 'Zuletzt gesucht',
+            hits: hits,
+            starts: lower.indexOf(q) === 0
+        });
     });
     entries.forEach(function(entry) {
         const lower = entry.term.toLowerCase();
-        if (seen[lower]) return;
+        if (seen[lower] || lower === q || lower.indexOf(q) === -1) return;
         seen[lower] = true;
-        const label = (CAT_LABELS[entry.cat] || entry.cat) + (entry.custom ? ' (eigener Begriff)' : '');
-        opts.push('<option value="' + EC.escapeHtml(entry.term) + '" label="' + EC.escapeHtml(label) + '"></option>');
+        const hits = lowerText ? countOcc(lowerText, lower) : 0;
+        list.push({
+            term: entry.term,
+            cat: entry.cat,
+            catLabel: (CAT_LABELS[entry.cat] || entry.cat) + (entry.custom ? ' · eigener Begriff' : ''),
+            hits: hits,
+            starts: lower.indexOf(q) === 0
+        });
     });
-    return opts.join('');
+    list.sort(function(a, b) {
+        if ((b.hits > 0) !== (a.hits > 0)) return b.hits > 0 ? 1 : -1;
+        if (b.starts !== a.starts) return b.starts ? 1 : -1;
+        if (b.hits !== a.hits) return b.hits - a.hits;
+        return a.term.localeCompare(b.term);
+    });
+    return list.slice(0, 6);
+}
+
+function highlightMatchHtml(term, query) {
+    const q = String(query || '').trim();
+    if (!q) return EC.escapeHtml(term);
+    const idx = term.toLowerCase().indexOf(q.toLowerCase());
+    if (idx === -1) return EC.escapeHtml(term);
+    return EC.escapeHtml(term.slice(0, idx)) +
+        '<mark class="pt-ac-match">' + EC.escapeHtml(term.slice(idx, idx + q.length)) + '</mark>' +
+        EC.escapeHtml(term.slice(idx + q.length));
+}
+
+function renderInTextAc(query) {
+    const ac = document.getElementById('pt-intext-ac');
+    if (!ac) return;
+    const clean = String(query || '').trim();
+    if (!inTextAcOpen || clean.length < 1) {
+        ac.hidden = true;
+        ac.innerHTML = '';
+        inTextAcIndex = -1;
+        return;
+    }
+    const doc = document.getElementById('pt-doc');
+    const plain = doc && docHtmlCurrent ? (doc.textContent || '') : '';
+    const suggestions = searchSuggestionsFor(clean, plain);
+    if (!suggestions.length) {
+        ac.hidden = true;
+        ac.innerHTML = '';
+        inTextAcIndex = -1;
+        return;
+    }
+    if (inTextAcIndex >= suggestions.length) inTextAcIndex = suggestions.length - 1;
+    let h = '<div class="pt-ac-head"><span class="pt-ac-title">Vorschläge aus Kategorien &amp; Suchverlauf</span><span class="pt-ac-hint">Pfeiltasten / Klick</span></div>';
+    h += '<div class="pt-ac-list">';
+    suggestions.forEach(function(item, idx) {
+        const color = CAT_COLOR[item.cat] || '';
+        const dot = color
+            ? '<span class="chip-dot" aria-hidden="true" style="--chip-color:' + EC.escapeHtml(color) + '"></span>'
+            : '<span class="chip-dot pt-ac-dot-history" aria-hidden="true"></span>';
+        h += '<button type="button" role="option" class="pt-ac-item' + (idx === inTextAcIndex ? ' is-active' : '') + (item.hits === 0 ? ' is-zero' : '') +
+            '" aria-selected="' + (idx === inTextAcIndex ? 'true' : 'false') + '" data-ac-term="' + EC.escapeHtml(item.term) + '">' +
+            dot +
+            '<span class="pt-ac-term">' + highlightMatchHtml(item.term, clean) + '</span>' +
+            '<span class="pt-ac-cat">' + EC.escapeHtml(item.catLabel) + '</span>' +
+            '<span class="pt-ac-hits' + (item.hits > 0 ? ' has-hits' : '') + '">' + item.hits + ' im Text</span>' +
+            '</button>';
+    });
+    h += '</div>';
+    ac.innerHTML = h;
+    ac.hidden = false;
+    ac.querySelectorAll('.pt-ac-item[data-ac-term]').forEach(function(btn) {
+        btn.addEventListener('mousedown', function(e) {
+            e.preventDefault();
+            const term = btn.dataset.acTerm || '';
+            const box = document.getElementById('pt-intext');
+            if (box) box.value = term;
+            inTextAcOpen = false;
+            renderInTextAc('');
+            rememberSearchTerm(term);
+            applyInText(term);
+            refreshInTextQuick();
+        });
+    });
 }
 
 function quickChipHtml(term, cat, hits, isCustom, isHistory) {
     const active = appliedInTextQuery && appliedInTextQuery.toLowerCase() === term.toLowerCase();
     const catLabel = CAT_LABELS[cat] || (cat === 'Allgemein' ? 'Allgemein' : (isHistory ? 'Zuletzt gesucht' : 'Begriff'));
     const color = CAT_COLOR[cat] || '';
-    const dot = color ? '<span class="chip-dot" aria-hidden="true" style="--chip-color:' + EC.escapeHtml(color) + '"></span>' : '';
+    const styleAttr = color ? ' style="--chip-color:' + EC.escapeHtml(color) + '"' : '';
+    const dot = color
+        ? '<span class="chip-dot" aria-hidden="true" style="--chip-color:' + EC.escapeHtml(color) + '"></span>'
+        : '<span class="chip-dot pt-qchip-dot-neutral" aria-hidden="true"></span>';
     const tip = catLabel + ': „' + term + '“ (' + hits + ' Treffer im Text)';
-    let h = '<span class="pt-qchip-wrap' + (hits === 0 ? ' is-zero' : '') + '">';
+    let h = '<span class="pt-qchip-wrap' + (hits === 0 ? ' is-zero' : '') + (isCustom || isHistory ? ' has-del' : '') + '"' + styleAttr + '>';
     h += '<button type="button" class="pt-qchip' + (active ? ' active' : '') + (hits > 0 ? ' has-hits' : '') +
         '" data-search-term="' + EC.escapeHtml(term) + '" data-search-cat="' + EC.escapeHtml(cat || '') +
-        '" aria-pressed="' + (active ? 'true' : 'false') + '" title="' + EC.escapeHtml(tip) + '">' +
+        '" aria-pressed="' + (active ? 'true' : 'false') + '" title="' + EC.escapeHtml(tip) + '"' + styleAttr + '>' +
         dot + '<span class="pt-qchip-text">' + EC.escapeHtml(term) + '</span>' +
         '<span class="pt-qchip-count">' + hits + '</span></button>';
     if (isCustom || isHistory) {
@@ -3150,7 +3239,7 @@ function inTextQuickHtml(docPlainText) {
     const entries = allSearchCatalogEntries();
     const hitChipHtml = [];
     const seenQuick = {};
-    // 1. Custom and recent history terms that occur in this text (or the most recent 3 history terms)
+    // 1. Custom and recent history terms that occur in this text
     store.custom.forEach(function(item) {
         const lower = item.term.toLowerCase();
         if (seenQuick[lower]) return;
@@ -3183,27 +3272,30 @@ function inTextQuickHtml(docPlainText) {
 
     let h = '<div class="pt-intext-hits" role="group" aria-label="Treffer-Schlagworte im aktuellen Text">';
     if (hitChipHtml.length) {
-        h += '<span class="pt-intext-qlabel">Im Text:</span>' + hitChipHtml.slice(0, 14).join('');
+        h += '<span class="pt-intext-qlabel">Treffer im Text</span>' + hitChipHtml.slice(0, 12).join('');
     } else {
-        h += '<span class="pt-intext-qlabel">Keine Standard-Schlagworte im Text gefunden</span>';
+        h += '<span class="pt-intext-qlabel">Keine Kuratier-Schlagworte im aktuellen Text</span>';
     }
-    h += '<button type="button" class="pt-intext-cat-toggle" id="pt-intext-cat-toggle" aria-expanded="' + (inTextCatalogOpen ? 'true' : 'false') + '">Schlagworte &amp; eigene Begriffe</button>';
+    h += '<button type="button" class="pt-intext-cat-toggle' + (inTextCatalogOpen ? ' is-open' : '') + '" id="pt-intext-cat-toggle" aria-expanded="' + (inTextCatalogOpen ? 'true' : 'false') + '">' +
+        '<span>Schlagworte &amp; eigene Begriffe</span><i class="fas fa-chevron-' + (inTextCatalogOpen ? 'up' : 'down') + '" aria-hidden="true"></i></button>';
+    h += '</div>';
     h += '<div class="pt-intext-cat-panel" id="pt-intext-cat-panel"' + (inTextCatalogOpen ? '' : ' hidden') + '>';
     h += '<div class="pt-intext-custom-bar">' +
-        '<label class="pt-intext-clabel" for="pt-term-input">Begriff merken:</label>' +
-        '<input id="pt-term-input" type="text" class="pt-term-input" placeholder="Schlagwort (z. B. prompt engineering)" value="' + EC.escapeHtml(appliedInTextQuery || '') + '">' +
+        '<label class="pt-intext-clabel" for="pt-term-input">Eigenen Suchbegriff zuordnen</label>' +
+        '<input id="pt-term-input" type="text" class="pt-term-input" autocomplete="off" placeholder="Begriff eingeben (z. B. prompt engineering)" value="' + EC.escapeHtml(appliedInTextQuery || '') + '">' +
         '<label class="pt-sr-only" for="pt-term-cat">Kategorie für den Suchbegriff</label>' +
         '<select id="pt-term-cat" class="pt-term-cat">' +
         ALL_CATS.map(function(c) {
             return '<option value="' + EC.escapeHtml(c) + '"' + (selectedTermCat === c ? ' selected' : '') + '>' +
-                'Kategorie: ' + EC.escapeHtml(CAT_LABELS[c] || c) + '</option>';
+                EC.escapeHtml(CAT_LABELS[c] || c) + '</option>';
         }).join('') +
         '<option value="Allgemein"' + (selectedTermCat === 'Allgemein' ? ' selected' : '') + '>Allgemein (übergreifend)</option>' +
         '</select>' +
-        '<button type="button" class="pt-btn pt-btn-sm" id="pt-term-save">Zu Kategorie speichern</button>' +
+        '<button type="button" class="pt-btn pt-btn-sm pt-term-save-btn" id="pt-term-save">Zu Kategorie speichern</button>' +
         '</div>';
+    h += '<div class="pt-intext-cat-grid">';
     if (store.history.length) {
-        h += '<div class="pt-intext-cat-group"><span class="pt-intext-gname">Zuletzt verwendet</span><div class="pt-intext-gchips">' +
+        h += '<div class="pt-intext-cat-group"><span class="pt-intext-gname"><span class="chip-dot pt-qchip-dot-neutral" aria-hidden="true"></span>Zuletzt gesucht</span><div class="pt-intext-gchips">' +
             store.history.slice(0, 10).map(function(term) {
                 const lower = term.toLowerCase();
                 const hits = lowerText ? countOcc(lowerText, lower) : 0;
@@ -3215,7 +3307,11 @@ function inTextQuickHtml(docPlainText) {
         const catEntries = entries.filter(function(e) { return e.cat === cat; });
         if (!catEntries.length) return;
         const label = CAT_LABELS[cat] || 'Allgemein';
-        h += '<div class="pt-intext-cat-group"><span class="pt-intext-gname">' + EC.escapeHtml(label) + '</span><div class="pt-intext-gchips">' +
+        const color = CAT_COLOR[cat] || '';
+        const dot = color
+            ? '<span class="chip-dot" aria-hidden="true" style="--chip-color:' + EC.escapeHtml(color) + '"></span>'
+            : '<span class="chip-dot pt-qchip-dot-neutral" aria-hidden="true"></span>';
+        h += '<div class="pt-intext-cat-group"><span class="pt-intext-gname">' + dot + EC.escapeHtml(label) + '</span><div class="pt-intext-gchips">' +
             catEntries.map(function(e) {
                 const hits = lowerText ? countOcc(lowerText, e.term.toLowerCase()) : 0;
                 return quickChipHtml(e.term, e.cat, hits, e.custom, false);
@@ -3228,8 +3324,6 @@ function inTextQuickHtml(docPlainText) {
 function refreshInTextQuick() {
     const doc = document.getElementById('pt-doc');
     const quick = document.getElementById('pt-intext-quick');
-    const dlist = document.getElementById('pt-intext-list');
-    if (dlist) dlist.innerHTML = searchDatalistOptionsHtml();
     if (quick) {
         const plain = doc && docHtmlCurrent ? (doc.textContent || '') : '';
         quick.innerHTML = inTextQuickHtml(plain);
@@ -3239,13 +3333,21 @@ function refreshInTextQuick() {
 
 function bindInTextQuick(quick) {
     if (!quick) return;
+    quick.querySelectorAll('button').forEach(function(b) {
+        b.addEventListener('mousedown', function(e) { e.preventDefault(); });
+    });
     const catToggle = quick.querySelector('#pt-intext-cat-toggle');
     const catPanel = quick.querySelector('#pt-intext-cat-panel');
     if (catToggle && catPanel) {
         catToggle.addEventListener('click', function() {
+            inTextAcOpen = false;
+            renderInTextAc('');
             inTextCatalogOpen = !inTextCatalogOpen;
             catPanel.hidden = !inTextCatalogOpen;
+            catToggle.classList.toggle('is-open', inTextCatalogOpen);
             catToggle.setAttribute('aria-expanded', inTextCatalogOpen ? 'true' : 'false');
+            const icon = catToggle.querySelector('i');
+            if (icon) icon.className = 'fas fa-chevron-' + (inTextCatalogOpen ? 'up' : 'down');
         });
     }
     const catSelect = quick.querySelector('#pt-term-cat');
@@ -3258,6 +3360,8 @@ function bindInTextQuick(quick) {
         const cat = (catSelect && catSelect.value) || selectedTermCat || 'Prompting';
         if (val.length < 2) return;
         selectedTermCat = cat;
+        inTextAcOpen = false;
+        renderInTextAc('');
         rememberSearchTerm(val, cat);
         if (box) box.value = val;
         applyInText(val);
@@ -3272,6 +3376,8 @@ function bindInTextQuick(quick) {
             const term = btn.dataset.searchTerm || '';
             const box = document.getElementById('pt-intext');
             if (box) box.value = term;
+            inTextAcOpen = false;
+            renderInTextAc('');
             rememberSearchTerm(term);
             applyInText(term);
             refreshInTextQuick();
@@ -3311,9 +3417,10 @@ function readingShellHtml(p) {
         '</div></div>';
     h += '<article class="pt-reading-surface" id="pt-reading-surface" aria-label="Papertext"><div class="pt-read-inner">';
     h += '<div class="pt-intext-bar" id="pt-intext-bar" hidden>' +
+        '<div class="pt-intext-box">' +
         '<div class="pt-intext-row">' +
-        '<input id="pt-intext" type="search" list="pt-intext-list" aria-label="Im Text suchen" aria-keyshortcuts="Enter Shift+Enter" placeholder="Im Text suchen (Begriff tippen oder Schlagwort wählen)">' +
-        '<datalist id="pt-intext-list">' + searchDatalistOptionsHtml() + '</datalist>' +
+        '<i class="fas fa-search pt-intext-icon" aria-hidden="true"></i>' +
+        '<input id="pt-intext" type="search" autocomplete="off" spellcheck="false" aria-label="Im Text suchen" aria-keyshortcuts="Enter Shift+Enter" placeholder="Im Text suchen oder unten Schlagwort anklicken…">' +
         '<span class="pt-intext-count" id="pt-intext-count" aria-hidden="true"></span>' +
         '<button type="button" class="pt-intext-nav" id="pt-intext-prev" aria-label="Vorheriger Treffer" hidden>&lsaquo;</button>' +
         '<button type="button" class="pt-intext-nav" id="pt-intext-next" aria-label="Nächster Treffer" hidden>&rsaquo;</button>' +
@@ -3321,8 +3428,9 @@ function readingShellHtml(p) {
             '<span class="pt-sr-only" id="pt-pin-help">Heftet den aktuellen Treffer als Beleg an eine Kategorie. Eine markierte Textstelle lässt sich ebenso anheften. ' +
             'Ein Paper-Beleg setzt eine leere Kategorie auf teilweise.</span>' : '') +
         '</div>' +
+        '<div class="pt-intext-ac" id="pt-intext-ac" role="listbox" aria-label="Passende Begriffe" hidden></div>' +
         '<div class="pt-intext-quick" id="pt-intext-quick">' + inTextQuickHtml('') + '</div>' +
-        '</div>';
+        '</div></div>';
     h += '<div class="pt-layer-band" id="pt-layer-band" hidden>' + EC.escapeHtml(layerNote) + '</div>';
     h += '<div class="pt-doc" id="pt-doc"><p class="pt-muted">Text lädt…</p></div>';
     h += '</div></article></div>';
@@ -4732,21 +4840,51 @@ function attachScreening(p) {
         cq.addEventListener('input', function() { corpusQuery = cq.value; runCorpus(); });
     }
 
-    // in-text search: Enter steps forward, Shift+Enter back
+    // in-text search: Enter steps forward, Shift+Enter back; typing opens light suggestion bar
     const intext = document.getElementById('pt-intext');
     if (intext) {
         const runIntext = debounce(function() { applyInText(intext.value); }, 120);
-        intext.addEventListener('input', runIntext);
-        intext.addEventListener('change', function() {
-            const query = intext.value.trim();
-            if (query.length >= 2) {
-                rememberSearchTerm(query);
-                refreshInTextQuick();
-            }
+        intext.addEventListener('input', function() {
+            inTextAcOpen = true;
+            inTextAcIndex = -1;
+            renderInTextAc(intext.value);
+            runIntext();
+        });
+        intext.addEventListener('blur', function() {
+            inTextAcOpen = false;
+            renderInTextAc('');
         });
         intext.addEventListener('keydown', function(e) {
+            const ac = document.getElementById('pt-intext-ac');
+            const items = ac && !ac.hidden ? ac.querySelectorAll('.pt-ac-item[data-ac-term]') : [];
+            if (e.key === 'Escape' && ac && !ac.hidden) {
+                e.preventDefault();
+                inTextAcOpen = false;
+                renderInTextAc('');
+                return;
+            }
+            if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && items.length) {
+                e.preventDefault();
+                if (e.key === 'ArrowDown') inTextAcIndex = (inTextAcIndex + 1) % items.length;
+                else inTextAcIndex = (inTextAcIndex - 1 + items.length) % items.length;
+                renderInTextAc(intext.value);
+                return;
+            }
             if (e.key !== 'Enter') return;
             e.preventDefault();
+            if (items.length && inTextAcIndex >= 0 && items[inTextAcIndex]) {
+                const picked = items[inTextAcIndex].dataset.acTerm || '';
+                intext.value = picked;
+                inTextAcOpen = false;
+                renderInTextAc('');
+                rememberSearchTerm(picked);
+                runIntext.cancel();
+                applyInText(picked);
+                refreshInTextQuick();
+                return;
+            }
+            inTextAcOpen = false;
+            renderInTextAc('');
             const query = intext.value.trim();
             if (query.length >= 2) rememberSearchTerm(query);
             if (query !== appliedInTextQuery) {
