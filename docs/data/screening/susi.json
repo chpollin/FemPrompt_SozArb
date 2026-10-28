@@ -2,7 +2,7 @@
   "schema": "femprompt-prisma-reviewer/0.5",
   "reviewer": "susi",
   "actor": "human",
-  "updated": "2026-10-28T13:02:15.727Z",
+  "updated": "2026-10-28T13:56:02.333Z",
   "decisions": {
     "2RK458W2": {
       "categories": {
@@ -850,6 +850,106 @@
           "state": "curated",
           "basis": "recorded",
           "at": "2026-10-28T12:59:42.353Z",
+          "actor_ids": [
+            "susi"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
+    "D267IQ4C": {
+      "categories": {
+        "Generative_KI": 2
+      },
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Not_relevant_topic",
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-10-28T13:56:02.332Z",
+      "reviewer": "susi",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:7eb826eb-db16-5ae7-8201-3339f108ae93",
+      "version_id": "version:cd86e948-9250-5850-a227-9cb0b762cd50",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:cd86e948-9250-5850-a227-9cb0b762cd50",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "susi:D267IQ4C",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "susi",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "D267IQ4C:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-a8810866-69d8-4931-ae4f-9b0afed1527b",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "susi"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:D267IQ4C",
+            "type": "paper",
+            "reference": "D267IQ4C",
+            "work_id": "work:7eb826eb-db16-5ae7-8201-3339f108ae93",
+            "version_id": "version:cd86e948-9250-5850-a227-9cb0b762cd50",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "susi:D267IQ4C",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-28T13:56:02.332Z",
+          "actor_ids": [
+            "susi"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2
+            },
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Not_relevant_topic",
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-10-28T13:56:02.332Z",
+            "reviewer": "susi",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "susi:D267IQ4C",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-10-28T13:56:02.332Z",
           "actor_ids": [
             "susi"
           ]
@@ -1808,6 +1908,116 @@
         "events": []
       }
     },
+    "T57U8T2K": {
+      "categories": {
+        "Bias_Ungleichheit": 2,
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Fairness": 2,
+        "Diversitaet": 2,
+        "Gender": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-10-28T13:51:45.063Z",
+      "reviewer": "susi",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314",
+      "version_id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "susi:T57U8T2K",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "susi",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "T57U8T2K:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-a8810866-69d8-4931-ae4f-9b0afed1527b",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "susi"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:T57U8T2K",
+            "type": "paper",
+            "reference": "T57U8T2K",
+            "work_id": "work:6eab81e9-e9ba-57eb-abc0-6c00d7061314",
+            "version_id": "version:7e635266-bdb5-5f56-b3a4-b3ac24907c1b",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "susi:T57U8T2K",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-28T13:51:45.063Z",
+          "actor_ids": [
+            "susi"
+          ],
+          "body": {
+            "categories": {
+              "Bias_Ungleichheit": 2,
+              "Generative_KI": 2,
+              "Prompting": 2,
+              "Fairness": 2,
+              "Diversitaet": 2,
+              "Gender": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-10-28T13:51:45.063Z",
+            "reviewer": "susi",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "susi:T57U8T2K",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-10-28T13:51:45.063Z",
+          "actor_ids": [
+            "susi"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
     "UV9AI4X3": {
       "categories": {
         "Feministisch": 2,
@@ -2110,6 +2320,212 @@
           "state": "curated",
           "basis": "recorded",
           "at": "2026-10-28T12:45:50.974Z",
+          "actor_ids": [
+            "susi"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
+    "Z599JJFT": {
+      "categories": {},
+      "decision": "Exclude",
+      "override": false,
+      "reason": "Language",
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-10-28T13:51:56.394Z",
+      "reviewer": "susi",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:feb70530-663a-5606-8a38-0eb3a39f35fa",
+      "version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "susi:Z599JJFT",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "susi",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "Z599JJFT:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-a8810866-69d8-4931-ae4f-9b0afed1527b",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "susi"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:Z599JJFT",
+            "type": "paper",
+            "reference": "Z599JJFT",
+            "work_id": "work:feb70530-663a-5606-8a38-0eb3a39f35fa",
+            "version_id": "version:d73787f7-c991-5112-bfa5-4649aa3e4420",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "susi:Z599JJFT",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-28T13:51:56.394Z",
+          "actor_ids": [
+            "susi"
+          ],
+          "body": {
+            "categories": {},
+            "decision": "Exclude",
+            "override": false,
+            "reason": "Language",
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-10-28T13:51:56.394Z",
+            "reviewer": "susi",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "susi:Z599JJFT",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-10-28T13:51:56.394Z",
+          "actor_ids": [
+            "susi"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
+    "ZH6T88D5": {
+      "categories": {
+        "Generative_KI": 2,
+        "Bias_Ungleichheit": 2,
+        "AI_Literacies": 2,
+        "Diversitaet": 2,
+        "Gender": 2,
+        "Prompting": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-10-28T13:53:08.750Z",
+      "reviewer": "susi",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:f7d29922-360f-5874-8d4c-cf7f7451f638",
+      "version_id": "version:24a21eca-b319-5127-9194-4b0f14c3410e",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:24a21eca-b319-5127-9194-4b0f14c3410e",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "susi:ZH6T88D5",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "susi",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "ZH6T88D5:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-a8810866-69d8-4931-ae4f-9b0afed1527b",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "susi"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:ZH6T88D5",
+            "type": "paper",
+            "reference": "ZH6T88D5",
+            "work_id": "work:f7d29922-360f-5874-8d4c-cf7f7451f638",
+            "version_id": "version:24a21eca-b319-5127-9194-4b0f14c3410e",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "susi:ZH6T88D5",
+          "annotation_type": "screening_decision",
+          "at": "2026-10-28T13:53:08.750Z",
+          "actor_ids": [
+            "susi"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2,
+              "Bias_Ungleichheit": 2,
+              "AI_Literacies": 2,
+              "Diversitaet": 2,
+              "Gender": 2,
+              "Prompting": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-10-28T13:53:08.750Z",
+            "reviewer": "susi",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "susi:ZH6T88D5",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-10-28T13:53:08.750Z",
           "actor_ids": [
             "susi"
           ]
