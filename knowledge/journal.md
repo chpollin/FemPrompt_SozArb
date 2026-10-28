@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-10-17
+updated: 2026-10-21
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -21,6 +21,26 @@ related: [INDEX, plan, specification, governance, verification, handoff]
 Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen fest, die Git nicht erfasst, sodass alte Zustände, verworfene Richtungen und später umgestoßene Entscheidungen lesbar bleiben. Ein Eintrag je substanzieller Sitzung nennt, was sich änderte, was entschieden wurde und was offen bleibt, und verweist auf das Dokument, das den Gegenstand trägt. Commits und Diffs leben in der Git-Historie, Zahlen in den Daten und im Evidence Companion. Die Einträge stehen chronologisch, der neueste zuerst.
 
 ## October 2026
+
+### 2026-10-21: Neutral reviewer labels on the published pages
+
+The operator asked that the public Pages no longer show the first names of the people screening. The assignment labels and the help and about texts now name roles, Review A and Review B for the two who split the open papers and Review C for the small technical list, and the public assignee tooltip no longer names the reviewer file. The reviewer keys stay, since they key the reviewer files, every saved record and the local save path, so the reviewers change nothing in their clones. The served file names and the `reviewer` and `key` fields still carry the keys; [[specification#ADR-043 The open documents are split between the two reviewers]] records the decision.
+
+### 2026-10-21: Apply the authorised Stable Diffusion metadata correction
+
+The operator explicitly authorised correcting the wrong URL, author list and year of the Stable Diffusion item while retaining duplicates, texts and annotations. A conditional PATCH of exactly those fields in project group 6080294 was read back against all unrelated item fields, the child record and the duplicate peer. The hash-bound local metadata correction retains the historical export and old field values. [[data#Applied bibliographic correction on 21 October 2026]] links the compact evidence and private complete receipts. Work and Version references, source text and annotation bytes are preserved. The full build and project check passed, including schema, Python and release-browser checks. The generated PRISM record displays the corrected citation and URL. Protected-file hashes and the complete record-to-Work/Version map were compared before and after the build. No merge, screening decision, recoding, publication or counting change was made.
+
+### 2026-10-21: Preserve duplicate records and check the Stable Diffusion identity
+
+In the follow-up discussion the operator confirmed that duplicate records and annotations remain intact under the agreement with the reviewers. Later analysis counts the underlying work once. This supersedes the earlier merge instruction recorded below. The only further check commissioned concerns the Stable Diffusion record. Publisher metadata and the local reading copies show that its title, abstract and text refer to the Stable Diffusion article, while its URL identifies *Understanding how users may work around algorithmic bias*. [[data#Stable Diffusion source-identity check of 21 October 2026]] records the evidence and the remaining limit on original import intent. [[plan#Source and corpus readiness]] and [[handoff]] now carry the clarified boundary. No research data, Zotero item, annotation, source binding, count or published output changed.
+
+### 2026-10-21: Operator decisions after the reviewer meeting
+
+The operator accepted the provisional PRISM decisions of 2 October (ADR-047, ADR-048 and the list order by reading basis), decided that coding and analysis bind the Version whose text was actually read, decided to merge the three certain Work duplicates and examine the two uncertain pairs first, and authorised the switch of GitHub Pages to the result site. [[plan#Decisions taken]] records them. Carrying out the version binding, the merges and the Pages switch remains open.
+
+### 2026-10-21: Reviewer meeting and read-only peer view
+
+PRISM was set up with the reviewers in the meeting. A reviewer's pushed test decision did not appear for the operator, first because the local clone had not been pulled and then because PRISM showed a record only under its own Kürzel. The operator decided that the other reviewers' saved records are visible without selecting a Kürzel. [[specification#ADR-049 Other reviewers' saved records are visible read-only (refines ADR-012, ADR-017 and ADR-043)]] records the decision. The abstract observation from the meeting stands in [[plan#Reviewer setup meeting]]. The change is on a branch for the operator to merge. On the operator's request twenty open papers moved from susi to sabine through the new `--move` option of `src/assess/build_assignment.py`, which amends the append-only rule of ADR-043.
 
 ### 2026-10-17: Reviewer setup rehearsal
 

@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://dhcraft.org/FemPrompt_SozArb/schemas/femprompt-prisma-assignment-1.0.schema.json",
   "title": "femprompt-prisma-assignment/1.0",
-  "$comment": "Split of the open PRISM papers between the human reviewers at docs/data/screening/assignment.json. Writer: src/assess/build_assignment.py (append-only). Reader: docs/js/prisma.js (list filter Zuteilung). It is not a reviewer file and carries no decision.",
+  "$comment": "Split of the open PRISM papers between the human reviewers at docs/data/screening/assignment.json. Writer: src/assess/build_assignment.py (entries change only through an explicit move). Reader: docs/js/prisma.js (list filter Zuteilung). It is not a reviewer file and carries no decision.",
   "type": "object",
   "required": ["schema", "reviewers", "assigned_on", "rule", "assignments"],
   "additionalProperties": false,

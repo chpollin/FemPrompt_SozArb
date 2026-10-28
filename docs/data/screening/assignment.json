@@ -3,19 +3,19 @@
   "reviewers": [
     {
       "key": "sabine",
-      "label": "Sabine"
+      "label": "Review A"
     },
     {
       "key": "susi",
-      "label": "Susi"
+      "label": "Review B"
     },
     {
       "key": "chrisi",
-      "label": "Chrisi"
+      "label": "Review C"
     }
   ],
   "assigned_on": "2026-10-01",
-  "rule": "Every paper that is open in PRISM (no decision of the consolidated expert assessment, no own record, no own verification) is assigned to one reviewer. Open papers are split into papers with an agent record and unassessed papers; within each group they alternate between the reviewers in corpus order. Existing entries are never changed; a rerun only adds newly open papers.",
+  "rule": "Every paper that is open in PRISM (no decision of the consolidated expert assessment, no own record, no own verification) is assigned to one reviewer. Open papers are split into papers with an agent record and unassessed papers; within each group they alternate between the reviewers in corpus order. A rerun only adds newly open papers; an existing entry changes only when the operator moves open papers from one reviewer to another.",
   "assignments": {
     "BHXDU7VM": "sabine",
     "KI9GRGHB": "sabine",
@@ -100,45 +100,46 @@
     "K7NW3W34": "sabine",
     "QRK7C3JK": "susi",
     "I7BQH4U4": "sabine",
-    "88CFIG8R": "susi",
+    "88CFIG8R": "sabine",
     "WHGCH3XS": "sabine",
-    "UFTH283E": "susi",
+    "UFTH283E": "sabine",
     "KUVUZMDU": "sabine",
-    "RH8MC67Z": "susi",
+    "RH8MC67Z": "sabine",
     "T7FGTQF4": "sabine",
-    "UGN4TS5R": "susi",
+    "UGN4TS5R": "sabine",
     "XQCZTTIK": "sabine",
-    "EWPPFD7U": "susi",
+    "EWPPFD7U": "sabine",
     "S2DN9CFC": "sabine",
-    "SK6VDF5B": "susi",
+    "SK6VDF5B": "sabine",
     "2JSZR47F": "sabine",
-    "KJWMQSMN": "susi",
+    "KJWMQSMN": "sabine",
     "EFMF4449": "sabine",
-    "6N9ANHXA": "susi",
+    "6N9ANHXA": "sabine",
     "TFMETSCH": "sabine",
-    "DZ5EAPXR": "susi",
+    "DZ5EAPXR": "sabine",
     "YW3UAXFP": "sabine",
-    "DL7G37W9": "susi",
+    "DL7G37W9": "sabine",
     "UIBZW4IK": "sabine",
-    "CCAKPEGY": "susi",
+    "CCAKPEGY": "sabine",
     "UNGYENLB": "sabine",
-    "EF9TQIRK": "susi",
+    "EF9TQIRK": "sabine",
     "PS8KVDVS": "sabine",
-    "7B6V8MN6": "susi",
+    "7B6V8MN6": "sabine",
     "5G2VPZR8": "sabine",
-    "9Y7H9WXQ": "susi",
+    "9Y7H9WXQ": "sabine",
     "VXDH5KWP": "sabine",
-    "DALR26DL": "susi",
+    "DALR26DL": "sabine",
     "BKYNQZHQ": "sabine",
-    "IYUPQPTA": "susi",
+    "IYUPQPTA": "sabine",
     "H958FXZR": "sabine",
-    "MN2K9JW8": "susi",
+    "MN2K9JW8": "sabine",
     "8YZKPS42": "sabine",
-    "VYCF5NCB": "susi",
+    "VYCF5NCB": "sabine",
     "WUMNU3W5": "sabine",
-    "P285BA5N": "susi",
+    "P285BA5N": "sabine",
     "5NSMD7XV": "sabine",
-    "JFDBPUBN": "susi",
+    "JFDBPUBN": "sabine",
     "978AV9KZ": "chrisi"
-  }
+  },
+  "updated_on": "2026-10-21"
 }

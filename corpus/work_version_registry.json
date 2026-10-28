@@ -1,10 +1,10 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:bd645d545c9bea10d323785f15efa559ef243a33050fc9e5d63a420eec9c0a36",
+  "source_fingerprint": "sha256:8549e9ce47c80c2f2fb71644bac4fae075203c1e2f63196fd3e4ef97183fb75b",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
-      "sha256": "a340d67f78e6ca79b3abdda61225ff1bc0bbf660fc6f46e95619c7cc811d92c2"
+      "sha256": "bd7f5091cacfbd259ef015f549131b8535fed54dbffd0337c1150db4aaea693b"
     },
     {
       "path": "corpus/source-acquisition/QRK7C3JK-visual-qc/visual-qc.json",
@@ -125,6 +125,10 @@
     {
       "path": "corpus/source-acquisition/historical-resolution-2026-09-05/latif-v4.txt",
       "sha256": "fa9a2f3f7766fe5a5bd63ce65c9ad412122e42221e9c01e5453679fbac21c18f"
+    },
+    {
+      "path": "corpus/source-acquisition/metadata-resolution-2026-10-21/HLBXNWAZ.json",
+      "sha256": "c36708a104f3d68d5661d4daa3ce4019981d3987c6683af655af8db86682b02c"
     },
     {
       "path": "corpus/source-acquisition/reading-assets-2026-09-05/assets/kabra-2504.05632v3-page-2.png",
@@ -8606,12 +8610,13 @@
         {
           "title": "Intersectional analysis of visual generative AI: the case of stable diffusion",
           "authors": [
-            "S. Sharma",
-            "A. Ovalle",
-            "A. Subramonian"
+            "Petra Jääskeläinen",
+            "Nickhil Kumar Sharma",
+            "Helen Pallett",
+            "Cecilia Åsberg"
           ],
           "version_type": "version_of_record",
-          "version_date": "2024",
+          "version_date": "2025-03-17",
           "item_type": "journalArticle",
           "journal_or_repository": "",
           "identifiers": {
@@ -8619,19 +8624,97 @@
               "HLBXNWAZ"
             ],
             "url": [
-              "https://link.springer.com/article/10.1007/s00146-025-02498-1"
+              "https://link.springer.com/article/10.1007/s00146-025-02207-y"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+          "landing_url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
           "fulltext_url": "",
           "license": "",
           "source_lanes": [],
           "evidence": [],
           "provenance": [
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "HLBXNWAZ",
+              "ai_metadata_correction": {
+                "record_id": "HLBXNWAZ",
+                "base_sha256": "sha256:2e0ff0af2888b0c12b8778c665c377c3ba25994120f8c949bc13e7d21b7294d7",
+                "agent_id": "socialai/01a14a55-dac3-7632-9963-b13b212447d7",
+                "model": "GPT-6 (runtime family; exact deployment identifier not exposed)",
+                "reviewed_at": "2026-10-21T17:03:11.722650+00:00",
+                "findings": "Operator-authorised source-backed URL, creator and date correction. Live Zotero read-back verified. Keep the existing title, records, texts, annotations and historical export unchanged.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "url",
+                    "before": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+                    "after": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
+                    "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+                  },
+                  {
+                    "field": "creators",
+                    "before": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "S.",
+                        "lastName": "Sharma"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "A.",
+                        "lastName": "Ovalle"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "A.",
+                        "lastName": "Subramonian"
+                      }
+                    ],
+                    "after": [
+                      {
+                        "lastName": "Jääskeläinen",
+                        "creatorType": "author",
+                        "firstName": "Petra"
+                      },
+                      {
+                        "lastName": "Sharma",
+                        "creatorType": "author",
+                        "firstName": "Nickhil Kumar"
+                      },
+                      {
+                        "lastName": "Pallett",
+                        "creatorType": "author",
+                        "firstName": "Helen"
+                      },
+                      {
+                        "lastName": "Åsberg",
+                        "creatorType": "author",
+                        "firstName": "Cecilia"
+                      }
+                    ],
+                    "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+                  },
+                  {
+                    "field": "date",
+                    "before": "2024",
+                    "after": "2025-03-17",
+                    "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-21/HLBXNWAZ.json",
+                    "sha256": "sha256:c36708a104f3d68d5661d4daa3ce4019981d3987c6683af655af8db86682b02c",
+                    "source_url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
+                    "locator": "/sources/0/bibliographic_metadata and /external_write"
+                  }
+                ]
+              }
+            },
             {
               "source": "zotero_export",
               "reference": "HLBXNWAZ"
@@ -37016,10 +37099,6 @@
       "work_id": "work:95972d23-b5b4-587a-b620-cedd16cc602c",
       "version_id": "version:0ea58cba-175f-5046-8b5d-5a8b3ab307ab"
     },
-    "url:https://link.springer.com/article/10.1007/s00146-025-02498-1": {
-      "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
-      "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
-    },
     "url:https://link.springer.com/article/10.1007/s00146-025-02556-8": {
       "work_id": "work:46be07be-83b3-59c5-946e-b41472558493",
       "version_id": "version:ad149ad0-134b-5935-b766-37dca94bfab2"
@@ -39531,6 +39610,10 @@
       }
     ],
     "url:https://link.springer.com/article/10.1007/s00146-025-02207-y": [
+      {
+        "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
+        "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9"
+      },
       {
         "work_id": "work:81080311-e2d5-5407-87da-ddbffc3b0981",
         "version_id": "version:7da5a4cf-ea10-5b9b-82c9-7c9d2c77a892"

@@ -1,0 +1,107 @@
+{
+  "schema": "femprompt-bibliographic-evidence-extract/0.1",
+  "record_id": "HLBXNWAZ",
+  "reviewed_at": "2026-10-21T17:03:11.722650+00:00",
+  "authorization": "Direct Human User instruction on 21 October 2026 to correct URL, authors and year, preserving duplicates, texts and annotations.",
+  "sources": [
+    {
+      "source_url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
+      "locator": "Title, complete byline, online publication date 17 March 2025; compared with the stored Stable Diffusion title block",
+      "bibliographic_metadata": {
+        "url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
+        "creators": [
+          {
+            "lastName": "Jääskeläinen",
+            "creatorType": "author",
+            "firstName": "Petra"
+          },
+          {
+            "lastName": "Sharma",
+            "creatorType": "author",
+            "firstName": "Nickhil Kumar"
+          },
+          {
+            "lastName": "Pallett",
+            "creatorType": "author",
+            "firstName": "Helen"
+          },
+          {
+            "lastName": "Åsberg",
+            "creatorType": "author",
+            "firstName": "Cecilia"
+          }
+        ],
+        "date": "2025-03-17"
+      },
+      "supporting_source_path": "corpus/source-acquisition/zotero-curation-2026-10-03/YLAKP7Z2.json",
+      "supporting_source_sha256": "sha256:7a4e0785874907064ad32c3faa1674458ca574652967f6b095fa7ff843f19976"
+    }
+  ],
+  "changes": [
+    {
+      "field": "url",
+      "before": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+      "after": "https://link.springer.com/article/10.1007/s00146-025-02207-y"
+    },
+    {
+      "field": "creators",
+      "before": [
+        {
+          "creatorType": "author",
+          "firstName": "S.",
+          "lastName": "Sharma"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "A.",
+          "lastName": "Ovalle"
+        },
+        {
+          "creatorType": "author",
+          "firstName": "A.",
+          "lastName": "Subramonian"
+        }
+      ],
+      "after": [
+        {
+          "lastName": "Jääskeläinen",
+          "creatorType": "author",
+          "firstName": "Petra"
+        },
+        {
+          "lastName": "Sharma",
+          "creatorType": "author",
+          "firstName": "Nickhil Kumar"
+        },
+        {
+          "lastName": "Pallett",
+          "creatorType": "author",
+          "firstName": "Helen"
+        },
+        {
+          "lastName": "Åsberg",
+          "creatorType": "author",
+          "firstName": "Cecilia"
+        }
+      ]
+    },
+    {
+      "field": "date",
+      "before": "2024",
+      "after": "2025-03-17"
+    }
+  ],
+  "external_write": {
+    "status": "verified",
+    "group_id": "6080294",
+    "item_key": "HLBXNWAZ",
+    "before_version": 3124,
+    "after_version": 3228,
+    "receipt_path": "generated\\zotero-sync\\2026-10-21-stable-diffusion\\apply-receipt.json",
+    "receipt_sha256": "sha256:7c42e255e43ca51f289b2e0ab58cba97bc5caf0bc09cef10e19a5e0bd1d216bd",
+    "unrelated_fields_preserved": true,
+    "child_records_preserved": true,
+    "duplicate_peer_preserved": true
+  },
+  "scope": "Bibliographic correction only. No merge, text replacement, annotation revision or scholarly verification."
+}

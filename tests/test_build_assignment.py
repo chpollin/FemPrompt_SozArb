@@ -98,4 +98,20 @@ def test_committed_file_is_current_and_balanced():
     assert committed == document
     counts = Counter(committed["assignments"].values())
     assert counts["chrisi"] == 3
-    assert abs(counts["sabine"] - counts["susi"]) <= 1
+    # the operator moved 20 open papers from susi to sabine on 21 October 2026
+    assert counts["sabine"] - counts["susi"] == 40
+
+
+def test_move_takes_the_last_open_papers_of_the_source(tmp_path):
+    papers = [{"id": f"P{i}"} for i in range(6)]
+    papers[4]["human"] = {"decision": "Include"}
+    corpus(tmp_path, papers)
+    document, _ = assignment.build(tmp_path, "2026-10-01")
+    susi = [pid for pid, key in document["assignments"].items() if key == "susi"]
+    candidates = assignment.open_papers(papers, set(), set())
+    moved = assignment.move(document["assignments"], candidates, "susi", "sabine", 1)
+    open_susi = [pid for pid in susi if pid != "P4"]
+    assert moved == open_susi[-1:]
+    assert document["assignments"][moved[0]] == "sabine"
+    with pytest.raises(ValueError):
+        assignment.move(document["assignments"], candidates, "susi", "sabine", 99)

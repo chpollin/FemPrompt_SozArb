@@ -1,7 +1,7 @@
 {
   "meta": {
     "fulltext_projection_state": "complete",
-    "source_fingerprint": "sha256:48c45ee26b6dd00a37d20d155ad50c8a56fe1b989239952bdbd4ea6c38376f52",
+    "source_fingerprint": "sha256:cb046bade8fdc26ad45fb4f5ef3590fbf1eb53e5bef6363a49cf1a5c93d99453",
     "total_papers": 463,
     "unique_works": 361,
     "knowledge_linked_records": 289,
@@ -40341,35 +40341,177 @@
     {
       "id": "HLBXNWAZ",
       "title": "Intersectional analysis of visual generative AI: the case of stable diffusion",
-      "author_year": "Sharma et al. (2024)",
-      "legacy_author_year": "Sharma et al. (2024)",
-      "authors": "Sharma, S.; Ovalle, A.; Subramonian, A.",
-      "year": 2024,
+      "author_year": "Jääskeläinen et al. (2025)",
+      "legacy_author_year": "Jääskeläinen, Petra (2025)",
+      "authors": "Jääskeläinen, Petra; Sharma, Nickhil Kumar; Pallett, Helen; Åsberg, Cecilia",
+      "year": 2025,
       "doi": "",
-      "url": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+      "url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
       "abstract": "This study conducts a critical intersectional analysis of Stable Diffusion, a widely used visual generative AI tool. The examination of 180 generated images shows how the system perpetuates prevailing power systems such as sexism, racism, heteronormativity, and ableism, assuming white, physically healthy, masculine-presenting individuals as the standard. The study identifies three levels of analysis: (1) the aesthetics of AI images (micro-level), (2) institutional contexts (meso-level), and (3) intersections between power systems (macro-level). The authors argue for a reparative, socially just approach to visual generative AI.",
       "item_type": "journalArticle",
       "journal": "",
-      "knowledge_doc": null,
-      "knowledge_doc_candidate": {
-        "path": "vault/Papers/Intersectional analysis of visual generative AI- the case of-9df0b9.md",
-        "basis": "legacy_title_candidate",
-        "embedded_source_file": "Jääskeläinen_2025_Intersectional_analysis_of_visual_generative_AI.md",
-        "manifest_source_file": "Sharma_2024_Intersectional_analysis_of_visual_generative_AI.md",
-        "reasons": [
-          "embedded_source_file_mismatch"
+      "ai_metadata_correction": {
+        "record_id": "HLBXNWAZ",
+        "base_sha256": "sha256:2e0ff0af2888b0c12b8778c665c377c3ba25994120f8c949bc13e7d21b7294d7",
+        "agent_id": "socialai/01a14a55-dac3-7632-9963-b13b212447d7",
+        "model": "GPT-6 (runtime family; exact deployment identifier not exposed)",
+        "reviewed_at": "2026-10-21T17:03:11.722650+00:00",
+        "findings": "Operator-authorised source-backed URL, creator and date correction. Live Zotero read-back verified. Keep the existing title, records, texts, annotations and historical export unchanged.",
+        "authority": "ai-source-reviewed-metadata",
+        "changes": [
+          {
+            "field": "url",
+            "before": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+            "after": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
+            "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+          },
+          {
+            "field": "creators",
+            "before": [
+              {
+                "creatorType": "author",
+                "firstName": "S.",
+                "lastName": "Sharma"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "A.",
+                "lastName": "Ovalle"
+              },
+              {
+                "creatorType": "author",
+                "firstName": "A.",
+                "lastName": "Subramonian"
+              }
+            ],
+            "after": [
+              {
+                "lastName": "Jääskeläinen",
+                "creatorType": "author",
+                "firstName": "Petra"
+              },
+              {
+                "lastName": "Sharma",
+                "creatorType": "author",
+                "firstName": "Nickhil Kumar"
+              },
+              {
+                "lastName": "Pallett",
+                "creatorType": "author",
+                "firstName": "Helen"
+              },
+              {
+                "lastName": "Åsberg",
+                "creatorType": "author",
+                "firstName": "Cecilia"
+              }
+            ],
+            "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+          },
+          {
+            "field": "date",
+            "before": "2024",
+            "after": "2025-03-17",
+            "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+          }
+        ],
+        "evidence": [
+          {
+            "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-21/HLBXNWAZ.json",
+            "sha256": "sha256:c36708a104f3d68d5661d4daa3ce4019981d3987c6683af655af8db86682b02c",
+            "source_url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
+            "locator": "/sources/0/bibliographic_metadata and /external_write"
+          }
         ]
+      },
+      "knowledge_doc": null,
+      "knowledge_doc_invalidation": {
+        "reason": "bibliographic_identity_corrected",
+        "basis": {
+          "record_id": "HLBXNWAZ",
+          "base_sha256": "sha256:2e0ff0af2888b0c12b8778c665c377c3ba25994120f8c949bc13e7d21b7294d7",
+          "agent_id": "socialai/01a14a55-dac3-7632-9963-b13b212447d7",
+          "model": "GPT-6 (runtime family; exact deployment identifier not exposed)",
+          "reviewed_at": "2026-10-21T17:03:11.722650+00:00",
+          "findings": "Operator-authorised source-backed URL, creator and date correction. Live Zotero read-back verified. Keep the existing title, records, texts, annotations and historical export unchanged.",
+          "authority": "ai-source-reviewed-metadata",
+          "changes": [
+            {
+              "field": "url",
+              "before": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+              "after": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
+              "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+            },
+            {
+              "field": "creators",
+              "before": [
+                {
+                  "creatorType": "author",
+                  "firstName": "S.",
+                  "lastName": "Sharma"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "A.",
+                  "lastName": "Ovalle"
+                },
+                {
+                  "creatorType": "author",
+                  "firstName": "A.",
+                  "lastName": "Subramonian"
+                }
+              ],
+              "after": [
+                {
+                  "lastName": "Jääskeläinen",
+                  "creatorType": "author",
+                  "firstName": "Petra"
+                },
+                {
+                  "lastName": "Sharma",
+                  "creatorType": "author",
+                  "firstName": "Nickhil Kumar"
+                },
+                {
+                  "lastName": "Pallett",
+                  "creatorType": "author",
+                  "firstName": "Helen"
+                },
+                {
+                  "lastName": "Åsberg",
+                  "creatorType": "author",
+                  "firstName": "Cecilia"
+                }
+              ],
+              "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+            },
+            {
+              "field": "date",
+              "before": "2024",
+              "after": "2025-03-17",
+              "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+            }
+          ],
+          "evidence": [
+            {
+              "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-21/HLBXNWAZ.json",
+              "sha256": "sha256:c36708a104f3d68d5661d4daa3ce4019981d3987c6683af655af8db86682b02c",
+              "source_url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
+              "locator": "/sources/0/bibliographic_metadata and /external_write"
+            }
+          ]
+        }
       },
       "knowledge_coverage": "fulltext_ready",
       "work_id": "work:3c09187b-890b-50a3-82ce-f8a9822d5a87",
       "identity_basis": "work_version_registry",
-      "legacy_work_id": "source:Sharma_2024_Intersectional_analysis_of_visual_generative_AI.md",
+      "legacy_work_id": "source:Jääskeläinen_2025_Intersectional_analysis_of_visual_generative_AI.md",
       "legacy_identity_basis": "verified_fulltext",
       "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
       "source_binding": null,
       "source_hold": null,
       "version_type": "version_of_record",
-      "version_date": "2024",
+      "version_date": "2025-03-17",
       "peer_review_status": "not_established",
       "peer_review_basis": "unknown",
       "integrity_status": "current",
@@ -40380,20 +40522,20 @@
         {
           "version_id": "version:e5d4a1fb-13dc-5495-94de-a890a0c51da9",
           "version_type": "version_of_record",
-          "version_date": "2024",
+          "version_date": "2025-03-17",
           "identifiers": {
             "zotero_key": [
               "HLBXNWAZ"
             ],
             "url": [
-              "https://link.springer.com/article/10.1007/s00146-025-02498-1"
+              "https://link.springer.com/article/10.1007/s00146-025-02207-y"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+          "landing_url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
           "fulltext_url": "",
           "relations": [],
           "is_preferred": true,

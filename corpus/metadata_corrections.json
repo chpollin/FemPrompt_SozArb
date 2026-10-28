@@ -7923,6 +7923,80 @@
           "locator": "/sources/0/bibliographic_metadata"
         }
       ]
+    },
+    {
+      "record_id": "HLBXNWAZ",
+      "base_sha256": "sha256:2e0ff0af2888b0c12b8778c665c377c3ba25994120f8c949bc13e7d21b7294d7",
+      "authority": "ai-source-reviewed-metadata",
+      "agent_id": "socialai/01a14a55-dac3-7632-9963-b13b212447d7",
+      "model": "GPT-6 (runtime family; exact deployment identifier not exposed)",
+      "reviewed_at": "2026-10-21T17:03:11.722650+00:00",
+      "findings": "Operator-authorised source-backed URL, creator and date correction. Live Zotero read-back verified. Keep the existing title, records, texts, annotations and historical export unchanged.",
+      "changes": [
+        {
+          "field": "url",
+          "before": "https://link.springer.com/article/10.1007/s00146-025-02498-1",
+          "after": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
+          "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+        },
+        {
+          "field": "creators",
+          "before": [
+            {
+              "creatorType": "author",
+              "firstName": "S.",
+              "lastName": "Sharma"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "A.",
+              "lastName": "Ovalle"
+            },
+            {
+              "creatorType": "author",
+              "firstName": "A.",
+              "lastName": "Subramonian"
+            }
+          ],
+          "after": [
+            {
+              "lastName": "Jääskeläinen",
+              "creatorType": "author",
+              "firstName": "Petra"
+            },
+            {
+              "lastName": "Sharma",
+              "creatorType": "author",
+              "firstName": "Nickhil Kumar"
+            },
+            {
+              "lastName": "Pallett",
+              "creatorType": "author",
+              "firstName": "Helen"
+            },
+            {
+              "lastName": "Åsberg",
+              "creatorType": "author",
+              "firstName": "Cecilia"
+            }
+          ],
+          "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+        },
+        {
+          "field": "date",
+          "before": "2024",
+          "after": "2025-03-17",
+          "reason": "Publisher identity and stored title block identify the Stable Diffusion article, published online 17 March 2025. The previous URL named a different publication."
+        }
+      ],
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/metadata-resolution-2026-10-21/HLBXNWAZ.json",
+          "sha256": "sha256:c36708a104f3d68d5661d4daa3ce4019981d3987c6683af655af8db86682b02c",
+          "source_url": "https://link.springer.com/article/10.1007/s00146-025-02207-y",
+          "locator": "/sources/0/bibliographic_metadata and /external_write"
+        }
+      ]
     }
   ],
   "deferred_metadata_enrichments": [
