@@ -1,0 +1,636 @@
+{
+  "schema": "paper-evaluation-inputs/2.0",
+  "created_at": "2026-10-31T21:16:03.387274+00:00",
+  "supersedes_for_future_inputs": "../manifest.json",
+  "historical_manifest_byte_sha256": "0150e2266c1d1e1406e666485c09a7ef36b6f3492735479d55fa0e8076eac6f1",
+  "status": "assembled, technical source review pending; no held-out runs",
+  "publication_boundary": "Private research only; PDFs, XML, ZIPs, rendered pages and text derivatives remain in ignored local-source-preservation. No publication or production binding mutation.",
+  "source_replacement_authority": "User commissioned closing source gaps; preferred publication identity already exists in Work registry. Replacement limited to evaluation packet.",
+  "renderer": {
+    "library": "PyMuPDF",
+    "version": "1.26.6",
+    "matrix": [
+      2,
+      2
+    ],
+    "alpha": false,
+    "format": "PNG",
+    "mutation": "Full-page rasterization only, no cropping, annotations or content edits"
+  },
+  "cases": [
+    {
+      "case_id": "E01",
+      "record_id": "DENAHEUW",
+      "title": "Designing a framework for ethnography-driven prompt engineering in social work",
+      "work_id": "work:e769d36a-8e1e-5b9b-9e22-301723be1c24",
+      "source_version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
+      "bibliographic_version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6",
+      "change": "Additional source components; original text retained.",
+      "main_text": {
+        "path": "generated/source-acquisition/oa-batch-2026-10-01/DENAHEUW.md",
+        "byte_sha256": "3ec1054f841237d6f09921f63fa43c0daa6ffbf0506bddf19782267f0a0daa38",
+        "role": "reading text; original visual/structured evidence takes precedence for tables and formulas"
+      },
+      "license": "CC BY-NC, stated by acquisition receipt",
+      "sources": [
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01.pdf",
+          "byte_sha256": "112ee6fc8a35a18c0550f894beb77997e78f753ac1d7e592a5c0edab714f6b44",
+          "role": "primary PDF, full document",
+          "url": "https://ht.csr-pub.eu/index.php/ht/article/download/460/317",
+          "pages": 22
+        }
+      ],
+      "required_visual_inputs": [
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p003.png",
+          "byte_sha256": "2e1d20a4f508b4f05b1dae1344684c56b05afd1a39ae33ed01efbe954baac77c",
+          "role": "authoritative page image, PDF page 3"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p004.png",
+          "byte_sha256": "c6c24d670590fe4b9da30a90d3d7a2bbb26221b9186578b654705bfce0b6d572",
+          "role": "authoritative page image, PDF page 4"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p007.png",
+          "byte_sha256": "d4fb1828040ab64c14e93264e2b479e2685d6e84c2bd9c85c3f91bcd2d17d4e9",
+          "role": "authoritative page image, PDF page 7"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p009.png",
+          "byte_sha256": "8ba34c61add7c1b34f24410b5221abe042221b38ce53ac9252d7050cff55be7a",
+          "role": "authoritative page image, PDF page 9"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p010.png",
+          "byte_sha256": "7f6e57ed6d56ffc1133de9358f93122e218f14b92f587ca69c570ffd0207bf61",
+          "role": "authoritative page image, PDF page 10"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p011.png",
+          "byte_sha256": "f38d1f378d2ca76a101eee95a6c29a9e2e1e299e2fd94abb31820c239e7d3ea8",
+          "role": "authoritative page image, PDF page 11"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p012.png",
+          "byte_sha256": "c18e61de9492d1321ea3d4677f00cdc5c2dac3f9420917d0da339ffa61c79d31",
+          "role": "authoritative page image, PDF page 12"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p013.png",
+          "byte_sha256": "6db053ba4b15776ae3130c80c83ad8dd4756bccfba1695232578b9f71243b66e",
+          "role": "authoritative page image, PDF page 13"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p014.png",
+          "byte_sha256": "f41ef8e0e88ba4984759d0978394c6e114eba8fc90a5754fc756ae377e042656",
+          "role": "authoritative page image, PDF page 14"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p015.png",
+          "byte_sha256": "9f4bd11df58398a7d7e6de6266f199fada6c66603df21149fe004ab498098c54",
+          "role": "authoritative page image, PDF page 15"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p016.png",
+          "byte_sha256": "31e1725da0a718d056f9ad3116e2fc86f68215adba688d63be9cd0f8179f16b5",
+          "role": "authoritative page image, PDF page 16"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E01-p017.png",
+          "byte_sha256": "7a0401dd75f1f58cc808043b031bc1f08244d82439526a895601b8e03c50737c",
+          "role": "authoritative page image, PDF page 17"
+        }
+      ],
+      "completion_scope": "Known availability gaps addressed; scientific interpretation and completeness of individual claim support remain for human review.",
+      "resolved": [
+        "Table 13 prompt template supplied as page 17 image",
+        "Table 12 spanning cells preserved in pages 15-16",
+        "All table-bearing pages supplied for alignment checks"
+      ]
+    },
+    {
+      "case_id": "E02",
+      "record_id": "65NGEK5Q",
+      "title": "Small Models Achieve Large Language Model Performance: Evaluating Reasoning-Enabled AI for Secure Child Welfare Research",
+      "work_id": "work:aada8ec1-ce81-50d6-90c3-c9b2787d6a5b",
+      "source_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
+      "bibliographic_version_id": "version:2986caa0-11f1-53f1-b8dc-d126271b4748",
+      "change": "Evaluation-only source replacement from registered unknown-stage manuscript to registered preferred version of record. No text or figure from the manuscript is mixed into the new input. Original manifest and production bindings remain unchanged.",
+      "main_text": {
+        "path": "generated/local-source-preservation/paper-evaluation/E02-published.md",
+        "byte_sha256": "cbad2e953e09594953f7045a91cdb872d42c5e457ba848ef06f90f4529a94d30",
+        "role": "reading text; original visual/structured evidence takes precedence for tables and formulas"
+      },
+      "license": "CC BY-NC-ND 4.0, printed on published PDF page 1; local reading copies only",
+      "sources": [
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02.pdf",
+          "byte_sha256": "da9b7f60c4814dce6e3d766c3be97917d756af4cb22a26f27caa6311a3257218",
+          "role": "primary PDF, full document",
+          "url": "https://digitalcollection.zhaw.ch/server/api/core/bitstreams/9e397e56-2222-4079-9708-14d82f6e45d1/content",
+          "pages": 22
+        }
+      ],
+      "required_visual_inputs": [
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p001.png",
+          "byte_sha256": "c0d47c92a60905872d8ca675c50c96c6613eb2f6e304fa333187a00f616ebb34",
+          "role": "authoritative page image, PDF page 1"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p002.png",
+          "byte_sha256": "9f329e0a755f2629527a2d9d0d1db57173dc982ba551fdaa12061f25d22f8e6b",
+          "role": "authoritative page image, PDF page 2"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p003.png",
+          "byte_sha256": "fafe7e0dcdc35b4db3138cc95bf584dfc5fa1917b873f2d9c0887f02151d8966",
+          "role": "authoritative page image, PDF page 3"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p004.png",
+          "byte_sha256": "a8c8092ed536c4749ebc16b7ddbedc708241942235633ced1b556ff9fb8521b5",
+          "role": "authoritative page image, PDF page 4"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p005.png",
+          "byte_sha256": "ccdf0af1decaca6d9f1d8f84c925a3df0a6c62fbdf5ecdfd589c9b5e12f9de04",
+          "role": "authoritative page image, PDF page 5"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p006.png",
+          "byte_sha256": "dc208254251ac489ec0a83794ab1d5cfa454952b18693df3519ccc9af6618502",
+          "role": "authoritative page image, PDF page 6"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p007.png",
+          "byte_sha256": "8f33e1d27f176363b565e216b462834c1de26325995f76f83280e47bf4376fa9",
+          "role": "authoritative page image, PDF page 7"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p008.png",
+          "byte_sha256": "2baf219c12813361dcbb059498a7e9e460e56fcef63a8fba06578694a673f0c3",
+          "role": "authoritative page image, PDF page 8"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p009.png",
+          "byte_sha256": "3f5532eaf8c660928a241d682e74baabb5ebfce72fbd3f3de57ad4980432ee28",
+          "role": "authoritative page image, PDF page 9"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p010.png",
+          "byte_sha256": "0ce0ffb2e64d08087924e6418a417dc908d7c1cb309f46643da4310414ff7786",
+          "role": "authoritative page image, PDF page 10"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p011.png",
+          "byte_sha256": "a2f516cea3e021723ebaf12b2df7cc67dd7d5b08248bb6bb67d4f3693ff1d97a",
+          "role": "authoritative page image, PDF page 11"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p012.png",
+          "byte_sha256": "efd4777819cd4ab3136c779528338208e46e94366836fe3f1b6b78622cfe02e5",
+          "role": "authoritative page image, PDF page 12"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p013.png",
+          "byte_sha256": "77c7cc5ada052a4f5ae13952e964f3e8d7dfd551c072ae00104e42f35548ab37",
+          "role": "authoritative page image, PDF page 13"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p014.png",
+          "byte_sha256": "b4130cf33fa09d2afef9e378b7afba825b8247554c3538ee27d87e74e2949ade",
+          "role": "authoritative page image, PDF page 14"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p015.png",
+          "byte_sha256": "203284ac01597ca0526f62c3e577dd75b78c359f07730242f3bfb9733164456a",
+          "role": "authoritative page image, PDF page 15"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p016.png",
+          "byte_sha256": "7103f4d5d099330dfb79e13ce58f7b55b704e4aa84fdae1918e85cfaa008fc02",
+          "role": "authoritative page image, PDF page 16"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p017.png",
+          "byte_sha256": "4ceacdd75573a810331aaa33abf713f6a874854ab1de61d8794ace918b3ae2d1",
+          "role": "authoritative page image, PDF page 17"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p018.png",
+          "byte_sha256": "5a7ba7235f540dc393846a7d2b869c5480c8ad311b8bdfb56ae0f710a8171061",
+          "role": "authoritative page image, PDF page 18"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p019.png",
+          "byte_sha256": "36198a1e8ecf5a4388b8edfabaf28b21bcf9f769ecb00d1b131256f83b1b0fc1",
+          "role": "authoritative page image, PDF page 19"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p020.png",
+          "byte_sha256": "636a229b9bcb73befcb960b2dd7f92e0fbb23dde8993f2d026ed1d254663e0c6",
+          "role": "authoritative page image, PDF page 20"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p021.png",
+          "byte_sha256": "7e5bd4fa3119730d698b647d18be38335ebb1d1c7ee2a4a0a862a7733bed4207",
+          "role": "authoritative page image, PDF page 21"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E02-p022.png",
+          "byte_sha256": "7f736abc666fd75b7516024971c6e074ca649ebeed525070133a7a516865f871",
+          "role": "authoritative page image, PDF page 22"
+        }
+      ],
+      "completion_scope": "Known availability gaps addressed; scientific interpretation and completeness of individual claim support remain for human review.",
+      "resolved": [
+        "Full published version supplied with all page images and new text extraction",
+        "Title, DOI and journal imprint match registered bibliographic version",
+        "Old manuscript page-marker gap is superseded for this evaluation input, not claimed repaired"
+      ]
+    },
+    {
+      "case_id": "E03",
+      "record_id": "UWQGNPSE",
+      "title": "Rethinking Prompt-based Debiasing in Large Language Model",
+      "work_id": "work:b86204c8-abca-51c2-a398-a9a78c8aba08",
+      "source_version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
+      "bibliographic_version_id": "version:d99b5b23-2a00-5a6d-b237-405a40788716",
+      "change": "Additional source components; original text retained.",
+      "main_text": {
+        "path": "generated/source-acquisition/oa-batch-2026-10-01/UWQGNPSE.md",
+        "byte_sha256": "e42dc1add2fa94bde7a3f6c2c8db410516845e2e547e91f9460c83eb9c454da4",
+        "role": "reading text; original visual/structured evidence takes precedence for tables and formulas"
+      },
+      "license": "ACL Anthology CC BY 4.0 policy recorded in receipt",
+      "sources": [
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03.pdf",
+          "byte_sha256": "57d9f2924d5a878498acc478b0cce4f799b648bf04824f7a8698328c43dec5f7",
+          "role": "primary PDF, full document",
+          "url": "https://aclanthology.org/2025.findings-acl.1361.pdf",
+          "pages": 16
+        }
+      ],
+      "required_visual_inputs": [
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03-p002.png",
+          "byte_sha256": "e01590d5bf39f8e5c79bd568133d71cf08da69806f3becccf2882f537803208e",
+          "role": "authoritative page image, PDF page 2"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03-p004.png",
+          "byte_sha256": "3cebe1b1550ff4f1d508b69eb25b4f474a34d5403c438bc157a71490ba18529f",
+          "role": "authoritative page image, PDF page 4"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03-p005.png",
+          "byte_sha256": "2c1c1e9da4f56ea6626910bb6a3311b06394c6bab4b9af9aca65d00c24a93ef7",
+          "role": "authoritative page image, PDF page 5"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03-p006.png",
+          "byte_sha256": "74aa397755093dc45ffcc541a47c3bf242fc30bb5ff4a111c63da14763b04ed8",
+          "role": "authoritative page image, PDF page 6"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03-p007.png",
+          "byte_sha256": "1ad1d640086ea4c1d2e99f153c7701ea214c53f6aef4d3bb4612338a6d6a1637",
+          "role": "authoritative page image, PDF page 7"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03-p008.png",
+          "byte_sha256": "0b674597497ac86b784ca5d8fbcf5a9b0b0b4982b204c0ddaa69483a31d18bd6",
+          "role": "authoritative page image, PDF page 8"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03-p009.png",
+          "byte_sha256": "432659839694136ed4e9f3646380ec5273420efa97ef65ca906797ab724dd5f3",
+          "role": "authoritative page image, PDF page 9"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03-p013.png",
+          "byte_sha256": "7fb94a69cdfb77eaa2fa8d3dfec6214a89340c10c584d2f47dc7853d05cd7c34",
+          "role": "authoritative page image, PDF page 13"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03-p014.png",
+          "byte_sha256": "e6ddd9929252430cda603a1a23e4e6ca303764ba86c0cf90f7956271bd821318",
+          "role": "authoritative page image, PDF page 14"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03-p015.png",
+          "byte_sha256": "d9382355afa08d6d69323d3162d1167f9b92aebe42b78444f72caa3674cef4de",
+          "role": "authoritative page image, PDF page 15"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E03-p016.png",
+          "byte_sha256": "6c1b4482b42c0a7ae491123b890e4a6ef937160e8756afd276e4f8ce0fe1ea36",
+          "role": "authoritative page image, PDF page 16"
+        }
+      ],
+      "completion_scope": "Known availability gaps addressed; scientific interpretation and completeness of individual claim support remain for human review.",
+      "resolved": [
+        "Four mathematical definitions and Figures 1-3 supplied on original pages",
+        "Complex table and appendix layouts supplied as page images"
+      ]
+    },
+    {
+      "case_id": "E04",
+      "record_id": "J4K3XA52",
+      "title": "Evaluating gender bias in large language models in long-term care",
+      "work_id": "work:73eda891-2e28-587a-a7fb-a950323a0dad",
+      "source_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+      "bibliographic_version_id": "version:38ec2a2e-9a8f-5837-bd7d-7efad6f0f743",
+      "change": "Additional source components; original text retained.",
+      "main_text": {
+        "path": "corpus/source-acquisition/completion-20260921/J4K3XA52-reading.md",
+        "byte_sha256": "c7f0d251037326c79a930f63ae0de319b8336f7081326bc48ee906f0eace57c2",
+        "role": "reading text; original visual/structured evidence takes precedence for tables and formulas"
+      },
+      "license": "CC BY 4.0, article permissions in official XML",
+      "sources": [
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04.xml",
+          "byte_sha256": "beaa6cdc7ad935740a8f021bf2fa15a3b1df78f68aa384ae3c85d195146200e0",
+          "role": "official full article JATS XML",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12337462/fullTextXML"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-media.zip",
+          "byte_sha256": "84fbf12774b84d0b056fee19255ad5cf68aff0b6b32d7c996ddffb2a97010e6c",
+          "role": "official article media and supplement archive",
+          "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12337462/supplementaryFiles"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement/supplementary-information.pdf",
+          "byte_sha256": "eef1b2ecaac6d86779bc8560a2f296b62785208d30dd72c96827e1449a3f2200",
+          "role": "article-associated supplementary material, appendices 1-3"
+        }
+      ],
+      "required_visual_inputs": [
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p001.png",
+          "byte_sha256": "6462307dc2c55fe01481077244ad6811992794d63e65e6b853df63d65260c615",
+          "role": "authoritative page image, PDF page 1"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p002.png",
+          "byte_sha256": "59ef260284e3f20f84c838ed386d9ef86e0baf331db531cc10e201665132c46b",
+          "role": "authoritative page image, PDF page 2"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p003.png",
+          "byte_sha256": "64e0ed0250e0b7fc3caa37141a3e7bbd03f3baede81b08987fb7908411608467",
+          "role": "authoritative page image, PDF page 3"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p004.png",
+          "byte_sha256": "6ca98f3816547cf469c72e2eaefcf263c8a6626bc1a5b90c5e5329dec36df51f",
+          "role": "authoritative page image, PDF page 4"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p005.png",
+          "byte_sha256": "2f2d69897fc6437f23854fb406180ea459fdb952907f6a046c64a796cc423954",
+          "role": "authoritative page image, PDF page 5"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p006.png",
+          "byte_sha256": "c4e9abe77178d07f00504bfb0520635e9cdbd287d8684bb94391dffe19940e54",
+          "role": "authoritative page image, PDF page 6"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p007.png",
+          "byte_sha256": "b67f89c6f3c48d631adf18a5ec6bfc6b98bb2fa8adcc39588edb9ddc600a17a0",
+          "role": "authoritative page image, PDF page 7"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p008.png",
+          "byte_sha256": "5e4e3f0111a2c0c008345948792f494ccdeb1dd0a054842b2bbc22d4dc57f82b",
+          "role": "authoritative page image, PDF page 8"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p009.png",
+          "byte_sha256": "fb64a4daf06639e941e634849260d10f0343d7f567271d7c6a4867321b0ffab5",
+          "role": "authoritative page image, PDF page 9"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p010.png",
+          "byte_sha256": "1ba2c2400fa9cc71c7f075520f8504f3c7847fe82e33dfc4e96dcb4af7f195d4",
+          "role": "authoritative page image, PDF page 10"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p011.png",
+          "byte_sha256": "4ff76c8bb40cdd1144866a00cfe4f6e76067ed3bc3262662e4fcba2b9d228a4b",
+          "role": "authoritative page image, PDF page 11"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p012.png",
+          "byte_sha256": "652b90d9cefd6cc2c96cbd8baca5769b06a583cd8286096f5038e211dde856ec",
+          "role": "authoritative page image, PDF page 12"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p013.png",
+          "byte_sha256": "aa39894004f5557937a656e128422a6c99279a89d41a8ed4e7bc04636e5bc9ef",
+          "role": "authoritative page image, PDF page 13"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p014.png",
+          "byte_sha256": "3ddd97422d1e83f1a64dc7a77097cd60175e998c1789b093a4a0da720c8d840c",
+          "role": "authoritative page image, PDF page 14"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p015.png",
+          "byte_sha256": "ff134f9d0cd77307bda6607ec3ba7ded8a433dbea38575dc6a4421b0ebd6c58c",
+          "role": "authoritative page image, PDF page 15"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p016.png",
+          "byte_sha256": "48ebd22b274d4f79089e2ee5b02d58da2b5f4fe97c5ea0c204d4357906d5966c",
+          "role": "authoritative page image, PDF page 16"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p017.png",
+          "byte_sha256": "69a61f498416d95568f31e3c983431b75c7b8d734e2f07c0315df8e6f2519871",
+          "role": "authoritative page image, PDF page 17"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p018.png",
+          "byte_sha256": "dc9dadd52a478570474031b658ab00cd3bd651d67b7d6120a255eb49cf8260bf",
+          "role": "authoritative page image, PDF page 18"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p019.png",
+          "byte_sha256": "cb5111ab03899a5ad47e673d31ca1d7b226cbe0286ec9b67c516fa42ca6ac838",
+          "role": "authoritative page image, PDF page 19"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p020.png",
+          "byte_sha256": "553af99b401bcbf60fb7e75afd7262eb60fe4cec2881f31f09ef2a64c8914f57",
+          "role": "authoritative page image, PDF page 20"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p021.png",
+          "byte_sha256": "32ac68f5d5ba33ce256ba5ec9efd7f4b16edfbd69822856335df0ba19d804f64",
+          "role": "authoritative page image, PDF page 21"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p022.png",
+          "byte_sha256": "c5c032604f52c724840b5973b84b66afdc34f43ae3317d69ad69d97050223319",
+          "role": "authoritative page image, PDF page 22"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p023.png",
+          "byte_sha256": "2026791d91e0685230aef4bde39fa17e89e634a927c5d4de216ce094afbe7a8c",
+          "role": "authoritative page image, PDF page 23"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p024.png",
+          "byte_sha256": "6994a1e809c8f9590f105d625b399a62e9fac861ca004c944c22b54f138bd488",
+          "role": "authoritative page image, PDF page 24"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p025.png",
+          "byte_sha256": "a1f05619404b34189441ec82487a27ae7df070c01fe851cb848182fb0292cf5a",
+          "role": "authoritative page image, PDF page 25"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p026.png",
+          "byte_sha256": "62a38b5b3b47e26f1c029f8361743aff37ce572a43ba313560daa50ab99d6449",
+          "role": "authoritative page image, PDF page 26"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p027.png",
+          "byte_sha256": "aa590488c40f2e8a3c3da6cbcbf062f0f6e52d261a76a218b2dd552ce3d7a3dd",
+          "role": "authoritative page image, PDF page 27"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p028.png",
+          "byte_sha256": "4334a7989cb7e9b29e4a28f96855d57bf41e5078bbbc898bf37e9236c80d8961",
+          "role": "authoritative page image, PDF page 28"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p029.png",
+          "byte_sha256": "06b50a8e306c59fd65f1b87a7690645aee89d1f20fbd3dcbdd75fcd509cd3136",
+          "role": "authoritative page image, PDF page 29"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p030.png",
+          "byte_sha256": "0c4df7a2fe76d58264f7b3f70920cabe16d2ff70a8ef4a468d3bf3f6605ddb50",
+          "role": "authoritative page image, PDF page 30"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-supplement-p031.png",
+          "byte_sha256": "1cf50809ca9dab48af68f680eb96ec806e4bed9f0cd1ba55f287632aff2a77d0",
+          "role": "authoritative page image, PDF page 31"
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-media/Eq1.png",
+          "byte_sha256": "d55ac891b8f7fde5895a0b2d46357745f3d885a61adebcb269f5c1ec17cb794e",
+          "role": "official displayed equation 1",
+          "derived_from": {
+            "path": "generated/local-source-preservation/paper-evaluation/E04-media/12911_2025_3118_Article_Equ1.gif",
+            "byte_sha256": "38ae5759598648f6e9220af1ce724c6d11ba1a5f4dfdfe100de78159c706807b",
+            "operation": "Pillow GIF raster decoded and saved as RGB PNG at native dimensions, no rescale/crop/annotation"
+          }
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-media/Eq2.png",
+          "byte_sha256": "1e3afcab96da92680e176e4b084654b98ab155a6b3efd00c7de0ee0c9b984330",
+          "role": "official displayed equation 2",
+          "derived_from": {
+            "path": "generated/local-source-preservation/paper-evaluation/E04-media/12911_2025_3118_Article_Equ2.gif",
+            "byte_sha256": "c6a9f4f0316db6710ee517b44e8a1526c78adb20024fbe0ed25e628c3fcad945",
+            "operation": "Pillow GIF raster decoded and saved as RGB PNG at native dimensions, no rescale/crop/annotation"
+          }
+        },
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E04-media/Eq3.png",
+          "byte_sha256": "75ac05ca49ffce20ca3c0025567a3e4604ba4b09a07deebfd2af0d24f724d19b",
+          "role": "official displayed equation 3",
+          "derived_from": {
+            "path": "generated/local-source-preservation/paper-evaluation/E04-media/12911_2025_3118_Article_Equ3.gif",
+            "byte_sha256": "c426a08ed7a20307c3f4311a8b1d600ee79d55b0f52fea8b99b946fd2a3c61f2",
+            "operation": "Pillow GIF raster decoded and saved as RGB PNG at native dimensions, no rescale/crop/annotation"
+          }
+        }
+      ],
+      "completion_scope": "Known availability gaps addressed; scientific interpretation and completeness of individual claim support remain for human review.",
+      "resolved": [
+        "All three appendices recovered in a 31-page PDF and rendered in full",
+        "All ten cells of main-text Table 9 match official structured XML after alphanumeric normalization",
+        "Official XML plus media archive available for original main-text cross-check"
+      ],
+      "remaining_representation_limit": "Publisher article PDF still unavailable locally. Main article is represented by existing bound reading text plus official JATS/XML and article media, not a newly verified PDF byte copy. XML image aliases differ from archive filenames; displayed Equ1-3 names are explicit, inline images require mapping when used."
+    },
+    {
+      "case_id": "E05",
+      "record_id": "QRK7C3JK",
+      "title": "Towards a framework for digital literacy in social work education in a time of artificial intelligence",
+      "work_id": "work:ac777aa0-e02b-5a2e-8ddd-19dfdd0110ec",
+      "source_version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+      "bibliographic_version_id": "version:c2db337e-61b4-5717-bfb5-56cd6de7d117",
+      "change": "Additional source components; original text retained.",
+      "main_text": {
+        "path": "generated/source-acquisition/codex-websearch-2026/markdown-clean/3cb613d559a8c57c13c1.md",
+        "byte_sha256": "93ff941db75f745dc31191edecf3339916094c0bdf8c98f5bf57f704660fe979",
+        "role": "reading text; original visual/structured evidence takes precedence for tables and formulas"
+      },
+      "license": "CC BY 4.0, printed on PDF page 2",
+      "sources": [
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E05.pdf",
+          "byte_sha256": "9d3166f6288d07355f68b650d886b7f6f04c4b0237f1c745b3c132b0123acce4",
+          "role": "primary PDF, full document",
+          "url": "https://mau.diva-portal.org/smash/get/diva2%3A2053633/FULLTEXT01.pdf",
+          "pages": 19
+        }
+      ],
+      "required_visual_inputs": [
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E05-p013.png",
+          "byte_sha256": "376a861095cfa24a497dfd51ff506b6f328890c1f264fa853b4261c9a22a8ca9",
+          "role": "authoritative page image, PDF page 13"
+        }
+      ],
+      "completion_scope": "Known availability gaps addressed; scientific interpretation and completeness of individual claim support remain for human review.",
+      "resolved": [
+        "Recovered institutionally hosted PDF is byte-identical to historical PDF digest",
+        "Image table supplied as original PDF page 13 with commands and labels"
+      ],
+      "historical_pdf_hash_match": true
+    },
+    {
+      "case_id": "E06",
+      "record_id": "A2P8MXMY",
+      "title": "Algorithmic justice in child protection: Statistical fairness, social justice and the implications for practice",
+      "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+      "source_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+      "bibliographic_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+      "change": "Additional source components; original text retained.",
+      "main_text": {
+        "path": "generated/markdown_clean/A2P8MXMY.md",
+        "byte_sha256": "d32cb4bb6e523b1930be2d9ff12d1b78ef1790886d02c13a2014c56e0ca0b025",
+        "role": "reading text; original visual/structured evidence takes precedence for tables and formulas"
+      },
+      "license": "CC BY 4.0, printed at article end",
+      "sources": [
+        {
+          "path": "generated/local-source-preservation/paper-evaluation/E06.pdf",
+          "byte_sha256": "d870abef5a59485e7cf90558e080e52b7a29ba578ba94e59d1584e48833b1d08",
+          "role": "primary PDF, full document",
+          "url": "https://mdpi-res.com/d_attachment/socsci/socsci-08-00281/article_deploy/socsci-08-00281.pdf",
+          "pages": 22
+        }
+      ],
+      "required_visual_inputs": [],
+      "completion_scope": "Known availability gaps addressed; scientific interpretation and completeness of individual claim support remain for human review.",
+      "resolved": [
+        "Full publisher PDF available for main-text/source checks"
+      ]
+    }
+  ]
+}

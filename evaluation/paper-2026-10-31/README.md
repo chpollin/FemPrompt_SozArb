@@ -1,8 +1,14 @@
 # Paper evaluation preparation, 31 October 2026
 
-## Development and source check completed
+## Current continuation
 
-[Development candidates and reviews](development/README.md) now record one trial per procedure on the development texts. [Source QC](source-qc.md) identifies missing tables, formulas, visual evidence and a source-version change. Held-out runs have not started. The [v2 prompt drafts](prompts/v2/status.json) incorporate development corrections and remain untested. The preparation description below records the original selection state.
+The [revised source packets](sources-v2/README.md) supplement missing visual evidence and appendices. E02 now uses the verified published journal version for evaluation only. The original selection manifest remains a historical snapshot. [Technical review](sources-v2/review.md) verifies local file integrity and documents reconstruction limits. [The second development trial](development-v2/comparison.md) finds more inspectable outputs across all three procedures, with remaining overstatements and omissions. This is an AI comparative judgment, not measured accuracy or human acceptance. Held-out runs and independent human references remain unstarted.
+
+Use [human-v2](human-v2/README.md) for new independent references. Before execution, resolve the corrections in the comparison, freeze the common multimodal input scope and exact available runtime, and revise the historical run-plan to bind sources-v2 and final prompt hashes. The old run-plan must not be executed unchanged. No new evaluation run is authorized by this status record.
+
+## Original preparation snapshot
+
+The following selection and execution description records the initial preparation. Its manuscript version, source gaps, prompt state and paths are superseded by the current continuation above.
 
 The corpus is fixed in [manifest.json](manifest.json). Selection deliberately varies application context, mitigation, literacy and conceptual framing among current human Includes with validated source bindings. It is a small methods pilot, not a representative sample or a new review inclusion rule. Screening eligibility does not establish study quality or evidential support.
 

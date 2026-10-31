@@ -18,3 +18,10 @@ generated/markdown/** -whitespace
 generated/markdown_clean/** -whitespace
 generated/source-acquisition/** -whitespace
 tests/review-cases/agent-runs/** -whitespace
+
+# Frozen evaluation records retain the exact bytes used in run and review hashes.
+evaluation/paper-2026-10-31/development-v2/** -text -whitespace
+evaluation/paper-2026-10-31/sources-v2/manifest.json -text -whitespace
+evaluation/paper-2026-10-31/prompts/v2/*.md -text -whitespace
+evaluation/paper-2026-10-31/manifest.json -text -whitespace
+evaluation/paper-2026-10-31/sources-v2/review.md -text -whitespace

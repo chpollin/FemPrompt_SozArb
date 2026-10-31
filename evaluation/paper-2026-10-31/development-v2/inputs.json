@@ -1,0 +1,35 @@
+{
+  "phase": "diagnostic development",
+  "sources": [
+    {
+      "case_id": "D01",
+      "record_id": "ET4MMZGH",
+      "work_id": "work:3dc3ced9-8261-5840-9d71-aa2dfc43af87",
+      "bibliographic_version_id": "version:950d71ce-958d-55e9-804d-1bb5f3a0a41a",
+      "source_version_id": "not established for this exact serving-layer snapshot",
+      "input_path": "docs/data/fulltext/ET4MMZGH.md",
+      "byte_sha256": "6cdfcd76b60b5bfbe705e5619e85fb539dad523f178bf6830fe265649edcc0f0",
+      "scope": "diagnostic development; supplied text only, publication completeness not established; inspect and report input limitations"
+    },
+    {
+      "case_id": "D02",
+      "record_id": "2EBHMYU4",
+      "work_id": "work:3627182f-8335-5c7b-81e8-4d4daebd440a",
+      "bibliographic_version_id": "version:e64033e0-573f-5401-8703-7666127c9dca",
+      "source_version_id": "not established for this exact serving-layer snapshot",
+      "input_path": "docs/data/fulltext/2EBHMYU4.md",
+      "byte_sha256": "a2c87d3702b11a580f428735a07d20da3cbdc595f12b39952b9dd85d18044193",
+      "scope": "diagnostic development; supplied text only, publication completeness not established; inspect and report input limitations"
+    },
+    {
+      "case_id": "D03",
+      "record_id": "UIIDCXLB",
+      "work_id": "work:7644e99b-9dd1-545f-af98-ab7fed6643e6",
+      "bibliographic_version_id": "version:31d4c15c-10dd-530b-b539-6934b297ddc5",
+      "source_version_id": "not established for this exact serving-layer snapshot",
+      "input_path": "docs/data/fulltext/UIIDCXLB.md",
+      "byte_sha256": "8a1168c05555303884970c61e319f3f6c6eecdd510c78e198f5188e6676df7bb",
+      "scope": "diagnostic development; supplied text only, publication completeness not established; inspect and report input limitations"
+    }
+  ]
+}

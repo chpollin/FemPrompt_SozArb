@@ -1,0 +1,82 @@
+{
+  "phase": "diagnostic development",
+  "method": "framing",
+  "recorded_at_utc": "2026-10-31T21:13:23.5923104Z",
+  "runtime_identifier": null,
+  "runtime_note": "No exact runtime model identifier exposed; environment default used.",
+  "inputs_and_prompts": [
+    {
+      "path": "evaluation/paper-2026-10-31/development-v2/inputs.json",
+      "sha256": "e3a8b76f979f500dee644df3772a892f1fd8ab254a1b1b9c30717b9ba5b90183"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/prompts/v2/common.md",
+      "sha256": "cb4fa43978ff5649f09614bd8e77cb4ad267a8ca10f0d12df5b0b4dbcec39704"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/prompts/v2/framing.md",
+      "sha256": "c06fa2492427c8475f26fe00687b605024b55a03bd36a1830dc9966d63ffdb92"
+    },
+    {
+      "path": "docs/data/fulltext/ET4MMZGH.md",
+      "sha256": "6cdfcd76b60b5bfbe705e5619e85fb539dad523f178bf6830fe265649edcc0f0"
+    },
+    {
+      "path": "docs/data/fulltext/2EBHMYU4.md",
+      "sha256": "a2c87d3702b11a580f428735a07d20da3cbdc595f12b39952b9dd85d18044193"
+    },
+    {
+      "path": "docs/data/fulltext/UIIDCXLB.md",
+      "sha256": "8a1168c05555303884970c61e319f3f6c6eecdd510c78e198f5188e6676df7bb"
+    }
+  ],
+  "reader_scope": {
+    "allowed_instruction_files": [
+      "evaluation/paper-2026-10-31/development-v2/inputs.json",
+      "evaluation/paper-2026-10-31/prompts/v2/common.md",
+      "evaluation/paper-2026-10-31/prompts/v2/framing.md"
+    ],
+    "source_reads": [
+      {
+        "case_id": "D01",
+        "lines": "1-113",
+        "chunks": [
+          "1-113"
+        ]
+      },
+      {
+        "case_id": "D02",
+        "lines": "1-179",
+        "chunks": [
+          "1-90",
+          "91-179"
+        ]
+      },
+      {
+        "case_id": "D03",
+        "lines": "1-206",
+        "chunks": [
+          "1-106",
+          "107-206"
+        ]
+      }
+    ],
+    "all_supplied_source_text_read": true,
+    "publication_completeness": "not established",
+    "missing_visual_evidence": "D03 Figures 1-3 only captions and prose; supplements absent. D02 tables flattened.",
+    "excluded": "No v1 outputs/reviews, other methods, eval sources, human references or web read."
+  },
+  "verification": {
+    "direct_quote_occurrences": 72,
+    "unmatched_quotes": 0,
+    "unit_ids": 61,
+    "duplicate_unit_ids": 0,
+    "check": "Exact substring matching of bracket-marked quotes against the supplied sources; unique defined IDs."
+  },
+  "output": {
+    "path": "evaluation/paper-2026-10-31/development-v2/framing/original.md",
+    "sha256": "23682e3d554ec38ea050650e8ef1c81aec3bc3e8e56af9d62d235320f2d94058",
+    "status": "unverified LLM candidate; no human reference validation"
+  },
+  "process_note": "Initial oversized write failed at Windows process creation before any mutation; completed with two bounded writes. Only the assigned framing directory was written."
+}

@@ -1,6 +1,6 @@
 {
   "version": "v2",
-  "status": "draft, not yet rerun",
+  "status": "tested on development sources; comparative AI review complete; residual corrections and final evaluation freeze pending",
   "basis": "Development output and source-grounded review needs only; no held-out findings used for prompt content",
   "original_prompts_preserved": true,
   "files": {
@@ -8,5 +8,7 @@
     "extraction.md": "9bb6995c80216b3d9453d159f50b629a5369ebe6cf7502a7525f369db186aeff",
     "framing.md": "c06fa2492427c8475f26fe00687b605024b55a03bd36a1830dc9966d63ffdb92",
     "themes.md": "203f5ab6bdf17d6c260aa2d71f77ffd2bb1744fcd27399e2321f5b9a6a9d780c"
-  }
+  },
+  "development_review": "../../development-v2/comparison.md",
+  "held_out_runs_started": false
 }

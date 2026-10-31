@@ -1,0 +1,56 @@
+{
+  "phase": "diagnostic development",
+  "method": "themes",
+  "status": "unreviewed LLM candidate",
+  "recorded_checkpoint_utc": "2026-10-31T21:10:05.3407327Z",
+  "completed_utc": "2026-10-31T21:13:36.7148591Z",
+  "hashes": [
+    {
+      "path": "evaluation/paper-2026-10-31/development-v2/inputs.json",
+      "sha256": "e3a8b76f979f500dee644df3772a892f1fd8ab254a1b1b9c30717b9ba5b90183"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/prompts/v2/common.md",
+      "sha256": "cb4fa43978ff5649f09614bd8e77cb4ad267a8ca10f0d12df5b0b4dbcec39704"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/prompts/v2/themes.md",
+      "sha256": "203f5ab6bdf17d6c260aa2d71f77ffd2bb1744fcd27399e2321f5b9a6a9d780c"
+    },
+    {
+      "path": "docs/data/fulltext/ET4MMZGH.md",
+      "sha256": "6cdfcd76b60b5bfbe705e5619e85fb539dad523f178bf6830fe265649edcc0f0"
+    },
+    {
+      "path": "docs/data/fulltext/2EBHMYU4.md",
+      "sha256": "a2c87d3702b11a580f428735a07d20da3cbdc595f12b39952b9dd85d18044193"
+    },
+    {
+      "path": "docs/data/fulltext/UIIDCXLB.md",
+      "sha256": "8a1168c05555303884970c61e319f3f6c6eecdd510c78e198f5188e6676df7bb"
+    }
+  ],
+  "reader_scope": {
+    "instructions": "inputs.json, common.md, themes.md",
+    "sources": "All supplied source text read without truncation: D01 lines 1-113; D02 lines 1-60, 61-120, 121-179; D03 lines 1-70, 71-140, 141-206",
+    "excluded": "No v1 outputs, reviews, other method outputs, codebooks, evaluation sources, human references, web, or additional project texts read",
+    "coding": "Selective open coding after full supplied-input reading; no saturation or exhaustive-coding claim",
+    "publication_completeness": "Not established for any input",
+    "source_version_ids": "Not available; byte hashes identify supplied snapshots",
+    "missing_evidence": "D01 original case inventory; D02 original reports and unflattened tables; D03 figures, supplement and raw responses"
+  },
+  "verification": {
+    "direct_quotes_and_locator_fragments_checked": 75,
+    "unmatched_quotes": 0,
+    "passage_units": 38,
+    "code_register_entries": 38,
+    "comparison_to_prior_run": "not performed",
+    "human_review": "not performed"
+  },
+  "output": {
+    "path": "evaluation/paper-2026-10-31/development-v2/themes/original.md",
+    "sha256": "4d281ce5eab19064e3ac3d6baab1bb6cdbd2a93f44ce9dffe14901e510980df4"
+  },
+  "process_note": "First oversized write command failed with Windows command-length error before creating a process; completed by two bounded writes. Only assigned method directory written.",
+  "runtime_configuration": "Environment default; exact runtime identifier not exposed"
+}

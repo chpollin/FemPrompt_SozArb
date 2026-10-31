@@ -18,6 +18,13 @@ related: [INDEX, plan, specification, governance, verification, handoff]
 
 # Arbeitsjournal
 
+
+## 2026-10-31: Repair evaluation inputs and compare the second development trial
+
+Recovered primary PDFs and visual evidence, acquired the official long-term-care XML/media supplement, and replaced the child-welfare evaluation manuscript with its verified journal version in a separate input revision. Original selection, production data and candidate outputs remain unchanged. Technical source review checked local integrity and reconstruction limits. The independent comparative agent review finds more inspectable v2 outputs across extraction, themes and framing, while documenting remaining overstatements, omissions and execution confounds. Human references and held-out runs remain unstarted. The operator requested controlled closure, so no further experiments were launched. ACTIVE-WORK and the paper knowledge routing were reconciled with these completed preparations.
+
+Evidence: [source review](../evaluation/paper-2026-10-31/sources-v2/review.md), [comparison](../evaluation/paper-2026-10-31/development-v2/comparison.md), [human instructions](../evaluation/paper-2026-10-31/human-v2/README.md). Repository build and the configured check suite passed. Local primary assets remain ignored and need verified reconstruction on another machine. Frozen v2 records, prompts and the historical selection manifest preserve their exact bytes in Git because their recorded hashes include line endings.
+
 Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen fest, die Git nicht erfasst, sodass alte Zustände, verworfene Richtungen und später umgestoßene Entscheidungen lesbar bleiben. Ein Eintrag je substanzieller Sitzung nennt, was sich änderte, was entschieden wurde und was offen bleibt, und verweist auf das Dokument, das den Gegenstand trägt. Commits und Diffs leben in der Git-Historie, Zahlen in den Daten und im Evidence Companion. Die Einträge stehen chronologisch, der neueste zuerst.
 
 ## October 2026
