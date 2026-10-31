@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-10-21
+updated: 2026-10-31
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -21,6 +21,19 @@ related: [INDEX, plan, specification, governance, verification, handoff]
 Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen fest, die Git nicht erfasst, sodass alte Zustände, verworfene Richtungen und später umgestoßene Entscheidungen lesbar bleiben. Ein Eintrag je substanzieller Sitzung nennt, was sich änderte, was entschieden wurde und was offen bleibt, und verweist auf das Dokument, das den Gegenstand trägt. Commits und Diffs leben in der Git-Historie, Zahlen in den Daten und im Evidence Companion. Die Einträge stehen chronologisch, der neueste zuerst.
 
 ## October 2026
+
+### 2026-10-31: Compare analysis procedures and locate the paper work
+
+The operator requested trials of three analysis procedures, their integration and a paper knowledge document with analytical questions, review and evaluation. The application remains in SocialAI's existing `research-vault/`; generic Grounded Vault tooling and its separate methods paper remain in the template repository. [[paper-analysis-plan]] now owns the paper-specific analysis and evaluation design, linked from [[INDEX]], [[analysis-methods]] and [[plan]]. The Obsidian paper router and the SocialAI entry in ACTIVE-WORK carry navigation and portfolio work respectively.
+
+This is a retrospective account of exploratory chat runs, not a preregistered experiment or imported lifecycle receipt. Three separate subagents each read the local full texts `ET4MMZGH.md` (When Good Algorithms Go Sexist), `2EBHMYU4.md` (Intersectionality in Artificial Intelligence) and `UIIDCXLB.md` (Prompting Techniques for Reducing Social Bias in LLMs). One performed fixed-field extraction, one proposed themes without the existing codebook, and one compared problem frames. Existing annotations and the other runs' outputs were withheld from these agents. The coordinating agent checked the load-bearing passages. No human reference, repeated-run benchmark or time measurement was produced. The chat did not retain a pre-run source-hash manifest or an exact deployed model identifier; no such provenance is reconstructed as if captured at execution.
+
+The extraction distinguished source recommendations from own empirical evaluation. The thematic run connected gender labels, expert representation and evaluation rules through the question of how bias becomes observable. The framing run distinguished improving benchmark answers from changing participation and institutional power. These are provisional analytical outputs. In the local Prompting Techniques text, the abstract at line 11 and the direct-comparison results at line 120 differ in their account of CoT; line 126 qualifies the result by model and bias category. Line 170 explains excluded invalid answers and stereotype-critical responses counted as anti-stereotypical. The comparison must retain these distinctions. In Intersectionality, lines 105–111 discuss whose expertise is represented, and lines 131–135 discuss meaningful participation and non-deployment. In Good Algorithms, lines 39–43 connect labels and proxies with bias, and lines 61–85 contain recommendations. These locators refer to the local reading files and require exact-Version binding before scholarly reuse.
+
+All three local text extractions were read, including references and website residues; embedded figure values were not separately checked against the PDFs. No annotations, Assertions, manuscript text or review-authority states were changed. A preceding two-text definition exercise is also exploratory; its codebook contained a source-specific neighbouring anchor, so it was not fully blinded. The prospective plan separates development from held-out evaluation and source support from human scholarly verification.
+
+The working branch was created from the fetched `origin/main`, which contained newer human screening records than the previous local checkout. Those records were preserved. No merge, push or deployment was performed.
+
 
 ### 2026-10-21: Neutral reviewer labels on the published pages
 

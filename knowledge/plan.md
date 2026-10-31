@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-21
+updated: 2026-10-31
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -54,6 +54,14 @@ The sub-questions are answered in the following order. Steps that depend on an o
 5. Expert verification. Domain experts verify the Assertions and coded fields that the answers use, under [[#Domain-expert verification]].
 6. Synthesis. The mapping layer presents evidence-and-gap maps from the SQ tables. Best-fit framework synthesis runs over reviewed Assertions, and the interpretive layer follows decision 8 ([[analysis-methods#Synthesis layer]]). Contradicting evidence and not determinable cells stay explicit. Decision 7 keeps this synthesis within the existing corpus and its declared denominators.
 7. Report and paper. The SQ1 chapter under `research-vault/40_output/literature-report/` sets the form of an answer. The report scaffold `00-structure.md` still follows the earlier topic order and is aligned once decision 6 fixes the division of report, paper and Companion. The steps under [[#Publication]] complete the manuscript.
+
+### Paper analysis and evaluation
+
+- Follow [[paper-analysis-plan]] for the paper-specific questions mapped to SQ1 to SQ5 and the separate evaluation questions E1 to E5.
+- Reconcile the latest human screening records with the intended analysis scope before freezing the Work-Version manifest. Select separate development and held-out evaluation material; keep disputed eligibility and source holds explicit.
+- Prepare the versioned extraction and thematic/framing prompts and retain original outputs and source-review corrections. The chat pilots are exploratory records, not a prospective validation run.
+- Arrange independent domain-expert reference extraction and interpretive review, then record support, omissions, repeated-run variation and human review effort. PRISM screening does not provide these reference annotations.
+- Integrate accepted findings into the existing Assertion chain and answer chapters before drafting paper results or claiming efficiency.
 
 ### Analysis and Assertions
 

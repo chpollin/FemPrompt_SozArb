@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-21
+updated: 2026-10-31
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Claude Code (Claude Opus 5.5)
 related: [INDEX, plan, journal, project, analysis-methods, governance, verification, testing, standards]
@@ -19,6 +19,9 @@ related: [INDEX, plan, journal, project, analysis-methods, governance, verificat
 # Handoff
 
 ## Current result
+
+The paper analysis design of 31 October 2026 is on `codex/socialai-paper-analysis`, based on the fetched `origin/main` with the newer human screening records. [[paper-analysis-plan]] owns the operational sub-questions and proposed validation; [[plan#Paper analysis and evaluation]] owns the continuation. [[journal#2026-10-31: Compare analysis procedures and locate the paper work]] records the exploratory chat exercises and their provenance limits. No production annotation, manuscript claim or scholarly verification was changed. Integration into `main` remains with the operator.
+
 
 The operator clarified on 21 October 2026 that duplicates and all annotations remain preserved. Later analysis counts each established underlying work once. This supersedes the earlier merge instruction. No duplicate consolidation or counting change was implemented. The mixed Stable Diffusion bibliographic record was checked, and the operator then explicitly authorised correcting its URL, author list and year. The live Zotero correction and local metadata projection have been applied and read back, with records, existing texts and annotations preserved. [[plan#Source and corpus readiness]] owns the decision, and [[data#Stable Diffusion source-identity check of 21 October 2026]] records the evidence and limits.
 
