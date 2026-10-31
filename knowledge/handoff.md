@@ -20,6 +20,8 @@ related: [INDEX, plan, journal, project, analysis-methods, governance, verificat
 
 ## Current result
 
+The [evaluation preparation](../evaluation/paper-2026-10-31/README.md) selects distinct source-bound works from current human Includes, excludes exposed pilot aliases, and supplies prompts, repeated-run configuration and independent human reference/adjudication forms. One selected source is an explicitly registered nonpreferred manuscript. Source-content QC, prompt calibration, runtime freeze and human references remain pending. No evaluation output has been produced.
+
 The paper analysis design of 31 October 2026 is on `codex/socialai-paper-analysis`, based on the fetched `origin/main` with the newer human screening records. [[paper-analysis-plan]] owns the operational sub-questions and proposed validation; [[plan#Paper analysis and evaluation]] owns the continuation. [[journal#2026-10-31: Compare analysis procedures and locate the paper work]] records the exploratory chat exercises and their provenance limits. No production annotation, manuscript claim or scholarly verification was changed. Integration into `main` remains with the operator.
 
 

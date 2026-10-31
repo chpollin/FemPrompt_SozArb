@@ -22,6 +22,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## October 2026
 
+### 2026-10-31: Prepare the held-out paper evaluation
+
+Selected a purposive held-out set from current human Includes with validated Work/Source-Version bindings and no source holds. The [evaluation package](../evaluation/paper-2026-10-31/README.md) records hashes, known pilot exposure and duplicate exclusions, a nonpreferred manuscript caveat, three draft prompts, repeated-run assignments and independent human reference/adjudication forms. Direct reviewer files were used because the cached completion package does not reflect newer human Includes. Source completeness, final prompt calibration and human references remain pending. No analysis run, performance measurement or human verification was performed.
+
 ### 2026-10-31: Compare analysis procedures and locate the paper work
 
 The operator requested trials of three analysis procedures, their integration and a paper knowledge document with analytical questions, review and evaluation. The application remains in SocialAI's existing `research-vault/`; generic Grounded Vault tooling and its separate methods paper remain in the template repository. [[paper-analysis-plan]] now owns the paper-specific analysis and evaluation design, linked from [[INDEX]], [[analysis-methods]] and [[plan]]. The Obsidian paper router and the SocialAI entry in ACTIVE-WORK carry navigation and portfolio work respectively.

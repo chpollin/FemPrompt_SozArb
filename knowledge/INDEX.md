@@ -30,7 +30,7 @@ In function order, not alphabetical.
 | Document | Function | Update rhythm |
 |---|---|---|
 | [[project]] | Project goal, main question with five sub-questions, publication context and the methodological second question, audience, scope boundaries, team and theoretical framework | rarely |
-| [[paper-analysis-plan]] | Paper-specific analytical sub-questions, comparative procedure design, evidence records and human evaluation criteria | per analysis-design decision |
+| [[paper-analysis-plan]] | Paper-specific analytical sub-questions, comparative procedure design, evidence records, human evaluation criteria and the linked evaluation package | per analysis-design decision |
 | [[analysis-methods]] | The methodological basis of the literature analysis, with the mapping and synthesis frame, the answer plan per research question, the analysis tiers, statistical reservations, validation of LLM-assisted analysis, appraisal tools and open disputes | per method decision |
 | [[methods]] | How the review was conducted, from identification and text preparation through both assessment rounds, lifecycle verification, the Grounded Vault, the descriptive mapping tools and replay verification | rarely |
 | [[specification]] | Requirements, user stories, the ADR decision log and the design system of PRISM, and the specification of the public Evidence Companion | per tool iteration |

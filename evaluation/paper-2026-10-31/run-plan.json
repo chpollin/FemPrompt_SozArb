@@ -1,0 +1,233 @@
+{
+  "schema": "paper-evaluation-runs/1.0",
+  "status": "prepared, not executed",
+  "prompt_status": "development drafts; final freeze only after calibration on D01-D03",
+  "corpus_manifest": "manifest.json",
+  "prompt_byte_sha256": {
+    "prompts/common.md": "ad52d5f0fd258e30f4b9dc3f227239cb71fea8cf9dc3dc101a6fd3c2c753a89a",
+    "prompts/extraction.md": "7e8ccc2ec80eeb44dff535ffc345068c4592f9da8d9023f9a89f85cd6ba0f9e7",
+    "prompts/themes.md": "b6786bc2e7f7952723331b960926a229a7053ca3fe01eb8d9f5d8537e78f6b4a",
+    "prompts/framing.md": "1b62d6cb44095e5a16f9b5c53f6ff050edd6bb5078411efcc6c52c44f4a993a2",
+    "prompts/review.md": "0847f77bad74ff39e74a6d211de367540e638bb7cd72cfd7c286edebca2190cd"
+  },
+  "gates": [
+    "source content QC and equal-input scope settled",
+    "calibration limited to development texts; no held-out outputs inspected",
+    "exact available project-default model and exposed generation settings recorded",
+    "final prompt and source hashes frozen",
+    "independent human references fixed before candidate inspection"
+  ],
+  "runs": [
+    {
+      "run_id": "extraction-r1",
+      "method": "extraction",
+      "repeat": 1,
+      "cases": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "prompt_files": [
+        "prompts/common.md",
+        "prompts/extraction.md"
+      ],
+      "source_order": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "context": "fresh isolated context, no chat history or previous outputs",
+      "producer_input": "only assigned prompts and manifest-bound source text, with case/work/source-version headers",
+      "output_path": "outputs/extraction-r1/original.md",
+      "reviewer": "different agent, original plus same sources, no human reference",
+      "status": "not_started",
+      "review_prompt": "prompts/review.md",
+      "review_output_path": "outputs/extraction-r1/review.md",
+      "correction_output_path": "outputs/extraction-r1/corrected.md"
+    },
+    {
+      "run_id": "extraction-r2",
+      "method": "extraction",
+      "repeat": 2,
+      "cases": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "prompt_files": [
+        "prompts/common.md",
+        "prompts/extraction.md"
+      ],
+      "source_order": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "context": "fresh isolated context, no chat history or previous outputs",
+      "producer_input": "only assigned prompts and manifest-bound source text, with case/work/source-version headers",
+      "output_path": "outputs/extraction-r2/original.md",
+      "reviewer": "different agent, original plus same sources, no human reference",
+      "status": "not_started",
+      "review_prompt": "prompts/review.md",
+      "review_output_path": "outputs/extraction-r2/review.md",
+      "correction_output_path": "outputs/extraction-r2/corrected.md"
+    },
+    {
+      "run_id": "themes-r1",
+      "method": "themes",
+      "repeat": 1,
+      "cases": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "prompt_files": [
+        "prompts/common.md",
+        "prompts/themes.md"
+      ],
+      "source_order": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "context": "fresh isolated context, no chat history or previous outputs",
+      "producer_input": "only assigned prompts and manifest-bound source text, with case/work/source-version headers",
+      "output_path": "outputs/themes-r1/original.md",
+      "reviewer": "different agent, original plus same sources, no human reference",
+      "status": "not_started",
+      "review_prompt": "prompts/review.md",
+      "review_output_path": "outputs/themes-r1/review.md",
+      "correction_output_path": "outputs/themes-r1/corrected.md"
+    },
+    {
+      "run_id": "themes-r2",
+      "method": "themes",
+      "repeat": 2,
+      "cases": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "prompt_files": [
+        "prompts/common.md",
+        "prompts/themes.md"
+      ],
+      "source_order": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "context": "fresh isolated context, no chat history or previous outputs",
+      "producer_input": "only assigned prompts and manifest-bound source text, with case/work/source-version headers",
+      "output_path": "outputs/themes-r2/original.md",
+      "reviewer": "different agent, original plus same sources, no human reference",
+      "status": "not_started",
+      "review_prompt": "prompts/review.md",
+      "review_output_path": "outputs/themes-r2/review.md",
+      "correction_output_path": "outputs/themes-r2/corrected.md"
+    },
+    {
+      "run_id": "framing-r1",
+      "method": "framing",
+      "repeat": 1,
+      "cases": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "prompt_files": [
+        "prompts/common.md",
+        "prompts/framing.md"
+      ],
+      "source_order": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "context": "fresh isolated context, no chat history or previous outputs",
+      "producer_input": "only assigned prompts and manifest-bound source text, with case/work/source-version headers",
+      "output_path": "outputs/framing-r1/original.md",
+      "reviewer": "different agent, original plus same sources, no human reference",
+      "status": "not_started",
+      "review_prompt": "prompts/review.md",
+      "review_output_path": "outputs/framing-r1/review.md",
+      "correction_output_path": "outputs/framing-r1/corrected.md"
+    },
+    {
+      "run_id": "framing-r2",
+      "method": "framing",
+      "repeat": 2,
+      "cases": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "prompt_files": [
+        "prompts/common.md",
+        "prompts/framing.md"
+      ],
+      "source_order": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "context": "fresh isolated context, no chat history or previous outputs",
+      "producer_input": "only assigned prompts and manifest-bound source text, with case/work/source-version headers",
+      "output_path": "outputs/framing-r2/original.md",
+      "reviewer": "different agent, original plus same sources, no human reference",
+      "status": "not_started",
+      "review_prompt": "prompts/review.md",
+      "review_output_path": "outputs/framing-r2/review.md",
+      "correction_output_path": "outputs/framing-r2/corrected.md"
+    }
+  ],
+  "runtime_record_required": [
+    "UTC start/end",
+    "provider and exact exposed model identifier; unavailable identifiers recorded as not_exposed",
+    "generation settings and unavailable settings",
+    "prompt hashes",
+    "source hashes and actual supplied scope",
+    "context limits/chunking and truncation",
+    "producer identity",
+    "output byte hash",
+    "source reviewer identity and separate report hash",
+    "correction history"
+  ],
+  "freeze_rule": "Changing any input after held-out inspection creates a new exploratory round; the same sources no longer count as untouched held-out evaluation. Two runs estimate observed variation only."
+}

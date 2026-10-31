@@ -103,3 +103,7 @@ The paper reports performed and planned work in separate tenses and names its ac
 - Domain experts resolve the definition and secondary-source attribution boundaries before the held-out evaluation.
 - The reference reviewers and their declared scope of responsibility must be assigned before human verification is claimed.
 - Numerical acceptance criteria and the scope of any efficiency claim remain to be specified before a confirmatory comparison.
+
+## Evaluation preparation of 31 October 2026
+
+The [prepared evaluation package](../evaluation/paper-2026-10-31/README.md) fixes the source-version selection and known-exposure exclusions, supplies independent human reading forms, and defines repeated analysis runs. Its manifest owns the selected cases and hashes. Source completeness review, development-only prompt calibration, final runtime freeze and human reference creation precede evaluation. The current prompts are preparation drafts. No candidate run or human verification is complete.
