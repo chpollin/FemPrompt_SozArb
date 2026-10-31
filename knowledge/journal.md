@@ -22,6 +22,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## October 2026
 
+### 2026-10-31: Run development procedures and inspect source completeness
+
+Executed each prepared procedure once on the frozen development texts in separate producer contexts and retained original candidates with source-grounded agent reviews. The [run record](../evaluation/paper-2026-10-31/development/run-record.json) discloses missing identity headers, output-length constraints, reviewer exposure and unavailable runtime identifiers. Reviews found overstatement, bundled evidence units, sector/setting conflation and interpretative scope issues. Versioned v2 prompts address these findings but remain untested. [Source QC](../evaluation/paper-2026-10-31/source-qc.md) found a missing prompt table, formula and figure losses, unprovided supplements and a changed PDF at a registered URL. No original source, production annotation, manuscript claim or human status was changed. Held-out execution remains pending source repair and human references.
+
 ### 2026-10-31: Prepare the held-out paper evaluation
 
 Selected a purposive held-out set from current human Includes with validated Work/Source-Version bindings and no source holds. The [evaluation package](../evaluation/paper-2026-10-31/README.md) records hashes, known pilot exposure and duplicate exclusions, a nonpreferred manuscript caveat, three draft prompts, repeated-run assignments and independent human reference/adjudication forms. Direct reviewer files were used because the cached completion package does not reflect newer human Includes. Source completeness, final prompt calibration and human references remain pending. No analysis run, performance measurement or human verification was performed.

@@ -1,5 +1,9 @@
 # Paper evaluation preparation, 31 October 2026
 
+## Development and source check completed
+
+[Development candidates and reviews](development/README.md) now record one trial per procedure on the development texts. [Source QC](source-qc.md) identifies missing tables, formulas, visual evidence and a source-version change. Held-out runs have not started. The [v2 prompt drafts](prompts/v2/status.json) incorporate development corrections and remain untested. The preparation description below records the original selection state.
+
 The corpus is fixed in [manifest.json](manifest.json). Selection deliberately varies application context, mitigation, literacy and conceptual framing among current human Includes with validated source bindings. It is a small methods pilot, not a representative sample or a new review inclusion rule. Screening eligibility does not establish study quality or evidential support.
 
 The held-out set contains E01 ethnography-driven social-work prompting, E02 reasoning-enabled child-welfare research, E03 prompt-based debiasing, E04 gender bias in long-term care, E05 digital literacy in social-work education and E06 algorithmic justice in child protection. E02 intentionally uses its registered author manuscript of unknown publication stage. Its conclusions may not be attributed to the preferred published version without checking that version.
