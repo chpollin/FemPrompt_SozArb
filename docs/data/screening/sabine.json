@@ -2,6 +2,775 @@
   "schema": "femprompt-prisma-reviewer/0.5",
   "reviewer": "sabine",
   "actor": "human",
-  "updated": "2026-10-21T07:46:26.453Z",
-  "decisions": {}
+  "updated": "2026-11-04T12:30:43.294Z",
+  "decisions": {
+    "7FEFMCBZ": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Diversitaet": 2,
+        "Bias_Ungleichheit": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-11-04T12:26:48.619Z",
+      "reviewer": "sabine",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
+      "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+      "version_type": "unknown",
+      "preferred_version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "sabine:7FEFMCBZ",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "sabine",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "7FEFMCBZ:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-2bb5826c-fc9f-48d6-a240-96f2db7f3435",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "sabine"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:7FEFMCBZ",
+            "type": "paper",
+            "reference": "7FEFMCBZ",
+            "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
+            "version_id": "version:aabc867d-cc16-5889-8810-35e57e6b003f",
+            "version_type": "unknown"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "sabine:7FEFMCBZ",
+          "annotation_type": "screening_decision",
+          "at": "2026-11-04T12:26:48.619Z",
+          "actor_ids": [
+            "sabine"
+          ],
+          "body": {
+            "categories": {
+              "KI_Sonstige": 2,
+              "Soziale_Arbeit": 2,
+              "Diversitaet": 2,
+              "Bias_Ungleichheit": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-11-04T12:26:48.619Z",
+            "reviewer": "sabine",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "sabine:7FEFMCBZ",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-11-04T12:26:48.619Z",
+          "actor_ids": [
+            "sabine"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
+    "A2P8MXMY": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Soziale_Arbeit": 2,
+        "Diversitaet": 2,
+        "Bias_Ungleichheit": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-11-04T12:27:03.558Z",
+      "reviewer": "sabine",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+      "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "sabine:A2P8MXMY",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "sabine",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "A2P8MXMY:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-2bb5826c-fc9f-48d6-a240-96f2db7f3435",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "sabine"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:A2P8MXMY",
+            "type": "paper",
+            "reference": "A2P8MXMY",
+            "work_id": "work:9cbefba0-b92b-59a3-8595-a1ac5e9fca72",
+            "version_id": "version:4c9dae5b-4429-5d97-81f6-764be7b98368",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "sabine:A2P8MXMY",
+          "annotation_type": "screening_decision",
+          "at": "2026-11-04T12:27:03.558Z",
+          "actor_ids": [
+            "sabine"
+          ],
+          "body": {
+            "categories": {
+              "KI_Sonstige": 2,
+              "Soziale_Arbeit": 2,
+              "Diversitaet": 2,
+              "Bias_Ungleichheit": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-11-04T12:27:03.558Z",
+            "reviewer": "sabine",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "sabine:A2P8MXMY",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-11-04T12:27:03.558Z",
+          "actor_ids": [
+            "sabine"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
+    "BHXDU7VM": {
+      "categories": {
+        "Generative_KI": 2,
+        "Prompting": 2,
+        "Soziale_Arbeit": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2,
+        "AI_Literacies": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {
+        "Generative_KI": [
+          {
+            "term": "hatGPT ha",
+            "snippet": "hatGPT ha",
+            "ts": "2026-10-21T07:46:24.859Z",
+            "origin": "human",
+            "source_layer": "paper",
+            "actor": "human",
+            "paper_id": "BHXDU7VM",
+            "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
+            "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d"
+          }
+        ]
+      },
+      "ts": "2026-11-04T12:30:43.293Z",
+      "reviewer": "sabine",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
+      "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+      "version_type": "working_paper",
+      "preferred_version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "sabine:BHXDU7VM",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "sabine",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "BHXDU7VM:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-2bb5826c-fc9f-48d6-a240-96f2db7f3435",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "sabine"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:BHXDU7VM",
+            "type": "paper",
+            "reference": "BHXDU7VM",
+            "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
+            "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d",
+            "version_type": "working_paper"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "sabine:BHXDU7VM",
+          "annotation_type": "screening_decision",
+          "at": "2026-11-04T12:30:43.293Z",
+          "actor_ids": [
+            "sabine"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2,
+              "Prompting": 2,
+              "Soziale_Arbeit": 2,
+              "Bias_Ungleichheit": 2,
+              "Gender": 2,
+              "AI_Literacies": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {
+              "Generative_KI": [
+                {
+                  "term": "hatGPT ha",
+                  "snippet": "hatGPT ha",
+                  "ts": "2026-10-21T07:46:24.859Z",
+                  "origin": "human",
+                  "source_layer": "paper",
+                  "actor": "human",
+                  "paper_id": "BHXDU7VM",
+                  "work_id": "work:f01ca4fe-7f9b-59f6-98d9-4e84559cd850",
+                  "version_id": "version:8663473c-428f-5ffa-89b0-0b02502fe07d"
+                }
+              ]
+            },
+            "text_source": "raw",
+            "ts": "2026-11-04T12:30:43.293Z",
+            "reviewer": "sabine",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "sabine:BHXDU7VM",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-11-04T12:30:43.293Z",
+          "actor_ids": [
+            "sabine"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
+    "EQV4DNQR": {
+      "categories": {
+        "KI_Sonstige": 2,
+        "Generative_KI": 2,
+        "Bias_Ungleichheit": 2,
+        "Prompting": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-11-04T12:30:08.048Z",
+      "reviewer": "sabine",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
+      "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+      "version_type": "unknown",
+      "preferred_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "sabine:EQV4DNQR",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "sabine",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "EQV4DNQR:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-2bb5826c-fc9f-48d6-a240-96f2db7f3435",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "sabine"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:EQV4DNQR",
+            "type": "paper",
+            "reference": "EQV4DNQR",
+            "work_id": "work:5e32c60e-f330-5cba-b414-c2fee079146c",
+            "version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+            "version_type": "unknown"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "sabine:EQV4DNQR",
+          "annotation_type": "screening_decision",
+          "at": "2026-11-04T12:30:08.048Z",
+          "actor_ids": [
+            "sabine"
+          ],
+          "body": {
+            "categories": {
+              "KI_Sonstige": 2,
+              "Generative_KI": 2,
+              "Bias_Ungleichheit": 2,
+              "Prompting": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-11-04T12:30:08.048Z",
+            "reviewer": "sabine",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "sabine:EQV4DNQR",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-11-04T12:30:08.048Z",
+          "actor_ids": [
+            "sabine"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
+    "R7V99ERA": {
+      "categories": {
+        "Soziale_Arbeit": 2,
+        "Diversitaet": 2,
+        "KI_Sonstige": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-11-04T12:15:52.961Z",
+      "reviewer": "sabine",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
+      "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+      "version_type": "unknown",
+      "preferred_version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "sabine:R7V99ERA",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "sabine",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "R7V99ERA:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-2bb5826c-fc9f-48d6-a240-96f2db7f3435",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "sabine"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:R7V99ERA",
+            "type": "paper",
+            "reference": "R7V99ERA",
+            "work_id": "work:365293c9-c8ea-54dd-9f65-2f37976f1a31",
+            "version_id": "version:5cc8d78c-4578-5a0b-a269-b186f10fe049",
+            "version_type": "unknown"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "sabine:R7V99ERA",
+          "annotation_type": "screening_decision",
+          "at": "2026-11-04T12:15:52.961Z",
+          "actor_ids": [
+            "sabine"
+          ],
+          "body": {
+            "categories": {
+              "Soziale_Arbeit": 2,
+              "Diversitaet": 2,
+              "KI_Sonstige": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-11-04T12:15:52.961Z",
+            "reviewer": "sabine",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "sabine:R7V99ERA",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-11-04T12:15:52.961Z",
+          "actor_ids": [
+            "sabine"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
+    "UKKQKL7I": {
+      "categories": {
+        "Generative_KI": 2,
+        "Diversitaet": 2,
+        "Bias_Ungleichheit": 2,
+        "Gender": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-11-04T12:24:42.010Z",
+      "reviewer": "sabine",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
+      "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "sabine:UKKQKL7I",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "sabine",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "UKKQKL7I:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-2bb5826c-fc9f-48d6-a240-96f2db7f3435",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "sabine"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:UKKQKL7I",
+            "type": "paper",
+            "reference": "UKKQKL7I",
+            "work_id": "work:9ee1a116-9225-5234-b189-b4ea3f93df14",
+            "version_id": "version:a9e450c4-5ae0-53e4-988a-607828f551e5",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "sabine:UKKQKL7I",
+          "annotation_type": "screening_decision",
+          "at": "2026-11-04T12:24:42.010Z",
+          "actor_ids": [
+            "sabine"
+          ],
+          "body": {
+            "categories": {
+              "Generative_KI": 2,
+              "Diversitaet": 2,
+              "Bias_Ungleichheit": 2,
+              "Gender": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-11-04T12:24:42.010Z",
+            "reviewer": "sabine",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "sabine:UKKQKL7I",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-11-04T12:24:42.010Z",
+          "actor_ids": [
+            "sabine"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    },
+    "Z9DNTBFF": {
+      "categories": {
+        "Bias_Ungleichheit": 2,
+        "KI_Sonstige": 2
+      },
+      "decision": "Include",
+      "override": false,
+      "reason": null,
+      "override_reason": null,
+      "evidence": {},
+      "ts": "2026-11-04T12:29:10.135Z",
+      "reviewer": "sabine",
+      "actor": "human",
+      "text_source": "raw",
+      "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+      "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+      "version_type": "version_of_record",
+      "preferred_version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+      "selected_version_is_preferred": true,
+      "provenance": {
+        "annotation_id": "sabine:Z9DNTBFF",
+        "annotation_type": "screening_decision",
+        "actors": [
+          {
+            "id": "sabine",
+            "type": "person",
+            "roles": [
+              "screening"
+            ]
+          }
+        ],
+        "activities": [
+          {
+            "id": "Z9DNTBFF:prism-screening",
+            "type": "screening",
+            "run_id": "prism-session-2bb5826c-fc9f-48d6-a240-96f2db7f3435",
+            "method": "prism_human_screening",
+            "prompt": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "model": {
+              "status": "not_applicable",
+              "value": "not_applicable"
+            },
+            "associated_actor_ids": [
+              "sabine"
+            ]
+          }
+        ],
+        "used_sources": [
+          {
+            "id": "paper:Z9DNTBFF",
+            "type": "paper",
+            "reference": "Z9DNTBFF",
+            "work_id": "work:ec94cf1c-87bf-5f4d-a840-9dd3b92eefab",
+            "version_id": "version:5cc89bf8-9652-519b-9e31-d77a07848330",
+            "version_type": "version_of_record"
+          }
+        ],
+        "derived_from": []
+      },
+      "annotations": [
+        {
+          "annotation_id": "sabine:Z9DNTBFF",
+          "annotation_type": "screening_decision",
+          "at": "2026-11-04T12:29:10.135Z",
+          "actor_ids": [
+            "sabine"
+          ],
+          "body": {
+            "categories": {
+              "Bias_Ungleichheit": 2,
+              "KI_Sonstige": 2
+            },
+            "decision": "Include",
+            "override": false,
+            "reason": null,
+            "override_reason": null,
+            "evidence": {},
+            "text_source": "raw",
+            "ts": "2026-11-04T12:29:10.135Z",
+            "reviewer": "sabine",
+            "actor": "human"
+          }
+        }
+      ],
+      "active_annotation_id": "sabine:Z9DNTBFF",
+      "checks": [],
+      "lifecycle": {
+        "baseline": {
+          "state": "curated",
+          "basis": "recorded",
+          "at": "2026-11-04T12:29:10.135Z",
+          "actor_ids": [
+            "sabine"
+          ]
+        },
+        "state": "curated",
+        "events": []
+      }
+    }
+  }
 }
