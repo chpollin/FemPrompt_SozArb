@@ -10,7 +10,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-02-21
-updated: 2026-10-03
+updated: 2026-11-06
 authors: [Christopher Pollin]
 generated-with: Claude Code, Codex (GPT-6)
 topics: ["[[Systematic Review]]", "[[PRISMA]]"]
@@ -197,7 +197,7 @@ Execution from 2026-07-17, logged per lane in `corpus/deep-research/round2/LAUFP
 - A dated context-informed supplement ran on 24 August 2026 through three operationally separate Codex subagent lanes. The committed lane records cover direct social-work applications, feminist and inequality research, and prompt-based bias mitigation. The supplement did not redefine the original publication window. Every candidate records whether its publication date falls before, within, or after that window. Tier A controls candidate transfer into the Zotero intake package and carries no PRISM inclusion authority.
 - The `Codex Websearch` expansion then repeated these three scopes under a strict 2026 selected-Version rule and a broader primary-source search. It preserved Tier A, Tier B, and exclusions at lane level, deduplicated Tier A by DOI, stable external identifier, and normalised title, and audited every selected record against the committed Zotero export. The RIS remains an identification artifact. Its prepared records entered Zotero and the canonical corpus through the documented September imports. Reading-source preparation and screening retain their separate checks.
 - Dedup ran preregistered before screening, by DOI and normalized title against the existing corpus and within the round. The run record reports no match against round 1, a statement that holds against the restored round-1 RIS it was checked against. Recomputed against the round-1 Zotero library, one L1 record ("Fairness Beyond the Algorithmic Frame", matching library record `Y6SAPNT2` by title) duplicates a round-1 record. [[#PRISMA flow per identification source]] carries the recomputation.
-- The dated July record documents the initial imports. The live reconciliation and additive imports of 21 September resolved the stale-export discrepancy and prepared missing references. `corpus/zotero_sync.json` records membership and historical aliases. [[journal#2026-09-21: Authorised Zotero import and live reconciliation]] preserves the execution history, and [[#Zotero reconciliation and import]] defines the procedure.
+- The dated July record documents the initial imports. The live reconciliation and additive imports of 21 September resolved the stale-export discrepancy and prepared missing references. `corpus/zotero_sync.json` records membership and historical aliases. [[journal#September 2026]] preserves the execution history, and [[#Zotero reconciliation and import]] defines the procedure.
 - An advisory LLM screening pass over the distinct round-two candidates lies in `assessment/round2-screening-advisory.md`, with its dated result distribution recorded there. The current production path uses two operationally isolated Codex screening tracks, separate source-grounded AI Agent Review, and deferred domain-expert verification. Completed governed runs have reached `ai-agent-reviewed`. Completed runs establish review only for their exact assigned artifacts. Recovered or newly bound sources can require fresh coding. The generated completion package, queue and intake manifest identify the remaining source, identity, and corpus-ingestion gates.
 
 Scholarly authority resides in Zotero curation, the human screening in PRISM and the later domain-expert verification.
@@ -333,7 +333,7 @@ python -m src.acquire.zotero_group_reconcile --date 2026-09-20
 python -m src.acquire.zotero_group_reconcile --date 2026-09-20 --offline
 ```
 
-The second form compares against the committed export without a key or network access. An offline report describes that export at the time of execution. It does not establish current live membership. The stale-export discrepancy and completed imports are recorded in [[journal#2026-09-21: Authorised Zotero import and live reconciliation]].
+The second form compares against the committed export without a key or network access. An offline report describes that export at the time of execution. It does not establish current live membership. The stale-export discrepancy and completed imports are recorded in [[journal#September 2026]].
 
 ### Applying an additive import
 
