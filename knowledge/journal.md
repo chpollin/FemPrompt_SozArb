@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-10-21
+updated: 2026-11-06
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -19,6 +19,12 @@ related: [INDEX, plan, specification, governance, verification, handoff]
 # Arbeitsjournal
 
 Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen fest, die Git nicht erfasst, sodass alte Zustände, verworfene Richtungen und später umgestoßene Entscheidungen lesbar bleiben. Ein Eintrag je substanzieller Sitzung nennt, was sich änderte, was entschieden wurde und was offen bleibt, und verweist auf das Dokument, das den Gegenstand trägt. Commits und Diffs leben in der Git-Historie, Zahlen in den Daten und im Evidence Companion. Die Einträge stehen chronologisch, der neueste zuerst.
+
+## November 2026
+
+### 2026-11-06: Zotero PDFs for records without a reading text
+
+Every corpus record without a reading text that has a PDF in the Zotero group was checked against its printed title, byline and DOI, together with two open-access records named by the coordinator. Four records now read a full text. Their tracked Docling conversions of February had never resolved, and a fresh conversion of the Zotero PDFs reproduced them, so `corpus/source_version_bindings.json` binds the existing files through `acquisition_receipt` entries whose receipt names the Zotero attachment and the local PDF digest. The other candidates stay without text, mostly because the record's creators, title or DOI belong to another work, and binding them needs reviewed metadata corrections first. Docling also fails on the Ulnicane PDF of a separately registered Work. The per-record decisions and reasons are in `generated/source-acquisition/zotero-pdfs-2026-11-06/receipts.json`. The NVZA58ML binding passes the identity check on a co-author surname, since the record's first creator is wrong, and its creator correction is still open. The UNESCO 2020 report remains blocked by the 403 response of unesdoc.
 
 ## October 2026
 

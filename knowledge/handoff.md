@@ -10,7 +10,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-08-23
-updated: 2026-10-21
+updated: 2026-11-06
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Claude Code (Claude Opus 5.5)
 related: [INDEX, plan, journal, project, analysis-methods, governance, verification, testing, standards]
@@ -19,6 +19,8 @@ related: [INDEX, plan, journal, project, analysis-methods, governance, verificat
 # Handoff
 
 ## Current result
+
+On 6 November 2026 the branch `fulltext-zotero-pdfs-2026-11-06` bound four records to existing tracked full texts through Zotero attachment receipts ([[journal]]). The remaining Zotero PDFs of records without a reading text wait for reviewed metadata corrections of creators, titles or DOIs, a Work-merge decision for the Ulnicane duplicates, or a manual download of the UNESCO 2020 report. `generated/source-acquisition/zotero-pdfs-2026-11-06/receipts.json` names the reason per record. The branch is not merged.
 
 The operator clarified on 21 October 2026 that duplicates and all annotations remain preserved. Later analysis counts each established underlying work once. This supersedes the earlier merge instruction. No duplicate consolidation or counting change was implemented. The mixed Stable Diffusion bibliographic record was checked, and the operator then explicitly authorised correcting its URL, author list and year. The live Zotero correction and local metadata projection have been applied and read back, with records, existing texts and annotations preserved. [[plan#Source and corpus readiness]] owns the decision, and [[data#Stable Diffusion source-identity check of 21 October 2026]] records the evidence and limits.
 
