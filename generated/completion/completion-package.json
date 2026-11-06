@@ -40925,7 +40925,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:ee237160358abeb87bf6f7adda7873a0b85de0156978d717da2ed645425a257e",
+  "source_fingerprint": "sha256:18f52d0917e67ca50e61a31dcef00f73aafa8d1f43400fd6ba281de1c42a8218",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -41129,7 +41129,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "fbf50dcb38c8a5090c7ec187890eb50da6df8833c1c5534c36a0ca51685a4c62"
+      "sha256": "788960ecd16c0e99e6ee602f9ab308e6d1d25cfb76f52afd924bfda6efc2a6f3"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -41157,7 +41157,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "3bae1c067c49c103da595d5da775cb93455de00d74e2f4c20346d0ef2e72438e"
+      "sha256": "c23643a655e0eb3fa21b8fe4d5cccdefd038b6b6cd85801659ff00a1fc3fd9c3"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -42005,7 +42005,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "92a8532a1c86fff61ae5cb2b2385f518a88dee5bb69c0b334e2dd4cae02f1e0d"
+      "sha256": "12e1c4f9f3e56887104bdb9ea8346d0b1a9b3aeda7b666268045a88651b56be2"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",

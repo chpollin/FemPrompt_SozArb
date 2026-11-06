@@ -1,0 +1,28 @@
+{
+ "checked_at": "2026-11-06",
+ "checks": [
+  {
+   "record": "QUU8QDPQ",
+   "doi": "10.1145/3589139",
+   "doi_org": "DOI Not Found",
+   "acm_dl": "404",
+   "title_search": "no hit in ACM Digital Library or Google Scholar for Keynote Summary: The New Jim Code"
+  },
+  {
+   "record": "U75LP6SV",
+   "doi": "10.1145/3630659.3630671",
+   "doi_org": "DOI Not Found",
+   "title_search": "no hit in Google Scholar for The Algorithmic Auditing Landscape: A Social Justice Approach"
+  },
+  {
+   "record": "EJEFPZGA",
+   "doi": null,
+   "url_field": "KEINE QUELLE GEFUNDEN!",
+   "title_search": "no hit in Google Scholar for the title or its subtitle"
+  },
+  {
+   "record": "DL7G37W9",
+   "title_search": "no paper by Chisca et al. with this title in Crossref or arXiv; the record URL resolves to Khorramrouz and Levy, Findings of ACL 2026"
+  }
+ ]
+}

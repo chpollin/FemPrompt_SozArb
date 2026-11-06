@@ -364,6 +364,17 @@ The output directory is named by the `--date` flag, the clock is not read, and a
 python -m src.acquire.zotero_import_residuals --date 2026-09-20
 ```
 
+### Field corrections and full-text attachments
+
+`src/acquire/zotero_field_correction.py` generalises the title correction to the bibliographic and organisation fields that the authority of 3 October 2026 covers ([[governance#Authorised Zotero organisation]]): creators, date, DOI, URL, container fields, publisher, ISBN, tags and relations, plus an audit note as a child item. Each plan operation carries the complete planned item and hash-bound evidence under `corpus/source-acquisition/`. The tool refuses an item that changed since planning, writes conditionally on the item version, compares every field on read-back, and writes one receipt under the ignored `generated/zotero-sync/`. Zotero stores a single relation as a string, so the read-back compares relations independently of that form. Deleting or merging items is outside the tool. A live correction is mirrored locally through `corpus/metadata_corrections.json`, which accepts `bookTitle` for book sections, and the registry builder refuses a correction that would merge two established Works.
+
+`src/acquire/zotero_attachment_upload.py` attaches acquired PDFs to their existing items under decision 21 through the Web API upload sequence and verifies the stored MD5. The plan binds each file by SHA-256, and an item that already holds a PDF with the same MD5 is left unchanged.
+
+```
+python -m src.acquire.zotero_field_correction --plan PATH [--apply]
+python -m src.acquire.zotero_attachment_upload --plan PATH [--apply]
+```
+
 ## Directory structure
 
 | Directory | Contents |

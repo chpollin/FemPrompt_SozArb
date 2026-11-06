@@ -1,10 +1,10 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:9eed7223d46206430e660a57e9cc70bb0667f230ecf647347a10cb1ca1aac93a",
+  "source_fingerprint": "sha256:3782521c4ff836d80043293042281167fd5b5b307f23870a81369d6a1cd92ac7",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
-      "sha256": "bd7f5091cacfbd259ef015f549131b8535fed54dbffd0337c1150db4aaea693b"
+      "sha256": "d8a37a9de7b075333c70cadf0453dffed0ec8c73c22c62765fb1807b09308693"
     },
     {
       "path": "corpus/source-acquisition/QRK7C3JK-visual-qc/visual-qc.json",
@@ -201,6 +201,26 @@
     {
       "path": "corpus/source-acquisition/residual-resolution-2026-09-05/swiftsage-arxiv-v2-text.md",
       "sha256": "fd64251d9eed80eca0689fe3bad5e8ea15465746be71af1e38d7f8c9bdb553d1"
+    },
+    {
+      "path": "corpus/source-acquisition/zotero-corrections-2026-11-06/44AA6ETH-crossref-registered.json",
+      "sha256": "3eb49fcb5f26ee0b33a3f98f18bae01d55690d058d8202a0c03766e218940582"
+    },
+    {
+      "path": "corpus/source-acquisition/zotero-corrections-2026-11-06/44AA6ETH-crossref.json",
+      "sha256": "cf01c3f947ce7c86b5d270556bf8aef7a55667eadf34b84fd2a6e7013094c6ea"
+    },
+    {
+      "path": "corpus/source-acquisition/zotero-corrections-2026-11-06/GCN42PAM-crossref.json",
+      "sha256": "899974ebd51d479577ed796e8838061188f35d5447d7fc216c6759e9740ad980"
+    },
+    {
+      "path": "corpus/source-acquisition/zotero-corrections-2026-11-06/SWB86AYC-crossref-registered-url.json",
+      "sha256": "d1dc4038c13f121eefdc858c4983310fb3e740e2054b23a9c9235db5c85d45f4"
+    },
+    {
+      "path": "corpus/source-acquisition/zotero-corrections-2026-11-06/SWB86AYC-learntechlib.json",
+      "sha256": "8fa12bdb1c3bab9ef68d12a9ff71d839520bd0018191d0ccdc988b1bf3b8ca07"
     },
     {
       "path": "corpus/source-acquisition/zotero-curation-2026-10-03/22XEFRWP.json",
@@ -9185,28 +9205,112 @@
         {
           "title": "Generative AI and the Future of Digital Literacy: Opportunities for Gender Inclusion",
           "authors": [
-            "R. Hartshorne",
-            "J. Cohen"
+            "Therese Keane",
+            "Milorad Cerovac",
+            "Tianchong Wang"
           ],
           "version_type": "unknown",
           "version_date": "2025",
           "item_type": "conferencePaper",
-          "journal_or_repository": "",
+          "journal_or_repository": "Society for Information Technology & Teacher Education International Conference 2025",
           "identifiers": {
             "zotero_key": [
               "SWB86AYC"
+            ],
+            "url": [
+              "https://www.learntechlib.org/p/225588"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "",
+          "landing_url": "https://www.learntechlib.org/p/225588",
           "fulltext_url": "",
           "license": "",
           "source_lanes": [],
           "evidence": [],
           "provenance": [
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "SWB86AYC",
+              "ai_metadata_correction": {
+                "record_id": "SWB86AYC",
+                "base_sha256": "sha256:3ebbcf29eddf5f9a1576d7cdca5bec8c0b62f87837a1aa08a04aeea2496d9a56",
+                "agent_id": "claude-code/zotero-correction-2026-11-06",
+                "model": "Claude Opus 5.5",
+                "reviewed_at": "2026-11-06T11:45:09+00:00",
+                "findings": "Operator-authorised source-backed correction of 6 November 2026. Live Zotero write verified by read-back (generated/zotero-sync/field-correction-2026-11-06/plan-receipt.json). Records, texts and annotations unchanged.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "creators",
+                    "before": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "R.",
+                        "lastName": "Hartshorne"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "J.",
+                        "lastName": "Cohen"
+                      }
+                    ],
+                    "after": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "Therese",
+                        "lastName": "Keane"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Milorad",
+                        "lastName": "Cerovac"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Tianchong",
+                        "lastName": "Wang"
+                      }
+                    ],
+                    "reason": "The registered URL resolved to a different article; LearnTechLib lists the paper's authors and conference."
+                  },
+                  {
+                    "field": "url",
+                    "before": "",
+                    "after": "https://www.learntechlib.org/p/225588/",
+                    "reason": "The registered URL resolved to a different article; LearnTechLib lists the paper's authors and conference."
+                  },
+                  {
+                    "field": "proceedingsTitle",
+                    "before": null,
+                    "after": "Society for Information Technology & Teacher Education International Conference 2025",
+                    "reason": "The registered URL resolved to a different article; LearnTechLib lists the paper's authors and conference."
+                  },
+                  {
+                    "field": "publisher",
+                    "before": null,
+                    "after": "Association for the Advancement of Computing in Education (AACE)",
+                    "reason": "The registered URL resolved to a different article; LearnTechLib lists the paper's authors and conference."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/zotero-corrections-2026-11-06/SWB86AYC-learntechlib.json",
+                    "sha256": "sha256:8fa12bdb1c3bab9ef68d12a9ff71d839520bd0018191d0ccdc988b1bf3b8ca07",
+                    "source_url": "https://www.learntechlib.org/p/225588/",
+                    "locator": "page_text_excerpt"
+                  },
+                  {
+                    "source_path": "corpus/source-acquisition/zotero-corrections-2026-11-06/SWB86AYC-crossref-registered-url.json",
+                    "sha256": "sha256:d1dc4038c13f121eefdc858c4983310fb3e740e2054b23a9c9235db5c85d45f4",
+                    "source_url": "https://doi.org/10.1016/j.caeai.2025.100373",
+                    "locator": "/message title, author"
+                  }
+                ]
+              }
+            },
             {
               "source": "zotero_export",
               "reference": "SWB86AYC"
@@ -10793,27 +10897,104 @@
         {
           "title": "Das verflixte Problem mit Klassifikationen: Zum Einfluss der Digitalisierung auf die Soziale Diagnostik in der Sozialen Arbeit",
           "authors": [
-            "D. Schneider"
+            "Diana Schneider"
           ],
           "version_type": "unknown",
           "version_date": "2024",
           "item_type": "bookSection",
-          "journal_or_repository": "",
+          "journal_or_repository": "Gesundheit und Krankheit im Zeitalter der Digitalisierung",
           "identifiers": {
+            "doi": [
+              "10.14361/9783839473948-008"
+            ],
             "zotero_key": [
               "44AA6ETH"
+            ],
+            "url": [
+              "https://doi.org/10.14361/9783839473948-008"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "",
+          "landing_url": "https://doi.org/10.14361/9783839473948-008",
           "fulltext_url": "",
           "license": "",
           "source_lanes": [],
           "evidence": [],
           "provenance": [
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "44AA6ETH",
+              "ai_metadata_correction": {
+                "record_id": "44AA6ETH",
+                "base_sha256": "sha256:e5bd6290c62abac1ee81e81073dcc7171923e6d7282cc542eb0cea3f5d65dbe6",
+                "agent_id": "claude-code/zotero-correction-2026-11-06",
+                "model": "Claude Opus 5.5",
+                "reviewed_at": "2026-11-06T11:45:09+00:00",
+                "findings": "Operator-authorised source-backed correction of 6 November 2026. Live Zotero write verified by read-back (generated/zotero-sync/field-correction-2026-11-06/plan-receipt.json). Records, texts and annotations unchanged.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "creators",
+                    "before": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "D.",
+                        "lastName": "Schneider"
+                      }
+                    ],
+                    "after": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "Diana",
+                        "lastName": "Schneider"
+                      }
+                    ],
+                    "reason": "The registered DOI named a different chapter by the same author; Crossref identifies the transcript chapter."
+                  },
+                  {
+                    "field": "DOI",
+                    "before": "",
+                    "after": "10.14361/9783839473948-008",
+                    "reason": "The registered DOI named a different chapter by the same author; Crossref identifies the transcript chapter."
+                  },
+                  {
+                    "field": "url",
+                    "before": "",
+                    "after": "https://doi.org/10.14361/9783839473948-008",
+                    "reason": "The registered DOI named a different chapter by the same author; Crossref identifies the transcript chapter."
+                  },
+                  {
+                    "field": "bookTitle",
+                    "before": null,
+                    "after": "Gesundheit und Krankheit im Zeitalter der Digitalisierung",
+                    "reason": "The registered DOI named a different chapter by the same author; Crossref identifies the transcript chapter."
+                  },
+                  {
+                    "field": "publisher",
+                    "before": null,
+                    "after": "transcript Verlag",
+                    "reason": "The registered DOI named a different chapter by the same author; Crossref identifies the transcript chapter."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/zotero-corrections-2026-11-06/44AA6ETH-crossref.json",
+                    "sha256": "sha256:cf01c3f947ce7c86b5d270556bf8aef7a55667eadf34b84fd2a6e7013094c6ea",
+                    "source_url": "https://doi.org/10.14361/9783839473948-008",
+                    "locator": "/message title, author, container-title"
+                  },
+                  {
+                    "source_path": "corpus/source-acquisition/zotero-corrections-2026-11-06/44AA6ETH-crossref-registered.json",
+                    "sha256": "sha256:3eb49fcb5f26ee0b33a3f98f18bae01d55690d058d8202a0c03766e218940582",
+                    "source_url": "https://doi.org/10.35468/5909-09",
+                    "locator": "/message title"
+                  }
+                ]
+              }
+            },
             {
               "source": "zotero_export",
               "reference": "44AA6ETH"
@@ -15594,7 +15775,7 @@
           "version_type": "version_of_record",
           "version_date": "2025",
           "item_type": "bookSection",
-          "journal_or_repository": "Handbook of Global Philosophies on AI Ethics: Toward Sustainable Futures (CRC Press/Routledge)",
+          "journal_or_repository": "Handbook of Global Philosophies on AI Ethics: Toward Sustainable Futures",
           "identifiers": {
             "doi": [
               "10.1201/9781003585527-19"
@@ -20010,7 +20191,7 @@
           "version_type": "unknown",
           "version_date": "2026-07-21",
           "item_type": "bookSection",
-          "journal_or_repository": "",
+          "journal_or_repository": "Routledge book chapter",
           "identifiers": {
             "doi": [
               "10.4324/9781003627920-14"
@@ -20630,7 +20811,7 @@
           "version_type": "unknown",
           "version_date": "2026-07-14",
           "item_type": "bookSection",
-          "journal_or_repository": "",
+          "journal_or_repository": "Social Work in the 21st Century",
           "identifiers": {
             "doi": [
               "10.1007/978-3-032-27336-9_4"
@@ -21133,7 +21314,7 @@
           "version_type": "unknown",
           "version_date": "2026-08-12",
           "item_type": "bookSection",
-          "journal_or_repository": "",
+          "journal_or_repository": "Social Work Practice and Artificial Intelligence for the Common Good (Routledge)",
           "identifiers": {
             "doi": [
               "10.4324/9781003755081-10"
@@ -26888,16 +27069,19 @@
         {
           "title": "Mitigating age-related bias in large language models: Strategies for responsible artificial intelligence development",
           "authors": [
-            "G. T. Birru",
-            "J. Shin",
-            "J. You",
-            "A. Birhane"
+            "Zhuang Liu",
+            "Shiyao Qian",
+            "Shuirong Cao",
+            "Tianyu Shi"
           ],
           "version_type": "version_of_record",
-          "version_date": "2024",
+          "version_date": "2026",
           "item_type": "journalArticle",
           "journal_or_repository": "",
           "identifiers": {
+            "doi": [
+              "10.1287/ijoc.2024.0645"
+            ],
             "zotero_key": [
               "GCN42PAM"
             ],
@@ -26915,6 +27099,89 @@
           "source_lanes": [],
           "evidence": [],
           "provenance": [
+            {
+              "source": "corpus/metadata_corrections.json",
+              "reference": "GCN42PAM",
+              "ai_metadata_correction": {
+                "record_id": "GCN42PAM",
+                "base_sha256": "sha256:8740e23ab3c0159b57d0c11bb5ed78e1cf11ddba9034ef4c1d7ed04fbab1c7ed",
+                "agent_id": "claude-code/zotero-correction-2026-11-06",
+                "model": "Claude Opus 5.5",
+                "reviewed_at": "2026-11-06T11:45:09+00:00",
+                "findings": "Operator-authorised source-backed correction of 6 November 2026. Live Zotero write verified by read-back (generated/zotero-sync/field-correction-2026-11-06/plan-receipt.json). Records, texts and annotations unchanged.",
+                "authority": "ai-source-reviewed-metadata",
+                "changes": [
+                  {
+                    "field": "creators",
+                    "before": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "G. T.",
+                        "lastName": "Birru"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "J.",
+                        "lastName": "Shin"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "J.",
+                        "lastName": "You"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "A.",
+                        "lastName": "Birhane"
+                      }
+                    ],
+                    "after": [
+                      {
+                        "creatorType": "author",
+                        "firstName": "Zhuang",
+                        "lastName": "Liu"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Shiyao",
+                        "lastName": "Qian"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Shuirong",
+                        "lastName": "Cao"
+                      },
+                      {
+                        "creatorType": "author",
+                        "firstName": "Tianyu",
+                        "lastName": "Shi"
+                      }
+                    ],
+                    "reason": "The registered authors do not belong to this article; Crossref names the article's authors and issue year."
+                  },
+                  {
+                    "field": "date",
+                    "before": "2024",
+                    "after": "2026",
+                    "reason": "The registered authors do not belong to this article; Crossref names the article's authors and issue year."
+                  },
+                  {
+                    "field": "DOI",
+                    "before": "",
+                    "after": "10.1287/ijoc.2024.0645",
+                    "reason": "The registered authors do not belong to this article; Crossref names the article's authors and issue year."
+                  }
+                ],
+                "evidence": [
+                  {
+                    "source_path": "corpus/source-acquisition/zotero-corrections-2026-11-06/GCN42PAM-crossref.json",
+                    "sha256": "sha256:899974ebd51d479577ed796e8838061188f35d5447d7fc216c6759e9740ad980",
+                    "source_url": "https://doi.org/10.1287/ijoc.2024.0645",
+                    "locator": "/message author, issued"
+                  }
+                ]
+              }
+            },
             {
               "source": "zotero_export",
               "reference": "GCN42PAM"
@@ -27571,7 +27838,7 @@
           "version_type": "unknown",
           "version_date": "2026-08-12",
           "item_type": "bookSection",
-          "journal_or_repository": "",
+          "journal_or_repository": "Social Work Practice and Artificial Intelligence for the Common Good",
           "identifiers": {
             "doi": [
               "10.4324/9781003755081-5"
@@ -29807,7 +30074,7 @@
           "version_type": "version_of_record",
           "version_date": "2026",
           "item_type": "bookSection",
-          "journal_or_repository": "AI from the Global Majority (Springer Nature)",
+          "journal_or_repository": "AI from the Global Majority (DC-DAIG 2023)",
           "identifiers": {
             "doi": [
               "10.1007/978-3-032-07830-8_12"
@@ -32213,7 +32480,7 @@
           "version_type": "version_of_record",
           "version_date": "2025",
           "item_type": "bookSection",
-          "journal_or_repository": "Conceptualizing Digital Responsibility for the Information Age (Springer Nature)",
+          "journal_or_repository": "Conceptualizing Digital Responsibility for the Information Age",
           "identifiers": {
             "doi": [
               "10.1007/978-3-031-80119-8_6"
@@ -36035,6 +36302,10 @@
       "work_id": "work:0414138e-c8db-522b-8e98-94913418d861",
       "version_id": "version:4d90b6fb-fe66-5801-a9c2-0ee51f58b94f"
     },
+    "doi:10.1287/ijoc.2024.0645": {
+      "work_id": "work:c38f96d8-de83-5faf-8eeb-3dd02eb32a14",
+      "version_id": "version:f8afe9ad-faaa-5597-b7a0-1c7353eb93c5"
+    },
     "doi:10.1371/journal.pdig.0000279": {
       "work_id": "work:2761997f-e702-5162-8cb6-187e759b4688",
       "version_id": "version:3b11fe76-08e9-5eac-90c4-74d2e519f4a0"
@@ -36042,6 +36313,10 @@
     "doi:10.14254/1795-6889.2025.21-1.5": {
       "work_id": "work:e769d36a-8e1e-5b9b-9e22-301723be1c24",
       "version_id": "version:7536e6e4-ca23-5f63-b0f7-4ee6be9147c6"
+    },
+    "doi:10.14361/9783839473948-008": {
+      "work_id": "work:4f5b1e4d-e7b1-55a5-91ad-e582dd7039cb",
+      "version_id": "version:875b8253-994d-5663-b156-95a45fd01056"
     },
     "doi:10.14512/tatup.33.1.08": {
       "work_id": "work:7110b61f-4998-510c-be62-2d4948dab2bd",
@@ -37007,6 +37282,10 @@
       "work_id": "work:0414138e-c8db-522b-8e98-94913418d861",
       "version_id": "version:4d90b6fb-fe66-5801-a9c2-0ee51f58b94f"
     },
+    "url:https://doi.org/10.14361/9783839473948-008": {
+      "work_id": "work:4f5b1e4d-e7b1-55a5-91ad-e582dd7039cb",
+      "version_id": "version:875b8253-994d-5663-b156-95a45fd01056"
+    },
     "url:https://doi.org/10.1609/aies.v7i1.31748": {
       "work_id": "work:904b0cbf-d423-5dde-ba01-40a61605b88c",
       "version_id": "version:0a158fff-18d3-5945-acb1-7bc096ba101f"
@@ -37610,6 +37889,10 @@
     "url:https://www.journals.uchicago.edu/doi/abs/10.1086/735590": {
       "work_id": "work:5214816c-608d-55ba-98f3-2a3a3357b7ac",
       "version_id": "version:30542a01-3d46-56f4-b146-0759591eb3ce"
+    },
+    "url:https://www.learntechlib.org/p/225588": {
+      "work_id": "work:42a27e1c-f75f-5191-ba3a-08568aed07eb",
+      "version_id": "version:9fb6924b-3e08-50fa-a92e-9bfe341f0da3"
     },
     "url:https://www.lsv.uni-saarland.de/wp-content/uploads/2023/12/ovalle-et-al.-2023-factoring-the-matrix-of-domination-a-critical-rev.pdf": {
       "work_id": "work:73fc9654-9af9-52ff-a8fb-64ce3e804f04",

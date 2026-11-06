@@ -17,7 +17,7 @@ CORRECTIONS_PATH = "corpus/metadata_corrections.json"
 ALLOWED_FIELDS = {
     "title", "creators", "date", "DOI", "url", "itemType", "publicationTitle",
     "publisher", "repository", "abstractNote", "volume", "issue", "pages",
-    "proceedingsTitle", "institution", "university",
+    "proceedingsTitle", "institution", "university", "bookTitle",
 }
 
 
@@ -30,10 +30,11 @@ def bibliographic_container(item: dict) -> str:
         "report": "institution",
         "thesis": "university",
         "book": "publisher",
+        "bookSection": "bookTitle",
     }.get(item.get("itemType"), "publicationTitle")
     return next(
         (item[field] for field in (
-            preferred, "publicationTitle", "proceedingsTitle", "repository",
+            preferred, "publicationTitle", "proceedingsTitle", "bookTitle", "repository",
             "institution", "university", "publisher",
         ) if item.get(field)),
         "",
@@ -116,7 +117,7 @@ def corrected_csv_metadata(repo: Path, metadata: dict[str, dict]) -> dict[str, d
                     for c in item[field] if c.get("creatorType") == "author"
                 )
         if any(change["field"] in {
-            "itemType", "publicationTitle", "proceedingsTitle", "repository",
+            "itemType", "publicationTitle", "proceedingsTitle", "bookTitle", "repository",
             "institution", "university", "publisher",
         } for change in item["_metadata_correction"]["changes"]):
             row["Journal"] = bibliographic_container(item)
