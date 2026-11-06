@@ -15,7 +15,7 @@ status: complete
 language: en
 version: "0.7"
 created: 2026-06-29
-updated: 2026-10-03
+updated: 2026-10-31
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5), Codex (GPT-6)
 related: [project, analysis-methods, methods, specification, data, standards, governance, testing, verification, plan, journal, handoff, update-protocol, codebook-v1.4-proposal, research-vault, analysis-divergence, analysis-sq-advisory, project-review-2026-09-05]
@@ -30,6 +30,7 @@ In function order, not alphabetical.
 | Document | Function | Update rhythm |
 |---|---|---|
 | [[project]] | Project goal, main question with five sub-questions, publication context and the methodological second question, audience, scope boundaries, team and theoretical framework | rarely |
+| [[paper-analysis-plan]] | Paper-specific analytical sub-questions, comparative procedure design, evidence records, human evaluation criteria and the linked evaluation package | per analysis-design decision |
 | [[analysis-methods]] | The methodological basis of the literature analysis, with the mapping and synthesis frame, the answer plan per research question, the analysis tiers, statistical reservations, validation of LLM-assisted analysis, appraisal tools and open disputes | per method decision |
 | [[methods]] | How the review was conducted, from identification and text preparation through both assessment rounds, lifecycle verification, the Grounded Vault, the descriptive mapping tools and replay verification | rarely |
 | [[specification]] | Requirements, user stories, the ADR decision log and the design system of PRISM, and the specification of the public Evidence Companion | per tool iteration |

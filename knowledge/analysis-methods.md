@@ -10,7 +10,7 @@ status: draft
 language: en
 version: "0.7"
 created: 2026-10-01
-updated: 2026-10-01
+updated: 2026-10-31
 authors: [Christopher Pollin]
 generated-with: Claude Code (Claude Opus 5.5)
 topics: ["[[Scoping Review]]", "[[Evidence Synthesis]]", "[[Inter-rater Reliability]]"]
@@ -61,6 +61,8 @@ The fields map onto the sub-questions as follows. The `serves` entries of the an
 The numbering of the morning of 1 October 2026 maps onto the current one in [[project#Research questions]]. SQ1 to SQ3 keep their numbers, the former SQ4 Competences is SQ5, and SQ4 Conceptual grounding is new.
 
 Across all questions the answer is limited by the coverage of coding. Every view and every text states how many included Works are coded for the fields it uses. An empty cell with open Works is not determinable and never a gap in the literature. What the literature recommends is reported as the recommendation of its source, never as a recommendation of the project ([[project#Project goal]]). Codebook 1.4 introduced the task field, the sharper harm and bias rules and the fields for SQ4 and deferred the stage-status pairs ([[codebook-v1.4-proposal]], [[update-protocol#Analysis coding]]).
+
+The paper-specific operational questions and the prospective comparison of structured extraction, open thematic analysis and framing analysis are in [[paper-analysis-plan]]. The exploratory mixed-genre exercises do not establish completion of any formal synthesis method or change the codebook.
 
 ## Analysis plan
 

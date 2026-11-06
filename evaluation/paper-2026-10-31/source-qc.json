@@ -1,0 +1,119 @@
+{
+  "schema": "paper-source-qc/1.0",
+  "recorded_at": "2026-10-31T21:02:41.588050+00:00",
+  "scope": "All six evaluation inputs structurally inspected; bounded PDF comparisons described by case, not a blanket proof of publication completeness. Evaluation content was not passed to development producers.",
+  "fetches": [
+    {
+      "case": "E01",
+      "url": "https://ht.csr-pub.eu/index.php/ht/article/download/460/317",
+      "sha256": "112ee6fc8a35a18c0550f894beb77997e78f753ac1d7e592a5c0edab714f6b44",
+      "bytes": 499963
+    },
+    {
+      "case": "E02",
+      "url": "https://digitalcollection.zhaw.ch/server/api/core/bitstreams/9e397e56-2222-4079-9708-14d82f6e45d1/content",
+      "sha256": "da9b7f60c4814dce6e3d766c3be97917d756af4cb22a26f27caa6311a3257218",
+      "bytes": 805728
+    },
+    {
+      "case": "E03",
+      "url": "https://aclanthology.org/2025.findings-acl.1361.pdf",
+      "sha256": "57d9f2924d5a878498acc478b0cce4f799b648bf04824f7a8698328c43dec5f7",
+      "bytes": 838164
+    },
+    {
+      "case": "E04",
+      "url": "https://link.springer.com/content/pdf/10.1186/s12911-025-03118-0.pdf",
+      "error": "not PDF"
+    },
+    {
+      "case": "E05",
+      "url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2660786",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "case": "E06",
+      "url": "https://www.mdpi.com/2076-0760/8/10/281/pdf",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "case": "E06",
+      "url": "https://mdpi-res.com/d_attachment/socsci/socsci-08-00281/article_deploy/socsci-08-00281.pdf",
+      "sha256": "d870abef5a59485e7cf90558e080e52b7a29ba578ba94e59d1584e48833b1d08",
+      "bytes": 314516,
+      "pages": 22
+    }
+  ],
+  "cases": [
+    {
+      "case": "E01",
+      "status": "repair_required",
+      "evidence": [
+        "Recovered 22-page PDF matches historical acquisition SHA-256 exactly.",
+        "Text contains Table 13 caption followed only by image placeholder at lines 301-303; rendered PDF page 17 contains substantive prompt template.",
+        "Table 12 Challenges row splits a phrase between stage columns at line 287. Rendered PDF page 15 shows the phrase in a cell spanning stages 1 and 2; the markdown loses that association."
+      ],
+      "next": "Restore Table 13 and audit Table 12 against exact PDF in a separately versioned derivative; preserve bound original."
+    },
+    {
+      "case": "E02",
+      "status": "version_resolution_required",
+      "evidence": [
+        "Original acquisition PDF absent locally. Registered URL now returns 22-page publication-layout PDF with hash differing from recorded 48-page author-manuscript input.",
+        "Bound markdown retains table values but Figure 1 is a placeholder. Page markers jump from 35 to 39 in reference-list area; omitted markers alone do not prove omitted pages."
+      ],
+      "next": "Recover exact historical PDF or establish a governed new-source binding. Do not patch manuscript using the newly returned publication version."
+    },
+    {
+      "case": "E03",
+      "status": "repair_required",
+      "evidence": [
+        "Recovered 16-page ACL PDF matches recorded historical PDF hash exactly.",
+        "Four formula-not-decoded placeholders remain. Figure 2 values are absent from text input; PDF page 5 visually confirms radar plots. Figures 1-3 and complex appendix tables need explicit asset/layout treatment.",
+        "Appendix and table captions through Table 10 are present, which does not prove cell alignment."
+      ],
+      "next": "Restore mathematical definitions and supply same figure/table evidence to all methods before freezing inputs."
+    },
+    {
+      "case": "E04",
+      "status": "supplement_and_full_comparison_pending",
+      "evidence": [
+        "All fourteen page markers and Tables 1-9 are present in bound reading text. Existing repair receipt records Table 9 sentence restoration.",
+        "Current direct PDF downloads return non-PDF responses; web PDF viewer exposes fourteen pages of publisher article. No new complete local byte comparison was possible.",
+        "Source explicitly lists Supplementary Material 1 with three appendices; these are not appended to the selected text."
+      ],
+      "next": "Acquire original and supplementary material, check Table 9 and robustness appendices, or explicitly limit evaluable claims to main-text scope."
+    },
+    {
+      "case": "E05",
+      "status": "visual_input_missing",
+      "evidence": [
+        "Nineteen page markers present; Table 3 at lines 313-315 is an image placeholder.",
+        "Five separate PNG image assets have byte hashes matching their extraction manifest. They are not included in current producer inputs.",
+        "Publisher PDF access returned HTTP 403. Historical full-PDF hash known from visual-evidence manifest, original PDF absent locally."
+      ],
+      "next": "Include the existing provenance-bound image set equally for all procedures and human references, and finish original-page completeness check."
+    },
+    {
+      "case": "E06",
+      "status": "bounded_check_no_major_body_loss_found",
+      "evidence": [
+        "Recovered publisher PDF has twenty-two pages matching text page markers.",
+        "Normalized text-block diagnostic across all pages found no unmatched substantial body paragraph; reference/URL formatting differs on page 21. This diagnostic is not an exact proof of every character or formula.",
+        "PDF images occur only on first and final pages. No substantive numbered figures/tables were found in structural scan."
+      ],
+      "next": "Final human source check remains; retain reference-formatting discrepancy and avoid claiming exact textual identity."
+    }
+  ],
+  "development_scope": "All three producers read full assigned markdown. D01 includes duplicate webpage/marketing content; D02 tables are linearized; D03 figure data and referenced supplements are absent. Original publication completeness remains unproven.",
+  "manifest_byte_sha256": "0150e2266c1d1e1406e666485c09a7ef36b6f3492735479d55fa0e8076eac6f1",
+  "visual_pages_inspected": {
+    "E01": [
+      15,
+      17
+    ],
+    "E03": [
+      5
+    ]
+  }
+}

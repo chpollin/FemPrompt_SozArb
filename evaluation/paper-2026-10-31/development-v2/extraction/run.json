@@ -1,0 +1,71 @@
+{
+  "phase": "diagnostic development",
+  "method": "structured extraction",
+  "recorded_at_utc": "2026-10-31T21:15:12.1204651Z",
+  "inputs_and_prompts": [
+    {
+      "path": "evaluation/paper-2026-10-31/development-v2/inputs.json",
+      "sha256": "e3a8b76f979f500dee644df3772a892f1fd8ab254a1b1b9c30717b9ba5b90183"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/prompts/v2/common.md",
+      "sha256": "cb4fa43978ff5649f09614bd8e77cb4ad267a8ca10f0d12df5b0b4dbcec39704"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/prompts/v2/extraction.md",
+      "sha256": "9bb6995c80216b3d9453d159f50b629a5369ebe6cf7502a7525f369db186aeff"
+    },
+    {
+      "path": "docs/data/fulltext/ET4MMZGH.md",
+      "sha256": "6cdfcd76b60b5bfbe705e5619e85fb539dad523f178bf6830fe265649edcc0f0"
+    },
+    {
+      "path": "docs/data/fulltext/2EBHMYU4.md",
+      "sha256": "a2c87d3702b11a580f428735a07d20da3cbdc595f12b39952b9dd85d18044193"
+    },
+    {
+      "path": "docs/data/fulltext/UIIDCXLB.md",
+      "sha256": "8a1168c05555303884970c61e319f3f6c6eecdd510c78e198f5188e6676df7bb"
+    }
+  ],
+  "reader_scope": {
+    "read": "Only supplied manifest, common v2 prompt, extraction v2 prompt, and all three assigned fulltext files; subsequent read-back limited to own original.md",
+    "full_supplied_input_read": true,
+    "publication_completeness": "not established",
+    "source_versions": "not established for exact serving-layer snapshots",
+    "limits": [
+      "D01 repeated truncated teaser after main text",
+      "D02 linearized tables, original layout not inspected",
+      "D03 figures 1-3 and supplement absent; narrative and tables 1-2 read",
+      "D02 initial truncated tool output replaced by complete smaller reads"
+    ],
+    "excluded": [
+      "web",
+      "v1 outputs and reviews",
+      "other methods",
+      "evaluation sources",
+      "human references"
+    ],
+    "writes": "Only development-v2/extraction/original.md and run.json",
+    "extraction_scope": "SQ-oriented candidate; explicit coverage matrix; contextual workforce and digital-access numbers not exhaustively transcribed"
+  },
+  "verification": {
+    "manifest_hash_checks": [
+      {
+        "case_id": "D01",
+        "matches": true
+      },
+      {
+        "case_id": "D02",
+        "matches": true
+      },
+      {
+        "case_id": "D03",
+        "matches": true
+      }
+    ],
+    "direct_quote_check": "187 quotes matched verbatim in supplied corpus; per-source D01/D02/D03 table quotes checked separately",
+    "per_source_nonmatching_quotes": [],
+    "output_sha256": "e200c4fed81b71f06230af7413d3e8d627bf576083f0dd3adef592f2f7fa0ebc"
+  }
+}

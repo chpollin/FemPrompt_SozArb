@@ -55,6 +55,14 @@ The sub-questions are answered in the following order. Steps that depend on an o
 6. Synthesis. The mapping layer presents evidence-and-gap maps from the SQ tables. Best-fit framework synthesis runs over reviewed Assertions, and the interpretive layer follows decision 8 ([[analysis-methods#Synthesis layer]]). Contradicting evidence and not determinable cells stay explicit. Decision 7 keeps this synthesis within the existing corpus and its declared denominators.
 7. Report and paper. The SQ1 chapter under `research-vault/40_output/literature-report/` sets the form of an answer. The report scaffold `00-structure.md` still follows the earlier topic order and is aligned once decision 6 fixes the division of report, paper and Companion. The steps under [[#Publication]] complete the manuscript.
 
+### Paper analysis and evaluation
+
+- Follow [[paper-analysis-plan]] for the paper-specific questions mapped to SQ1 to SQ5 and the separate evaluation questions E1 to E5.
+- Use the revised source packets and human-v2 forms linked from [the evaluation package](../evaluation/paper-2026-10-31/README.md). Address residual corrections in [the development comparison](../evaluation/paper-2026-10-31/development-v2/comparison.md), assign independent human reference reviewers, verify common text and visual input scope, and freeze final prompts and exact runtime. Update the historical run-plan to the revised inputs before execution. Revalidate human eligibility and source holds at execution. No held-out run has started.
+- Prepare the versioned extraction and thematic/framing prompts and retain original outputs and source-review corrections. The chat pilots are exploratory records, not a prospective validation run.
+- Arrange independent domain-expert reference extraction and interpretive review, then record support, omissions, repeated-run variation and human review effort. PRISM screening does not provide these reference annotations.
+- Integrate accepted findings into the existing Assertion chain and answer chapters before drafting paper results or claiming efficiency.
+
 ### Analysis and Assertions
 
 - Use the current Work-level tables for explicitly bounded descriptive analysis that states its coverage. Regenerate whole-corpus results after the intended corpus is resolved.

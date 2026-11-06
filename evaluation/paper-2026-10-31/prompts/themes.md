@@ -1,0 +1,5 @@
+# Offene thematische Analyse, Entwurf v1
+
+Untersuche offen, welche wiederkehrenden Bedeutungen und Spannungen die bereitgestellte Literatur zum Verhältnis von KI, gesellschaftlicher Ungleichheit und professioneller Praxis enthält. Es gibt kein vorgegebenes Codebook. Benenne zuerst quellennah offene Codes und zugehörige Passagen, entwickle daraus vorläufige Themen und dokumentiere die Kette von Passage über Code zum Thema. Erhalte Unterschiede zwischen Quellentypen und Gegenbeispiele. Ein Einzelfall darf ein analytisch relevantes Thema tragen, wird aber als Einzelfall ausgewiesen. Häufigkeit allein begründet keine Bedeutung.
+
+Trenne quellenspezifische Beobachtungen von deiner Zusammenführung. Formuliere zu jeder Zusammenführung eine plausible alternative Lesart und prüfe sie gegen konkrete Passagen. Übertrage Themen auf Fragen professioneller Bildung nur, wenn du den zusätzlichen Interpretationsschritt sichtbar machst. Dies ist ein explorativer Vergleichslauf und keine abgeschlossene qualitative Theoriebildung.

@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0",
+  "phase": "diagnostic comparative AI review",
+  "reviewer": "/root/compare_v1_v2",
+  "runtime_model_identifier": null,
+  "producer_involvement": false,
+  "blind": false,
+  "prior_context": "Fresh reviewer task without candidate production; brief named prior known defects; v1 reviews and all six originals intentionally read for comparison.",
+  "verdicts": {
+    "extraction": "better_with_corrections",
+    "themes": "better_with_limits",
+    "framing": "better_with_omissions"
+  },
+  "findings": [
+    {
+      "id": "E01",
+      "method": "extraction",
+      "change": "better",
+      "v1": "D01-03",
+      "v2": "D01-07",
+      "source": "ET4MMZGH.md, Where AI Gender Bias Comes From, Labeling of data",
+      "passage": "reduces the potential for AI to reflect gender fluidity and self-held gender identity",
+      "finding": "Das absolute Ausschließen wird auf eine verringerte Abbildungsmöglichkeit begrenzt. Die neue Wendung „fluid gewählter Identität“ fügt allerdings eine Wahlkomponente hinzu, die diese Passage nicht behauptet.",
+      "action": "„Geschlechterfluidität und selbstbestimmte Geschlechtsidentität“ verwenden.",
+      "passage_fragments": [
+        "reduces the potential for AI to reflect gender fluidity and self-held gender identity"
+      ]
+    },
+    {
+      "id": "E02",
+      "method": "extraction",
+      "change": "better",
+      "v1": "D01-08; D02-06",
+      "v2": "D01-34–44; D02-25–39",
+      "source": "ET4MMZGH.md, What ML Developers Can Do, 2–4; 2EBHMYU4.md, 3.4, Similarly / To tackle",
+      "passage": "Datasheets for Datasets; model cards; ending pay and opportunity inequality; participation washing",
+      "finding": "Zuvor gebündelte Maßnahmen erhalten eigene IDs und passende Fundstellen. Dokumentation, Audits, Bezahlung, Beteiligung und Nichtnutzung lassen sich getrennt prüfen.",
+      "action": null,
+      "passage_fragments": [
+        "Datasheets for Datasets",
+        "model cards",
+        "ending pay and opportunity inequality",
+        "participation washing"
+      ]
+    },
+    {
+      "id": "E03",
+      "method": "extraction",
+      "change": "better",
+      "v1": "D01-05; D03-05",
+      "v2": "D01-11–18; D03-27–48, D03-62–63",
+      "source": "ET4MMZGH.md, Impacts; UIIDCXLB.md, 5, kategorienspezifische Absätze",
+      "passage": "44.2 percent (59 systems); 25.7 percent (34 systems); approximately 2 to 5 percent; up to a 10 percent reduction",
+      "finding": "Die Fallsammlungszahlen und zusätzliche Kategorienergebnisse sind jetzt explizit erfasst. Selektiver Nenner und fehlende Grafikprüfung bleiben sichtbar. Dies ist breitere berichtete Ergebnisabdeckung, keine neue Messung.",
+      "action": null,
+      "passage_fragments": [
+        "44.2 percent (59 systems)",
+        "25.7 percent (34 systems)",
+        "approximately 2 to 5 percent",
+        "up to a 10 percent reduction"
+      ]
+    },
+    {
+      "id": "E06",
+      "method": "extraction",
+      "change": "better",
+      "v1": "Vergleichsmatrix SQ1",
+      "v2": "Vergleichsmatrix, SQ1 untersuchtes Setting Sozialer Arbeit; SYN-05",
+      "source": "ET4MMZGH.md, Einleitung / Impacts; 2EBHMYU4.md, 2.2; UIIDCXLB.md, 3–4",
+      "passage": "health care, welfare; four high-profile reports; two bias detection datasets",
+      "finding": "Die Matrix trennt fehlende Sozialarbeitssettings von angrenzenden Sektoren, allgemeinen Kontexten und Benchmarkversuchen. Das frühere mehrdeutige „Gefunden“ ist für das eigentliche Sozialarbeitssetting durch „K“ ersetzt.",
+      "action": null,
+      "passage_fragments": [
+        "health care, welfare",
+        "four high-profile reports",
+        "two bias detection datasets"
+      ]
+    },
+    {
+      "id": "E04",
+      "method": "extraction",
+      "change": "residual",
+      "v1": "D03-07",
+      "v2": "D03-50",
+      "source": "UIIDCXLB.md, 7, We excluded certain examples",
+      "passage": "state that promoting stereotypes is inappropriate",
+      "finding": "Die Grenzspalte nennt weiterhin „Normbewusstsein/Verweigerung“. Die Quelle beschreibt stereotypekritische Antworten, ohne sie notwendig als Antwortverweigerung auszuweisen. Dasselbe Problem war im v1-Themenreview erkannt, im v1-Extraktionsreview jedoch nicht beanstandet worden.",
+      "action": "Stereotypenkritik, Optionswahl und ausdrückliche Verweigerung auseinanderhalten.",
+      "passage_fragments": [
+        "state that promoting stereotypes is inappropriate"
+      ]
+    },
+    {
+      "id": "E05",
+      "method": "extraction",
+      "change": "new_overstatement",
+      "v1": null,
+      "v2": "D02-31",
+      "source": "2EBHMYU4.md, 3.4, Similarly, S. M. West",
+      "passage": "actionable targets, incentives, and quotas",
+      "finding": "„Verbindliche Ziele“ verstärkt „actionable targets“ um einen Bindungsgrad. Die separate Quotenforderung macht Ziele nicht automatisch verbindlich.",
+      "action": "„Umsetzbare Ziele“ oder „konkrete Handlungsziele“ schreiben.",
+      "passage_fragments": [
+        "actionable targets, incentives, and quotas"
+      ]
+    },
+    {
+      "id": "T01",
+      "method": "themes",
+      "change": "better",
+      "v1": "D03-A03; T02",
+      "v2": "D03-P12; T02-A",
+      "source": "UIIDCXLB.md, 7; ET4MMZGH.md, Where AI Gender Bias Comes From; 2EBHMYU4.md, 3.2–3.4",
+      "passage": "as anti-stereotype responses; concealing important differences; ability to exert influence",
+      "finding": "Stereotypkritik wird ausdrücklich von Verweigerung unterschieden. Die universelle Notwendigkeitsbehauptung über Sichtbarkeit entfällt. Die Synthese bindet Datenrepräsentation und Einfluss nun an getrennte Passagen.",
+      "action": null,
+      "passage_fragments": [
+        "as anti-stereotype responses",
+        "concealing important differences",
+        "ability to exert influence"
+      ]
+    },
+    {
+      "id": "T02",
+      "method": "themes",
+      "change": "better",
+      "v1": "T04; fehlende Ergänzungen laut review.md",
+      "v2": "T02-C; D01-P07; D02-P05–06",
+      "source": "ET4MMZGH.md, Social Change Leaders, 1; 2EBHMYU4.md, 3.2, To study; 3.3, Documents discuss",
+      "passage": "priority given to local and Indigenous knowledge; limited data availability hinders opportunities for intersectional analysis",
+      "finding": "Die Bildungsübertragung verankert Datenkategorien in D01-P03. Lokales/indigenes Wissen und die eingeschränkte intersektionale Datenlage werden explizit aufgenommen.",
+      "action": null,
+      "passage_fragments": [
+        "priority given to local and Indigenous knowledge",
+        "limited data availability hinders opportunities for intersectional analysis"
+      ]
+    },
+    {
+      "id": "T03",
+      "method": "themes",
+      "change": "residual",
+      "v1": "T01 Alternative",
+      "v2": "T01-B",
+      "source": "UIIDCXLB.md, 5, Figure 2 / Modeland Bias-specific; 2EBHMYU4.md, 3.4, To tackle",
+      "passage": "on average; not universal across models and bias categories; wider social analysis",
+      "finding": "Die Alternative, gezieltes Prompting reiche für Bias-Bearbeitung aus, bleibt schwach. D03-P02 trägt den begrenzten Mittelwertvorteil, keine Hinlänglichkeitsbehauptung. Ein zitierter Anker macht diese starke Gegenposition noch nicht zu einer quellengetragenen Lesart.",
+      "action": "Als ausdrücklich hypothetische Fehllesart kennzeichnen oder eine ernsthafte Alternative über getrennte Handlungsebenen prüfen.",
+      "passage_fragments": [
+        "on average",
+        "not universal across models and bias categories",
+        "wider social analysis"
+      ]
+    },
+    {
+      "id": "T04",
+      "method": "themes",
+      "change": "residual_omission",
+      "v1": "Auslassung im review.md",
+      "v2": "D03-P13",
+      "source": "UIIDCXLB.md, 4, Fußnoten 2–3",
+      "passage": "a sample of 2,100 entries; 4-bit quantized Llama 2 and Mistral",
+      "finding": "Die GPT-4-Teilstichprobe ist ergänzt. Die Quantisierung von Llama 2/Mistral bleibt als unterschiedlicher Versuchsparameter unberücksichtigt. Bei offener Themenauswahl ist das eine verbleibende Abdeckungsgrenze.",
+      "action": "Bei modelübergreifenden Methodenvergleichen ergänzen.",
+      "passage_fragments": [
+        "a sample of 2,100 entries",
+        "4-bit quantized Llama 2 and Mistral"
+      ]
+    },
+    {
+      "id": "F01",
+      "method": "framing",
+      "change": "better",
+      "v1": "D01-F03",
+      "v2": "F-D01-L06; F-D01-R01; F-X04",
+      "source": "ET4MMZGH.md, What ML Developers Can Do, 3–4",
+      "passage": "Center the voices of marginalized community members; gender-sensitive governance approaches",
+      "finding": "Die frühere alternative Lesart konsequenter Machtübertragung wird zurückgenommen. Verbindliche Mitentscheidungs- und Vetorechte erscheinen als zusätzliche normative Forderung. Das entspricht der fehlenden institutionellen Ausarbeitung im Text.",
+      "action": null,
+      "passage_fragments": [
+        "Center the voices of marginalized community members",
+        "gender-sensitive governance approaches"
+      ]
+    },
+    {
+      "id": "F02",
+      "method": "framing",
+      "change": "better",
+      "v1": "D03-F02; Auslassungen im review.md",
+      "v2": "F-D03-T02; F-D03-T03; F-D03-R01",
+      "source": "UIIDCXLB.md, 5, Another surprising result; 6; 8",
+      "passage": "similar to Solomon's Paradox; most similar to the Standard zeroshot prompt; robust and applicable across different contexts",
+      "finding": "Mechanismusdeutung, Antwortkorrelation und starke Transferbehauptung der Quelle werden jetzt gesondert überprüft. Ihre Evidenzgrenzen werden nicht durch die zusätzliche Detailtiefe aufgehoben.",
+      "action": null,
+      "passage_fragments": [
+        "similar to Solomon's Paradox",
+        "most similar to the Standard zeroshot prompt",
+        "robust and applicable across different contexts"
+      ]
+    },
+    {
+      "id": "F03",
+      "method": "framing",
+      "change": "residual_omission",
+      "v1": "Auslassungen im review.md",
+      "v2": "F-D02-T01; F-D03-T01–T03",
+      "source": "2EBHMYU4.md, 3.3, Documents discuss; UIIDCXLB.md, 2, Coming to the Dual Process Theory",
+      "passage": "limited availability of intersectional data; logical thinking does not just belong to System 2",
+      "finding": "Die Spannung zwischen nichtbinärem Anspruch und binärer Datenbasis sowie die theoretische Einschränkung, dass logisches Denken auch ohne System 2 möglich ist, bleiben ohne eigene Rekonstruktion. Die institutionelle Herkunftskritik und der fehlende Mechanismusnachweis decken diese anderen Punkte nicht vollständig ab.",
+      "action": "Für vertiefte Theorieprüfung ergänzen.",
+      "passage_fragments": [
+        "limited availability of intersectional data",
+        "logical thinking does not just belong to System 2"
+      ]
+    }
+  ],
+  "limits": [
+    "Qualitative artifact-specific judgement, no accuracy or human verification",
+    "No held-out evaluation sources or human references read",
+    "No cited external originals, figure pixels, supplements or raw data read",
+    "Removed wordcap and additional input metadata confound prompt-only causation",
+    "One diagnostic pair per method, no repeatability inference",
+    "Prior extraction/themes reviews disclose cross-method producer exposure"
+  ],
+  "publication": "private only; nothing published",
+  "read_scope": "All three assigned source files, all six originals, all three v1 reviews, v2 inputs.json and extraction/run.json; relevant operating rules and project control text.",
+  "verification": "Source-grounded qualitative comparison; final hashes recorded; JSON parsed after writing",
+  "artifacts": [
+    {
+      "path": "docs/data/fulltext/ET4MMZGH.md",
+      "sha256": "6cdfcd76b60b5bfbe705e5619e85fb539dad523f178bf6830fe265649edcc0f0"
+    },
+    {
+      "path": "docs/data/fulltext/2EBHMYU4.md",
+      "sha256": "a2c87d3702b11a580f428735a07d20da3cbdc595f12b39952b9dd85d18044193"
+    },
+    {
+      "path": "docs/data/fulltext/UIIDCXLB.md",
+      "sha256": "8a1168c05555303884970c61e319f3f6c6eecdd510c78e198f5188e6676df7bb"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/development/extraction/original.md",
+      "sha256": "7bcdf9051f7c5bc713d7c67baf6677e7fc3356c7a21abc64858c7a48a6ebb699"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/development/extraction/review.md",
+      "sha256": "8560c0af03451d83f42f08bcc597691ed03b296f93f345324cc812357c78a304"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/development/themes/original.md",
+      "sha256": "8c089a499545590de52aecccd87b2fbc286f56095a5c6f132c7f912292eec8cc"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/development/themes/review.md",
+      "sha256": "9a91f0605a8b3cd4cf9d25d1c863a254efca9c7622f4d2e1b315e05684fd5c42"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/development/framing/original.md",
+      "sha256": "64e259b7435d857e77d9db2447acdf9c91005405d4374c9fb4e8a531cee39453"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/development/framing/review.md",
+      "sha256": "b863bbd2bb8bf74a0c83a568123ac4db591fb97321b33241e9b17f25fec42817"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/development-v2/extraction/original.md",
+      "sha256": "e200c4fed81b71f06230af7413d3e8d627bf576083f0dd3adef592f2f7fa0ebc"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/development-v2/themes/original.md",
+      "sha256": "4d281ce5eab19064e3ac3d6baab1bb6cdbd2a93f44ce9dffe14901e510980df4"
+    },
+    {
+      "path": "evaluation/paper-2026-10-31/development-v2/framing/original.md",
+      "sha256": "23682e3d554ec38ea050650e8ef1c81aec3bc3e8e56af9d62d235320f2d94058"
+    }
+  ],
+  "recorded_at_utc": "2026-10-31T21:16:03.6756831Z"
+}
