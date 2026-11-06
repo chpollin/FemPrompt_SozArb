@@ -672,7 +672,6 @@
           "work:5d44ca3d-827b-5f4e-a4f1-1ee40ec55c18",
           "work:62cbd3ab-96ea-50e4-b877-2f65571a8f83",
           "work:702fdf21-e0e7-5903-a2e7-d64ce0842858",
-          "work:79601e71-971d-574c-a299-65b068101286",
           "work:83bb860d-1a78-5961-8b53-d8f0498ad6a8",
           "work:8b252014-a5d5-5f43-b84b-421872669f02",
           "work:8c24bcba-b32b-52ce-961a-18b40cd0a22e",
@@ -36090,8 +36089,8 @@
     "queued_source_works": 101,
     "reconciled_historical_human_records": 0,
     "records_with_accepted_ai_correction": 2,
-    "registry_all_works": 362,
-    "registry_works_without_canonical_record": 1,
+    "registry_all_works": 361,
+    "registry_works_without_canonical_record": 0,
     "source_queue_works_with_newly_acquired_unbound_text": 0,
     "targeted_followup_candidates": 3,
     "targeted_followup_recorded_fulltext_read": 2,
@@ -39174,29 +39173,7 @@
       }
     ]
   },
-  "registry_candidates_without_canonical_record": [
-    {
-      "flags": [
-        "candidate_work_requires_identity_adjudication",
-        "input_authors_conflict_with_source_work_authors",
-        "input_authors_do_not_match_primary_source",
-        "input_title_conflicts_with_source_work_title",
-        "input_title_does_not_match_primary_source",
-        "preprint_and_version_of_record_identified",
-        "supplied_acl_identifier_points_to_different_work"
-      ],
-      "legacy_work_ids": [
-        "title:safety guardrails in large language models and selective refusal bias"
-      ],
-      "review_status": {
-        "identity": "conflict",
-        "metadata": "conflict",
-        "source": "ambiguous"
-      },
-      "title": "Characterizing Selective Refusal Bias in Large Language Models",
-      "work_id": "work:8111287c-84d0-5fe4-9bd5-fb5ded077905"
-    }
-  ],
+  "registry_candidates_without_canonical_record": [],
   "residual_resolution_source": "generated/verification/residual-resolution-2026-09-05.json",
   "round1_selection_check": {
     "include_rule": "at least one Gegenstand category and one Perspektive category at Ja",
@@ -40925,7 +40902,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:18f52d0917e67ca50e61a31dcef00f73aafa8d1f43400fd6ba281de1c42a8218",
+  "source_fingerprint": "sha256:0863b3686c5cde83410d518a5eb106e7be36ab4e2d11e5271e35cff23e0b5b81",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -41129,7 +41106,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "788960ecd16c0e99e6ee602f9ab308e6d1d25cfb76f52afd924bfda6efc2a6f3"
+      "sha256": "143f39fc17e8b1d850e3385f51325494daa26a9049c44a4167a578bba06f57be"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -41157,7 +41134,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "c23643a655e0eb3fa21b8fe4d5cccdefd038b6b6cd85801659ff00a1fc3fd9c3"
+      "sha256": "56c64e596a38da54b3a390a22316e96df050e91e8f77863d4951be0e17b1145d"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -42005,7 +41982,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "12e1c4f9f3e56887104bdb9ea8346d0b1a9b3aeda7b666268045a88651b56be2"
+      "sha256": "9ff89295ca682221677ceaa1a151c9e0bab459c706663c5419ba9f194c217bc4"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -87025,7 +87002,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "DL7G37W9"
+      ],
       "decision_authority": "unassessed",
       "effective_decision": null,
       "historical_identity_bindings": {},
@@ -87041,7 +87020,7 @@
       "legacy_human_provenance_note": null,
       "newly_acquired_text_requires_binding": false,
       "next_actions": [
-        "resolve_source_blockers_then_governed_screening"
+        "execute_governed_source_screening"
       ],
       "open_ai_source_review_record_ids": [],
       "preferred_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
@@ -87049,12 +87028,10 @@
         "DL7G37W9"
       ],
       "source_acquisition_progress": [],
-      "source_blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ],
-      "source_queue_status": "blocked_missing_paper_source",
+      "source_blockers": [],
+      "source_queue_status": "ready",
       "stale_source_review_record_ids": [],
-      "title": "Safety guardrails in large language models and selective refusal bias",
+      "title": "Characterizing Selective Refusal Bias in Large Language Models",
       "version_ids": [
         "version:87a50285-872a-54be-8f00-3f9c0821fc29"
       ],

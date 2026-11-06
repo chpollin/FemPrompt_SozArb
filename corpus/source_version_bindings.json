@@ -7621,6 +7621,53 @@
           "source_url": "https://www.zotero.org/groups/6080294/items/MZAKN3KN"
         }
       ]
+    },
+    "DL7G37W9": {
+      "binding_mode": "acquisition_receipt",
+      "agent_id": "claude-code/source-binding-2026-11-06",
+      "model": "Claude Opus 5.5",
+      "reviewed_at": "2026-11-06T13:45:00+00:00",
+      "reason": "Printed title and byline of the ACL Anthology PDF identify the record's Version of Record after the operator merged the Zotero record with the round-two Work (corpus/work_identity_decisions.json); acquired through open access on 6 November 2026.",
+      "bibliographic_identity": {
+        "title": "Characterizing Selective Refusal Bias in Large Language Models"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://aclanthology.org/2026.findings-acl.550.pdf",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/DL7G37W9.pdf",
+        "retrieved_at": "2026-11-06T13:38:00+00:00",
+        "sha256": "sha256:730e5b26ed1651bf0edaae459788b4ec2bf0c2b40f0b8af8999b5a55cda2a901",
+        "route": "open access (ACL Anthology, CC BY 4.0)",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "not_printed"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      },
+      "binding": {
+        "record_id": "DL7G37W9",
+        "work_id": "work:79601e71-971d-574c-a299-65b068101286",
+        "bibliographic_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
+        "source_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/DL7G37W9.md",
+        "source_sha256": "sha256:5a023347cc024745823f818358aab754ef14e700d694aa6e48969384dc153b2f"
+      },
+      "evidence": [
+        {
+          "source_path": "generated/source-acquisition/uni-graz-2026-11-06/DL7G37W9.md",
+          "sha256": "sha256:5a023347cc024745823f818358aab754ef14e700d694aa6e48969384dc153b2f",
+          "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
+        }
+      ]
     }
   }
 }

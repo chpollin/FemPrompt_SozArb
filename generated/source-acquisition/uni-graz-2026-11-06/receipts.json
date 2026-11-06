@@ -601,6 +601,30 @@
         "doi": "not_registered",
         "year": "pass"
       }
+    },
+    {
+      "keys": [
+        "DL7G37W9"
+      ],
+      "title_record": "Characterizing Selective Refusal Bias in Large Language Models",
+      "doi_record": "10.18653/v1/2026.findings-acl.550",
+      "source_url": "https://aclanthology.org/2026.findings-acl.550.pdf",
+      "route": "open access (ACL Anthology, CC BY 4.0)",
+      "retrieved_at": "2026-11-06T13:38:00+00:00",
+      "sha256": "sha256:730e5b26ed1651bf0edaae459788b4ec2bf0c2b40f0b8af8999b5a55cda2a901",
+      "bytes": 4925332,
+      "content_type": "application/pdf",
+      "license": "CC BY 4.0",
+      "local_original": "generated/source-acquisition/uni-graz-2026-11-06/pdf/DL7G37W9.pdf",
+      "markdown": "generated/source-acquisition/uni-graz-2026-11-06/DL7G37W9.md",
+      "version_type": "version_of_record",
+      "identity": "pass",
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "not_printed"
+      }
     }
   ],
   "failed": []

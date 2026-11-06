@@ -22,9 +22,13 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## November 2026
 
+### 2026-11-06: The Chisca record and its round-two Work merged
+
+The operator decided that Zotero record DL7G37W9 and the round-two candidate from lane L3 are the same Findings of ACL 2026 paper by Khorramrouz and Levy. The builder refuses any relation between established Works, so `corpus/work_identity_decisions.json` now holds hash-bound operator decisions as the only path by which one Work absorbs another. The corpus Work survives because screening and reviewer records reference it, the candidate's Version of Record redirects to the Zotero version, and the absorbed Work ID remains resolvable as an alias. The local correction was restored, and the open-access ACL PDF is bound by receipt, so Review A can read it. The round-two intake keeps a corrected record's historical title as a match alias because the lanes found the record under it. The intake package of August stays stale and outside the build, as before.
+
 ### 2026-11-06: Zotero corrections and full-text attachments
 
-On the operator's approval the newly acquired PDFs were attached to their Zotero records with MD5 read-back, and source-backed corrections were written to the live group with audit notes. Three records named the wrong authors, a foreign DOI or a URL of another article and are corrected in Zotero and in the local projection. The Gravelmann duplicates are related reciprocally, not merged, and three records whose DOI does not exist or whose title is untraceable carry the identity tag for review. The Chisca record was corrected in Zotero to the ACL paper its URL names, but that paper is already registered as a separate round-two Work, so the local correction was withdrawn and merging the two Works waits for the operator. Evidence lies under `corpus/source-acquisition/zotero-corrections-2026-11-06/`, receipts under the ignored `generated/zotero-sync/`, and [[methods#Field corrections and full-text attachments]] describes the two new tools.
+On the operator's approval the newly acquired PDFs were attached to their Zotero records with MD5 read-back, and source-backed corrections were written to the live group with audit notes. Three records named the wrong authors, a foreign DOI or a URL of another article and are corrected in Zotero and in the local projection. The Gravelmann duplicates are related reciprocally, not merged, and three records whose DOI does not exist or whose title is untraceable carry the identity tag for review. The Chisca record was corrected in Zotero to the ACL paper its URL names; its local projection followed the merge recorded above. Evidence lies under `corpus/source-acquisition/zotero-corrections-2026-11-06/`, receipts under the ignored `generated/zotero-sync/`, and [[methods#Field corrections and full-text attachments]] describes the two new tools.
 
 ### 2026-11-06: One clone, merged lines and a condensed journal
 

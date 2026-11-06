@@ -37837,10 +37837,10 @@
     {
       "id": "DL7G37W9",
       "stem": "_thin_DL7G37W9",
-      "title": "Safety guardrails in large language models and selective refusal bias",
-      "author_year": "Chisca et al. (2026)",
+      "title": "Characterizing Selective Refusal Bias in Large Language Models",
+      "author_year": "Khorramrouz et al. (2026)",
       "year": 2026,
-      "doi": "",
+      "doi": "10.18653/v1/2026.findings-acl.550",
       "url": "https://aclanthology.org/2026.findings-acl.550.pdf",
       "abstract": "",
       "stages": {
@@ -37849,8 +37849,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -37877,20 +37877,20 @@
       "concepts": [],
       "knowledge_summary": null,
       "knowledge_sections": null,
-      "authors": "Chisca; Jiang; Weissburg; An",
+      "authors": "Khorramrouz, Adel; Levy, Sharon",
       "item_type": "conferencePaper",
-      "journal": "",
+      "journal": "Findings of the Association for Computational Linguistics: ACL 2026",
       "work_id": "work:79601e71-971d-574c-a299-65b068101286",
       "version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
-      "version_type": "unknown",
+      "version_type": "version_of_record",
       "version_date": "2026",
-      "peer_review_status": "not_established",
-      "peer_review_basis": "unknown",
+      "peer_review_status": "peer_reviewed",
+      "peer_review_basis": "version_stage_inference",
       "preferred_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
       "latest_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "UIBZW4IK",
@@ -52668,7 +52668,7 @@
         "description": "Einträge mit verknüpftem Wissensdokument oder bereitstehendem Volltext",
         "type": "deterministic",
         "input": 463,
-        "output": 388,
+        "output": 389,
         "unit": "corpus_record",
         "prompt": null,
         "limitations": [
@@ -52681,7 +52681,7 @@
         "name": "Structured Knowledge Extraction",
         "description": "Kanonisch verknüpfte Wissensdokumente",
         "type": "probabilistic",
-        "input": 388,
+        "input": 389,
         "output": 290,
         "unit": "corpus_record",
         "distinct_documents": 210,
@@ -52930,7 +52930,7 @@
     }
   ],
   "meta": {
-    "source_fingerprint": "sha256:73ddc2e021e40209557ea17de37ff4df692a1b3fa87359e1bb8b81ceecca5f30",
+    "source_fingerprint": "sha256:708f84eea42e2bf6d22d233fe2e8f681a05c552ecfa954fa97a0f1f66b93d761",
     "total_papers": 463,
     "corpus_record_total": 463,
     "corpus_work_total": 361,
@@ -52938,10 +52938,10 @@
     "knowledge_docs": 210,
     "knowledge_linked_records": 290,
     "knowledge_coverage": {
-      "fulltext_ready": 98,
+      "fulltext_ready": 99,
       "identity_unresolved": 36,
       "linked": 290,
-      "source_missing": 39
+      "source_missing": 38
     },
     "human_assessed": 302,
     "llm_assessed": 326,

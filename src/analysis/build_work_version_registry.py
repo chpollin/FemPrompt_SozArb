@@ -596,6 +596,83 @@ def _previous_maps(previous: dict[str, Any] | None) -> dict[str, Any]:
     return maps
 
 
+IDENTITY_DECISIONS_PATH = "corpus/work_identity_decisions.json"
+
+
+def load_identity_decisions(repo: Path) -> tuple[list[dict[str, Any]], list[Path]]:
+    """Read operator decisions that merge established Works, hash-checking evidence.
+
+    The builder otherwise refuses any relation between two established Works, so
+    this file is the only path by which one Work absorbs another.
+    """
+    from src.assess.artifact_verification import artifact_hash
+
+    path = repo / IDENTITY_DECISIONS_PATH
+    if not path.is_file():
+        return [], []
+    data = _read_json(path)
+    if data.get("schema") != "femprompt-work-identity-decisions/0.1":
+        raise ValueError("Unsupported Work identity decision schema")
+    inputs = [path]
+    seen: set[str] = set()
+    for decision in data.get("decisions", []):
+        surviving = decision.get("surviving_work_id")
+        absorbed = decision.get("absorbed_work_id")
+        if not (
+            isinstance(surviving, str)
+            and isinstance(absorbed, str)
+            and surviving.startswith("work:")
+            and absorbed.startswith("work:")
+            and surviving != absorbed
+        ):
+            raise ValueError(f"invalid identity decision: {decision.get('decision_id')}")
+        if absorbed in seen or surviving in seen:
+            raise ValueError(f"chained or repeated identity decision: {absorbed}")
+        seen.add(absorbed)
+        for field in ("decision_id", "decided_by", "decided_on", "rationale"):
+            if not isinstance(decision.get(field), str) or not decision[field].strip():
+                raise ValueError(f"identity decision lacks {field}: {absorbed}")
+        evidence = decision.get("evidence")
+        if not isinstance(evidence, list) or not evidence:
+            raise ValueError(f"identity decision lacks evidence: {absorbed}")
+        for source in evidence:
+            if artifact_hash(repo, source["source_path"]) != source.get("sha256"):
+                raise ValueError(f"stale identity decision evidence: {absorbed}")
+            inputs.append(repo / source["source_path"])
+        for old, new in decision.get("version_redirects", {}).items():
+            if not (old.startswith("version:") and new.startswith("version:")):
+                raise ValueError(f"invalid version redirect in {absorbed}")
+    return data.get("decisions", []), inputs
+
+
+def _apply_identity_decisions(
+    previous: dict[str, Any], decisions: list[dict[str, Any]]
+) -> None:
+    """Point every previous reference of an absorbed Work at the surviving one."""
+    works = {item["absorbed_work_id"]: item["surviving_work_id"] for item in decisions}
+    versions = {
+        old: new
+        for item in decisions
+        for old, new in item.get("version_redirects", {}).items()
+    }
+    previous["record"] = {
+        key: {
+            **value,
+            "work_id": works.get(value["work_id"], value["work_id"]),
+            "version_id": versions.get(value["version_id"], value["version_id"]),
+        }
+        for key, value in previous["record"].items()
+    }
+    for name in ("legacy", "identifier_work"):
+        previous[name] = {
+            key: works.get(value, value) for key, value in previous[name].items()
+        }
+    previous["identifier_version"] = {
+        key: versions.get(value, value)
+        for key, value in previous["identifier_version"].items()
+    }
+
+
 def _stable_work_id(
     aliases: set[str], versions: list[dict[str, Any]], previous: dict[str, Any]
 ) -> str:
@@ -1063,6 +1140,8 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
     if previous_registry:
         validate_registry(previous_registry, contract)
     previous = _previous_maps(previous_registry)
+    identity_decisions, decision_inputs = load_identity_decisions(repo)
+    _apply_identity_decisions(previous, identity_decisions)
     sync_path = repo / "corpus/zotero_sync.json"
     synced_aliases: dict[str, set[str]] = {}
     if sync_path.is_file():
@@ -1328,6 +1407,18 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
             "versions": sorted(versions, key=lambda item: item["version_id"]),
             "flags": sorted(set(bucket["flags"])),
         }
+        for decision in identity_decisions:
+            if decision["surviving_work_id"] == work_id:
+                # The absorbed ID stays resolvable as an alias of the survivor.
+                work["legacy_work_ids"] = sorted(
+                    {*work["legacy_work_ids"], decision["absorbed_work_id"]}
+                )
+                work["flags"] = [
+                    flag
+                    for flag in work["flags"]
+                    if flag != "candidate_work_requires_identity_adjudication"
+                ]
+                work["identity_decision"] = decision["decision_id"]
         works.append(work)
         for alias in work["legacy_work_ids"]:
             if alias in legacy_index and legacy_index[alias] != work_id:
@@ -1365,6 +1456,13 @@ def build_registry(repo: Path = REPO) -> dict[str, Any]:
     ]
     if sync_path.is_file():
         inputs.append(sync_path)
+    inputs.extend(decision_inputs)
+    built_ids = {work["work_id"] for work in works}
+    for decision in identity_decisions:
+        if decision["absorbed_work_id"] in built_ids:
+            raise ValueError(f"absorbed Work still built: {decision['absorbed_work_id']}")
+        if decision["surviving_work_id"] not in built_ids:
+            raise ValueError(f"surviving Work missing: {decision['surviving_work_id']}")
     if not previous_registry:
         inputs.append(corpus_path)
     inputs.extend(path for path in agent_paths if path.is_relative_to(repo))

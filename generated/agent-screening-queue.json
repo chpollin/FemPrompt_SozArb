@@ -5,11 +5,11 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "c23643a655e0eb3fa21b8fe4d5cccdefd038b6b6cd85801659ff00a1fc3fd9c3",
+    "research_vault_sha256": "56c64e596a38da54b3a390a22316e96df050e91e8f77863d4951be0e17b1145d",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "d868c3301931d35395c30a78b5b4ce79d5f7feeef402442cf2ab329f7b4af6f6",
+    "fulltext_manifest_sha256": "53c721b8c23561e712b1530ffdebdc3014db7099df846887351be5ab4d083d8b",
     "work_version_registry": "corpus/work_version_registry.json",
-    "work_version_registry_sha256": "788960ecd16c0e99e6ee602f9ab308e6d1d25cfb76f52afd924bfda6efc2a6f3",
+    "work_version_registry_sha256": "143f39fc17e8b1d850e3385f51325494daa26a9049c44a4167a578bba06f57be",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
@@ -20,9 +20,9 @@
     "unannotated_alias_records_covered_at_work_level": 11,
     "queued_records": 110,
     "queued_works": 101,
-    "ready_works": 79,
+    "ready_works": 80,
     "blocked_abstract_only_works": 6,
-    "blocked_without_text_works": 16
+    "blocked_without_text_works": 15
   },
   "gate": {
     "status": "partial",
@@ -65,6 +65,7 @@
       "work:76eafb72-f674-51b7-b980-05ca1e500f58",
       "work:78ab2081-865c-5e19-b831-19fe7c2574d0",
       "work:7932a8e0-53aa-5105-9d0a-86603d8aff25",
+      "work:79601e71-971d-574c-a299-65b068101286",
       "work:7bec80be-f7f9-516a-8845-7215f683db24",
       "work:7eb826eb-db16-5ae7-8201-3339f108ae93",
       "work:7f8d6ea5-b9ea-55b6-8b7c-312cabf4a2a9",
@@ -3888,29 +3889,125 @@
       "preferred_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
       "latest_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
       "selected_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
-      "selected_version_type": "unknown",
+      "selected_version_type": "version_of_record",
       "selected_version_is_preferred": true,
-      "source_binding": null,
+      "source_binding": {
+        "record_id": "DL7G37W9",
+        "work_id": "work:79601e71-971d-574c-a299-65b068101286",
+        "bibliographic_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
+        "source_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
+        "is_preferred_version": true,
+        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/DL7G37W9.md",
+        "source_sha256": "sha256:5a023347cc024745823f818358aab754ef14e700d694aa6e48969384dc153b2f",
+        "binding_mode": "acquisition_receipt",
+        "bibliographic_identity": {
+          "title": "Characterizing Selective Refusal Bias in Large Language Models"
+        },
+        "acquisition_receipt": {
+          "source_url": "https://aclanthology.org/2026.findings-acl.550.pdf",
+          "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/DL7G37W9.pdf",
+          "retrieved_at": "2026-11-06T13:38:00+00:00",
+          "sha256": "sha256:730e5b26ed1651bf0edaae459788b4ec2bf0c2b40f0b8af8999b5a55cda2a901",
+          "route": "open access (ACL Anthology, CC BY 4.0)",
+          "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+        },
+        "identity_check": {
+          "title": "pass",
+          "first_author": "pass",
+          "doi": "not_printed",
+          "year": "not_printed"
+        },
+        "version_relation": {
+          "source_version_type": "version_of_record",
+          "preferred_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
+          "difference_to_preferred": "none: the bound text is the preferred version"
+        }
+      },
       "available_versions": [
         {
-          "version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
-          "version_type": "unknown",
-          "version_date": "2026",
+          "version_id": "version:170a516d-6419-5ba0-8e0e-fe286ff8ef28",
+          "version_type": "preprint",
+          "version_date": "",
           "identifiers": {
-            "zotero_key": [
-              "DL7G37W9"
+            "doi": [
+              "10.48550/arxiv.2510.27087"
+            ],
+            "arxiv": [
+              "2510.27087"
             ],
             "url": [
-              "https://aclanthology.org/2026.findings-acl.550.pdf"
+              "https://arxiv.org/abs/2510.27087"
             ]
           },
           "peer_review_status": "not_established",
           "peer_review_basis": "unknown",
           "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "https://arxiv.org/abs/2510.27087",
+          "fulltext_url": "https://arxiv.org/pdf/2510.27087",
+          "relations": [
+            {
+              "type": "isPreprintOf",
+              "target_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29"
+            }
+          ],
+          "is_preferred": false,
+          "is_latest": false
+        },
+        {
+          "version_id": "version:5116782d-b823-5f6c-b595-9111ab05ceb7",
+          "version_type": "unknown",
+          "version_date": "2026",
+          "identifiers": {},
+          "peer_review_status": "not_established",
+          "peer_review_basis": "unknown",
+          "integrity_status": "current",
           "access_status": "unknown",
-          "landing_url": "https://aclanthology.org/2026.findings-acl.550.pdf",
+          "landing_url": "",
           "fulltext_url": "",
-          "relations": [],
+          "relations": [
+            {
+              "type": "isVersionOf",
+              "target_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29"
+            }
+          ],
+          "is_preferred": false,
+          "is_latest": false
+        },
+        {
+          "version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
+          "version_type": "version_of_record",
+          "version_date": "2026",
+          "identifiers": {
+            "doi": [
+              "10.18653/v1/2026.findings-acl.550"
+            ],
+            "zotero_key": [
+              "DL7G37W9"
+            ],
+            "url": [
+              "https://aclanthology.org/2026.findings-acl.550",
+              "https://aclanthology.org/2026.findings-acl.550.pdf"
+            ]
+          },
+          "peer_review_status": "peer_reviewed",
+          "peer_review_basis": "version_stage_inference",
+          "integrity_status": "current",
+          "access_status": "open_access",
+          "landing_url": "https://aclanthology.org/2026.findings-acl.550.pdf",
+          "fulltext_url": "https://aclanthology.org/2026.findings-acl.550.pdf",
+          "relations": [
+            {
+              "type": "hasPreprint",
+              "target_version_id": "version:170a516d-6419-5ba0-8e0e-fe286ff8ef28"
+            },
+            {
+              "type": "hasVersion",
+              "target_version_id": "version:5116782d-b823-5f6c-b595-9111ab05ceb7"
+            }
+          ],
           "is_preferred": true,
           "is_latest": true
         }
@@ -3919,21 +4016,19 @@
       "record_ids": [
         "DL7G37W9"
       ],
-      "title": "Safety guardrails in large language models and selective refusal bias",
-      "author_year": "Chisca et al. (2026)",
-      "doi": null,
+      "title": "Characterizing Selective Refusal Bias in Large Language Models",
+      "author_year": "Khorramrouz et al. (2026)",
+      "doi": "10.18653/v1/2026.findings-acl.550",
       "url": "https://aclanthology.org/2026.findings-acl.550.pdf",
       "abstract_available": false,
-      "source_status": "none",
-      "source_chars": 0,
-      "paper_source": null,
+      "source_status": "raw",
+      "source_chars": 67841,
+      "paper_source": "docs/data/fulltext/DL7G37W9.md",
       "paper_source_work_id": "work:79601e71-971d-574c-a299-65b068101286",
       "paper_source_version_id": "version:87a50285-872a-54be-8f00-3f9c0821fc29",
-      "paper_source_sha256": null,
-      "queue_status": "blocked_missing_paper_source",
-      "blockers": [
-        "reviewed_fulltext_markdown_missing"
-      ]
+      "paper_source_sha256": "01726a6ff1f1c4f390eda829f146a654c0bbbc656ebf63c23684c557eddf5f02",
+      "queue_status": "ready",
+      "blockers": []
     },
     {
       "work_id": "work:7bec80be-f7f9-516a-8845-7215f683db24",

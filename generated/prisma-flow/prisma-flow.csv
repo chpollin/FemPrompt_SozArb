@@ -62,8 +62,8 @@ round2_deep_research,,outcome:expert_exclude,0
 round2_deep_research,,outcome:expert_unresolved,0
 round2_deep_research,,outcome:ai_review_include_pending_verification,0
 round2_deep_research,,outcome:ai_review_exclude_pending_verification,0
-round2_deep_research,,outcome:open_fulltext_ready,17
-round2_deep_research,,outcome:open_fulltext_not_retrieved,6
+round2_deep_research,,outcome:open_fulltext_ready,18
+round2_deep_research,,outcome:open_fulltext_not_retrieved,5
 round2_deep_research,,outcome:open_not_queued,0
 round2_deep_research,,outcome:not_in_library,0
 contextual_update_2026_08_24,CU-A,records_identified,29
@@ -173,6 +173,6 @@ current_state,,works:expert_exclude,90
 current_state,,works:expert_unresolved,1
 current_state,,works:ai_review_include_pending_verification,15
 current_state,,works:ai_review_exclude_pending_verification,9
-current_state,,works:open_fulltext_ready,79
-current_state,,works:open_fulltext_not_retrieved,22
+current_state,,works:open_fulltext_ready,80
+current_state,,works:open_fulltext_not_retrieved,21
 current_state,,works:open_not_queued,7

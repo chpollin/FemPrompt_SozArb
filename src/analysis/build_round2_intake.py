@@ -209,9 +209,13 @@ def build_manifest(repo: Path = REPO) -> dict[str, Any]:
 
     zotero_path = repo / "corpus" / "zotero_export.json"
     mapping_path = repo / "corpus" / "source_tool_mapping.json"
-    zotero_items = apply_metadata_corrections(
-        repo, json.loads(zotero_path.read_text(encoding="utf-8"))
-    )
+    exported_items = json.loads(zotero_path.read_text(encoding="utf-8"))
+    zotero_items = apply_metadata_corrections(repo, exported_items)
+    # A corrected title stays a match alias: lanes found the record under it.
+    historical_titles = {
+        item.get("key"): _normalise_title(item.get("title", ""))
+        for item in exported_items
+    }
     source_mapping = json.loads(mapping_path.read_text(encoding="utf-8"))
     source_reviews = _source_reviews(repo)
     committed_keys = {item.get("key") for item in zotero_items if item.get("key")}
@@ -225,8 +229,8 @@ def build_manifest(repo: Path = REPO) -> dict[str, Any]:
         title = _normalise_title(item.get("title", ""))
         if doi:
             committed_by_doi[doi].append(key)
-        if title:
-            committed_by_title[title].append(key)
+        for alias in {title, historical_titles.get(key, "")} - {""}:
+            committed_by_title[alias].append(key)
 
     existing_corpus_matches = 0
     curated_zotero_matches = 0

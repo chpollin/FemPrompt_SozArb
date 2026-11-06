@@ -1,0 +1,31 @@
+{
+  "schema": "femprompt-work-identity-decisions/0.1",
+  "scope": "Operator decisions that merge two established Works. The absorbed Work ID stays resolvable as an alias of the surviving Work.",
+  "decisions": [
+    {
+      "decision_id": "dl7g37w9-khorramrouz-levy-2026-11-06",
+      "surviving_work_id": "work:79601e71-971d-574c-a299-65b068101286",
+      "absorbed_work_id": "work:8111287c-84d0-5fe4-9bd5-fb5ded077905",
+      "version_redirects": {
+        "version:15b38c24-5365-5b81-bd0c-5201992bac86": "version:87a50285-872a-54be-8f00-3f9c0821fc29"
+      },
+      "decided_by": "operator",
+      "decided_on": "2026-11-06",
+      "rationale": "Zotero record DL7G37W9 and round-two candidate L3 name the same Findings of ACL 2026 paper by Khorramrouz and Levy; the record URL resolves to it and no paper by Chisca et al. with the recorded title exists. The corpus Work survives because screening and reviewer records reference it; the Version of Record of the candidate is the same expression as the Zotero record.",
+      "evidence": [
+        {
+          "source_path": "corpus/source-acquisition/zotero-corrections-2026-11-06/DL7G37W9-crossref.json",
+          "sha256": "sha256:3ff28f1e4ca57eed7913a04cd2a33a46fb3681a2f8a56776a92dd5687b5f0c54",
+          "source_url": "https://doi.org/10.18653/v1/2026.findings-acl.550",
+          "locator": "/message title, author, container-title"
+        },
+        {
+          "source_path": "corpus/source-acquisition/zotero-corrections-2026-11-06/identity-checks.json",
+          "sha256": "sha256:66baeb5fcef49dd1b9c24b23b520d9e8b3fab5de2332a31bd153e4f7daeb040e",
+          "source_url": "https://aclanthology.org/2026.findings-acl.550.pdf",
+          "locator": "identity check of DL7G37W9"
+        }
+      ]
+    }
+  ]
+}
