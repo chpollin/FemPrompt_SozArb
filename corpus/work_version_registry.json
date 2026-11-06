@@ -1,6 +1,6 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:289a866a51d6e353ccb33ed991bcf76c253578819b88a0847b85e36877d4f9c9",
+  "source_fingerprint": "sha256:697995b439e809476c65b72023a4b8e8cb472104b94bbf012f49065792afedb7",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
@@ -820,7 +820,7 @@
     },
     {
       "path": "corpus/source_version_bindings.json",
-      "sha256": "1b83106c47a5549bcb3cc2dba413ed84534052490396ef7f928940865dc52647"
+      "sha256": "87253d2fed655496cd3f94ca14ea452322334b61edfab32b025ace5bd10b3ab4"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -1323,10 +1323,6 @@
       "sha256": "3ff78cc690a7bf6cd70f694136a47504f11154b16b08742a5b52ecbfce314daa"
     },
     {
-      "path": "generated/source-acquisition/uni-graz-2026-11-06/7GB5U4HK.md",
-      "sha256": "a4d2f9d13ce410e87494531a05d89d40427a81510111c3ed4e907e059ee27f7d"
-    },
-    {
       "path": "generated/source-acquisition/uni-graz-2026-11-06/8MM5BZN8.md",
       "sha256": "29d69af551e10f2a99a3acdd0edce9a3a2cf23284fe81e406dfab2712722898b"
     },
@@ -1383,16 +1379,20 @@
       "sha256": "b4721e71ec9f332ca3b438f9b923c62b80e734095be9ab36706533acc6c88e5b"
     },
     {
-      "path": "generated/source-acquisition/uni-graz-2026-11-06/UV9AI4X3.md",
-      "sha256": "acefee9a4dc216e1d76696490d63843e07ae4351014027f31209bd344dadadfd"
-    },
-    {
-      "path": "generated/source-acquisition/uni-graz-2026-11-06/WHGCH3XS.md",
-      "sha256": "412ee07a05aeff4c0912db603d0d055ace2889ce9b403d965c528712da5bd3d6"
-    },
-    {
       "path": "generated/source-acquisition/uni-graz-2026-11-06/XD28QSM7.md",
       "sha256": "0b321cae1a299fea2b2c91f39ad6247c067fd2516168346ae698c9974081ac99"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/7GB5U4HK.md",
+      "sha256": "1845200a0e89995b37ccf0914704a0b6e85148cb020171aa5aaa89c0aed13c78"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/UV9AI4X3.md",
+      "sha256": "6e7962709364dfeb8e461ecbc9ce02075598b5c86075347e326b1e6e0bd56b08"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/WHGCH3XS.md",
+      "sha256": "93557975f3fa9733e7526c05c5eb60a2332ecb13b2cd48afabfef4745c6b9917"
     },
     {
       "path": "generated/verification/historical-resolution-2026-09-05.json",
@@ -40807,8 +40807,8 @@
       "source_version_type": "version_of_record",
       "preferred_version_id": "version:f9ae9b0a-3357-5517-ace2-6717db0e941f",
       "is_preferred_version": true,
-      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/7GB5U4HK.md",
-      "source_sha256": "sha256:a4d2f9d13ce410e87494531a05d89d40427a81510111c3ed4e907e059ee27f7d",
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/7GB5U4HK.md",
+      "source_sha256": "sha256:1845200a0e89995b37ccf0914704a0b6e85148cb020171aa5aaa89c0aed13c78",
       "binding_mode": "acquisition_receipt",
       "bibliographic_identity": {
         "title": "Can a Large Language Model Judge a Child’s Statement?: A Comparative Analysis of ChatGPT and Human Experts in Credibility Assessment"
@@ -43931,8 +43931,8 @@
       "source_version_type": "version_of_record",
       "preferred_version_id": "version:a9cda7a1-73f0-56ac-9ba0-c2243306ed00",
       "is_preferred_version": true,
-      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/UV9AI4X3.md",
-      "source_sha256": "sha256:acefee9a4dc216e1d76696490d63843e07ae4351014027f31209bd344dadadfd",
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/UV9AI4X3.md",
+      "source_sha256": "sha256:6e7962709364dfeb8e461ecbc9ce02075598b5c86075347e326b1e6e0bd56b08",
       "binding_mode": "acquisition_receipt",
       "bibliographic_identity": {
         "title": "From salad bar feminism to denotative portraiture: How neoliberalism shapes feminism in AI-Generated visuals"
@@ -44124,8 +44124,8 @@
       "source_version_type": "version_of_record",
       "preferred_version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
       "is_preferred_version": true,
-      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/WHGCH3XS.md",
-      "source_sha256": "sha256:412ee07a05aeff4c0912db603d0d055ace2889ce9b403d965c528712da5bd3d6",
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/WHGCH3XS.md",
+      "source_sha256": "sha256:93557975f3fa9733e7526c05c5eb60a2332ecb13b2cd48afabfef4745c6b9917",
       "binding_mode": "acquisition_receipt",
       "bibliographic_identity": {
         "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice"

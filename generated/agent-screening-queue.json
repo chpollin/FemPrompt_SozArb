@@ -5,11 +5,11 @@
   "authority_rule": "Any human annotation covers the canonical work; duplicate records do not trigger reassessment.",
   "sources": {
     "research_vault": "docs/data/research_vault_v2.json",
-    "research_vault_sha256": "0d3e7ee32c0c251ec2b0d56e4b97d8e27b6404870c31588307b900dbc1f1222f",
+    "research_vault_sha256": "91fa97d7e7a950cbdc6737191d02fc557bdf4bb5aa8f1e091d346104fa1ab60b",
     "fulltext_manifest": "docs/data/fulltext_manifest.json",
-    "fulltext_manifest_sha256": "df8c39c7ed0a5e5fe136011acd325b1dc918a55f82336919ab27b2b17a1f264e",
+    "fulltext_manifest_sha256": "73fe419040aad9c367b751c3179e4ab598fe339efc78ca6676aa644182984750",
     "work_version_registry": "corpus/work_version_registry.json",
-    "work_version_registry_sha256": "ec58cf84d7ad8ad0a9055d9250e13d832fa8c3c6b63e6edf795b3e7f09f629d2",
+    "work_version_registry_sha256": "494ec652fbd5cf2d770eca9d1ed395fd1a2b4e89dbdb90e6d6a976192eb320b6",
     "productive_screening_dir": "docs/data/screening"
   },
   "counts": {
@@ -1191,8 +1191,8 @@
         "source_version_type": "version_of_record",
         "preferred_version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
         "is_preferred_version": true,
-        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/WHGCH3XS.md",
-        "source_sha256": "sha256:412ee07a05aeff4c0912db603d0d055ace2889ce9b403d965c528712da5bd3d6",
+        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/WHGCH3XS.md",
+        "source_sha256": "sha256:93557975f3fa9733e7526c05c5eb60a2332ecb13b2cd48afabfef4745c6b9917",
         "binding_mode": "acquisition_receipt",
         "bibliographic_identity": {
           "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice"
@@ -1254,11 +1254,11 @@
       "url": "https://www.tandfonline.com/doi/full/10.1080/02615479.2026.2617512",
       "abstract_available": false,
       "source_status": "raw",
-      "source_chars": 61870,
+      "source_chars": 63351,
       "paper_source": "docs/data/fulltext/WHGCH3XS.md",
       "paper_source_work_id": "work:14ff652e-92a8-5982-bf91-a64c26254d13",
       "paper_source_version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
-      "paper_source_sha256": "a38bdc4c88fee144d21b456a16ecf36f5b9209aa12dc025e83abb46dee61814e",
+      "paper_source_sha256": "57c6a55a2eb15236eeba1a44d9eb19fbed50a62e85edc1c56a057fb49ad7880e",
       "queue_status": "ready",
       "blockers": []
     },
@@ -3812,8 +3812,8 @@
         "source_version_type": "version_of_record",
         "preferred_version_id": "version:f9ae9b0a-3357-5517-ace2-6717db0e941f",
         "is_preferred_version": true,
-        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/7GB5U4HK.md",
-        "source_sha256": "sha256:a4d2f9d13ce410e87494531a05d89d40427a81510111c3ed4e907e059ee27f7d",
+        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/7GB5U4HK.md",
+        "source_sha256": "sha256:1845200a0e89995b37ccf0914704a0b6e85148cb020171aa5aaa89c0aed13c78",
         "binding_mode": "acquisition_receipt",
         "bibliographic_identity": {
           "title": "Can a Large Language Model Judge a Child’s Statement?: A Comparative Analysis of ChatGPT and Human Experts in Credibility Assessment"
@@ -3875,11 +3875,11 @@
       "url": "https://doi.org/10.1080/26408066.2025.2547211",
       "abstract_available": false,
       "source_status": "raw",
-      "source_chars": 54459,
+      "source_chars": 56921,
       "paper_source": "docs/data/fulltext/7GB5U4HK.md",
       "paper_source_work_id": "work:7932a8e0-53aa-5105-9d0a-86603d8aff25",
       "paper_source_version_id": "version:f9ae9b0a-3357-5517-ace2-6717db0e941f",
-      "paper_source_sha256": "34149c52b7888f3e36b56d7dff9a6fe42a674081e2be53b2790eb133345a742e",
+      "paper_source_sha256": "1018484add3ec37c6a6da7167f60c4c18595d6170561ce254c0805cd543c49ca",
       "queue_status": "ready",
       "blockers": []
     },
@@ -4423,8 +4423,8 @@
         "source_version_type": "version_of_record",
         "preferred_version_id": "version:a9cda7a1-73f0-56ac-9ba0-c2243306ed00",
         "is_preferred_version": true,
-        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/UV9AI4X3.md",
-        "source_sha256": "sha256:acefee9a4dc216e1d76696490d63843e07ae4351014027f31209bd344dadadfd",
+        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/UV9AI4X3.md",
+        "source_sha256": "sha256:6e7962709364dfeb8e461ecbc9ce02075598b5c86075347e326b1e6e0bd56b08",
         "binding_mode": "acquisition_receipt",
         "bibliographic_identity": {
           "title": "From salad bar feminism to denotative portraiture: How neoliberalism shapes feminism in AI-Generated visuals"
@@ -4544,11 +4544,11 @@
       "url": "https://www.tandfonline.com/doi/abs/10.1080/14680777.2025.2593317",
       "abstract_available": false,
       "source_status": "raw",
-      "source_chars": 77618,
+      "source_chars": 79061,
       "paper_source": "docs/data/fulltext/UV9AI4X3.md",
       "paper_source_work_id": "work:88f2c72f-f921-556b-9ff3-9bd58eb35e38",
       "paper_source_version_id": "version:a9cda7a1-73f0-56ac-9ba0-c2243306ed00",
-      "paper_source_sha256": "ec42e3b7310e0f8f476e2822f069d146ec715365c9b58d09d58fa5c8c3e1e9bb",
+      "paper_source_sha256": "6cd4750d445967602f6fabde5d0f58862671eff0d0b8ea95d82177d2043a5fcc",
       "queue_status": "ready",
       "blockers": []
     },

@@ -22,6 +22,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## November 2026
 
+### 2026-11-06: Source-Markdown QC of the newly bound texts and three repairs
+
+Separate agents compared the PDF text layer with the reviewer Markdown for the seven newly bound texts of the open Review A queue. Page images could not be rendered on this machine, so figures stayed visually unchecked. A follow-up check over the whole batch found that Docling had read the abstract box of three Taylor & Francis articles as a picture, so their abstracts were missing without a visible gap. The abstracts and keywords, and two truncated table cells of one article, were restored from the PDF text layer into separate repaired copies with repair manifests under `generated/source-acquisition/uni-graz-2026-11-06/repaired/`, and their receipt bindings now serve the repaired copies after a passed identity check. The Docling originals stay. The remaining findings are named limitations: sentences split at page breaks, lost italics and dashes, a misaligned measurement table and a collapsed path table in one article, and spaced ligature remnants in another. None of them blocks reading.
+
 ### 2026-11-06: A paper another reviewer assessed is no longer open
 
 Review B had by mistake started with forty papers of the Review A assignment. PRISM counted a paper as done only through the viewer's own record or an expert decision, so those forty stayed under `Offen` for Review A, and most of her first assessments repeated finished work. On the operator's decision a saved record of another human reviewer now counts as done, the list marks such a paper with the grey check of a decision made elsewhere, and agent records still count for nothing. [[specification]] records the rule. A PRISM check fails when such a paper returns to `Offen`. The existing double records stay untouched.

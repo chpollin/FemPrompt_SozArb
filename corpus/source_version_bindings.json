@@ -6378,8 +6378,8 @@
       "binding_mode": "acquisition_receipt",
       "agent_id": "claude-code/source-binding-2026-11-06",
       "model": "Claude Opus 5.5",
-      "reviewed_at": "2026-11-06T10:03:58+00:00",
-      "reason": "Printed title and byline of the bound publisher PDF identify the record's registered version; acquired through the University of Graz licence or the publisher's open access on 6 November 2026.",
+      "reviewed_at": "2026-11-06T10:31:36+00:00",
+      "reason": "Printed title and byline of the bound publisher PDF identify the record's registered version; acquired through the University of Graz licence or the publisher's open access on 6 November 2026. The bound text is the conversion repair recorded in generated/source-acquisition/uni-graz-2026-11-06/repaired/WHGCH3XS-repair-manifest.json.",
       "bibliographic_identity": {
         "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice"
       },
@@ -6410,13 +6410,13 @@
         "source_version_type": "version_of_record",
         "preferred_version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
         "is_preferred_version": true,
-        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/WHGCH3XS.md",
-        "source_sha256": "sha256:412ee07a05aeff4c0912db603d0d055ace2889ce9b403d965c528712da5bd3d6"
+        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/WHGCH3XS.md",
+        "source_sha256": "sha256:93557975f3fa9733e7526c05c5eb60a2332ecb13b2cd48afabfef4745c6b9917"
       },
       "evidence": [
         {
-          "source_path": "generated/source-acquisition/uni-graz-2026-11-06/WHGCH3XS.md",
-          "sha256": "sha256:412ee07a05aeff4c0912db603d0d055ace2889ce9b403d965c528712da5bd3d6",
+          "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/WHGCH3XS.md",
+          "sha256": "sha256:93557975f3fa9733e7526c05c5eb60a2332ecb13b2cd48afabfef4745c6b9917",
           "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
         }
       ]
@@ -6754,8 +6754,8 @@
       "binding_mode": "acquisition_receipt",
       "agent_id": "claude-code/source-binding-2026-11-06",
       "model": "Claude Opus 5.5",
-      "reviewed_at": "2026-11-06T10:03:58+00:00",
-      "reason": "Printed title and byline of the bound publisher PDF identify the record's registered version; acquired through the University of Graz licence or the publisher's open access on 6 November 2026.",
+      "reviewed_at": "2026-11-06T10:31:36+00:00",
+      "reason": "Printed title and byline of the bound publisher PDF identify the record's registered version; acquired through the University of Graz licence or the publisher's open access on 6 November 2026. The bound text is the conversion repair recorded in generated/source-acquisition/uni-graz-2026-11-06/repaired/UV9AI4X3-repair-manifest.json.",
       "bibliographic_identity": {
         "title": "From salad bar feminism to denotative portraiture: How neoliberalism shapes feminism in AI-Generated visuals"
       },
@@ -6786,13 +6786,13 @@
         "source_version_type": "version_of_record",
         "preferred_version_id": "version:a9cda7a1-73f0-56ac-9ba0-c2243306ed00",
         "is_preferred_version": true,
-        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/UV9AI4X3.md",
-        "source_sha256": "sha256:acefee9a4dc216e1d76696490d63843e07ae4351014027f31209bd344dadadfd"
+        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/UV9AI4X3.md",
+        "source_sha256": "sha256:6e7962709364dfeb8e461ecbc9ce02075598b5c86075347e326b1e6e0bd56b08"
       },
       "evidence": [
         {
-          "source_path": "generated/source-acquisition/uni-graz-2026-11-06/UV9AI4X3.md",
-          "sha256": "sha256:acefee9a4dc216e1d76696490d63843e07ae4351014027f31209bd344dadadfd",
+          "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/UV9AI4X3.md",
+          "sha256": "sha256:6e7962709364dfeb8e461ecbc9ce02075598b5c86075347e326b1e6e0bd56b08",
           "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
         }
       ]
@@ -7318,8 +7318,8 @@
       "binding_mode": "acquisition_receipt",
       "agent_id": "claude-code/source-binding-2026-11-06",
       "model": "Claude Opus 5.5",
-      "reviewed_at": "2026-11-06T10:03:58+00:00",
-      "reason": "Printed title and byline of the bound publisher PDF identify the record's registered version; acquired through the University of Graz licence or the publisher's open access on 6 November 2026.",
+      "reviewed_at": "2026-11-06T10:31:36+00:00",
+      "reason": "Printed title and byline of the bound publisher PDF identify the record's registered version; acquired through the University of Graz licence or the publisher's open access on 6 November 2026. The bound text is the conversion repair recorded in generated/source-acquisition/uni-graz-2026-11-06/repaired/7GB5U4HK-repair-manifest.json.",
       "bibliographic_identity": {
         "title": "Can a Large Language Model Judge a Child’s Statement?: A Comparative Analysis of ChatGPT and Human Experts in Credibility Assessment"
       },
@@ -7350,13 +7350,13 @@
         "source_version_type": "version_of_record",
         "preferred_version_id": "version:f9ae9b0a-3357-5517-ace2-6717db0e941f",
         "is_preferred_version": true,
-        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/7GB5U4HK.md",
-        "source_sha256": "sha256:a4d2f9d13ce410e87494531a05d89d40427a81510111c3ed4e907e059ee27f7d"
+        "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/7GB5U4HK.md",
+        "source_sha256": "sha256:1845200a0e89995b37ccf0914704a0b6e85148cb020171aa5aaa89c0aed13c78"
       },
       "evidence": [
         {
-          "source_path": "generated/source-acquisition/uni-graz-2026-11-06/7GB5U4HK.md",
-          "sha256": "sha256:a4d2f9d13ce410e87494531a05d89d40427a81510111c3ed4e907e059ee27f7d",
+          "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/7GB5U4HK.md",
+          "sha256": "sha256:1845200a0e89995b37ccf0914704a0b6e85148cb020171aa5aaa89c0aed13c78",
           "locator": "opening text: printed title, byline and masthead identifiers (receipt identity check)"
         }
       ]
