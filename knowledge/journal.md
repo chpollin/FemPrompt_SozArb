@@ -22,6 +22,10 @@ Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen
 
 ## November 2026
 
+### 2026-11-06: A paper another reviewer assessed is no longer open
+
+Review B had by mistake started with forty papers of the Review A assignment. PRISM counted a paper as done only through the viewer's own record or an expert decision, so those forty stayed under `Offen` for Review A, and most of her first assessments repeated finished work. On the operator's decision a saved record of another human reviewer now counts as done, the list marks such a paper with the grey check of a decision made elsewhere, and agent records still count for nothing. [[specification]] records the rule. A PRISM check fails when such a paper returns to `Offen`. The existing double records stay untouched.
+
 ### 2026-11-06: Bind licensed and open-access full texts for the open reviewer queue
 
 Review A reported works in PRISM with only an abstract or a DOI link, and a check against `main` confirmed that a share of her open works had no reading text. On the operator's instruction the missing works were acquired one by one in the operator's browser through the University of Graz licence or the publishers' open access, without shadow libraries. The batch `generated/source-acquisition/uni-graz-2026-11-06/` holds the Docling conversions and `receipts.json` with origin, retrieval time and PDF hash, while the PDFs stay local. Records whose text passed the repository's receipt identity check are bound as `acquisition_receipt` under plan decision 13. Three were not bound: a PDF on which Docling fails for missing page dimensions, an English article bound to a record with the Spanish title, and a standards document whose title stands only in a cover image. Several works remain without access or behind publisher bot checks, and two records name authors that differ from the publisher's. These gaps and metadata findings stay with the operator. The texts were not added to Zotero, so decision 21 remains open for them. No screening record, knowledge document or Zotero item changed.

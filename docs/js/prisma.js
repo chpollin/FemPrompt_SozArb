@@ -2576,20 +2576,24 @@ function isCaptured(p) {
     return !!ownRecord(p);
 }
 
-// "Erfasst" in list, filter and counter: own work, or a decision of the consolidated
-// expert assessment (the earlier Excel workflow), which the operator counts as done.
-// Papers with only an agent record or no assessment stay open.
+// "Erfasst" in list, filter and counter: own work, a saved record of another human
+// reviewer, or a decision of the consolidated expert assessment (the earlier Excel
+// workflow), which the operator counts as done. The assignment splits the papers, so a
+// paper another reviewer already assessed is not open for a second pass (operator
+// decision of 6 November 2026). Papers with only an agent record or no assessment stay open.
 function isDone(p) {
-    return isCaptured(p) || !!expertAssessment(p);
+    return isCaptured(p) || peerKeysFor(p).length > 0 || !!expertAssessment(p);
 }
 
 function listState(p) {
     if (isCaptured(p)) return 'erfasst';
+    if (peerKeysFor(p).length) return 'peer';
     return paperSubject(p).kind === 'expert' ? 'expert' : 'none';
 }
 
 const LIST_STATE_LABELS = {
     erfasst: 'erfasst',
+    peer: 'erfasst in einer anderen Bewertung',
     expert: 'erfasst, Expert:innen-Entscheidung',
     none: 'offen'
 };
@@ -5739,6 +5743,7 @@ const TEST_HOOK = {
     normalizeAssignment: normalizeAssignment, loadAssignment: loadAssignment, activeAssignee: activeAssignee,
     assigneeFilterAvailable: assigneeFilterAvailable,
     setAssignment: function(obj) { assignment = normalizeAssignment(obj); },
+    setPeerTracks: function(obj) { peerTracks = obj || {}; }, peerKeysFor: peerKeysFor,
     syncUrl: syncUrl, gotoNextOpen: gotoNextOpen, renderScreening: renderScreening, workspaceBarHtml: workspaceBarHtml,
     modeSwitchAvailable: modeSwitchAvailable, localEditingAvailable: localEditingAvailable,
     setManifestReachable: function(value) { manifestReachable = !!value; },

@@ -207,6 +207,19 @@ export async function runIntegrityChecks(root) {
         rows.length === expectedCount && workIds.length === uniqueWorks.size,
         { key, count: rows.length, uniqueWorks: uniqueWorks.size });
     }
+    // A paper another human reviewer already assessed is done for everyone else, so the
+    // assignee's Offen list does not lead to a second pass (operator decision 2026-11-06).
+    S.assigneeFilter = 'sabine';
+    const peerPaper = T.visibleRows()[0].paper;
+    T.setPeerTracks({ susi: { label: 'Review B', records: { [peerPaper.id]: { decision: 'Include', categories: {} } } } });
+    S.reviewer = 'sabine';
+    const peerDone = T.isDone(peerPaper) && T.listState(peerPaper) === 'peer' &&
+      T.visibleRows().length === assigneeExpected.sabine - 1;
+    S.reviewer = 'susi';
+    const ownNotPeer = T.peerKeysFor(peerPaper).length === 0;
+    check('assignment: a paper assessed by another reviewer counts as done and leaves Offen',
+      peerDone && ownNotPeer, { peerDone, ownNotPeer });
+    T.setPeerTracks({}); S.reviewer = null;
     S.assigneeFilter = 'alle'; S.statusFilter = 'alle';
     T.setCorpusIndex({});
     for (const query of ['Defeating Nondeterminism', 'SwiftSage', 'Reasoning towards fairness']) {
