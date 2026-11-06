@@ -10,7 +10,7 @@ status: active
 language: de
 version: "0.7"
 created: 2026-02-18
-updated: 2026-10-21
+updated: 2026-11-06
 authors: [Christopher Pollin]
 generated-with: Claude Code
 related: [INDEX, plan, specification, governance, verification, handoff]
@@ -19,6 +19,12 @@ related: [INDEX, plan, specification, governance, verification, handoff]
 # Arbeitsjournal
 
 Dies ist die Prozessschicht des Projekts. Sie hält das Warum und die Sackgassen fest, die Git nicht erfasst, sodass alte Zustände, verworfene Richtungen und später umgestoßene Entscheidungen lesbar bleiben. Ein Eintrag je substanzieller Sitzung nennt, was sich änderte, was entschieden wurde und was offen bleibt, und verweist auf das Dokument, das den Gegenstand trägt. Commits und Diffs leben in der Git-Historie, Zahlen in den Daten und im Evidence Companion. Die Einträge stehen chronologisch, der neueste zuerst.
+
+## November 2026
+
+### 2026-11-06: Bind licensed and open-access full texts for the open reviewer queue
+
+Review A reported works in PRISM with only an abstract or a DOI link, and a check against `main` confirmed that a share of her open works had no reading text. On the operator's instruction the missing works were acquired one by one in the operator's browser through the University of Graz licence or the publishers' open access, without shadow libraries. The batch `generated/source-acquisition/uni-graz-2026-11-06/` holds the Docling conversions and `receipts.json` with origin, retrieval time and PDF hash, while the PDFs stay local. Records whose text passed the repository's receipt identity check are bound as `acquisition_receipt` under plan decision 13. Three were not bound: a PDF on which Docling fails for missing page dimensions, an English article bound to a record with the Spanish title, and a standards document whose title stands only in a cover image. Several works remain without access or behind publisher bot checks, and two records name authors that differ from the publisher's. These gaps and metadata findings stay with the operator. The texts were not added to Zotero, so decision 21 remains open for them. No screening record, knowledge document or Zotero item changed.
 
 ## October 2026
 

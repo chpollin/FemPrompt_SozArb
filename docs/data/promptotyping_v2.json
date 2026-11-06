@@ -33931,8 +33931,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -33972,7 +33972,7 @@
       "latest_version_id": "version:57834fb2-0641-5369-9d41-ccb6d87ae888",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "7GB5U4HK",
@@ -33989,8 +33989,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -34030,7 +34030,7 @@
       "latest_version_id": "version:f9ae9b0a-3357-5517-ace2-6717db0e941f",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "Z6QC4HW9",
@@ -34221,8 +34221,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -34262,7 +34262,7 @@
       "latest_version_id": "version:a9cda7a1-73f0-56ac-9ba0-c2243306ed00",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "BBSHTIMH",
@@ -34279,8 +34279,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -34320,7 +34320,7 @@
       "latest_version_id": "version:fa8ae028-3693-5596-9fc9-eaba9ef5ad26",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "NPFRWPAN",
@@ -34337,8 +34337,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -34378,7 +34378,7 @@
       "latest_version_id": "version:4e9177dc-2b3f-56bd-9b7b-c8cfa7cb3620",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "B347MWKT",
@@ -34627,8 +34627,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -34668,7 +34668,7 @@
       "latest_version_id": "version:d8aaa300-de73-5dc9-ae86-57d882e00c48",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "D698593N",
@@ -34685,8 +34685,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -34726,7 +34726,7 @@
       "latest_version_id": "version:3d85c91a-a939-59c0-a336-cc48c8afb02b",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "AUM6JXT9",
@@ -34743,8 +34743,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -34784,7 +34784,7 @@
       "latest_version_id": "version:9316f494-4768-5b3e-92e3-2f9123d0477b",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "Z2RSS6SH",
@@ -35787,8 +35787,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -35828,7 +35828,7 @@
       "latest_version_id": "version:a09ed976-2c89-5576-b75e-c8bc5fe32913",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "5TDNQD4B",
@@ -35845,8 +35845,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -35886,7 +35886,7 @@
       "latest_version_id": "version:c79c4136-5304-5115-9a43-85569cd84085",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "8MM5BZN8",
@@ -35903,8 +35903,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -35944,7 +35944,7 @@
       "latest_version_id": "version:ef97d953-1b4f-5269-b8ae-53e8074cdbb7",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "NQ5ZNGIK",
@@ -35961,8 +35961,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36002,7 +36002,7 @@
       "latest_version_id": "version:4abdfd4b-d5f2-519b-a4d9-90ded1546b60",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "A7U389P5",
@@ -36135,8 +36135,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36176,7 +36176,7 @@
       "latest_version_id": "version:a82bfb0b-58d7-560a-b4d6-ea27ea34bb70",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "XD28QSM7",
@@ -36193,8 +36193,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36234,7 +36234,7 @@
       "latest_version_id": "version:650905c5-093e-5a04-b006-a308cf303d3f",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "65NGEK5Q",
@@ -36367,8 +36367,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36408,7 +36408,7 @@
       "latest_version_id": "version:0ae78713-7b93-5a5b-9946-4550af5f3653",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "SV7RABKM",
@@ -36425,8 +36425,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36466,7 +36466,7 @@
       "latest_version_id": "version:0697bf35-4dab-5567-b75d-af72656580eb",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "9AVG53AQ",
@@ -36541,8 +36541,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36582,7 +36582,7 @@
       "latest_version_id": "version:98b08f9c-56a3-5a66-9734-8abd00bea1fe",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "K7NW3W34",
@@ -36831,8 +36831,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -36872,7 +36872,7 @@
       "latest_version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "UFTH283E",
@@ -37933,8 +37933,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -37974,7 +37974,7 @@
       "latest_version_id": "version:e03cf66b-d85b-5eaa-b058-48adf89d499f",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "UNGYENLB",
@@ -37991,8 +37991,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38032,7 +38032,7 @@
       "latest_version_id": "version:033cce35-c84f-53e1-a545-74658072cf4e",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "EF9TQIRK",
@@ -38223,8 +38223,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38264,7 +38264,7 @@
       "latest_version_id": "version:015ac934-7770-50e6-887a-5f91f983250f",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "5G2VPZR8",
@@ -38281,8 +38281,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -38322,7 +38322,7 @@
       "latest_version_id": "version:8d61d60c-3868-5b40-9560-a49d995f7686",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "9Y7H9WXQ",
@@ -52636,7 +52636,7 @@
         "description": "Einträge mit verknüpftem Wissensdokument oder bereitstehendem Volltext",
         "type": "deterministic",
         "input": 463,
-        "output": 362,
+        "output": 384,
         "unit": "corpus_record",
         "prompt": null,
         "limitations": [
@@ -52649,7 +52649,7 @@
         "name": "Structured Knowledge Extraction",
         "description": "Kanonisch verknüpfte Wissensdokumente",
         "type": "probabilistic",
-        "input": 362,
+        "input": 384,
         "output": 289,
         "unit": "corpus_record",
         "distinct_documents": 209,
@@ -52898,7 +52898,7 @@
     }
   ],
   "meta": {
-    "source_fingerprint": "sha256:cb046bade8fdc26ad45fb4f5ef3590fbf1eb53e5bef6363a49cf1a5c93d99453",
+    "source_fingerprint": "sha256:276a1b17c4a826386cb46ba2957de53a02e18242d1945e8874abca5e546a6d31",
     "total_papers": 463,
     "corpus_record_total": 463,
     "corpus_work_total": 361,
@@ -52906,10 +52906,10 @@
     "knowledge_docs": 209,
     "knowledge_linked_records": 289,
     "knowledge_coverage": {
-      "fulltext_ready": 73,
+      "fulltext_ready": 95,
       "identity_unresolved": 37,
       "linked": 289,
-      "source_missing": 64
+      "source_missing": 42
     },
     "human_assessed": 302,
     "llm_assessed": 326,
