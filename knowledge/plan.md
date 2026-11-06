@@ -7,7 +7,7 @@ status: active
 language: en
 version: "0.7"
 created: 2026-06-09
-updated: 2026-10-21
+updated: 2026-11-06
 authors: [Christopher Pollin]
 generated-with: Codex (GPT-5.6), Codex (GPT-6), Claude Code (Claude Opus 5.5)
 method:
@@ -135,7 +135,7 @@ Bounded subagent assignments receive explicit record lists, permitted write path
 - Bind or convert any further Paper representation only after its work identity has passed the source audit.
 - Resolve the [registered-identifier gaps](../corpus/source-acquisition/completion-20260921/existing-version-contract-gaps.json) for the located reports before binding their reading copies.
 - Reconcile the historical preparation patch `generated/source-acquisition/oa-batch-2026-10-01/pending-metadata-corrections.patch` field by field against the current metadata sidecar and source contracts. The approved Zotero curation is applied. Explicit local deferrals preserve historical knowledge links and immutable review receipts. The old patch grants no authority to overwrite those current contracts or remove knowledge projections. Canonical identity migration and review renewal require their own recorded decision.
-- Retain `generated/source-acquisition/oa-batch-2026-10-01/remaining-for-acquisition.csv` as an acquisition reminder for the colleague, who performs manual downloads and adds attachments to Zotero under decision 21. On availability, inspect the exact source Version before conversion and binding. Identity conflicts named in the list require reconciliation independently of attachment availability.
+- Retain `generated/source-acquisition/oa-batch-2026-10-01/remaining-for-acquisition.csv` as an acquisition reminder for the colleague, who performs manual downloads and adds attachments to Zotero under decision 21. On availability, inspect the exact source Version before conversion and binding. Identity conflicts named in the list require reconciliation independently of attachment availability. The batch `generated/source-acquisition/uni-graz-2026-11-06/` bound licensed and open-access texts through acquisition receipts without Zotero attachments; adding those files to Zotero and the records its receipts left unbound remain open.
 - Preserve the verified live creator and year corrections for *Assessing GPT's bias towards stigmatized social groups* (`YPYQ2TCL`, `7IVS7X63`). Reconcile the explicitly deferred local fields against the historical source and review dependencies before replacing them. The bound text is the intended work ([[analysis-divergence#Gender category divergence]]).
 - Re-review *Defeating Nondeterminism in LLM Inference* (`FTJM5R8N`) on the newly captured page with its title before binding it, since its released AI review read the earlier conversion.
 - Rebuild the agent-screening queue after each source or corpus change.

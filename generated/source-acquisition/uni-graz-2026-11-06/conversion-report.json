@@ -1,0 +1,691 @@
+{
+  "timestamp": "2026-11-06T10:46:46.798501",
+  "input_dir": "generated\\source-acquisition\\uni-graz-2026-11-06\\pdf",
+  "output_dir": "generated\\source-acquisition\\uni-graz-2026-11-06\\md-raw",
+  "total_files": 25,
+  "converted": 24,
+  "skipped": 0,
+  "failed": 1,
+  "low_quality": 0,
+  "files": [
+    {
+      "input": "3TWV7VWW.pdf",
+      "output": "3TWV7VWW.md",
+      "file_hash": "401992c0015a9aece8453f478f1ca2b3",
+      "success": true,
+      "duration_seconds": 52.48,
+      "metrics": {
+        "total_chars": 106225,
+        "total_lines": 1021,
+        "total_words": 14811,
+        "headings": 147,
+        "heading_levels": {
+          "h2": 147
+        },
+        "tables": 1,
+        "lists": 94,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 443,
+        "avg_line_length": 182.0
+      },
+      "quality_score": 100,
+      "quality_issues": [],
+      "status": "converted"
+    },
+    {
+      "input": "5G2VPZR8.pdf",
+      "output": "5G2VPZR8.md",
+      "file_hash": "ccfa04c551f87b2fe3b13724a7b32ede",
+      "success": true,
+      "duration_seconds": 6.99,
+      "metrics": {
+        "total_chars": 30656,
+        "total_lines": 124,
+        "total_words": 3820,
+        "headings": 12,
+        "heading_levels": {
+          "h2": 12
+        },
+        "tables": 0,
+        "lists": 42,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 42,
+        "avg_line_length": 372.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "5TDNQD4B.pdf",
+      "output": "5TDNQD4B.md",
+      "file_hash": "9633bd3a4562e4f719540c32b0f1a1ff",
+      "success": true,
+      "duration_seconds": 47.31,
+      "metrics": {
+        "total_chars": 80719,
+        "total_lines": 414,
+        "total_words": 10781,
+        "headings": 30,
+        "heading_levels": {
+          "h2": 30
+        },
+        "tables": 6,
+        "lists": 56,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 135,
+        "avg_line_length": 287.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "63UVG3ZU.pdf",
+      "output": "63UVG3ZU.md",
+      "file_hash": "5da2dc3ad7e3141ec7dab5557d9dff4d",
+      "success": true,
+      "duration_seconds": 14.52,
+      "metrics": {
+        "total_chars": 59071,
+        "total_lines": 357,
+        "total_words": 8318,
+        "headings": 16,
+        "heading_levels": {
+          "h2": 16
+        },
+        "tables": 6,
+        "lists": 3,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 158,
+        "avg_line_length": 295.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "7B6V8MN6.pdf",
+      "output": "7B6V8MN6.md",
+      "file_hash": "67b06f0b55b00a9737d5ff108511f232",
+      "success": true,
+      "duration_seconds": 2.15,
+      "metrics": {
+        "total_chars": 7753,
+        "total_lines": 71,
+        "total_words": 1141,
+        "headings": 5,
+        "heading_levels": {
+          "h2": 5
+        },
+        "tables": 0,
+        "lists": 0,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 35,
+        "avg_line_length": 213.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "7GB5U4HK.pdf",
+      "output": "7GB5U4HK.md",
+      "file_hash": "70ee528b56b32e53b2bf12b76eb008de",
+      "success": true,
+      "duration_seconds": 34.77,
+      "metrics": {
+        "total_chars": 60086,
+        "total_lines": 369,
+        "total_words": 8062,
+        "headings": 27,
+        "heading_levels": {
+          "h2": 27
+        },
+        "tables": 3,
+        "lists": 41,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 135,
+        "avg_line_length": 255.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "8MM5BZN8.pdf",
+      "output": "8MM5BZN8.md",
+      "file_hash": "4a80e0e1a9ac3a92c9fd986c8d383a7f",
+      "success": true,
+      "duration_seconds": 11.65,
+      "metrics": {
+        "total_chars": 62583,
+        "total_lines": 231,
+        "total_words": 8531,
+        "headings": 19,
+        "heading_levels": {
+          "h2": 19
+        },
+        "tables": 3,
+        "lists": 34,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 91,
+        "avg_line_length": 445.4
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "AUM6JXT9.pdf",
+      "output": "AUM6JXT9.md",
+      "file_hash": "97c1fe73f2e4c848a8031f96dccc5f59",
+      "success": true,
+      "duration_seconds": 9.23,
+      "metrics": {
+        "total_chars": 40346,
+        "total_lines": 131,
+        "total_words": 6089,
+        "headings": 8,
+        "heading_levels": {
+          "h2": 8
+        },
+        "tables": 0,
+        "lists": 43,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 45,
+        "avg_line_length": 467.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "BBSHTIMH.pdf",
+      "output": "BBSHTIMH.md",
+      "file_hash": "f73d8b503e6deb384a634c24305cca1d",
+      "success": true,
+      "duration_seconds": 10.35,
+      "metrics": {
+        "total_chars": 73377,
+        "total_lines": 438,
+        "total_words": 10028,
+        "headings": 20,
+        "heading_levels": {
+          "h2": 20
+        },
+        "tables": 2,
+        "lists": 11,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 210,
+        "avg_line_length": 319.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "CCAKPEGY.pdf",
+      "output": "CCAKPEGY.md",
+      "file_hash": "1b0b2edbe9778d8e27cc5908b956825e",
+      "success": true,
+      "duration_seconds": 35.73,
+      "metrics": {
+        "total_chars": 69961,
+        "total_lines": 420,
+        "total_words": 8653,
+        "headings": 31,
+        "heading_levels": {
+          "h2": 31
+        },
+        "tables": 7,
+        "lists": 59,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 149,
+        "avg_line_length": 256.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "D698593N.pdf",
+      "output": "D698593N.md",
+      "file_hash": "d5eb8bd7f96da543767e115d86932060",
+      "success": true,
+      "duration_seconds": 13.11,
+      "metrics": {
+        "total_chars": 42083,
+        "total_lines": 359,
+        "total_words": 6052,
+        "headings": 38,
+        "heading_levels": {
+          "h2": 38
+        },
+        "tables": 1,
+        "lists": 48,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 161,
+        "avg_line_length": 210.7
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "DGPSXRCB.pdf",
+      "output": "DGPSXRCB.md",
+      "file_hash": "33dc0dfe2410b2a4aeeddad55f568ac2",
+      "success": true,
+      "duration_seconds": 12.93,
+      "metrics": {
+        "total_chars": 58876,
+        "total_lines": 349,
+        "total_words": 8176,
+        "headings": 20,
+        "heading_levels": {
+          "h2": 20
+        },
+        "tables": 0,
+        "lists": 53,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 153,
+        "avg_line_length": 298.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "DHKP5FGN.pdf",
+      "output": "DHKP5FGN.md",
+      "file_hash": "a1ba9779c295ddf373ac1c91e840091e",
+      "success": true,
+      "duration_seconds": 23.16,
+      "metrics": {
+        "total_chars": 59558,
+        "total_lines": 478,
+        "total_words": 8117,
+        "headings": 40,
+        "heading_levels": {
+          "h2": 40
+        },
+        "tables": 3,
+        "lists": 39,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 209,
+        "avg_line_length": 219.6
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "EUTEI9EJ.pdf",
+      "output": "EUTEI9EJ.md",
+      "file_hash": "4ca1f3e4cf8a679fe2d034849db0f444",
+      "success": true,
+      "duration_seconds": 13.89,
+      "metrics": {
+        "total_chars": 69351,
+        "total_lines": 309,
+        "total_words": 9080,
+        "headings": 23,
+        "heading_levels": {
+          "h2": 23
+        },
+        "tables": 0,
+        "lists": 34,
+        "figures": 0,
+        "code_blocks": 1,
+        "links": 0,
+        "empty_lines": 143,
+        "avg_line_length": 410.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "NPFRWPAN.pdf",
+      "output": "NPFRWPAN.md",
+      "file_hash": "47b1430b9bc20669f6cdebbfae1934a1",
+      "success": true,
+      "duration_seconds": 20.25,
+      "metrics": {
+        "total_chars": 66528,
+        "total_lines": 392,
+        "total_words": 9960,
+        "headings": 28,
+        "heading_levels": {
+          "h2": 28
+        },
+        "tables": 2,
+        "lists": 63,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 159,
+        "avg_line_length": 283.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "NQ5ZNGIK.pdf",
+      "output": "NQ5ZNGIK.md",
+      "file_hash": "24cafdfd56f00ed61ad7a9a86427747e",
+      "success": true,
+      "duration_seconds": 16.93,
+      "metrics": {
+        "total_chars": 70260,
+        "total_lines": 422,
+        "total_words": 8914,
+        "headings": 28,
+        "heading_levels": {
+          "h2": 28
+        },
+        "tables": 1,
+        "lists": 9,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 205,
+        "avg_line_length": 321.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "RBZGHG5U.pdf",
+      "output": "RBZGHG5U.md",
+      "file_hash": "34800d36a33f8c4ac1d50167b1b83491",
+      "success": true,
+      "duration_seconds": 21.7,
+      "metrics": {
+        "total_chars": 50560,
+        "total_lines": 372,
+        "total_words": 7169,
+        "headings": 32,
+        "heading_levels": {
+          "h2": 32
+        },
+        "tables": 3,
+        "lists": 88,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 143,
+        "avg_line_length": 219.2
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "RZ8ADW94.pdf",
+      "output": "RZ8ADW94.md",
+      "file_hash": "61512ecb071884cc5f59099aa1fdff72",
+      "success": true,
+      "duration_seconds": 28.49,
+      "metrics": {
+        "total_chars": 79796,
+        "total_lines": 422,
+        "total_words": 10852,
+        "headings": 34,
+        "heading_levels": {
+          "h2": 34
+        },
+        "tables": 3,
+        "lists": 70,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 172,
+        "avg_line_length": 317.5
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "SV7RABKM.pdf",
+      "output": "SV7RABKM.md",
+      "file_hash": "36a63ed650b6799300f5a231a24f2ae8",
+      "success": true,
+      "duration_seconds": 28.18,
+      "metrics": {
+        "total_chars": 79434,
+        "total_lines": 371,
+        "total_words": 9146,
+        "headings": 29,
+        "heading_levels": {
+          "h2": 29
+        },
+        "tables": 4,
+        "lists": 28,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 149,
+        "avg_line_length": 356.1
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "T2URTGBE.pdf",
+      "output": "T2URTGBE.md",
+      "file_hash": "d905df9e2309995666783daf9a2281e3",
+      "success": true,
+      "duration_seconds": 11.36,
+      "metrics": {
+        "total_chars": 51884,
+        "total_lines": 229,
+        "total_words": 7331,
+        "headings": 19,
+        "heading_levels": {
+          "h2": 19
+        },
+        "tables": 0,
+        "lists": 52,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 91,
+        "avg_line_length": 374.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "UNGYENLB.pdf",
+      "output": "UNGYENLB.md",
+      "file_hash": "1c5e7dd96105badb773f65baabf8a478",
+      "success": true,
+      "duration_seconds": 18.19,
+      "metrics": {
+        "total_chars": 78083,
+        "total_lines": 365,
+        "total_words": 9824,
+        "headings": 15,
+        "heading_levels": {
+          "h2": 15
+        },
+        "tables": 1,
+        "lists": 104,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 129,
+        "avg_line_length": 329.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "UV9AI4X3.pdf",
+      "output": "UV9AI4X3.md",
+      "file_hash": "5cf8732b6ca9077c3e88c2602584818f",
+      "success": true,
+      "duration_seconds": 50.87,
+      "metrics": {
+        "total_chars": 188020,
+        "total_lines": 537,
+        "total_words": 11196,
+        "headings": 27,
+        "heading_levels": {
+          "h2": 27
+        },
+        "tables": 3,
+        "lists": 83,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 200,
+        "avg_line_length": 556.3
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "VIHZB2CS.pdf",
+      "output": "VIHZB2CS.md",
+      "file_hash": "090058d874c489864df24980c4816ab4",
+      "success": false,
+      "duration_seconds": 0.9,
+      "error": "Conversion failed for: VIHZB2CS.pdf with status: ConversionStatus.FAILURE",
+      "status": "failed"
+    },
+    {
+      "input": "WHGCH3XS.pdf",
+      "output": "WHGCH3XS.md",
+      "file_hash": "e14320cb1bec0ef2f37cd629c0842ea9",
+      "success": true,
+      "duration_seconds": 27.25,
+      "metrics": {
+        "total_chars": 66669,
+        "total_lines": 440,
+        "total_words": 8674,
+        "headings": 41,
+        "heading_levels": {
+          "h2": 41
+        },
+        "tables": 5,
+        "lists": 53,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 176,
+        "avg_line_length": 250.9
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    },
+    {
+      "input": "XD28QSM7.pdf",
+      "output": "XD28QSM7.md",
+      "file_hash": "fb5a298d36aa9b46455339bf120de956",
+      "success": true,
+      "duration_seconds": 23.64,
+      "metrics": {
+        "total_chars": 71398,
+        "total_lines": 414,
+        "total_words": 10203,
+        "headings": 21,
+        "heading_levels": {
+          "h2": 21
+        },
+        "tables": 3,
+        "lists": 51,
+        "figures": 0,
+        "code_blocks": 0,
+        "links": 0,
+        "empty_lines": 178,
+        "avg_line_length": 300.8
+      },
+      "quality_score": 95,
+      "quality_issues": [
+        "Very long average line length (missing line breaks)"
+      ],
+      "status": "converted"
+    }
+  ]
+}

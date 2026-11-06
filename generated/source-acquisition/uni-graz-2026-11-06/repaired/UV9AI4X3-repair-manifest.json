@@ -1,0 +1,27 @@
+{
+  "schema": "femprompt-conversion-repair/0.1",
+  "record_id": "UV9AI4X3",
+  "created_at": "2026-11-06T10:31:36+00:00",
+  "original_markdown_path": "generated/source-acquisition/uni-graz-2026-11-06/UV9AI4X3.md",
+  "original_markdown_sha256": "sha256:acefee9a4dc216e1d76696490d63843e07ae4351014027f31209bd344dadadfd",
+  "repaired_markdown_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/UV9AI4X3.md",
+  "repaired_markdown_sha256": "sha256:6e7962709364dfeb8e461ecbc9ce02075598b5c86075347e326b1e6e0bd56b08",
+  "pdf_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/UV9AI4X3.pdf",
+  "pdf_sha256": "sha256:1fddc2a54cd7e0473a9c40683b9489359a9464baec6fc2fc2bed41adef2502e7",
+  "method": [
+    "A source-Markdown QC agent compared the PDF text layer with the reviewer Markdown and named the losses.",
+    "Extracted the abstract with PyMuPDF from the PDF text layer, removed line-break soft hyphens, and inserted it before the first body paragraph.",
+    "Left the remaining converted body unchanged."
+  ],
+  "changes": [
+    {
+      "original_pages": [
+        2
+      ],
+      "location": "Abstract and keywords",
+      "change": "Inserted the abstract and keywords from the PDF text layer; Docling had classified the abstract box as a picture and emitted only an image placeholder."
+    }
+  ],
+  "agent_id": "claude-code/conversion-repair-2026-11-06",
+  "model": "Claude Opus 5.5"
+}

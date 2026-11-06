@@ -1,0 +1,41 @@
+{
+  "schema": "femprompt-conversion-repair/0.1",
+  "record_id": "WHGCH3XS",
+  "created_at": "2026-11-06T10:31:36+00:00",
+  "original_markdown_path": "generated/source-acquisition/uni-graz-2026-11-06/WHGCH3XS.md",
+  "original_markdown_sha256": "sha256:412ee07a05aeff4c0912db603d0d055ace2889ce9b403d965c528712da5bd3d6",
+  "repaired_markdown_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/WHGCH3XS.md",
+  "repaired_markdown_sha256": "sha256:93557975f3fa9733e7526c05c5eb60a2332ecb13b2cd48afabfef4745c6b9917",
+  "pdf_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/WHGCH3XS.pdf",
+  "pdf_sha256": "sha256:20555913fda4f39570f1907051004200bd67b61d6ae9872b3e3dd37b85da838e",
+  "method": [
+    "A source-Markdown QC agent compared the PDF text layer with the reviewer Markdown and named the losses.",
+    "Extracted the abstract with PyMuPDF from the PDF text layer, removed line-break soft hyphens, and inserted it before the first body paragraph.",
+    "Left the remaining converted body unchanged."
+  ],
+  "changes": [
+    {
+      "original_pages": [
+        2
+      ],
+      "location": "Abstract and keywords",
+      "change": "Inserted the abstract and keywords from the PDF text layer; Docling had classified the abstract box as a picture and emitted only an image placeholder."
+    },
+    {
+      "original_pages": [
+        11
+      ],
+      "location": "Table 3, Critique #1, Key Findings cell",
+      "change": "Restored the cell's last line, which the conversion dropped."
+    },
+    {
+      "original_pages": [
+        11
+      ],
+      "location": "Table 3, Critique #3, Key Findings cell",
+      "change": "Restored the cell's last line, which the conversion dropped."
+    }
+  ],
+  "agent_id": "claude-code/conversion-repair-2026-11-06",
+  "model": "Claude Opus 5.5"
+}

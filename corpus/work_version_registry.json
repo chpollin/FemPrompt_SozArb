@@ -1,6 +1,6 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:e7949cb47393f0d5c59b208d41cd677bfac5013584bd68895bf31c5a7e3ae63b",
+  "source_fingerprint": "sha256:9eed7223d46206430e660a57e9cc70bb0667f230ecf647347a10cb1ca1aac93a",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
@@ -820,7 +820,7 @@
     },
     {
       "path": "corpus/source_version_bindings.json",
-      "sha256": "b5d60c04eae662d9c100c28258ddf2454d5c33dd9a85babebabacecb18f2e663"
+      "sha256": "557410f53136bfe1cb5e7d5581da02aa3beb33c7e6c3e90db5562cb10746fd24"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -1323,6 +1323,94 @@
       "sha256": "00fc0a9e8acbf17549d360e8877680b20d267bf716d9556b7410ccd039df243b"
     },
     {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/5G2VPZR8.md",
+      "sha256": "3a1c62968e70d0faa2c059bf61889dba2d4e60e0e62945cc9b8c395e0984acde"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/5TDNQD4B.md",
+      "sha256": "44f79aca7d71a50db47705505eae785eba41d02f0f45f4a48d9ba53dcda61eba"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/63UVG3ZU.md",
+      "sha256": "33d79714af6ca6e7a66c9f2d1f1fb82fefd8bf6fd9520bc4dd4c32b53180f19f"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/7B6V8MN6.md",
+      "sha256": "3ff78cc690a7bf6cd70f694136a47504f11154b16b08742a5b52ecbfce314daa"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/8MM5BZN8.md",
+      "sha256": "29d69af551e10f2a99a3acdd0edce9a3a2cf23284fe81e406dfab2712722898b"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/AUM6JXT9.md",
+      "sha256": "14f36a8c036be52d338a477c70055a1c221f7182e0c0881b9e3af64ac035ec62"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/BBSHTIMH.md",
+      "sha256": "acd2ba7722eb3376b13d736d98e012cb9fbe548e10f3a064634d067e00e96438"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/CCAKPEGY.md",
+      "sha256": "48da0e1446d60d9f2ca0d0158a5c9413b801cfdec78b0934c33423ec69d9f932"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/D698593N.md",
+      "sha256": "17078b4cd9fef28810544558da45c8c0d5a33d225760c96b9e10841279a458c7"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/DGPSXRCB.md",
+      "sha256": "b6fb620af2e1f5939582cb2a2490834f89272cbfc1ff5dd04f9d6c9de18b2e1f"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/DHKP5FGN.md",
+      "sha256": "51dc64cbe032d731685b31c50f5150d120e5bb288583950ef9d6843ff4f5f5a7"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/NPFRWPAN.md",
+      "sha256": "6951e4897a32cf977d7d235e381ac57454a0924e9c5822970b92b134f45580d1"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/NQ5ZNGIK.md",
+      "sha256": "8cf8fc9ee2a2a15d2c9bf30eed9033d94feab0f5fe3aa3b58d7fff208c15c0e4"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/RBZGHG5U.md",
+      "sha256": "c412371294f1cbadb45512208cd0668f69cca6cc63fbb256f64b50a856954e17"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/RZ8ADW94.md",
+      "sha256": "b912ff2a7dd37fae82365eee613f10bea1d9d6572e81cce2dfff18f3cc5978f8"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/SV7RABKM.md",
+      "sha256": "888d211ea9aaaa67473207d352308fa4b1f162ae27ba344ce5f8df7e1a3c1da8"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/T2URTGBE.md",
+      "sha256": "d58b36d60b5b89eb26784e2cd9018c383eb9fd7ba1e7edb767615e4bbdc2562b"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/UNGYENLB.md",
+      "sha256": "b4721e71ec9f332ca3b438f9b923c62b80e734095be9ab36706533acc6c88e5b"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/XD28QSM7.md",
+      "sha256": "0b321cae1a299fea2b2c91f39ad6247c067fd2516168346ae698c9974081ac99"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/7GB5U4HK.md",
+      "sha256": "1845200a0e89995b37ccf0914704a0b6e85148cb020171aa5aaa89c0aed13c78"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/UV9AI4X3.md",
+      "sha256": "6e7962709364dfeb8e461ecbc9ce02075598b5c86075347e326b1e6e0bd56b08"
+    },
+    {
+      "path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/WHGCH3XS.md",
+      "sha256": "93557975f3fa9733e7526c05c5eb60a2332ecb13b2cd48afabfef4745c6b9917"
+    },
+    {
       "path": "generated/source-acquisition/zotero-pdfs-2026-11-06/receipts.json",
       "sha256": "dbd98b897614217708cbd7ee7b5309097ea85aef06f5bee339bf19b0290f5180"
     },
@@ -1339,7 +1427,7 @@
     "works_with_multiple_versions": 29,
     "works_with_flags": 21,
     "ambiguous_external_identifiers": 5,
-    "bound_sources": 167
+    "bound_sources": 189
   },
   "works": [
     {
@@ -40438,6 +40526,74 @@
         "doi": "10.1177/20539517211020332"
       }
     },
+    "5G2VPZR8": {
+      "record_id": "5G2VPZR8",
+      "work_id": "work:e0680eb6-6ddd-5f4a-ae90-29d2359cba3e",
+      "bibliographic_version_id": "version:8d61d60c-3868-5b40-9560-a49d995f7686",
+      "source_version_id": "version:8d61d60c-3868-5b40-9560-a49d995f7686",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:8d61d60c-3868-5b40-9560-a49d995f7686",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/5G2VPZR8.md",
+      "source_sha256": "sha256:3a1c62968e70d0faa2c059bf61889dba2d4e60e0e62945cc9b8c395e0984acde",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "AI Ethics for the Global Majority: Lessons from Decolonial Feminist Bioethics"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://link.springer.com/content/pdf/10.1007/978-3-032-07830-8_12.pdf",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/5G2VPZR8.pdf",
+        "retrieved_at": "2026-11-06T08:57:41+00:00",
+        "sha256": "sha256:aa27314163a9a97b032fc920e4e2d48f8147c1bb9a997b7a9ecad16c34bfc255",
+        "route": "publisher (Springer Nature), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:8d61d60c-3868-5b40-9560-a49d995f7686",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "5TDNQD4B": {
+      "record_id": "5TDNQD4B",
+      "work_id": "work:6cefc242-e12f-5be0-830d-33952ecad5e7",
+      "bibliographic_version_id": "version:c79c4136-5304-5115-9a43-85569cd84085",
+      "source_version_id": "version:c79c4136-5304-5115-9a43-85569cd84085",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:c79c4136-5304-5115-9a43-85569cd84085",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/5TDNQD4B.md",
+      "source_sha256": "sha256:44f79aca7d71a50db47705505eae785eba41d02f0f45f4a48d9ba53dcda61eba",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Bias Bytes: A Study Examining Disability Bias in ChatGPT Job Recommendation"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://journals.sagepub.com/doi/pdf/10.1177/10522263261449121",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/5TDNQD4B.pdf",
+        "retrieved_at": "2026-11-06T09:03:50+00:00",
+        "sha256": "sha256:08e1d2abae75f33344f4de64ac92d967caeb3150e7b7ea89698860e0140e9886",
+        "route": "publisher (Sage), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:c79c4136-5304-5115-9a43-85569cd84085",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
     "5UAHQESQ": {
       "record_id": "5UAHQESQ",
       "work_id": "work:8e01ec71-65ff-5273-b5b9-a582fec48008",
@@ -40504,6 +40660,40 @@
       "version_relation": {
         "source_version_type": "version_of_record",
         "preferred_version_id": "version:11b76c55-15ea-53e5-b244-1a3cb13350b7",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "63UVG3ZU": {
+      "record_id": "63UVG3ZU",
+      "work_id": "work:3120ff22-ca6c-526b-8107-98006fcd39e4",
+      "bibliographic_version_id": "version:57834fb2-0641-5369-9d41-ccb6d87ae888",
+      "source_version_id": "version:57834fb2-0641-5369-9d41-ccb6d87ae888",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:57834fb2-0641-5369-9d41-ccb6d87ae888",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/63UVG3ZU.md",
+      "source_sha256": "sha256:33d79714af6ca6e7a66c9f2d1f1fb82fefd8bf6fd9520bc4dd4c32b53180f19f",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Making Accurate Judgements in Child Welfare: Comparing ChatGPT With Qualified Social Workers"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cfs.13304",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/63UVG3ZU.pdf",
+        "retrieved_at": "2026-11-06T09:04:27+00:00",
+        "sha256": "sha256:34d5d6c718562b27d497019abf16a74f258925eb1928b3e92a0ff1dd7b8b706a",
+        "route": "publisher OA (Wiley)",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "not_printed",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:57834fb2-0641-5369-9d41-ccb6d87ae888",
         "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
@@ -40575,6 +40765,40 @@
         "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
+    "7B6V8MN6": {
+      "record_id": "7B6V8MN6",
+      "work_id": "work:45d9af93-79ae-5cea-834f-b465c751fc8d",
+      "bibliographic_version_id": "version:015ac934-7770-50e6-887a-5f91f983250f",
+      "source_version_id": "version:015ac934-7770-50e6-887a-5f91f983250f",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:015ac934-7770-50e6-887a-5f91f983250f",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/7B6V8MN6.md",
+      "source_sha256": "sha256:3ff78cc690a7bf6cd70f694136a47504f11154b16b08742a5b52ecbfce314daa",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Feminist knowledges in the age of AI"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://journals.sagepub.com/doi/pdf/10.1177/13505068261419933",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/7B6V8MN6.pdf",
+        "retrieved_at": "2026-11-06T08:50:27+00:00",
+        "sha256": "sha256:c473edca258e1b20480c075410456c6ac121b46325eecb5a075deedcfcd1e794",
+        "route": "publisher (Sage), free access",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:015ac934-7770-50e6-887a-5f91f983250f",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
     "7FEFMCBZ": {
       "record_id": "7FEFMCBZ",
       "work_id": "work:fdf4e7e1-80c8-56bd-9e16-9031a45ff712",
@@ -40593,6 +40817,40 @@
       "version_identity": {
         "title": "How child welfare workers reduce racial disparities in algorithmic decisions",
         "doi": "10.1145/3491102.3501831"
+      }
+    },
+    "7GB5U4HK": {
+      "record_id": "7GB5U4HK",
+      "work_id": "work:7932a8e0-53aa-5105-9d0a-86603d8aff25",
+      "bibliographic_version_id": "version:f9ae9b0a-3357-5517-ace2-6717db0e941f",
+      "source_version_id": "version:f9ae9b0a-3357-5517-ace2-6717db0e941f",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:f9ae9b0a-3357-5517-ace2-6717db0e941f",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/7GB5U4HK.md",
+      "source_sha256": "sha256:1845200a0e89995b37ccf0914704a0b6e85148cb020171aa5aaa89c0aed13c78",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Can a Large Language Model Judge a Child’s Statement?: A Comparative Analysis of ChatGPT and Human Experts in Credibility Assessment"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/26408066.2025.2547211",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/7GB5U4HK.pdf",
+        "retrieved_at": "2026-11-06T09:21:43+00:00",
+        "sha256": "sha256:088494966357c2479644f5996c04280872d9a87c96c821a75bd83b067d2de81c",
+        "route": "publisher (Taylor & Francis), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:f9ae9b0a-3357-5517-ace2-6717db0e941f",
+        "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
     "7QQV7R9S": {
@@ -40714,6 +40972,40 @@
       "version_relation": {
         "source_version_type": "unknown",
         "preferred_version_id": "version:b7a0c018-2c4b-5a13-a8bd-0d22b1a25581",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "8MM5BZN8": {
+      "record_id": "8MM5BZN8",
+      "work_id": "work:f4196a02-dca2-57b3-9858-23487b191908",
+      "bibliographic_version_id": "version:ef97d953-1b4f-5269-b8ae-53e8074cdbb7",
+      "source_version_id": "version:ef97d953-1b4f-5269-b8ae-53e8074cdbb7",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:ef97d953-1b4f-5269-b8ae-53e8074cdbb7",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/8MM5BZN8.md",
+      "source_sha256": "sha256:29d69af551e10f2a99a3acdd0edce9a3a2cf23284fe81e406dfab2712722898b",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "The Adoption of Generative AI by Social Workers in Practice: A Scoping Review"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://journals.sagepub.com/doi/pdf/10.1177/10497315261469433",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/8MM5BZN8.pdf",
+        "retrieved_at": "2026-11-06T09:02:49+00:00",
+        "sha256": "sha256:41cc10d4332c22290d92cca1439c812542ae55a6f028034fe898c5fbc0a2ed7f",
+        "route": "publisher (Sage), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:ef97d953-1b4f-5269-b8ae-53e8074cdbb7",
         "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
@@ -41127,6 +41419,40 @@
         "doi": "10.1086/726021"
       }
     },
+    "AUM6JXT9": {
+      "record_id": "AUM6JXT9",
+      "work_id": "work:86b69226-9f64-5bc8-a892-6e65d94a16b6",
+      "bibliographic_version_id": "version:9316f494-4768-5b3e-92e3-2f9123d0477b",
+      "source_version_id": "version:9316f494-4768-5b3e-92e3-2f9123d0477b",
+      "source_version_type": "unknown",
+      "preferred_version_id": "version:9316f494-4768-5b3e-92e3-2f9123d0477b",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/AUM6JXT9.md",
+      "source_sha256": "sha256:14f36a8c036be52d338a477c70055a1c221f7182e0c0881b9e3af64ac035ec62",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Social Work Ethics and Generative AI"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://doi.org/10.4324/9781003627920-14",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/AUM6JXT9.pdf",
+        "retrieved_at": "2026-11-06T09:07:18+00:00",
+        "sha256": "sha256:37ac301665eeb8acb9ba3d603203318117721e639a491df0939d19e5c769690d",
+        "route": "publisher (Taylor & Francis eBooks), University of Graz licence, chapter PDF",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "not_printed",
+        "year": "not_printed"
+      },
+      "version_relation": {
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:9316f494-4768-5b3e-92e3-2f9123d0477b",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
     "AZJW38MF": {
       "record_id": "AZJW38MF",
       "work_id": "work:2c625fa2-a2f8-5d59-b6a0-f148d542c902",
@@ -41145,6 +41471,40 @@
       "version_identity": {
         "title": "The (Un)Fair Algorithm: Socio-Technical Ethics Work for Artificial Intelligence in Social Work",
         "doi": "10.1080/17496535.2026.2619945"
+      }
+    },
+    "BBSHTIMH": {
+      "record_id": "BBSHTIMH",
+      "work_id": "work:07d0801a-2468-5738-b788-0e265e95976a",
+      "bibliographic_version_id": "version:fa8ae028-3693-5596-9fc9-eaba9ef5ad26",
+      "source_version_id": "version:fa8ae028-3693-5596-9fc9-eaba9ef5ad26",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:fa8ae028-3693-5596-9fc9-eaba9ef5ad26",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/BBSHTIMH.md",
+      "source_sha256": "sha256:acd2ba7722eb3376b13d736d98e012cb9fbe548e10f3a064634d067e00e96438",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "AI For Whom? Participation, Power and Educational Pathways in the Age of Artificial Intelligence"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ejed.70602",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/BBSHTIMH.pdf",
+        "retrieved_at": "2026-11-06T09:00:08+00:00",
+        "sha256": "sha256:c82826cbd74295e93bc87aede1be44e870c29a879ccd3f01c928822e7a4e2bdd",
+        "route": "publisher OA (Wiley)",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:fa8ae028-3693-5596-9fc9-eaba9ef5ad26",
+        "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
     "BCBWSU3Z": {
@@ -41406,6 +41766,40 @@
         "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
+    "CCAKPEGY": {
+      "record_id": "CCAKPEGY",
+      "work_id": "work:7bec80be-f7f9-516a-8845-7215f683db24",
+      "bibliographic_version_id": "version:e03cf66b-d85b-5eaa-b058-48adf89d499f",
+      "source_version_id": "version:e03cf66b-d85b-5eaa-b058-48adf89d499f",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:e03cf66b-d85b-5eaa-b058-48adf89d499f",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/CCAKPEGY.md",
+      "source_sha256": "sha256:48da0e1446d60d9f2ca0d0158a5c9413b801cfdec78b0934c33423ec69d9f932",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Does being literate in AI make workplaces more equal? The mediating role of psychological capital"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.emerald.com/ijssp/article-pdf/doi/10.1108/IJSSP-02-2026-0125/11438033/ijssp-02-2026-0125en.pdf",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/CCAKPEGY.pdf",
+        "retrieved_at": "2026-11-06T08:57:04+00:00",
+        "sha256": "sha256:b1954c64d85923398729623a7d38fca592703cd573c1004637c31980dc03dabd",
+        "route": "publisher (Emerald), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:e03cf66b-d85b-5eaa-b058-48adf89d499f",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
     "CHJQ52DC": {
       "record_id": "CHJQ52DC",
       "work_id": "work:1bbf69b4-ba85-5bc0-82e5-e3554b788658",
@@ -41458,6 +41852,40 @@
       "version_identity": {
         "title": "Generative AI in Youth Mental Health Apps: Rapid Review",
         "doi": "10.2196/90589"
+      }
+    },
+    "D698593N": {
+      "record_id": "D698593N",
+      "work_id": "work:8e5f6b11-3ff1-5e33-8123-5193fbea9502",
+      "bibliographic_version_id": "version:3d85c91a-a939-59c0-a336-cc48c8afb02b",
+      "source_version_id": "version:3d85c91a-a939-59c0-a336-cc48c8afb02b",
+      "source_version_type": "unknown",
+      "preferred_version_id": "version:3d85c91a-a939-59c0-a336-cc48c8afb02b",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/D698593N.md",
+      "source_sha256": "sha256:17078b4cd9fef28810544558da45c8c0d5a33d225760c96b9e10841279a458c7",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Prompt Engineering for Social Workers"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://doi.org/10.4324/9781003755081-10",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/D698593N.pdf",
+        "retrieved_at": "2026-11-06T09:18:05+00:00",
+        "sha256": "sha256:9789a5f4d78b460596cec6bbae2a5bf441bb5070e29aa1345da45b9c6911c650",
+        "route": "publisher (Taylor & Francis eBooks), University of Graz licence, chapter PDF",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "not_printed",
+        "year": "not_printed"
+      },
+      "version_relation": {
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:3d85c91a-a939-59c0-a336-cc48c8afb02b",
+        "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
     "DALR26DL": {
@@ -41560,6 +41988,74 @@
       "version_relation": {
         "source_version_type": "unknown",
         "preferred_version_id": "version:1bb4b1af-7508-5d41-9386-290c0f9d3d53",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "DGPSXRCB": {
+      "record_id": "DGPSXRCB",
+      "work_id": "work:a2194871-3b0b-5750-9b17-ddee423cb40a",
+      "bibliographic_version_id": "version:0ae78713-7b93-5a5b-9946-4550af5f3653",
+      "source_version_id": "version:0ae78713-7b93-5a5b-9946-4550af5f3653",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:0ae78713-7b93-5a5b-9946-4550af5f3653",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/DGPSXRCB.md",
+      "source_sha256": "sha256:b6fb620af2e1f5939582cb2a2490834f89272cbfc1ff5dd04f9d6c9de18b2e1f",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Artificial intelligence: a neoliberal tool to better manage social inequalities?"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/13691457.2025.2607705",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/DGPSXRCB.pdf",
+        "retrieved_at": "2026-11-06T08:56:31+00:00",
+        "sha256": "sha256:789c69f9eb52cd8d0a8e02d2106b9b460933077a6b02647264e103d1b9dbdd9a",
+        "route": "publisher (Taylor & Francis), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:0ae78713-7b93-5a5b-9946-4550af5f3653",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "DHKP5FGN": {
+      "record_id": "DHKP5FGN",
+      "work_id": "work:fb07e9e8-562c-5c51-9aa7-f1faa654c172",
+      "bibliographic_version_id": "version:98b08f9c-56a3-5a66-9734-8abd00bea1fe",
+      "source_version_id": "version:98b08f9c-56a3-5a66-9734-8abd00bea1fe",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:98b08f9c-56a3-5a66-9734-8abd00bea1fe",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/DHKP5FGN.md",
+      "source_sha256": "sha256:51dc64cbe032d731685b31c50f5150d120e5bb288583950ef9d6843ff4f5f5a7",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "AI-enhanced ethical decision-making in social work: development and testing of an application-specific language model"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/02650533.2026.2683352",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/DHKP5FGN.pdf",
+        "retrieved_at": "2026-11-06T09:06:08+00:00",
+        "sha256": "sha256:8efd8ef686b3b3c82849df15b27b3e49862bc6292842960b5926790a1bede704",
+        "route": "publisher OA (Taylor & Francis)",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:98b08f9c-56a3-5a66-9734-8abd00bea1fe",
         "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
@@ -42559,6 +43055,74 @@
         "doi": "10.21556/edutec.2026.96.4777"
       }
     },
+    "NPFRWPAN": {
+      "record_id": "NPFRWPAN",
+      "work_id": "work:38dda3f3-a302-5518-ae71-9d25ce9728c7",
+      "bibliographic_version_id": "version:4e9177dc-2b3f-56bd-9b7b-c8cfa7cb3620",
+      "source_version_id": "version:4e9177dc-2b3f-56bd-9b7b-c8cfa7cb3620",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:4e9177dc-2b3f-56bd-9b7b-c8cfa7cb3620",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/NPFRWPAN.md",
+      "source_sha256": "sha256:6951e4897a32cf977d7d235e381ac57454a0924e9c5822970b92b134f45580d1",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Gender bias in text-to-image generative artificial intelligence: Neglect and stereotypical presentations across three popular platforms"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://journals.sagepub.com/doi/pdf/10.1177/14614448261435197",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/NPFRWPAN.pdf",
+        "retrieved_at": "2026-11-06T09:20:24+00:00",
+        "sha256": "sha256:44787d045c696ad554e84ae2ed766a9e1fba0dc1ef71ac4c068a8bc9c9ac021a",
+        "route": "publisher (Sage), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:4e9177dc-2b3f-56bd-9b7b-c8cfa7cb3620",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "NQ5ZNGIK": {
+      "record_id": "NQ5ZNGIK",
+      "work_id": "work:e2a638bd-caa4-5f73-a532-6f9e7767693e",
+      "bibliographic_version_id": "version:4abdfd4b-d5f2-519b-a4d9-90ded1546b60",
+      "source_version_id": "version:4abdfd4b-d5f2-519b-a4d9-90ded1546b60",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:4abdfd4b-d5f2-519b-a4d9-90ded1546b60",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/NQ5ZNGIK.md",
+      "source_sha256": "sha256:8cf8fc9ee2a2a15d2c9bf30eed9033d94feab0f5fe3aa3b58d7fff208c15c0e4",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Mitigating Disability Bias in Hiring: The Role of Inclusion-Focused Generative AI in Complex HR Decisions"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1748-8583.70044",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/NQ5ZNGIK.pdf",
+        "retrieved_at": "2026-11-06T09:27:23+00:00",
+        "sha256": "sha256:df500c7a4c391ca7be7865488f0b1ab90a8099f46cbfc882035fa211e0cd1813",
+        "route": "publisher OA (Wiley)",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "not_printed",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:4abdfd4b-d5f2-519b-a4d9-90ded1546b60",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
     "NVZA58ML": {
       "record_id": "NVZA58ML",
       "work_id": "work:4dfd4727-32f3-523e-8700-ad6fde9f4705",
@@ -42937,6 +43501,40 @@
         "arxiv": "2305.17390v2"
       }
     },
+    "RBZGHG5U": {
+      "record_id": "RBZGHG5U",
+      "work_id": "work:c8ee6229-4d78-51b8-be80-0831d5e650a5",
+      "bibliographic_version_id": "version:d8aaa300-de73-5dc9-ae86-57d882e00c48",
+      "source_version_id": "version:d8aaa300-de73-5dc9-ae86-57d882e00c48",
+      "source_version_type": "unknown",
+      "preferred_version_id": "version:d8aaa300-de73-5dc9-ae86-57d882e00c48",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/RBZGHG5U.md",
+      "source_sha256": "sha256:c412371294f1cbadb45512208cd0668f69cca6cc63fbb256f64b50a856954e17",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Generative AI and Agentic AI"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://doi.org/10.4324/9781003755081-5",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/RBZGHG5U.pdf",
+        "retrieved_at": "2026-11-06T09:17:19+00:00",
+        "sha256": "sha256:da1e539ee76ccf5708d7ed98021444d60be533ac22e60f7ccc36cedbdfeb2618",
+        "route": "publisher (Taylor & Francis eBooks), University of Graz licence, chapter PDF",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "not_printed",
+        "year": "not_printed"
+      },
+      "version_relation": {
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:d8aaa300-de73-5dc9-ae86-57d882e00c48",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
     "RH8MC67Z": {
       "record_id": "RH8MC67Z",
       "work_id": "work:ca3ae89d-5ddd-5036-a44d-165c58097219",
@@ -42987,6 +43585,40 @@
       "version_relation": {
         "source_version_type": "unknown",
         "preferred_version_id": "version:11e2016c-ae67-5a45-9534-0181533e4ce3",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "RZ8ADW94": {
+      "record_id": "RZ8ADW94",
+      "work_id": "work:bd56a9b4-b852-5918-88bb-8f6ad888fa6c",
+      "bibliographic_version_id": "version:a09ed976-2c89-5576-b75e-c8bc5fe32913",
+      "source_version_id": "version:a09ed976-2c89-5576-b75e-c8bc5fe32913",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:a09ed976-2c89-5576-b75e-c8bc5fe32913",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/RZ8ADW94.md",
+      "source_sha256": "sha256:b912ff2a7dd37fae82365eee613f10bea1d9d6572e81cce2dfff18f3cc5978f8",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Generative AI So White: Racial Biases in AI Imagery Across the United States and China"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://journals.sagepub.com/doi/pdf/10.1177/10755470261428542",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/RZ8ADW94.pdf",
+        "retrieved_at": "2026-11-06T09:22:03+00:00",
+        "sha256": "sha256:00d726b63b20aac2677df985aecea12626ed9a6bfa5f419d8be66bef52b05093",
+        "route": "publisher (Sage), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "not_printed",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:a09ed976-2c89-5576-b75e-c8bc5fe32913",
         "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
@@ -43135,6 +43767,74 @@
       "version_identity": {
         "title": "Persona-Assigned Large Language Models Exhibit Human-Like Motivated Reasoning",
         "doi": "10.18653/v1/2026.findings-acl.585"
+      }
+    },
+    "SV7RABKM": {
+      "record_id": "SV7RABKM",
+      "work_id": "work:d3e51cd3-1781-55c6-abc7-80ced266a26e",
+      "bibliographic_version_id": "version:0697bf35-4dab-5567-b75d-af72656580eb",
+      "source_version_id": "version:0697bf35-4dab-5567-b75d-af72656580eb",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:0697bf35-4dab-5567-b75d-af72656580eb",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/SV7RABKM.md",
+      "source_sha256": "sha256:888d211ea9aaaa67473207d352308fa4b1f162ae27ba344ce5f8df7e1a3c1da8",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "ChatGPT in Social Work? Insights from MSW Students"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/10437797.2025.2594423",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/SV7RABKM.pdf",
+        "retrieved_at": "2026-11-06T09:20:05+00:00",
+        "sha256": "sha256:0ac8913f14fcff139b830a19410c6ef4a768c241af933a900cc8ab0e203e561e",
+        "route": "publisher (Taylor & Francis), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:0697bf35-4dab-5567-b75d-af72656580eb",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "T2URTGBE": {
+      "record_id": "T2URTGBE",
+      "work_id": "work:da7ca8ae-1095-5199-a51a-b9cce3e8c07c",
+      "bibliographic_version_id": "version:a82bfb0b-58d7-560a-b4d6-ea27ea34bb70",
+      "source_version_id": "version:a82bfb0b-58d7-560a-b4d6-ea27ea34bb70",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:a82bfb0b-58d7-560a-b4d6-ea27ea34bb70",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/T2URTGBE.md",
+      "source_sha256": "sha256:d58b36d60b5b89eb26784e2cd9018c383eb9fd7ba1e7edb767615e4bbdc2562b",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Using ChatGPT for Qualitative Social Media Analysis: Insights for Cross-Cultural Social Work"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.journals.uchicago.edu/doi/pdf/10.1086/740605?download=true",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/T2URTGBE.pdf",
+        "retrieved_at": "2026-11-06T08:51:13+00:00",
+        "sha256": "sha256:10c09bafbf34549a71f08552cd5c41b97ea38dfc6fe9394bf433cf764672a431",
+        "route": "publisher (University of Chicago Press), free access",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:a82bfb0b-58d7-560a-b4d6-ea27ea34bb70",
+        "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
     "T57U8T2K": {
@@ -43309,6 +44009,74 @@
       "version_relation": {
         "source_version_type": "unknown",
         "preferred_version_id": "version:27af1d3e-0f3f-582b-ae03-641b46ab11c0",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "UNGYENLB": {
+      "record_id": "UNGYENLB",
+      "work_id": "work:3b02e536-2608-5664-8375-e41cd0501530",
+      "bibliographic_version_id": "version:033cce35-c84f-53e1-a545-74658072cf4e",
+      "source_version_id": "version:033cce35-c84f-53e1-a545-74658072cf4e",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:033cce35-c84f-53e1-a545-74658072cf4e",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/UNGYENLB.md",
+      "source_sha256": "sha256:b4721e71ec9f332ca3b438f9b923c62b80e734095be9ab36706533acc6c88e5b",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Metacognitive AI literacy: going beyond the AI skills gap agenda"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/17439884.2026.2652638",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/UNGYENLB.pdf",
+        "retrieved_at": "2026-11-06T08:58:23+00:00",
+        "sha256": "sha256:b79b9aa2bb3f13ade85f82f39e5da326842dc42531179419452aae9d233775c8",
+        "route": "publisher OA (Taylor & Francis)",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:033cce35-c84f-53e1-a545-74658072cf4e",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "UV9AI4X3": {
+      "record_id": "UV9AI4X3",
+      "work_id": "work:88f2c72f-f921-556b-9ff3-9bd58eb35e38",
+      "bibliographic_version_id": "version:a9cda7a1-73f0-56ac-9ba0-c2243306ed00",
+      "source_version_id": "version:a9cda7a1-73f0-56ac-9ba0-c2243306ed00",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:a9cda7a1-73f0-56ac-9ba0-c2243306ed00",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/UV9AI4X3.md",
+      "source_sha256": "sha256:6e7962709364dfeb8e461ecbc9ce02075598b5c86075347e326b1e6e0bd56b08",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "From salad bar feminism to denotative portraiture: How neoliberalism shapes feminism in AI-Generated visuals"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/14680777.2025.2593317",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/UV9AI4X3.pdf",
+        "retrieved_at": "2026-11-06T09:01:35+00:00",
+        "sha256": "sha256:1fddc2a54cd7e0473a9c40683b9489359a9464baec6fc2fc2bed41adef2502e7",
+        "route": "publisher (Taylor & Francis), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:a9cda7a1-73f0-56ac-9ba0-c2243306ed00",
         "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
@@ -43506,6 +44274,40 @@
         "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
+    "WHGCH3XS": {
+      "record_id": "WHGCH3XS",
+      "work_id": "work:14ff652e-92a8-5982-bf91-a64c26254d13",
+      "bibliographic_version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
+      "source_version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/repaired/WHGCH3XS.md",
+      "source_sha256": "sha256:93557975f3fa9733e7526c05c5eb60a2332ecb13b2cd48afabfef4745c6b9917",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Innovating social work pedagogy: generative AI for critical competency development in evidence-based practice"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.tandfonline.com/doi/pdf/10.1080/02615479.2026.2617512",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/WHGCH3XS.pdf",
+        "retrieved_at": "2026-11-06T08:47:05+00:00",
+        "sha256": "sha256:20555913fda4f39570f1907051004200bd67b61d6ae9872b3e3dd37b85da838e",
+        "route": "publisher (Taylor & Francis), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:e26e796c-188a-5f12-8ed2-36f8b960f2bc",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
     "WK8IJUXQ": {
       "record_id": "WK8IJUXQ",
       "work_id": "work:d3e1b501-39ff-5531-a410-391d0ae61c77",
@@ -43591,6 +44393,40 @@
       "version_relation": {
         "source_version_type": "unknown",
         "preferred_version_id": "version:406f4328-7ff9-5fba-b0c2-90845db5a5d7",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "XD28QSM7": {
+      "record_id": "XD28QSM7",
+      "work_id": "work:5afec464-2212-543d-9b3f-abb12a282783",
+      "bibliographic_version_id": "version:650905c5-093e-5a04-b006-a308cf303d3f",
+      "source_version_id": "version:650905c5-093e-5a04-b006-a308cf303d3f",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:650905c5-093e-5a04-b006-a308cf303d3f",
+      "is_preferred_version": true,
+      "source_path": "generated/source-acquisition/uni-graz-2026-11-06/XD28QSM7.md",
+      "source_sha256": "sha256:0b321cae1a299fea2b2c91f39ad6247c067fd2516168346ae698c9974081ac99",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Accuracy and Readability of Large Language Models’ Responses to Frequently Asked Questions on Social Assistance"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.journals.uchicago.edu/doi/pdf/10.1086/740347?download=true",
+        "repo_path": "generated/source-acquisition/uni-graz-2026-11-06/pdf/XD28QSM7.pdf",
+        "retrieved_at": "2026-11-06T09:04:57+00:00",
+        "sha256": "sha256:90cd15dc2fa924074f0e0a7a5c1ae452ac73f843b338046bc72badcd9c2b07b5",
+        "route": "publisher (University of Chicago Press), University of Graz licence",
+        "note": "Original PDF is not versioned; the Markdown is its Docling conversion."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "pass",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:650905c5-093e-5a04-b006-a308cf303d3f",
         "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },
