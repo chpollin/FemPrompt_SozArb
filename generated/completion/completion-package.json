@@ -36902,13 +36902,13 @@
     "counts": {
       "broken_link_records": 0,
       "canonical_records": 463,
-      "distinct_linked_documents": 209,
-      "linked_records": 289,
-      "linked_works": 209,
-      "missing_link_records": 174,
+      "distinct_linked_documents": 210,
+      "linked_records": 290,
+      "linked_works": 210,
+      "missing_link_records": 173,
       "record_bound_works": 361,
       "shared_documents_across_works": 5,
-      "works_without_linked_document": 152
+      "works_without_linked_document": 151
     },
     "definitions": {
       "active_status": "Literal document maturity metadata only. Current source-bound review receipts are evaluated separately by the assertion and completion builders.",
@@ -37022,7 +37022,6 @@
         "MPCZVZEW",
         "N7J2ZRFP",
         "NUVZI357",
-        "NVZA58ML",
         "Q4LK53XW",
         "QFPTW4VL",
         "QIQR449A",
@@ -37880,11 +37879,6 @@
       },
       {
         "reason": "no_document_link",
-        "record_id": "NVZA58ML",
-        "work_id": "work:4dfd4727-32f3-523e-8700-ad6fde9f4705"
-      },
-      {
-        "reason": "no_document_link",
         "record_id": "P285BA5N",
         "work_id": "work:f5657618-8172-57e3-8294-94d2e46aed62"
       },
@@ -38553,12 +38547,6 @@
           "YUVR5YNQ"
         ],
         "work_id": "work:4d23d85d-04b4-5ebc-8858-36f933d7b885"
-      },
-      {
-        "record_ids": [
-          "NVZA58ML"
-        ],
-        "work_id": "work:4dfd4727-32f3-523e-8700-ad6fde9f4705"
       },
       {
         "record_ids": [
@@ -40948,7 +40936,7 @@
     "targeted_followup_search_date": "2026-09-05",
     "targeted_gap_fill_candidates": true
   },
-  "source_fingerprint": "sha256:f52d94cae8ac8cad78e746e8324e7d977202a6ef29dfce76ce73722221081a23",
+  "source_fingerprint": "sha256:c35e1183c0e29e5423c3268a3193548d9b1337fdf15f09753ee63b476204ea28",
   "sources": [
     {
       "path": "assessment/categories.yaml",
@@ -41152,7 +41140,7 @@
     },
     {
       "path": "corpus/work_version_registry.json",
-      "sha256": "cb1c96288a515273310110d45ceb29f438bcd731f853d09117aeb2e58d9d86ea"
+      "sha256": "3c3b0dfa58b0fb9d316bcb2ea5e94f7477252cd412f98afceedde05e01bf4d5f"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -41180,7 +41168,7 @@
     },
     {
       "path": "docs/data/research_vault_v2.json",
-      "sha256": "00183d0413e6a32ec4b09157b27539f3411db5757a4160d1a68870f104d33d0d"
+      "sha256": "f5d63923adc1c2548246e5562fc34f0269bf7a2929cab46106d7f2397e60987a"
     },
     {
       "path": "docs/data/screening/ar2.json",
@@ -41205,6 +41193,10 @@
     {
       "path": "docs/vault/Papers/A framework for the learning and teaching of Critical AI Literacy-126b8e.md",
       "sha256": "2c3321ec72ac9cd86c2fb9437c4fdbb41d7bbe296cd8c889eb02a40228b72cd2"
+    },
+    {
+      "path": "docs/vault/Papers/A survey on fairness in large language models.md",
+      "sha256": "4080cb473fa50542db30a5be4f4222a73ac04e76b45a5bd18af3bdd00e97a309"
     },
     {
       "path": "docs/vault/Papers/A systematic review on digital literacy.md",
@@ -42024,7 +42016,7 @@
     },
     {
       "path": "generated/agent-screening-queue.json",
-      "sha256": "b364a7a159d7cb465dc59aef7d93e579ce5cbe2898422d060b18eedae0104b07"
+      "sha256": "df61ae07cdd023c947f81d5e54943662203479ccbdac33758e447b409bce6cf3"
     },
     {
       "path": "generated/conformance/conformance_map.yaml",
@@ -63792,7 +63784,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "7QQV7R9S"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Exclude",
       "historical_identity_bindings": {},
@@ -67136,7 +67130,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "NVZA58ML"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -67306,7 +67302,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "7WMD5JQ6"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},
@@ -81454,7 +81452,9 @@
       "conflicts": [],
       "corrected_ai_record_ids": [],
       "current_ai_review_results": [],
-      "current_source_binding_record_ids": [],
+      "current_source_binding_record_ids": [
+        "WGVC7FQ5"
+      ],
       "decision_authority": "legacy_human",
       "effective_decision": "Include",
       "historical_identity_bindings": {},

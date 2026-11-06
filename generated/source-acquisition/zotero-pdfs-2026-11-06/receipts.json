@@ -1,0 +1,330 @@
+{
+  "schema": "femprompt-zotero-attachment-receipts/0.1",
+  "generated_at": "2026-11-06T08:53:08+00:00",
+  "agent_id": "claude-code/zotero-pdf-binding-2026-11-06",
+  "model": "Claude Opus 5.5",
+  "scope": "Corpus records without a reading text that have a PDF attachment in Zotero group 6080294, plus two records with an official open-access source. Read-only Zotero access; PDFs stay local and git-ignored.",
+  "records": [
+    {
+      "record_id": "7QQV7R9S",
+      "decision": "accepted",
+      "route": "zotero group attachment",
+      "zotero_attachment": {
+        "key": "32JT46S7",
+        "url": "https://www.zotero.org/groups/6080294/items/32JT46S7",
+        "filename": "181372 Generative AI and Social Work Practice Guidance_0.pdf",
+        "date_added": "2026-01-09T17:02:14Z"
+      },
+      "local_original": "generated/pdfs/zotero-2026-11-06/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.pdf",
+      "sha256": "sha256:73289b7b4a93135f34b59753a83f8f7cc51a01924b0a916c761f8e24d85d7867",
+      "bytes": 7649017,
+      "copied_to_local_store_at": "2026-11-06T08:39:47+00:00",
+      "rights": "BASW guidance PDF, (c) BASW 2025; quotation permitted with citation. No open licence printed. Held as a Zotero group attachment for private research; the text stays in the private repository (operator decision of 1 October 2026).",
+      "printed_identity": "Title 'Generative AI and Social Work: Initial Guidance for Practice and Ethics' on the cover; BASW 2025 imprint. The record registers no creator.",
+      "bound_text": "generated/markdown_clean/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md",
+      "conversion": {
+        "existing_text": "Tracked Docling conversion of 3 February 2026 whose header names the same acquisition stem.",
+        "reproduction": "convert_to_markdown.py (Docling 2.60.0) and postprocess_markdown.py re-run on this PDF on 2026-11-06 reproduce the tracked text; line-level similarity after front matter removal is 1.0 except NVZA58ML (0.985, reference-list wraps only).",
+        "validation": "validate_markdown_enhanced.py: PASS, no table mismatch, no text-loss warning.",
+        "fresh_conversion": {
+          "success": true,
+          "quality_score": 100,
+          "error": null
+        }
+      },
+      "source_qc": "Seven pages. Every page's text is present in reading order; the remaining differences are ligature splits and line wraps. Cover and decorative images are image placeholders without lost text."
+    },
+    {
+      "record_id": "NVZA58ML",
+      "decision": "accepted",
+      "route": "zotero group attachment",
+      "zotero_attachment": {
+        "key": "DDUVPRWT",
+        "url": "https://www.zotero.org/groups/6080294/items/DDUVPRWT",
+        "filename": "5ddea1cd-c031-433f-a09b-14e7754f7826.pdf",
+        "date_added": "2026-01-07T13:12:56Z"
+      },
+      "local_original": "generated/pdfs/zotero-2026-11-06/Wang_2024_A_survey_on_fairness_in_large_language_models.pdf",
+      "sha256": "sha256:247d4ce90d05199fb131147077c1ad4160d584e3d7e597beb3ec3772ae395298",
+      "bytes": 2119005,
+      "copied_to_local_store_at": "2026-11-06T08:39:47+00:00",
+      "rights": "Author preprint in the Procedia Computer Science template ('Procedia Computer Science 00 (2024) 1-28'); no licence printed. The Zotero attachment is the file the record URL names on a third-party paper host (file.mixpaper.cn). Held for private research only; the text stays in the private repository.",
+      "printed_identity": "Printed title 'A Survey on Fairness in Large Language Models' with byline Yingji Li, Mengnan Du, Rui Song, Xin Wang, Ying Wang. The record's creator 'Z. Wang' is not the printed first author; the identity check passes on the co-author surname Wang next to the title. Title and the record URL's file agree, so the Work is identified; the creator list needs a reviewed metadata correction.",
+      "bound_text": "generated/markdown_clean/Wang_2024_A_survey_on_fairness_in_large_language_models.md",
+      "conversion": {
+        "existing_text": "Tracked Docling conversion of 3 February 2026 whose header names the same acquisition stem.",
+        "reproduction": "convert_to_markdown.py (Docling 2.60.0) and postprocess_markdown.py re-run on this PDF on 2026-11-06 reproduce the tracked text; line-level similarity after front matter removal is 1.0 except NVZA58ML (0.985, reference-list wraps only).",
+        "validation": "validate_markdown_enhanced.py: PASS, no table mismatch, no text-loss warning.",
+        "fresh_conversion": {
+          "success": true,
+          "quality_score": 95,
+          "error": null
+        }
+      },
+      "source_qc": "28 pages, body text, section structure, both classification tables and the reference list are present. Example sentences that the PDF typesets inside Figure 4 (dataset examples) are image placeholders; the prose that describes the figure is complete."
+    },
+    {
+      "record_id": "WGVC7FQ5",
+      "decision": "accepted",
+      "route": "zotero group attachment",
+      "zotero_attachment": {
+        "key": "XSTHD9IU",
+        "url": "https://www.zotero.org/groups/6080294/items/XSTHD9IU",
+        "filename": "hermann-2021-artificial-intelligence-and-mass-personalization-of-communication-content-an-ethical-and-literacy.pdf",
+        "date_added": "2026-01-08T13:59:20Z"
+      },
+      "local_original": "generated/pdfs/zotero-2026-11-06/Hermann_2022_Artificial_intelligence_and_mass_personalization.pdf",
+      "sha256": "sha256:d38d6ad2a61eeaa4dbda23169f500e12705d496d391f8f27e53bb9d9c9f78660",
+      "bytes": 348820,
+      "copied_to_local_store_at": "2026-11-06T08:39:47+00:00",
+      "rights": "SAGE version of record, new media & society 24(5), (c) The Author(s) 2021, publisher reuse guidelines; no open licence printed. Held as a Zotero group attachment for private research; the text stays in the private repository.",
+      "printed_identity": "Printed title 'Artificial intelligence and mass personalization of communication content - An ethical and literacy perspective', author Erik Hermann, DOI 10.1177/14614448211022702 in the masthead.",
+      "bound_text": "generated/markdown_clean/Hermann_2022_Artificial_intelligence_and_mass_personalization.md",
+      "conversion": {
+        "existing_text": "Tracked Docling conversion of 3 February 2026 whose header names the same acquisition stem.",
+        "reproduction": "convert_to_markdown.py (Docling 2.60.0) and postprocess_markdown.py re-run on this PDF on 2026-11-06 reproduce the tracked text; line-level similarity after front matter removal is 1.0 except NVZA58ML (0.985, reference-list wraps only).",
+        "validation": "validate_markdown_enhanced.py: PASS, no table mismatch, no text-loss warning.",
+        "fresh_conversion": {
+          "success": true,
+          "quality_score": 95,
+          "error": null
+        }
+      },
+      "source_qc": "20 pages, all body sections, author biography and references present. The em dash in the title is lost in the heading ('contentAn'); no substantive text is missing."
+    },
+    {
+      "record_id": "7WMD5JQ6",
+      "decision": "accepted",
+      "route": "zotero group attachment",
+      "zotero_attachment": {
+        "key": "MZAKN3KN",
+        "url": "https://www.zotero.org/groups/6080294/items/MZAKN3KN",
+        "filename": "Proceedings of the Association for Information Science and Technology - 2025 - Maeda - Toward Agency‐Centered AI Literacy .pdf",
+        "date_added": "2026-01-21T14:20:16Z"
+      },
+      "local_original": "generated/pdfs/zotero-2026-11-06/Maeda_2025_Toward_Agency‐Centered_span.pdf",
+      "sha256": "sha256:0d68c7cce4aa92c601c5b4116f675fec9fda1bfc09968f2de1ac4699bd74c8fd",
+      "bytes": 365327,
+      "copied_to_local_store_at": "2026-11-06T08:39:47+00:00",
+      "rights": "Wiley version of record, Proceedings of the Association for Information Science and Technology 62 (ASIS&T 2025 poster); no open licence printed, the download banner names institutional access. Held as a Zotero group attachment for private research; the text stays in the private repository.",
+      "printed_identity": "Printed title 'Toward Agency-Centered AI Literacy: A Scoping Review', authors Maeda, Anderson, Quan-Haase, Willis, Gignac, ASIS&T Annual Meeting 2025.",
+      "bound_text": "generated/markdown_clean/Maeda_2025_Toward_Agency‐Centered_span.md",
+      "conversion": {
+        "existing_text": "Tracked Docling conversion of 3 February 2026 whose header names the same acquisition stem.",
+        "reproduction": "convert_to_markdown.py (Docling 2.60.0) and postprocess_markdown.py re-run on this PDF on 2026-11-06 reproduce the tracked text; line-level similarity after front matter removal is 1.0 except NVZA58ML (0.985, reference-list wraps only).",
+        "validation": "validate_markdown_enhanced.py: PASS, no table mismatch, no text-loss warning.",
+        "fresh_conversion": {
+          "success": true,
+          "quality_score": 95,
+          "error": null
+        }
+      },
+      "source_qc": "Three-page poster paper, abstract, body and references present. The Wiley download banner and a few reference-line DOI wraps differ; no substantive text is missing."
+    },
+    {
+      "record_id": "S8WGUVQT",
+      "decision": "excluded",
+      "reason": "Title matches, but the printed author is Mike Zajko; the record's creators (Dencik, Hintz, Redden) belong to another work. Creator correction required before binding."
+    },
+    {
+      "record_id": "XQM6WRU2",
+      "decision": "excluded",
+      "reason": "Title and DOI match; printed authors are Chor, Luo, Rodolfa, Ghani, the record has Cher, Adelson, McCrae. Creator correction required."
+    },
+    {
+      "record_id": "E4G328PD",
+      "decision": "excluded",
+      "reason": "DOI 10.1056/AIoa2400802 matches the record URL, but the record title is not printed in the text layer and is not the article's title. Title correction required."
+    },
+    {
+      "record_id": "CLKAD87H",
+      "decision": "excluded",
+      "reason": "Title and DOI match; printed authors are de Santana et al. (IBM Research), the record has James, Meeussen, Matthes. Creator correction required."
+    },
+    {
+      "record_id": "LMW8DZ78",
+      "decision": "excluded",
+      "reason": "Title and authors match the PDF, but it prints DOI 10.1177/20552076251339522 (Digital Health) while the record carries 10.1186/s12910-024-01143-5. The record mixes two works; identity decision required."
+    },
+    {
+      "record_id": "MITLDF9S",
+      "decision": "excluded",
+      "reason": "The attachment is a lecture slide deck on Digitalitaet in der Kinder- und Jugendhilfe, not the record's work."
+    },
+    {
+      "record_id": "MPCZVZEW",
+      "decision": "excluded",
+      "reason": "Title matches; printed authors are Hooshyar et al., the record has Goellner, Kumar, Aleven. Creator correction required."
+    },
+    {
+      "record_id": "XY2WVKBY",
+      "decision": "excluded",
+      "reason": "DOI matches, but the printed title is 'Governance of discriminatory content in conversational AIs: a cross-platform and cross-cultural analysis' (Ta, Zeng, Li). Title and creator correction required."
+    },
+    {
+      "record_id": "YV53DKI2",
+      "decision": "excluded",
+      "reason": "Printed author is Matthieu Queloz (Minds and Machines 2025), the record has J. D. Santos. Creator correction required."
+    },
+    {
+      "record_id": "BDBYDLVK",
+      "decision": "excluded",
+      "reason": "Printed title is 'What Comes After Harm? Mapping Reparative Actions in AI through Justice Frameworks'; record title and authors differ (known since 1 October 2026)."
+    },
+    {
+      "record_id": "99QJDBSV",
+      "decision": "excluded",
+      "reason": "Printed title is 'How large language models judge and influence human cooperation' (Pires et al.); record title and authors differ."
+    },
+    {
+      "record_id": "UB9NK8KI",
+      "decision": "excluded",
+      "reason": "Title matches; printed authors are Bevara et al. (Applied Sciences 2024), the record has O. Zayed. Creator correction required."
+    },
+    {
+      "record_id": "JRG3B3LE",
+      "decision": "excluded",
+      "reason": "No local attachment file. The proposed arXiv 2209.08891 prints 'Exploiting Cultural Biases via Homoglyphs in Text-to-Image Synthesis', not the record title, so a download could not bind. Identity decision required; not downloaded."
+    },
+    {
+      "record_id": "JGZDWMN3",
+      "decision": "excluded",
+      "reason": "Title matches; printed authors are Yan, Zhu, Xu, the record has Z. Wu. Creator correction required."
+    },
+    {
+      "record_id": "M7AGB7LI",
+      "decision": "excluded",
+      "reason": "Title matches; the PDF is the Portland State thesis of Martha Otisi Dimgba, the record has Salecha and Srijith. Creator correction required."
+    },
+    {
+      "record_id": "6MJYP7ZX",
+      "decision": "excluded",
+      "reason": "Title matches; the PDF is arXiv 2506.18199v1 by Asseri et al., the record has Prakash and Lee (2023) and its Work registers further versions. Creator and version decision required."
+    },
+    {
+      "record_id": "YUVR5YNQ",
+      "decision": "excluded",
+      "reason": "Title matches; printed authors are Gallegos et al. (NAACL 2025), the record has Parrish and de-Arteaga. Creator correction required."
+    },
+    {
+      "record_id": "64DQYVVB",
+      "decision": "excluded",
+      "reason": "Title matches; printed authors are Shafiei, Saffari, Moosavi, the record has Liu et al. The correction is in the unapplied patch of 1 October 2026."
+    },
+    {
+      "record_id": "RM833D5N",
+      "decision": "excluded",
+      "reason": "Printed title is 'The steerability of large language models toward data-driven personas' (Li et al.); record title and authors differ."
+    },
+    {
+      "record_id": "QIQR449A",
+      "decision": "excluded",
+      "reason": "Printed title is 'Detecting Linguistic Indicators for Stereotype Assessment with Large Language Models' (Goerge et al.); record title and authors differ."
+    },
+    {
+      "record_id": "55ZR64VU",
+      "decision": "excluded",
+      "reason": "Printed title is 'Evaluating Gender Bias in Large Language Models via Chain-of-Thought Prompting' (Kaneko et al.); record title differs."
+    },
+    {
+      "record_id": "4LY3SA4E",
+      "decision": "excluded",
+      "reason": "The attachment is the Northwestern news release about the PNAS Nexus paper; the record title is not printed and names no existing paper."
+    },
+    {
+      "record_id": "TSYJ3Y57",
+      "decision": "excluded",
+      "reason": "The attachment is the statement 'Women4Ethical AI Action Request' (SHS/2024/PI/H/1); the record title, an article headline, is not printed."
+    },
+    {
+      "record_id": "BR2LG8LD",
+      "decision": "excluded",
+      "reason": "Title and DOI match; printed author is Dawn McAra-Hunter, the record has Kumar and Gartner. Creator correction required."
+    },
+    {
+      "record_id": "6QPLNNQK",
+      "decision": "excluded",
+      "reason": "Printed title is 'Challenging Systematic Prejudices: An Investigation into Gender Bias in Large Language Models' (UNESCO, IRCAI 2024); the record title is a press headline. Title correction required."
+    },
+    {
+      "record_id": "WS4KQPWN",
+      "decision": "excluded",
+      "reason": "Ulnicane article matches by title and author, but it prints DOI 10.17645/si.v12.7543 and the record carries 10.17645/si.v12i1.7543; the DOI check fails. Identifier correction or Work-merge decision required."
+    },
+    {
+      "record_id": "9YCFMPVT",
+      "decision": "excluded",
+      "reason": "As WS4KQPWN; the record carries 10.17645/si.v12i2.7543, so the DOI check fails."
+    },
+    {
+      "record_id": "8U23BX2J",
+      "decision": "excluded",
+      "reason": "Identity passes on the PDF, but Docling fails to convert this Zotero PDF (ConversionStatus.FAILURE), as recorded for the Ulnicane conversion before. The existing tracked Ulnicane text is bound to a separately registered Work. A non-Docling representation or a Work-merge decision is required.",
+      "zotero_attachment_key": "JJ4H4GEA",
+      "conversion": {
+        "success": false,
+        "quality_score": null,
+        "error": "Conversion failed for: Ulnicane_2024_Intersectionality_in_artificial_intelligence_8U23BX2J.pdf with status: ConversionStatus.FAILURE"
+      }
+    },
+    {
+      "record_id": "FDR5APIU",
+      "decision": "excluded",
+      "reason": "Same Work-Version and same PDF bytes as 8U23BX2J; same Docling failure.",
+      "zotero_attachment_key": "56VFVN8X",
+      "conversion": {
+        "success": false,
+        "quality_score": null,
+        "error": "Conversion failed for: Ulnicane_2024_Intersectionality_in_artificial_intelligence_8U23BX2J.pdf with status: ConversionStatus.FAILURE"
+      }
+    },
+    {
+      "record_id": "QZJL6KBZ",
+      "decision": "excluded",
+      "reason": "Title matches; printed author is Vibeke Blaker Strand, the record has O. Lund. Creator correction required."
+    },
+    {
+      "record_id": "UBYTNGNV",
+      "decision": "excluded",
+      "reason": "Title and DOI match; printed author is Fabian Luetz, the record has Giannoni Adielsson and Oeberg. Creator correction required."
+    },
+    {
+      "record_id": "DWS4KXBW",
+      "decision": "excluded",
+      "reason": "Title matches; the report was prepared by Isadora Hellegren Letourneau (Mila), the record has A. Ovalle. Creator correction required."
+    },
+    {
+      "record_id": "NUVZI357",
+      "decision": "excluded",
+      "reason": "Web article by Katharina Mosene; the record title appends an English translation in brackets, which is not printed. Title correction required."
+    },
+    {
+      "record_id": "JZ4P8V8S",
+      "decision": "excluded",
+      "reason": "Title matches; the PDF prints author Maarit Jaakkola and DOI 10.3389/fcomm.2025.1610111, the record has Thwaites et al. and 10.3389/feduc.2024.1293235. DOI and creator correction required."
+    },
+    {
+      "record_id": "PC75954S",
+      "decision": "excluded",
+      "reason": "The attachment is 'Intersectional analysis of visual generative AI: the case of stable diffusion' (Jaeaeskelaeinen et al.), a different work from the record title."
+    },
+    {
+      "record_id": "ZLM537Z4",
+      "decision": "excluded",
+      "reason": "534-page edited volume; the title page prints 'Critical Perspectives on Data, Algorithms and Intelligent Machines', the record 'Algorithms, Data, and'. The title check fails. Title correction required; not converted."
+    },
+    {
+      "record_id": "DL7G37W9",
+      "decision": "excluded",
+      "reason": "Official ACL Anthology PDF downloaded (2026.findings-acl.550). Printed title is 'Characterizing Selective Refusal Bias in Large Language Models' (Khorramrouz, Levy); the record title echoes the abstract. Title correction required; the PDF prints no licence and the Anthology licence was not separately verified.",
+      "source_url": "https://aclanthology.org/2026.findings-acl.550.pdf",
+      "retrieved_at": "2026-11-06T08:38:44+00:00",
+      "sha256": "sha256:730e5b26ed1651bf0edaae459788b4ec2bf0c2b40f0b8af8999b5a55cda2a901"
+    },
+    {
+      "record_id": "5NSMD7XV",
+      "decision": "excluded",
+      "reason": "The official UNESCO record (unesdoc ark:/48223/pf0000374174) returned HTTP 403 to the request, as on 23 August 2026. No PDF obtained; manual browser download into Zotero required. The duplicate 5T55I5Z7 was not touched."
+    }
+  ]
+}

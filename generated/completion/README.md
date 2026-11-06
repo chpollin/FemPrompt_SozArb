@@ -1,6 +1,6 @@
 # Completion package
 
-Source fingerprint: `sha256:f52d94cae8ac8cad78e746e8324e7d977202a6ef29dfce76ce73722221081a23`. Deterministic internal preparation; no approval is created.
+Source fingerprint: `sha256:c35e1183c0e29e5423c3268a3193548d9b1337fdf15f09753ee63b476204ea28`. Deterministic internal preparation; no approval is created.
 
 Scope: existing corpus plus all already identified 2026 candidates (search cutoff 2026-08-24) and the separate targeted gap-fill intake from 2026-09-05. Candidate membership does not imply inclusion. New search should address a concrete evidence gap with excellent sources.
 
@@ -32,10 +32,10 @@ Scope: existing corpus plus all already identified 2026 candidates (search cutof
 
 | Availability measure (not verification) | Count |
 |---|---:|
-| Canonical records linked to an existing Knowledge Document | 289 / 463 |
-| Distinct linked Knowledge Documents | 209 |
-| Work IDs with a linked Knowledge Document | 209 / 361 |
-| Work IDs without a linked Knowledge Document | 152 |
+| Canonical records linked to an existing Knowledge Document | 290 / 463 |
+| Distinct linked Knowledge Documents | 210 |
+| Work IDs with a linked Knowledge Document | 210 / 361 |
+| Work IDs without a linked Knowledge Document | 151 |
 | Broken document links | 0 |
 | Documents shared across multiple Work IDs (identity-review candidates) | 5 |
 | Canonical records mapped in the exploratory concept graph | 208 |

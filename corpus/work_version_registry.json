@@ -1,6 +1,6 @@
 {
   "schema": "femprompt-work-version-registry/0.1",
-  "source_fingerprint": "sha256:8549e9ce47c80c2f2fb71644bac4fae075203c1e2f63196fd3e4ef97183fb75b",
+  "source_fingerprint": "sha256:e7949cb47393f0d5c59b208d41cd677bfac5013584bd68895bf31c5a7e3ae63b",
   "sources": [
     {
       "path": "corpus/metadata_corrections.json",
@@ -820,7 +820,7 @@
     },
     {
       "path": "corpus/source_version_bindings.json",
-      "sha256": "707556520dc713d835b3057f2c16c91696905e6bc5f4115bf92872149369f8f4"
+      "sha256": "b5d60c04eae662d9c100c28258ddf2454d5c33dd9a85babebabacecb18f2e663"
     },
     {
       "path": "corpus/zotero_export.json",
@@ -891,6 +891,10 @@
       "sha256": "f49c7419289238b9d1e01a8547e2f1181b34ea9d02537a37f2c4eebd7202c99e"
     },
     {
+      "path": "generated/markdown_clean/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md",
+      "sha256": "e65682722507a93955e4a04c2e3dbcbd46139562892883cd86758facad5e1f63"
+    },
+    {
       "path": "generated/markdown_clean/Browne_2024_Engineers_on_responsibility_feminist_approaches.md",
       "sha256": "fa1eaabd44ea61f8a2989d3b9c7a54e39c86d58fda347964bddc8801fcf7d581"
     },
@@ -931,6 +935,10 @@
       "sha256": "06f3fa27b7657f9f9d1b9b981343fa706ac73278bf32fb2db0b33f19476fcc04"
     },
     {
+      "path": "generated/markdown_clean/Hermann_2022_Artificial_intelligence_and_mass_personalization.md",
+      "sha256": "32033f1e2fd9b99cc87a9b38e22e3d37e12b6b904840fc2217bf2f20c72337bd"
+    },
+    {
       "path": "generated/markdown_clean/J7V3AAQT.md",
       "sha256": "aba6edd8b0cbd65560fbc48979125c316f9c8df3117e9664aab62737c61f85c1"
     },
@@ -953,6 +961,10 @@
     {
       "path": "generated/markdown_clean/Klein_2024_Data_Feminism_for_AI.md",
       "sha256": "c16a072051f0a571de8255d1dd28296cfb5648732292507c0643a9af63404b76"
+    },
+    {
+      "path": "generated/markdown_clean/Maeda_2025_Toward_Agency‐Centered_span.md",
+      "sha256": "02c08806c5c8c5aabf8a9d6d3440e7973753546cad90345bcc832b9f93076daa"
     },
     {
       "path": "generated/markdown_clean/Ng_2022_Using_digital_story_writing_as_a_pedagogy_to.md",
@@ -1021,6 +1033,10 @@
     {
       "path": "generated/markdown_clean/Victor_2023_Recommendations_for_social_work_researchers_and.md",
       "sha256": "faee9d1c7150bfe9d53dbfc620c2237d70e32fe737a2fdaa4e7116a3e6ac7225"
+    },
+    {
+      "path": "generated/markdown_clean/Wang_2024_A_survey_on_fairness_in_large_language_models.md",
+      "sha256": "6ef9a4919f1754a4a9753bf9979a9f6eedf83d127eb1e60353729b9b75be222a"
     },
     {
       "path": "generated/markdown_clean/West_2023_Discriminating_Systems_Gender,_Race,_and_Power_in.md",
@@ -1307,6 +1323,10 @@
       "sha256": "00fc0a9e8acbf17549d360e8877680b20d267bf716d9556b7410ccd039df243b"
     },
     {
+      "path": "generated/source-acquisition/zotero-pdfs-2026-11-06/receipts.json",
+      "sha256": "dbd98b897614217708cbd7ee7b5309097ea85aef06f5bee339bf19b0290f5180"
+    },
+    {
       "path": "generated/verification/historical-resolution-2026-09-05.json",
       "sha256": "15f1c94d653e69f2e4591eef17a51204ae2431391391df3287410214f359a9a2"
     }
@@ -1319,7 +1339,7 @@
     "works_with_multiple_versions": 29,
     "works_with_flags": 21,
     "ambiguous_external_identifiers": 5,
-    "bound_sources": 163
+    "bound_sources": 167
   },
   "works": [
     {
@@ -40575,6 +40595,75 @@
         "doi": "10.1145/3491102.3501831"
       }
     },
+    "7QQV7R9S": {
+      "record_id": "7QQV7R9S",
+      "work_id": "work:4407dc4b-a985-5596-9d5d-1ccd1d96cf7b",
+      "bibliographic_version_id": "version:89e4e84f-7a62-5bc0-847d-d28b3a6a0d56",
+      "source_version_id": "version:89e4e84f-7a62-5bc0-847d-d28b3a6a0d56",
+      "source_version_type": "unknown",
+      "preferred_version_id": "version:89e4e84f-7a62-5bc0-847d-d28b3a6a0d56",
+      "is_preferred_version": true,
+      "source_path": "generated/markdown_clean/British Association of Social Workers_2025_Generative_AI_&_social-c91bcf.md",
+      "source_sha256": "sha256:e65682722507a93955e4a04c2e3dbcbd46139562892883cd86758facad5e1f63",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Generative AI and Social Work: Initial Guidance for Practice and Ethics"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.zotero.org/groups/6080294/items/32JT46S7",
+        "repo_path": "generated/pdfs/zotero-2026-11-06/British Association of Social Workers_2025_Generative_AI_&_social_work_practice_guidance.pdf",
+        "retrieved_at": "2026-01-09T17:02:14+00:00",
+        "sha256": "sha256:73289b7b4a93135f34b59753a83f8f7cc51a01924b0a916c761f8e24d85d7867",
+        "route": "zotero group attachment",
+        "note": "Original PDF stays local and git-ignored; retrieved_at is the attachment's Zotero dateAdded. The bound Markdown is the tracked conversion of 3 February 2026, reproduced from this PDF on 6 November 2026."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "not_registered",
+        "doi": "not_registered",
+        "year": "pass"
+      },
+      "version_relation": {
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:89e4e84f-7a62-5bc0-847d-d28b3a6a0d56",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "7WMD5JQ6": {
+      "record_id": "7WMD5JQ6",
+      "work_id": "work:51355339-5dc0-51c8-ae65-4a6bbebe4dfd",
+      "bibliographic_version_id": "version:845ebb84-0c29-57eb-94b4-75f98801e7f6",
+      "source_version_id": "version:845ebb84-0c29-57eb-94b4-75f98801e7f6",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:845ebb84-0c29-57eb-94b4-75f98801e7f6",
+      "is_preferred_version": true,
+      "source_path": "generated/markdown_clean/Maeda_2025_Toward_Agency‐Centered_span.md",
+      "source_sha256": "sha256:02c08806c5c8c5aabf8a9d6d3440e7973753546cad90345bcc832b9f93076daa",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Toward Agency‐Centered AI Literacy: A Scoping Review",
+        "doi": "10.1002/pra2.1472"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.zotero.org/groups/6080294/items/MZAKN3KN",
+        "repo_path": "generated/pdfs/zotero-2026-11-06/Maeda_2025_Toward_Agency‐Centered_span.pdf",
+        "retrieved_at": "2026-01-21T14:20:16+00:00",
+        "sha256": "sha256:0d68c7cce4aa92c601c5b4116f675fec9fda1bfc09968f2de1ac4699bd74c8fd",
+        "route": "zotero group attachment",
+        "note": "Original PDF stays local and git-ignored; retrieved_at is the attachment's Zotero dateAdded. The bound Markdown is the tracked conversion of 3 February 2026, reproduced from this PDF on 6 November 2026."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_printed",
+        "year": "not_registered"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:845ebb84-0c29-57eb-94b4-75f98801e7f6",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
     "88CFIG8R": {
       "record_id": "88CFIG8R",
       "work_id": "work:1004a5c5-f980-5475-ad36-952eab77b516",
@@ -42470,6 +42559,40 @@
         "doi": "10.21556/edutec.2026.96.4777"
       }
     },
+    "NVZA58ML": {
+      "record_id": "NVZA58ML",
+      "work_id": "work:4dfd4727-32f3-523e-8700-ad6fde9f4705",
+      "bibliographic_version_id": "version:ffdbfa4f-a3bc-505a-8a5f-4400cba2e39c",
+      "source_version_id": "version:ffdbfa4f-a3bc-505a-8a5f-4400cba2e39c",
+      "source_version_type": "unknown",
+      "preferred_version_id": "version:ffdbfa4f-a3bc-505a-8a5f-4400cba2e39c",
+      "is_preferred_version": true,
+      "source_path": "generated/markdown_clean/Wang_2024_A_survey_on_fairness_in_large_language_models.md",
+      "source_sha256": "sha256:6ef9a4919f1754a4a9753bf9979a9f6eedf83d127eb1e60353729b9b75be222a",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "A survey on fairness in large language models"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.zotero.org/groups/6080294/items/DDUVPRWT",
+        "repo_path": "generated/pdfs/zotero-2026-11-06/Wang_2024_A_survey_on_fairness_in_large_language_models.pdf",
+        "retrieved_at": "2026-01-07T13:12:56+00:00",
+        "sha256": "sha256:247d4ce90d05199fb131147077c1ad4160d584e3d7e597beb3ec3772ae395298",
+        "route": "zotero group attachment",
+        "note": "Original PDF stays local and git-ignored; retrieved_at is the attachment's Zotero dateAdded. The bound Markdown is the tracked conversion of 3 February 2026, reproduced from this PDF on 6 November 2026."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "not_registered",
+        "year": "not_printed"
+      },
+      "version_relation": {
+        "source_version_type": "unknown",
+        "preferred_version_id": "version:ffdbfa4f-a3bc-505a-8a5f-4400cba2e39c",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
     "P285BA5N": {
       "record_id": "P285BA5N",
       "work_id": "work:f5657618-8172-57e3-8294-94d2e46aed62",
@@ -43345,6 +43468,41 @@
       "version_relation": {
         "source_version_type": "version_of_record",
         "preferred_version_id": "version:3da2b173-7839-5e9e-9453-155987bdc1b9",
+        "difference_to_preferred": "none: the bound text is the preferred version"
+      }
+    },
+    "WGVC7FQ5": {
+      "record_id": "WGVC7FQ5",
+      "work_id": "work:7154cca3-db2e-5a2f-9cac-fdbb424cd981",
+      "bibliographic_version_id": "version:8ffe17d3-3fdd-5269-a210-97597e4d2abb",
+      "source_version_id": "version:8ffe17d3-3fdd-5269-a210-97597e4d2abb",
+      "source_version_type": "version_of_record",
+      "preferred_version_id": "version:8ffe17d3-3fdd-5269-a210-97597e4d2abb",
+      "is_preferred_version": true,
+      "source_path": "generated/markdown_clean/Hermann_2022_Artificial_intelligence_and_mass_personalization.md",
+      "source_sha256": "sha256:32033f1e2fd9b99cc87a9b38e22e3d37e12b6b904840fc2217bf2f20c72337bd",
+      "binding_mode": "acquisition_receipt",
+      "bibliographic_identity": {
+        "title": "Artificial intelligence and mass personalization of communication content—An ethical and literacy perspective",
+        "doi": "10.1177/14614448211022702"
+      },
+      "acquisition_receipt": {
+        "source_url": "https://www.zotero.org/groups/6080294/items/XSTHD9IU",
+        "repo_path": "generated/pdfs/zotero-2026-11-06/Hermann_2022_Artificial_intelligence_and_mass_personalization.pdf",
+        "retrieved_at": "2026-01-08T13:59:20+00:00",
+        "sha256": "sha256:d38d6ad2a61eeaa4dbda23169f500e12705d496d391f8f27e53bb9d9c9f78660",
+        "route": "zotero group attachment",
+        "note": "Original PDF stays local and git-ignored; retrieved_at is the attachment's Zotero dateAdded. The bound Markdown is the tracked conversion of 3 February 2026, reproduced from this PDF on 6 November 2026."
+      },
+      "identity_check": {
+        "title": "pass",
+        "first_author": "pass",
+        "doi": "pass",
+        "year": "not_registered"
+      },
+      "version_relation": {
+        "source_version_type": "version_of_record",
+        "preferred_version_id": "version:8ffe17d3-3fdd-5269-a210-97597e4d2abb",
         "difference_to_preferred": "none: the bound text is the preferred version"
       }
     },

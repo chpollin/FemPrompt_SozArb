@@ -4895,8 +4895,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -4965,7 +4965,7 @@
       "latest_version_id": "version:89e4e84f-7a62-5bc0-847d-d28b3a6a0d56",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "PI5H2LZ2",
@@ -19267,10 +19267,28 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "identity_unresolved"
+          "markdown_converted": true,
+          "knowledge_coverage": "linked"
         },
-        "ske": null,
+        "ske": {
+          "stage1_categories": {
+            "AI_Literacies": true,
+            "Generative_KI": true,
+            "Prompting": true,
+            "KI_Sonstige": true,
+            "Soziale_Arbeit": false,
+            "Bias_Ungleichheit": true,
+            "Gender": true,
+            "Diversitaet": true,
+            "Feministisch": false,
+            "Fairness": true
+          },
+          "stage1_arguments_count": 3,
+          "stage1_key_finding": "Der Survey zeigt, dass Fairness-Forschung in LLMs je nach Modellgröße und Trainingsparadigma unterschiedliche Ansätze erfordert: Medium-sized LLMs benötigen intrinsische und extrinsische Debiasing-Met",
+          "stage3_completeness": 88,
+          "stage3_correctness": 92,
+          "stage3_overall": 88
+        },
         "assessment": {
           "human": {
             "decision": "Include",
@@ -19320,9 +19338,23 @@
           "agreement": "disagree"
         }
       },
-      "concepts": [],
-      "knowledge_summary": null,
-      "knowledge_sections": null,
+      "concepts": [
+        "Algorithmic Fairness in Large Language Models",
+        "Debiasing Methods for LLMs",
+        "Fairness Metrics in Machine Learning",
+        "Gender Bias in NLP Systems",
+        "Intrinsic vs. Extrinsic Bias",
+        "Marginalized Demographic Representation",
+        "Prompt-Based Fairness Evaluation",
+        "Social Bias in Language Models"
+      ],
+      "knowledge_summary": "Der Survey zeigt, dass Fairness-Forschung in LLMs je nach Modellgröße und Trainingsparadigma unterschiedliche Ansätze erfordert: Medium-sized LLMs benötigen intrinsische und extrinsische Debiasing-Methoden, während Large-sized LLMs im Prompting-Paradigma neue Evaluations- und Debiasing-Strategien brauchen.",
+      "knowledge_sections": {
+        "kernbefund": "Der Survey zeigt, dass Fairness-Forschung in LLMs je nach Modellgröße und Trainingsparadigma unterschiedliche Ansätze erfordert: Medium-sized LLMs benötigen intrinsische und extrinsische Debiasing-Methoden, während Large-sized LLMs im Prompting-Paradigma neue Evaluations- und Debiasing-Strategien brauchen.",
+        "forschungsfrage": "Wie können Bias und Fairness in Large Language Models verschiedener Größen und Trainingsparadigmen systematisch evaluiert und adressiert werden?",
+        "methodik": "Review/Survey - systematische Literaturanalyse und Klassifizierung von Forschung zu Fairness in LLMs, organisiert nach Modellgröße und Trainingsparadigma (Pre-training/Fine-tuning vs. Prompting)\n**Datenbasis:** Literaturbasiert - keine primäre Datenerhebung; umfangreiche Referenzliste mit Arbeiten zu Bias-Evaluierung und Debiasing in LLMs",
+        "hauptargumente": "- LLMs erfassen gesellschaftliche Vorurteile aus unkurierten Trainingsdaten und propagieren diese in nachgelagerte Aufgaben, was diskriminierende Entscheidungen gegen marginalisierte Gruppen zur Folge hat (z.B. geschlechtsspezifische Verzerrungen bei Lebenslauf-Filterung, rassistische Bias in medizinischen Systemen).\n- Die Unterscheidung zwischen intrinsischen Bias (in den Representationen des Pre-trained Models) und extrinsischen Bias (in downstream-Task-Outputs) ist zentral für die Entwicklung differenzierter Evaluations- und Debiasing-Methoden in Medium-sized LLMs.\n- Große LLMs im Prompting-Paradigma zeigen unterschiedliche Bias-Manifestationen als Medium-sized Modelle und erfordern neue Evaluationsstrategien (z.B. demographische Repräsentation, stereotype Assoziationen, counterfactual fairness, Performance Disparities), um ihre Fairness zu bewerten."
+      },
       "authors": "Wang, Z.",
       "item_type": "report",
       "journal": "",
@@ -19335,8 +19367,8 @@
       "preferred_version_id": "version:ffdbfa4f-a3bc-505a-8a5f-4400cba2e39c",
       "latest_version_id": "version:ffdbfa4f-a3bc-505a-8a5f-4400cba2e39c",
       "is_preferred_version": true,
-      "knowledge_doc": null,
-      "knowledge_coverage": "identity_unresolved"
+      "knowledge_doc": "vault/Papers/A survey on fairness in large language models.md",
+      "knowledge_coverage": "linked"
     },
     {
       "id": "Z9DNTBFF",
@@ -39765,8 +39797,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -39829,7 +39861,7 @@
       "latest_version_id": "version:8ffe17d3-3fdd-5269-a210-97597e4d2abb",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "H8WRNPP7",
@@ -40022,8 +40054,8 @@
         },
         "conversion": {
           "pdf_acquired": null,
-          "markdown_converted": null,
-          "knowledge_coverage": "source_missing"
+          "markdown_converted": true,
+          "knowledge_coverage": "fulltext_ready"
         },
         "ske": null,
         "assessment": {
@@ -40084,7 +40116,7 @@
       "latest_version_id": "version:845ebb84-0c29-57eb-94b4-75f98801e7f6",
       "is_preferred_version": true,
       "knowledge_doc": null,
-      "knowledge_coverage": "source_missing"
+      "knowledge_coverage": "fulltext_ready"
     },
     {
       "id": "AHUSFEEA",
@@ -52636,7 +52668,7 @@
         "description": "Einträge mit verknüpftem Wissensdokument oder bereitstehendem Volltext",
         "type": "deterministic",
         "input": 463,
-        "output": 362,
+        "output": 366,
         "unit": "corpus_record",
         "prompt": null,
         "limitations": [
@@ -52649,10 +52681,10 @@
         "name": "Structured Knowledge Extraction",
         "description": "Kanonisch verknüpfte Wissensdokumente",
         "type": "probabilistic",
-        "input": 362,
-        "output": 289,
+        "input": 366,
+        "output": 290,
         "unit": "corpus_record",
-        "distinct_documents": 209,
+        "distinct_documents": 210,
         "prompts": {
           "stage1": "Du bist ein Experte für wissenschaftliche Literaturanalyse im Bereich KI, Soziale Arbeit und Gender Studies.\n\n# PAPER (Markdown-Format)\n[PAPER-INHALT]\n\n# AUFGABE\nExtrahiere alle relevanten Informationen und klassifiziere das Paper nach 10 Kategorien.\nAntworte im JSON-Format (kein Markdown-Codeblock, nur reines JSON).\n\n{\n  \"metadata\": {\n    \"title\": \"Vollständiger Titel des Papers\",\n    \"authors\": [\"Autor1\", \"Autor2\"],\n    \"year\": 2024,\n    \"type\": \"journalArticle|conferencePaper|report|book|thesis|workingPaper\",\n    \"language\": \"en|de|other\"\n  },\n  \"core\": {\n    \"research_question\": \"Die zentrale Forschungsfrage (1 Satz)\",\n    \"methodology\": \"Ansatz und Methoden (kurz: Empirisch/Theoretisch/Mixed/Review + spezifische Methoden)\",\n    \"key_finding\": \"Wichtigster Befund oder Beitrag (1-2 Sätze)\",\n    \"data_basis\": \"Datenbasis falls empirisch (z.B. n=125 Surveys, 50 Interviews)\"\n  },\n  \"arguments\": [\n    \"Hauptargument 1 (1-2 Sätze)\",\n    \"Hauptargument 2 (1-2 Sätze)\",\n    \"Hauptargument 3 (1-2 Sätze)\"\n  ],\n  \"categories\": {\n    \"AI_Literacies\": true,\n    \"Generative_KI\": false,\n    \"Prompting\": false,\n    \"KI_Sonstige\": true,\n    \"Soziale_Arbeit\": true,\n    \"Bias_Ungleichheit\": true,\n    \"Gender\": false,\n    \"Diversitaet\": true,\n    \"Feministisch\": false,\n    \"Fairness\": true\n  },\n  \"category_evidence\": {\n    \"AI_Literacies\": \"Direktes Zitat oder Paraphrase als Evidenz\",\n    \"KI_Sonstige\": \"Evidenz...\",\n    \"Soziale_Arbeit\": \"Evidenz...\",\n    \"Bias_Ungleichheit\": \"Evidenz...\",\n    \"Diversitaet\": \"Evidenz...\",\n    \"Fairness\": \"Evidenz...\"\n  },\n  \"references\": [\n    {\"author\": \"Buolamwini\", \"year\": 2018, \"short_title\": \"Gender Shades\"},\n    {\"author\": \"D'Ignazio & Klein\", \"year\": 2020, \"short_title\": \"Data Feminism\"},\n    {\"author\": \"Eubanks\", \"year\": 2019, \"short_title\": \"Automating Inequality\"}\n  ],\n  \"assessment\": {\n    \"domain_fit\": \"Wie relevant ist das Paper für die Schnittstelle AI/Soziale Arbeit/Gender? (1-2 Sätze)\",\n    \"unique_contribution\": \"Was ist der besond",
           "stage2_note": "Stufe 2 ist deterministisch: Python-Template.",
@@ -52682,8 +52714,8 @@
         "name": "Wissenssammlung",
         "description": "Verknüpfte Wissensdokumente; kein Maß für den Abschluss der Synthese",
         "type": "mixed",
-        "input": 289,
-        "output": 289,
+        "input": 290,
+        "output": 290,
         "unit": "corpus_record",
         "prompt": null,
         "limitations": [
@@ -52898,18 +52930,18 @@
     }
   ],
   "meta": {
-    "source_fingerprint": "sha256:cb046bade8fdc26ad45fb4f5ef3590fbf1eb53e5bef6363a49cf1a5c93d99453",
+    "source_fingerprint": "sha256:3e632ce74f966c1a199929e58cfcce5ac9738c3928ad46ba7a9a2e1a8365bcd7",
     "total_papers": 463,
     "corpus_record_total": 463,
     "corpus_work_total": 361,
     "aggregation_unit": "record",
-    "knowledge_docs": 209,
-    "knowledge_linked_records": 289,
+    "knowledge_docs": 210,
+    "knowledge_linked_records": 290,
     "knowledge_coverage": {
-      "fulltext_ready": 73,
-      "identity_unresolved": 37,
-      "linked": 289,
-      "source_missing": 64
+      "fulltext_ready": 76,
+      "identity_unresolved": 36,
+      "linked": 290,
+      "source_missing": 61
     },
     "human_assessed": 302,
     "llm_assessed": 326,
@@ -52961,7 +52993,7 @@
       "knowledge_docs": "distinct_knowledge_doc_paths"
     },
     "exported_journeys": 463,
-    "enriched_journeys": 218,
+    "enriched_journeys": 219,
     "divergence_items": 142,
     "concepts_count": 136,
     "pattern_distribution": {},
